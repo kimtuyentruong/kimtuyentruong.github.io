@@ -1,0 +1,30 @@
+# Kim Tuyen Truong
+
+> Kim Tuyen Truong (Trương Biên Kim Tuyền) designs and builds websites with SEO and AI search optimization (AIO) for small and mid-size businesses in Vietnam and the United States. Digital Growth Manager at AIxNovate, a U.S. marketing agency. Building websites and doing SEO since 2019.
+
+## Services
+- Website design and development (hand-coded PHP/JavaScript or WordPress) with an admin panel for self-editing
+- SEO: technical SEO, on-page SEO, local SEO, Google Business Profile, Google Search Console
+- AI search optimization (AIO): FAQ content, schema markup and llms.txt so ChatGPT, Gemini and Google AI Overviews can understand and recommend a business
+
+## Pricing (Vietnam, VND)
+- Landing Page: 3.500.000đ
+- Website Cơ Bản (standard business website): 9.500.000đ
+- Website Doanh Nghiệp (multi-service or e-commerce): from 15.000.000đ
+- All packages include first-year hosting and domain, SSL, copywriting, SEO, AIO, Google tools setup, 3-year technical warranty (then 1.500.000đ/year) and 3 social banners.
+- Payment in 3 installments: 60% to start, 30% when the site is approved before launch, 10% after handover.
+
+## Results from past projects
+- Little World For Kids (Garden Grove, CA): 17,000 users in 6 months, 11,000 from organic search.
+- 405 Cabinets & Stone (California): organic traffic grew from 3,500 to 7,800 visits per month in 9 months.
+- Nam Mien Trung Group (Vietnam): organic traffic up 500% in 3 months.
+
+## Pages
+- [Trang tiếng Việt](https://kimtuyentruong.github.io/): services, projects, results, templates, pricing, FAQ
+- [English](https://kimtuyentruong.github.io/en/): services, projects, results, FAQ
+
+## Contact
+- Zalo / phone: +84 901 432 113 (https://zalo.me/0901432113)
+- Telegram: @kimtuyen21297 (https://t.me/kimtuyen21297)
+- Email: kimtuyentb97@gmail.com
+- LinkedIn: https://www.linkedin.com/in/tbkimt/

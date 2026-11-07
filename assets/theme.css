@@ -225,3 +225,34 @@ html[lang="en"] .hero h1{font-size:clamp(40px,5.6vw,80px)}
 html[lang="en"] .tile.tpl .img::after{content:"View template ↗"}
 .tnote{margin:28px 0 0;font-size:13.5px;color:var(--faint)}
 #grid .tile .img{aspect-ratio:16/11}#grid .tile .img img{height:100%}#grid .tile{align-content:start}
+
+/* v2 results+faq */
+.editor .count{display:none}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.res{display:flex;flex-direction:column;gap:6px;padding:30px 28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,var(--surface),var(--bg));color:var(--ink);text-decoration:none;transition:border-color .3s,transform .3s}
+.res:hover{border-color:var(--line-2);transform:translateY(-4px)}
+.res .num{font-family:var(--display);font-size:clamp(28px,2.6vw,40px);font-weight:800;line-height:1.05;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.res .unit{font-size:14px;color:var(--muted)}
+.res h3{margin:18px 0 0;font-size:20px}
+.res p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.res .go{margin-top:auto;padding-top:14px;font-size:14px;color:var(--flame);font-weight:600}
+.faq{display:grid;gap:12px;max-width:900px}
+.qa{border:1px solid var(--line);border-radius:18px;background:var(--surface);transition:border-color .3s}
+.qa[open]{border-color:var(--line-2)}
+.qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 24px;cursor:pointer}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary h3{margin:0;font-size:17px;font-weight:600;line-height:1.4}
+.qa .pm{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line-2);position:relative}
+.qa .pm::before,.qa .pm::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.6px;background:var(--flame);transform:translate(-50%,-50%);transition:transform .3s}
+.qa .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.qa[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.qa p{margin:0;padding:0 24px 22px;color:var(--muted);line-height:1.7;max-width:760px}
+@media (max-width:960px){.results{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){
+  .nav{flex-wrap:wrap;row-gap:14px}
+  .nav .right{display:contents}
+  .nav .right nav{display:flex;order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;gap:20px;font-size:14px;padding-bottom:4px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent)}
+  .nav .right nav::-webkit-scrollbar{display:none}
+  .nav .right nav a{white-space:nowrap}
+  .qa summary{padding:18px 18px}.qa p{padding:0 18px 20px}
+}
