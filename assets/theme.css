@@ -367,3 +367,13 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
   .pf-rows .tile:hover .img{box-shadow:none}
 }
 @media (max-width:600px){@keyframes mq{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - 7px),0,0)}}}
+
+/* v8 marquee: per-item compositor animation (site.js), no giant layers */
+.mq-in{position:relative;display:flex;width:max-content}
+.pf-rows .mq-in{gap:22px}
+.mq-in.on{display:block;width:auto}
+.mq-in.on>*{position:absolute;top:0;left:var(--m);margin:0;backface-visibility:hidden}
+.ribbon .track.mqx{display:block;animation:none}
+.ribbon .track.mqx .mq-in{gap:0}
+@media (max-width:600px){.pf-rows .mq-in{gap:14px}}
+@media (max-width:900px),(hover:none){.role .dot{animation:none}}
