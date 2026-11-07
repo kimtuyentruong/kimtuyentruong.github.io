@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website tiệm nail – Kẹo Nail</title>
+<meta name="description" content="Mẫu website cho tiệm nail phong cách trẻ trung, nhiều màu sắc: mẫu nail hot, bảng giá tham khảo sơn gel, úp móng, đắp bột và đặt lịch online. Giao diện demo – Kẹo Nail.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFF7FB; --pink:#FF4F8B; --pink-d:#E23673; --lilac:#B9A6FF; --lemon:#FFE45C; --mint:#7FE0C3; --ink:#1B1530; --soft:#5B5470; --card:#FFFFFF; --line:#F1DCE8;
+  --head:"Bricolage Grotesque", system-ui, sans-serif; --body:"Be Vietnam Pro", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto;background:#F6D5E4;object-fit:cover}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.1;letter-spacing:-.02em;text-wrap:balance}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 26px;border-radius:16px;font-family:var(--body);font-weight:700;font-size:.98rem;border:2.5px solid var(--ink);cursor:pointer;transition:transform .2s,box-shadow .2s;white-space:nowrap;box-shadow:4px 4px 0 var(--ink)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-lemon{background:var(--lemon);color:var(--ink)}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+.tag{display:inline-block;background:var(--lemon);border:2px solid var(--ink);border-radius:99px;padding:4px 14px;font-weight:700;font-size:.8rem;transform:rotate(-2deg)}
+
+header{position:sticky;top:12px;z-index:50;margin-top:12px}
+.nav{background:#fff;border:2.5px solid var(--ink);border-radius:22px;display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 20px;box-shadow:4px 4px 0 var(--ink);position:relative}
+.logo{font-family:var(--head);font-weight:800;font-size:1.55rem;display:flex;align-items:center;gap:8px}
+.logo .dot{width:30px;height:30px;border-radius:50%;background:conic-gradient(var(--pink) 0 33%,var(--lilac) 0 66%,var(--lemon) 0);border:2px solid var(--ink)}
+.menu{display:flex;gap:4px;list-style:none;align-items:center;font-weight:600;font-size:.94rem}
+.menu a:not(.btn){padding:8px 14px;border-radius:12px;transition:background .2s}
+.menu a:not(.btn):hover{background:#FFE3EE}
+.menu .btn{padding:10px 18px;box-shadow:3px 3px 0 var(--ink);margin-left:6px}
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:2.5px solid var(--ink);background:var(--lemon);cursor:pointer;font-size:1.2rem;font-weight:700}
+
+/* hero */
+.hero{padding:60px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.9rem,6.6vw,5.8rem);margin:20px 0 22px}
+.hero h1 .hl{background:var(--pink);color:#fff;padding:0 .18em;border-radius:.2em;display:inline-block;transform:rotate(-1.5deg)}
+.hero h1 .ul{background:linear-gradient(transparent 62%,var(--lemon) 62% 92%,transparent 92%)}
+.hero p.lead{font-size:1.1rem;color:var(--soft);max-width:520px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.mini{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;font-weight:600;font-size:.88rem}
+.mini span{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:7px 12px}
+.stack{position:relative;height:540px}
+.stack figure{position:absolute;border:3px solid var(--ink);border-radius:26px;overflow:hidden;background:#F6D5E4;box-shadow:6px 6px 0 var(--ink)}
+.stack img{width:100%;height:100%}
+.stack .p1{width:62%;height:74%;right:4%;top:0;transform:rotate(4deg)}
+.stack .p2{width:48%;height:52%;left:0;bottom:2%;transform:rotate(-6deg)}
+.stack .stk{position:absolute;right:0;bottom:12%;background:var(--lemon);border:2.5px solid var(--ink);border-radius:50%;width:132px;height:132px;display:grid;place-items:center;text-align:center;font-family:var(--head);font-weight:800;font-size:1.05rem;line-height:1.1;transform:rotate(10deg)}
+.stack .star{position:absolute;left:14%;top:6%;font-size:3rem;color:var(--lilac);-webkit-text-stroke:2px var(--ink)}
+@keyframes pop{0%{opacity:0;transform:scale(.6) rotate(var(--r,0deg))}70%{transform:scale(1.04) rotate(var(--r,0deg))}100%{opacity:1;transform:scale(1) rotate(var(--r,0deg))}}
+@keyframes up{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translateY(-10px) rotate(10deg)}}
+@keyframes twinkle{50%{transform:scale(1.25) rotate(20deg)}}
+.hero-copy>*{animation:up .8s cubic-bezier(.2,.8,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}.hero-copy>*:nth-child(5){animation-delay:.32s}
+.stack .p1{--r:4deg;animation:pop .8s .2s cubic-bezier(.3,1.3,.5,1) both}
+.stack .p2{--r:-6deg;animation:pop .8s .4s cubic-bezier(.3,1.3,.5,1) both}
+.stack .stk{animation:float 4s ease-in-out 1s infinite}
+.stack .star{animation:twinkle 2.6s ease-in-out infinite}
+
+section{padding:100px 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:46px}
+.sh h2{font-size:clamp(2.2rem,4.6vw,3.8rem);margin-top:14px}
+.sh p{max-width:420px;color:var(--soft)}
+
+/* bento services */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(200px,auto);gap:18px}
+.b{border:2.5px solid var(--ink);border-radius:26px;padding:26px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;box-shadow:4px 4px 0 var(--ink)}
+.b:hover{transform:translate(-3px,-3px) rotate(-.4deg);box-shadow:8px 8px 0 var(--ink)}
+.b h3{font-size:1.55rem;margin-bottom:8px}
+.b p{font-size:.94rem;color:var(--soft)}
+.b .from{position:absolute;right:18px;top:18px;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:3px 12px;font-weight:700;font-size:.82rem;white-space:nowrap}
+.b.big{grid-column:span 2;grid-row:span 2;background:var(--pink);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:0}
+.b.big img{position:absolute;inset:0;width:100%;height:100%}
+.b.big .txt{position:relative;padding:28px;background:linear-gradient(transparent,rgba(27,21,48,.85));padding-top:80px}
+.b.big p{color:#FFE3EE}
+.b.lilac{background:var(--lilac)}.b.lemon{background:var(--lemon)}.b.mint{background:var(--mint)}.b.white{background:#fff}
+.b.wide{grid-column:span 2}
+.b .emo{font-size:2rem;margin-bottom:22px;display:block}
+
+/* pricing menu boards */
+.price{background:var(--ink);color:#fff;border-radius:40px;margin:0 16px}
+.price .sh p{color:#C9C2E0}
+.boards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.board{background:#fff;color:var(--ink);border-radius:26px;overflow:hidden;border:2.5px solid var(--ink)}
+.board h3{padding:18px 24px;font-size:1.35rem;border-bottom:2.5px solid var(--ink)}
+.board:nth-child(1) h3{background:var(--pink);color:#fff}
+.board:nth-child(2) h3{background:var(--lemon)}
+.board:nth-child(3) h3{background:var(--lilac)}
+.board ul{list-style:none;padding:8px 24px 18px}
+.board li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:2px dotted #E6DDF0;font-size:.95rem}
+.board li:last-child{border-bottom:0}
+.board li b{white-space:nowrap;font-weight:700}
+.combo-bar{margin-top:20px;background:var(--mint);color:var(--ink);border:2.5px solid var(--ink);border-radius:26px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.combo-bar h3{font-size:1.5rem}
+.combo-bar .c{display:flex;gap:28px;flex-wrap:wrap;font-weight:600}
+.combo-bar .c b{font-family:var(--head);font-size:1.4rem;display:block;line-height:1.1}
+.pnote{margin-top:22px;color:#C9C2E0;font-size:.88rem;text-align:center}
+
+/* gallery filter */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.chip{border:2.5px solid var(--ink);background:#fff;border-radius:99px;padding:8px 18px;font:600 .92rem var(--body);cursor:pointer;transition:background .2s,transform .2s}
+.chip:hover{transform:translateY(-2px)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.grid figure{border:2.5px solid var(--ink);border-radius:22px;overflow:hidden;background:#F6D5E4;position:relative;aspect-ratio:4/5;transition:transform .35s,opacity .35s}
+.grid figure:hover{transform:rotate(-1.5deg) scale(1.02)}
+.grid img{width:100%;height:100%}
+.grid figcaption{position:absolute;left:10px;bottom:10px;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:2px 12px;font-size:.78rem;font-weight:700}
+.grid figure.hide{display:none}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why div{background:#fff;border:2.5px solid var(--ink);border-radius:24px;padding:24px}
+.why .n{font-family:var(--head);font-size:2.4rem;font-weight:800;color:var(--pink);-webkit-text-stroke:1.5px var(--ink);line-height:1}
+.why h3{font-family:var(--body);font-size:1.05rem;font-weight:700;margin:12px 0 6px;line-height:1.35;letter-spacing:0}
+.why p{font-size:.92rem;color:var(--soft)}
+.about-row{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;margin-bottom:56px}
+.about-row img{width:100%;aspect-ratio:5/4;border:3px solid var(--ink);border-radius:30px;box-shadow:8px 8px 0 var(--pink)}
+.about-row h2{font-size:clamp(2.2rem,4.4vw,3.6rem);margin:14px 0 16px}
+.about-row p{color:var(--soft);margin-bottom:12px}
+
+/* reviews chat */
+.chat{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.bubble{background:#fff;border:2.5px solid var(--ink);border-radius:24px 24px 24px 6px;padding:22px 22px 18px;position:relative}
+.bubble:nth-child(2){background:#FFE3EE;margin-top:36px}
+.bubble:nth-child(3){background:#EEE9FF}
+.bubble p{font-size:.98rem}
+.bubble .who{margin-top:14px;font-size:.82rem;color:var(--soft);display:flex;align-items:center;gap:10px}
+.bubble .av{width:34px;height:34px;border-radius:50%;border:2px solid var(--ink);background:var(--lemon);display:grid;place-items:center;font-weight:700;color:var(--ink)}
+.bubble .who b{color:var(--ink)}
+.sample{display:inline-block;background:var(--ink);color:var(--lemon);font-weight:700;font-size:.78rem;border-radius:8px;padding:4px 10px}
+
+/* booking */
+.book{background:var(--lilac);border-radius:40px;margin:0 16px;border:2.5px solid var(--ink)}
+.book-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px}
+.book h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:14px 0 14px}
+.info{display:grid;gap:12px;margin-top:26px}
+.info div{background:#fff;border:2.5px solid var(--ink);border-radius:18px;padding:14px 18px;font-weight:500}
+.info small{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--pink-d)}
+.map{margin-top:12px;border:2.5px solid var(--ink);border-radius:18px;height:180px;background:
+  radial-gradient(circle at 60% 45%,var(--pink) 0 10px,#fff 11px 16px,transparent 17px),
+  linear-gradient(0deg,transparent 48%,#fff 48% 52%,transparent 52%),
+  linear-gradient(90deg,transparent 30%,#fff 30% 33%,transparent 33%),
+  linear-gradient(60deg,transparent 60%,#ffffffaa 60% 62%,transparent 62%),#DCD3FF;
+  display:flex;align-items:flex-end;padding:12px;font-weight:600;font-size:.85rem}
+.map span{background:#fff;border:2px solid var(--ink);border-radius:10px;padding:3px 10px}
+form{background:#fff;border:2.5px solid var(--ink);border-radius:28px;padding:32px;box-shadow:6px 6px 0 var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.full{grid-column:1/-1}
+label,legend{display:block;font-weight:700;font-size:.86rem;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:.96rem;padding:12px 14px;border:2px solid var(--ink);border-radius:14px;background:var(--bg);color:var(--ink);appearance:none}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:3px 3px 0 var(--pink)}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+textarea{min-height:80px;resize:vertical}
+fieldset{border:0}
+.picks{display:flex;flex-wrap:wrap;gap:8px}
+.picks label{margin:0;font-weight:500}
+.picks input{position:absolute;opacity:0;width:1px;height:1px}
+.picks span{display:inline-block;border:2px solid var(--ink);border-radius:99px;padding:6px 14px;font-size:.88rem;cursor:pointer;background:#fff;transition:.15s}
+.picks input:checked+span{background:var(--pink);color:#fff}
+.picks input:focus-visible+span{outline:3px solid var(--lilac)}
+form .btn{width:100%}
+.thanks{display:none;background:#fff;border:2.5px solid var(--ink);border-radius:28px;padding:50px 30px;text-align:center;box-shadow:6px 6px 0 var(--ink)}
+.thanks .big{font-size:3.4rem;line-height:1}
+.thanks h3{font-size:2.2rem;margin:12px 0 8px}
+.thanks p{color:var(--soft)}
+.sent form{display:none}.sent .thanks{display:block;animation:pop .6s both}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+.faq details{background:#fff;border:2.5px solid var(--ink);border-radius:20px;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font-family:var(--head);font-size:1.5rem;line-height:1;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary::-webkit-details-marker{display:none}
+.faq details p{padding:0 22px 20px;color:var(--soft)}
+
+footer{background:var(--pink);color:#fff;margin-top:100px;padding:60px 0 100px;border-top:2.5px solid var(--ink)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+footer .logo{font-size:2rem}
+footer h3{font-family:var(--body);font-size:1rem;font-weight:700;margin-bottom:10px;letter-spacing:0}
+footer ul{list-style:none;display:grid;gap:6px}
+footer a:hover{text-decoration:underline}
+.copy{margin-top:40px;padding-top:20px;border-top:2px solid rgba(255,255,255,.4);font-size:.82rem}
+
+.badge{position:fixed;left:16px;bottom:16px;z-index:60;background:var(--lemon);color:var(--ink);border:2px solid var(--ink);font-size:.76rem;font-weight:600;padding:8px 14px;border-radius:99px;box-shadow:3px 3px 0 var(--ink);transition:transform .2s;max-width:calc(100vw - 32px)}
+.badge b{color:var(--pink-d)}
+.badge:hover{transform:translate(-2px,-2px)}
+
+.rv{opacity:0;transform:translateY(36px) rotate(-1deg);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.3,1.3,.5,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+@media (max-width:1024px){
+  .hero-grid,.book-grid,.about-row{grid-template-columns:1fr}
+  .stack{max-width:560px;width:100%;margin:0 auto}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .boards{grid-template-columns:1fr 1fr}
+  .boards .board:last-child{grid-column:1/-1}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .why{grid-template-columns:1fr 1fr}
+  .chat{grid-template-columns:1fr 1fr}
+  .bubble:nth-child(2){margin-top:0}
+}
+@media (max-width:860px){
+  .menu{position:absolute;top:calc(100% + 10px);left:0;right:0;background:#fff;border:2.5px solid var(--ink);border-radius:22px;box-shadow:4px 4px 0 var(--ink);flex-direction:column;align-items:stretch;padding:10px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:.2s}
+  .menu .btn{margin:6px 0 0}
+  .open .menu{opacity:1;transform:none;pointer-events:auto}
+  .burger{display:block}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  section{padding:76px 0}
+  .hero{padding:36px 0 60px}
+  .stack{height:400px}
+  .stack .stk{width:104px;height:104px;font-size:.88rem}
+  .bento{grid-template-columns:1fr}
+  .b.big,.b.wide{grid-column:auto}
+  .b.big{min-height:380px}
+  .boards{grid-template-columns:1fr}
+  .price,.book{margin:0 8px;border-radius:30px}
+  .price .wrap,.book .wrap{width:calc(100% - 24px)}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .why{grid-template-columns:1fr}
+  .chat{grid-template-columns:1fr}
+  form{grid-template-columns:1fr;padding:22px}
+  .foot{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav class="nav" aria-label="Điều hướng chính">
+    <a href="#" class="logo"><span class="dot" aria-hidden="true"></span>Kẹo&nbsp;Nail</a>
+    <button class="burger" aria-label="Mở menu" aria-expanded="false">☰</button>
+    <ul class="menu">
+      <li><a href="#dich-vu">Dịch&nbsp;vụ</a></li>
+      <li><a href="#bang-gia">Bảng&nbsp;giá</a></li>
+      <li><a href="#mau-nail">Mẫu&nbsp;nail</a></li>
+      <li><a href="#hoi-dap">Hỏi&nbsp;đáp</a></li>
+      <li><a href="#dat-lich" class="btn btn-pink">Đặt&nbsp;lịch ngay</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="tag">✦ Mẫu mới cập nhật mỗi tuần</span>
+      <h1>Làm&nbsp;nail <span style="white-space:nowrap"><span class="hl">xinh&nbsp;xỉu</span>,</span> <span class="ul">giá&nbsp;dễ&nbsp;thương</span></h1>
+      <p class="lead">Sơn gel, sơn thạch, úp móng, đắp bột, vẽ và đính đá theo hình mẫu bạn thích. Gửi hình qua Zalo – tiệm báo giá liền.</p>
+      <div class="cta">
+        <a href="#dat-lich" class="btn btn-pink">Đặt&nbsp;lịch ngay</a>
+        <a href="#mau-nail" class="btn btn-white">Xem&nbsp;mẫu&nbsp;nail</a>
+      </div>
+      <div class="mini"><span>💅 Sơn gel từ 100.000đ</span><span>🕘 09:00&nbsp;–&nbsp;21:00</span><span>🛡 Bảo hành 5&nbsp;ngày</span></div>
+    </div>
+    <div class="stack">
+      <span class="star" aria-hidden="true">✦</span>
+      <figure class="p1"><img src="https://images.unsplash.com/photo-1693776529070-2cdea397595b?auto=format&fit=crop&w=900&q=80" alt="Khách đang được làm móng tại tiệm" width="900" height="1080" fetchpriority="high"></figure>
+      <figure class="p2"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=700&q=80" alt="Thợ sơn nhũ kim tuyến lên móng hồng" width="700" height="760"></figure>
+      <div class="stk">Gửi hình,<br>làm y&nbsp;mẫu</div>
+    </div>
+  </div>
+</section>
+
+<section id="dich-vu" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="tag">Dịch vụ</span><h2>Tiệm có gì cho&nbsp;bạn?</h2></div>
+      <p>Từ sơn gel đơn giản đi làm, đi học đến bộ móng cầu kỳ cho tiệc cưới, chụp ảnh – đều làm được.</p>
+    </div>
+    <div class="bento">
+      <article class="b big rv"><img src="https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?auto=format&fit=crop&w=1000&q=80" alt="Kệ sơn móng nhiều màu sắc" width="1000" height="1000" loading="lazy"><div class="txt"><h3>Sơn&nbsp;gel, sơn&nbsp;thạch</h3><p>Bảng màu cập nhật theo mùa, sơn bóng lâu, có cả sơn thạch trong veo kiểu Hàn.</p></div><span class="from" style="color:var(--ink)">từ 100.000đ</span></article>
+      <article class="b lemon rv d1"><span class="emo" aria-hidden="true">💎</span><h3>Úp&nbsp;móng</h3><p>Móng úp gel nhiều form: vuông, oval, nhọn, almond.</p><span class="from">từ 220.000đ</span></article>
+      <article class="b lilac rv d2"><span class="emo" aria-hidden="true">🎨</span><h3>Vẽ&nbsp;móng</h3><p>Vẽ tay theo hình mẫu, vẽ nổi, vẽ hoạt hình.</p><span class="from">từ 15.000đ/ngón</span></article>
+      <article class="b mint rv d1"><span class="emo" aria-hidden="true">✨</span><h3>Đính&nbsp;đá, charm</h3><p>Đá, ngọc trai, charm nơ – xinh từng ngón.</p><span class="from">từ 10.000đ/ngón</span></article>
+      <article class="b white rv d2"><span class="emo" aria-hidden="true">🦶</span><h3>Chăm&nbsp;sóc chân</h3><p>Cắt da chân, chà gót, ngâm và massage chân.</p><span class="from">từ 50.000đ</span></article>
+      <article class="b white wide rv"><span class="emo" aria-hidden="true">🌸</span><h3>Đắp&nbsp;bột, đắp&nbsp;gel, nối&nbsp;móng</h3><p>Đắp bột clear, ombre, ẩn hoa khô, ẩn nhũ; fill móng cho khách cũ.</p><span class="from">từ 250.000đ</span></article>
+      <article class="b lemon wide rv d1"><span class="emo" aria-hidden="true">🫧</span><h3>Phá&nbsp;gel, tháo&nbsp;móng</h3><p>Tháo móng úp, phá gel nhẹ nhàng, dưỡng móng sau khi tháo.</p><span class="from">từ 30.000đ</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="bang-gia">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="tag">Bảng giá</span><h2>Bảng&nbsp;giá tham&nbsp;khảo</h2></div>
+      <p>Mẫu cầu kỳ, nhiều chi tiết vui lòng gửi hình qua Zalo để tiệm báo giá chính xác.</p>
+    </div>
+    <div class="boards">
+      <div class="board rv"><h3>Móng&nbsp;tay</h3><ul>
+        <li><span>Cắt da, sửa móng</span><b>35.000đ</b></li>
+        <li><span>Sơn thường</span><b>60.000đ</b></li>
+        <li><span>Sơn gel trơn</span><b>100.000đ</b></li>
+        <li><span>Sơn thạch</span><b>130.000đ</b></li>
+        <li><span>Tráng gương, mắt mèo</span><b>+50.000đ</b></li>
+        <li><span>Phá gel</span><b>30.000đ</b></li>
+      </ul></div>
+      <div class="board rv d1"><h3>Úp&nbsp;&amp;&nbsp;đắp</h3><ul>
+        <li><span>Úp móng gel + sơn</span><b>220.000đ</b></li>
+        <li><span>Đắp bột clear</span><b>250.000đ</b></li>
+        <li><span>Đắp bột ombre / ẩn hoa</span><b>300.000đ</b></li>
+        <li><span>Đắp gel</span><b>280.000đ</b></li>
+        <li><span>Fill móng</span><b>160.000đ</b></li>
+        <li><span>Tháo móng úp</span><b>40.000đ</b></li>
+      </ul></div>
+      <div class="board rv d2"><h3>Móng&nbsp;chân</h3><ul>
+        <li><span>Cắt da chân</span><b>50.000đ</b></li>
+        <li><span>Sơn gel chân</span><b>110.000đ</b></li>
+        <li><span>Chà gót</span><b>70.000đ</b></li>
+        <li><span>Ngâm, massage chân</span><b>90.000đ</b></li>
+        <li><span>Vẽ, đính đá</span><b>từ 10.000đ/ngón</b></li>
+      </ul></div>
+    </div>
+    <div class="combo-bar rv">
+      <h3>Combo&nbsp;hời 🍬</h3>
+      <div class="c">
+        <span><b>180.000đ</b>Sơn gel tay + chân</span>
+        <span><b>250.000đ</b>Úp móng + design 2&nbsp;ngón</span>
+        <span><b>260.000đ</b>Sơn gel + chà gót + massage chân</span>
+      </div>
+    </div>
+    <p class="pnote">Giá mang tính tham khảo, có thể thay đổi theo mẫu và thời điểm.</p>
+  </div>
+</section>
+
+<section id="mau-nail">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="tag">Mẫu nail</span><h2>Mẫu&nbsp;nail đang&nbsp;hot</h2></div>
+      <p>Bấm chọn kiểu bạn thích. Lưu hình và gửi Zalo khi đặt lịch nha!</p>
+    </div>
+    <div class="chips rv" role="group" aria-label="Lọc mẫu nail">
+      <button class="chip" aria-pressed="true" data-f="all">Tất&nbsp;cả</button>
+      <button class="chip" aria-pressed="false" data-f="don-gian">Đơn&nbsp;giản</button>
+      <button class="chip" aria-pressed="false" data-f="ombre">Ombre, vân&nbsp;đá</button>
+      <button class="chip" aria-pressed="false" data-f="dinh-da">Đính&nbsp;đá, cầu&nbsp;kỳ</button>
+      <button class="chip" aria-pressed="false" data-f="chan">Móng&nbsp;chân</button>
+    </div>
+    <div class="grid">
+      <figure class="rv" data-c="don-gian"><img src="https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?auto=format&fit=crop&w=600&q=80" alt="Móng sơn gel hồng nhạt tự nhiên" width="600" height="750" loading="lazy"><figcaption>Hồng nude</figcaption></figure>
+      <figure class="rv d1" data-c="ombre"><img src="https://images.unsplash.com/photo-1772322586702-73125782bd99?auto=format&fit=crop&w=600&q=80" alt="Móng ombre xanh dương và trắng" width="600" height="750" loading="lazy"><figcaption>Ombre xanh</figcaption></figure>
+      <figure class="rv d2" data-c="dinh-da"><img src="https://images.unsplash.com/photo-1777287216954-2b4b22bb6bf2?auto=format&fit=crop&w=600&q=80" alt="Móng nhọn ánh kim đính đá" width="600" height="750" loading="lazy"><figcaption>Ánh kim đính đá</figcaption></figure>
+      <figure class="rv d3" data-c="dinh-da"><img src="https://images.unsplash.com/photo-1777288390469-828f8816231c?auto=format&fit=crop&w=600&q=80" alt="Móng họa tiết da báo và lá" width="600" height="750" loading="lazy"><figcaption>Da báo</figcaption></figure>
+      <figure class="rv" data-c="ombre"><img src="https://images.unsplash.com/photo-1772322586785-3a34772cbc61?auto=format&fit=crop&w=600&q=80" alt="Móng trắng vân đá tím đen" width="600" height="750" loading="lazy"><figcaption>Vân đá</figcaption></figure>
+      <figure class="rv d1" data-c="don-gian"><img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=600&q=80" alt="Móng sơn hồng bóng" width="600" height="750" loading="lazy"><figcaption>Hồng kẹo</figcaption></figure>
+      <figure class="rv d2" data-c="chan"><img src="https://images.unsplash.com/photo-1707725238063-0c54fb6963d1?auto=format&fit=crop&w=600&q=80" alt="Móng chân sơn đỏ" width="600" height="750" loading="lazy"><figcaption>Chân đỏ</figcaption></figure>
+      <figure class="rv d3" data-c="chan"><img src="https://images.unsplash.com/photo-1664643411326-6c589531be3c?auto=format&fit=crop&w=600&q=80" alt="Đôi chân với móng sơn màu" width="600" height="750" loading="lazy"><figcaption>Sơn chân</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="ve-tiem" style="padding-top:0">
+  <div class="wrap">
+    <div class="about-row">
+      <img class="rv" src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1000&q=80" alt="Khách đang được làm móng tại tiệm" width="1000" height="800" loading="lazy">
+      <div class="rv d1">
+        <span class="tag">Về tiệm</span>
+        <h2>Tiệm&nbsp;nhỏ, xinh&nbsp;xắn, làm&nbsp;kỹ</h2>
+        <p>Kẹo Nail là tiệm nail nhỏ dành cho các bạn trẻ thích đổi mẫu thường xuyên. Tiệm có ghế êm, wifi, giá đỡ điện thoại và trà sữa mini trong lúc chờ.</p>
+        <p>Thợ trong tiệm cập nhật mẫu mới mỗi tuần và nhận làm theo hình bạn gửi.</p>
+      </div>
+    </div>
+    <div class="why">
+      <div class="rv"><span class="n">01</span><h3>Dụng&nbsp;cụ sạch&nbsp;sẽ</h3><p>Dũa, buffer dùng riêng; kềm được hấp tiệt trùng sau mỗi khách.</p></div>
+      <div class="rv d1"><span class="n">02</span><h3>Làm theo hình&nbsp;mẫu</h3><p>Gửi hình qua Zalo, tiệm báo giá trước, không phát sinh.</p></div>
+      <div class="rv d2"><span class="n">03</span><h3>Bảo&nbsp;hành 5&nbsp;ngày</h3><p>Bong, gãy trong 5 ngày đầu tiệm sửa miễn phí.</p></div>
+      <div class="rv d3"><span class="n">04</span><h3>Đặt&nbsp;lịch không&nbsp;chờ</h3><p>Đặt trước để có thợ và ghế sẵn, không phải đợi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="danh-gia" style="padding-top:0">
+  <div class="wrap">
+    <div class="sh rv">
+      <div><span class="tag">Feedback</span><h2>Khách&nbsp;nói gì nè</h2></div>
+      <p><span class="sample">Đánh giá mẫu</span> Nội dung minh hoạ – sẽ thay bằng feedback thật của khách.</p>
+    </div>
+    <div class="chat">
+      <figure class="bubble rv"><p>Gửi hình Pinterest mà làm giống y luôn á, móng úp form almond đều tay lắm 💕</p><figcaption class="who"><span class="av">L</span><span><b>Linh</b> · Đánh giá mẫu · 08/10/2026</span></figcaption></figure>
+      <figure class="bubble rv d1"><p>Sơn thạch màu hồng trong veo xinh xỉu, đi làm hơn 2 tuần vẫn bóng.</p><figcaption class="who"><span class="av">T</span><span><b>Thảo</b> · Đánh giá mẫu · 16/10/2026</span></figcaption></figure>
+      <figure class="bubble rv d2"><p>Tiệm dễ thương, có chỗ để điện thoại, chị thợ vui tính. Combo tay + chân giá ổn.</p><figcaption class="who"><span class="av">V</span><span><b>Vy</b> · Đánh giá mẫu · 27/10/2026</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="dat-lich">
+  <div class="wrap book-grid">
+    <div class="rv" id="lien-he">
+      <span class="tag">Đặt lịch</span>
+      <h2>Giữ&nbsp;chỗ làm&nbsp;nail</h2>
+      <p>Điền form hoặc nhắn Zalo cho tiệm. Tiệm sẽ xác nhận lịch trong giờ mở cửa.</p>
+      <div class="info">
+        <div><small>Địa chỉ</small>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Cần&nbsp;Thơ</div>
+        <div><small>Hotline / Zalo</small><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></div>
+        <div><small>Giờ mở cửa</small>09:00&nbsp;–&nbsp;21:00 · Cả tuần</div>
+      </div>
+      <div class="map" role="img" aria-label="Khu vực bản đồ minh hoạ"><span>📍 Nhúng Google Maps tại đây</span></div>
+    </div>
+    <div class="rv d1" id="form-box">
+      <form id="bookForm" novalidate>
+        <div><label for="f-name">Tên của bạn</label><input id="f-name" required autocomplete="name" placeholder="VD: Ngọc Anh"></div>
+        <div><label for="f-phone">Số điện thoại</label><input id="f-phone" type="tel" required inputmode="tel" autocomplete="tel" placeholder="0900 000 000"></div>
+        <fieldset class="full"><legend>Bạn muốn làm gì? (chọn nhiều)</legend>
+          <div class="picks">
+            <label><input type="checkbox" checked><span>Sơn gel</span></label>
+            <label><input type="checkbox"><span>Sơn thạch</span></label>
+            <label><input type="checkbox"><span>Úp móng</span></label>
+            <label><input type="checkbox"><span>Đắp bột</span></label>
+            <label><input type="checkbox"><span>Vẽ / đính đá</span></label>
+            <label><input type="checkbox"><span>Làm chân</span></label>
+          </div></fieldset>
+        <div><label for="f-date">Ngày</label><input id="f-date" required inputmode="numeric" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}"></div>
+        <div><label for="f-time">Giờ</label><select id="f-time"><option>09:00</option><option>10:30</option><option>13:00</option><option>15:00</option><option>17:00</option><option>19:00</option><option>20:00</option></select></div>
+        <div class="full"><label for="f-note">Ghi chú</label><textarea id="f-note" placeholder="Màu, form móng, hoặc dán link hình mẫu…"></textarea></div>
+        <div class="full"><button class="btn btn-pink" type="submit">Gửi&nbsp;đặt&nbsp;lịch 💅</button></div>
+      </form>
+      <div class="thanks" role="status" aria-live="polite"><div class="big" aria-hidden="true">🍬</div><h3>Đã&nbsp;nhận lịch!</h3><p>Cảm ơn bạn nha. Kẹo Nail sẽ nhắn Zalo hoặc gọi xác nhận trong giờ mở cửa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hoi-dap">
+  <div class="wrap">
+    <div class="sh rv" style="justify-content:center;text-align:center"><div><span class="tag">Hỏi đáp</span><h2>Câu&nbsp;hỏi thường&nbsp;gặp</h2></div></div>
+    <div class="faq">
+      <details class="rv"><summary>Sơn gel giữ được bao lâu?</summary><p>Thông thường khoảng 2–3 tuần tùy độ dài móng và thói quen sinh hoạt. Nên đeo găng khi rửa chén, giặt đồ để sơn bền hơn.</p></details>
+      <details class="rv"><summary>Tôi có cần đặt lịch trước không?</summary><p>Tiệm vẫn nhận khách vãng lai, nhưng đặt lịch trước giúp bạn không phải chờ, đặc biệt vào cuối tuần và dịp lễ.</p></details>
+      <details class="rv"><summary>Làm mẫu theo hình có được không?</summary><p>Được nha. Bạn gửi hình qua Zalo, tiệm báo giá và thời gian làm trước khi bạn đến.</p></details>
+      <details class="rv"><summary>Chính sách bảo hành thế nào?</summary><p>Móng bị bong, gãy trong 5 ngày đầu (không do va đập mạnh) tiệm sửa miễn phí.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a href="#" class="logo"><span class="dot" aria-hidden="true"></span>Kẹo&nbsp;Nail</a><p style="margin-top:12px">Làm nail xinh, giá dễ thương.</p></div>
+      <div><h3>Liên hệ</h3><ul><li>Số 00 Đường Mẫu, TP.&nbsp;Cần&nbsp;Thơ</li><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li>09:00&nbsp;–&nbsp;21:00</li></ul></div>
+      <div><h3>Theo dõi tiệm</h3><ul><li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <p class="copy">© 2026 Kẹo Nail. Mẫu giao diện demo – tên tiệm, địa chỉ, số điện thoại, giá và đánh giá đều là nội dung minh hoạ.</p>
+  </div>
+</footer>
+
+<a class="badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener">Mẫu giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận báo&nbsp;giá</b></a>
+
+<script>
+(function(){
+  var h=document.querySelector('header'), b=document.querySelector('.burger');
+  b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'✕':'☰'});
+  document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');b.setAttribute('aria-expanded',false);b.textContent='☰'})});
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+  var chips=document.querySelectorAll('.chip'), figs=document.querySelectorAll('.grid figure');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.setAttribute('aria-pressed','false')}); c.setAttribute('aria-pressed','true');
+    var f=c.getAttribute('data-f'); figs.forEach(function(g){g.classList.toggle('hide',f!=='all'&&g.getAttribute('data-c')!==f)});
+  })});
+  var f=document.getElementById('bookForm');
+  f.addEventListener('submit',function(e){e.preventDefault();if(!f.reportValidity())return;var fb=document.getElementById('form-box');fb.classList.add('sent');fb.scrollIntoView({block:'center'})});
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website khách sạn – Hiên Phố Boutique Hotel</title>
+<meta name="description" content="Hiên Phố Boutique Hotel – khách sạn boutique gần phố cổ Hội An. Phòng Deluxe ban công, Suite hướng sông, nhà hàng Hiên Trà phục vụ bữa sáng và món Hội An. Đặt phòng trực tuyến.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --ivory:#f7f3eb; --ivory-2:#efe8da; --ink:#1f2421; --muted:#5f665f; --green:#1f3a33; --green-2:#2c4c43; --brass:#a8834a; --brass-2:#c9a56a; --line:#ddd3c0;
+  --serif:'Noto Serif Display',Georgia,serif; --sans:'Montserrat',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.18;letter-spacing:-.01em}
+.nw{white-space:nowrap}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.over{font:500 12px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.sec{padding:clamp(76px,10vw,136px) 0}
+.head-c{text-align:center;max-width:700px;margin:0 auto clamp(44px,6vw,72px)}
+.head-c h2{font-size:clamp(36px,5vw,58px);margin:14px 0 16px}
+.head-c p{color:var(--muted)}
+.rule{display:block;width:1px;height:48px;background:var(--brass);margin:0 auto 18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;font:600 13px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .3s,color .3s,border-color .3s,transform .3s}
+.btn-brass{background:var(--brass);color:#fff}
+.btn-brass:hover{background:var(--green);transform:translateY(-2px)}
+.btn-out{border-color:currentColor;color:inherit;background:transparent}
+.btn-out:hover{background:var(--green);border-color:var(--green);color:#fff}
+.link{font:600 12.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--green);border-bottom:1px solid var(--brass);padding-bottom:4px;transition:color .2s}
+.link:hover{color:var(--brass)}
+.ph{background:linear-gradient(140deg,#c9bda4,#8f8a73);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s cubic-bezier(.2,.7,.2,1),opacity .4s}
+img.fail{opacity:0}
+
+/* header */
+header.site{position:absolute;inset:0 0 auto 0;z-index:40;color:#fff}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px 0}
+.bar nav{display:flex;gap:28px}
+.bar nav a{text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+.bar nav a:hover{opacity:1;color:var(--brass-2)}
+.bar .r{justify-self:end;display:flex;gap:24px;align-items:center}
+.logo{text-decoration:none;text-align:center;line-height:1.15}
+.logo b{display:block;font:500 28px/1.2 var(--serif);letter-spacing:.02em}
+.logo small{font-size:10.5px;letter-spacing:.38em;text-transform:uppercase;opacity:.85}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.5);width:44px;height:44px;cursor:pointer;color:#fff}
+.burger span{display:block;width:20px;height:1.5px;background:currentColor;margin:5px auto}
+.mnav{display:none}
+
+/* hero */
+.hero{position:relative;height:min(100vh,900px);min-height:640px;color:#fff;background:#2b3a33}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{transform:scale(1.12);animation:kz 3s cubic-bezier(.2,.7,.2,1) forwards}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,22,19,.6) 0%,rgba(15,22,19,.38) 40%,rgba(15,22,19,.7) 100%)}
+.hero .in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px 80px}
+.hero .over{color:#f0dcb4;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero h1{font-size:clamp(42px,6.6vw,92px);font-weight:400;margin:20px 0 18px;line-height:1.14;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero h1 i{font-style:italic;color:#f0dfbf}
+.hero p{max-width:560px;font-size:17px;text-shadow:0 1px 14px rgba(0,0,0,.55)}
+.fx{opacity:0;transform:translateY(20px);animation:fu 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+.fx.b{animation-delay:.2s}.fx.c{animation-delay:.4s}.fx.d{animation-delay:.65s}
+@keyframes fu{to{opacity:1;transform:none}}
+@keyframes kz{to{transform:scale(1)}}
+
+/* booking bar */
+.booking{position:relative;z-index:5;margin-top:-64px}
+.booking form{background:#fff;box-shadow:0 30px 70px -40px rgba(20,30,25,.55);display:grid;grid-template-columns:1.1fr 1.1fr .9fr .9fr auto;align-items:stretch;border-top:3px solid var(--brass)}
+.bk{padding:18px 22px;display:grid;gap:4px;border-right:1px solid var(--line);min-width:0}
+.bk label{font:600 11px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.bk input,.bk select{border:0;background:transparent;font:500 16px/1.4 var(--sans);color:var(--ink);padding:4px 0;width:100%}
+.bk input:focus,.bk select:focus{outline:none}
+.bk:focus-within{background:var(--ivory)}
+.booking .btn{height:auto;padding:0 34px}
+.bk-msg{display:none;background:var(--green);color:#f3eadb;padding:14px 22px;font-size:14.5px}
+.bk-msg.show{display:block;animation:fu .5s forwards}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,7vw,110px);align-items:center}
+.intro h2{font-size:clamp(36px,4.6vw,56px);margin:14px 0 22px}
+.intro p{color:var(--muted);margin-bottom:16px}
+.intro .pics{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end}
+.intro .pics .ph:first-child{aspect-ratio:3/4.3}
+.intro .pics .ph:last-child{aspect-ratio:3/4;margin-bottom:-48px}
+.sig{display:flex;gap:30px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.sig div b{display:block;font:500 24px/1.2 var(--serif);color:var(--green)}
+.sig div span{font-size:13px;color:var(--muted)}
+
+/* rooms */
+.rooms{background:var(--ivory-2)}
+.room{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;margin-bottom:clamp(56px,8vw,96px)}
+.room:last-child{margin-bottom:0}
+.room .ph{aspect-ratio:16/11}
+.room:hover .ph img{transform:scale(1.04)}
+.room .card{background:#fff;padding:clamp(28px,4vw,52px);margin-left:-80px;position:relative;z-index:2;box-shadow:0 30px 60px -45px rgba(20,30,25,.5)}
+.room.flip{grid-template-columns:1fr 1.25fr}
+.room.flip .ph{order:2}
+.room.flip .card{margin-left:0;margin-right:-80px}
+.room h3{font-size:clamp(30px,3.2vw,40px);margin:8px 0 12px}
+.room p{color:var(--muted);margin-bottom:18px}
+.specs{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:22px;font-size:13.5px}
+.specs li{display:flex;gap:8px;align-items:center}
+.specs svg{color:var(--brass);flex:none}
+.room .foot{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--line)}
+.from{font-size:13px;color:var(--muted)}
+.from b{display:block;font:500 26px/1.2 var(--serif);color:var(--green)}
+
+/* amenities */
+.am-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.am{padding:34px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .3s}
+.am:hover{background:#fff}
+.am svg{color:var(--brass);margin-bottom:16px}
+.am h3{font-size:24px;margin-bottom:6px}
+.am p{font-size:14px;color:var(--muted)}
+
+/* restaurant */
+.resto{background:var(--green);color:#efe7d6;position:relative;overflow:hidden}
+.resto .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,96px);align-items:center}
+.resto h2{font-size:clamp(38px,5vw,60px);margin:14px 0 20px;color:#fff}
+.resto p{color:#cfd8cf;margin-bottom:16px}
+.resto .over{color:var(--brass-2)}
+.resto .imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resto .imgs .ph{aspect-ratio:4/5}
+.resto .imgs .ph:first-child{margin-top:48px}
+.times{display:grid;gap:0;margin:26px 0 30px;border-top:1px solid rgba(255,255,255,.15)}
+.times div{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:14.5px}
+.times b{font-weight:600;color:#fff}
+.dishes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.dishes span{border:1px solid rgba(201,165,106,.6);color:#f0dfbf;padding:6px 14px;font-size:13.5px}
+.resto .btn-out{color:#fff}
+.resto .btn-out:hover{background:var(--brass);border-color:var(--brass)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:110px;gap:14px}
+.gal .ph{position:relative}
+.gal .ph:hover img{transform:scale(1.05)}
+.g1{grid-column:1/6;grid-row:span 4}.g2{grid-column:6/9;grid-row:span 2}.g3{grid-column:9/13;grid-row:span 3}.g4{grid-column:6/9;grid-row:span 2}.g5{grid-column:9/13;grid-row:span 1}
+.g5{grid-row:span 1}
+
+/* reviews */
+.rv-wrap{max-width:900px;margin:0 auto;text-align:center}
+.rv-slide{display:none}
+.rv-slide.on{display:block;animation:fu .7s forwards}
+.rv-slide blockquote{font:400 clamp(22px,2.7vw,31px)/1.45 var(--serif);font-style:italic;color:var(--green);margin:18px 0 24px}
+.rv-slide cite{font-style:normal;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:28px}
+.dots button{width:36px;height:3px;border:0;background:var(--line);cursor:pointer;padding:0;transition:background .3s}
+.dots button[aria-current="true"]{background:var(--brass)}
+.tag-s{display:inline-block;background:var(--ivory-2);border:1px solid var(--line);font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:8px 12px;color:var(--brass)}
+
+/* location + contact */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;box-shadow:0 30px 70px -50px rgba(20,30,25,.5)}
+.map{position:relative;min-height:440px;background:
+ repeating-linear-gradient(0deg,#e6dfcf 0 1px,transparent 1px 38px),repeating-linear-gradient(90deg,#e6dfcf 0 1px,transparent 1px 38px),#f1ece1;overflow:hidden}
+.map .river{position:absolute;left:0;right:0;bottom:16%;height:64px;background:#bcd0c6;transform:rotate(-4deg)}
+.map .road{position:absolute;top:-10%;bottom:-10%;left:42%;width:14px;background:#e2d6be;transform:rotate(8deg)}
+.map .road2{position:absolute;left:0;right:0;top:34%;height:12px;background:#e2d6be;transform:rotate(3deg)}
+.map .pin{position:absolute;left:46%;top:42%;transform:translate(-50%,-100%);text-align:center;z-index:2}
+.map .pin span{display:block;background:var(--green);color:#fff;font-size:12.5px;font-weight:600;padding:6px 12px;margin-bottom:6px;white-space:nowrap}
+.map .pin i{display:block;width:14px;height:14px;margin:0 auto;background:var(--brass);transform:rotate(45deg);box-shadow:0 0 0 6px rgba(168,131,74,.2)}
+.map .lbl{position:absolute;font-size:12px;color:#5d6c62;letter-spacing:.08em;text-transform:uppercase}
+.loc .info{padding:clamp(30px,4vw,56px)}
+.loc h2{font-size:clamp(34px,4vw,48px);margin:12px 0 18px}
+.loc ul{list-style:none;display:grid;gap:12px;margin-bottom:20px}
+.loc li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px}
+.loc li svg{flex:none;color:var(--brass);margin-top:4px}
+.dist{display:grid;grid-template-columns:1fr auto;gap:6px 18px;font-size:14px;padding-top:18px;border-top:1px solid var(--line)}
+.dist span:nth-child(even){color:var(--muted);text-align:right}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px);margin-top:clamp(70px,9vw,120px)}
+.contact h2{font-size:clamp(34px,4vw,50px);margin:12px 0 16px}
+.contact p{color:var(--muted)}
+form.cf{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.fl{display:grid;gap:6px}
+.fl.full{grid-column:1/-1}
+.fl label{font:600 11px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.fl input,.fl select,.fl textarea{font:400 15.5px/1.5 var(--sans);color:var(--ink);border:0;border-bottom:1px solid #bfb39c;background:transparent;padding:10px 0;width:100%;transition:border-color .2s}
+.fl input:focus,.fl select:focus,.fl textarea:focus{outline:none;border-bottom-color:var(--green)}
+.fl textarea{min-height:100px;resize:vertical}
+form.cf .btn{justify-self:start}
+.ok{display:none;grid-column:1/-1;background:var(--green);color:#f3eadb;padding:16px 20px;font-size:14.5px}
+.ok.show{display:block;animation:fu .5s forwards}
+.note{grid-column:1/-1;font-size:12.5px;color:var(--muted)}
+
+footer{background:#17201c;color:#bfc6bd;padding:72px 0 100px;font-size:14.5px}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}
+footer .logo{text-align:left;color:#fff}
+footer h4{font:500 19px/1.25 var(--serif);color:#fff;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--brass-2)}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:20px;font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:#8c968c}
+
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(23,32,28,.92);color:#fff;font:500 12px/1.35 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.5);backdrop-filter:blur(6px);transition:transform .2s}
+.kt-badge:hover{transform:translateY(-2px)}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#3ddc84;flex:none;box-shadow:0 0 0 3px rgba(61,220,132,.25)}
+.kt-badge b{color:var(--brass-2);font-weight:600}
+
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.12s!important}.d2{transition-delay:.24s!important}.d3{transition-delay:.36s!important}
+
+@media (max-width:1080px){
+  .bar nav{gap:18px}
+  .booking form{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .booking .btn{grid-column:1/-1;padding:18px}
+  .am-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .bar{grid-template-columns:auto 1fr auto}
+  .bar nav,.bar .r .btn{display:none}
+  .burger{display:block}
+  .logo{justify-self:center}
+  .logo b{font-size:25px}
+  .mnav{display:block;position:absolute;left:0;right:0;top:100%;background:var(--green);max-height:0;overflow:hidden;transition:max-height .4s}
+  .mnav.open{max-height:480px}
+  .mnav ul{list-style:none;padding:6px 20px 22px}
+  .mnav a{display:block;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12);text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+  .intro,.resto .grid,.loc,.contact{grid-template-columns:1fr}
+  .room,.room.flip{grid-template-columns:1fr}
+  .room.flip .ph{order:0}
+  .room .card,.room.flip .card{margin:-60px 18px 0}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .g1,.g2,.g3,.g4,.g5{grid-column:auto;grid-row:auto}
+  .g1{grid-column:1/-1;grid-row:span 2}
+  .g5{grid-column:1/-1}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .hero{min-height:600px;height:88vh}
+  .booking{margin-top:-40px}
+  .booking form{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bk{padding:14px 16px;border-bottom:1px solid var(--line)}
+  .bk:nth-child(2n){border-right:0}
+  .am-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .am{padding:22px 16px}
+  .am h3{font-size:19px}
+  .am p{font-size:13px}
+  form.cf{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+  .intro .pics .ph:last-child{margin-bottom:0}
+  .sig{gap:20px}
+  .room .card,.room.flip .card{margin:-40px 10px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .fx{opacity:1;transform:none}
+  .hero .ph img{transform:none}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <button class="burger" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav aria-label="Menu chính">
+      <a href="#phong">Phòng&nbsp;nghỉ</a>
+      <a href="#tien-nghi">Tiện&nbsp;nghi</a>
+      <a href="#nha-hang">Nhà&nbsp;hàng</a>
+    </nav>
+    <a href="#" class="logo" aria-label="Hiên Phố Boutique Hotel – trang chủ"><b>Hiên&nbsp;Phố</b><small>Boutique&nbsp;Hotel · Hội&nbsp;An</small></a>
+    <div class="r">
+      <nav aria-label="Menu phụ"><a href="#thu-vien">Thư&nbsp;viện&nbsp;ảnh</a><a href="#lien-he">Liên&nbsp;hệ</a></nav>
+      <a href="#dat-phong" class="btn btn-brass">Đặt&nbsp;phòng</a>
+    </div>
+  </div>
+  <nav class="mnav" aria-label="Menu di động">
+    <ul>
+      <li><a href="#phong">Phòng&nbsp;nghỉ</a></li>
+      <li><a href="#tien-nghi">Tiện&nbsp;nghi</a></li>
+      <li><a href="#nha-hang">Nhà&nbsp;hàng</a></li>
+      <li><a href="#thu-vien">Thư&nbsp;viện&nbsp;ảnh</a></li>
+      <li><a href="#lien-he">Liên&nbsp;hệ</a></li>
+      <li><a href="#dat-phong">Đặt&nbsp;phòng</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="ph"><img src="https://images.unsplash.com/photo-1701397955118-79059690ef50?auto=format&fit=crop&w=2000&q=80" alt="Con phố cổ Hội An với nhà tường vàng, đèn lồng và người đạp xe" width="2000" height="1300" fetchpriority="high"></div>
+  <div class="in">
+    <span class="over fx">Khách&nbsp;sạn&nbsp;boutique&nbsp;· Phố&nbsp;cổ&nbsp;Hội&nbsp;An</span>
+    <h1 class="fx b">Nghỉ&nbsp;chân bên <i>hiên&nbsp;phố&nbsp;cổ</i></h1>
+    <p class="fx c">24 phòng nghỉ mang nét nhà xưa Hội An, cách phố cổ vài phút đi bộ. Bữa sáng tại nhà hàng Hiên Trà, xe đạp miễn phí để dạo phố.</p>
+  </div>
+</section>
+
+<div class="booking" id="dat-phong">
+  <div class="wrap">
+    <form class="fx d" data-form="booking" novalidate aria-label="Kiểm tra phòng trống">
+      <div class="bk"><label for="ci">Nhận phòng</label><input id="ci" name="ci" type="date" required></div>
+      <div class="bk"><label for="co">Trả phòng</label><input id="co" name="co" type="date" required></div>
+      <div class="bk"><label for="ad">Người lớn</label><select id="ad" name="ad"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+      <div class="bk"><label for="ch">Trẻ em</label><select id="ch" name="ch"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></div>
+      <button type="submit" class="btn btn-brass">Kiểm&nbsp;tra phòng&nbsp;trống</button>
+    </form>
+    <div class="bk-msg" role="status" aria-live="polite"></div>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap intro">
+    <div class="reveal">
+      <span class="over">Chào&nbsp;mừng đến&nbsp;Hiên&nbsp;Phố</span>
+      <h2>Một&nbsp;góc Hội&nbsp;An yên&nbsp;tĩnh để&nbsp;trở&nbsp;về</h2>
+      <p>Hiên Phố được thiết kế theo dáng nhà phố cổ: mái ngói âm dương, sân trong trồng cây, ban công gỗ nhìn ra con phố nhỏ. Mỗi phòng là một không gian riêng tư, ấm cúng, phù hợp cho cặp đôi, gia đình hay khách công tác.</p>
+      <p>Đội ngũ lễ tân trực 24/7, sẵn sàng hỗ trợ đặt tour, thuê xe, giới thiệu quán ăn địa phương trong suốt kỳ nghỉ.</p>
+      <div class="sig">
+        <div><b>24&nbsp;phòng</b><span>5 hạng phòng</span></div>
+        <div><b>Nhận&nbsp;phòng 14:00</b><span>Trả phòng 12:00</span></div>
+        <div><b>Bữa&nbsp;sáng</b><span>Bao gồm trong giá phòng</span></div>
+      </div>
+    </div>
+    <div class="pics reveal d1">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1573052905904-34ad8c27f0cc?auto=format&fit=crop&w=700&q=80" alt="Sảnh khách sạn với ghế bành, thảm hoa văn và cửa vòm dẫn lên cầu thang" width="700" height="1000" loading="lazy"></div>
+      <div class="ph"><img src="https://images.unsplash.com/photo-1563354860-799d15199ac3?auto=format&fit=crop&w=700&q=80" alt="Đèn lồng Hội An nhiều màu sáng rực buổi tối" width="700" height="930" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rooms" id="phong">
+  <div class="wrap">
+    <div class="head-c reveal">
+      <span class="rule"></span>
+      <span class="over">Phòng&nbsp;nghỉ</span>
+      <h2>Hạng&nbsp;phòng &amp;&nbsp;giá</h2>
+      <p>Giá đã bao gồm bữa sáng cho 2 người, thuế và phí phục vụ. Giá có thể thay đổi theo mùa và ngày lễ.</p>
+    </div>
+
+    <article class="room reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80" alt="Phòng nghỉ giường gỗ, gối xanh, cửa kính nhìn ra vườn" width="1200" height="825" loading="lazy"></div>
+      <div class="card">
+        <span class="over">Phòng&nbsp;Superior</span>
+        <h3>Phòng&nbsp;Superior Hướng&nbsp;vườn</h3>
+        <p>Phòng ấm cúng với giường gỗ, cửa kính lớn nhìn ra sân vườn trong, phù hợp cho cặp đôi nghỉ ngắn ngày.</p>
+        <ul class="specs">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M9 3v18"/></svg><span class="nw">24 m²</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6M3 14h18M6 9V6h12v3"/></svg>1 giường đôi</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/></svg>Tối đa 2 người lớn</li>
+        </ul>
+        <div class="foot"><div class="from">Giá phòng từ<b class="nw">950.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-out">Đặt&nbsp;phòng</a></div>
+      </div>
+    </article>
+
+    <article class="room flip reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1781572725438-ac8c41476752?auto=format&fit=crop&w=1200&q=80" alt="Phòng ngủ hiện đại giường lớn, rèm trắng, cửa nhìn ra vườn xanh" width="1200" height="825" loading="lazy"></div>
+      <div class="card">
+        <span class="over">Phòng&nbsp;Deluxe</span>
+        <h3>Phòng&nbsp;Deluxe Ban&nbsp;công</h3>
+        <p>Ban công riêng nhìn ra con phố nhỏ, sáng sớm có thể nghe tiếng chuông xe đạp và gánh hàng rong đi qua.</p>
+        <ul class="specs">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M9 3v18"/></svg><span class="nw">30 m²</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6M3 14h18M6 9V6h12v3"/></svg>Giường cỡ King hoặc 2 giường đơn</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20h16M6 20V10h12v10M4 10h16"/></svg>Ban công riêng</li>
+        </ul>
+        <div class="foot"><div class="from">Giá phòng từ<b class="nw">1.250.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-out">Đặt&nbsp;phòng</a></div>
+      </div>
+    </article>
+
+    <article class="room reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Phòng gia đình có ghế sofa, giường đôi và rèm cửa dày" width="1200" height="825" loading="lazy"></div>
+      <div class="card">
+        <span class="over">Phòng&nbsp;Gia&nbsp;đình</span>
+        <h3>Phòng&nbsp;Gia&nbsp;đình</h3>
+        <p>Không gian rộng có góc tiếp khách, đủ chỗ cho bố mẹ và hai bé. Có thể kê thêm giường phụ theo yêu cầu.</p>
+        <ul class="specs">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M9 3v18"/></svg><span class="nw">40 m²</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6M3 14h18M6 9V6h12v3"/></svg>1 giường đôi + 1 giường đơn</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/></svg>2 người lớn, 2 trẻ em</li>
+        </ul>
+        <div class="foot"><div class="from">Giá phòng từ<b class="nw">1.650.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-out">Đặt&nbsp;phòng</a></div>
+      </div>
+    </article>
+
+    <article class="room flip reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1200&q=80" alt="Phòng Suite ốp gỗ với phòng khách riêng, đèn bàn và tranh treo tường" width="1200" height="825" loading="lazy"></div>
+      <div class="card">
+        <span class="over">Phòng&nbsp;Suite</span>
+        <h3>Phòng&nbsp;Suite Hướng&nbsp;sông</h3>
+        <p>Phòng khách riêng biệt, nội thất gỗ, bồn tắm nằm. Cửa sổ lớn nhìn ra sông, hoàng hôn rất đẹp vào mùa hè.</p>
+        <ul class="specs">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M9 3v18"/></svg><span class="nw">52 m²</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v6M3 14h18M6 9V6h12v3"/></svg>Giường cỡ King</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4zM6 12V6a2 2 0 0 1 4 0"/></svg>Bồn tắm nằm</li>
+        </ul>
+        <div class="foot"><div class="from">Giá phòng từ<b class="nw">2.400.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-out">Đặt&nbsp;phòng</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="tien-nghi">
+  <div class="wrap">
+    <div class="head-c reveal">
+      <span class="rule"></span>
+      <span class="over">Tiện&nbsp;nghi</span>
+      <h2>Dịch&nbsp;vụ &amp;&nbsp;tiện&nbsp;ích</h2>
+      <p>Những tiện nghi giúp kỳ nghỉ ở Hội An của quý khách thoải mái, thuận tiện hơn.</p>
+    </div>
+    <div class="am-grid reveal">
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 12c3-3 5-3 8 0s5 3 8 0 3-1 4 0M2 17c3-3 5-3 8 0s5 3 8 0 3-1 4 0M7 9V4h4"/></svg><h3>Hồ&nbsp;bơi ngoài&nbsp;trời</h3><p>Mở cửa 06:00 – 20:00, có khăn tắm.</p></div>
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h18v12H3zM8 7V5h8v2M3 12h18"/></svg><h3>Lễ&nbsp;tân&nbsp;24/7</h3><p>Gửi hành lý, đặt tour, đổi ngoại tệ.</p></div>
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8M9 6h3"/></svg><h3>Xe&nbsp;đạp miễn&nbsp;phí</h3><p>Dạo phố cổ, ra biển An Bàng.</p></div>
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 17h14l-1-6H6zM7 11l2-5h6l2 5M7 20v-3M17 20v-3"/></svg><h3>Đưa&nbsp;đón sân&nbsp;bay</h3><p>Sân bay Đà Nẵng, có phụ phí.</p></div>
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c4 4 4 8 0 12-4-4-4-8 0-12zM5 13c2 4 5 6 7 6s5-2 7-6"/></svg><h3>Spa &amp;&nbsp;massage</h3><p>Liệu trình thảo dược, đặt trước tại lễ tân.</p></div>
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 9a15 15 0 0 1 20 0M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0"/><circle cx="12" cy="20" r="1"/></svg><h3>Wifi miễn&nbsp;phí</h3><p>Phủ sóng toàn khách sạn.</p></div>
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3h12v18H6zM9 7h6M9 11h6"/></svg><h3>Giặt&nbsp;ủi</h3><p>Trả trong ngày nếu gửi trước 10:00.</p></div>
+      <div class="am"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 10h16v10H4zM8 10V6a4 4 0 0 1 8 0v4"/></svg><h3>Két&nbsp;an&nbsp;toàn</h3><p>Trong từng phòng nghỉ.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec resto" id="nha-hang">
+  <div class="wrap grid">
+    <div class="imgs reveal">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1769638913559-c8c6984428fe?auto=format&fit=crop&w=700&q=80" alt="Quầy buffet sáng với salad, trái cây và nhiều món ăn" width="700" height="875" loading="lazy"></div>
+      <div class="ph"><img src="https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4?auto=format&fit=crop&w=700&q=80" alt="Bàn ăn nhiều món Việt: thịt nướng, gỏi, cà ri và rau sống" width="700" height="875" loading="lazy"></div>
+    </div>
+    <div class="reveal d1">
+      <span class="over">Ẩm&nbsp;thực</span>
+      <h2>Nhà&nbsp;hàng Hiên&nbsp;Trà</h2>
+      <p>Hiên Trà nằm ở tầng trệt, mở ra sân vườn trong. Buổi sáng phục vụ buffet kết hợp món Âu và món Việt; trưa và tối phục vụ thực đơn gọi món với các đặc sản Hội An.</p>
+      <div class="times">
+        <div><span>Bữa sáng (buffet)</span><b class="nw">06:30 – 10:00</b></div>
+        <div><span>Bữa trưa, bữa tối (gọi món)</span><b class="nw">11:00 – 21:30</b></div>
+        <div><span>Trà chiều tại sân vườn</span><b class="nw">15:00 – 17:00</b></div>
+      </div>
+      <div class="dishes"><span>Cao lầu</span><span>Mì Quảng</span><span>Cơm gà Hội An</span><span>Bánh xèo</span><span>Hoành thánh chiên</span><span>Trà thảo mộc</span></div>
+      <a href="#lien-he" class="btn btn-out">Đặt&nbsp;bàn tại&nbsp;nhà&nbsp;hàng</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="thu-vien">
+  <div class="wrap">
+    <div class="head-c reveal">
+      <span class="rule"></span>
+      <span class="over">Thư&nbsp;viện&nbsp;ảnh</span>
+      <h2>Hiên&nbsp;Phố qua&nbsp;ống&nbsp;kính</h2>
+    </div>
+    <div class="gal">
+      <div class="ph g1 reveal"><img src="https://images.unsplash.com/photo-1787731218441-1ed95e59b54d?auto=format&fit=crop&w=900&q=80" alt="Cây cầu rực sáng đèn lồng đỏ bên sông Hoài, Hội An về đêm" width="900" height="900" loading="lazy"></div>
+      <div class="ph g2 reveal d1"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=700&q=80" alt="Giường phòng nghỉ trải ga trắng, gối tựa và đèn ngủ" width="700" height="460" loading="lazy"></div>
+      <div class="ph g3 reveal d2"><img src="https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?auto=format&fit=crop&w=800&q=80" alt="Hồ bơi ngoài trời với ghế tắm nắng và ô che, cây xanh xung quanh" width="800" height="700" loading="lazy"></div>
+      <div class="ph g4 reveal d1"><img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?auto=format&fit=crop&w=700&q=80" alt="Khu sảnh chờ với ghế thiết kế và vách ốp gỗ" width="700" height="460" loading="lazy"></div>
+      <div class="ph g5 reveal d2"><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80" alt="Bữa sáng với bánh waffle, trứng ốp và nước cam" width="800" height="230" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap rv-wrap reveal">
+    <span class="tag-s">Đánh giá mẫu</span>
+    <div class="rv-slides">
+      <div class="rv-slide on"><blockquote>“Phòng sạch, yên tĩnh dù ở gần phố cổ. Buổi sáng ngồi ăn ở sân vườn rất thư thả, lễ tân nhiệt tình chỉ quán ăn ngon.”</blockquote><cite>Chị Ngọc A. · Hà Nội · Nội dung minh hoạ</cite></div>
+      <div class="rv-slide"><blockquote>“Gia đình 4 người ở phòng Gia đình rất vừa. Các bé thích hồ bơi, bố mẹ thích được mượn xe đạp đi dạo.”</blockquote><cite>Anh Quang V. · TP. Hồ Chí Minh · Nội dung minh hoạ</cite></div>
+      <div class="rv-slide"><blockquote>“Suite hướng sông đúng như hình. Cao lầu ở nhà hàng Hiên Trà nấu vừa miệng, sẽ quay lại vào dịp Rằm.”</blockquote><cite>Chị Hạnh T. · Đà Nẵng · Nội dung minh hoạ</cite></div>
+    </div>
+    <div class="dots" role="tablist" aria-label="Chọn đánh giá">
+      <button aria-label="Đánh giá 1" aria-current="true"></button><button aria-label="Đánh giá 2"></button><button aria-label="Đánh giá 3"></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="lien-he" style="background:var(--ivory-2)">
+  <div class="wrap">
+    <div class="loc reveal">
+      <div class="map" role="img" aria-label="Bản đồ minh hoạ vị trí khách sạn">
+        <div class="road"></div><div class="road2"></div><div class="river"></div>
+        <span class="lbl" style="left:8%;bottom:9%">Sông Hoài</span>
+        <span class="lbl" style="left:58%;top:18%">Phố cổ</span>
+        <div class="pin"><span>Hiên Phố Boutique Hotel</span><i></i></div>
+      </div>
+      <div class="info">
+        <span class="over">Vị&nbsp;trí</span>
+        <h2>Gần&nbsp;phố&nbsp;cổ, xa&nbsp;ồn&nbsp;ào</h2>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Số 00 đường Mẫu, phường Mẫu, TP.&nbsp;Hội&nbsp;An</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:0900000000" class="nw">0900 000 000</a></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18v12H3zM3 6l9 7 9-7"/></svg><span>datphong@hienpho.vn</span></li>
+        </ul>
+        <div class="dist">
+          <span>Phố cổ Hội An</span><span class="nw">khoảng 5 phút đi bộ</span>
+          <span>Biển An Bàng</span><span class="nw">khoảng 15 phút đi xe</span>
+          <span>Sân bay Đà Nẵng</span><span class="nw">khoảng 45 phút đi xe</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="reveal">
+        <span class="over">Liên&nbsp;hệ</span>
+        <h2>Gửi&nbsp;yêu&nbsp;cầu cho&nbsp;chúng&nbsp;tôi</h2>
+        <p>Đặt phòng đoàn, đặt bàn nhà hàng, tổ chức sinh nhật hay cần tư vấn lịch trình, quý khách vui lòng để lại thông tin. Lễ tân sẽ phản hồi qua điện thoại hoặc email.</p>
+      </div>
+      <form class="cf reveal d1" data-form="contact" novalidate>
+        <div class="fl"><label for="c-name">Họ và tên</label><input id="c-name" name="name" required autocomplete="name"></div>
+        <div class="fl"><label for="c-phone">Số điện thoại</label><input id="c-phone" name="phone" type="tel" required autocomplete="tel" pattern="[0-9 +.]{9,15}"></div>
+        <div class="fl"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+        <div class="fl"><label for="c-topic">Nội dung cần hỗ trợ</label><select id="c-topic" name="topic"><option>Đặt phòng</option><option>Đặt bàn nhà hàng</option><option>Đặt phòng đoàn</option><option>Đưa đón sân bay</option><option>Khác</option></select></div>
+        <div class="fl full"><label for="c-msg">Lời nhắn</label><textarea id="c-msg" name="msg"></textarea></div>
+        <button class="btn btn-brass" type="submit">Gửi&nbsp;yêu&nbsp;cầu</button>
+        <p class="note">Biểu mẫu minh hoạ, thông tin không được gửi đi.</p>
+        <div class="ok" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div><a href="#" class="logo"><b>Hiên&nbsp;Phố</b><small>Boutique&nbsp;Hotel · Hội&nbsp;An</small></a><p style="margin-top:16px;max-width:300px">Khách sạn boutique gần phố cổ Hội An, với nhà hàng Hiên Trà phục vụ cả ngày.</p></div>
+      <div><h4>Khám&nbsp;phá</h4><ul><li><a href="#phong">Phòng nghỉ</a></li><li><a href="#tien-nghi">Tiện nghi</a></li><li><a href="#nha-hang">Nhà hàng Hiên Trà</a></li><li><a href="#thu-vien">Thư viện ảnh</a></li></ul></div>
+      <div><h4>Chính&nbsp;sách</h4><ul><li>Nhận phòng: 14:00</li><li>Trả phòng: 12:00</li><li>Hủy miễn phí trước 3 ngày</li><li>Trẻ dưới 6 tuổi ở miễn phí</li></ul></div>
+      <div><h4>Liên&nbsp;hệ</h4><ul><li><a href="tel:0900000000" class="nw">0900 000 000</a></li><li>datphong@hienpho.vn</li><li>Số 00 đường Mẫu, phường Mẫu, TP.&nbsp;Hội&nbsp;An</li><li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> · <a href="https://zalo.me" target="_blank" rel="noopener">Zalo</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Hiên Phố Boutique Hotel. Thương hiệu, địa chỉ, số điện thoại và chính sách là thông tin mẫu.</span><span>Ảnh: Unsplash</span></div>
+  </div>
+</footer>
+
+<a class="kt-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+  var d=document, rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.documentElement.classList.add('js');
+  d.querySelectorAll('img').forEach(function(img){function f(){img.classList.add('fail')} if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))f(); else img.addEventListener('error',f)});
+  var els=d.querySelectorAll('.reveal');
+  if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(function(e){io.observe(e)})}
+  var bg=d.querySelector('.burger'), mn=d.querySelector('.mnav');
+  bg.addEventListener('click',function(){var o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');bg.setAttribute('aria-expanded',false)})});
+  // reviews
+  var sl=d.querySelectorAll('.rv-slide'), dt=d.querySelectorAll('.dots button'), cur=0, timer;
+  function go(i){sl[cur].classList.remove('on');dt[cur].removeAttribute('aria-current');cur=i;sl[cur].classList.add('on');dt[cur].setAttribute('aria-current','true')}
+  dt.forEach(function(b,i){b.addEventListener('click',function(){go(i);clearInterval(timer)})});
+  if(!rm) timer=setInterval(function(){go((cur+1)%sl.length)},6000);
+  // dates
+  function iso(x){return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')}
+  function vn(s){var p=s.split('-');return p[2]+'/'+p[1]+'/'+p[0]}
+  var ci=d.getElementById('ci'), co=d.getElementById('co'), t=new Date(), t2=new Date(Date.now()+864e5*2);
+  ci.min=iso(t); ci.value=iso(t); co.min=iso(new Date(Date.now()+864e5)); co.value=iso(t2);
+  ci.addEventListener('change',function(){var n=new Date(ci.value+'T00:00');n.setDate(n.getDate()+1);co.min=iso(n);if(co.value<=ci.value)co.value=iso(n)});
+  var bf=d.querySelector('form[data-form=booking]'), bm=d.querySelector('.bk-msg');
+  bf.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!bf.checkValidity()){bf.reportValidity();return}
+    var n=Math.round((new Date(co.value+'T00:00')-new Date(ci.value+'T00:00'))/864e5);
+    if(n<1){bm.textContent='Ngày trả phòng cần sau ngày nhận phòng.';bm.classList.add('show');return}
+    var kids=+d.getElementById('ch').value;
+    bm.textContent='Còn phòng trống từ '+vn(ci.value)+' đến '+vn(co.value)+' ('+n+' đêm) cho '+d.getElementById('ad').value+' người lớn'+(kids?', '+kids+' trẻ em':'')+'. Mời quý khách chọn hạng phòng bên dưới. (Kết quả minh hoạ)';
+    bm.classList.add('show');
+    setTimeout(function(){d.getElementById('phong').scrollIntoView({behavior:rm?'auto':'smooth'})},1400);
+  });
+  var cf=d.querySelector('form[data-form=contact]');
+  cf.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!cf.checkValidity()){cf.reportValidity();return}
+    var box=cf.querySelector('.ok');
+    box.textContent='Cảm ơn '+cf.querySelector('#c-name').value+'! Hiên Phố đã nhận yêu cầu “'+cf.querySelector('#c-topic').value+'”. Lễ tân sẽ liên hệ lại qua số '+cf.querySelector('#c-phone').value+'.';
+    box.classList.add('show'); cf.querySelector('button[type=submit]').disabled=true;
+  });
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website công ty xây dựng – Trường Thịnh Construction</title>
+<meta name="description" content="Mẫu giao diện website công ty xây dựng: thi công nhà phố, biệt thự trọn gói, xây nhà phần thô, sửa chữa cải tạo, bảng báo giá thi công theo m² và dự toán nhanh.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --dark:#121417; --dark2:#1B1F24; --steel:#2A3038; --line-d:#2E343C;
+  --light:#F3F3EF; --white:#FFFFFF; --ink:#16181B; --muted:#5E646C; --muted-d:#9AA1AA; --line:#DCDCD5;
+  --y:#F5B400; --y-d:#D99E00;
+  --display:"Archivo",system-ui,sans-serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--light);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto;object-fit:cover;background:#3A4048}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.12;letter-spacing:-.015em}
+h1{font-size:clamp(2.2rem,5vw,4.3rem);font-weight:900;text-transform:uppercase;line-height:1.06}
+h2{font-size:clamp(1.9rem,3.6vw,3.1rem);font-weight:800;text-transform:uppercase}
+h3{font-size:1.25rem;font-weight:700}
+p{margin:0 0 1em}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.kicker{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--y-d);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.kicker b{display:inline-grid;place-items:center;min-width:34px;height:24px;padding:0 8px;background:var(--y);color:var(--ink);font-size:.75rem;letter-spacing:.05em}
+.dark .kicker{color:var(--y)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;font-family:var(--display);font-weight:700;font-size:1rem;text-decoration:none;text-transform:uppercase;letter-spacing:.03em;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s;clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%)}
+.btn-y{background:var(--y);color:var(--ink)}
+.btn-y:hover{background:#FFC72C;transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(245,180,0,.7)}
+.btn-line{border-color:rgba(255,255,255,.6);color:#fff;background:transparent;clip-path:none}
+.btn-line:hover{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--steel)}
+section{padding:100px 0}
+.dark{background:var(--dark);color:#E7E9EC}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:54px;flex-wrap:wrap}
+.head p{max-width:46ch;color:var(--muted);margin:0}
+.dark .head p{color:var(--muted-d)}
+
+/* header */
+header.site{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.site.solid{background:rgba(18,20,23,.96);box-shadow:0 8px 30px -12px rgba(0,0,0,.6)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo svg{flex:none}
+.logo b{font-family:var(--display);font-weight:900;font-size:1.2rem;letter-spacing:.02em;text-transform:uppercase;display:block;line-height:1}
+.logo small{display:block;font-size:.7rem;letter-spacing:.24em;color:var(--y);text-transform:uppercase;margin-top:4px}
+nav.main ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+nav.main a{text-decoration:none;color:#fff;font-weight:600;font-size:.93rem;transition:color .2s}
+nav.main a:hover{color:var(--y)}
+.hd-right{display:flex;gap:16px;align-items:center}
+.hd-phone{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}
+.hd-phone span{display:block;font-size:.72rem;color:var(--muted-d);text-transform:uppercase;letter-spacing:.1em;line-height:1.2}
+.hd-phone b{font-family:var(--display);font-size:1.1rem;white-space:nowrap}
+.hd-phone i{width:40px;height:40px;background:var(--y);color:var(--ink);display:grid;place-items:center;flex:none}
+.menu-btn{display:none;width:46px;height:46px;background:var(--y);border:0;cursor:pointer}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ink);margin:4px auto}
+
+/* hero */
+.hero{position:relative;min-height:min(100vh,860px);display:flex;flex-direction:column;justify-content:flex-end;padding:150px 0 0;color:#fff;overflow:hidden;background:var(--dark)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;animation:kenburns 14s ease-out both}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,14,16,.92) 0%,rgba(12,14,16,.7) 45%,rgba(12,14,16,.25) 100%),linear-gradient(0deg,rgba(12,14,16,.9),transparent 45%)}
+.hero .wrap{position:relative;z-index:2}
+.hero-inner{max-width:900px;padding-bottom:60px}
+.hero h1 span{color:var(--y)}
+.hero .lead{font-size:1.15rem;color:#D3D7DC;margin:26px 0 34px;max-width:56ch}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-bar{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);background:var(--y);color:var(--ink)}
+.hero-bar div{padding:22px 24px;border-right:1px solid rgba(0,0,0,.12);display:flex;gap:12px;align-items:center;font-family:var(--display);font-weight:700;font-size:1rem;line-height:1.3}
+.hero-bar div:last-child{border-right:0}
+.hero-bar svg{flex:none}
+@keyframes kenburns{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero-anim>*{animation:slideIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-anim>*:nth-child(2){animation-delay:.12s}.hero-anim>*:nth-child(3){animation-delay:.24s}.hero-anim>*:nth-child(4){animation-delay:.36s}
+.hero-bar{animation:barUp .9s .5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes slideIn{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:none}}
+@keyframes barUp{from{transform:translateY(100%)}to{transform:none}}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.svc{position:relative;min-height:440px;overflow:hidden;color:#fff;background:var(--steel);display:flex;align-items:flex-end}
+.svc img{position:absolute;inset:0;width:100%;height:100%;transition:transform .7s ease}
+.svc::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,14,16,.95) 15%,rgba(12,14,16,.25) 70%);z-index:1;transition:background .4s}
+.svc:hover img{transform:scale(1.07)}
+.svc:hover::before{background:linear-gradient(0deg,rgba(12,14,16,.97) 35%,rgba(12,14,16,.45) 100%)}
+.svc .in{position:relative;z-index:2;padding:26px}
+.svc .no{font-family:var(--display);font-weight:900;color:var(--y);font-size:.9rem;letter-spacing:.1em}
+.svc h3{margin:8px 0 10px;font-size:1.35rem;text-transform:uppercase}
+.svc p{font-size:.92rem;color:#C9CED4;margin:0 0 14px}
+.svc ul{list-style:none;padding:0;margin:0;font-size:.88rem;color:#E7E9EC;display:grid;gap:4px}
+.svc li::before{content:"— ";color:var(--y)}
+
+/* process */
+.process .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.process-side{position:sticky;top:120px;align-self:start}
+.process-side img{width:100%;aspect-ratio:4/3;margin-top:30px}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:27px;top:10px;bottom:10px;width:2px;background:var(--line-d)}
+.timeline li{display:grid;grid-template-columns:56px 1fr;gap:24px;padding:0 0 36px;position:relative}
+.timeline .n{width:56px;height:56px;background:var(--steel);border:2px solid var(--y);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--y);font-size:1.1rem;position:relative;z-index:1;transition:background .3s,color .3s}
+.timeline li:hover .n{background:var(--y);color:var(--ink)}
+.timeline h3{color:#fff;font-size:1.2rem;margin:12px 0 6px}
+.timeline p{color:var(--muted-d);margin:0;font-size:.95rem}
+
+/* projects */
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{font-family:var(--display);font-weight:700;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;padding:10px 18px;background:#fff;border:1.5px solid var(--line);cursor:pointer;transition:.2s;color:var(--ink)}
+.tabs button.on,.tabs button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proj{background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s,opacity .3s}
+.proj:hover{transform:translateY(-6px);box-shadow:0 26px 40px -26px rgba(0,0,0,.35)}
+.proj.hide{display:none}
+.proj .ph{position:relative;overflow:hidden}
+.proj img{width:100%;aspect-ratio:4/3;transition:transform .7s}
+.proj:hover img{transform:scale(1.05)}
+.proj .badge{position:absolute;top:0;left:0;background:var(--y);font-family:var(--display);font-weight:700;font-size:.75rem;text-transform:uppercase;padding:6px 12px;letter-spacing:.05em}
+.proj .body{padding:20px 22px 22px}
+.proj h3{font-size:1.12rem;margin-bottom:12px}
+.proj table{width:100%;border-collapse:collapse;font-size:.88rem}
+.proj td{padding:6px 0;border-top:1px dashed var(--line)}
+.proj td:first-child{color:var(--muted);width:42%}
+
+/* pricing */
+.pricing{background:var(--white)}
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.pkg{border:1.5px solid var(--line);padding:30px 28px;display:flex;flex-direction:column;background:var(--light);position:relative;transition:transform .3s,border-color .3s}
+.pkg:hover{transform:translateY(-6px);border-color:var(--ink)}
+.pkg.hot{background:var(--dark);color:#fff;border-color:var(--dark)}
+.pkg .flag{position:absolute;top:-14px;right:20px;background:var(--y);color:var(--ink);font-family:var(--display);font-weight:800;font-size:.75rem;text-transform:uppercase;padding:5px 12px}
+.pkg h3{text-transform:uppercase;font-size:1.15rem;letter-spacing:.02em}
+.pkg .fit{font-size:.9rem;color:var(--muted);margin:6px 0 20px}
+.pkg.hot .fit{color:var(--muted-d)}
+.pkg .amt{font-family:var(--display);font-weight:900;font-size:2.3rem;line-height:1;white-space:nowrap}
+.pkg .amt small{font-size:1rem;font-weight:700;margin-left:4px}
+.pkg.hot .amt{color:var(--y)}
+.pkg .from{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.pkg.hot .from{color:var(--muted-d)}
+.pkg ul{list-style:none;padding:0;margin:24px 0 26px;display:grid;gap:10px;font-size:.92rem}
+.pkg li{display:grid;grid-template-columns:20px 1fr;gap:10px}
+.pkg li svg{color:var(--y-d);margin-top:4px}
+.pkg.hot li svg{color:var(--y)}
+.pkg .btn{margin-top:auto}
+.raw{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.raw div{padding:20px 24px;border-right:1.5px solid var(--ink)}
+.raw div:last-child{border-right:0}
+.raw span{display:block;font-size:.85rem;color:var(--muted)}
+.raw b{font-family:var(--display);font-size:1.4rem;font-weight:800;white-space:nowrap}
+.estimator{margin-top:44px;background:var(--y);padding:34px;display:grid;grid-template-columns:1fr 1.6fr;gap:34px;align-items:center}
+.estimator h3{font-size:1.6rem;text-transform:uppercase}
+.estimator p{margin:8px 0 0;font-size:.92rem}
+.est-form{display:grid;grid-template-columns:repeat(3,1fr) 1.3fr;gap:12px;align-items:end}
+.est-form label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;display:flex;flex-direction:column;gap:6px}
+.est-form input,.est-form select{font:inherit;font-size:1rem;padding:12px;border:2px solid var(--ink);background:#fff;width:100%;min-width:0}
+.est-out{grid-column:1/-1;background:var(--ink);color:#fff;padding:12px 16px;min-height:70px}
+.est-out span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-d)}
+.est-out b{font-family:var(--display);font-size:1.35rem;color:var(--y);white-space:nowrap}
+.fine{font-size:.85rem;color:var(--muted);margin-top:16px}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-d);border-left:1px solid var(--line-d)}
+.why-item{padding:34px 30px;border-right:1px solid var(--line-d);border-bottom:1px solid var(--line-d);transition:background .3s}
+.why-item:hover{background:var(--dark2)}
+.why-item svg{color:var(--y);margin-bottom:18px}
+.why-item h3{color:#fff;font-size:1.15rem;margin-bottom:8px}
+.why-item p{color:var(--muted-d);font-size:.94rem;margin:0}
+.warranty-band{margin-top:40px;display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:0;background:var(--steel)}
+.warranty-band>div{padding:24px 26px;border-right:1px solid var(--line-d)}
+.warranty-band>div:last-child{border-right:0}
+.warranty-band .t{background:var(--y);color:var(--ink);font-family:var(--display);font-weight:800;text-transform:uppercase;display:flex;align-items:center}
+.warranty-band b{font-family:var(--display);font-size:1.6rem;color:var(--y);display:block;line-height:1.1}
+.warranty-band span{color:#C9CED4;font-size:.9rem}
+
+/* reviews */
+.rev-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:#fff;border-top:4px solid var(--y);padding:30px 28px;display:flex;flex-direction:column;gap:18px}
+.rev .stars{color:var(--y-d);letter-spacing:3px}
+.rev p{margin:0;font-size:1rem}
+.rev .who{margin-top:auto;font-size:.9rem}
+.rev .who b{display:block;font-family:var(--display);font-size:1rem}
+.rev .who span{color:var(--muted)}
+.sample{display:inline-block;background:var(--ink);color:var(--y);font-family:var(--display);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;padding:6px 12px}
+
+/* contact */
+.contact{position:relative;background:var(--dark);color:#fff;overflow:hidden}
+.contact .bgimg{position:absolute;inset:0;opacity:.18}
+.contact .bgimg img{width:100%;height:100%}
+.contact .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.contact .lead{color:#C9CED4;font-size:1.05rem;margin:20px 0 28px}
+.c-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.c-list li{display:flex;gap:14px;align-items:center}
+.c-list i{width:44px;height:44px;background:var(--steel);display:grid;place-items:center;color:var(--y);flex:none}
+.c-list small{display:block;color:var(--muted-d);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+form.quote{background:#fff;color:var(--ink);padding:36px}
+form.quote h3{text-transform:uppercase;font-size:1.35rem;margin-bottom:20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.fld label{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.fld input,.fld select,.fld textarea{font:inherit;padding:13px 14px;border:1.5px solid var(--line);background:var(--light);width:100%;transition:border-color .2s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--ink);background:#fff}
+form.quote .btn{width:100%}
+.form-note{font-size:.8rem;color:var(--muted);text-align:center;margin:10px 0 0}
+.thanks{display:none;text-align:center;padding:40px 10px}
+.thanks .ok{width:70px;height:70px;background:var(--y);display:grid;place-items:center;margin:0 auto 18px}
+form.quote.sent .form-body{display:none}
+form.quote.sent .thanks{display:block;animation:fadeUp .5s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+footer{background:#0C0E10;color:var(--muted-d);padding:70px 0 110px;font-size:.92rem}
+footer .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr;gap:40px}
+footer h3{color:#fff;font-size:.95rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--y)}
+footer .bottom{border-top:1px solid var(--line-d);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.83rem}
+
+.kt-badge{position:fixed;left:16px;bottom:16px;z-index:60;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);text-decoration:none;font-size:.8rem;font-weight:600;padding:9px 15px;border-radius:99px;box-shadow:0 10px 26px -8px rgba(0,0,0,.45);border:1px solid rgba(0,0,0,.08);white-space:nowrap;max-width:calc(100% - 32px)}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:var(--y);flex:none;box-shadow:0 0 0 3px rgba(245,180,0,.3)}
+.kt-badge b{color:#9A6F00}
+.kt-badge:hover{background:var(--y)}
+.kt-badge:hover b{color:var(--ink)}
+
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+@media (max-width:1100px){
+  nav.main{display:none}
+  .menu-btn{display:block}
+  nav.main.open{display:block;position:absolute;top:80px;left:0;right:0;background:var(--dark);padding:8px 20px 20px;border-top:1px solid var(--line-d)}
+  nav.main.open ul{flex-direction:column;gap:0}
+  nav.main.open a{display:block;padding:13px 0;border-bottom:1px solid var(--line-d)}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .svc{min-height:380px}
+  .estimator{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  section{padding:76px 0}
+  .hero-bar{grid-template-columns:1fr 1fr}
+  .hero-bar div:nth-child(2){border-right:0}
+  .hero-bar div:nth-child(-n+2){border-bottom:1px solid rgba(0,0,0,.12)}
+  .process .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px}
+  .process-side{position:static}
+  .proj-grid,.rev-wrap{grid-template-columns:1fr 1fr}
+  .pkgs{grid-template-columns:1fr;max-width:520px}
+  .raw{grid-template-columns:1fr}
+  .raw div{border-right:0;border-bottom:1.5px solid var(--ink)}
+  .raw div:last-child{border-bottom:0}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .warranty-band{grid-template-columns:1fr 1fr}
+  .warranty-band .t{grid-column:1/-1}
+  footer .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 32px)}
+  .hd-phone div{display:none}
+  header.site .wrap{height:68px}
+  nav.main.open{top:68px}
+  .hero{padding-top:120px;min-height:auto}
+  .hero-inner{padding-bottom:44px}
+  .hero-bar{grid-template-columns:1fr}
+  .hero-bar div{border-right:0!important;border-bottom:1px solid rgba(0,0,0,.12);padding:14px 18px}
+  .svc-grid,.proj-grid,.rev-wrap,.why-grid{grid-template-columns:1fr}
+  .svc{min-height:340px}
+  .est-form{grid-template-columns:1fr 1fr}
+  .est-out{grid-column:1/-1}
+  .estimator{padding:24px 18px}
+  .grid2{grid-template-columns:1fr;gap:0}
+  form.quote{padding:26px 18px}
+  .warranty-band{grid-template-columns:1fr}
+  .warranty-band>div{border-right:0;border-bottom:1px solid var(--line-d)}
+  footer .grid{grid-template-columns:1fr}
+  .kt-badge{font-size:.7rem;padding:8px 12px;gap:6px;left:10px;bottom:10px}
+}
+.fld input:not([type=radio]),.fld select{min-height:50px}
+img{color:transparent;font-size:0}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="site" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Trường Thịnh Construction – về đầu trang">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" fill="#F5B400"/><path d="M8 30V18l12-8 12 8v12h-7v-8h-10v8z" fill="#16181B"/></svg>
+      <span><b>Trường&nbsp;Thịnh</b><small>Construction</small></span>
+    </a>
+    <nav class="main" id="nav"><ul>
+      <li><a href="#dich-vu">Dịch&nbsp;vụ</a></li>
+      <li><a href="#quy-trinh">Quy&nbsp;trình</a></li>
+      <li><a href="#du-an">Dự&nbsp;án</a></li>
+      <li><a href="#bao-gia">Báo&nbsp;giá</a></li>
+      <li><a href="#cam-ket">Cam&nbsp;kết</a></li>
+      <li><a href="#lien-he">Liên&nbsp;hệ</a></li>
+    </ul></nav>
+    <div class="hd-right">
+      <a class="hd-phone" href="tel:0900000000"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><div><span>Hotline tư&nbsp;vấn</span><b>0900&nbsp;000&nbsp;000</b></div></a>
+      <button class="menu-btn" aria-label="Mở menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding-bottom:0">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1713593930871-e21d7f9ef4a1?auto=format&fit=crop&w=1800&q=80" width="1800" height="1200" alt="Công nhân thi công trên giàn giáo công trình"></div>
+  <div class="wrap">
+    <div class="hero-inner hero-anim">
+      <div class="kicker"><b>TT</b>Thi&nbsp;công nhà&nbsp;phố – biệt&nbsp;thự</div>
+      <h1>Xây&nbsp;nhà <span>trọn&nbsp;gói</span><br>đúng&nbsp;tiến&nbsp;độ, đúng&nbsp;cam&nbsp;kết</h1>
+      <p class="lead">Trường Thịnh Construction thiết kế và thi công nhà ở dân dụng: xây nhà trọn gói, xây nhà phần thô, sửa chữa cải tạo, nâng tầng. Đội thợ trực tiếp thi công, kỹ sư giám sát tại công trình.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-y" href="#lien-he">Nhận&nbsp;báo&nbsp;giá
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-line" href="#du-toan">Dự&nbsp;toán nhanh</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="hero-bar">
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11h6M9 15h6M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg>Báo&nbsp;giá minh&nbsp;bạch từng&nbsp;hạng&nbsp;mục</div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>Bảo&nbsp;hành kết&nbsp;cấu 10&nbsp;năm</div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Cam&nbsp;kết tiến&nbsp;độ bằng hợp&nbsp;đồng</div>
+      <div><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg>Miễn&nbsp;phí thiết&nbsp;kế khi&nbsp;ký hợp&nbsp;đồng</div>
+    </div>
+  </div>
+</section>
+
+<section id="dich-vu">
+  <div class="wrap">
+    <div class="head">
+      <div class="reveal"><div class="kicker"><b>01</b>Dịch&nbsp;vụ</div><h2>Giải&nbsp;pháp xây&nbsp;dựng<br>cho ngôi&nbsp;nhà của&nbsp;bạn</h2></div>
+      <p class="reveal d1">Nhận thi công nhà phố, nhà cấp 4, nhà ở kết hợp kinh doanh, biệt thự tại TP. Hồ Chí Minh và các tỉnh lân cận (khu vực mẫu).</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal"><img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?auto=format&fit=crop&w=800&q=80" width="800" height="1100" loading="lazy" alt="Khung bê tông công trình đang xây dựng">
+        <div class="in"><span class="no">01</span><h3>Xây&nbsp;nhà trọn&nbsp;gói</h3><p>Chìa khóa trao tay, từ thiết kế, xin phép đến hoàn thiện.</p><ul><li>3 gói vật tư hoàn thiện</li><li>Hỗ trợ xin phép, hoàn công</li></ul></div></article>
+      <article class="svc reveal d1"><img src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=800&q=80" width="800" height="1100" loading="lazy" alt="Công nhân đội mũ bảo hộ trên khung công trình">
+        <div class="in"><span class="no">02</span><h3>Xây&nbsp;nhà phần&nbsp;thô</h3><p>Móng, khung, sàn, xây tô, chống thấm và đi ống âm tường.</p><ul><li>Vật tư thô ghi rõ thương hiệu</li><li>Kèm nhân công hoàn thiện</li></ul></div></article>
+      <article class="svc reveal d2"><img src="https://images.unsplash.com/photo-1694522362256-6c907336af43?auto=format&fit=crop&w=800&q=80" width="800" height="1100" loading="lazy" alt="Thợ dùng máy cắt xử lý bê tông khi cải tạo nhà">
+        <div class="in"><span class="no">03</span><h3>Sửa&nbsp;chữa – cải&nbsp;tạo</h3><p>Sửa nhà cũ, nâng tầng, cơi nới, chống thấm, ốp lát lại.</p><ul><li>Khảo sát hiện trạng tận nơi</li><li>Báo giá theo hạng mục</li></ul></div></article>
+      <article class="svc reveal d3"><img src="https://images.unsplash.com/photo-1762146828422-50a8bd416d3c?auto=format&fit=crop&w=800&q=80" width="800" height="1100" loading="lazy" alt="Bản vẽ kiến trúc nhà ở">
+        <div class="in"><span class="no">04</span><h3>Thiết&nbsp;kế nhà&nbsp;đẹp</h3><p>Hồ sơ kiến trúc, kết cấu, điện nước và phối cảnh 3D.</p><ul><li>Chỉnh sửa đến khi ưng ý</li><li>Tối ưu chi phí xây dựng</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="dark process" id="quy-trinh">
+  <div class="wrap">
+    <div class="process-side">
+      <div class="reveal"><div class="kicker"><b>02</b>Quy&nbsp;trình</div><h2>Quy&nbsp;trình thi&nbsp;công<br>6&nbsp;bước</h2>
+      <p style="color:var(--muted-d);margin-top:18px">Mỗi bước có biên bản nghiệm thu, gia chủ theo dõi tiến độ qua hình ảnh cập nhật hằng tuần.</p></div>
+      <img class="reveal d1" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80" width="1000" height="750" loading="lazy" alt="Đội ngũ kỹ sư và công nhân tại công trường">
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><span class="n">01</span><div><h3>Tiếp&nbsp;nhận thông&nbsp;tin</h3><p>Tư vấn qua điện thoại, Zalo hoặc tại văn phòng. Hẹn lịch khảo sát hiện trạng.</p></div></li>
+      <li class="reveal"><span class="n">02</span><div><h3>Khảo&nbsp;sát &amp; báo&nbsp;giá</h3><p>Đo đạc thực tế, kiểm tra pháp lý, lập dự toán chi tiết theo gói vật tư.</p></div></li>
+      <li class="reveal"><span class="n">03</span><div><h3>Thiết&nbsp;kế &amp; xin&nbsp;phép</h3><p>Hoàn thiện bản vẽ thiết kế, hỗ trợ hồ sơ xin giấy phép xây dựng.</p></div></li>
+      <li class="reveal"><span class="n">04</span><div><h3>Ký hợp&nbsp;đồng thi&nbsp;công</h3><p>Ghi rõ đơn giá, vật tư, tiến độ, phạt chậm tiến độ và các đợt thanh toán.</p></div></li>
+      <li class="reveal"><span class="n">05</span><div><h3>Thi&nbsp;công &amp; giám&nbsp;sát</h3><p>Thi công phần thô, hoàn thiện. Nghiệm thu móng, khung, sàn, hoàn thiện theo từng giai đoạn.</p></div></li>
+      <li class="reveal" style="padding-bottom:0"><span class="n">06</span><div><h3>Bàn&nbsp;giao &amp; bảo&nbsp;hành</h3><p>Bàn giao nhà, hồ sơ hoàn công và phiếu bảo hành. Hỗ trợ bảo trì sau bàn giao.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="du-an">
+  <div class="wrap">
+    <div class="head">
+      <div class="reveal"><div class="kicker"><b>03</b>Dự&nbsp;án</div><h2>Công&nbsp;trình đã&nbsp;thi&nbsp;công</h2></div>
+      <div class="tabs reveal d1" role="tablist" aria-label="Lọc dự án">
+        <button class="on" data-f="all">Tất&nbsp;cả</button>
+        <button data-f="pho">Nhà&nbsp;phố</button>
+        <button data-f="thu">Biệt&nbsp;thự</button>
+        <button data-f="cai">Cải&nbsp;tạo</button>
+      </div>
+    </div>
+    <div class="proj-grid">
+      <article class="proj reveal" data-c="thu"><div class="ph"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80" width="900" height="675" loading="lazy" alt="Biệt thự hiện đại màu trắng có hồ bơi"><span class="badge">Dự&nbsp;án mẫu</span></div>
+        <div class="body"><h3>Biệt&nbsp;thự hiện&nbsp;đại có hồ&nbsp;bơi</h3><table><tr><td>Chủ đầu tư</td><td>Anh Q.</td></tr><tr><td>Quy mô</td><td>2 tầng + sân thượng</td></tr><tr><td>Hạng mục</td><td>Xây nhà trọn gói</td></tr></table></div></article>
+      <article class="proj reveal d1" data-c="pho"><div class="ph"><img src="https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?auto=format&fit=crop&w=900&q=80" width="900" height="675" loading="lazy" alt="Nhà phố mặt tiền hiện đại với ban công"><span class="badge">Dự&nbsp;án mẫu</span></div>
+        <div class="body"><h3>Nhà&nbsp;phố 4&nbsp;tầng mặt&nbsp;tiền</h3><table><tr><td>Chủ đầu tư</td><td>Chị V.</td></tr><tr><td>Quy mô</td><td>1 trệt 3 lầu</td></tr><tr><td>Hạng mục</td><td>Thiết kế &amp; thi công</td></tr></table></div></article>
+      <article class="proj reveal d2" data-c="pho"><div class="ph"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80" width="900" height="675" loading="lazy" alt="Nhà hai tầng tường trắng cạnh cây xanh"><span class="badge">Dự&nbsp;án mẫu</span></div>
+        <div class="body"><h3>Nhà&nbsp;phố 2&nbsp;tầng tối&nbsp;giản</h3><table><tr><td>Chủ đầu tư</td><td>Anh K.</td></tr><tr><td>Quy mô</td><td>1 trệt 1 lầu</td></tr><tr><td>Hạng mục</td><td>Xây nhà phần thô</td></tr></table></div></article>
+      <article class="proj reveal" data-c="thu"><div class="ph"><img src="https://images.unsplash.com/photo-1678575326996-a1bf09b86158?auto=format&fit=crop&w=900&q=80" width="900" height="675" loading="lazy" alt="Biệt thự hai tầng nhiều ban công và cây xanh"><span class="badge">Dự&nbsp;án mẫu</span></div>
+        <div class="body"><h3>Biệt&nbsp;thự song&nbsp;lập</h3><table><tr><td>Chủ đầu tư</td><td>Gia đình anh P.</td></tr><tr><td>Quy mô</td><td>2 tầng, sân vườn</td></tr><tr><td>Hạng mục</td><td>Xây nhà trọn gói</td></tr></table></div></article>
+      <article class="proj reveal d1" data-c="cai"><div class="ph"><img src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?auto=format&fit=crop&w=900&q=80" width="900" height="675" loading="lazy" alt="Phòng khách sáng sủa sau khi cải tạo"><span class="badge">Dự&nbsp;án mẫu</span></div>
+        <div class="body"><h3>Cải&nbsp;tạo nhà&nbsp;phố cũ</h3><table><tr><td>Chủ đầu tư</td><td>Cô H.</td></tr><tr><td>Quy mô</td><td>Nhà 3 tầng</td></tr><tr><td>Hạng mục</td><td>Cải tạo toàn nhà</td></tr></table></div></article>
+      <article class="proj reveal d2" data-c="cai"><div class="ph"><img src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?auto=format&fit=crop&w=900&q=80" width="900" height="675" loading="lazy" alt="Phòng khách với sofa màu cam sau khi sửa chữa"><span class="badge">Dự&nbsp;án mẫu</span></div>
+        <div class="body"><h3>Nâng&nbsp;tầng, sửa&nbsp;chữa nội&nbsp;thất</h3><table><tr><td>Chủ đầu tư</td><td>Anh T.</td></tr><tr><td>Quy mô</td><td>Nâng từ 2 lên 3 tầng</td></tr><tr><td>Hạng mục</td><td>Nâng tầng, cải tạo</td></tr></table></div></article>
+    </div>
+    <p class="fine reveal">Hình ảnh và thông tin dự án là nội dung mẫu để minh họa giao diện.</p>
+  </div>
+</section>
+
+<section class="pricing" id="bao-gia">
+  <div class="wrap">
+    <div class="head">
+      <div class="reveal"><div class="kicker"><b>04</b>Báo&nbsp;giá</div><h2>Báo&nbsp;giá thi&nbsp;công<br>tham&nbsp;khảo</h2></div>
+      <p class="reveal d1">Đơn giá tính trên m² sàn xây dựng, đã gồm vật tư và nhân công. Vật tư từng gói ghi rõ chủng loại trong hợp đồng.</p>
+    </div>
+    <div class="pkgs">
+      <div class="pkg reveal">
+        <h3>Gói Tiêu&nbsp;chuẩn</h3><p class="fit">Nhà phố, nhà cho thuê</p>
+        <div class="from">Đơn giá từ</div><div class="amt">5.500.000<small>đ/m²</small></div>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Gạch ốp lát 60x60</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Sơn nước nội, ngoại thất</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Thiết bị vệ sinh phổ thông</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Cửa nhôm kính</li>
+        </ul>
+        <a class="btn btn-dark" href="#lien-he">Nhận&nbsp;báo&nbsp;giá gói&nbsp;này</a>
+      </div>
+      <div class="pkg hot reveal d1"><span class="flag">Gợi&nbsp;ý cho nhà&nbsp;phố</span>
+        <h3>Gói Khá</h3><p class="fit">Nhà ở gia đình, nhà phố 3 – 4 tầng</p>
+        <div class="from">Đơn giá từ</div><div class="amt">6.200.000<small>đ/m²</small></div>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Gạch ốp lát 80x80</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Cửa nhôm hệ, kính cường lực</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Thiết bị vệ sinh trung cấp</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Cầu thang ốp đá granite</li>
+        </ul>
+        <a class="btn btn-y" href="#lien-he">Nhận&nbsp;báo&nbsp;giá gói&nbsp;này</a>
+      </div>
+      <div class="pkg reveal d2">
+        <h3>Gói Cao&nbsp;cấp</h3><p class="fit">Biệt thự, nhà phố cao cấp</p>
+        <div class="from">Đơn giá từ</div><div class="amt">7.300.000<small>đ/m²</small></div>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Gạch, đá khổ lớn</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Thiết bị vệ sinh cao cấp</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Trần thạch cao trang trí</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Hệ điện chiếu sáng trang trí</li>
+        </ul>
+        <a class="btn btn-dark" href="#lien-he">Nhận&nbsp;báo&nbsp;giá gói&nbsp;này</a>
+      </div>
+    </div>
+    <div class="raw reveal">
+      <div><span>Xây nhà phần thô</span><b>3.700.000&nbsp;đ/m²</b></div>
+      <div><span>Sửa chữa, cải tạo</span><b>Báo&nbsp;giá theo&nbsp;hạng&nbsp;mục</b></div>
+      <div><span>Thiết kế kiến trúc</span><b>140.000&nbsp;đ/m²</b></div>
+    </div>
+
+    <div class="estimator reveal" id="du-toan">
+      <div><h3>Dự&nbsp;toán nhanh</h3><p>Nhập diện tích sàn và chọn gói để xem chi phí ước tính. Kết quả chỉ để tham khảo, chưa gồm móng, mái và hệ số.</p></div>
+      <form class="est-form" onsubmit="return false">
+        <label>Ngang (m)<input type="number" id="e-w" value="5" min="1" step="0.1" inputmode="decimal"></label>
+        <label>Dài (m)<input type="number" id="e-l" value="20" min="1" step="0.1" inputmode="decimal"></label>
+        <label>Số tầng<input type="number" id="e-f" value="3" min="1" max="10" inputmode="numeric"></label>
+        <label>Gói<select id="e-p"><option value="3700000">Phần thô</option><option value="5500000">Tiêu chuẩn</option><option value="6200000" selected>Khá</option><option value="7300000">Cao cấp</option></select></label>
+        <div class="est-out" aria-live="polite"><span>Chi phí ước tính</span><b id="e-out">—</b></div>
+      </form>
+    </div>
+    <p class="fine">Đơn giá mẫu để minh họa giao diện, cần thay bằng bảng giá thực tế của công ty. Giá thực tế phụ thuộc vị trí công trình, hẻm xe vào, kết cấu móng và vật tư gia chủ chọn.</p>
+  </div>
+</section>
+
+<section class="dark" id="cam-ket">
+  <div class="wrap">
+    <div class="head">
+      <div class="reveal"><div class="kicker"><b>05</b>Vì&nbsp;sao chọn chúng&nbsp;tôi</div><h2>Cam&nbsp;kết với gia&nbsp;chủ</h2></div>
+      <p class="reveal d1">Những điều Trường Thịnh ghi vào hợp đồng, không chỉ nói trên lời.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11h6M9 15h6M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg><h3>Không&nbsp;phát&nbsp;sinh chi&nbsp;phí</h3><p>Dự toán chi tiết từng hạng mục, chỉ thay đổi khi gia chủ yêu cầu và đồng ý bằng văn bản.</p></div>
+      <div class="why-item reveal d1"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><h3>Thi&nbsp;công trực&nbsp;tiếp</h3><p>Đội thợ của công ty thi công, không bán thầu, không giao lại cho đơn vị khác.</p></div>
+      <div class="why-item reveal d2"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>Đúng&nbsp;tiến&nbsp;độ</h3><p>Lộ trình rõ từng giai đoạn. Chậm tiến độ do lỗi nhà thầu sẽ chịu phạt theo hợp đồng.</p></div>
+      <div class="why-item reveal"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h10"/></svg><h3>Vật&nbsp;tư rõ thương&nbsp;hiệu</h3><p>Chủng loại, quy cách vật tư từng gói được liệt kê trong phụ lục hợp đồng.</p></div>
+      <div class="why-item reveal d1"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg><h3>An&nbsp;toàn lao&nbsp;động</h3><p>Công trường được che chắn, giàn giáo đạt chuẩn, hạn chế ảnh hưởng nhà lân cận.</p></div>
+      <div class="why-item reveal d2"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg><h3>Cập&nbsp;nhật hằng&nbsp;tuần</h3><p>Gửi hình ảnh, video tiến độ qua Zalo để gia chủ ở xa vẫn theo dõi được.</p></div>
+    </div>
+    <div class="warranty-band reveal">
+      <div class="t">Chính&nbsp;sách bảo&nbsp;hành</div>
+      <div><b>10&nbsp;năm</b><span>Bảo hành kết cấu</span></div>
+      <div><b>2&nbsp;năm</b><span>Bảo hành chống thấm</span></div>
+      <div><b>1&nbsp;năm</b><span>Bảo hành điện nước, hoàn thiện</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="danh-gia">
+  <div class="wrap">
+    <div class="head">
+      <div class="reveal"><div class="kicker"><b>06</b>Khách&nbsp;hàng</div><h2>Gia&nbsp;chủ nói gì</h2></div>
+      <div class="reveal d1" style="max-width:46ch"><span class="sample">Đánh&nbsp;giá mẫu</span><p style="color:var(--muted);margin:12px 0 0">Nội dung minh họa bố cục. Khi dùng thật, thay bằng nhận xét thật của khách hàng.</p></div>
+    </div>
+    <div class="rev-wrap">
+      <article class="rev reveal"><svg class="stars" width="30" height="24" viewBox="0 0 30 24" aria-hidden="true"><path d="M0 24V13C0 5 4 1 12 0v5c-4 1-6 3-6 7h6v12zm17 0V13c0-8 4-12 12-13v5c-4 1-6 3-6 7h6v12z" fill="#F5B400"/></svg><p>Báo giá ghi rõ từng loại gạch, loại sơn nên tôi yên tâm. Trong quá trình làm không bị đội thêm chi phí.</p><div class="who"><b>Anh Quang</b><span>Nhà phố 4 tầng · Đánh giá mẫu</span></div></article>
+      <article class="rev reveal d1"><svg class="stars" width="30" height="24" viewBox="0 0 30 24" aria-hidden="true"><path d="M0 24V13C0 5 4 1 12 0v5c-4 1-6 3-6 7h6v12zm17 0V13c0-8 4-12 12-13v5c-4 1-6 3-6 7h6v12z" fill="#F5B400"/></svg><p>Ở xa không ra công trình thường được, tuần nào cũng có hình ảnh tiến độ gửi qua Zalo. Bàn giao đúng hẹn.</p><div class="who"><b>Chị Thảo</b><span>Biệt thự 2 tầng · Đánh giá mẫu</span></div></article>
+      <article class="rev reveal d2"><svg class="stars" width="30" height="24" viewBox="0 0 30 24" aria-hidden="true"><path d="M0 24V13C0 5 4 1 12 0v5c-4 1-6 3-6 7h6v12zm17 0V13c0-8 4-12 12-13v5c-4 1-6 3-6 7h6v12z" fill="#F5B400"/></svg><p>Nâng thêm một tầng cho nhà cũ, kỹ sư tính toán kết cấu kỹ trước khi làm. Thợ làm gọn, dọn dẹp sạch mỗi ngày.</p><div class="who"><b>Chú Hải</b><span>Nâng tầng, cải tạo · Đánh giá mẫu</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="lien-he">
+  <div class="bgimg"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80" width="1600" height="1000" loading="lazy" alt="" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <div class="kicker"><b>07</b>Liên&nbsp;hệ</div>
+      <h2>Nhận&nbsp;báo&nbsp;giá<br>xây&nbsp;nhà miễn&nbsp;phí</h2>
+      <p class="lead">Gửi thông tin khu đất và nhu cầu, kỹ sư sẽ liên hệ tư vấn và hẹn lịch khảo sát.</p>
+      <ul class="c-list">
+        <li><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><div><small>Hotline</small><a href="tel:0900000000" style="text-decoration:none;font-weight:700">0900&nbsp;000&nbsp;000</a></div></li>
+        <li><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></i><div><small>Văn phòng</small>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</div></li>
+        <li><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><div><small>Giờ làm việc</small>Thứ&nbsp;2 – Thứ&nbsp;7: 7:30 – 17:30</div></li>
+      </ul>
+    </div>
+    <form class="quote reveal d1" novalidate>
+      <div class="form-body">
+        <h3>Đăng&nbsp;ký tư&nbsp;vấn</h3>
+        <div class="grid2">
+          <div class="fld"><label for="q-n">Họ tên *</label><input id="q-n" required placeholder="Nguyễn Văn A"></div>
+          <div class="fld"><label for="q-p">Số điện thoại *</label><input id="q-p" type="tel" required placeholder="0900 000 000"></div>
+        </div>
+        <div class="grid2">
+          <div class="fld"><label for="q-a">Địa điểm xây dựng</label><input id="q-a" placeholder="Quận / huyện, tỉnh / thành"></div>
+          <div class="fld"><label for="q-s">Diện tích đất</label><input id="q-s" placeholder="VD: 5 x 20m"></div>
+        </div>
+        <div class="grid2">
+          <div class="fld"><label for="q-t">Loại công trình</label><select id="q-t"><option>Nhà phố</option><option>Nhà cấp 4</option><option>Biệt thự</option><option>Nhà ở kết hợp kinh doanh</option></select></div>
+          <div class="fld"><label for="q-v">Hạng mục</label><select id="q-v"><option>Xây nhà trọn gói</option><option>Xây nhà phần thô</option><option>Sửa chữa – cải tạo</option><option>Thiết kế</option></select></div>
+        </div>
+        <div class="fld"><label for="q-m">Nội dung</label><textarea id="q-m" rows="3" placeholder="Số tầng, số phòng ngủ, thời gian dự kiến khởi công..."></textarea></div>
+        <button class="btn btn-y" type="submit">Gửi&nbsp;thông&nbsp;tin</button>
+        <p class="form-note">Biểu mẫu minh họa, chưa gửi dữ liệu đi đâu.</p>
+      </div>
+      <div class="thanks" role="status" aria-live="polite">
+        <div class="ok"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16181B" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Cảm&nbsp;ơn anh/chị!</h3>
+        <p style="color:var(--muted);margin-top:10px">Trường Thịnh đã nhận thông tin. Kỹ sư sẽ gọi lại tư vấn trong giờ làm việc.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><a href="#top" class="logo"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" fill="#F5B400"/><path d="M8 30V18l12-8 12 8v12h-7v-8h-10v8z" fill="#16181B"/></svg><span><b>Trường&nbsp;Thịnh</b><small>Construction</small></span></a>
+        <p style="margin-top:18px">Công ty TNHH Xây dựng Trường Thịnh (tên mẫu). Thiết kế, thi công nhà ở dân dụng.</p></div>
+      <div><h3>Dịch vụ</h3><ul><li><a href="#dich-vu">Xây&nbsp;nhà trọn&nbsp;gói</a></li><li><a href="#dich-vu">Xây&nbsp;nhà phần&nbsp;thô</a></li><li><a href="#dich-vu">Sửa&nbsp;chữa – cải&nbsp;tạo</a></li><li><a href="#dich-vu">Thiết&nbsp;kế nhà&nbsp;đẹp</a></li></ul></div>
+      <div><h3>Bảng giá</h3><ul><li><a href="#bao-gia">Giá xây&nbsp;nhà trọn&nbsp;gói</a></li><li><a href="#bao-gia">Giá xây&nbsp;nhà phần&nbsp;thô</a></li><li><a href="#du-toan">Dự&nbsp;toán nhanh</a></li></ul></div>
+      <div><h3>Liên hệ</h3><ul><li>Hotline: <a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</li><li>Email: lienhe@tenmienmau.vn</li></ul></div>
+    </div>
+    <div class="bottom"><span>© Trường&nbsp;Thịnh Construction (tên mẫu). Nội dung, giá và hình ảnh trên trang chỉ để minh họa giao diện.</span><span>Ảnh: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span></div>
+  </div>
+</footer>
+
+<a class="kt-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i></i>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></a>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  function onScroll(){hdr.classList.toggle('solid',window.scrollY>40)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o);hdr.classList.add('solid')});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+  // project filter
+  document.querySelectorAll('.tabs button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+      var f=b.dataset.f;document.querySelectorAll('.proj').forEach(function(p){p.classList.toggle('hide',f!=='all'&&p.dataset.c!==f)});
+    });
+  });
+  // estimator
+  var ids=['e-w','e-l','e-f','e-p'];
+  function est(){
+    var w=parseFloat(document.getElementById('e-w').value)||0,l=parseFloat(document.getElementById('e-l').value)||0,
+        f=parseInt(document.getElementById('e-f').value)||0,p=parseInt(document.getElementById('e-p').value)||0;
+    var total=w*l*f*p;
+    document.getElementById('e-out').textContent=total>0?(Math.round(total/1e6)).toLocaleString('vi-VN')+' triệu đồng':'—';
+  }
+  ids.forEach(function(i){document.getElementById(i).addEventListener('input',est)});est();
+  document.querySelectorAll('form.quote').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();var ok=true;
+      f.querySelectorAll('[required]').forEach(function(i){if(!i.value.trim()){ok=false;i.style.borderColor='#D93025'}else i.style.borderColor=''});
+      if(!ok){f.querySelector('[required]').focus();return}
+      f.classList.add('sent');
+    });
+  });
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

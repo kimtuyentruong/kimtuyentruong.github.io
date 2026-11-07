@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website khách sạn – Mây Cát Resort &amp; Spa</title>
+<meta name="description" content="Mây Cát Resort & Spa – khu nghỉ dưỡng biển với phòng Deluxe hướng biển, biệt thự có hồ bơi riêng, nhà hàng hải sản Bến Cát và spa. Đặt phòng trực tuyến.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Lexend:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --sand:#f5efe4; --sand-2:#ebe1cf; --shell:#fffaf2; --ink:#14302f; --muted:#5a6b68; --teal:#0f5257; --teal-d:#0a3a3e; --coral:#e8775a; --coral-d:#cf5f43; --line:#e0d5c2;
+  --serif:'Fraunces',Georgia,serif; --sans:'Lexend',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--sand);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+b,strong{font-weight:500}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-.015em}
+.nw{white-space:nowrap}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.pill{display:inline-flex;align-items:center;gap:8px;font:500 12.5px/1.3 var(--sans);letter-spacing:.06em;color:var(--teal);background:rgba(15,82,87,.08);padding:7px 14px;border-radius:999px}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral)}
+.sec{padding:clamp(72px,9vw,128px) 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:clamp(36px,5vw,60px)}
+.head h2{font-size:clamp(36px,5vw,62px);margin-top:16px}
+.head p{color:var(--muted);max-width:460px;justify-self:end}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font:500 15px/1.2 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(207,95,67,.8)}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-d);transform:translateY(-2px)}
+.btn-line{border-color:rgba(20,48,47,.25);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ph{background:linear-gradient(150deg,#9cc3bf,#3f7c7b 70%,#1c5457);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1),opacity .4s}
+img.fail{opacity:0}
+
+/* header */
+header.site{position:absolute;inset:24px 0 auto;z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 28px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.logo .m{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(6px);display:grid;place-items:center;border:1px solid rgba(255,255,255,.4)}
+.logo b{font:500 22px/1.15 var(--serif);display:block}
+.logo small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.nav ul{list-style:none;display:flex;gap:4px;background:rgba(255,255,255,.14);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px}
+.nav ul a{display:block;padding:9px 16px;border-radius:999px;text-decoration:none;color:#fff;font-size:14.5px;font-weight:400;transition:background .25s,color .25s}
+.nav ul a:hover{background:#fff;color:var(--ink)}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.15);backdrop-filter:blur(6px);cursor:pointer}
+.burger span{display:block;width:18px;height:1.5px;background:#fff;margin:4px auto}
+.sheet{display:none}
+
+/* hero */
+.hero{padding:12px}
+.hero .frame{position:relative;border-radius:32px;overflow:hidden;height:min(94vh,900px);min-height:620px;background:#1c5457}
+.hero .frame .ph{position:absolute;inset:0}
+.hero .frame .ph img{transform:scale(1.1);animation:z 2.8s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,32,34,.82) 0%,rgba(8,32,34,.35) 45%,rgba(8,32,34,.1) 70%,rgba(8,32,34,.4) 100%),linear-gradient(90deg,rgba(8,32,34,.4),transparent 60%)}
+.hero .copy{position:absolute;left:clamp(24px,5vw,72px);right:clamp(24px,5vw,72px);bottom:clamp(110px,14vh,150px);z-index:2;color:#fff;max-width:900px}
+.hero .pill{color:#fff;background:rgba(255,255,255,.16);backdrop-filter:blur(6px)}
+.hero h1{font-size:clamp(46px,7.6vw,112px);font-weight:400;line-height:1.08;margin:18px 0 18px}
+.hero h1 i{font-style:italic;color:#ffd2bf}
+.hero p{font-size:clamp(16px,1.5vw,19px);max-width:560px;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.e1,.e2,.e3,.e4{opacity:0;transform:translateY(24px);animation:up 1s cubic-bezier(.2,.7,.2,1) forwards}
+.e2{animation-delay:.15s}.e3{animation-delay:.3s}.e4{animation-delay:.5s}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes z{to{transform:scale(1)}}
+
+/* booking pill */
+.bk-wrap{position:relative;z-index:6;margin-top:-58px}
+form.bk{background:var(--shell);border-radius:999px;box-shadow:0 30px 60px -30px rgba(10,58,62,.45);display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;align-items:center;padding:8px;max-width:1060px;margin:0 auto}
+.bf{padding:10px 22px;display:grid;gap:2px;border-right:1px solid var(--line);min-width:0}
+.bf:nth-child(4){border-right:0}
+.bf label{font-size:12px;font-weight:500;color:var(--muted)}
+.bf input,.bf select{border:0;background:transparent;font:500 15.5px/1.4 var(--sans);color:var(--ink);width:100%;padding:2px 0}
+.bf input:focus,.bf select:focus{outline:none}
+.bf:focus-within label{color:var(--coral-d)}
+form.bk .btn{padding:18px 30px}
+.bk-msg{display:none;max-width:1060px;margin:14px auto 0;background:var(--teal);color:#e9f4f2;border-radius:18px;padding:14px 22px;font-size:14.5px}
+.bk-msg.show{display:block;animation:up .5s forwards}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,6vw,96px);align-items:center}
+.intro h2{font-size:clamp(34px,4.4vw,54px);margin:16px 0 22px}
+.intro h2 i{color:var(--coral-d);font-style:italic}
+.intro p{color:var(--muted);margin-bottom:14px;max-width:560px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chips span{background:var(--shell);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;display:inline-flex;gap:8px;align-items:center}
+.chips svg{color:var(--coral)}
+.intro .pic{position:relative}
+.intro .pic .ph{border-radius:200px 200px 28px 28px;aspect-ratio:4/5}
+.intro .pic .note{position:absolute;left:-28px;bottom:36px;background:var(--shell);border-radius:20px;padding:16px 20px;box-shadow:0 20px 40px -24px rgba(10,58,62,.45);font-size:14px;max-width:230px}
+.intro .pic .note b{display:block;font:500 20px/1.2 var(--serif)}
+
+/* rooms carousel */
+.rooms{background:var(--shell)}
+.rooms .ctrl{display:flex;gap:10px;justify-self:end;align-items:center}
+.rooms .ctrl button{width:50px;height:50px;border-radius:50%;border:1.5px solid var(--line);background:transparent;cursor:pointer;display:grid;place-items:center;color:var(--ink);transition:.25s}
+.rooms .ctrl button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,calc((100% - 48px)/3));gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:20px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.room{scroll-snap-align:start;background:var(--sand);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s}
+.room:hover{transform:translateY(-6px);box-shadow:0 30px 50px -36px rgba(10,58,62,.6)}
+.room .ph{aspect-ratio:4/3;position:relative}
+.room:hover .ph img{transform:scale(1.06)}
+.room .tag{position:absolute;left:14px;top:14px;background:rgba(255,250,242,.94);color:var(--ink);font-size:12.5px;font-weight:500;padding:6px 12px;border-radius:999px}
+.room .bd{padding:24px;display:flex;flex-direction:column;flex:1}
+.room h3{font-size:26px;margin-bottom:10px}
+.room ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13.5px;color:var(--muted);margin-bottom:18px}
+.room ul li::before{content:"·";margin-right:6px;color:var(--coral)}
+.room ul li:first-child::before{content:none}
+.room .ft{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding-top:16px;border-top:1px dashed var(--line);flex-wrap:wrap}
+.room .from{font-size:12.5px;color:var(--muted)}
+.room .from b{display:block;font:500 22px/1.2 var(--serif);color:var(--teal)}
+.room .btn{padding:11px 18px;font-size:14px}
+
+/* villa feature */
+.villa{position:relative;border-radius:32px;overflow:hidden;min-height:560px;display:grid;align-items:end;color:#fff;margin:0 12px;background:#1c5457}
+.villa .ph{position:absolute;inset:0}
+.villa::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,32,34,.78),rgba(8,32,34,.1) 70%)}
+.villa .in{position:relative;z-index:2;padding:clamp(28px,6vw,80px);max-width:640px}
+.villa h2{font-size:clamp(36px,5vw,64px);font-weight:400;margin:16px 0 16px}
+.villa p{opacity:.92;margin-bottom:26px}
+.villa .pill{color:#fff;background:rgba(255,255,255,.16)}
+.villa ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;margin-bottom:28px;font-size:15px}
+.villa li{display:flex;gap:8px;align-items:center}
+.villa li::before{content:"";width:16px;height:1px;background:#ffd2bf}
+
+/* amenities */
+.amen{background:var(--teal);color:#e6f1ef}
+.amen .head p{color:#b7d2ce}
+.amen .pill{color:#fff;background:rgba(255,255,255,.12)}
+.am-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.am{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:26px;transition:background .3s,transform .3s}
+.am:hover{background:rgba(255,255,255,.12);transform:translateY(-4px)}
+.am .ic{width:52px;height:52px;border-radius:16px;background:#ffd2bf;color:var(--teal-d);display:grid;place-items:center;margin-bottom:18px}
+.am h3{font-size:22px;color:#fff;margin-bottom:6px}
+.am p{font-size:14px;color:#b7d2ce}
+
+/* dining */
+.dine{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.venue{background:var(--shell);border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.venue .ph{aspect-ratio:16/10}
+.venue:hover .ph img{transform:scale(1.05)}
+.venue .bd{padding:clamp(24px,3vw,36px)}
+.venue h3{font-size:clamp(28px,3vw,36px);margin:12px 0 10px}
+.venue p{color:var(--muted);margin-bottom:18px}
+.venue .meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;margin-bottom:20px}
+.venue .meta span{display:inline-flex;gap:8px;align-items:center}
+.venue .meta svg{color:var(--coral)}
+.mini{border-top:1px solid var(--line);margin-bottom:22px}
+.mini div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.mini span:last-child{font-weight:500;white-space:nowrap}
+
+/* gallery */
+.masonry{columns:4 240px;column-gap:16px}
+.masonry .ph{border-radius:20px;margin-bottom:16px;break-inside:avoid}
+.masonry .ph:hover img{transform:scale(1.05)}
+
+/* reviews */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rv{background:var(--shell);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:18px;border:1px solid var(--line)}
+.rv p{font:400 19px/1.5 var(--serif);font-style:italic}
+.rv .who{margin-top:auto;display:flex;align-items:center;gap:12px;font-size:14px}
+.rv .who i{width:40px;height:40px;border-radius:50%;background:var(--sand-2);display:grid;place-items:center;font:500 16px/1 var(--serif);font-style:normal;color:var(--teal)}
+.rv .who small{display:block;color:var(--muted);font-size:12.5px}
+.sample{display:inline-block;background:var(--coral);color:#fff;font-size:12px;font-weight:500;letter-spacing:.06em;padding:6px 12px;border-radius:999px}
+
+/* location + contact */
+.lc{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{background:var(--shell);border-radius:28px;padding:clamp(26px,3.5vw,44px)}
+.box h2{font-size:clamp(32px,3.8vw,46px);margin:14px 0 16px}
+.map{position:relative;height:250px;border-radius:20px;overflow:hidden;margin:20px 0;background:linear-gradient(115deg,#f1e6d1 0 52%,#e6d6b8 52% 56%,#9cc9c6 56% 100%)}
+.map::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 22px,rgba(255,255,255,.18) 22px 23px)}
+.map .pin{position:absolute;left:46%;top:44%;transform:translate(-50%,-100%);text-align:center}
+.map .pin span{display:block;background:var(--teal);color:#fff;font-size:12.5px;font-weight:500;padding:6px 12px;border-radius:999px;margin-bottom:6px;white-space:nowrap}
+.map .pin i{display:block;width:16px;height:16px;border-radius:50%;margin:0 auto;background:var(--coral);box-shadow:0 0 0 7px rgba(232,119,90,.25)}
+.map .sea{position:absolute;right:8%;bottom:14%;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#245d5f}
+.dl{display:grid;grid-template-columns:1fr auto;gap:8px 18px;font-size:14.5px}
+.dl span:nth-child(even){color:var(--muted);text-align:right}
+form.cf{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.fi{display:grid;gap:6px}
+.fi.full{grid-column:1/-1}
+.fi label{font-size:13px;font-weight:500}
+.fi input,.fi select,.fi textarea{font:300 15.5px/1.45 var(--sans);color:var(--ink);background:var(--sand);border:1.5px solid transparent;border-radius:14px;padding:12px 14px;width:100%;transition:border-color .2s,background .2s}
+.fi input:focus,.fi select:focus,.fi textarea:focus{outline:none;border-color:var(--teal);background:#fff}
+.fi textarea{min-height:100px;resize:vertical}
+form.cf .btn{grid-column:1/-1;justify-self:start}
+.ok{display:none;grid-column:1/-1;background:#e3f1ee;color:var(--teal-d);border-radius:14px;padding:14px 18px;font-size:14.5px;font-weight:400}
+.ok.show{display:block;animation:up .5s forwards}
+.hint{grid-column:1/-1;font-size:12.5px;color:var(--muted)}
+
+footer{background:var(--teal-d);color:#a9c6c2;margin:0 12px 12px;border-radius:32px;padding:clamp(48px,6vw,80px) clamp(24px,4vw,56px) 90px;font-size:14.5px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px}
+footer .logo{color:#fff}
+footer h4{font:500 18px/1.25 var(--serif);color:#fff;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#ffd2bf}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#7fa39e}
+
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(10,30,32,.9);color:#fff;font:400 12.5px/1.35 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.5);backdrop-filter:blur(6px);transition:transform .2s}
+.kt-badge:hover{transform:translateY(-2px)}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#3ddc84;flex:none;box-shadow:0 0 0 3px rgba(61,220,132,.25)}
+.kt-badge b{color:#ffc4ae;font-weight:500}
+
+.js .reveal{opacity:0;transform:translateY(30px) scale(.985);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}
+
+@media (max-width:1080px){
+  .nav ul a{padding:8px 11px;font-size:14px}
+  form.bk{grid-template-columns:repeat(4,minmax(0,1fr));border-radius:28px}
+  form.bk .btn{grid-column:1/-1;margin-top:6px}
+  .am-grid{grid-template-columns:repeat(2,1fr)}
+  .track{grid-auto-columns:minmax(290px,calc((100% - 24px)/2))}
+  .fg{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  header.site{inset:20px 0 auto}
+  .nav{padding:0 22px}
+  .nav ul,.nav .btn{display:none}
+  .burger{display:block}
+  .sheet{display:block;position:absolute;left:20px;right:20px;top:60px;background:var(--shell);border-radius:22px;box-shadow:0 20px 50px -20px rgba(0,0,0,.4);max-height:0;overflow:hidden;opacity:0;transition:max-height .35s,opacity .25s}
+  .sheet.open{max-height:520px;opacity:1}
+  .sheet ul{list-style:none;padding:10px 20px 20px}
+  .sheet a{display:block;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:400}
+  .sheet .btn{margin-top:14px;border-bottom:0;width:100%}
+  .head{grid-template-columns:1fr}
+  .head p{justify-self:start}
+  .rooms .ctrl{justify-self:start}
+  .intro{grid-template-columns:1fr}
+  .intro .pic .note{left:16px}
+  .dine,.lc,.rv-grid{grid-template-columns:1fr}
+  .villa ul{grid-template-columns:1fr}
+  .villa::after{background:linear-gradient(0deg,rgba(8,32,34,.85),rgba(8,32,34,.15) 85%)}
+}
+@media (max-width:560px){
+  .hero{padding:8px}
+  .hero .frame{border-radius:24px;min-height:600px;height:86vh}
+  .hero .copy{bottom:96px}
+  form.bk{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:24px}
+  .bf{padding:10px 14px;border-right:0;border-bottom:1px solid var(--line)}
+  .bf:nth-child(odd){border-right:1px solid var(--line)}
+  .bf:nth-child(3),.bf:nth-child(4){border-bottom:0}
+  .bk-wrap{margin-top:-64px}
+  .track{grid-auto-columns:86%}
+  .am-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .am{padding:18px;border-radius:18px}
+  .am h3{font-size:18px}
+  .am p{font-size:13px}
+  .am .ic{width:44px;height:44px;margin-bottom:12px}
+  .villa{margin:0 8px;min-height:620px}
+  form.cf{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}
+  footer{margin:0 8px 8px}
+  .masonry{columns:2 140px;column-gap:10px}
+  .masonry .ph{margin-bottom:10px;border-radius:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .e1,.e2,.e3,.e4{opacity:1;transform:none}
+  .hero .frame .ph img{transform:none}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="#" class="logo" aria-label="Mây Cát Resort & Spa – trang chủ"><span class="m"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 15c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M3 19c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><circle cx="12" cy="8" r="3"/></svg></span><span><b>Mây&nbsp;Cát</b><small>Resort&nbsp;&amp;&nbsp;Spa</small></span></a>
+    <ul>
+      <li><a href="#phong">Phòng&nbsp;&amp;&nbsp;Biệt&nbsp;thự</a></li>
+      <li><a href="#tien-nghi">Tiện&nbsp;nghi</a></li>
+      <li><a href="#am-thuc">Ẩm&nbsp;thực</a></li>
+      <li><a href="#hinh-anh">Hình&nbsp;ảnh</a></li>
+      <li><a href="#lien-he">Liên&nbsp;hệ</a></li>
+    </ul>
+    <a href="#dat-phong" class="btn btn-coral">Đặt&nbsp;phòng</a>
+    <button class="burger" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="sheet" aria-label="Menu di động">
+    <ul>
+      <li><a href="#phong">Phòng&nbsp;&amp;&nbsp;Biệt&nbsp;thự</a></li>
+      <li><a href="#tien-nghi">Tiện&nbsp;nghi</a></li>
+      <li><a href="#am-thuc">Ẩm&nbsp;thực</a></li>
+      <li><a href="#hinh-anh">Hình&nbsp;ảnh</a></li>
+      <li><a href="#lien-he">Liên&nbsp;hệ</a></li>
+      <li><a href="#dat-phong" class="btn btn-coral">Đặt&nbsp;phòng</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="frame">
+    <div class="ph"><img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=80" alt="Hồ bơi của khu nghỉ dưỡng uốn quanh hàng dừa, nhìn ra biển xanh" width="2000" height="1300" fetchpriority="high"></div>
+    <div class="copy">
+      <span class="pill e1">Khu&nbsp;nghỉ&nbsp;dưỡng&nbsp;biển&nbsp;· Khánh&nbsp;Hòa</span>
+      <h1 class="e2">Kỳ&nbsp;nghỉ <i>bên&nbsp;bờ&nbsp;biển&nbsp;xanh</i></h1>
+      <p class="e3">Phòng nghỉ và biệt thự hướng biển, hồ bơi vô cực, nhà hàng hải sản và spa, tất cả trong một khu vườn nhiệt đới yên tĩnh.</p>
+    </div>
+  </div>
+</section>
+
+<div class="bk-wrap" id="dat-phong">
+  <div class="wrap">
+    <form class="bk e4" data-form="booking" novalidate aria-label="Tìm phòng trống">
+      <div class="bf"><label for="ci">Ngày nhận phòng</label><input id="ci" type="date" required></div>
+      <div class="bf"><label for="co">Ngày trả phòng</label><input id="co" type="date" required></div>
+      <div class="bf"><label for="ad">Người lớn</label><select id="ad"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+      <div class="bf"><label for="ch">Trẻ em</label><select id="ch"><option selected>0</option><option>1</option><option>2</option><option>3</option></select></div>
+      <button class="btn btn-coral" type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Tìm&nbsp;phòng</button>
+    </form>
+    <div class="bk-msg" role="status" aria-live="polite"></div>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap intro">
+    <div class="reveal">
+      <span class="pill">Chào&nbsp;mừng đến&nbsp;Mây&nbsp;Cát</span>
+      <h2>Nơi&nbsp;biển, nắng&nbsp;và&nbsp;gió mang&nbsp;đến <i>những&nbsp;ngày&nbsp;chậm</i></h2>
+      <p>Mây Cát nằm trên một dải cát trắng, xung quanh là vườn dừa và hàng phi lao. Mỗi phòng đều có ban công hoặc sân hiên riêng để quý khách ngắm bình minh trên biển.</p>
+      <p>Đội ngũ của resort sẵn sàng hỗ trợ đặt tour lặn ngắm san hô, chèo SUP, câu cá cùng ngư dân hay tổ chức bữa tối riêng trên bãi biển.</p>
+      <div class="chips">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 16c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/></svg>Bãi biển riêng</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V5h8v3"/></svg>Đưa đón sân bay</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c4 4 4 8 0 12-4-4-4-8 0-12z"/></svg>Spa &amp; yoga</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="3"/><path d="M6 20a6 6 0 0 1 12 0"/></svg>Câu lạc bộ trẻ em</span>
+      </div>
+    </div>
+    <div class="pic reveal d1">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?auto=format&fit=crop&w=900&q=80" alt="Hai ghế tắm nắng bằng gỗ trên bãi cát trắng dưới hàng dừa" width="900" height="1125" loading="lazy"></div>
+      <div class="note"><b>Nhận&nbsp;phòng 14:00</b>Trả phòng 12:00 · Bữa sáng bao gồm trong giá phòng</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec rooms" id="phong">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="pill">Phòng&nbsp;&amp;&nbsp;Biệt&nbsp;thự</span><h2>Chọn&nbsp;không&nbsp;gian cho&nbsp;kỳ&nbsp;nghỉ</h2></div>
+      <div class="ctrl"><button type="button" data-dir="-1" aria-label="Xem phòng trước"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" data-dir="1" aria-label="Xem phòng tiếp theo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button></div>
+    </div>
+    <div class="track reveal" data-hscroll tabindex="0" aria-label="Danh sách hạng phòng">
+      <article class="room">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1759328257280-28bdb3050be3?auto=format&fit=crop&w=800&q=80" alt="Phòng nghỉ với rèm voan trắng, ánh nắng chiếu qua cửa kính" width="800" height="600" loading="lazy"><span class="tag">Hướng vườn</span></div>
+        <div class="bd"><h3>Phòng&nbsp;Deluxe Hướng&nbsp;vườn</h3><ul><li class="nw">36 m²</li><li>Giường cỡ King</li><li>Sân hiên riêng</li></ul><p style="color:var(--muted);font-size:14.5px;margin-bottom:18px">Mở cửa ra là vườn nhiệt đới, vài bước chân tới hồ bơi chung.</p>
+          <div class="ft"><div class="from">Giá phòng từ<b class="nw">2.200.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-teal">Đặt&nbsp;phòng</a></div></div>
+      </article>
+      <article class="room">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1770232274485-b35ee5092cbe?auto=format&fit=crop&w=800&q=80" alt="Phòng ngủ giường lớn, gối và khăn trải màu xanh biển" width="800" height="600" loading="lazy"><span class="tag">Hướng biển</span></div>
+        <div class="bd"><h3>Phòng&nbsp;Deluxe Hướng&nbsp;biển</h3><ul><li class="nw">40 m²</li><li>King hoặc 2 giường đơn</li><li>Ban công</li></ul><p style="color:var(--muted);font-size:14.5px;margin-bottom:18px">Ban công nhìn thẳng ra biển, đón bình minh ngay từ giường ngủ.</p>
+          <div class="ft"><div class="from">Giá phòng từ<b class="nw">2.900.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-teal">Đặt&nbsp;phòng</a></div></div>
+      </article>
+      <article class="room">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=800&q=80" alt="Phòng Suite rộng có giường lớn, sofa và cửa kính nhìn ra ngoài" width="800" height="600" loading="lazy"><span class="tag">Gia đình</span></div>
+        <div class="bd"><h3>Phòng&nbsp;Suite Gia&nbsp;đình</h3><ul><li class="nw">64 m²</li><li>2 phòng ngủ thông nhau</li><li>Bồn tắm</li></ul><p style="color:var(--muted);font-size:14.5px;margin-bottom:18px">Đủ rộng cho 2 người lớn và 2 trẻ em, có góc sinh hoạt chung.</p>
+          <div class="ft"><div class="from">Giá phòng từ<b class="nw">3.800.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-teal">Đặt&nbsp;phòng</a></div></div>
+      </article>
+      <article class="room">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1783101514857-7e50266c60b8?auto=format&fit=crop&w=800&q=80" alt="Hồ bơi vô cực riêng nhìn ra biển, có ô che nắng" width="800" height="600" loading="lazy"><span class="tag">Hồ bơi riêng</span></div>
+        <div class="bd"><h3>Biệt&nbsp;thự 1&nbsp;phòng&nbsp;ngủ có&nbsp;hồ&nbsp;bơi&nbsp;riêng</h3><ul><li class="nw">120 m²</li><li>Giường cỡ King</li><li>Hồ bơi riêng</li></ul><p style="color:var(--muted);font-size:14.5px;margin-bottom:18px">Không gian riêng tư cho cặp đôi, hiên tắm nắng và hồ bơi trong sân.</p>
+          <div class="ft"><div class="from">Giá phòng từ<b class="nw">6.500.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-teal">Đặt&nbsp;phòng</a></div></div>
+      </article>
+      <article class="room">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1782397132095-668ba93778b4?auto=format&fit=crop&w=800&q=80" alt="Nhìn từ trên cao các biệt thự mái bằng giữa vườn cây, có hồ bơi" width="800" height="600" loading="lazy"><span class="tag">Hướng biển</span></div>
+        <div class="bd"><h3>Biệt&nbsp;thự 2&nbsp;phòng&nbsp;ngủ hướng&nbsp;biển</h3><ul><li class="nw">220 m²</li><li>Phòng khách riêng</li><li>Bếp nhỏ</li></ul><p style="color:var(--muted);font-size:14.5px;margin-bottom:18px">Phù hợp gia đình nhiều thế hệ hoặc nhóm bạn, có dịch vụ quản gia.</p>
+          <div class="ft"><div class="from">Giá phòng từ<b class="nw">9.800.000đ/đêm</b></div><a href="#dat-phong" class="btn btn-teal">Đặt&nbsp;phòng</a></div></div>
+      </article>
+    </div>
+    <p style="color:var(--muted);font-size:14px;margin-top:12px">Giá đã bao gồm bữa sáng, thuế và phí phục vụ. Giá thay đổi theo mùa, cuối tuần và ngày lễ.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-bottom:0">
+  <div class="villa reveal">
+    <div class="ph"><img src="https://images.unsplash.com/photo-1758192838598-a1de4da5dcaf?auto=format&fit=crop&w=2000&q=80" alt="Hồ bơi vô cực lúc hoàng hôn, hàng dừa và hiên gỗ" width="2000" height="1100" loading="lazy"></div>
+    <div class="in">
+      <span class="pill">Ưu&nbsp;đãi&nbsp;mẫu</span>
+      <h2>Ở&nbsp;3&nbsp;đêm biệt&nbsp;thự, tặng&nbsp;bữa&nbsp;tối&nbsp;riêng</h2>
+      <p>Đặt từ 3 đêm tại biệt thự có hồ bơi riêng, quý khách được tặng một bữa tối hải sản cho 2 người trên bãi biển. Áp dụng theo điều kiện của resort.</p>
+      <ul><li>Đưa đón sân bay khứ hồi</li><li>Nhận phòng sớm (tùy tình trạng phòng)</li><li>Một liệu trình spa 60 phút</li><li>Trả phòng muộn tới 15:00</li></ul>
+      <a href="#lien-he" class="btn btn-coral">Nhận&nbsp;tư&nbsp;vấn ưu&nbsp;đãi</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec amen" id="tien-nghi" style="margin-top:clamp(72px,9vw,128px)">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="pill">Tiện&nbsp;nghi</span><h2>Tiện&nbsp;ích trong&nbsp;khu&nbsp;nghỉ&nbsp;dưỡng</h2></div>
+      <p>Mọi tiện nghi được bố trí trong khuôn viên, đi bộ hoặc đi xe điện vài phút là tới.</p>
+    </div>
+    <div class="am-grid">
+      <div class="am reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12c3-3 5-3 8 0s5 3 8 0 3-1 4 0M2 17c3-3 5-3 8 0s5 3 8 0 3-1 4 0M7 9V4h4"/></svg></span><h3>Hồ&nbsp;bơi&nbsp;vô&nbsp;cực</h3><p>Hồ bơi người lớn và hồ bơi trẻ em.</p></div>
+      <div class="am reveal d1"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c4 4 4 8 0 12-4-4-4-8 0-12zM5 13c2 4 5 6 7 6s5-2 7-6"/></svg></span><h3>Spa &amp;&nbsp;xông&nbsp;hơi</h3><p>Liệu trình massage, chăm sóc da.</p></div>
+      <div class="am reveal d2"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></span><h3>Phòng&nbsp;tập</h3><p>Mở cửa 06:00 – 21:00.</p></div>
+      <div class="am reveal d3"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="7" r="3"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></span><h3>Câu&nbsp;lạc&nbsp;bộ trẻ&nbsp;em</h3><p>Khu vui chơi có người trông.</p></div>
+      <div class="am reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20l9-16 9 16zM12 10v4"/></svg></span><h3>Thể&nbsp;thao&nbsp;biển</h3><p>Chèo SUP, kayak, lặn ngắm san hô.</p></div>
+      <div class="am reveal d1"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="7" width="18" height="10" rx="3"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span><h3>Đưa&nbsp;đón sân&nbsp;bay</h3><p>Đặt trước tối thiểu 24 giờ.</p></div>
+      <div class="am reveal d2"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg></span><h3>Phòng&nbsp;hội&nbsp;nghị</h3><p>Sức chứa tới 120 khách.</p></div>
+      <div class="am reveal d3"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 9a15 15 0 0 1 20 0M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0"/></svg></span><h3>Wifi miễn&nbsp;phí</h3><p>Toàn bộ khuôn viên resort.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="am-thuc">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="pill">Ẩm&nbsp;thực</span><h2>Nhà&nbsp;hàng &amp;&nbsp;quầy&nbsp;bar</h2></div>
+      <p>Hải sản đánh bắt trong ngày, rau củ từ vườn của resort. Khách không lưu trú cũng có thể đặt bàn.</p>
+    </div>
+    <div class="dine">
+      <article class="venue reveal">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Nhà hàng mái gỗ bên hồ bơi với hàng ghế tắm nắng" width="1000" height="625" loading="lazy"></div>
+        <div class="bd">
+          <span class="pill">Nhà&nbsp;hàng chính</span>
+          <h3>Nhà&nbsp;hàng Bến&nbsp;Cát</h3>
+          <p>Buffet sáng với món Việt và món Âu; trưa, tối phục vụ gọi món hải sản và đặc sản miền Trung.</p>
+          <div class="meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="nw">06:30 – 22:00</span></span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h10"/></svg>120 chỗ ngồi</span></div>
+          <div class="mini">
+            <div><span>Gỏi cá mai</span><span>145.000đ</span></div>
+            <div><span>Tôm hùm nướng phô mai</span><span>Theo thời giá</span></div>
+            <div><span>Set hải sản 2 người</span><span>1.290.000đ</span></div>
+          </div>
+          <a href="#lien-he" class="btn btn-line">Đặt&nbsp;bàn</a>
+        </div>
+      </article>
+      <article class="venue reveal d1">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1757924382007-7b3228526d09?auto=format&fit=crop&w=1000&q=80" alt="Hồ bơi và ghế tắm nắng nhìn ra biển lúc hoàng hôn" width="1000" height="625" loading="lazy"></div>
+        <div class="bd">
+          <span class="pill">Quầy&nbsp;bar</span>
+          <h3>Quầy&nbsp;bar Hoàng&nbsp;Hôn</h3>
+          <p>Quầy bar cạnh hồ bơi vô cực, phục vụ nước ép, cocktail và món ăn nhẹ. Nhạc acoustic tối thứ Sáu, thứ Bảy.</p>
+          <div class="meta"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="nw">10:00 – 23:00</span></span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h14l-7 8zM12 12v7M8 20h8"/></svg>Giờ vàng <span class="nw">17:00 – 18:30</span></span></div>
+          <div class="mini">
+            <div><span>Nước dừa tươi</span><span>55.000đ</span></div>
+            <div><span>Cocktail nhiệt đới</span><span>165.000đ</span></div>
+            <div><span>Mực một nắng nướng</span><span>220.000đ</span></div>
+          </div>
+          <a href="#lien-he" class="btn btn-line">Xem&nbsp;thực&nbsp;đơn</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hinh-anh" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="pill">Hình&nbsp;ảnh</span><h2>Một&nbsp;ngày ở&nbsp;Mây&nbsp;Cát</h2></div>
+      <p>Bình minh trên biển, buổi trưa bên hồ bơi, bữa tối dưới ánh nến.</p>
+    </div>
+    <div class="masonry">
+      <div class="ph reveal" style="aspect-ratio:3/4"><img src="https://images.unsplash.com/photo-1584132869994-873f9363a562?auto=format&fit=crop&w=600&q=80" alt="Ghế tắm nắng gỗ trên sàn hiên nhìn ra biển" width="600" height="800" loading="lazy"></div>
+      <div class="ph reveal d1" style="aspect-ratio:1"><img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=600&q=80" alt="Bàn ghế gỗ trên sàn hiên sát mặt nước, xung quanh là cây xanh" width="600" height="600" loading="lazy"></div>
+      <div class="ph reveal d2" style="aspect-ratio:4/5"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" alt="Hồ bơi xanh ngọc giữa các mái nhà tranh và rặng núi" width="600" height="750" loading="lazy"></div>
+      <div class="ph reveal" style="aspect-ratio:1"><img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=600&q=80" alt="Nhà mái lá và hồ bơi uốn lượn giữa hàng dừa" width="600" height="600" loading="lazy"></div>
+      <div class="ph reveal d1" style="aspect-ratio:3/4"><img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80" alt="Hiên gỗ có ghế tắm nắng và ô che, nhìn ra biển" width="600" height="800" loading="lazy"></div>
+      <div class="ph reveal d2" style="aspect-ratio:4/3"><img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=600&q=80" alt="Bữa sáng với bánh waffle, trứng và nước cam" width="600" height="450" loading="lazy"></div>
+      <div class="ph reveal" style="aspect-ratio:4/5"><img src="https://images.unsplash.com/photo-1549294413-26f195200c16?auto=format&fit=crop&w=600&q=80" alt="Hàng ghế tắm nắng bên hồ bơi giữa rặng dừa" width="600" height="750" loading="lazy"></div>
+      <div class="ph reveal d1" style="aspect-ratio:1"><img src="https://images.unsplash.com/photo-1651323018466-b36b7df1d2b1?auto=format&fit=crop&w=600&q=80" alt="Hải sản tươi bày trên đá tại nhà hàng" width="600" height="600" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="pill">Cảm&nbsp;nhận</span><h2>Khách&nbsp;nói về&nbsp;Mây&nbsp;Cát</h2></div>
+      <p><span class="sample">Đánh giá mẫu</span> Nội dung minh hoạ cho giao diện, không phải đánh giá thật.</p>
+    </div>
+    <div class="rv-grid">
+      <figure class="rv reveal"><p>“Phòng hướng biển sáng sớm mở rèm là thấy bình minh. Bữa sáng nhiều món Việt, nhân viên nhớ tên cả nhà.”</p><figcaption class="who"><i>M</i><span>Chị Mai L.<small>Đánh giá mẫu · Gia đình</small></span></figcaption></figure>
+      <figure class="rv reveal d1"><p>“Biệt thự có hồ bơi riêng rất riêng tư. Bữa tối trên bãi biển là kỷ niệm đáng nhớ của chuyến đi.”</p><figcaption class="who"><i>D</i><span>Anh Duy P.<small>Đánh giá mẫu · Cặp đôi</small></span></figcaption></figure>
+      <figure class="rv reveal d2"><p>“Tổ chức hội nghị 80 người, khâu chuẩn bị chu đáo. Đoàn được nghỉ ngơi, tắm biển ngay sau buổi họp.”</p><figcaption class="who"><i>H</i><span>Chị Hà N.<small>Đánh giá mẫu · Khách đoàn</small></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="lien-he" style="padding-top:0">
+  <div class="wrap lc">
+    <div class="box reveal">
+      <span class="pill">Vị&nbsp;trí</span>
+      <h2>Đường&nbsp;tới Mây&nbsp;Cát</h2>
+      <p style="color:var(--muted)">Bãi biển Mẫu, xã Mẫu, tỉnh Khánh&nbsp;Hòa</p>
+      <div class="map" role="img" aria-label="Bản đồ minh hoạ vị trí resort bên bờ biển"><span class="sea">Biển</span><div class="pin"><span>Mây Cát Resort</span><i></i></div></div>
+      <div class="dl">
+        <span>Sân bay gần resort</span><span class="nw">khoảng 25 phút</span>
+        <span>Trung tâm thành phố</span><span class="nw">khoảng 40 phút</span>
+        <span>Điện thoại</span><span><a href="tel:0900000000" class="nw">0900 000 000</a></span>
+        <span>Email</span><span>datphong@maycat.vn</span>
+      </div>
+    </div>
+    <div class="box reveal d1">
+      <span class="pill">Liên&nbsp;hệ</span>
+      <h2>Gửi&nbsp;yêu&nbsp;cầu tư&nbsp;vấn</h2>
+      <form class="cf" data-form="contact" novalidate>
+        <div class="fi"><label for="c-name">Họ và tên</label><input id="c-name" required autocomplete="name" placeholder="Nguyễn Văn A"></div>
+        <div class="fi"><label for="c-phone">Số điện thoại</label><input id="c-phone" type="tel" required autocomplete="tel" placeholder="0900 000 000" pattern="[0-9 +.]{9,15}"></div>
+        <div class="fi"><label for="c-email">Email</label><input id="c-email" type="email" autocomplete="email" placeholder="email@vidu.vn"></div>
+        <div class="fi"><label for="c-topic">Bạn cần tư vấn</label><select id="c-topic"><option>Đặt phòng</option><option>Đặt biệt thự</option><option>Tiệc cưới, sự kiện</option><option>Hội nghị, khách đoàn</option><option>Đặt bàn nhà hàng</option></select></div>
+        <div class="fi full"><label for="c-msg">Lời nhắn</label><textarea id="c-msg" placeholder="Ngày dự kiến, số khách, yêu cầu đặc biệt…"></textarea></div>
+        <button class="btn btn-coral" type="submit">Gửi&nbsp;yêu&nbsp;cầu</button>
+        <p class="hint">Biểu mẫu minh hoạ, thông tin không được gửi đi.</p>
+        <div class="ok" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fg">
+    <div><a href="#" class="logo"><span class="m"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 15c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0M3 19c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><circle cx="12" cy="8" r="3"/></svg></span><span><b>Mây&nbsp;Cát</b><small>Resort&nbsp;&amp;&nbsp;Spa</small></span></a><p style="margin-top:16px;max-width:300px">Khu nghỉ dưỡng biển với phòng nghỉ, biệt thự hồ bơi riêng, nhà hàng hải sản và spa.</p></div>
+    <div><h4>Lưu&nbsp;trú</h4><ul><li><a href="#phong">Phòng Deluxe</a></li><li><a href="#phong">Phòng Suite Gia đình</a></li><li><a href="#phong">Biệt thự hồ bơi riêng</a></li></ul></div>
+    <div><h4>Trải&nbsp;nghiệm</h4><ul><li><a href="#am-thuc">Nhà hàng Bến Cát</a></li><li><a href="#am-thuc">Quầy bar Hoàng Hôn</a></li><li><a href="#tien-nghi">Spa &amp; tiện nghi</a></li></ul></div>
+    <div><h4>Liên&nbsp;hệ</h4><ul><li><a href="tel:0900000000" class="nw">0900 000 000</a></li><li>datphong@maycat.vn</li><li>Bãi biển Mẫu, xã Mẫu, tỉnh Khánh&nbsp;Hòa</li><li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> · <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://zalo.me" target="_blank" rel="noopener">Zalo</a></li></ul></div>
+  </div>
+  <div class="copy"><span>© 2026 Mây Cát Resort &amp; Spa. Thương hiệu, địa chỉ, số điện thoại và ưu đãi là thông tin mẫu.</span><span>Ảnh: Unsplash</span></div>
+</footer>
+
+<a class="kt-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+  var d=document, rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.documentElement.classList.add('js');
+  d.querySelectorAll('img').forEach(function(img){function f(){img.classList.add('fail')} if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))f(); else img.addEventListener('error',f)});
+  var els=d.querySelectorAll('.reveal');
+  if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.06});els.forEach(function(e){io.observe(e)})}
+  var bg=d.querySelector('.burger'), sh=d.querySelector('.sheet');
+  bg.addEventListener('click',function(){var o=sh.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+  sh.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){sh.classList.remove('open');bg.setAttribute('aria-expanded',false)})});
+  var tr=d.querySelector('.track');
+  d.querySelectorAll('.ctrl button').forEach(function(b){b.addEventListener('click',function(){var c=tr.querySelector('.room');tr.scrollBy({left:(+b.dataset.dir)*(c.offsetWidth+24),behavior:rm?'auto':'smooth'})})});
+  function iso(x){return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')}
+  function vn(s){var p=s.split('-');return p[2]+'/'+p[1]+'/'+p[0]}
+  var ci=d.getElementById('ci'), co=d.getElementById('co'), t=new Date();
+  ci.min=iso(t); ci.value=iso(t); co.min=iso(new Date(Date.now()+864e5)); co.value=iso(new Date(Date.now()+864e5*3));
+  ci.addEventListener('change',function(){var n=new Date(ci.value+'T00:00');n.setDate(n.getDate()+1);co.min=iso(n);if(co.value<=ci.value)co.value=iso(n)});
+  var bf=d.querySelector('form[data-form=booking]'), bm=d.querySelector('.bk-msg');
+  bf.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!bf.checkValidity()){bf.reportValidity();return}
+    var n=Math.round((new Date(co.value+'T00:00')-new Date(ci.value+'T00:00'))/864e5);
+    if(n<1){bm.textContent='Ngày trả phòng cần sau ngày nhận phòng.';bm.classList.add('show');return}
+    var k=+d.getElementById('ch').value;
+    bm.textContent='Còn phòng trống từ '+vn(ci.value)+' đến '+vn(co.value)+' ('+n+' đêm) cho '+d.getElementById('ad').value+' người lớn'+(k?', '+k+' trẻ em':'')+'. Mời quý khách chọn hạng phòng bên dưới. (Kết quả minh hoạ)';
+    bm.classList.add('show');
+    setTimeout(function(){d.getElementById('phong').scrollIntoView({behavior:rm?'auto':'smooth'})},1400);
+  });
+  var cf=d.querySelector('form[data-form=contact]');
+  cf.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!cf.checkValidity()){cf.reportValidity();return}
+    var box=cf.querySelector('.ok');
+    box.textContent='Cảm ơn '+d.getElementById('c-name').value+'! Mây Cát đã nhận yêu cầu “'+d.getElementById('c-topic').value+'”. Bộ phận đặt phòng sẽ liên hệ lại qua số '+d.getElementById('c-phone').value+'.';
+    box.classList.add('show'); cf.querySelector('button[type=submit]').disabled=true;
+  });
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

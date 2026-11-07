@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website tiệm nail – Lumi Nail Studio</title>
+<meta name="description" content="Mẫu website tiệm nail phong cách tạp chí thời trang: sơn gel, úp móng, đắp gel, nail art theo mẫu, bảng giá tham khảo, lookbook và đặt lịch online. Giao diện demo – Lumi Nail Studio.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1E0B10;          /* oxblood black */
+  --oxblood:#4A0D18;      /* deep wine */
+  --cherry:#A3132B;       /* lacquer red */
+  --porcelain:#F1EEEC;    /* cool porcelain */
+  --porcelain-2:#E7E1DE;
+  --chrome:#BFC3CA;
+  --nude:#D9B6A3;
+  --mute:#6B5A5E;
+  --line:#D9D0CD;
+  /* live lacquer (changed by the swatch picker) */
+  --lac:#A3132B; --lac-hi:#E8475E; --lac-dk:#5A0614; --lac-on:#F1EEEC;
+  --serif:"Playfair Display", Georgia, serif;
+  --sans:"Archivo", system-ui, sans-serif;
+  --ease:cubic-bezier(.2,.75,.15,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--porcelain);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden;font-variation-settings:"wdth" 100}
+img{display:block;max-width:100%;object-fit:cover;background:#3a1a20}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--lac-hi);outline-offset:3px}
+.wrap{width:min(1320px,100% - 64px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;border-radius:999px;font-family:var(--sans);font-size:.95rem;font-weight:600;font-variation-settings:"wdth" 112;letter-spacing:.01em;cursor:pointer;border:1px solid transparent;white-space:nowrap;transition:background-color .45s var(--ease),color .45s var(--ease),border-color .45s,transform .45s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn-lac{background:var(--lac);color:var(--lac-on)}
+.btn-lac:hover{background:var(--lac-dk);color:#F1EEEC}
+.btn-ghost{border-color:rgba(241,238,236,.4);color:var(--porcelain)}
+.btn-ghost:hover{border-color:var(--porcelain);background:rgba(241,238,236,.08)}
+.btn-ink{background:var(--ink);color:var(--porcelain)}
+.btn-ink:hover{background:var(--oxblood)}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:60;color:var(--porcelain);transition:background-color .5s,backdrop-filter .5s,transform .5s var(--ease)}
+.hd.solid{background:rgba(30,11,16,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+.brand{display:flex;align-items:baseline;gap:10px;line-height:1}
+.brand b{font-family:var(--serif);font-weight:500;font-size:1.75rem;letter-spacing:-.02em}
+.brand span{font-size:.78rem;font-variation-settings:"wdth" 125;letter-spacing:.06em;opacity:.75}
+.nav{display:flex;align-items:center;gap:34px;font-size:.92rem;font-variation-settings:"wdth" 108}
+.nav a:not(.btn){position:relative;padding:6px 0;opacity:.86;transition:opacity .3s}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.nav a:not(.btn):hover{opacity:1}.nav a:not(.btn):hover::after{transform:scaleX(1)}
+.nav .btn{min-height:44px;padding:0 22px;font-size:.88rem}
+.burger{display:none;align-items:center;gap:10px;background:none;border:0;cursor:pointer;color:inherit;font-size:.92rem;font-weight:600;padding:10px 0}
+.burger i{display:block;width:22px;height:8px;position:relative}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .4s var(--ease)}
+.burger i::before{top:0}.burger i::after{bottom:0}
+.menu-open .burger i::before{transform:translateY(3.25px) rotate(45deg)}
+.menu-open .burger i::after{transform:translateY(-3.25px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:55;background:var(--ink);color:var(--porcelain);display:flex;flex-direction:column;justify-content:center;padding:100px 28px 40px;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.mnav a:not(.btn){font-family:var(--serif);font-size:2.4rem;line-height:1.3;transform:translateY(20px);opacity:0;transition:transform .6s var(--ease),opacity .6s}
+.mnav .btn{margin-top:32px;align-self:flex-start}
+.menu-open .mnav{opacity:1;visibility:visible}
+.menu-open .mnav a{transform:none;opacity:1}
+.menu-open .mnav a:nth-child(2){transition-delay:.05s}.menu-open .mnav a:nth-child(3){transition-delay:.1s}.menu-open .mnav a:nth-child(4){transition-delay:.15s}.menu-open .mnav a:nth-child(5){transition-delay:.2s}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;background:var(--ink);color:var(--porcelain);display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);overflow:hidden;isolation:isolate}
+.hero-copy{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;padding:104px 0 84px max(32px,calc((100vw - 1320px)/2))}
+.mast{position:relative;font-family:var(--serif);font-weight:400;font-size:clamp(6rem,min(16vw,25vh),17.5rem);line-height:.8;letter-spacing:-.055em;margin:0 0 .12em -.04em;width:max-content;max-width:none;user-select:none}
+.mast .lyr{display:block;background:linear-gradient(100deg,var(--l-dk) 0%,var(--l-base) 30%,var(--l-hi) 47%,var(--l-base) 58%,var(--l-dk) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .06em .1em 0}
+.mast #lyrB{position:absolute;left:0;top:0;opacity:0}
+.mast #lyrB.on{opacity:1;transition:opacity .9s var(--ease)}
+.mast #lyrB.off{opacity:0;transition:opacity .9s var(--ease)}
+.mast-mask{display:block;overflow:hidden;padding-bottom:.02em}
+.hero h1{font-size:clamp(2rem,3.1vw,3.2rem);max-width:17ch;line-height:1.08;margin-bottom:18px}
+.hero h1 em{font-style:italic}
+.hero-lead{max-width:44ch;color:rgba(241,238,236,.74);font-size:1.02rem;margin-bottom:26px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+
+/* swatch = nail tips */
+.picker{display:flex;align-items:center;justify-content:space-between;gap:20px 28px;padding-top:26px;border-top:1px solid rgba(241,238,236,.16);max-width:560px}
+.picker-label{order:2;display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-size:.82rem;color:rgba(241,238,236,.6);text-align:right}
+.picker-label strong{font-family:var(--serif);font-weight:400;font-style:italic;font-size:1.35rem;color:var(--porcelain);white-space:nowrap}
+.tips{display:flex;gap:14px;align-items:flex-end;padding-top:8px}
+.tip{--b:#A3132B;--h:#E8475E;--d:#5A0614;position:relative;width:36px;height:54px;border:0;cursor:pointer;background:none;padding:0;transition:transform .5s var(--ease)}
+.tip::before{content:"";position:absolute;inset:0;border-radius:50% 50% 46% 46% / 64% 64% 36% 36%;background:linear-gradient(100deg,var(--d) 0%,var(--b) 32%,var(--h) 48%,var(--b) 62%,var(--d) 100%);box-shadow:0 8px 18px rgba(0,0,0,.35),inset 0 -6px 10px rgba(0,0,0,.18)}
+.tip::after{content:"";position:absolute;left:28%;top:12%;width:16%;height:46%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,0));filter:blur(1px)}
+.tip:hover{transform:translateY(-5px)}
+.tip[aria-pressed="true"]{transform:translateY(-10px) scale(1.08)}
+.tip[aria-pressed="true"] + .tip,.tip:has(+ .tip[aria-pressed="true"]){}
+.tip span{position:absolute;left:50%;bottom:-16px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--porcelain);opacity:0;transition:opacity .4s}
+.tip[aria-pressed="true"] span{opacity:1}
+
+.hero-media{position:relative;z-index:1;min-height:100svh}
+.hero-media .ph{position:absolute;inset:0;overflow:hidden;background:#2b0f15}
+.hero-media .ph img{width:100%;height:112%;object-fit:cover;object-position:50% 35%;will-change:transform}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,11,16,.55),rgba(30,11,16,0) 16%),linear-gradient(90deg,var(--ink) 0%,rgba(30,11,16,0) 22%),linear-gradient(0deg,rgba(30,11,16,.55),rgba(30,11,16,0) 30%);pointer-events:none}
+.inset{position:absolute;z-index:4;left:5%;bottom:9%;width:clamp(150px,15vw,230px);aspect-ratio:4/5;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.inset img{width:100%;height:100%}
+.cap{position:absolute;z-index:4;right:32px;bottom:34px;text-align:right;font-size:.8rem;color:rgba(241,238,236,.78);line-height:1.5}
+.cap b{display:block;font-family:var(--serif);font-weight:400;font-style:italic;font-size:1.15rem;color:var(--porcelain)}
+
+/* hero entrance */
+.js .hero .mast .lyr:first-child{transform:translateY(105%)}
+.js .hero .rise{opacity:0;transform:translateY(26px)}
+.js .hero .tip{opacity:0;transform:translateY(-24px) rotate(-8deg)}
+.js .hero-media .ph{opacity:0;transform:scale(1.08)}
+.js .hero .inset{opacity:0;transform:translateY(40px)}
+.loaded .hero .mast .lyr:first-child{transform:none;transition:transform 1.3s var(--ease) .25s}
+.loaded .hero .rise{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.loaded .hero .rise.d1{transition-delay:.55s}.loaded .hero .rise.d2{transition-delay:.7s}.loaded .hero .rise.d3{transition-delay:.85s}.loaded .hero .rise.d4{transition-delay:1s}
+.loaded .hero .tip{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .9s var(--ease)}
+.loaded .hero .tip:nth-child(1){transition-delay:1.05s}.loaded .hero .tip:nth-child(2){transition-delay:1.12s}.loaded .hero .tip:nth-child(3){transition-delay:1.19s}.loaded .hero .tip:nth-child(4){transition-delay:1.26s}.loaded .hero .tip:nth-child(5){transition-delay:1.33s}.loaded .hero .tip:nth-child(6){transition-delay:1.4s}
+.loaded .hero .tip[aria-pressed="true"]{transform:translateY(-10px) scale(1.08)}
+.loaded .hero-media .ph{opacity:1;transform:none;transition:opacity 1.4s var(--ease),transform 2.2s var(--ease)}
+.loaded .hero .inset{opacity:1;transform:none;transition:opacity 1.1s var(--ease) 1.1s,transform 1.3s var(--ease) 1.1s}
+.settled .hero .tip{transition:transform .5s var(--ease)!important;transition-delay:0s!important}
+.settled .hero .tip:hover{transform:translateY(-5px)}
+.settled .hero .tip[aria-pressed="true"]{transform:translateY(-10px) scale(1.08)}
+
+/* ============ common section ============ */
+.sec{padding:140px 0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px);gap:40px;align-items:end;margin-bottom:72px}
+.head h2{font-size:clamp(2.5rem,5.4vw,5rem);line-height:1.02;letter-spacing:-.025em}
+.head p{color:var(--mute)}
+.kick{display:block;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--lac-dk);margin-bottom:18px;transition:color .6s}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ SERVICES (index + sticky preview) ============ */
+.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.svc-view{position:sticky;top:110px;aspect-ratio:4/5;overflow:hidden;background:var(--porcelain-2)}
+.svc-view img{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:scale(1.06);transition:opacity .8s var(--ease),transform 1.4s var(--ease)}
+.svc-view img.on{opacity:1;transform:none}
+.svc-view figcaption{position:absolute;left:20px;bottom:18px;z-index:2;color:#F1EEEC;font-size:.82rem;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.svc-list{list-style:none;border-top:1px solid var(--line)}
+.svc-item{border-bottom:1px solid var(--line)}
+.svc-btn{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:20px;width:100%;padding:30px 0 28px;background:none;border:0;cursor:pointer;text-align:left}
+.svc-btn h3{position:relative;font-size:clamp(1.7rem,2.9vw,2.7rem);transition:transform .6s var(--ease),color .5s}
+.svc-btn .from{font-size:.92rem;color:var(--mute);white-space:nowrap;font-variation-settings:"wdth" 110}
+.svc-item.on .svc-btn h3{transform:translateX(18px);font-style:italic}
+.svc-item .svc-btn h3::before{content:"";position:absolute;left:-.5em;top:.36em;width:.3em;height:.45em;border-radius:50% 50% 46% 46% / 64% 64% 36% 36%;background:var(--lac);transform:scale(0);transition:transform .5s var(--ease),background-color .6s}
+.svc-item.on .svc-btn h3::before{transform:none}
+.svc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+.svc-item.on .svc-body{grid-template-rows:1fr}
+.svc-body > div{overflow:hidden}
+.svc-body p{max-width:56ch;color:var(--mute);padding:0 0 10px 18px}
+.svc-body ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;padding:6px 0 30px 18px}
+.svc-body li{font-size:.84rem;padding:5px 14px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}
+.svc-body .m-img{display:none}
+
+/* ============ LOOKBOOK ============ */
+.look{background:var(--oxblood);color:var(--porcelain);padding:140px 0 120px;overflow:hidden}
+.look .head p{color:rgba(241,238,236,.7)}
+.look .kick{color:var(--lac-hi)}
+.track{display:flex;gap:28px;scroll-padding-inline:max(32px,calc((100vw - 1320px)/2));overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;padding:0 max(32px,calc((100vw - 1320px)/2)) 10px;cursor:grab;user-select:none;-webkit-user-select:none;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}
+.track.drag a{pointer-events:none}
+.lk{flex:0 0 auto;width:clamp(240px,24vw,360px);scroll-snap-align:start}
+.lk.w{width:clamp(280px,32vw,480px)}
+.lk .fr{overflow:hidden;aspect-ratio:3/4;background:#5d1a26}
+.lk.w .fr{aspect-ratio:4/5}
+.lk img{width:100%;height:100%;transition:transform 1.2s var(--ease);-webkit-user-drag:none;pointer-events:none}
+.lk:hover img{transform:scale(1.04)}
+.lk:nth-child(even){margin-top:64px}
+.lk h3{font-size:1.45rem;margin-top:18px;line-height:1.2}
+.lk p{font-size:.86rem;color:rgba(241,238,236,.62)}
+.look-ctl{display:flex;align-items:center;gap:26px;margin-top:44px}
+.bar{flex:1;height:1px;background:rgba(241,238,236,.2);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0;background:var(--porcelain);transform-origin:left;transform:scaleX(.1)}
+.arrows{display:flex;gap:10px}
+.arw{width:52px;height:52px;border-radius:50%;border:1px solid rgba(241,238,236,.35);background:none;color:var(--porcelain);cursor:pointer;display:grid;place-items:center;transition:background-color .35s,border-color .35s}
+.arw:hover{background:rgba(241,238,236,.1);border-color:var(--porcelain)}
+.arw svg{width:18px;height:18px}
+.drag-hint{font-size:.85rem;color:rgba(241,238,236,.6);white-space:nowrap}
+
+/* ============ PRICING ============ */
+.price{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:64px}
+.ptabs{display:flex;flex-direction:column;gap:2px;position:sticky;top:110px;align-self:start}
+.ptab{display:flex;justify-content:space-between;align-items:center;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:16px 0;cursor:pointer;font-family:var(--serif);font-size:1.45rem;color:var(--mute);transition:color .35s}
+.ptab small{font-family:var(--sans);font-size:.78rem;color:var(--mute)}
+.ptab:hover{color:var(--ink)}
+.ptab[aria-selected="true"]{color:var(--ink);font-style:italic}
+.ptab[aria-selected="true"] small{color:var(--lac-dk)}
+.pane{display:none}
+.pane.on{display:block;animation:paneIn .7s var(--ease)}
+@keyframes paneIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.prow{position:relative;display:grid;grid-template-columns:minmax(0,auto) 1fr auto;align-items:baseline;gap:14px;padding:22px 0 22px 0;border-bottom:1px solid var(--line);transition:padding-left .5s var(--ease)}
+.prow::before{content:"";position:absolute;left:0;top:50%;width:10px;height:15px;margin-top:-8px;border-radius:50% 50% 46% 46% / 64% 64% 36% 36%;background:var(--lac);transform:scale(0);transition:transform .45s var(--ease),background-color .6s}
+.prow:hover{padding-left:26px}
+.prow:hover::before{transform:none}
+.prow h3{font-size:1.4rem;line-height:1.25}
+.prow h3 small{display:block;font-family:var(--sans);font-size:.85rem;color:var(--mute);margin-top:4px;letter-spacing:0}
+.prow .dots{border-bottom:1px dotted #b9aeab;transform:translateY(-6px)}
+.prow .v{font-family:var(--serif);font-size:1.4rem;white-space:nowrap;font-variant-numeric:lining-nums}
+.pnote{margin-top:30px;font-size:.9rem;color:var(--mute);max-width:62ch}
+
+/* ============ ABOUT ============ */
+.about{background:var(--porcelain-2)}
+.ab{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:90px;align-items:center}
+.ab-ph{position:relative}
+.ab-ph .a{aspect-ratio:4/5;overflow:hidden}
+.ab-ph .a img{width:100%;height:118%;will-change:transform}
+.ab-ph .b{position:absolute;right:-12%;bottom:-10%;width:46%;aspect-ratio:1/1;overflow:hidden;border:10px solid var(--porcelain-2)}
+.ab-ph .b img{width:100%;height:100%}
+.ab h2{font-size:clamp(2.4rem,4.6vw,4.4rem);line-height:1.04;letter-spacing:-.025em;margin-bottom:28px}
+.ab-txt > p{color:var(--mute);max-width:52ch;margin-bottom:16px}
+.vows{display:grid;grid-template-columns:1fr 1fr;gap:30px 40px;margin-top:46px;padding-top:36px;border-top:1px solid var(--line)}
+.vows h3{font-size:1.3rem;margin-bottom:6px;line-height:1.2}
+.vows p{font-size:.92rem;color:var(--mute)}
+
+/* ============ REVIEWS ============ */
+.rv-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px 72px}
+.rv{border-top:1px solid var(--ink);padding-top:26px}
+.rv q{display:block;font-family:var(--serif);font-size:1.5rem;line-height:1.4;quotes:"“" "”"}
+.rv.big{grid-row:span 2}
+.rv.big q{font-size:clamp(1.9rem,3vw,2.7rem);line-height:1.25;letter-spacing:-.01em}
+.rv footer{margin-top:22px;font-size:.88rem;color:var(--mute);display:flex;gap:10px;flex-wrap:wrap}
+.rv footer b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;font-size:.78rem;padding:3px 12px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}
+
+/* ============ BOOKING ============ */
+.book{background:var(--ink);color:var(--porcelain)}
+.book .head p{color:rgba(241,238,236,.7)}
+.book .kick{color:var(--lac-hi)}
+.bk{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px}
+.info{display:grid;gap:30px;align-content:start}
+.info dt{font-size:.85rem;color:rgba(241,238,236,.55);margin-bottom:4px}
+.info dd{font-family:var(--serif);font-size:1.45rem;line-height:1.35}
+.info dd a{border-bottom:1px solid rgba(241,238,236,.3)}
+.info .ph2{aspect-ratio:16/10;overflow:hidden;margin-top:10px}
+.info .ph2 img{width:100%;height:100%}
+form{display:grid;grid-template-columns:1fr 1fr;gap:28px 30px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+.f label{font-size:.85rem;color:rgba(241,238,236,.65)}
+.f input,.f select,.f textarea{background:transparent;border:0;border-bottom:1px solid rgba(241,238,236,.3);padding:10px 0 12px;font-size:1.05rem;color:var(--porcelain);border-radius:0;transition:border-color .3s;appearance:none;-webkit-appearance:none}
+.f select{background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.f select option{color:#1E0B10}
+.f input[type=date]{color-scheme:dark}
+.f textarea{resize:vertical;min-height:90px}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--lac-hi)}
+.f.err input,.f.err select{border-color:#FF8A97}
+.f .e{font-size:.82rem;color:#FF9AA5;min-height:1.2em}
+.form-foot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:6px}
+.form-foot p{font-size:.85rem;color:rgba(241,238,236,.55);max-width:40ch}
+.thanks{grid-column:1/-1;display:none;padding:44px 0;border-top:1px solid rgba(241,238,236,.2)}
+.thanks h3{font-size:clamp(2rem,3.4vw,3rem);margin-bottom:14px}
+.thanks p{color:rgba(241,238,236,.75);max-width:52ch}
+.done .f,.done .form-foot{display:none}
+.done .thanks{display:block;animation:paneIn .8s var(--ease)}
+
+/* ============ FOOTER ============ */
+.ft{background:#150709;color:var(--porcelain);padding:90px 0 120px;overflow:hidden}
+.ft-mast{font-family:var(--serif);font-size:clamp(6rem,22vw,22rem);line-height:.78;letter-spacing:-.06em;background:linear-gradient(100deg,var(--lac-dk) 0%,var(--lac) 32%,var(--lac-hi) 48%,var(--lac) 60%,var(--lac-dk) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;margin:0 0 56px -.05em;padding-bottom:.08em}
+.ft-cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-top:40px;border-top:1px solid rgba(241,238,236,.14)}
+.ft h3{font-family:var(--sans);font-size:.85rem;font-weight:600;color:rgba(241,238,236,.5);margin-bottom:12px}
+.ft ul{list-style:none;display:grid;gap:6px}
+.ft li a:hover{color:var(--lac-hi)}
+.ft .note{font-size:.88rem;color:rgba(241,238,236,.55);max-width:44ch}
+
+/* sales pill */
+.pill{position:fixed;left:16px;bottom:16px;z-index:70;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 32px);padding:10px 18px 10px 12px;border-radius:999px;background:var(--porcelain);color:var(--ink);font-size:.8rem;line-height:1.3;box-shadow:0 14px 40px rgba(30,11,16,.35);border:1px solid rgba(30,11,16,.1);transition:transform .4s var(--ease)}
+.pill:hover{transform:translateY(-3px)}
+.pill i{flex:0 0 auto;width:12px;height:18px;border-radius:50% 50% 46% 46% / 64% 64% 36% 36%;background:linear-gradient(100deg,var(--lac-dk),var(--lac) 35%,var(--lac-hi) 50%,var(--lac) 65%,var(--lac-dk))}
+.pill b{font-weight:700;color:var(--lac-dk);white-space:nowrap}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1100px){
+  .nav a:not(.btn){display:none}
+  .burger{display:inline-flex}
+  .nav{gap:18px}
+  .svc{gap:48px}
+  .ab{gap:60px}
+  .bk{gap:56px}
+}
+@media (max-width:900px){
+  .wrap{width:calc(100% - 40px)}
+  .hero{grid-template-columns:1fr;grid-template-rows:auto auto}
+  .hero-media{order:-1;min-height:0;height:64svh}
+  .hero-media::after{background:linear-gradient(0deg,var(--ink) 0%,rgba(30,11,16,0) 45%)}
+  .hero-copy{padding:0 20px 84px;margin-top:-30vw}
+  .mast{font-size:34vw;margin-bottom:.16em}
+  .inset{left:auto;right:20px;bottom:auto;top:96px;width:30vw;max-width:170px}
+  .cap{display:none}
+  .sec{padding:96px 0}
+  .look{padding:96px 0 90px}
+  .head{grid-template-columns:1fr;gap:18px;margin-bottom:48px}
+  .svc{grid-template-columns:1fr}
+  .svc-view{display:none}
+  .svc-body .m-img{display:block;aspect-ratio:16/10;width:100%;margin:4px 0 18px;height:auto}
+  .svc-body p,.svc-body ul{padding-left:0}
+  .svc-item.on .svc-btn h3{transform:none}
+  .price{grid-template-columns:1fr;gap:28px}
+  .ptabs{position:static;flex-direction:row;overflow-x:auto;gap:8px;scrollbar-width:none;margin:0 -20px;padding:0 20px}
+  .ptabs::-webkit-scrollbar{display:none}
+  .ptab{flex:0 0 auto;border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:1.05rem;gap:10px}
+  .ptab[aria-selected="true"]{background:var(--ink);color:var(--porcelain);border-color:var(--ink)}
+  .ptab[aria-selected="true"] small{color:var(--chrome)}
+  .ab{grid-template-columns:1fr}
+  .ab-ph{margin-right:14%}
+  .rv-grid{grid-template-columns:1fr;gap:44px}
+  .rv.big{grid-row:auto}
+  .bk{grid-template-columns:1fr}
+  .ft-cols{grid-template-columns:1fr 1fr}
+  .ft-cols > div:first-child{grid-column:1/-1}
+}
+@media (max-width:560px){
+  .brand span{display:none}
+  .nav .btn{display:none}
+  .hero h1{font-size:2.15rem}
+  .hero-cta .btn{flex:1 1 auto}
+  .picker{flex-direction:column;align-items:stretch;gap:14px}
+  .picker-label{order:0;flex-direction:row;justify-content:space-between;align-items:baseline}
+  .tips{gap:10px;justify-content:space-between}
+  .tip{width:34px;height:52px}
+  .lk,.lk.w{width:74vw}
+  .track{padding:0 20px 10px;scroll-padding-inline:20px}
+  .lk:nth-child(even){margin-top:36px}
+  .drag-hint{display:none}
+  .vows{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .prow{grid-template-columns:minmax(0,1fr) auto;gap:16px}
+  .prow .dots{display:none}
+  .prow h3,.prow .v{font-size:1.2rem}
+  .pill{font-size:.74rem;padding:8px 14px 8px 10px;bottom:12px;left:12px}
+  .ft{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .js .hero .rise,.js .hero .tip,.js .hero-media .ph,.js .hero .inset{opacity:1!important;transform:none!important}
+  .js .hero .mast .lyr:first-child{transform:none!important}
+  .hero-media .ph img,.ab-ph .a img{transform:none!important}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="hd" id="hd">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Lumi Nail Studio – về đầu trang"><b>Lumi</b><span>Nail&nbsp;Studio</span></a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#dich-vu">Dịch&nbsp;vụ</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#bang-gia">Bảng&nbsp;giá</a>
+      <a href="#ve-lumi">Về&nbsp;Lumi</a>
+      <a href="#lien-he">Liên&nbsp;hệ</a>
+      <a href="#dat-lich" class="btn btn-lac">Đặt&nbsp;lịch</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mnav"><i></i><span>Menu</span></button>
+    </nav>
+  </div>
+</header>
+<div class="mnav" id="mnav" aria-label="Menu di động">
+  <a href="#dich-vu">Dịch&nbsp;vụ</a>
+  <a href="#lookbook">Lookbook</a>
+  <a href="#bang-gia">Bảng&nbsp;giá</a>
+  <a href="#ve-lumi">Về&nbsp;Lumi</a>
+  <a href="#lien-he">Liên&nbsp;hệ</a>
+  <a href="#dat-lich" class="btn btn-lac">Đặt&nbsp;lịch ngay</a>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-label="Giới thiệu">
+  <div class="hero-copy">
+    <div class="mast" aria-hidden="true"><span class="mast-mask"><span class="lyr" id="lyrA">Lumi</span></span><span class="lyr" id="lyrB">Lumi</span></div>
+    <h1 class="rise d1">Đôi&nbsp;tay cũng cần một&nbsp;bộ&nbsp;cánh <em>thật&nbsp;đẹp</em></h1>
+    <p class="hero-lead rise d2">Sơn gel, úp móng, đắp gel và nail art theo mẫu tại Lumi Nail Studio. Thợ tư vấn form và màu hợp tông da, dụng cụ tiệt trùng sau mỗi khách.</p>
+    <div class="hero-cta rise d3">
+      <a href="#dat-lich" class="btn btn-lac">Đặt&nbsp;lịch làm&nbsp;móng</a>
+      <a href="#bang-gia" class="btn btn-ghost">Xem&nbsp;bảng&nbsp;giá</a>
+    </div>
+    <div class="picker rise d4" role="group" aria-label="Thử màu sơn">
+      <div class="picker-label"><span>Thử màu sơn mùa này</span><strong id="lacName" aria-live="polite">Đỏ&nbsp;cherry</strong></div>
+      <div class="tips" id="tips">
+        <button class="tip" aria-pressed="true" data-name="Đỏ&nbsp;cherry" data-b="#A3132B" data-h="#E8475E" data-d="#5A0614" data-on="#F1EEEC" style="--b:#A3132B;--h:#E8475E;--d:#5A0614"><span></span><i class="sr">Đỏ cherry</i></button>
+        <button class="tip" aria-pressed="false" data-name="Đỏ&nbsp;rượu&nbsp;vang" data-b="#6A0F22" data-h="#B23A52" data-d="#33050E" data-on="#F1EEEC" style="--b:#6A0F22;--h:#B23A52;--d:#33050E"><span></span><i class="sr">Đỏ rượu vang</i></button>
+        <button class="tip" aria-pressed="false" data-name="Nude&nbsp;sữa" data-b="#D4AE9A" data-h="#F4DDD0" data-d="#9C7563" data-on="#1E0B10" style="--b:#D4AE9A;--h:#F4DDD0;--d:#9C7563"><span></span><i class="sr">Nude sữa</i></button>
+        <button class="tip" aria-pressed="false" data-name="Hồng&nbsp;thạch" data-b="#DE8EA2" data-h="#FFD3DE" data-d="#A2516A" data-on="#1E0B10" style="--b:#DE8EA2;--h:#FFD3DE;--d:#A2516A"><span></span><i class="sr">Hồng thạch</i></button>
+        <button class="tip" aria-pressed="false" data-name="Tráng&nbsp;gương&nbsp;bạc" data-b="#A9AEB6" data-h="#FFFFFF" data-d="#4E535B" data-on="#1E0B10" style="--b:#A9AEB6;--h:#FFFFFF;--d:#4E535B"><span></span><i class="sr">Tráng gương bạc</i></button>
+        <button class="tip" aria-pressed="false" data-name="Mắt&nbsp;mèo&nbsp;đen" data-b="#25202A" data-h="#8E7FA6" data-d="#0C0A0E" data-on="#F1EEEC" style="--b:#25202A;--h:#8E7FA6;--d:#0C0A0E"><span></span><i class="sr">Mắt mèo đen</i></button>
+      </div>
+    </div>
+  </div>
+  <div class="hero-media">
+    <div class="ph"><img id="heroImg" src="https://images.unsplash.com/photo-1645566372784-7d017ad7643b?auto=format&fit=crop&w=1400&q=80" alt="Bàn tay với bộ móng đỏ form nhọn bóng loáng trên nền tối" width="1400" height="2100" fetchpriority="high"></div>
+    <figure class="inset"><img src="https://images.unsplash.com/photo-1777287216954-2b4b22bb6bf2?auto=format&fit=crop&w=460&q=80" alt="Bộ móng tráng gương ánh kim đính đá" width="460" height="575"></figure>
+    <p class="cap"><b>Đỏ cherry, form stiletto</b>Sơn gel · Úp móng gel</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="dich-vu">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="kick">Dịch vụ tại tiệm</span><h2>Từ bộ móng trơn đến nail&nbsp;art cầu&nbsp;kỳ</h2></div>
+      <p>Mỗi bộ móng bắt đầu từ phần nền: cắt da sạch, dũa form chuẩn. Màu đẹp đến đâu cũng cần nền tốt để bền.</p>
+    </div>
+    <div class="svc">
+      <figure class="svc-view reveal" aria-hidden="true">
+        <img class="on" data-k="0" src="https://images.unsplash.com/photo-1748163432725-454f46f68340?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="1125" loading="lazy">
+        <img data-k="1" src="https://images.unsplash.com/photo-1698308233758-d55c98fd7444?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="1125" loading="lazy">
+        <img data-k="2" src="https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="1125" loading="lazy">
+        <img data-k="3" src="https://images.unsplash.com/photo-1754799670410-b282791342c3?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="1125" loading="lazy">
+        <img data-k="4" src="https://images.unsplash.com/photo-1762114468465-11f06d38cc33?auto=format&fit=crop&w=900&q=80" alt="" width="900" height="1125" loading="lazy" style="object-position:50% 100%">
+      </figure>
+      <ul class="svc-list">
+        <li class="svc-item on">
+          <button class="svc-btn" aria-expanded="true"><h3>Sơn&nbsp;gel và&nbsp;chăm&nbsp;sóc&nbsp;móng</h3><span class="from">từ&nbsp;120.000đ</span></button>
+          <div class="svc-body"><div>
+            <img class="m-img" src="https://images.unsplash.com/photo-1748163432725-454f46f68340?auto=format&fit=crop&w=800&q=75" alt="Bộ móng sơn gel đỏ form ngắn" width="800" height="500" loading="lazy">
+            <p>Cắt da, sửa form, dũa móng rồi lên màu sơn gel Hàn Quốc hoặc sơn thạch trong trẻo. Bóng đẹp, bền màu 3–4&nbsp;tuần nếu giữ gìn đúng cách.</p>
+            <ul><li>Sơn gel trơn</li><li>Sơn thạch</li><li>Sơn nhũ, flash</li><li>Phá gel cũ</li></ul>
+          </div></div>
+        </li>
+        <li class="svc-item">
+          <button class="svc-btn" aria-expanded="false"><h3>Úp&nbsp;móng và&nbsp;nối&nbsp;móng</h3><span class="from">từ&nbsp;250.000đ</span></button>
+          <div class="svc-body"><div>
+            <img class="m-img" src="https://images.unsplash.com/photo-1698308233758-d55c98fd7444?auto=format&fit=crop&w=800&q=75" alt="Bộ móng úp form stiletto đen và trong" width="800" height="500" loading="lazy">
+            <p>Úp móng gel, úp móng keo với nhiều form có sẵn: oval, almond, vuông, coffin, stiletto. Thợ chọn size từng ngón để móng ôm sát, nhìn tự nhiên.</p>
+            <ul><li>Úp móng gel</li><li>Úp móng keo</li><li>Nối móng form dài</li></ul>
+          </div></div>
+        </li>
+        <li class="svc-item">
+          <button class="svc-btn" aria-expanded="false"><h3>Đắp&nbsp;gel, đắp&nbsp;bột, BIAB</h3><span class="from">từ&nbsp;280.000đ</span></button>
+          <div class="svc-body"><div>
+            <img class="m-img" src="https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?auto=format&fit=crop&w=800&q=75" alt="Móng tay hồng nhạt tự nhiên sau khi làm gel BIAB" width="800" height="500" loading="lazy">
+            <p>Tạo form chắc chắn cho móng yếu, dễ gãy. Gel BIAB giúp gia cố móng thật để nuôi móng dài mà vẫn mỏng nhẹ.</p>
+            <ul><li>Đắp gel</li><li>Đắp bột ẩn nhũ</li><li>Gel BIAB</li><li>Fill gel</li></ul>
+          </div></div>
+        </li>
+        <li class="svc-item">
+          <button class="svc-btn" aria-expanded="false"><h3>Nail&nbsp;art theo&nbsp;mẫu</h3><span class="from">từ&nbsp;15.000đ/ngón</span></button>
+          <div class="svc-body"><div>
+            <img class="m-img" src="https://images.unsplash.com/photo-1754799670410-b282791342c3?auto=format&fit=crop&w=800&q=75" alt="Bộ móng trắng hồng vẽ hình trái tim" width="800" height="500" loading="lazy">
+            <p>Tráng gương, mắt mèo, ombre, french, vẽ móng, đính đá và gắn charm. Bạn gửi hình mẫu qua Zalo trước, tiệm báo giá và chuẩn bị sẵn màu.</p>
+            <ul><li>Tráng gương</li><li>Mắt mèo</li><li>Ombre, french</li><li>Đính đá, charm</li></ul>
+          </div></div>
+        </li>
+        <li class="svc-item">
+          <button class="svc-btn" aria-expanded="false"><h3>Chăm&nbsp;sóc móng&nbsp;chân</h3><span class="from">từ&nbsp;130.000đ</span></button>
+          <div class="svc-body"><div>
+            <img class="m-img" src="https://images.unsplash.com/photo-1762114468465-11f06d38cc33?auto=format&fit=crop&w=800&q=75" alt="Đôi chân sơn móng đỏ" width="800" height="500" loading="lazy" style="object-position:50% 100%">
+            <p>Ngâm chân thảo mộc, cắt da, chà gót, tẩy tế bào chết và sơn gel chân. Có ghế ngả lưng để bạn thư giãn trong lúc làm.</p>
+            <ul><li>Ngâm chân</li><li>Chà gót</li><li>Sơn gel chân</li><li>Massage chân</li></ul>
+          </div></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LOOKBOOK -->
+<section class="look" id="lookbook">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="kick">Lookbook</span><h2>Mẫu nail khách hay&nbsp;chọn</h2></div>
+      <p>Kéo ngang để xem thêm. Thấy mẫu ưng ý, bạn chụp màn hình gửi qua Zalo, tiệm sẽ báo giá trước khi làm.</p>
+    </div>
+  </div>
+  <div class="track" id="track" tabindex="0" aria-label="Bộ sưu tập mẫu nail, kéo ngang để xem">
+    <figure class="lk w"><div class="fr"><img src="https://images.unsplash.com/photo-1777287852750-53eb2ca506e9?auto=format&fit=crop&w=760&q=80" alt="Bộ móng stiletto đỏ trắng vẽ hoạ tiết" width="760" height="950" loading="lazy"></div><figcaption><h3>Đỏ trắng hoạ&nbsp;tiết</h3><p>Úp móng stiletto, vẽ gel</p></figcaption></figure>
+    <figure class="lk"><div class="fr"><img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Bộ móng đồi mồi và đen, đeo nhẫn vàng" width="600" height="800" loading="lazy"></div><figcaption><h3>Đồi&nbsp;mồi</h3><p>Sơn gel, vẽ vân đồi mồi</p></figcaption></figure>
+    <figure class="lk"><div class="fr"><img src="https://images.unsplash.com/photo-1736434518489-0eb84070017f?auto=format&fit=crop&w=600&q=80" alt="Bộ móng almond tráng gương màu nâu mocha" width="600" height="800" loading="lazy"></div><figcaption><h3>Tráng&nbsp;gương mocha</h3><p>Form almond, tráng gương</p></figcaption></figure>
+    <figure class="lk w"><div class="fr"><img src="https://images.unsplash.com/photo-1754799670312-8e7da8e40ad7?auto=format&fit=crop&w=760&q=80" alt="Bộ móng xanh navy, ánh vàng và trắng" width="760" height="950" loading="lazy"></div><figcaption><h3>Navy ánh&nbsp;vàng</h3><p>Sơn gel, vẽ nhũ vàng</p></figcaption></figure>
+    <figure class="lk"><div class="fr"><img src="https://images.unsplash.com/photo-1769687209448-025548dfca8b?auto=format&fit=crop&w=600&q=80" alt="Bộ móng trắng ngọc trai gắn charm" width="600" height="800" loading="lazy"></div><figcaption><h3>Ngọc&nbsp;trai</h3><p>Sơn thạch, gắn charm</p></figcaption></figure>
+    <figure class="lk"><div class="fr"><img src="https://images.unsplash.com/photo-1772322586785-3a34772cbc61?auto=format&fit=crop&w=600&q=80" alt="Móng trắng đầu móng vân đá tím đen" width="600" height="800" loading="lazy"></div><figcaption><h3>Vân&nbsp;đá</h3><p>Vẽ gel loang</p></figcaption></figure>
+    <figure class="lk w"><div class="fr"><img src="https://images.unsplash.com/photo-1777287216958-84144739db83?auto=format&fit=crop&w=760&q=80" alt="Bộ móng stiletto đen vẽ hoạ tiết bạc" width="760" height="950" loading="lazy"></div><figcaption><h3>Đen&nbsp;bạc</h3><p>Úp móng, vẽ nổi</p></figcaption></figure>
+    <figure class="lk"><div class="fr"><img src="https://images.unsplash.com/photo-1762373349045-c2decd4ec3f3?auto=format&fit=crop&w=600&q=80" alt="Móng french cổ điển cầm bông hoa nhỏ" width="600" height="800" loading="lazy"></div><figcaption><h3>French cổ&nbsp;điển</h3><p>Sơn gel, kẻ french</p></figcaption></figure>
+    <figure class="lk"><div class="fr"><img src="https://images.unsplash.com/photo-1660241657459-554031137e4f?auto=format&fit=crop&w=600&q=80" alt="Bộ móng ngắn sơn đỏ cherry" width="600" height="800" loading="lazy"></div><figcaption><h3>Đỏ&nbsp;cherry form&nbsp;ngắn</h3><p>Sơn gel trơn</p></figcaption></figure>
+  </div>
+  <div class="wrap">
+    <div class="look-ctl">
+      <span class="drag-hint">Kéo hoặc vuốt ngang</span>
+      <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+      <div class="arrows">
+        <button class="arw" id="prev" aria-label="Mẫu trước"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="arw" id="next" aria-label="Mẫu tiếp theo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="bang-gia">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="kick">Bảng giá tham khảo</span><h2>Giá rõ ràng, báo&nbsp;trước khi&nbsp;làm</h2></div>
+      <p>Giá dưới đây là giá tham khảo. Mẫu nail cầu kỳ, bạn gửi hình để tiệm báo giá chính xác.</p>
+    </div>
+    <div class="price">
+      <div class="ptabs" role="tablist" aria-label="Nhóm dịch vụ">
+        <button class="ptab" role="tab" aria-selected="true" aria-controls="p1" id="t1">Móng&nbsp;tay <small>5&nbsp;mục</small></button>
+        <button class="ptab" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">Móng&nbsp;chân <small>4&nbsp;mục</small></button>
+        <button class="ptab" role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">Úp&nbsp;&amp;&nbsp;đắp <small>5&nbsp;mục</small></button>
+        <button class="ptab" role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1">Trang&nbsp;trí <small>4&nbsp;mục</small></button>
+        <button class="ptab" role="tab" aria-selected="false" aria-controls="p5" id="t5" tabindex="-1">Combo <small>3&nbsp;mục</small></button>
+      </div>
+      <div>
+        <div class="pane on" id="p1" role="tabpanel" aria-labelledby="t1">
+          <div class="prow"><h3>Cắt&nbsp;da, sửa&nbsp;form&nbsp;móng</h3><i class="dots"></i><span class="v">40.000đ</span></div>
+          <div class="prow"><h3>Sơn&nbsp;thường<small>Đã gồm cắt da</small></h3><i class="dots"></i><span class="v">70.000đ</span></div>
+          <div class="prow"><h3>Sơn&nbsp;gel Hàn&nbsp;Quốc<small>Nhiều màu theo mùa, đã gồm cắt da</small></h3><i class="dots"></i><span class="v">120.000đ</span></div>
+          <div class="prow"><h3>Sơn&nbsp;thạch<small>Màu trong, lên nhiều lớp</small></h3><i class="dots"></i><span class="v">140.000đ</span></div>
+          <div class="prow"><h3>Phá&nbsp;gel, tháo&nbsp;móng&nbsp;cũ</h3><i class="dots"></i><span class="v">30.000đ</span></div>
+        </div>
+        <div class="pane" id="p2" role="tabpanel" aria-labelledby="t2">
+          <div class="prow"><h3>Cắt&nbsp;da&nbsp;chân</h3><i class="dots"></i><span class="v">50.000đ</span></div>
+          <div class="prow"><h3>Sơn&nbsp;gel&nbsp;chân<small>Đã gồm cắt da</small></h3><i class="dots"></i><span class="v">130.000đ</span></div>
+          <div class="prow"><h3>Chà&nbsp;gót, tẩy&nbsp;tế&nbsp;bào&nbsp;chết</h3><i class="dots"></i><span class="v">80.000đ</span></div>
+          <div class="prow"><h3>Ngâm&nbsp;chân, massage&nbsp;chân<small>30&nbsp;phút</small></h3><i class="dots"></i><span class="v">120.000đ</span></div>
+        </div>
+        <div class="pane" id="p3" role="tabpanel" aria-labelledby="t3">
+          <div class="prow"><h3>Úp&nbsp;móng&nbsp;gel<small>Kèm sơn gel trơn</small></h3><i class="dots"></i><span class="v">250.000đ</span></div>
+          <div class="prow"><h3>Đắp&nbsp;bột<small>Clear, ombre, ẩn nhũ</small></h3><i class="dots"></i><span class="v">280.000đ</span></div>
+          <div class="prow"><h3>Đắp&nbsp;gel</h3><i class="dots"></i><span class="v">300.000đ</span></div>
+          <div class="prow"><h3>Gel&nbsp;BIAB<small>Gia cố móng thật</small></h3><i class="dots"></i><span class="v">320.000đ</span></div>
+          <div class="prow"><h3>Fill&nbsp;móng<small>Dặm lại sau 3–4 tuần</small></h3><i class="dots"></i><span class="v">180.000đ</span></div>
+        </div>
+        <div class="pane" id="p4" role="tabpanel" aria-labelledby="t4">
+          <div class="prow"><h3>Tráng&nbsp;gương, mắt&nbsp;mèo</h3><i class="dots"></i><span class="v">15.000đ/ngón</span></div>
+          <div class="prow"><h3>Ombre, french<small>Cả bộ</small></h3><i class="dots"></i><span class="v">50.000đ</span></div>
+          <div class="prow"><h3>Vẽ&nbsp;móng theo&nbsp;mẫu</h3><i class="dots"></i><span class="v">từ&nbsp;20.000đ/ngón</span></div>
+          <div class="prow"><h3>Đính&nbsp;đá, gắn&nbsp;charm</h3><i class="dots"></i><span class="v">từ&nbsp;10.000đ/ngón</span></div>
+        </div>
+        <div class="pane" id="p5" role="tabpanel" aria-labelledby="t5">
+          <div class="prow"><h3>Combo tay&nbsp;và&nbsp;chân<small>Cắt da và sơn gel tay, chân</small></h3><i class="dots"></i><span class="v">230.000đ</span></div>
+          <div class="prow"><h3>Combo úp&nbsp;móng<small>Úp móng gel, vẽ 2 ngón</small></h3><i class="dots"></i><span class="v">290.000đ</span></div>
+          <div class="prow"><h3>Combo thư&nbsp;giãn<small>Sơn gel tay, chà gót, massage chân</small></h3><i class="dots"></i><span class="v">300.000đ</span></div>
+        </div>
+        <p class="pnote">Giá mang tính tham khảo cho giao diện mẫu. Bảo hành bong tróc trong 5&nbsp;ngày đầu (nội dung mẫu, tiệm tự điều chỉnh).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about" id="ve-lumi">
+  <div class="wrap ab">
+    <div class="ab-ph reveal">
+      <div class="a"><img id="abImg" src="https://images.unsplash.com/photo-1764069373561-25954ac5a81c?auto=format&fit=crop&w=1000&q=80" alt="Người mẫu váy đen khoe bộ móng đỏ dài" width="1000" height="1250" loading="lazy"></div>
+      <div class="b"><img src="https://images.unsplash.com/photo-1753285310651-6974a839c992?auto=format&fit=crop&w=600&q=80" alt="Thợ đang tỉ mỉ sơn từng ngón móng" width="600" height="600" loading="lazy"></div>
+    </div>
+    <div class="ab-txt reveal">
+      <span class="kick">Về Lumi</span>
+      <h2>Một tiệm nhỏ, làm&nbsp;kỹ từng&nbsp;ngón</h2>
+      <p>Lumi Nail Studio là tiệm nail nhỏ, yên tĩnh, nhận khách theo lịch hẹn để thợ không phải làm vội. Chúng tôi tin một bộ móng đẹp bắt đầu từ phần nền sạch, form chuẩn và màu sơn hợp với bạn.</p>
+      <p>Bạn chỉ cần chọn màu, ngồi thư giãn. Phần còn lại để thợ lo.</p>
+      <div class="vows">
+        <div><h3>Dụng&nbsp;cụ tiệt&nbsp;trùng</h3><p>Dũa, buffer dùng riêng; kềm và dụng cụ kim loại hấp tiệt trùng sau mỗi khách.</p></div>
+        <div><h3>Sơn chính&nbsp;hãng</h3><p>Sơn gel, sơn thạch có nguồn gốc rõ ràng, bảng màu cập nhật theo mùa.</p></div>
+        <div><h3>Đúng&nbsp;giờ hẹn</h3><p>Đặt lịch trước để không phải chờ, thợ chuẩn bị sẵn màu bạn đã chọn.</p></div>
+        <div><h3>Bảo&nbsp;hành 5&nbsp;ngày</h3><p>Bong tróc trong 5 ngày đầu, tiệm sửa lại miễn phí (chính sách mẫu).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="danh-gia">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="kick">Đánh giá mẫu</span><h2>Khách nói gì sau buổi&nbsp;làm&nbsp;móng</h2></div>
+      <p>Các đánh giá dưới đây là nội dung minh hoạ cho giao diện mẫu, không phải nhận xét của khách thật.</p>
+    </div>
+    <div class="rv-grid">
+      <blockquote class="rv big reveal"><q>Form móng almond làm rất đều, sơn gel ba tuần vẫn bóng. Thợ dũa kỹ mà không đau, còn tư vấn màu đỏ rượu hợp da mình hơn màu mình định chọn.</q><footer><b>Chị Vy N.</b><span>05/10/2026</span><span class="tag">Đánh giá mẫu</span></footer></blockquote>
+      <blockquote class="rv reveal"><q>Gửi hình mẫu qua Zalo trước, đến nơi thợ đã chuẩn bị sẵn màu. Làm xong giống hình đến chín phần.</q><footer><b>Bạn Trâm L.</b><span>14/10/2026</span><span class="tag">Đánh giá mẫu</span></footer></blockquote>
+      <blockquote class="rv reveal"><q>Tiệm yên tĩnh, sạch sẽ, dụng cụ mở túi tiệt trùng trước mặt khách nên rất yên tâm.</q><footer><b>Chị Hằng P.</b><span>22/10/2026</span><span class="tag">Đánh giá mẫu</span></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec book" id="dat-lich">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="kick">Đặt lịch</span><h2>Giữ&nbsp;chỗ cho bộ&nbsp;móng tiếp&nbsp;theo</h2></div>
+      <p>Đặt trước để được phục vụ đúng giờ. Tiệm sẽ nhắn Zalo hoặc gọi lại để xác nhận lịch hẹn.</p>
+    </div>
+    <div class="bk">
+      <dl class="info" id="lien-he">
+        <div><dt>Địa chỉ</dt><dd>Số 00 Đường Mẫu, Phường Mẫu, Quận&nbsp;1, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</dd></div>
+        <div><dt>Điện thoại, Zalo</dt><dd><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></dd></div>
+        <div><dt>Giờ mở cửa</dt><dd>09:00&nbsp;–&nbsp;20:30, thứ&nbsp;Hai đến Chủ&nbsp;nhật</dd></div>
+        <div class="ph2"><img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=75" alt="Khách đang được làm móng tại bàn nail" width="900" height="563" loading="lazy"></div>
+      </dl>
+      <form id="form" novalidate>
+        <div class="f"><label for="name">Họ và tên</label><input id="name" name="name" autocomplete="name" required><span class="e" aria-live="polite"></span></div>
+        <div class="f"><label for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="0900 000 000"><span class="e" aria-live="polite"></span></div>
+        <div class="f full"><label for="svc">Dịch vụ</label>
+          <select id="svc" name="svc" required>
+            <option value="">Chọn dịch vụ</option>
+            <option>Sơn gel tay</option><option>Sơn gel tay và chân</option><option>Úp móng gel</option><option>Đắp gel, đắp bột</option><option>Gel BIAB</option><option>Nail art theo mẫu</option><option>Chăm sóc móng chân, chà gót</option>
+          </select><span class="e" aria-live="polite"></span></div>
+        <div class="f"><label for="date">Ngày</label><input id="date" name="date" type="date" required><span class="e" aria-live="polite"></span></div>
+        <div class="f"><label for="time">Giờ</label>
+          <select id="time" name="time" required><option value="">Chọn giờ</option><option>09:00</option><option>10:30</option><option>13:00</option><option>14:30</option><option>16:00</option><option>17:30</option><option>19:00</option></select><span class="e" aria-live="polite"></span></div>
+        <div class="f full"><label for="note">Ghi chú (màu, mẫu nail bạn muốn)</label><textarea id="note" name="note" rows="3"></textarea></div>
+        <div class="form-foot"><p>Đây là form mẫu, thông tin không được gửi đi.</p><button type="submit" class="btn btn-lac">Xác&nbsp;nhận đặt&nbsp;lịch</button></div>
+        <div class="thanks" role="status" aria-live="polite"><h3>Cảm&nbsp;ơn bạn đã đặt&nbsp;lịch</h3><p id="thanksMsg">Lumi Nail Studio sẽ liên hệ xác nhận trong giờ mở cửa.</p></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-mast" aria-hidden="true">Lumi</div>
+    <div class="ft-cols">
+      <div><p class="note">Lumi Nail Studio là thương hiệu mẫu. Tên tiệm, địa chỉ, số điện thoại, bảng giá, đánh giá và hình ảnh trên trang đều là nội dung minh hoạ cho giao diện.</p></div>
+      <div><h3>Ghé tiệm</h3><ul><li>Số 00 Đường Mẫu, Quận&nbsp;1</li><li>09:00&nbsp;–&nbsp;20:30 hằng&nbsp;ngày</li><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li></ul></div>
+      <div><h3>Trang</h3><ul><li><a href="#dich-vu">Dịch vụ</a></li><li><a href="#bang-gia">Bảng giá</a></li><li><a href="#lookbook">Lookbook</a></li><li><a href="#dat-lich">Đặt lịch</a></li></ul></div>
+      <div><h3>Theo dõi</h3><ul><li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://zalo.me/0901432113" target="_blank" rel="noopener">Zalo</a></li></ul></div>
+    </div>
+    <p class="note" style="margin-top:40px">© 2026 Lumi Nail Studio. Ảnh minh hoạ từ Unsplash.</p>
+  </div>
+</footer>
+
+<a class="pill" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i aria-hidden="true"></i><span>Mẫu giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* entrance */
+  requestAnimationFrame(function(){requestAnimationFrame(function(){root.classList.add('loaded');setTimeout(function(){root.classList.add('settled')},2400);});});
+
+  /* header */
+  var hd=document.getElementById('hd');
+  function onScroll(){hd.classList.toggle('solid',window.scrollY>40)}
+  onScroll();
+
+  /* mobile menu */
+  var burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
+  burger.addEventListener('click',function(){var o=!document.body.classList.contains('menu-open');document.body.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o);});
+  mnav.addEventListener('click',function(e){if(e.target.closest('a')){document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.body.classList.contains('menu-open')){document.body.classList.remove('menu-open');burger.setAttribute('aria-expanded','false');burger.focus();}});
+
+  /* lacquer picker */
+  var lyrA=document.getElementById('lyrA'),lyrB=document.getElementById('lyrB'),nameEl=document.getElementById('lacName');
+  var tips=[].slice.call(document.querySelectorAll('.tip'));
+  function setVars(el,t){el.style.setProperty('--l-base',t.dataset.b);el.style.setProperty('--l-hi',t.dataset.h);el.style.setProperty('--l-dk',t.dataset.d);}
+  setVars(lyrA,tips[0]);setVars(lyrB,tips[0]);
+  var front=lyrA;
+  function pick(t){
+    tips.forEach(function(x){x.setAttribute('aria-pressed',x===t?'true':'false')});
+    var s=root.style;
+    s.setProperty('--lac',t.dataset.b);s.setProperty('--lac-hi',t.dataset.h);s.setProperty('--lac-dk',t.dataset.d);s.setProperty('--lac-on',t.dataset.on);
+    nameEl.innerHTML=t.dataset.name;
+    /* crossfade masthead: B overlays A */
+    if(front===lyrA){setVars(lyrB,t);lyrB.classList.remove('off');void lyrB.offsetWidth;lyrB.classList.add('on');front=lyrB;}
+    else{setVars(lyrA,t);lyrB.classList.remove('on');lyrB.classList.add('off');front=lyrA;}
+  }
+  tips.forEach(function(t){t.addEventListener('click',function(){pick(t)})});
+
+  /* services index */
+  var items=[].slice.call(document.querySelectorAll('.svc-item')),views=[].slice.call(document.querySelectorAll('.svc-view img'));
+  function act(i){items.forEach(function(it,k){it.classList.toggle('on',k===i);it.querySelector('.svc-btn').setAttribute('aria-expanded',k===i)});views.forEach(function(v,k){v.classList.toggle('on',k===i)});}
+  items.forEach(function(it,i){
+    var b=it.querySelector('.svc-btn');
+    b.addEventListener('click',function(){act(i)});
+    b.addEventListener('mouseenter',function(){if(window.matchMedia('(hover:hover) and (min-width:901px)').matches)act(i)});
+  });
+
+  /* pricing tabs */
+  var tabs=[].slice.call(document.querySelectorAll('.ptab'));
+  function sel(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on)});}
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){sel(t)});
+    t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'||e.key==='ArrowDown'?1:e.key==='ArrowLeft'||e.key==='ArrowUp'?-1:0;if(d){e.preventDefault();var n=tabs[(i+d+tabs.length)%tabs.length];sel(n);n.focus();}});
+  });
+
+  /* lookbook drag */
+  var tr=document.getElementById('track'),bar=document.getElementById('bar');
+  var down=false,sx=0,sl=0,moved=0,vx=0,lx=0,lt=0,raf;
+  tr.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=0;sx=e.clientX;sl=tr.scrollLeft;lx=e.clientX;lt=performance.now();vx=0;cancelAnimationFrame(raf);tr.setPointerCapture(e.pointerId);});
+  tr.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;moved=Math.max(moved,Math.abs(dx));if(moved>4)tr.classList.add('drag');tr.scrollLeft=sl-dx;var now=performance.now();vx=(e.clientX-lx)/Math.max(1,now-lt);lx=e.clientX;lt=now;});
+  function up(){if(!down)return;down=false;tr.classList.remove('drag');if(reduce)return;var v=-vx*16;(function glide(){if(Math.abs(v)<.4)return;tr.scrollLeft+=v;v*=.93;raf=requestAnimationFrame(glide)})();}
+  tr.addEventListener('pointerup',up);tr.addEventListener('pointercancel',up);
+  function step(d){var c=tr.querySelector('.lk');var w=c?c.getBoundingClientRect().width+28:320;tr.scrollBy({left:d*w,behavior:reduce?'auto':'smooth'});}
+  document.getElementById('prev').addEventListener('click',function(){step(-1)});
+  document.getElementById('next').addEventListener('click',function(){step(1)});
+  tr.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();step(1)}if(e.key==='ArrowLeft'){e.preventDefault();step(-1)}});
+  function prog(){var m=tr.scrollWidth-tr.clientWidth;var p=m>0?tr.scrollLeft/m:0;bar.style.transform='scaleX('+(.1+.9*p)+')';}
+  tr.addEventListener('scroll',prog,{passive:true});prog();
+
+  /* reveals */
+  var rv=[].slice.call(document.querySelectorAll('.reveal'));
+  if(reduce||!('IntersectionObserver' in window)){rv.forEach(function(r){r.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px'});rv.forEach(function(r){io.observe(r)});}
+
+  /* parallax */
+  var hImg=document.getElementById('heroImg'),aImg=document.getElementById('abImg'),ticking=false;
+  function par(){
+    ticking=false;onScroll();
+    if(reduce)return;
+    var y=window.scrollY,vh=window.innerHeight;
+    if(y<vh*1.2)hImg.style.transform='translate3d(0,'+(-y*0.12)+'px,0)';
+    var r=aImg.parentNode.getBoundingClientRect();
+    if(r.bottom>0&&r.top<vh){var p=(r.top+r.height/2-vh/2)/vh;aImg.style.transform='translate3d(0,'+(-8+p*-40)+'px,0)';}
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(par)}},{passive:true});
+  par();
+
+  /* form */
+  var form=document.getElementById('form'),date=document.getElementById('date');
+  var t=new Date();var iso=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');date.min=iso;
+  function err(id,msg){var f=document.getElementById(id).closest('.f');f.classList.toggle('err',!!msg);f.querySelector('.e').textContent=msg||'';return !msg;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=form.elements.name.value.trim(),p=form.elements.phone.value.replace(/[\s.]/g,''),ok=true;
+    ok=err('name',n.length<2?'Vui lòng nhập họ và tên.':'')&&ok;
+    ok=err('phone',!/^(0|\+84)\d{9}$/.test(p)?'Số điện thoại chưa đúng, ví dụ 0900 000 000.':'')&&ok;
+    ok=err('svc',!form.elements.svc.value?'Vui lòng chọn dịch vụ.':'')&&ok;
+    ok=err('date',!date.value?'Vui lòng chọn ngày.':(date.value<iso?'Ngày hẹn phải từ hôm nay trở đi.':''))&&ok;
+    ok=err('time',!form.elements.time.value?'Vui lòng chọn giờ.':'')&&ok;
+    if(!ok){var f=form.querySelector('.err input,.err select');if(f)f.focus();return;}
+    var d=date.value.split('-');
+    document.getElementById('thanksMsg').textContent='Lịch hẹn '+form.elements.svc.value.toLowerCase()+' lúc '+form.elements.time.value+' ngày '+d[2]+'/'+d[1]+'/'+d[0]+' đã được ghi nhận. Lumi Nail Studio sẽ liên hệ số '+form.elements.phone.value.trim()+' để xác nhận trong giờ mở cửa.';
+    form.classList.add('done');
+  });
+  ['name','phone','svc','date','time'].forEach(function(id){var el=document.getElementById(id);el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){var f=el.closest('.f');if(f.classList.contains('err'))err(id,'')});});
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

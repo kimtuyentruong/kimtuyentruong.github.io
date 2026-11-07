@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website nhà hàng – Than Muối</title>
+<meta name="description" content="Than Muối – quán nướng than hoa và hải sản tươi tại TP. Hồ Chí Minh. Combo nướng cho nhóm, hải sản chọn tại quầy, đặt bàn trực tuyến.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --bg:#13100e; --bg-2:#1c1714; --card:#231c18; --bone:#f2e8d8; --muted:#b8a998; --ember:#ff6b2c; --ember-2:#ffa043; --line:rgba(242,232,216,.12);
+  --disp:'Barlow Condensed','Arial Narrow',sans-serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--bone);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;line-height:1.12;letter-spacing:.005em}
+.nw{white-space:nowrap}
+h1 .nw,h2 .nw,h3 .nw{text-transform:none}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.kicker{font:600 13px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ember);display:inline-flex;gap:10px;align-items:center;max-width:100%}
+.kicker::before{content:"";width:10px;height:10px;background:var(--ember);border-radius:2px;transform:rotate(45deg)}
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec-top{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:clamp(36px,5vw,56px);flex-wrap:wrap}
+.sec-top h2{font-size:clamp(40px,6vw,76px);margin-top:12px;max-width:760px}
+.sec-top p{max-width:400px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:6px;font:700 15px/1.2 var(--sans);text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn-fire{background:var(--ember);color:#1b0d05}
+.btn-fire:hover{background:var(--ember-2);transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(255,107,44,.7)}
+.btn-ghost{border-color:var(--line);color:var(--bone)}
+.btn-ghost:hover{border-color:var(--bone);background:var(--bone);color:var(--bg)}
+.btn svg{transition:transform .25s}.btn:hover svg{transform:translateX(4px)}
+.ph{background:linear-gradient(135deg,#3a2a20,#5c3a22 60%,#7a4a24);overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .4s}
+img.fail{opacity:0}
+
+/* header */
+header.site{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.site.solid{background:rgba(19,16,14,.92);backdrop-filter:blur(10px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo .mark{width:38px;height:38px;border-radius:8px;background:var(--ember);display:grid;place-items:center;color:#1b0d05}
+.logo b{font:700 26px/1 var(--disp);text-transform:uppercase;letter-spacing:.02em}
+.logo small{display:block;font:500 11px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.nav ul{list-style:none;display:flex;gap:30px}
+.nav ul a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted);transition:color .2s}
+.nav ul a:hover{color:var(--bone)}
+.nav .act{display:flex;gap:14px;align-items:center}
+.nav .tel{font-weight:600;text-decoration:none}
+.menu-btn{display:none;width:44px;height:44px;background:none;border:1px solid var(--line);border-radius:6px;cursor:pointer}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--bone);margin:4px auto}
+.drawer{display:none}
+
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:stretch;position:relative;overflow:hidden}
+.hero .txt{padding:150px clamp(20px,5vw,72px) 80px max(20px,calc((100vw - 1240px)/2));display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(52px,7.6vw,118px);line-height:1.1;margin:22px 0 26px}
+.hero h1 .fire{color:var(--ember);display:block}
+.hero p{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:36px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero .facts{display:flex;gap:36px;margin-top:56px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hero .facts b{display:block;font:700 24px/1.15 var(--disp);text-transform:uppercase}
+.hero .facts > div > span{font-size:14px;color:var(--muted)}
+.hero .facts b .nw{text-transform:none}
+.hero .pic{position:relative;min-height:520px}
+.hero .pic .main{position:absolute;inset:0;clip-path:polygon(14% 0,100% 0,100% 100%,0 100%)}
+.hero .pic .main img{transform:scale(1.1);animation:zoom 2.4s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0,transparent 30%),linear-gradient(0deg,rgba(19,16,14,.6),transparent 40%);pointer-events:none}
+.hero .stamp{position:absolute;left:4%;bottom:12%;z-index:3;width:150px;height:150px;border-radius:50%;background:var(--ember);color:#1b0d05;display:grid;place-items:center;text-align:center;font:700 20px/1.12 var(--disp);text-transform:uppercase;transform:rotate(-10deg);box-shadow:0 20px 40px -10px rgba(0,0,0,.6)}
+.hero .stamp small{display:block;font:600 12px/1.3 var(--sans);text-transform:none}
+.a1,.a2,.a3,.a4{opacity:0;transform:translateY(26px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.a2{animation-delay:.12s}.a3{animation-delay:.24s}.a4{animation-delay:.36s}
+.stamp.a4{animation:pop .8s .6s cubic-bezier(.2,1.4,.4,1) forwards;transform:rotate(-10deg) scale(.6)}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes pop{to{opacity:1;transform:rotate(-10deg) scale(1)}}
+@keyframes zoom{to{transform:scale(1)}}
+
+/* ticker */
+.ticker{background:var(--ember);color:#1b0d05;overflow:hidden;white-space:nowrap;border-block:1px solid #000}
+.ticker .row{display:inline-flex;gap:40px;padding:14px 0;animation:tick 34s linear infinite}
+.ticker span{font:700 22px/1.2 var(--disp);text-transform:uppercase;letter-spacing:.03em;display:inline-flex;align-items:center;gap:40px}
+.ticker span::after{content:"✦";font-size:16px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* signature bento */
+.bento{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:300px 300px;gap:16px}
+.card-d{position:relative;border-radius:10px;overflow:hidden;background:var(--card);isolation:isolate}
+.card-d .ph{position:absolute;inset:0;z-index:-1}
+.card-d::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,11,9,.92),rgba(15,11,9,.1) 60%);z-index:-1}
+.card-d:hover .ph img{transform:scale(1.07)}
+.card-d .body{position:absolute;left:0;right:0;bottom:0;padding:24px}
+.card-d h3{font-size:30px;margin-bottom:6px}
+.card-d p{font-size:14.5px;color:#d5c8b6;max-width:380px}
+.card-d .price{position:absolute;top:18px;right:18px;background:var(--bone);color:var(--bg);font:700 15px/1 var(--sans);padding:9px 12px;border-radius:6px}
+.card-d.big{grid-row:span 2}
+.card-d.big h3{font-size:44px}
+.card-d .lbl{display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--ember);color:#1b0d05;padding:6px 9px;border-radius:4px;margin-bottom:12px}
+
+/* menu */
+.menu{background:var(--bg-2)}
+.menu-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px)}
+.menu-col h3{font-size:30px;color:var(--ember);padding-bottom:14px;border-bottom:2px solid var(--ember);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
+.menu-col h3 small{font:500 13px/1 var(--sans);text-transform:none;color:var(--muted);letter-spacing:0}
+.row-i{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);transition:padding .25s}
+.row-i:hover{padding-left:8px}
+.row-i b{font-weight:600;display:block}
+.row-i small{color:var(--muted);font-size:13.5px}
+.row-i .p{font-weight:700;white-space:nowrap}
+.combos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+.combo{border:1px solid var(--line);border-radius:10px;padding:28px;background:var(--card);position:relative;transition:border-color .25s,transform .25s}
+.combo:hover{border-color:var(--ember);transform:translateY(-4px)}
+.combo.hot{background:linear-gradient(160deg,#3a1d0e,var(--card) 60%);border-color:rgba(255,107,44,.5)}
+.combo .who{font:600 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ember-2)}
+.combo h3{font-size:34px;margin:10px 0 12px}
+.combo ul{list-style:none;display:grid;gap:6px;margin-bottom:22px;color:#d5c8b6;font-size:14.5px}
+.combo li::before{content:"— ";color:var(--ember)}
+.combo .p{font:700 34px/1.1 var(--disp)}
+.combo .p small{font:500 14px/1 var(--sans);color:var(--muted)}
+.note{color:var(--muted);font-size:14px;margin-top:28px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about .stack{position:relative;aspect-ratio:1/1.05}
+.about .stack .ph{position:absolute;border-radius:10px}
+.about .s1{inset:0 22% 18% 0}
+.about .s2{inset:40% 0 0 40%;border:6px solid var(--bg)}
+.about h2{font-size:clamp(40px,5.4vw,68px);margin:14px 0 22px}
+.about p{color:var(--muted);margin-bottom:16px}
+.about .pts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.about .pt{border-left:2px solid var(--ember);padding-left:16px}
+.about .pt b{display:block;font:700 22px/1.15 var(--disp);text-transform:uppercase}
+.about .pt span{font-size:14px;color:var(--muted)}
+
+/* gallery */
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.strip .ph{aspect-ratio:3/4;border-radius:8px}
+.strip .ph:nth-child(even){transform:translateY(36px)}
+.strip .ph:hover img{transform:scale(1.07)}
+
+/* reviews */
+.rvs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rv{border:1px solid var(--line);border-radius:10px;padding:28px;background:var(--bg-2)}
+.rv p{font-size:16px;margin-bottom:22px}
+.rv .who{display:flex;gap:12px;align-items:center}
+.rv .av{width:42px;height:42px;border-radius:50%;background:var(--ember);color:#1b0d05;display:grid;place-items:center;font:700 18px/1 var(--disp)}
+.rv b{display:block;font-size:15px}
+.rv small{color:var(--muted);font-size:13px}
+.badge-s{display:inline-block;border:1px dashed var(--ember-2);color:var(--ember-2);font:600 12px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border-radius:4px}
+
+/* reserve */
+.reserve{background:linear-gradient(0deg,rgba(19,16,14,.92),rgba(19,16,14,.86)),var(--bg-2);position:relative;overflow:hidden}
+.reserve .bgimg{position:absolute;inset:0;z-index:0;opacity:.35}
+.reserve .wrap{position:relative;z-index:1;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,80px);align-items:start}
+.reserve h2{font-size:clamp(42px,5.6vw,72px);margin:14px 0 20px}
+.reserve .lead{color:var(--muted);margin-bottom:30px;max-width:440px}
+.hours{display:grid;gap:0;border-top:1px solid var(--line)}
+.hours div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.hours span:last-child{font-weight:600}
+.addr{margin-top:28px;display:grid;gap:10px;color:var(--muted)}
+.addr b{color:var(--bone)}
+form.f{background:var(--bone);color:var(--bg);border-radius:12px;padding:clamp(24px,3.5vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:16px;box-shadow:0 40px 80px -40px rgba(0,0,0,.8)}
+form.f h3{grid-column:1/-1;font-size:34px}
+.fld{display:grid;gap:6px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.fld input,.fld select,.fld textarea{font:400 15.5px/1.4 var(--sans);color:var(--bg);background:#fff;border:1.5px solid #d8cbb7;border-radius:6px;padding:12px 13px;width:100%;transition:border-color .2s,box-shadow .2s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 4px rgba(255,107,44,.18)}
+.fld textarea{min-height:90px;resize:vertical}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{text-transform:none;letter-spacing:0;font-weight:500;font-size:14.5px;border:1.5px solid #d8cbb7;border-radius:6px;padding:9px 14px;cursor:pointer;transition:.2s;background:#fff}
+.seg{position:relative}
+.seg input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.seg input:checked+label{background:var(--bg);color:var(--bone);border-color:var(--bg)}
+.seg input:focus-visible+label{outline:2px solid var(--ember)}
+form.f .btn{grid-column:1/-1;justify-content:center}
+.thanks{display:none;grid-column:1/-1;background:#1f3b2a;color:#e3f5e8;border-radius:8px;padding:16px 18px;font-weight:500}
+.thanks.show{display:block;animation:up .5s forwards}
+.hint{grid-column:1/-1;font-size:13px;color:#6d6155}
+
+footer{border-top:1px solid var(--line);padding:64px 0 96px;color:var(--muted);font-size:15px}
+.ft{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px}
+footer h4{font:700 20px/1.2 var(--disp);text-transform:uppercase;color:var(--bone);margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ember)}
+.bigname{font:700 clamp(64px,15vw,220px)/1 var(--disp);text-transform:uppercase;color:transparent;-webkit-text-stroke:1px rgba(242,232,216,.16);margin-top:40px;white-space:nowrap;overflow:hidden}
+.copy{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;border-top:1px solid var(--line);padding-top:20px;margin-top:10px}
+
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(242,232,216,.95);color:#1b130e;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .2s}
+.kt-badge:hover{transform:translateY(-2px)}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#16a34a;flex:none;box-shadow:0 0 0 3px rgba(22,163,74,.2)}
+.kt-badge b{color:#c2410c;font-weight:700}
+
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .strip .ph.reveal.in:nth-child(even){transform:translateY(36px)}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}
+
+@media (max-width:1100px){
+  .nav ul{gap:20px}
+  .nav .tel{display:none}
+  .bento{grid-template-columns:1fr 1fr;grid-template-rows:380px 260px 260px}
+  .card-d.big{grid-column:1/-1;grid-row:auto}
+}
+@media (max-width:900px){
+  .nav ul{display:none}
+  .menu-btn{display:block}
+  .nav .act .btn{display:none}
+  .drawer{display:block;max-height:0;overflow:hidden;transition:max-height .35s;background:rgba(19,16,14,.98)}
+  .drawer.open{max-height:460px;border-bottom:1px solid var(--line)}
+  .drawer ul{list-style:none;padding:8px 20px 20px}
+  .drawer a{display:block;padding:13px 0;text-decoration:none;border-bottom:1px solid var(--line);font-weight:500}
+  .drawer .btn{margin-top:16px;border-bottom:0}
+  header.site{background:rgba(19,16,14,.92);backdrop-filter:blur(10px)}
+  .hero{grid-template-columns:minmax(0,1fr);min-height:auto}
+  .hero .txt{padding:118px 20px 48px;order:2}
+  .hero .pic{order:1;min-height:56vh;margin-top:76px}
+  .hero .pic .main{clip-path:none}
+  .hero .pic::after{background:linear-gradient(0deg,var(--bg),transparent 45%)}
+  .hero .txt{padding-top:10px}
+  .hero .stamp{left:auto;right:16px;bottom:24px;width:112px;height:112px;font-size:16px}
+  .menu-cols{grid-template-columns:1fr}
+  .combos{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .strip .ph:nth-child(n+4){display:none}
+  .rvs{grid-template-columns:1fr}
+  .reserve .wrap{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .bento{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:300px}
+  .card-d.big{grid-column:auto}
+  .card-d.big h3{font-size:36px}
+  .hero .facts{gap:22px}
+  .about .pts{grid-template-columns:1fr}
+  .strip{grid-template-columns:1fr 1fr}
+  .strip .ph:nth-child(3){display:none}
+  form.f{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+  .logo small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .a1,.a2,.a3,.a4{opacity:1;transform:none}
+  .stamp.a4{transform:rotate(-10deg)}
+  .hero .pic .main img{transform:none}
+  .js .reveal{opacity:1;transform:none}
+  .js .strip .ph.reveal:nth-child(even){transform:translateY(36px)}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Than Muối – trang chủ">
+      <span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2s5 4.5 5 10a5 5 0 0 1-10 0c0-2.2 1.2-4 2.4-5.2C9.6 9 11 10 11 10s-.5-4.3 1-8z"/></svg></span>
+      <span><b>Than&nbsp;Muối</b><small>Nướng&nbsp;&amp;&nbsp;Hải&nbsp;sản</small></span>
+    </a>
+    <ul>
+      <li><a href="#mon-dac-trung">Món&nbsp;đặc&nbsp;trưng</a></li>
+      <li><a href="#thuc-don">Thực&nbsp;đơn</a></li>
+      <li><a href="#ve-chung-toi">Về&nbsp;chúng&nbsp;tôi</a></li>
+      <li><a href="#hinh-anh">Hình&nbsp;ảnh</a></li>
+      <li><a href="#dat-ban">Liên&nbsp;hệ</a></li>
+    </ul>
+    <div class="act">
+      <a class="tel nw" href="tel:0900000000">0900 000 000</a>
+      <a href="#dat-ban" class="btn btn-fire">Đặt&nbsp;bàn</a>
+      <button class="menu-btn" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="drawer" aria-label="Menu di động">
+    <ul>
+      <li><a href="#mon-dac-trung">Món&nbsp;đặc&nbsp;trưng</a></li>
+      <li><a href="#thuc-don">Thực&nbsp;đơn</a></li>
+      <li><a href="#ve-chung-toi">Về&nbsp;chúng&nbsp;tôi</a></li>
+      <li><a href="#hinh-anh">Hình&nbsp;ảnh</a></li>
+      <li><a href="#dat-ban">Liên&nbsp;hệ</a></li>
+      <li><a href="#dat-ban" class="btn btn-fire">Đặt&nbsp;bàn&nbsp;ngay</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="txt">
+    <span class="kicker a1">Quán&nbsp;nướng&nbsp;· TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</span>
+    <h1 class="a2">Nướng&nbsp;than&nbsp;hoa <span class="fire">Hải&nbsp;sản&nbsp;tươi</span></h1>
+    <p class="a3">Thịt ướp mỗi ngày, hải sản chọn tại quầy, nướng tại bàn trên bếp than hoa. Chỗ ngồi rộng cho nhóm bạn, liên hoan công ty, sinh nhật.</p>
+    <div class="ctas a4">
+      <a href="#dat-ban" class="btn btn-fire">Đặt&nbsp;bàn&nbsp;ngay <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#thuc-don" class="btn btn-ghost">Xem&nbsp;thực&nbsp;đơn</a>
+    </div>
+    <div class="facts a4">
+      <div><b>16:00 – 23:00</b><span>Mở cửa hàng ngày</span></div>
+      <div><b>Combo từ <span class="nw">399.000đ</span></b><span>Cho nhóm 2 người</span></div>
+      <div><b>Phòng&nbsp;riêng</b><span>Nhận tiệc theo yêu cầu</span></div>
+    </div>
+  </div>
+  <div class="pic">
+    <div class="main ph"><img src="https://images.unsplash.com/photo-1767974758964-511146fb186a?auto=format&fit=crop&w=1400&q=80" alt="Thịt và hải sản đang nướng trên vỉ, lửa than hoa bốc lên" width="1400" height="1600" fetchpriority="high"></div>
+    <div class="stamp a4"><span>Nướng tại&nbsp;bàn<small>bếp than hoa</small></span></div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="row">
+    <span>Ba chỉ bò Mỹ</span><span>Hàu nướng mỡ hành</span><span>Sườn heo mật ong</span><span>Mực nướng sa tế</span><span>Tôm sú muối ớt</span><span>Lẩu Thái hải sản</span>
+    <span>Ba chỉ bò Mỹ</span><span>Hàu nướng mỡ hành</span><span>Sườn heo mật ong</span><span>Mực nướng sa tế</span><span>Tôm sú muối ớt</span><span>Lẩu Thái hải sản</span>
+  </div>
+</div>
+
+<section class="sec" id="mon-dac-trung">
+  <div class="wrap">
+    <div class="sec-top reveal">
+      <div><span class="kicker">Món&nbsp;đặc&nbsp;trưng</span><h2>Món&nbsp;ngon phải&nbsp;thử</h2></div>
+      <p>Nước sốt ướp pha theo công thức riêng của bếp. Hải sản nhập trong ngày, khách có thể chọn trực tiếp tại quầy.</p>
+    </div>
+    <div class="bento">
+      <article class="card-d big reveal">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1709433421859-2ecb831b6eb3?auto=format&fit=crop&w=1100&q=80" alt="Đĩa thịt bò thái lát vân mỡ đẹp cùng các món ăn kèm" width="1100" height="1200" loading="lazy"></div>
+        <span class="price nw">189.000đ</span>
+        <div class="body"><span class="lbl">Khách hay gọi</span><h3>Ba&nbsp;chỉ&nbsp;bò&nbsp;Mỹ sốt&nbsp;Than&nbsp;Muối</h3><p>Thái mỏng, ướp sốt tỏi mật ong, nướng vừa tới, cuốn cùng lá tía tô và kim chi.</p></div>
+      </article>
+      <article class="card-d reveal d1">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1679694140422-aecfd3d5dd0b?auto=format&fit=crop&w=800&q=80" alt="Đĩa hàu tươi trên đá lạnh kèm chanh và chén sốt" width="800" height="600" loading="lazy"></div>
+        <span class="price nw">25.000đ/con</span>
+        <div class="body"><h3>Hàu&nbsp;nướng mỡ&nbsp;hành</h3><p>Hàu tươi, mỡ hành, đậu phộng rang.</p></div>
+      </article>
+      <article class="card-d reveal d2">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1758448786233-2051ecd150c8?auto=format&fit=crop&w=800&q=80" alt="Mực nướng chín vàng bày trên đĩa trắng, rưới dầu và rau thơm" width="800" height="600" loading="lazy"></div>
+        <span class="price nw">169.000đ</span>
+        <div class="body"><h3>Mực&nbsp;nướng sa&nbsp;tế</h3><p>Mực lá nướng nguyên con, sốt sa tế cay nhẹ.</p></div>
+      </article>
+      <article class="card-d reveal d1">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1586058584825-c1e87ed735b4?auto=format&fit=crop&w=800&q=80" alt="Sườn heo nướng trên vỉ than, lửa bốc nhẹ" width="800" height="600" loading="lazy"></div>
+        <span class="price nw">159.000đ</span>
+        <div class="body"><h3>Sườn&nbsp;heo nướng&nbsp;mật&nbsp;ong</h3><p>Sườn non ướp mật ong, nướng cháy cạnh.</p></div>
+      </article>
+      <article class="card-d reveal d2">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1557267725-c530b236f446?auto=format&fit=crop&w=800&q=80" alt="Khay hải sản gồm tôm, nghêu, mực và chanh" width="800" height="600" loading="lazy"></div>
+        <span class="price nw">459.000đ</span>
+        <div class="body"><h3>Khay&nbsp;hải&nbsp;sản nướng</h3><p>Tôm sú, nghêu, mực, bạch tuộc cho 2–3 người.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec menu" id="thuc-don">
+  <div class="wrap">
+    <div class="sec-top reveal">
+      <div><span class="kicker">Thực&nbsp;đơn</span><h2>Thực&nbsp;đơn nướng&nbsp;&amp;&nbsp;hải&nbsp;sản</h2></div>
+      <p>Giá chưa bao gồm VAT. Hải sản tính theo thời giá, nhân viên sẽ báo giá trước khi chế biến.</p>
+    </div>
+    <div class="menu-cols">
+      <div class="menu-col reveal">
+        <h3>Nướng&nbsp;than&nbsp;hoa <small>/ phần</small></h3>
+        <div class="row-i"><div><b>Ba chỉ bò Mỹ</b><small>Sốt tỏi mật ong</small></div><span class="p">189.000đ</span></div>
+        <div class="row-i"><div><b>Dẻ sườn bò Mỹ</b><small>Ướp tiêu đen</small></div><span class="p">229.000đ</span></div>
+        <div class="row-i"><div><b>Lưỡi bò nướng</b><small>Chấm muối tiêu chanh</small></div><span class="p">179.000đ</span></div>
+        <div class="row-i"><div><b>Ba chỉ heo sốt mè</b><small>Mè rang, mật ong</small></div><span class="p">129.000đ</span></div>
+        <div class="row-i"><div><b>Sườn heo mật ong</b><small>Sườn non</small></div><span class="p">159.000đ</span></div>
+        <div class="row-i"><div><b>Cánh gà sốt tỏi</b><small>6 miếng</small></div><span class="p">119.000đ</span></div>
+      </div>
+      <div class="menu-col reveal d1">
+        <h3>Hải&nbsp;sản <small>/ theo thời giá</small></h3>
+        <div class="row-i"><div><b>Hàu nướng mỡ hành</b><small>Hoặc nướng phô mai</small></div><span class="p">25.000đ/con</span></div>
+        <div class="row-i"><div><b>Sò điệp nướng phô mai</b><small>Phần 6 con</small></div><span class="p">149.000đ</span></div>
+        <div class="row-i"><div><b>Tôm sú nướng muối ớt</b><small>Phần 300g</small></div><span class="p">229.000đ</span></div>
+        <div class="row-i"><div><b>Mực lá nướng sa tế</b><small>Nguyên con</small></div><span class="p">169.000đ</span></div>
+        <div class="row-i"><div><b>Nghêu hấp sả</b><small>Phần 500g</small></div><span class="p">89.000đ</span></div>
+        <div class="row-i"><div><b>Ốc hương rang muối</b><small>Phần 300g</small></div><span class="p">199.000đ</span></div>
+      </div>
+      <div class="menu-col reveal d2">
+        <h3>Lẩu &amp;&nbsp;Món&nbsp;thêm</h3>
+        <div class="row-i"><div><b>Lẩu Thái hải sản</b><small>Cho 3–4 người</small></div><span class="p">389.000đ</span></div>
+        <div class="row-i"><div><b>Lẩu kim chi bò</b><small>Cho 3–4 người</small></div><span class="p">349.000đ</span></div>
+        <div class="row-i"><div><b>Cơm chiên hải sản</b><small>Phần lớn</small></div><span class="p">99.000đ</span></div>
+        <div class="row-i"><div><b>Rau củ nướng</b><small>Bí ngòi, nấm, bắp</small></div><span class="p">59.000đ</span></div>
+        <div class="row-i"><div><b>Kim chi nhà làm</b><small>Đĩa nhỏ</small></div><span class="p">29.000đ</span></div>
+        <div class="row-i"><div><b>Bia tươi / Nước ngọt</b><small>Ly / lon</small></div><span class="p">25.000đ</span></div>
+      </div>
+    </div>
+
+    <div class="combos">
+      <div class="combo reveal"><span class="who">Nhóm&nbsp;2&nbsp;người</span><h3>Combo Đôi&nbsp;Bạn</h3><ul><li>Ba chỉ bò Mỹ, ba chỉ heo sốt mè</li><li>Hàu nướng mỡ hành (4 con)</li><li>Rau củ nướng, kim chi</li><li>2 nước ngọt</li></ul><div class="p nw">399.000đ <small>/ combo</small></div></div>
+      <div class="combo hot reveal d1"><span class="who">Nhóm&nbsp;4&nbsp;người · Khách&nbsp;hay&nbsp;chọn</span><h3>Combo Cả&nbsp;Nhóm</h3><ul><li>Bò Mỹ, sườn heo mật ong, cánh gà</li><li>Tôm sú muối ớt, mực sa tế</li><li>Lẩu Thái hải sản</li><li>Rau củ nướng, kim chi</li></ul><div class="p nw">989.000đ <small>/ combo</small></div></div>
+      <div class="combo reveal d2"><span class="who">Nhóm&nbsp;4–6&nbsp;người</span><h3>Combo Hải&nbsp;Sản</h3><ul><li>Hàu, sò điệp, tôm sú, mực lá</li><li>Nghêu hấp sả, ốc hương</li><li>Cơm chiên hải sản</li><li>Rau củ nướng</li></ul><div class="p nw">1.290.000đ <small>/ combo</small></div></div>
+    </div>
+    <p class="note">Có thực đơn riêng cho tiệc công ty, sinh nhật từ 20 khách. Liên hệ hotline để được tư vấn.</p>
+  </div>
+</section>
+
+<section class="sec" id="ve-chung-toi">
+  <div class="wrap about">
+    <div class="stack reveal">
+      <div class="ph s1"><img src="https://images.unsplash.com/photo-1780082755456-3a72460270ea?auto=format&fit=crop&w=900&q=80" alt="Nhóm bạn quây quần nướng thịt tại bàn với nhiều món ăn kèm" width="900" height="900" loading="lazy"></div>
+      <div class="ph s2"><img src="https://images.unsplash.com/photo-1570560258879-af7f8e1447ac?auto=format&fit=crop&w=700&q=80" alt="Không gian nhà hàng rộng với dãy ghế sofa và cửa kính lớn" width="700" height="700" loading="lazy"></div>
+    </div>
+    <div class="reveal d1">
+      <span class="kicker">Về&nbsp;chúng&nbsp;tôi</span>
+      <h2>Bữa&nbsp;nướng để&nbsp;ngồi&nbsp;lâu cùng&nbsp;nhau</h2>
+      <p>Than Muối mở cửa với mong muốn có một chỗ để nhóm bạn, đồng nghiệp ngồi lại sau giờ làm: bếp than hoa đặt tại bàn, món ra nhanh, nhân viên hỗ trợ nướng khi khách cần.</p>
+      <p>Thịt được ướp mỗi ngày theo công thức của bếp. Hải sản nhập trong ngày và trưng bày tại quầy để khách tự chọn.</p>
+      <div class="pts">
+        <div class="pt"><b>Bếp&nbsp;than&nbsp;hoa</b><span>Đặt tại bàn, có hút khói</span></div>
+        <div class="pt"><b>Phòng&nbsp;riêng</b><span>Cho nhóm 10–30 khách</span></div>
+        <div class="pt"><b>Chỗ&nbsp;đỗ&nbsp;xe</b><span>Xe máy, ô tô gần quán</span></div>
+        <div class="pt"><b>Nhận&nbsp;tiệc</b><span>Sinh nhật, liên hoan công ty</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hinh-anh" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-top reveal">
+      <div><span class="kicker">Hình&nbsp;ảnh</span><h2>Không&nbsp;gian &amp;&nbsp;món&nbsp;ăn</h2></div>
+    </div>
+    <div class="strip" style="padding-bottom:36px">
+      <div class="ph reveal"><img src="https://images.unsplash.com/photo-1773903447504-7408156f5502?auto=format&fit=crop&w=600&q=80" alt="Thịt bò và rau củ trên vỉ nướng" width="600" height="800" loading="lazy"></div>
+      <div class="ph reveal d1"><img src="https://images.unsplash.com/photo-1651323018466-b36b7df1d2b1?auto=format&fit=crop&w=600&q=80" alt="Quầy hải sản tươi bày trên đá: tôm, sò, ốc, chanh" width="600" height="800" loading="lazy"></div>
+      <div class="ph reveal d2"><img src="https://images.unsplash.com/photo-1552960226-639240203497?auto=format&fit=crop&w=600&q=80" alt="Không gian nhà hàng buổi tối với đèn vàng ấm" width="600" height="800" loading="lazy"></div>
+      <div class="ph reveal d3"><img src="https://images.unsplash.com/photo-1548150914-c9f19106dbf6?auto=format&fit=crop&w=600&q=80" alt="Gắp miếng thịt vừa nướng chín trên vỉ" width="600" height="800" loading="lazy"></div>
+      <div class="ph reveal d4"><img src="https://images.unsplash.com/photo-1572776082973-1cb8d1790872?auto=format&fit=crop&w=600&q=80" alt="Mâm hải sản nướng gồm cua, tôm, mực bày trên gỗ" width="600" height="800" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="danh-gia" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-top reveal">
+      <div><span class="kicker">Khách&nbsp;nói&nbsp;gì</span><h2>Cảm&nbsp;nhận của&nbsp;khách</h2></div>
+      <span class="badge-s">Đánh giá mẫu · minh hoạ giao diện</span>
+    </div>
+    <div class="rvs">
+      <figure class="rv reveal"><p>“Combo Cả Nhóm vừa đủ cho 4 đứa, bò mềm, sốt ướp đậm. Nhân viên nướng giúp nên cả nhóm chỉ việc ăn và nói chuyện.”</p><figcaption class="who"><span class="av">H</span><span><b>Hoàng N.</b><small>Đánh giá mẫu · Đi nhóm bạn</small></span></figcaption></figure>
+      <figure class="rv reveal d1"><p>“Hải sản chọn tại quầy, báo giá rõ trước khi làm. Hàu nướng mỡ hành nóng hổi, béo.”</p><figcaption class="who"><span class="av">T</span><span><b>Trang L.</b><small>Đánh giá mẫu · Hẹn hò</small></span></figcaption></figure>
+      <figure class="rv reveal d2"><p>“Đặt phòng riêng cho team 18 người, quán chuẩn bị bàn sẵn, món ra đều. Sẽ quay lại dịp cuối năm.”</p><figcaption class="who"><span class="av">K</span><span><b>Khoa V.</b><small>Đánh giá mẫu · Liên hoan công ty</small></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec reserve" id="dat-ban">
+  <div class="bgimg ph"><img src="https://images.unsplash.com/photo-1759150595639-d128196ab6b3?auto=format&fit=crop&w=1600&q=70" alt="" width="1600" height="900" loading="lazy"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Đặt&nbsp;bàn</span>
+      <h2>Giữ&nbsp;bàn trước, tới&nbsp;là&nbsp;nướng</h2>
+      <p class="lead">Cuối tuần quán thường kín chỗ sau 18:30. Đặt bàn trước để được xếp chỗ phù hợp với số khách.</p>
+      <div class="hours">
+        <div><span>Thứ Hai – Thứ Năm</span><span class="nw">16:00 – 23:00</span></div>
+        <div><span>Thứ Sáu – Chủ Nhật</span><span class="nw">15:00 – 23:30</span></div>
+        <div><span>Ngày lễ, Tết</span><span>Vui lòng gọi trước</span></div>
+      </div>
+      <div class="addr">
+        <span><b>Địa chỉ:</b> Số 88 đường Mẫu, phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</span>
+        <span><b>Hotline:</b> <a href="tel:0900000000" class="nw">0900 000 000</a></span>
+        <span><b>Email:</b> datban@thanmuoi.vn</span>
+      </div>
+    </div>
+    <form class="f reveal d1" data-form="reserve" novalidate>
+      <h3>Thông&nbsp;tin đặt&nbsp;bàn</h3>
+      <div class="fld"><label for="r-name">Họ tên</label><input id="r-name" name="name" required autocomplete="name" placeholder="Nguyễn Văn A"></div>
+      <div class="fld"><label for="r-phone">Số điện thoại</label><input id="r-phone" name="phone" type="tel" required autocomplete="tel" placeholder="0900 000 000" pattern="[0-9 +.]{9,15}"></div>
+      <div class="fld"><label for="r-date">Ngày</label><input id="r-date" name="date" type="date" required></div>
+      <div class="fld"><label for="r-time">Giờ</label>
+        <select id="r-time" name="time" required><option value="">Chọn giờ</option><option>16:30</option><option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option></select></div>
+      <div class="fld full"><label>Số khách</label>
+        <div class="seg" role="radiogroup" aria-label="Số khách">
+          <input type="radio" name="guests" id="g2" value="2"><label for="g2">2 người</label>
+          <input type="radio" name="guests" id="g4" value="4" checked><label for="g4">3–4 người</label>
+          <input type="radio" name="guests" id="g6" value="6"><label for="g6">5–6 người</label>
+          <input type="radio" name="guests" id="g10" value="10"><label for="g10">7–10 người</label>
+          <input type="radio" name="guests" id="g11" value="trên 10"><label for="g11">Trên 10 người</label>
+        </div></div>
+      <div class="fld full"><label for="r-note">Ghi chú</label><textarea id="r-note" name="note" placeholder="Ví dụ: tổ chức sinh nhật, cần phòng riêng, đặt trước combo…"></textarea></div>
+      <button class="btn btn-fire" type="submit">Gửi&nbsp;đặt&nbsp;bàn</button>
+      <p class="hint">Biểu mẫu minh hoạ, thông tin không được gửi đi.</p>
+      <div class="thanks" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="#" class="logo"><span class="mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2s5 4.5 5 10a5 5 0 0 1-10 0c0-2.2 1.2-4 2.4-5.2C9.6 9 11 10 11 10s-.5-4.3 1-8z"/></svg></span><span><b>Than&nbsp;Muối</b></span></a>
+        <p style="margin-top:16px;max-width:320px">Quán nướng than hoa và hải sản tươi. Mở cửa hàng ngày từ 16:00.</p>
+      </div>
+      <div><h4>Thực&nbsp;đơn</h4><ul><li><a href="#mon-dac-trung">Món đặc trưng</a></li><li><a href="#thuc-don">Nướng than hoa</a></li><li><a href="#thuc-don">Hải sản</a></li><li><a href="#thuc-don">Combo nhóm</a></li></ul></div>
+      <div><h4>Liên&nbsp;hệ</h4><ul><li><a href="tel:0900000000" class="nw">0900 000 000</a></li><li>datban@thanmuoi.vn</li><li>Số 88 đường Mẫu, phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</li></ul></div>
+      <div><h4>Mạng&nbsp;xã&nbsp;hội</h4><ul><li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li><li><a href="https://zalo.me" target="_blank" rel="noopener">Zalo</a></li></ul></div>
+    </div>
+    <div class="bigname" aria-hidden="true">Than&nbsp;Muối</div>
+    <div class="copy"><span>© 2026 Than Muối. Thương hiệu, địa chỉ và số điện thoại là thông tin mẫu.</span><span>Ảnh: Unsplash</span></div>
+  </div>
+</footer>
+
+<a class="kt-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+  var d=document, rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.documentElement.classList.add('js');
+  d.querySelectorAll('img').forEach(function(img){function f(){img.classList.add('fail')} if(img.complete&&img.naturalWidth===0&&img.getAttribute('src'))f(); else img.addEventListener('error',f)});
+  var els=d.querySelectorAll('.reveal');
+  if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(function(e){io.observe(e)})}
+  var hd=d.querySelector('header.site');
+  function onS(){hd.classList.toggle('solid',scrollY>40)} onS(); addEventListener('scroll',onS,{passive:true});
+  var mb=d.querySelector('.menu-btn'), dr=d.querySelector('.drawer');
+  mb.addEventListener('click',function(){var o=dr.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  dr.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){dr.classList.remove('open');mb.setAttribute('aria-expanded',false)})});
+  function iso(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0')}
+  function vn(s){var p=s.split('-');return p[2]+'/'+p[1]+'/'+p[0]}
+  var di=d.getElementById('r-date'), t=new Date(); di.min=iso(t); di.value=iso(t);
+  d.querySelectorAll('form[data-form]').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      if(!f.checkValidity()){f.reportValidity();return}
+      var fd=new FormData(f), box=f.querySelector('.thanks');
+      box.textContent='Cảm ơn '+fd.get('name')+'! Than Muối đã nhận yêu cầu đặt bàn '+fd.get('guests')+' người, ngày '+vn(fd.get('date'))+' lúc '+fd.get('time')+'. Quán sẽ gọi lại số '+fd.get('phone')+' để xác nhận.';
+      box.classList.add('show'); f.querySelector('button[type=submit]').disabled=true;
+    });
+  });
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

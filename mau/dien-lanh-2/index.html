@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website công ty điện lạnh – Điện Lạnh Phúc An</title>
+<meta name="description" content="Mẫu giao diện website trung tâm điện lạnh: sửa máy lạnh, vệ sinh máy lạnh, bơm gas, lắp đặt, sửa tủ lạnh, máy giặt tại nhà. Bảng giá tham khảo, khu vực phục vụ, đặt lịch online.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A1A33; --navy2:#10284D; --blue:#1B4F9C; --ice:#EEF3FA; --line:#DDE5F0;
+  --or:#FF6B1A; --or-d:#E2550A; --ink:#13213A; --muted:#5B6880; --zalo:#0068FF; --green:#14A06F;
+  --h:"Montserrat",system-ui,sans-serif; --b:"Roboto",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--b);font-size:16px;line-height:1.65;color:var(--ink);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto;object-fit:cover;background:#22385C}
+a{color:inherit}
+h1,h2,h3{font-family:var(--h);margin:0;line-height:1.2;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,4.2vw,3.5rem);font-weight:800}
+h2{font-size:clamp(1.65rem,2.9vw,2.4rem);font-weight:800}
+h3{font-size:1.1rem;font-weight:700}
+p{margin:0 0 1em}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+section{padding:88px 0}
+.lbl{font-family:var(--h);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--h);font-weight:700;font-size:.98rem;padding:14px 24px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.btn-or{background:var(--or);color:#fff;box-shadow:0 12px 24px -12px rgba(255,107,26,.9)}
+.btn-or:hover{background:var(--or-d);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:rgba(255,255,255,.18)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--blue)}
+
+/* header */
+header.site{position:sticky;top:0;z-index:40;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;height:76px}
+.logo{display:flex;gap:10px;align-items:center;text-decoration:none}
+.logo .m{width:42px;height:42px;border-radius:50%;border:2px solid var(--or);display:grid;place-items:center;color:var(--or)}
+.logo b{font-family:var(--h);font-weight:800;font-size:1.1rem;display:block;line-height:1.1}
+.logo small{display:block;font-size:.72rem;color:#9FB3D1;letter-spacing:.06em;text-transform:uppercase}
+nav.main ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav.main a{text-decoration:none;font-weight:500;font-size:.95rem;color:#D7E2F2;transition:color .2s}
+nav.main a:hover{color:var(--or)}
+.hot{display:flex;align-items:center;gap:10px;background:var(--or);color:#fff;text-decoration:none;border-radius:999px;padding:8px 22px 8px 8px;font-family:var(--h);transition:background .2s,transform .2s;box-shadow:0 0 0 0 rgba(255,107,26,.6);animation:glow 2.2s infinite}
+.hot:hover{background:var(--or-d);transform:scale(1.03)}
+.hot i{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--or);display:grid;place-items:center;flex:none;font-style:normal}
+.hot span{display:block;font-size:.68rem;font-weight:600;opacity:.95;text-transform:uppercase;letter-spacing:.06em;line-height:1.2}
+.hot b{font-size:1.3rem;font-weight:800;white-space:nowrap;line-height:1.15}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(255,107,26,.55)}70%{box-shadow:0 0 0 14px rgba(255,107,26,0)}100%{box-shadow:0 0 0 0 rgba(255,107,26,0)}}
+.menu-btn{display:none;width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);cursor:pointer}
+.menu-btn span{display:block;width:20px;height:2px;background:#fff;margin:4px auto}
+
+/* hero */
+.hero{position:relative;color:#fff;background:var(--navy);overflow:hidden;padding:80px 0 90px}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;opacity:.9}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,26,51,.97) 0%,rgba(10,26,51,.88) 45%,rgba(10,26,51,.55) 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.hero .tag{display:inline-flex;gap:8px;align-items:center;background:rgba(255,107,26,.15);color:#FFB287;font-weight:500;padding:6px 14px;border-radius:99px;font-size:.88rem}
+.hero .tag i{width:8px;height:8px;border-radius:50%;background:var(--or);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.hero h1{margin:18px 0 0}
+.hero h1 em{font-style:normal;color:var(--or)}
+.hero .lead{font-size:1.1rem;color:#C9D6EA;margin:20px 0 28px;max-width:54ch}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-ctas .btn-or{font-size:1.1rem;padding:16px 26px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:10px 28px;margin-top:34px;padding:0;list-style:none;justify-content:start}
+.facts li{display:flex;align-items:center;gap:10px;font-size:.93rem;color:#D7E2F2}
+.facts svg{color:var(--or);flex:none}
+.quick{background:#fff;color:var(--ink);border-radius:16px;padding:26px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.quick h2{font-size:1.3rem;margin-bottom:4px}
+.quick p.s{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.quick .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.quick .opts label{position:relative;border:1.5px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center;font-size:.86rem;font-weight:500;cursor:pointer;transition:.2s}
+.quick .opts input{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.quick .opts label:has(input:checked){border-color:var(--or);background:#FFF2EA;color:var(--or-d)}
+.fld{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.fld label{font-size:.85rem;font-weight:500}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:.95rem;padding:12px 13px;border-radius:8px;border:1.5px solid var(--line);background:#F8FAFD;width:100%;color:var(--ink);transition:border-color .2s}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--or);background:#fff}
+.quick .btn{width:100%}
+.note{font-size:.78rem;color:var(--muted);text-align:center;margin:10px 0 0}
+.thanks{display:none;text-align:center;padding:30px 6px}
+.thanks .ok{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;margin:0 auto 14px}
+form.sent .form-body{display:none}
+form.sent .thanks{display:block;animation:up .5s ease}
+.hero-anim>*{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-anim>*:nth-child(2){animation-delay:.1s}.hero-anim>*:nth-child(3){animation-delay:.2s}.hero-anim>*:nth-child(4){animation-delay:.3s}.hero-anim>*:nth-child(5){animation-delay:.4s}
+.quick{animation:fromRight .9s .3s cubic-bezier(.2,.7,.2,1) both}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fromRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+
+/* strip */
+.strip{background:var(--or);color:#fff}
+.strip .wrap{display:flex;justify-content:space-between;gap:16px;padding:16px 0;flex-wrap:wrap;font-family:var(--h);font-weight:700;font-size:.95rem}
+.strip span{display:flex;gap:8px;align-items:center}
+
+/* services */
+.svc-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
+.svc-side{position:sticky;top:110px}
+.svc-side img{width:100%;aspect-ratio:4/5;border-radius:16px;margin-top:26px}
+.svc-side p{color:var(--muted)}
+.svc-list{display:grid;gap:14px}
+.svc{display:grid;grid-template-columns:120px 1fr auto;gap:20px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff;transition:border-color .25s,box-shadow .25s,transform .25s}
+.svc:hover{border-color:var(--or);box-shadow:0 18px 34px -24px rgba(10,26,51,.45);transform:translateX(4px)}
+.svc img{width:120px;height:96px;border-radius:10px}
+.svc h3{margin-bottom:4px}
+.svc p{margin:0;color:var(--muted);font-size:.9rem}
+.svc .pr{text-align:right;font-size:.8rem;color:var(--muted);white-space:nowrap;padding-right:8px}
+.svc .pr b{display:block;font-family:var(--h);color:var(--or-d);font-size:1.05rem}
+
+/* price */
+.price-sec{background:var(--ice)}
+.ph{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:40px;flex-wrap:wrap}
+.ph p{max-width:48ch;color:var(--muted);margin:0}
+.pgrid{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;align-items:start}
+.pcard{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.pcard .hd{background:var(--navy);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pcard .hd h3{font-size:1.08rem}
+.pcard .hd span{font-size:.75rem;background:var(--or);padding:4px 10px;border-radius:99px;font-weight:700;font-family:var(--h);white-space:nowrap}
+.pcard table{width:100%;border-collapse:collapse}
+.pcard th,.pcard td{padding:13px 22px;text-align:left;border-bottom:1px solid var(--line);font-size:.94rem;vertical-align:middle}
+.pcard thead th{font-family:var(--h);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:#F8FAFD}
+.pcard td:last-child,.pcard th:last-child{text-align:right;white-space:nowrap}
+.pcard td b{font-family:var(--h);color:var(--or-d)}
+.pcard tr:last-child td{border-bottom:0}
+.pcard tbody tr{transition:background .2s}
+.pcard tbody tr:hover{background:#FFF7F2}
+details.acc{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+details.acc summary{list-style:none;cursor:pointer;padding:18px 22px;font-family:var(--h);font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:12px}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"+";width:28px;height:28px;border-radius:50%;background:var(--ice);display:grid;place-items:center;font-size:1.2rem;color:var(--or-d);transition:transform .3s;flex:none}
+details.acc[open] summary::after{transform:rotate(45deg)}
+details.acc .rows{padding:0 22px 12px}
+details.acc .r{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-top:1px dashed var(--line);font-size:.93rem}
+details.acc .r b{font-family:var(--h);color:var(--or-d);white-space:nowrap}
+.pfine{font-size:.85rem;color:var(--muted);margin-top:18px}
+
+/* area */
+.area{background:var(--navy);color:#D7E2F2}
+.area h2{color:#fff}
+.area .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.area-img{position:relative}
+.area-img img{width:100%;aspect-ratio:4/3;border-radius:16px}
+.area-img .pin{position:absolute;top:18px;left:18px;background:var(--or);color:#fff;font-family:var(--h);font-weight:700;padding:8px 14px;border-radius:8px;font-size:.88rem}
+.zones{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0}
+.zone{background:var(--navy2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px 18px;transition:border-color .2s}
+.zone:hover{border-color:var(--or)}
+.zone h3{color:#fff;font-size:.98rem;margin-bottom:6px}
+.zone p{margin:0;font-size:.9rem;color:#9FB3D1}
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(5,1fr);gap:0;list-style:none;padding:0;margin:0;position:relative}
+.proc::before{content:"";position:absolute;top:34px;left:10%;right:10%;height:2px;background:repeating-linear-gradient(90deg,var(--or) 0 10px,transparent 10px 18px)}
+.proc li{text-align:center;padding:0 14px;position:relative}
+.proc .ic{width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--or);display:grid;place-items:center;margin:0 auto 16px;color:var(--or-d);position:relative;z-index:1;transition:background .3s,color .3s}
+.proc li:hover .ic{background:var(--or);color:#fff}
+.proc .ic small{position:absolute;top:-4px;right:-4px;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--h);font-weight:700;font-size:.75rem;display:grid;place-items:center}
+.proc h3{margin-bottom:6px;font-size:1.02rem}
+.proc p{font-size:.88rem;color:var(--muted);margin:0}
+
+/* warranty */
+.warr{background:linear-gradient(120deg,var(--navy) 0%,var(--blue) 100%);color:#fff;border-radius:22px;padding:46px;display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center}
+.warr h2{color:#fff}
+.warr p{color:#C9D6EA}
+.wl{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wl div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px 18px;display:flex;gap:12px}
+.wl svg{flex:none;color:var(--or);margin-top:2px}
+.wl b{display:block;font-family:var(--h);font-size:.98rem;margin-bottom:2px}
+.wl span{font-size:.88rem;color:#C9D6EA}
+
+/* reviews */
+.revs{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin}
+.rv{scroll-snap-align:start;background:var(--ice);border-radius:16px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.rv p{margin:0;font-size:.98rem}
+.rv .w{margin-top:auto;display:flex;gap:12px;align-items:center;font-size:.9rem}
+.rv .w i{width:42px;height:42px;border-radius:50%;background:var(--or);color:#fff;font-style:normal;font-family:var(--h);font-weight:700;display:grid;place-items:center}
+.rv .w small{display:block;color:var(--muted)}
+.mau{display:inline-block;background:#FFF2EA;color:var(--or-d);font-family:var(--h);font-weight:700;font-size:.78rem;padding:5px 12px;border-radius:6px;margin-left:10px;vertical-align:middle}
+
+/* booking */
+.booking-sec{background:var(--ice)}
+.bk{display:grid;grid-template-columns:1.2fr .8fr;gap:0;background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+form.bform{padding:40px}
+form.bform h2{margin-bottom:6px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+form.bform .btn{width:100%;font-size:1.05rem;padding:16px}
+.bk-side{background:var(--navy);color:#D7E2F2;padding:40px;display:flex;flex-direction:column;gap:20px}
+.bk-side h3{color:#fff;font-size:1.25rem}
+.bk-side a.big{display:block;font-family:var(--h);font-weight:800;font-size:1.8rem;color:var(--or);text-decoration:none;white-space:nowrap}
+.bk-side ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;font-size:.94rem}
+.bk-side li{display:flex;gap:10px}
+.bk-side svg{flex:none;color:var(--or);margin-top:3px}
+
+footer{background:#07122A;color:#9FB3D1;padding:60px 0 110px;font-size:.92rem}
+footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px}
+footer h3{color:#fff;font-size:.98rem;margin-bottom:14px}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--or)}
+footer .bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem}
+
+/* floating */
+.fl{position:fixed;right:18px;bottom:20px;z-index:60;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.fl a{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;border-radius:999px;padding:6px 18px 6px 6px;font-family:var(--h);font-weight:700;font-size:.92rem;box-shadow:0 12px 26px -12px rgba(0,0,0,.55);transition:transform .2s}
+.fl a:hover{transform:translateX(-4px)}
+.fl a i{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-style:normal;font-size:.78rem}
+.fl .c{background:var(--or)}
+.fl .z{background:var(--zalo)}
+.kt-badge{position:fixed;left:16px;bottom:16px;z-index:60;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--navy);text-decoration:none;font-size:.8rem;font-weight:500;padding:9px 15px;border-radius:99px;box-shadow:0 10px 26px -8px rgba(0,0,0,.45);border:1px solid var(--line);white-space:nowrap;max-width:calc(100% - 32px)}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:var(--or);flex:none}
+.kt-badge b{color:var(--or-d);font-weight:700}
+.kt-badge:hover{background:var(--navy);color:#fff}
+.kt-badge:hover b{color:#FFB287}
+
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}.d4{transition-delay:.32s!important}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+@media (max-width:1100px){
+  nav.main{display:none}
+  .menu-btn{display:block}
+  nav.main.open{display:block;position:absolute;top:76px;left:0;right:0;background:var(--navy);padding:10px 20px 20px;border-top:1px solid rgba(255,255,255,.1)}
+  nav.main.open ul{flex-direction:column;gap:0}
+  nav.main.open a{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .facts{grid-template-columns:1fr 1fr}
+  .proc{grid-template-columns:repeat(3,1fr);row-gap:30px}
+  .proc::before{display:none}
+}
+@media (max-width:900px){
+  section{padding:70px 0}
+  .hero .wrap,.svc-wrap,.pgrid,.area .wrap,.warr,.bk{grid-template-columns:1fr}
+  .svc-side{position:static}
+  .svc-side img{aspect-ratio:16/9}
+  .quick{max-width:520px}
+  .revs{grid-auto-columns:70%}
+  .warr{padding:32px 24px}
+  footer .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 32px)}
+  header.site .wrap{height:66px;gap:10px}
+  nav.main.open{top:66px}
+  .logo small{display:none}
+  .logo .m{width:36px;height:36px}
+  .logo b{font-size:.95rem;max-width:92px}
+  .hot{padding:6px 14px 6px 6px;gap:8px}
+  .hot i{width:30px;height:30px}
+  .hot span{display:none}
+  .hot b{font-size:1rem}
+  .hero{padding:44px 0 60px}
+  .hero-ctas .btn{width:100%}
+  .facts{grid-template-columns:1fr}
+  .quick{padding:20px 16px}
+  .strip .wrap{justify-content:flex-start;gap:8px 18px;font-size:.88rem}
+  .svc{grid-template-columns:84px 1fr;gap:14px}
+  .svc img{width:84px;height:84px}
+  .svc .pr{grid-column:2;text-align:left;padding:0}
+  .pcard th,.pcard td{padding:12px 14px}
+  .zones{grid-template-columns:1fr}
+  .proc{grid-template-columns:1fr 1fr}
+  .wl{grid-template-columns:1fr}
+  .revs{grid-auto-columns:86%}
+  form.bform,.bk-side{padding:26px 18px}
+  .g2,.g3{grid-template-columns:1fr;gap:0}
+  footer .grid{grid-template-columns:1fr}
+  .fl{right:12px;bottom:14px}
+  .fl a{padding:5px;gap:0}
+  .fl a span{display:none}
+  .kt-badge{font-size:.68rem;padding:8px 11px;gap:6px;left:10px;bottom:14px;max-width:calc(100% - 80px)}
+}
+@media (max-width:400px){.hot i{display:none}.hot{padding:8px 12px}.hot b{font-size:.95rem}}
+.fld input:not([type=radio]),.fld select{min-height:50px}
+img{color:transparent;font-size:0}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Điện Lạnh Phúc An – về đầu trang">
+      <span class="m"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></span>
+      <span><b>Điện&nbsp;Lạnh Phúc&nbsp;An</b><small>Trung&nbsp;tâm điện&nbsp;lạnh</small></span>
+    </a>
+    <nav class="main" id="nav"><ul>
+      <li><a href="#dich-vu">Dịch&nbsp;vụ</a></li>
+      <li><a href="#bang-gia">Bảng&nbsp;giá</a></li>
+      <li><a href="#khu-vuc">Khu&nbsp;vực</a></li>
+      <li><a href="#quy-trinh">Quy&nbsp;trình</a></li>
+      <li><a href="#bao-hanh">Bảo&nbsp;hành</a></li>
+      <li><a href="#dat-lich">Liên&nbsp;hệ</a></li>
+    </ul></nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="hot" href="tel:0900000000"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><div><span>Hotline đặt&nbsp;lịch</span><b>0900&nbsp;000&nbsp;000</b></div></a>
+      <button class="menu-btn" aria-label="Mở menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1698479603408-1a66a6d9e80f?auto=format&fit=crop&w=1800&q=80" width="1800" height="1200" alt="Cụm dàn nóng máy lạnh trên sân thượng"></div>
+  <div class="wrap">
+    <div class="hero-anim">
+      <span class="tag"><i></i>Kỹ&nbsp;thuật&nbsp;viên đang trực, nhận&nbsp;lịch trong&nbsp;ngày</span>
+      <h1>Sửa máy&nbsp;lạnh, tủ&nbsp;lạnh, máy&nbsp;giặt <em>tại&nbsp;nhà</em></h1>
+      <p class="lead">Điện Lạnh Phúc An nhận vệ sinh, bơm gas, sửa chữa và lắp đặt thiết bị điện lạnh cho gia đình, văn phòng, cửa hàng. Kiểm tra đúng bệnh, báo giá trước khi sửa, bảo hành bằng phiếu.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-or" href="tel:0900000000"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Gọi&nbsp;thợ: 0900&nbsp;000&nbsp;000</a>
+        <a class="btn btn-ghost" href="#bang-gia">Xem&nbsp;bảng&nbsp;giá</a>
+      </div>
+      <ul class="facts">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Có&nbsp;mặt sau 30&nbsp;phút*</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Không&nbsp;phát&nbsp;sinh chi&nbsp;phí</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>Bảo&nbsp;hành đến 12&nbsp;tháng</li>
+      </ul>
+    </div>
+    <form class="quick" novalidate>
+      <div class="form-body">
+        <h2>Đặt&nbsp;lịch nhanh</h2>
+        <p class="s">Để lại số điện thoại, tổng đài gọi lại xác nhận.</p>
+        <div class="opts" role="radiogroup" aria-label="Thiết bị">
+          <label><input type="radio" name="q-dev" checked>Máy&nbsp;lạnh</label>
+          <label><input type="radio" name="q-dev">Tủ&nbsp;lạnh</label>
+          <label><input type="radio" name="q-dev">Máy&nbsp;giặt</label>
+        </div>
+        <div class="fld"><label for="q-p">Số điện thoại *</label><input id="q-p" type="tel" required placeholder="0900 000 000"></div>
+        <div class="fld"><label for="q-s">Tình trạng</label><select id="q-s"><option>Cần vệ sinh định kỳ</option><option>Không lạnh, lạnh yếu</option><option>Chảy nước, có mùi hôi</option><option>Kêu to, báo lỗi</option><option>Lắp đặt, tháo lắp</option></select></div>
+        <button class="btn btn-or" type="submit">Gọi&nbsp;lại cho tôi</button>
+        <p class="note">Biểu mẫu minh họa, chưa gửi dữ liệu đi đâu.</p>
+      </div>
+      <div class="thanks" role="status" aria-live="polite"><div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Đã&nbsp;nhận yêu&nbsp;cầu!</h3><p style="color:var(--muted);margin-top:8px">Tổng đài sẽ gọi lại trong ít phút.</p></div>
+    </form>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap">
+  <span>✓ Vệ&nbsp;sinh từ 180.000đ/bộ</span><span>✓ Kiểm&nbsp;tra miễn&nbsp;phí nếu&nbsp;sửa</span><span>✓ Làm cả Chủ&nbsp;nhật, ngày&nbsp;lễ</span><span>✓ Xuất hóa&nbsp;đơn VAT</span>
+</div></div>
+
+<section id="dich-vu">
+  <div class="wrap svc-wrap">
+    <div class="svc-side reveal">
+      <span class="lbl">Dịch&nbsp;vụ</span>
+      <h2>Dịch&nbsp;vụ điện&nbsp;lạnh trọn&nbsp;gói cho gia&nbsp;đình và&nbsp;văn&nbsp;phòng</h2>
+      <p style="margin-top:14px">Nhận sửa chữa tất cả các hãng: Daikin, Panasonic, LG, Samsung, Toshiba, Mitsubishi, Sharp, Electrolux, Aqua... Máy treo tường, âm trần, tủ đứng, máy giặt cửa trên, cửa ngang.</p>
+      <img src="https://images.unsplash.com/photo-1625148230889-8195e85aae6b?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Kỹ thuật viên đeo túi đồ nghề chuẩn bị sửa chữa">
+    </div>
+    <div class="svc-list">
+      <article class="svc reveal"><img src="https://images.unsplash.com/photo-1724488751821-1415f5cf4960?auto=format&fit=crop&w=400&q=80" width="400" height="320" loading="lazy" alt="Dàn nóng máy lạnh đặt cạnh tường xanh">
+        <div><h3>Vệ&nbsp;sinh máy&nbsp;lạnh</h3><p>Xịt rửa dàn lạnh, dàn nóng, lưới lọc, máng nước, kiểm tra gas.</p></div><div class="pr">Từ<b>180.000đ</b></div></article>
+      <article class="svc reveal d1"><img src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?auto=format&fit=crop&w=400&q=80" width="400" height="320" loading="lazy" alt="Kỹ thuật viên kiểm tra tủ điện">
+        <div><h3>Sửa&nbsp;máy&nbsp;lạnh</h3><p>Không lạnh, chảy nước, kêu to, báo lỗi, chết block, hư board.</p></div><div class="pr">Kiểm&nbsp;tra<b>Miễn&nbsp;phí*</b></div></article>
+      <article class="svc reveal d2"><img src="https://images.unsplash.com/photo-1726614846573-c1ac2e6161d1?auto=format&fit=crop&w=400&q=80" width="400" height="320" loading="lazy" alt="Máy lạnh lắp trên tường màu vàng">
+        <div><h3>Bơm&nbsp;gas máy&nbsp;lạnh</h3><p>Kiểm tra rò rỉ, hàn ống, bơm gas R22, R32, R410A.</p></div><div class="pr">Từ<b>150.000đ</b></div></article>
+      <article class="svc reveal"><img src="https://images.unsplash.com/photo-1679303777007-c6c4522beb02?auto=format&fit=crop&w=400&q=80" width="400" height="320" loading="lazy" alt="Dàn nóng máy lạnh gắn trên tường">
+        <div><h3>Lắp&nbsp;đặt, tháo&nbsp;lắp</h3><p>Lắp máy mới, di dời máy cũ, thay ống đồng, làm giá đỡ.</p></div><div class="pr">Từ<b>300.000đ</b></div></article>
+      <article class="svc reveal d1"><img src="https://images.unsplash.com/photo-1629042306548-1bfb25a3ff78?auto=format&fit=crop&w=400&q=80" width="400" height="320" loading="lazy" alt="Tủ lạnh inox trong gian bếp">
+        <div><h3>Sửa&nbsp;tủ&nbsp;lạnh</h3><p>Không lạnh, không đông đá, đóng tuyết, thay sò, nạp gas.</p></div><div class="pr">Vệ&nbsp;sinh từ<b>250.000đ</b></div></article>
+      <article class="svc reveal d2"><img src="https://images.unsplash.com/photo-1622473590925-e3616c0a41bf?auto=format&fit=crop&w=400&q=80" width="400" height="320" loading="lazy" alt="Máy giặt cửa trước đặt cạnh tủ gỗ trắng">
+        <div><h3>Sửa&nbsp;máy&nbsp;giặt</h3><p>Không vắt, không xả, rung lắc, báo lỗi, vệ sinh lồng giặt.</p></div><div class="pr">Vệ&nbsp;sinh từ<b>300.000đ</b></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="price-sec" id="bang-gia">
+  <div class="wrap">
+    <div class="ph">
+      <div class="reveal"><span class="lbl">Bảng&nbsp;giá</span><h2>Bảng&nbsp;giá dịch&nbsp;vụ điện&nbsp;lạnh</h2></div>
+      <p class="reveal d1">Giá tham khảo cho thiết bị dân dụng. Kỹ thuật viên kiểm tra và báo giá chính xác trước khi làm.</p>
+    </div>
+    <div class="pgrid">
+      <div class="pcard reveal">
+        <div class="hd"><h3>Bảng&nbsp;giá vệ&nbsp;sinh máy&nbsp;lạnh</h3><span>Giá mẫu</span></div>
+        <table>
+          <thead><tr><th>Loại máy</th><th>Đơn&nbsp;giá</th></tr></thead>
+          <tbody>
+            <tr><td>Treo tường 1&nbsp;–&nbsp;1,5HP</td><td><b>180.000đ</b></td></tr>
+            <tr><td>Treo tường 2&nbsp;–&nbsp;2,5HP</td><td><b>230.000đ</b></td></tr>
+            <tr><td>Tủ đứng</td><td><b>330.000đ</b></td></tr>
+            <tr><td>Âm trần, áp trần 2&nbsp;–&nbsp;3HP</td><td><b>430.000đ</b></td></tr>
+            <tr><td>Vệ sinh từ 3&nbsp;máy trở lên</td><td><b>Liên&nbsp;hệ</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reveal d1">
+        <details class="acc" open><summary>Sửa&nbsp;chữa, bơm&nbsp;gas máy&nbsp;lạnh</summary><div class="rows">
+          <div class="r"><span>Kiểm tra, báo lỗi</span><b>Miễn&nbsp;phí nếu&nbsp;sửa</b></div>
+          <div class="r"><span>Bơm gas bổ sung R32, R410A</span><b>từ 150.000đ</b></div>
+          <div class="r"><span>Thay tụ block</span><b>từ 350.000đ</b></div>
+          <div class="r"><span>Xử lý chảy nước, thông ống thoát</span><b>từ 200.000đ</b></div>
+        </div></details>
+        <details class="acc"><summary>Lắp&nbsp;đặt, tháo&nbsp;lắp máy&nbsp;lạnh</summary><div class="rows">
+          <div class="r"><span>Lắp đặt máy treo tường 1&nbsp;–&nbsp;1,5HP</span><b>300.000đ</b></div>
+          <div class="r"><span>Tháo lắp, di dời máy treo tường</span><b>450.000đ</b></div>
+          <div class="r"><span>Ống đồng (theo mét)</span><b>Báo&nbsp;giá theo&nbsp;loại</b></div>
+        </div></details>
+        <details class="acc"><summary>Tủ&nbsp;lạnh</summary><div class="rows">
+          <div class="r"><span>Vệ sinh tủ lạnh</span><b>250.000đ</b></div>
+          <div class="r"><span>Thay sò lạnh, sò nóng</span><b>từ 250.000đ</b></div>
+          <div class="r"><span>Nạp gas tủ lạnh</span><b>từ 450.000đ</b></div>
+        </div></details>
+        <details class="acc"><summary>Máy&nbsp;giặt</summary><div class="rows">
+          <div class="r"><span>Vệ sinh máy giặt cửa trên</span><b>300.000đ</b></div>
+          <div class="r"><span>Vệ sinh máy giặt cửa ngang</span><b>400.000đ</b></div>
+          <div class="r"><span>Thay dây curoa</span><b>từ 200.000đ</b></div>
+        </div></details>
+      </div>
+    </div>
+    <p class="pfine">Bảng giá mẫu để minh họa giao diện, cần thay bằng giá thực tế. Giá linh kiện tùy hãng, model và công suất máy. * Kiểm tra miễn phí khi khách đồng ý sửa.</p>
+  </div>
+</section>
+
+<section class="area" id="khu-vuc">
+  <div class="wrap">
+    <div class="area-img reveal">
+      <img src="https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?auto=format&fit=crop&w=1000&q=80" width="1000" height="750" loading="lazy" alt="Thợ điện lạnh làm việc trên sân thượng có nhiều dàn nóng">
+      <span class="pin">Khu&nbsp;vực mẫu</span>
+    </div>
+    <div class="reveal d1">
+      <span class="lbl">Khu&nbsp;vực phục&nbsp;vụ</span>
+      <h2>Thợ ở gần, đến&nbsp;nhanh</h2>
+      <p style="margin-top:14px">Kỹ thuật viên được phân theo từng khu vực để đến đúng giờ hẹn. Danh sách dưới đây là mẫu, thay theo khu vực thực tế.</p>
+      <div class="zones">
+        <div class="zone"><h3>Khu&nbsp;trung&nbsp;tâm</h3><p>Quận 1, Quận 3, Quận 5, Quận 10, Phú Nhuận</p></div>
+        <div class="zone"><h3>Khu&nbsp;phía&nbsp;Bắc</h3><p>Gò Vấp, Tân Bình, Bình Thạnh, Hóc Môn</p></div>
+        <div class="zone"><h3>Khu&nbsp;phía&nbsp;Đông</h3><p>Thủ Đức và các khu lân cận</p></div>
+        <div class="zone"><h3>Khu&nbsp;phía&nbsp;Nam, Tây</h3><p>Quận 7, Nhà Bè, Tân Phú, Bình Tân</p></div>
+      </div>
+      <a class="btn btn-or" href="tel:0900000000">Gọi hỏi khu&nbsp;vực của&nbsp;bạn</a>
+    </div>
+  </div>
+</section>
+
+<section id="quy-trinh">
+  <div class="wrap">
+    <div class="ph">
+      <div class="reveal"><span class="lbl">Quy&nbsp;trình</span><h2>Quy&nbsp;trình sửa&nbsp;chữa tại&nbsp;nhà</h2></div>
+      <p class="reveal d1">Khách nắm rõ lỗi và chi phí trước khi kỹ thuật viên bắt đầu làm.</p>
+    </div>
+    <ol class="proc">
+      <li class="reveal"><span class="ic"><small>1</small><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><h3>Tiếp&nbsp;nhận</h3><p>Ghi nhận tình trạng máy, hẹn giờ phù hợp.</p></li>
+      <li class="reveal d1"><span class="ic"><small>2</small><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span><h3>Kiểm&nbsp;tra</h3><p>Đo gas, đo dòng, xác định đúng nguyên nhân.</p></li>
+      <li class="reveal d2"><span class="ic"><small>3</small><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11h6M9 15h6M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg></span><h3>Báo&nbsp;giá</h3><p>Báo giá chi tiết, khách đồng ý mới làm.</p></li>
+      <li class="reveal d3"><span class="ic"><small>4</small><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></span><h3>Sửa&nbsp;chữa</h3><p>Thay linh kiện đúng loại, chạy thử cùng khách.</p></li>
+      <li class="reveal d4"><span class="ic"><small>5</small><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Bảo&nbsp;hành</h3><p>Thanh toán, nhận phiếu bảo hành ghi rõ hạng mục.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="bao-hanh" style="padding-top:0">
+  <div class="wrap">
+    <div class="warr reveal">
+      <div>
+        <span class="lbl">Cam&nbsp;kết</span>
+        <h2>Cam&nbsp;kết bảo&nbsp;hành rõ&nbsp;ràng</h2>
+        <p style="margin-top:14px">Mọi hạng mục sửa chữa, thay linh kiện đều có phiếu bảo hành ghi rõ thời hạn. Trong thời gian bảo hành, máy gặp lại lỗi cũ được xử lý miễn phí.</p>
+      </div>
+      <div class="wl">
+        <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Vệ&nbsp;sinh: 1&nbsp;tháng</b>Máy chảy nước, có mùi lại được xử lý miễn phí.</span></div>
+        <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Bơm&nbsp;gas: 3&nbsp;tháng</b>Đã gồm kiểm tra, xử lý điểm rò rỉ.</span></div>
+        <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Linh&nbsp;kiện: 3&nbsp;–&nbsp;12&nbsp;tháng</b>Tùy loại linh kiện, ghi trên phiếu bảo hành.</span></div>
+        <div><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Trả&nbsp;lại linh&nbsp;kiện cũ</b>Khách giữ linh kiện thay ra để đối chiếu.</span></div>
+      </div>
+    </div>
+    <p class="pfine" style="text-align:center">* Thời hạn bảo hành và thời gian có mặt là nội dung mẫu, cần chỉnh theo chính sách thực tế của công ty.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="ph">
+      <div class="reveal"><span class="lbl">Khách&nbsp;hàng</span><h2>Khách&nbsp;hàng nhận&nbsp;xét <span class="mau">Đánh&nbsp;giá mẫu</span></h2></div>
+      <p class="reveal d1">Các nhận xét dưới đây là nội dung mẫu để minh họa bố cục, không phải đánh giá thật.</p>
+    </div>
+    <div class="revs reveal" tabindex="0" aria-label="Đánh giá mẫu, kéo ngang để xem thêm">
+      <article class="rv"><p>Gọi buổi sáng, đầu giờ chiều thợ đã tới. Máy lạnh hết chảy nước, thợ giải thích rõ nguyên nhân.</p><div class="w"><i>L</i><div><b>Chị Linh</b><small>Phú Nhuận · Đánh giá mẫu</small></div></div></article>
+      <article class="rv"><p>Máy giặt không vắt, thay dây curoa xong chạy êm. Giá đúng như báo trước, có phiếu bảo hành.</p><div class="w"><i>D</i><div><b>Anh Dũng</b><small>Tân Phú · Đánh giá mẫu</small></div></div></article>
+      <article class="rv"><p>Vệ sinh định kỳ cho cửa hàng 6 máy, các bạn làm buổi tối nên không ảnh hưởng việc bán hàng.</p><div class="w"><i>P</i><div><b>Chị Phương</b><small>Quận 3 · Đánh giá mẫu</small></div></div></article>
+      <article class="rv"><p>Tủ lạnh đóng tuyết ngăn đá, thợ kiểm tra và thay cảm biến. Làm gọn, dọn sạch trước khi về.</p><div class="w"><i>B</i><div><b>Bác Bình</b><small>Gò Vấp · Đánh giá mẫu</small></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="booking-sec" id="dat-lich">
+  <div class="wrap">
+    <div class="bk reveal">
+      <form class="bform" novalidate>
+        <div class="form-body">
+          <span class="lbl">Đặt&nbsp;lịch</span>
+          <h2>Đặt&nbsp;lịch kỹ&nbsp;thuật&nbsp;viên</h2>
+          <p style="color:var(--muted);margin-bottom:22px">Điền thông tin, tổng đài gọi lại xác nhận giờ hẹn.</p>
+          <div class="g2">
+            <div class="fld"><label for="b-n">Họ tên *</label><input id="b-n" required placeholder="Nguyễn Văn A"></div>
+            <div class="fld"><label for="b-p">Số điện thoại *</label><input id="b-p" type="tel" required placeholder="0900 000 000"></div>
+          </div>
+          <div class="fld"><label for="b-a">Địa chỉ</label><input id="b-a" placeholder="Số nhà, tên đường, phường"></div>
+          <div class="g3">
+            <div class="fld"><label for="b-d">Thiết bị</label><select id="b-d"><option>Máy lạnh</option><option>Tủ lạnh</option><option>Máy giặt</option></select></div>
+            <div class="fld"><label for="b-s">Dịch vụ</label><select id="b-s"><option>Vệ sinh</option><option>Sửa chữa</option><option>Bơm gas</option><option>Lắp đặt</option></select></div>
+            <div class="fld"><label for="b-q">Số máy</label><input id="b-q" type="number" min="1" value="1"></div>
+          </div>
+          <div class="g2">
+            <div class="fld"><label for="b-day">Ngày hẹn</label><input id="b-day" type="date"></div>
+            <div class="fld"><label for="b-time">Khung giờ</label><select id="b-time"><option>Sáng (8:00 – 12:00)</option><option>Chiều (13:00 – 17:00)</option><option>Tối (18:00 – 21:00)</option></select></div>
+          </div>
+          <div class="fld"><label for="b-m">Mô tả tình trạng</label><textarea id="b-m" rows="3" placeholder="VD: Máy lạnh Daikin 1HP chạy không lạnh, có tiếng kêu..."></textarea></div>
+          <button class="btn btn-or" type="submit">Xác&nbsp;nhận đặt&nbsp;lịch</button>
+          <p class="note">Biểu mẫu minh họa, chưa gửi dữ liệu đi đâu.</p>
+        </div>
+        <div class="thanks" role="status" aria-live="polite"><div class="ok"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Cảm&nbsp;ơn anh/chị!</h3><p style="color:var(--muted);margin-top:8px">Điện Lạnh Phúc An đã nhận lịch hẹn và sẽ gọi lại xác nhận.</p></div>
+      </form>
+      <aside class="bk-side">
+        <h3>Cần thợ gấp?</h3>
+        <a class="big" href="tel:0900000000">0900&nbsp;000&nbsp;000</a>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Nhận lịch 7:00&nbsp;–&nbsp;21:00, kể&nbsp;cả Chủ&nbsp;nhật</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>lienhe@tenmienmau.vn</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://zalo.me/0900000000" target="_blank" rel="noopener">Nhắn&nbsp;Zalo gửi&nbsp;hình&nbsp;máy</a>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><a href="#top" class="logo"><span class="m"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></span><span><b style="color:#fff">Điện&nbsp;Lạnh Phúc&nbsp;An</b></span></a>
+        <p style="margin-top:16px">Trung tâm điện lạnh (tên mẫu): sửa chữa, vệ sinh, lắp đặt máy lạnh, tủ lạnh, máy giặt tại nhà.</p></div>
+      <div><h3>Dịch vụ</h3><ul><li><a href="#dich-vu">Vệ&nbsp;sinh máy&nbsp;lạnh</a></li><li><a href="#dich-vu">Bơm&nbsp;gas máy&nbsp;lạnh</a></li><li><a href="#dich-vu">Sửa&nbsp;tủ&nbsp;lạnh</a></li><li><a href="#dich-vu">Sửa&nbsp;máy&nbsp;giặt</a></li></ul></div>
+      <div><h3>Hỗ trợ</h3><ul><li><a href="#bang-gia">Bảng&nbsp;giá</a></li><li><a href="#bao-hanh">Chính&nbsp;sách bảo&nbsp;hành</a></li><li><a href="#khu-vuc">Khu&nbsp;vực phục&nbsp;vụ</a></li><li><a href="#dat-lich">Đặt&nbsp;lịch</a></li></ul></div>
+      <div><h3>Liên hệ</h3><ul><li>Hotline: <a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li>Zalo: <a href="https://zalo.me/0900000000" target="_blank" rel="noopener">0900&nbsp;000&nbsp;000</a></li><li>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</li></ul></div>
+    </div>
+    <div class="bottom"><span>© Điện&nbsp;Lạnh Phúc&nbsp;An (tên mẫu). Nội dung, giá và hình ảnh trên trang chỉ để minh họa giao diện.</span><span>Ảnh: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span></div>
+  </div>
+</footer>
+
+<div class="fl">
+  <a class="z" href="https://zalo.me/0900000000" target="_blank" rel="noopener" aria-label="Nhắn Zalo"><i>Zalo</i><span>Nhắn&nbsp;Zalo</span></a>
+  <a class="c" href="tel:0900000000" aria-label="Gọi 0900 000 000"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><span>Gọi&nbsp;ngay</span></a>
+</div>
+<a class="kt-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i></i>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></a>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+  document.querySelectorAll('form.quick, form.bform').forEach(function(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();var ok=true;
+      f.querySelectorAll('[required]').forEach(function(i){if(!i.value.trim()){ok=false;i.style.borderColor='#E2550A'}else i.style.borderColor=''});
+      if(!ok){f.querySelector('[required]').focus();return}
+      f.classList.add('sent');
+    });
+  });
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

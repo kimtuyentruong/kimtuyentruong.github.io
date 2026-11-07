@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website khoá học online – Bếp Bánh Mây</title>
+<meta name="description" content="Mẫu landing page bán khoá học online: Khoá học làm bánh kem cơ bản tại nhà – lộ trình học, giảng viên, học phí ưu đãi, câu hỏi thường gặp và form đăng ký.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8EF; --cream-2:#FBEBD9; --cocoa:#3A2318; --cocoa-2:#5B3B2C; --muted:#7D6355;
+  --berry:#D9534F; --berry-d:#B83F3B; --butter:#F5C86E; --mint:#CFE6D6; --white:#fff; --line:#EBDAC6;
+  --serif:"Fraunces", Georgia, serif; --sans:"Nunito", system-ui, sans-serif; --wrap:1160px; --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--cocoa);font:400 17px/1.7 var(--sans);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto;object-fit:cover;background:linear-gradient(135deg,#F6DCC4,#EFC9A8)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;font-weight:600;letter-spacing:-.015em}
+h1{font-size:clamp(2.4rem,5.4vw,4.3rem)}
+h2{font-size:clamp(1.9rem,3.8vw,2.9rem)}
+h3{font-size:1.3rem}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--line);border-radius:40px;padding:7px 16px;font-size:.84rem;font-weight:700;color:var(--berry-d)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--berry);display:inline-block;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(217,83,79,.18)}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 30px;border-radius:60px;background:var(--berry);color:#fff;font-weight:800;font-size:1rem;border:2px solid var(--berry);cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;white-space:nowrap;box-shadow:0 10px 24px rgba(217,83,79,.28)}
+.btn:hover{transform:translateY(-3px);background:var(--berry-d);border-color:var(--berry-d);box-shadow:0 14px 30px rgba(217,83,79,.34)}
+.btn.soft{background:transparent;color:var(--cocoa);border-color:var(--cocoa);box-shadow:none}
+.btn.soft:hover{background:var(--cocoa);color:#fff}
+.section{padding:100px 0}
+.center{text-align:center}
+.sec-title{max-width:720px;margin:0 auto 54px;text-align:center}
+.sec-title p{color:var(--muted);margin-top:14px}
+.label{font-weight:800;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--berry);display:block;margin-bottom:12px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,248,239,.9);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:1.35rem;white-space:nowrap}
+.logo svg{width:36px;height:36px}
+.menu{display:flex;gap:30px;font-weight:700;font-size:.95rem}
+.menu a{white-space:nowrap;transition:color .2s}
+.menu a:hover{color:var(--berry)}
+.nav .btn{padding:11px 22px;font-size:.92rem;box-shadow:none}
+
+/* hero */
+.hero{padding:60px 0 90px;position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);z-index:-1}
+.blob.a{width:520px;height:520px;background:var(--cream-2);right:-120px;top:-80px}
+.blob.b{width:220px;height:220px;background:var(--mint);left:-80px;bottom:40px;opacity:.7}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{margin:20px 0 18px}
+.hero h1 .hl{color:var(--berry);font-style:italic;font-weight:500}
+.hero .sub{font-size:1.12rem;color:var(--cocoa-2);max-width:34rem}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:26px 0 30px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.checks li::before{content:"✓";flex:0 0 24px;height:24px;border-radius:50%;background:var(--mint);color:#2E6B47;display:grid;place-items:center;font-size:.8rem;font-weight:800;margin-top:2px}
+.price-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:26px}
+.price-now{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--berry-d);white-space:nowrap;line-height:1}
+.price-old{color:var(--muted);text-decoration:line-through;font-size:1.1rem;white-space:nowrap}
+.save{background:var(--butter);padding:5px 12px;border-radius:30px;font-weight:800;font-size:.84rem;white-space:nowrap}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{font-size:.86rem;color:var(--muted);margin-top:16px}
+.hero-media{position:relative}
+.hero-media .main{width:100%;aspect-ratio:4/5;border-radius:200px 200px var(--r) var(--r)}
+.hero-media .small{position:absolute;width:44%;aspect-ratio:1;border-radius:50%;border:8px solid var(--cream);left:-12%;bottom:8%}
+.sticker{position:absolute;right:-6px;top:12%;background:var(--white);border-radius:18px;padding:14px 18px;box-shadow:0 14px 34px rgba(58,35,24,.12);font-weight:700;font-size:.9rem;animation:float 5s ease-in-out infinite}
+.sticker b{display:block;font-family:var(--serif);font-size:1.25rem;color:var(--berry-d)}
+@keyframes float{50%{transform:translateY(-10px)}}
+.enter{opacity:0;transform:translateY(26px);animation:enter .9s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.32s}.d4{animation-delay:.46s}.d5{animation-delay:.6s}
+@keyframes enter{to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* for who */
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.who{background:var(--white);border-radius:var(--r);padding:30px 24px;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+.who:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(58,35,24,.08)}
+.who .emo{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;margin-bottom:16px}
+.who h3{font-size:1.15rem;margin-bottom:8px}
+.who p{color:var(--muted);font-size:.95rem}
+
+/* outcomes */
+.out{background:var(--cocoa);color:#F7E9DA;border-radius:40px;margin:0 16px}
+.out-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.out h2{color:#fff}
+.out .label{color:var(--butter)}
+.out-media img{width:100%;aspect-ratio:1;border-radius:30px}
+.out-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.out-list li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px}
+.out-list b{display:block;color:#fff;font-size:1.02rem;margin-bottom:4px}
+.out-list span{font-size:.92rem;color:#D9C3AF}
+
+/* curriculum */
+.curr-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.curr-side{position:sticky;top:110px}
+.curr-meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.curr-meta div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px}
+.curr-meta b{font-family:var(--serif);font-size:1.4rem;display:block;white-space:nowrap}
+.curr-meta span{font-size:.86rem;color:var(--muted)}
+details.ch{background:var(--white);border:1px solid var(--line);border-radius:18px;margin-bottom:12px;overflow:hidden;transition:box-shadow .3s}
+details.ch[open]{box-shadow:0 14px 34px rgba(58,35,24,.08)}
+details.ch summary{list-style:none;cursor:pointer;padding:20px 24px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+details.ch summary::-webkit-details-marker{display:none}
+.ch-no{width:44px;height:44px;border-radius:14px;background:var(--cream-2);display:grid;place-items:center;font-weight:800;color:var(--berry-d)}
+.ch-t{font-weight:800;font-size:1.05rem;line-height:1.35}
+.ch-t small{display:block;font-weight:600;color:var(--muted);font-size:.84rem}
+.plus{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--cocoa);position:relative;transition:transform .3s}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--cocoa);transform:translate(-50%,-50%)}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s}
+details[open] .plus{transform:rotate(180deg)}
+details[open] .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.lessons{list-style:none;padding:0 24px 20px 84px;display:grid;gap:8px}
+.lessons li{display:flex;justify-content:space-between;gap:12px;font-size:.95rem;padding:8px 0;border-top:1px dashed var(--line)}
+.lessons li span{color:var(--muted);white-space:nowrap;font-size:.86rem}
+.free{background:var(--mint);color:#2E6B47;font-size:.72rem;font-weight:800;padding:2px 8px;border-radius:20px;margin-left:6px;white-space:nowrap}
+
+/* instructor */
+.teacher{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;background:var(--white);border-radius:40px;padding:50px;border:1px solid var(--line)}
+.teacher-media{position:relative}
+.teacher-media img{width:100%;aspect-ratio:4/5;border-radius:28px}
+.teacher-media .cap{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.92);border-radius:12px;padding:6px 12px;font-size:.76rem;font-weight:700;color:var(--muted)}
+.teacher h2 small{display:block;font-family:var(--sans);font-size:1rem;font-weight:700;color:var(--berry);letter-spacing:0;margin-top:8px}
+.teacher p{color:var(--cocoa-2);margin-top:18px}
+.creds{list-style:none;margin-top:24px;display:grid;gap:10px}
+.creds li{display:flex;gap:12px;font-weight:600}
+.creds li::before{content:"✦";color:var(--berry)}
+.note-sample{display:inline-block;margin-top:20px;font-size:.78rem;font-weight:700;color:var(--muted);border:1px dashed var(--muted);border-radius:8px;padding:4px 10px}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:28px;padding:34px 30px;display:flex;flex-direction:column;position:relative;transition:transform .3s,box-shadow .3s}
+.plan:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(58,35,24,.1)}
+.plan.hot{background:var(--cocoa);color:#F7E9DA;border-color:var(--cocoa);transform:scale(1.03)}
+.plan.hot:hover{transform:scale(1.03) translateY(-6px)}
+.plan .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--butter);color:var(--cocoa);font-weight:800;font-size:.8rem;padding:6px 16px;border-radius:30px;white-space:nowrap}
+.plan h3{font-size:1.5rem}
+.plan .desc{font-size:.94rem;color:var(--muted);margin:8px 0 22px}
+.plan.hot .desc{color:#D9C3AF}
+.plan .p{font-family:var(--serif);font-size:2.3rem;font-weight:700;line-height:1;white-space:nowrap}
+.plan .p-old{text-decoration:line-through;color:var(--muted);font-size:1rem;white-space:nowrap;margin-top:8px}
+.plan.hot .p-old{color:#BFA48E}
+.plan ul{list-style:none;margin:24px 0 30px;display:grid;gap:10px;flex:1}
+.plan li{display:flex;gap:10px;font-size:.96rem}
+.plan li::before{content:"✓";color:var(--berry);font-weight:800}
+.plan.hot li::before{color:var(--butter)}
+.plan .btn{width:100%}
+.plan:not(.hot) .btn{background:transparent;color:var(--cocoa);border-color:var(--cocoa);box-shadow:none}
+.plan:not(.hot) .btn:hover{background:var(--cocoa);color:#fff}
+.deadline{text-align:center;margin-top:30px;font-size:.92rem;color:var(--muted)}
+
+/* benefits */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.benefit{display:flex;gap:18px;padding:26px;border-radius:22px;background:var(--cream-2)}
+.benefit .ic{flex:0 0 50px;height:50px;border-radius:14px;background:var(--white);display:grid;place-items:center}
+.benefit .ic svg{width:24px;height:24px;stroke:var(--berry-d);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.benefit h3{font-size:1.1rem;margin-bottom:4px}
+.benefit p{font-size:.93rem;color:var(--muted)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:30px}
+.rev .stars{color:#E3A33B;letter-spacing:2px}
+.rev p{margin:14px 0 20px;font-size:1rem}
+.rev .who-r{display:flex;gap:12px;align-items:center}
+.rev .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff}
+.rev .who-r b{display:block;font-size:.95rem}
+.rev .who-r span{font-size:.82rem;color:var(--muted)}
+.sample-tag{display:inline-block;background:var(--butter);color:var(--cocoa);font-family:var(--sans);font-size:.8rem;font-weight:800;padding:4px 12px;border-radius:20px;vertical-align:middle;letter-spacing:0}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;font-weight:800;font-size:1.06rem;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq .ans{padding:0 50px 22px 0;color:var(--cocoa-2)}
+.faq details[open] .ans{animation:enter .45s forwards}
+
+/* register */
+.reg{background:linear-gradient(135deg,var(--berry) 0%,#E57A5A 100%);color:#fff;border-radius:40px;margin:0 16px;position:relative;overflow:hidden}
+.reg::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.08);right:-120px;top:-140px}
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.reg h2{color:#fff}
+.reg .reg-points{list-style:none;margin-top:24px;display:grid;gap:10px;font-weight:700}
+.reg .reg-points li::before{content:"✓  ";}
+.form-card{background:var(--white);color:var(--cocoa);border-radius:28px;padding:36px;box-shadow:0 30px 60px rgba(58,35,24,.2)}
+.form-card h3{font-size:1.5rem;margin-bottom:4px}
+.form-card .small{font-size:.9rem;color:var(--muted);margin-bottom:20px}
+.f{display:grid;gap:6px;margin-bottom:14px}
+.f label{font-weight:700;font-size:.9rem}
+.f input,.f select,.f textarea{width:100%;padding:13px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--cream);outline:none;transition:border .2s}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--berry)}
+.form-card .btn{width:100%;margin-top:6px}
+.thanks{display:none;text-align:center;padding:30px 10px}
+.thanks.show{display:block;animation:enter .6s forwards}
+.thanks .big{font-size:3rem}
+
+footer{padding:70px 0 120px;font-size:.92rem;color:var(--muted)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;border-top:1px solid var(--line);padding-top:50px}
+footer h4{color:var(--cocoa);font-size:1rem;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:var(--berry)}
+
+.mobile-cta{display:none}
+.sales-badge{position:fixed;left:14px;bottom:14px;z-index:80;background:#fff;color:var(--cocoa);border:1px solid var(--line);border-radius:40px;padding:8px 14px;font:700 12px/1.3 var(--sans);box-shadow:0 6px 20px rgba(0,0,0,.14);display:flex;gap:6px;align-items:center;max-width:calc(100% - 28px)}
+.sales-badge b{color:#0068FF;white-space:nowrap}
+
+@media (max-width:1024px){
+  .who-grid{grid-template-columns:repeat(2,1fr)}
+  .benefits{grid-template-columns:repeat(2,1fr)}
+  .plans{grid-template-columns:1fr 1fr}
+  .plan.hot{transform:none}.plan.hot:hover{transform:translateY(-6px)}
+  .plans .plan:last-child{grid-column:1/-1}
+  .menu{gap:20px}
+}
+@media (max-width:860px){
+  .menu{display:none}
+  .hero-grid,.out-grid,.curr-wrap,.teacher,.reg-grid{grid-template-columns:1fr}
+  .hero-media{max-width:460px;margin:0 auto}
+  .curr-side{position:static}
+  .teacher{padding:30px}
+  .revs{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .section{padding:72px 0}
+  .nav{height:66px}
+  .nav .btn{padding:9px 16px;font-size:.85rem}
+  .logo{font-size:1.15rem}.logo svg{width:30px;height:30px}
+  .hero{padding:34px 0 70px}
+  .checks{grid-template-columns:1fr}
+  .price-now{font-size:2rem}
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-media .small{left:-4%}
+  .sticker{right:4px}
+  .who-grid,.benefits,.plans,.out-list{grid-template-columns:1fr}
+  .plans .plan:last-child{grid-column:auto}
+  .out,.reg{margin:0 8px;border-radius:28px}
+  .teacher{padding:20px;border-radius:28px}
+  .lessons{padding:0 18px 18px 18px}
+  details.ch summary{padding:16px;gap:12px}
+  .ch-no{width:38px;height:38px}
+  .faq .ans{padding-right:0}
+  .form-card{padding:26px 20px}
+  .foot{grid-template-columns:1fr}
+  .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--white);border-top:1px solid var(--line);padding:10px 16px 10px;gap:12px;align-items:center;justify-content:space-between;transform:translateY(110%);transition:transform .4s}
+  .mobile-cta.show{transform:none}
+  .mobile-cta .mp{font-family:var(--serif);font-weight:700;color:var(--berry-d);font-size:1.25rem;line-height:1.1;white-space:nowrap}
+  .mobile-cta .mp small{display:block;font-family:var(--sans);font-size:.75rem;color:var(--muted);text-decoration:line-through;font-weight:600}
+  .mobile-cta .btn{padding:12px 20px;font-size:.92rem;box-shadow:none}
+  .sales-badge{bottom:76px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .enter,.reveal{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Bếp Bánh Mây – trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#D9534F"/><path d="M10 25h20v4H10zM12 25c0-6 4-10 8-10s8 4 8 10" fill="#FFF8EF"/><circle cx="20" cy="13" r="2.4" fill="#F5C86E"/></svg>Bếp&nbsp;Bánh&nbsp;Mây</a>
+    <nav class="menu">
+      <a href="#lo-trinh">Lộ&nbsp;trình học</a>
+      <a href="#giang-vien">Giảng&nbsp;viên</a>
+      <a href="#hoc-phi">Học&nbsp;phí</a>
+      <a href="#hoi-dap">Hỏi&nbsp;đáp</a>
+    </nav>
+    <a href="#dang-ky" class="btn">Đăng&nbsp;ký ngay</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill enter d1"><i></i>Khoá học online · Học trọn đời</span>
+      <h1 class="enter d2">Làm&nbsp;bánh&nbsp;kem cơ&nbsp;bản <span class="hl">tại&nbsp;nhà</span></h1>
+      <p class="sub enter d3">Từ cốt bánh bông lan mềm ẩm đến đánh kem, trang trí hoàn chỉnh một chiếc bánh sinh nhật – học qua video từng bước, không cần lò chuyên nghiệp.</p>
+      <ul class="checks enter d3">
+        <li>32 bài học video chi tiết</li>
+        <li>Công thức PDF tải về</li>
+        <li>Nhóm hỗ trợ học viên qua Zalo</li>
+        <li>Gửi ảnh bài tập để được nhận xét</li>
+      </ul>
+      <div class="price-row enter d4">
+        <span class="price-now">690.000đ</span>
+        <span class="price-old">1.290.000đ</span>
+        <span class="save">Ưu&nbsp;đãi học&nbsp;phí -46%</span>
+      </div>
+      <div class="hero-ctas enter d5">
+        <a href="#dang-ky" class="btn">Đăng&nbsp;ký ngay</a>
+        <a href="#lo-trinh" class="btn soft">Xem lộ&nbsp;trình học</a>
+      </div>
+      <p class="hero-note enter d5">Học thử miễn phí 3 bài đầu · Ưu đãi áp dụng đến hết 30/11 (nội dung mẫu)</p>
+    </div>
+    <div class="hero-media enter d3">
+      <img class="main" src="https://images.unsplash.com/photo-1604413191066-4dd20bedf486?auto=format&fit=crop&w=1200&q=80" width="900" height="1125" alt="Bánh kem phủ kem xanh, trang trí cốm màu và kem hồng">
+      <img class="small" src="https://images.unsplash.com/photo-1540660290370-8aa90e451e8a?auto=format&fit=crop&w=600&q=80" width="400" height="400" alt="Tô trộn bột với trứng và phới đánh trứng">
+      <div class="sticker"><b>Học mọi lúc</b>trên điện thoại &amp; máy tính</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:30px">
+  <div class="wrap">
+    <div class="sec-title reveal"><span class="label">Đối&nbsp;tượng học&nbsp;viên</span><h2>Khoá&nbsp;học này dành&nbsp;cho&nbsp;ai?</h2></div>
+    <div class="who-grid">
+      <div class="who reveal"><div class="emo" style="background:#FDE3E1">🎂</div><h3>Người mới bắt&nbsp;đầu</h3><p>Chưa từng làm bánh, muốn tự tay làm bánh sinh nhật cho gia đình.</p></div>
+      <div class="who reveal"><div class="emo" style="background:#FFF0CC">🏠</div><h3>Mẹ bỉm, nội&nbsp;trợ</h3><p>Muốn học trong thời gian rảnh, xem lại bao nhiêu lần cũng được.</p></div>
+      <div class="who reveal"><div class="emo" style="background:#DDF0E3">🧁</div><h3>Muốn bán bánh tại&nbsp;nhà</h3><p>Cần nền tảng chắc để bắt đầu nhận đặt bánh nhỏ cho người quen.</p></div>
+      <div class="who reveal"><div class="emo" style="background:#E8E2F6">⏱️</div><h3>Người đi&nbsp;làm bận&nbsp;rộn</h3><p>Không đến lớp được, cần lộ trình rõ ràng, mỗi bài chỉ 10–20 phút.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section out">
+  <div class="wrap out-grid">
+    <div class="out-media reveal"><img src="https://images.unsplash.com/photo-1512223792601-592a9809eed4?auto=format&fit=crop&w=1000&q=80" width="800" height="800" alt="Rắc bột cacao lên mặt bánh" loading="lazy"></div>
+    <div class="reveal">
+      <span class="label">Mục&nbsp;tiêu khoá&nbsp;học</span>
+      <h2>Sau khoá&nbsp;học, bạn tự&nbsp;tin&nbsp;làm&nbsp;được</h2>
+      <ul class="out-list">
+        <li><b>Cốt bánh bông lan</b><span>Nở đều, mềm ẩm, không bị lõm hay nứt mặt.</span></li>
+        <li><b>Kem tươi &amp; kem bơ</b><span>Đánh kem đúng độ, giữ form khi trang trí.</span></li>
+        <li><b>Phủ kem láng mịn</b><span>Chà láng thành bánh, tạo cạnh sắc gọn.</span></li>
+        <li><b>Trang trí cơ bản</b><span>Bắt viền, bắt hoa đơn giản, viết chữ lên bánh.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="lo-trinh">
+  <div class="wrap curr-wrap">
+    <div class="curr-side reveal">
+      <span class="label">Nội&nbsp;dung chương&nbsp;trình</span>
+      <h2>Lộ&nbsp;trình học 6&nbsp;chương</h2>
+      <p style="color:var(--muted);margin-top:14px">Học theo thứ tự từ dụng cụ, nguyên liệu đến thành phẩm. Mỗi chương có bài tập thực hành và checklist tự kiểm tra.</p>
+      <div class="curr-meta">
+        <div><b>32 bài</b><span>video bài giảng</span></div>
+        <div><b>Khoảng 9 giờ</b><span>tổng thời lượng</span></div>
+        <div><b>12</b><span>công thức PDF</span></div>
+        <div><b>Trọn đời</b><span>thời hạn truy cập</span></div>
+      </div>
+    </div>
+    <div>
+      <details class="ch reveal" open><summary><span class="ch-no">01</span><span class="ch-t">Chuẩn bị dụng cụ &amp; nguyên liệu<small>5 bài · 58 phút</small></span><span class="plus"></span></summary>
+        <ul class="lessons"><li>Dụng cụ cần có và cách chọn khuôn <em class="free">Học thử</em><span>12:30</span></li><li>Các loại bột, đường, bơ, kem thường dùng <em class="free">Học thử</em><span>14:05</span></li><li>Cân đo nguyên liệu chính xác<span>09:40</span></li><li>Làm quen với lò nướng gia đình<span>11:20</span></li><li>Bảo quản nguyên liệu đúng cách<span>10:15</span></li></ul></details>
+      <details class="ch reveal"><summary><span class="ch-no">02</span><span class="ch-t">Cốt bánh bông lan<small>6 bài · 1 giờ 40 phút</small></span><span class="plus"></span></summary>
+        <ul class="lessons"><li>Đánh trứng bông đúng độ <em class="free">Học thử</em><span>16:10</span></li><li>Bông lan trứng muối cơ bản<span>18:30</span></li><li>Bông lan chiffon vani<span>19:45</span></li><li>Cốt bánh cacao<span>17:20</span></li><li>Xử lý lỗi thường gặp: lõm, nứt, chai<span>15:00</span></li><li>Cắt lớp và ủ bánh<span>13:15</span></li></ul></details>
+      <details class="ch reveal"><summary><span class="ch-no">03</span><span class="ch-t">Các loại kem<small>5 bài · 1 giờ 25 phút</small></span><span class="plus"></span></summary>
+        <ul class="lessons"><li>Kem tươi whipping<span>16:40</span></li><li>Kem bơ kiểu Hàn (meringue)<span>21:10</span></li><li>Kem cheese<span>15:30</span></li><li>Pha màu kem tự nhiên<span>14:20</span></li><li>Bảo quản và làm mềm lại kem<span>12:00</span></li></ul></details>
+      <details class="ch reveal"><summary><span class="ch-no">04</span><span class="ch-t">Phủ kem &amp; tạo hình<small>5 bài · 1 giờ 30 phút</small></span><span class="plus"></span></summary>
+        <ul class="lessons"><li>Xếp lớp bánh và nhân<span>15:40</span></li><li>Phủ kem lớp mỏng (crumb coat)<span>17:10</span></li><li>Chà láng thành bánh, tạo cạnh sắc<span>22:30</span></li><li>Bánh kem tầng mini<span>19:00</span></li><li>Vận chuyển bánh an toàn<span>10:20</span></li></ul></details>
+      <details class="ch reveal"><summary><span class="ch-no">05</span><span class="ch-t">Trang trí cơ bản<small>6 bài · 1 giờ 50 phút</small></span><span class="plus"></span></summary>
+        <ul class="lessons"><li>Làm quen đui bắt kem<span>14:30</span></li><li>Bắt viền và bông kem<span>18:20</span></li><li>Bắt hoa hồng, hoa cúc đơn giản<span>24:10</span></li><li>Viết chữ lên bánh<span>16:00</span></li><li>Trang trí với trái cây tươi<span>17:40</span></li><li>Phối màu bánh theo chủ đề<span>19:30</span></li></ul></details>
+      <details class="ch reveal"><summary><span class="ch-no">06</span><span class="ch-t">Hoàn thiện &amp; định&nbsp;giá bánh<small>5 bài · 1 giờ 20 phút</small></span><span class="plus"></span></summary>
+        <ul class="lessons"><li>Bài tổng hợp: bánh sinh nhật hoàn chỉnh<span>28:00</span></li><li>Chụp ảnh bánh bằng điện thoại<span>13:30</span></li><li>Đóng hộp và bảo quản thành phẩm<span>11:10</span></li><li>Cách tính giá vốn một chiếc bánh<span>15:20</span></li><li>Gợi ý nhận đặt bánh tại nhà<span>12:40</span></li></ul></details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="giang-vien" style="padding-top:20px">
+  <div class="wrap">
+    <div class="teacher reveal">
+      <div class="teacher-media"><img src="https://images.unsplash.com/photo-1725524090474-16bb5f5ea238?auto=format&fit=crop&w=1000&q=80" width="800" height="1000" alt="Người làm bánh rắc đường lên bánh" loading="lazy"><span class="cap">Ảnh minh hoạ</span></div>
+      <div>
+        <span class="label">Giảng&nbsp;viên</span>
+        <h2>Cô Ngọc&nbsp;Hân<small>Người sáng lập Bếp Bánh Mây</small></h2>
+        <p>Cô Hân bắt đầu làm bánh từ căn bếp nhỏ của gia đình, rồi mở lớp dạy cho các mẹ trong khu phố. Cách dạy của cô chậm rãi, giải thích “vì sao” trước khi làm, để học viên tự xử lý được khi bánh gặp lỗi.</p>
+        <ul class="creds">
+          <li>Nhiều năm kinh nghiệm làm và bán bánh kem tại nhà</li>
+          <li>Trực tiếp trả lời câu hỏi trong nhóm học viên</li>
+          <li>Công thức đã điều chỉnh cho lò nướng gia đình</li>
+        </ul>
+        <span class="note-sample">Giảng viên và tiểu sử là nội dung mẫu</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hoc-phi" style="background:var(--cream-2)">
+  <div class="wrap">
+    <div class="sec-title reveal"><span class="label">Học&nbsp;phí</span><h2>Chọn gói học phù&nbsp;hợp&nbsp;với&nbsp;bạn</h2><p>Thanh toán một lần, học trọn đời. Có thể nâng cấp gói bất cứ lúc nào.</p></div>
+    <div class="plans">
+      <div class="plan reveal"><h3>Gói Cơ&nbsp;bản</h3><p class="desc">Toàn bộ 6 chương video và công thức.</p><div class="p">690.000đ</div><div class="p-old">1.290.000đ</div>
+        <ul><li>32 bài học video</li><li>12 công thức PDF</li><li>Nhóm học viên Zalo</li><li>Học trọn đời</li></ul><a href="#dang-ky" class="btn" data-plan="Gói Cơ bản">Đăng&nbsp;ký ngay</a></div>
+      <div class="plan hot reveal"><span class="ribbon">Gợi&nbsp;ý cho&nbsp;bạn</span><h3>Gói Nâng&nbsp;cao</h3><p class="desc">Thêm chuyên đề hoa kem bơ và bánh tầng.</p><div class="p">1.190.000đ</div><div class="p-old">1.990.000đ</div>
+        <ul><li>Toàn bộ Gói Cơ bản</li><li>Chuyên đề hoa kem bơ (10 bài)</li><li>Nhận xét bài tập qua ảnh</li><li>Livestream hỏi đáp hằng tháng</li></ul><a href="#dang-ky" class="btn" data-plan="Gói Nâng cao">Đăng&nbsp;ký ngay</a></div>
+      <div class="plan reveal"><h3>Gói Kèm&nbsp;1-1</h3><p class="desc">Có giảng viên theo sát trong 4 tuần.</p><div class="p">2.490.000đ</div><div class="p-old">3.500.000đ</div>
+        <ul><li>Toàn bộ Gói Nâng cao</li><li>4 buổi gọi video 1-1</li><li>Góp ý công thức, định giá bánh</li><li>Hỗ trợ ưu tiên qua Zalo</li></ul><a href="#dang-ky" class="btn" data-plan="Gói Kèm 1-1">Đăng&nbsp;ký ngay</a></div>
+    </div>
+    <p class="deadline reveal">Giá và ưu đãi là nội dung mẫu – điều chỉnh theo chương trình thực tế.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-title reveal"><span class="label">Quyền&nbsp;lợi học&nbsp;viên</span><h2>Học&nbsp;online nhưng không học&nbsp;một&nbsp;mình</h2></div>
+    <div class="benefits">
+      <div class="benefit reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></div><div><h3>Học trọn&nbsp;đời</h3><p>Thanh toán một lần, xem lại không giới hạn.</p></div></div>
+      <div class="benefit reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M11 18h2"/></svg></div><div><h3>Học trên mọi thiết&nbsp;bị</h3><p>Điện thoại, máy tính bảng hay laptop đều được.</p></div></div>
+      <div class="benefit reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg></div><div><h3>Nhóm hỗ&nbsp;trợ Zalo</h3><p>Hỏi bài, chia sẻ thành phẩm cùng các học viên khác.</p></div></div>
+      <div class="benefit reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z"/><path d="M9 11h6M9 15h6"/></svg></div><div><h3>Công&nbsp;thức PDF</h3><p>Định lượng rõ ràng, in ra dùng ngay trong bếp.</p></div></div>
+      <div class="benefit reveal"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></div><div><h3>Nhận&nbsp;xét bài&nbsp;tập</h3><p>Gửi ảnh bánh, giảng viên góp ý cách chỉnh sửa.</p></div></div>
+      <div class="benefit reveal"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 21l4-2 4 2-1-7.5"/></svg></div><div><h3>Chứng&nbsp;nhận hoàn&nbsp;thành</h3><p>Nhận chứng nhận sau khi nộp bài tổng hợp.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-title reveal"><span class="label">Cảm&nbsp;nhận học&nbsp;viên</span><h2>Học&nbsp;viên nói&nbsp;gì <span class="sample-tag">Đánh giá mẫu</span></h2></div>
+    <div class="revs">
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>“Mình chưa từng làm bánh, học xong chương 2 đã nướng được cốt bông lan không bị lõm. Cô giải thích kỹ lý do nên dễ nhớ.”</p><div class="who-r"><span class="av" style="background:#D9534F">MT</span><div><b>Học viên mẫu</b><span>Gói Cơ bản · nội dung mẫu</span></div></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>“Phần chà láng kem mình xem lại cả chục lần. Gửi ảnh vào nhóm được góp ý ngay nên tiến bộ nhanh hơn tự mày mò.”</p><div class="who-r"><span class="av" style="background:#5B3B2C">LA</span><div><b>Học viên mẫu</b><span>Gói Nâng cao · nội dung mẫu</span></div></div></div>
+      <div class="rev reveal"><div class="stars">★★★★★</div><p>“Học buổi tối sau giờ làm, mỗi bài ngắn vừa đủ. Sinh nhật con mình tự làm bánh, cả nhà rất bất ngờ.”</p><div class="who-r"><span class="av" style="background:#E3A33B">PH</span><div><b>Học viên mẫu</b><span>Gói Cơ bản · nội dung mẫu</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hoi-dap" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-title reveal"><span class="label">Hỏi&nbsp;đáp</span><h2>Câu&nbsp;hỏi thường&nbsp;gặp</h2></div>
+    <div class="faq reveal">
+      <details open><summary>Mình chưa biết gì về làm bánh, có học được không?<span class="plus"></span></summary><div class="ans">Được. Khoá học bắt đầu từ cách chọn dụng cụ, nguyên liệu và cân đo. Bạn chỉ cần làm theo từng bài theo thứ tự.</div></details>
+      <details><summary>Không có lò nướng lớn thì có học được không?<span class="plus"></span></summary><div class="ans">Công thức được điều chỉnh cho lò nướng gia đình từ 25–40 lít. Trong chương 1 có hướng dẫn làm quen nhiệt độ lò.</div></details>
+      <details><summary>Sau khi đăng ký, bao lâu thì vào học được?<span class="plus"></span></summary><div class="ans">Sau khi thanh toán, tài khoản học được gửi qua email và Zalo trong vòng 30 phút (giờ hành chính).</div></details>
+      <details><summary>Khoá học có thời hạn không?<span class="plus"></span></summary><div class="ans">Không. Bạn được học trọn đời, kể cả các bài cập nhật thêm sau này của khoá.</div></details>
+      <details><summary>Có được hoàn học phí nếu thấy không phù hợp?<span class="plus"></span></summary><div class="ans">Bạn được học thử miễn phí 3 bài đầu trước khi đăng ký. Chính sách hoàn phí cụ thể do đơn vị điều chỉnh (nội dung mẫu).</div></details>
+      <details><summary>Có những hình thức thanh toán nào?<span class="plus"></span></summary><div class="ans">Chuyển khoản ngân hàng, ví điện tử hoặc thẻ. Thông tin thanh toán được gửi sau khi bạn đăng ký.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section reg" id="dang-ky">
+  <div class="wrap reg-grid">
+    <div class="reveal">
+      <h2>Đăng&nbsp;ký học hôm&nbsp;nay, nhận ưu&nbsp;đãi học&nbsp;phí</h2>
+      <ul class="reg-points">
+        <li>Học thử miễn phí 3 bài đầu</li>
+        <li>Tặng bộ 12 công thức PDF</li>
+        <li>Vào nhóm hỗ trợ học viên ngay khi đăng ký</li>
+      </ul>
+      <p style="margin-top:24px;opacity:.9">Cần tư vấn thêm? Gọi hoặc nhắn Zalo <b style="white-space:nowrap">0900 000 000</b></p>
+    </div>
+    <div class="form-card reveal">
+      <form id="regForm">
+        <h3>Thông&nbsp;tin đăng&nbsp;ký</h3>
+        <p class="small">Bếp Bánh Mây sẽ liên hệ xác nhận trong giờ làm việc.</p>
+        <div class="f"><label for="r1">Họ và tên</label><input id="r1" required placeholder="Nguyễn Văn A"></div>
+        <div class="f"><label for="r2">Số điện thoại (Zalo)</label><input id="r2" type="tel" required placeholder="0900 000 000"></div>
+        <div class="f"><label for="r3">Email</label><input id="r3" type="email" placeholder="email@example.com"></div>
+        <div class="f"><label for="r4">Gói học</label><select id="r4"><option>Gói Cơ bản – 690.000đ</option><option selected>Gói Nâng cao – 1.190.000đ</option><option>Gói Kèm 1-1 – 2.490.000đ</option></select></div>
+        <button class="btn" type="submit">Đăng&nbsp;ký ngay</button>
+      </form>
+      <div class="thanks" id="regThanks"><div class="big">🎉</div><h3>Cảm ơn bạn đã đăng&nbsp;ký!</h3><p style="color:var(--muted);margin-top:8px">Bếp Bánh Mây sẽ gọi hoặc nhắn Zalo cho bạn để xác nhận và gửi thông tin vào học.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><a href="#" class="logo" style="color:var(--cocoa)">Bếp&nbsp;Bánh&nbsp;Mây</a><p style="margin-top:10px">Khoá học làm bánh online cho người mới bắt đầu. Thương hiệu, giảng viên và thông tin trên trang là nội dung mẫu.</p></div>
+    <div><h4>Khoá học</h4><ul><li><a href="#lo-trinh">Lộ trình học</a></li><li><a href="#hoc-phi">Học phí</a></li><li><a href="#hoi-dap">Hỏi đáp</a></li></ul></div>
+    <div><h4>Liên hệ</h4><ul><li>Hotline/Zalo: 0900 000 000</li><li>123 Đường Mẫu, Quận Mẫu, Đà Nẵng</li><li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> · <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li></ul></div>
+  </div>
+</footer>
+
+<div class="mobile-cta" id="mcta"><div class="mp">690.000đ<small>1.290.000đ</small></div><a href="#dang-ky" class="btn">Đăng&nbsp;ký ngay</a></div>
+<a class="sales-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener">Mẫu giao diện · Kim Tuyen Truong — <b>Nhận báo giá</b></a>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr'),mcta=document.getElementById('mcta'),reg=document.getElementById('dang-ky');
+  function onScroll(){var y=window.scrollY;hdr.classList.toggle('scrolled',y>10);var r=reg.getBoundingClientRect();mcta.classList.toggle('show',y>600&&r.top>window.innerHeight)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var sel=document.getElementById('r4');
+  document.querySelectorAll('[data-plan]').forEach(function(b){b.addEventListener('click',function(){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text.indexOf(b.dataset.plan)===0){sel.selectedIndex=i}}})});
+  document.getElementById('regForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('regThanks').classList.add('show')});
+  document.querySelectorAll('.faq details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open){document.querySelectorAll('.faq details').forEach(function(o){if(o!==d)o.open=false})}})});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website gội đầu dưỡng sinh – Nhà Mây</title>
+<meta name="description" content="Mẫu website cho tiệm gội đầu dưỡng sinh trẻ trung: gội thảo dược sau giờ làm, tự pha combo liệu trình, bảng giá tham khảo và đặt lịch online. Giao diện demo – Nhà Mây.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#ECEEF1;      /* nền mây */
+  --sand:#E8DFD0;      /* cát ấm */
+  --paper:#FAFAF7;     /* giấy */
+  --ink:#1E2338;       /* mực xanh đêm */
+  --ink-2:#4A4F66;     /* chữ phụ */
+  --sky:#2C40D2;       /* xanh trời, điểm nhấn duy nhất */
+  --sky-soft:#D9DEFA;
+  --line:#CDD0D8;
+  --sans:"Bricolage Grotesque", system-ui, sans-serif;
+  --serif:"Lora", Georgia, serif;
+  --gut:clamp(16px,4vw,56px);
+  --max:1320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--mist);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;font-weight:400;font-variation-settings:"opsz" 14;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover;background:#D6D3CC}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-weight:560;line-height:1.1;letter-spacing:-.022em;font-variation-settings:"opsz" 96,"wdth" 92}
+.wrap{width:min(var(--max),100% - var(--gut)*2);margin-inline:auto}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;font-weight:500;font-size:16px;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s,transform .3s,border-color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-sky{background:var(--sky);border-color:var(--sky);color:#fff}
+.btn-sky:hover{background:#2233B5;border-color:#2233B5}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;transition:background .4s,box-shadow .4s}
+.hdr.on{background:rgba(236,238,241,.82);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 rgba(30,35,56,.08)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:22px;letter-spacing:-.02em;font-variation-settings:"opsz" 48,"wdth" 85}
+.logo svg{width:40px;height:26px}
+.nav{display:flex;align-items:center;gap:4px;list-style:none}
+.nav a{display:block;padding:9px 14px;border-radius:999px;text-decoration:none;font-size:15.5px;transition:background .25s}
+.nav a:hover{background:rgba(44,64,210,.08)}
+.nav a.btn{display:inline-flex;min-height:44px;padding:0 20px;margin-left:10px;font-size:15px}
+.nav .btn:hover{background:#2233B5}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;cursor:pointer;position:relative}
+.burger i{position:absolute;left:14px;right:14px;height:1.5px;background:var(--ink);transition:transform .3s}
+.burger i:first-child{top:19px}.burger i:last-child{top:27px}
+.burger[aria-expanded="true"] i:first-child{transform:translateY(4px) rotate(45deg)}
+.burger[aria-expanded="true"] i:last-child{transform:translateY(-4px) rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:55;background:var(--paper);padding:110px var(--gut) 40px;display:flex;flex-direction:column;gap:6px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .35s,transform .35s,visibility 0s .35s}
+.sheet.open{opacity:1;visibility:visible;transform:none;transition:opacity .35s,transform .35s}
+.sheet a{font-size:34px;font-weight:540;letter-spacing:-.02em;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--line);font-variation-settings:"opsz" 72,"wdth" 85}
+.sheet .btn{margin-top:22px;font-size:18px;border-bottom:0;padding:0 26px}
+
+/* clouds */
+.cloud{position:absolute;pointer-events:none;color:#fff}
+.cloud svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 30px rgba(30,35,56,.06))}
+@keyframes drift{from{transform:translateX(-6vw)}to{transform:translateX(6vw)}}
+@keyframes drift2{from{transform:translateX(5vw)}to{transform:translateX(-5vw)}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:118px 0 56px;overflow:hidden;display:flex;align-items:center;background:linear-gradient(180deg,#E2E7F1 0%,#ECEBEA 55%,#EFE6D9 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end}
+.h-photo{grid-column:1 / span 5;grid-row:1 / span 2;position:relative;aspect-ratio:4/5;max-height:76vh;justify-self:start;width:100%}
+.h-photo .win{position:absolute;inset:0;clip-path:url(#cloudWin);-webkit-clip-path:url(#cloudWin)}
+.h-photo img{object-position:30% 20%;transform:scale(1.08);transition:transform 1.8s cubic-bezier(.2,.7,.1,1)}
+.h-photo .puff{position:absolute;width:62%;z-index:2}
+.h-photo .puff.l{left:-14%;bottom:8%}
+.h-photo .puff.r{right:-12%;top:46%;width:34%}
+.h-copy{grid-column:5 / span 8;grid-row:1;position:relative;z-index:3;padding-bottom:12px}
+.h1{font-size:clamp(44px,7.4vw,124px);font-weight:540;line-height:1.1;letter-spacing:-.035em;font-variation-settings:"opsz" 96,"wdth" 90}
+.h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.h1 .ln > span{display:inline-block}
+.h1 .ln.b{padding-left:clamp(0px,7vw,120px);color:var(--sky)}
+.h-side{grid-column:7 / span 6;grid-row:2;position:relative;z-index:3;display:grid;gap:26px;padding-top:28px}
+.lead{font-size:clamp(17px,1.4vw,20px);max-width:52ch;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.open-now{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--ink-2)}
+.open-now b{font-weight:560;color:var(--ink)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 0 rgba(44,64,210,.5);animation:ping 2.4s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(44,64,210,0)}100%{box-shadow:0 0 0 0 rgba(44,64,210,0)}}
+.hero .c1{width:min(300px,26vw);top:14%;right:3%;opacity:.9;animation:drift 26s ease-in-out infinite alternate}
+.hero .c2{width:min(180px,16vw);bottom:10%;right:4%;opacity:.7;animation:drift2 32s ease-in-out infinite alternate}
+
+/* hero entrance */
+.js .h1 .ln > span{transform:translateY(105%)}
+.js .h-side > *{opacity:0;transform:translateY(18px)}
+.js .h-photo .puff.l{transform:translate(-30%,10%) scale(1.25)}
+.js .h-photo .puff.r{transform:translate(30%,-10%) scale(1.25)}
+.js .h-photo .win{opacity:0}
+.ready .h1 .ln > span{transform:none;transition:transform 1.1s cubic-bezier(.2,.8,.1,1)}
+.ready .h1 .ln.b > span{transition-delay:.12s}
+.ready .h-side > *{opacity:1;transform:none;transition:opacity .9s .55s,transform .9s .55s cubic-bezier(.2,.8,.1,1)}
+.ready .h-side > *:nth-child(2){transition-delay:.68s}
+.ready .h-side > *:nth-child(3){transition-delay:.8s}
+.ready .h-photo .win{opacity:1;transition:opacity 1.2s .1s}
+.ready .h-photo img{transform:scale(1)}
+.ready .h-photo .puff{transform:none;transition:transform 1.6s .15s cubic-bezier(.2,.8,.1,1)}
+
+/* section basics */
+.sec{padding:clamp(88px,11vw,160px) 0}
+.h2{font-size:clamp(34px,4.8vw,70px);letter-spacing:-.03em;font-variation-settings:"opsz" 96,"wdth" 90;max-width:16ch}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:clamp(48px,6vw,88px)}
+.intro p{max-width:46ch;color:var(--ink-2);justify-self:end}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:clamp(56px,7vw,110px)}
+.s-item{position:relative}
+.s-item figure{position:relative;overflow:hidden;border-radius:28px}
+.s-item figure img{transition:transform 1.2s cubic-bezier(.2,.7,.1,1)}
+.s-item:hover figure img{transform:scale(1.04)}
+.s-item h3{font-size:clamp(26px,2.6vw,38px);margin:22px 0 10px;font-variation-settings:"opsz" 72,"wdth" 85}
+.s-item p{color:var(--ink-2);max-width:42ch}
+.s-meta{display:flex;gap:18px;margin-top:14px;font-size:15px}
+.s-meta span{padding:6px 14px;border-radius:999px;background:var(--paper);white-space:nowrap}
+.s1{grid-column:1 / span 7}.s1 figure{aspect-ratio:16/11}
+.s2{grid-column:9 / span 4;align-self:end}.s2 figure{aspect-ratio:4/5}
+.s3{grid-column:2 / span 4}.s3 figure{aspect-ratio:1/1;border-radius:200px 200px 28px 28px}
+.s4{grid-column:7 / span 6;margin-top:120px}.s4 figure{aspect-ratio:3/2}
+.s5{grid-column:4 / span 5}.s5 figure{aspect-ratio:16/10}
+.s-feature{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.herb{font-family:var(--serif);font-style:italic;font-size:16px;padding:4px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2)}
+
+/* process */
+.proc{background:var(--paper);overflow:hidden}
+.proc .h2{max-width:none}
+.tl{position:relative;display:grid;grid-template-columns:repeat(7,1fr);gap:18px;margin-top:clamp(48px,6vw,80px)}
+.tl-line{position:absolute;left:0;right:0;top:15px;height:2px;background:var(--line)}
+.tl-line i{position:absolute;inset:0;background:var(--sky);transform-origin:left;transform:scaleX(0)}
+.st{position:relative;padding-top:52px}
+.st::before{content:"";position:absolute;top:8px;left:0;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--line);transition:border-color .4s,background .4s}
+.st.lit::before{border-color:var(--sky);background:var(--sky)}
+.st time{display:block;font-weight:560;font-size:15px;color:var(--sky);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.st h3{font-size:21px;letter-spacing:-.015em;margin-bottom:8px;font-variation-settings:"opsz" 36,"wdth" 90}
+.st p{font-size:15px;color:var(--ink-2);line-height:1.55}
+.proc-note{margin-top:44px;font-size:14px;color:var(--ink-2)}
+
+/* combo builder (signature) */
+.mix{background:var(--sand);position:relative;overflow:clip}
+.mix-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,80px);align-items:start}
+.stage{position:sticky;top:max(96px,calc(50vh - 300px));aspect-ratio:1/1;max-height:640px;display:grid;place-items:center}
+.stage svg{width:100%;height:100%;overflow:visible}
+.puffs circle{transform-box:fill-box;transform-origin:center;transition:transform .7s cubic-bezier(.3,1.5,.5,1),fill .6s}
+.puffs .add{transform:scale(0)}
+.puffs .add.on{transform:scale(1)}
+.cloud-body{transition:fill .6s}
+.stage-read{position:absolute;inset:0;display:grid;place-items:center;text-align:center;pointer-events:none}
+.stage-read .t{font-size:clamp(40px,5vw,72px);font-weight:560;letter-spacing:-.03em;line-height:1.1;font-variation-settings:"opsz" 96,"wdth" 90;font-variant-numeric:tabular-nums}
+.stage-read .u{font-size:15px;color:var(--ink-2)}
+.steam path{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;opacity:0;animation:steam 4.5s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:1.5s}.steam path:nth-child(3){animation-delay:3s}
+@keyframes steam{0%{opacity:0;transform:translateY(16px)}30%{opacity:.9}100%{opacity:0;transform:translateY(-34px)}}
+.tags text{font-family:var(--sans);font-size:13px;fill:var(--ink);opacity:0;transition:opacity .4s .25s}
+.tags text.on{opacity:1}
+.mix-grid{grid-template-areas:"stage head" "stage panel"}
+.mix-head{grid-area:head}.stage{grid-area:stage}.panel{grid-area:panel}
+.mix-head h2{margin-bottom:18px}
+.mix-head p{color:var(--ink-2);max-width:44ch;margin-bottom:34px}
+.ghost circle{fill:none;stroke:rgba(30,35,56,.22);stroke-width:1.5;stroke-dasharray:4 7}
+.grp{border:0;margin-bottom:30px}
+.grp legend{font-weight:560;font-size:18px;margin-bottom:12px;font-variation-settings:"opsz" 36,"wdth" 90}
+.base{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 20px;border-radius:18px;background:rgba(250,250,247,.55);border:1.5px dashed rgba(30,35,56,.25)}
+.base b{font-weight:560}
+.opt{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:18px;background:var(--paper);margin-bottom:8px;cursor:pointer;border:1.5px solid transparent;transition:border-color .25s,background .25s,transform .25s}
+.opt:hover{transform:translateX(4px)}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt .bx{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--ink-2);display:grid;place-items:center;transition:background .25s,border-color .25s}
+.opt .bx svg{width:14px;height:14px;stroke:#fff;opacity:0;transition:opacity .2s}
+.opt .nm{flex:1;line-height:1.35}
+.opt .nm small{display:block;font-size:14px;color:var(--ink-2)}
+.opt .pr{font-weight:560;white-space:nowrap;font-variant-numeric:tabular-nums}
+.opt:has(input:checked){border-color:var(--sky)}
+.opt input:checked + .bx{background:var(--sky);border-color:var(--sky)}
+.opt input:checked + .bx svg{opacity:1}
+.opt:has(input:focus-visible){outline:3px solid var(--sky);outline-offset:2px}
+.herbs{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0}
+.chip span{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:var(--paper);border:1.5px solid transparent;font-size:15.5px;transition:border-color .25s,background .25s;white-space:nowrap}
+.chip i{width:12px;height:12px;border-radius:50%}
+.chip input:checked + span{border-color:var(--ink)}
+.chip input:focus-visible + span{outline:3px solid var(--sky);outline-offset:2px}
+.total{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 24px;border-radius:24px;background:var(--ink);color:var(--paper);margin-top:8px}
+.total .sum{font-size:clamp(28px,3vw,38px);font-weight:560;letter-spacing:-.02em;font-variation-settings:"opsz" 72,"wdth" 92;font-variant-numeric:tabular-nums;white-space:nowrap;line-height:1.1}
+.total small{display:block;font-size:14px;opacity:.75}
+.total .btn{border-color:var(--paper);background:var(--paper);color:var(--ink)}
+.total .btn:hover{background:var(--sky-soft);border-color:var(--sky-soft)}
+
+/* price list */
+.price-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,96px)}
+.pk{border-top:1.5px solid var(--ink)}
+.pk-row{display:grid;grid-template-columns:1fr auto;gap:6px 24px;padding:26px 0;border-bottom:1px solid var(--line);position:relative;transition:padding .35s}
+.pk-row::before{content:"";position:absolute;inset:0 -18px;border-radius:20px;background:var(--paper);opacity:0;transform:scale(.98);transition:opacity .35s,transform .35s;z-index:-1}
+.pk-row:hover::before{opacity:1;transform:none}
+.pk-row h3{font-size:clamp(26px,2.6vw,36px);font-variation-settings:"opsz" 72,"wdth" 84}
+.pk-row .p{font-size:clamp(22px,2vw,28px);font-weight:560;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.2}
+.pk-row .d{grid-column:1 / -1;color:var(--ink-2);max-width:56ch;font-size:16px}
+.pk-row .time{color:var(--sky);font-weight:500;font-size:15px}
+.pk{isolation:isolate}
+.ala h3{font-size:22px;margin-bottom:6px;font-variation-settings:"opsz" 36,"wdth" 88}
+.ala ul{list-style:none;margin-top:14px}
+.ala li{display:flex;align-items:baseline;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16.5px}
+.ala li .n{white-space:nowrap}
+.ala li .lead-dots{flex:1;border-bottom:1.5px dotted rgba(30,35,56,.3);transform:translateY(-4px);min-width:20px}
+.ala li .m{color:var(--ink-2);font-size:14.5px;white-space:nowrap}
+.ala li .v{font-weight:560;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ala .fine{margin-top:18px;font-size:14px;color:var(--ink-2)}
+
+/* story */
+.story{background:var(--paper)}
+.story-grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:center}
+.story-img{grid-column:1 / span 6;position:relative;aspect-ratio:5/6;border-radius:28px;overflow:hidden}
+.story-img img{height:118%;margin-top:-9%}
+.story-small{position:absolute;right:-14%;bottom:-8%;width:44%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:8px solid var(--paper);z-index:2}
+.story-wrap{grid-column:1 / span 6;position:relative}
+.story-txt{grid-column:8 / span 5}
+.story-txt p{margin-top:20px;color:var(--ink-2);max-width:48ch}
+.story-txt .q{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2vw,26px);line-height:1.5;color:var(--ink);margin-top:30px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+.facts b{display:block;font-weight:560;font-size:17px}
+.facts span{font-size:15px;color:var(--ink-2)}
+
+/* gallery */
+.gal{padding-bottom:clamp(88px,11vw,160px)}
+.gal-top{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px}
+.gal-ctl{display:flex;gap:10px}
+.gal-ctl button{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;cursor:pointer;display:grid;place-items:center;transition:background .25s,color .25s}
+.gal-ctl button:hover{background:var(--ink);color:var(--paper)}
+.gal-ctl svg{width:20px;height:20px}
+.track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);padding:0 var(--gut) 10px;scrollbar-width:none;cursor:grab}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}
+.track figure{flex:none;scroll-snap-align:start;border-radius:24px;overflow:hidden;height:clamp(300px,36vw,500px);position:relative}
+.track figure:nth-child(odd){margin-top:40px;height:clamp(260px,30vw,440px)}
+.track figure img{pointer-events:none;user-select:none}
+.track figcaption{position:absolute;left:14px;bottom:14px;background:rgba(250,250,247,.9);padding:6px 12px;border-radius:999px;font-size:14px}
+.w-a{aspect-ratio:4/5}.w-b{aspect-ratio:3/2}.w-c{aspect-ratio:1/1}
+
+/* reviews */
+.rev{background:var(--mist)}
+.rev-grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;row-gap:56px}
+.rv blockquote{font-family:var(--serif);line-height:1.5}
+.rv cite{display:block;font-style:normal;margin-top:16px;font-size:15px;color:var(--ink-2)}
+.rv cite b{color:var(--ink);font-weight:560}
+.rv1{grid-column:1 / span 7}.rv1 blockquote{font-size:clamp(24px,2.6vw,36px);letter-spacing:-.01em}
+.rv2{grid-column:9 / span 4;align-self:end}.rv2 blockquote{font-size:19px}
+.rv3{grid-column:3 / span 6}.rv3 blockquote{font-size:clamp(20px,1.8vw,24px)}
+.badge-sample{display:inline-block;margin-top:8px;font-size:13px;padding:3px 10px;border-radius:999px;background:var(--sky-soft);color:var(--sky);font-weight:500}
+
+/* booking */
+.book{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+.book .h2{color:var(--paper)}
+.book-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,96px)}
+.info p{color:rgba(250,250,247,.75);max-width:42ch;margin-top:18px}
+.info dl{margin-top:40px;display:grid;gap:22px}
+.info dt{font-size:14px;color:rgba(250,250,247,.6)}
+.info dd{font-size:19px;margin-top:2px}
+.info dd a{text-decoration:none;border-bottom:1px solid rgba(250,250,247,.4)}
+.hours{display:grid;grid-template-columns:auto auto;gap:4px 28px;justify-content:start}
+.form{background:var(--paper);color:var(--ink);border-radius:32px;padding:clamp(24px,4vw,48px);position:relative}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1 / -1}
+.f label{font-size:14.5px;font-weight:500}
+.f input,.f select,.f textarea{width:100%;min-height:52px;padding:12px 16px;border-radius:14px;border:1.5px solid var(--line);background:#fff;font-size:16px;transition:border-color .2s}
+.f textarea{min-height:96px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--sky)}
+.f .err{font-size:13.5px;color:#B3261E;min-height:0;display:none}
+.f.bad input,.f.bad select{border-color:#B3261E}
+.f.bad .err{display:block}
+.form .btn{margin-top:20px;width:100%}
+.form .note{font-size:13.5px;color:var(--ink-2);margin-top:12px;text-align:center}
+.thanks{display:none;text-align:center;padding:40px 10px}
+.thanks svg{width:120px;margin:0 auto 18px}
+.thanks h3{font-size:clamp(28px,3vw,38px);margin-bottom:12px}
+.thanks p{color:var(--ink-2);max-width:40ch;margin:0 auto}
+.form.done .fgrid,.form.done .btn,.form.done .note{display:none}
+.form.done .thanks{display:block}
+.book .c3{width:380px;top:-60px;right:-80px;opacity:.06;animation:drift 30s ease-in-out infinite alternate}
+
+/* footer */
+.ft{background:var(--mist);padding:72px 0 120px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.ft h3{font-size:16px;font-weight:560;margin-bottom:12px;letter-spacing:0}
+.ft ul{list-style:none;display:grid;gap:6px;color:var(--ink-2)}
+.ft a{text-decoration:none}
+.ft a:hover{color:var(--sky)}
+.ft .big{font-size:clamp(64px,15vw,240px);font-weight:560;letter-spacing:-.045em;line-height:1.1;font-variation-settings:"opsz" 96,"wdth" 88;margin-top:60px;color:var(--ink)}
+.ft .disc{margin-top:28px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-2);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* sales pill */
+.sale{position:fixed;left:16px;bottom:16px;z-index:70;display:flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;background:var(--paper);color:var(--ink);text-decoration:none;font-size:13.5px;box-shadow:0 12px 30px -10px rgba(30,35,56,.35);border:1px solid rgba(30,35,56,.08);max-width:calc(100vw - 32px);transition:transform .3s}
+.sale:hover{transform:translateY(-2px)}
+.sale .ic{flex:none;width:32px;height:32px;border-radius:50%;background:var(--sky);display:grid;place-items:center}
+.sale .ic svg{width:20px;height:13px}
+.sale b{font-weight:560;color:var(--sky);white-space:nowrap}
+
+/* reveal */
+.js .rv-up{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s cubic-bezier(.2,.8,.1,1)}
+.js .rv-up.in{opacity:1;transform:none}
+.par{will-change:transform}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav{display:none}.burger{display:block}
+  .tl{grid-template-columns:repeat(4,1fr);row-gap:40px}
+  .tl-line{display:none}
+  .st::before{background:var(--sky);border-color:var(--sky)}
+}
+@media (max-width:900px){
+  .hero{min-height:auto;padding-top:104px}
+  .hero .wrap{grid-template-columns:1fr;row-gap:0}
+  .h-copy{grid-column:1;grid-row:1}
+  .h-photo{grid-column:1;grid-row:2;width:62%;max-width:520px;max-height:none;justify-self:end;margin-top:-6px}
+  .h-side{grid-column:1;grid-row:3}
+  .h1 .ln.b{padding-left:0}
+  .intro{grid-template-columns:1fr;gap:18px}
+  .intro p{justify-self:start}
+  .svc{grid-template-columns:1fr;row-gap:56px}
+  .s1,.s2,.s3,.s4,.s5{grid-column:1;margin-top:0}
+  .s2{width:82%;justify-self:end}
+  .s3{width:82%}
+  .mix-grid{grid-template-columns:1fr;grid-template-areas:"head" "stage" "panel";row-gap:0}
+  .stage{position:sticky;top:76px;z-index:5;height:230px;max-height:none;aspect-ratio:auto;width:auto;margin:0 calc(var(--gut)*-1) 18px;background:var(--sand);padding:6px 0}
+  .stage svg{height:220px}
+  .stage-read .t{font-size:34px}
+  .stage-read .u{font-size:13px}
+  .tags{display:none}
+  .price-grid{grid-template-columns:1fr}
+  .story-grid{grid-template-columns:1fr;row-gap:80px}
+  .story-wrap,.story-txt{grid-column:1}
+  .story-wrap{width:84%}
+  .rev-grid{grid-template-columns:1fr;row-gap:44px}
+  .rv1,.rv2,.rv3{grid-column:1}
+  .book-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .ft-grid > :first-child{grid-column:1 / -1}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .tl{grid-template-columns:1fr;row-gap:0}
+  .st{padding:0 0 26px 34px;border-left:2px solid var(--line);margin-left:7px}
+  .st::before{left:-9px;top:2px}
+  .st:last-child{border-left-color:transparent}
+  .fgrid{grid-template-columns:1fr}
+  .h-photo{width:74%}
+  .hero .c1{width:240px;top:auto;bottom:30%;right:-60px}
+  .hero .c2{display:none}
+  .gal-ctl{display:none}
+  .track figure,.track figure:nth-child(odd){height:300px;margin-top:0}
+  .h1{font-size:14.6vw}
+  .ala li{display:grid;grid-template-columns:1fr auto;column-gap:12px}
+  .ala li .lead-dots{display:none}
+  .ala li .n{white-space:normal;grid-column:1;grid-row:1}
+  .ala li .v{grid-column:2;grid-row:1}
+  .ala li .m{grid-column:1;grid-row:2}
+  .total{flex-direction:column;align-items:stretch}
+  .total .btn{width:100%}
+  .sale{font-size:12px;padding:6px 12px 6px 6px;gap:8px}
+  .sale .ic{width:28px;height:28px}
+  .facts{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .h1 .ln > span,.js .h-side > *,.js .rv-up,.js .h-photo .puff,.js .h-photo .win{opacity:1!important;transform:none!important}
+  .h-photo img{transform:none!important}
+  .puffs .add.on{transform:scale(1)}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');document.body.classList.add('js')</script>
+
+<!-- shared SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="cloudWin" clipPathUnits="objectBoundingBox">
+      <rect x="0" y="0.26" width="1" height="0.74" rx="0.09" ry="0.07"/>
+      <ellipse cx="0.2" cy="0.3" rx="0.2" ry="0.16"/>
+      <ellipse cx="0.5" cy="0.18" rx="0.28" ry="0.18"/>
+      <ellipse cx="0.82" cy="0.29" rx="0.18" ry="0.15"/>
+    </clipPath>
+    <symbol id="cl" viewBox="0 0 200 110"><path fill="currentColor" d="M44 104h118a34 34 0 0 0 4-68 46 46 0 0 0-86-14A34 34 0 0 0 30 52a26 26 0 0 0 14 52z"/></symbol>
+  </defs>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Nhà Mây – về đầu trang">
+      <svg viewBox="0 0 200 110" aria-hidden="true"><use href="#cl" style="color:var(--sky)"/></svg>
+      Nhà&nbsp;Mây
+    </a>
+    <ul class="nav">
+      <li><a href="#lieu-trinh">Liệu&nbsp;trình</a></li>
+      <li><a href="#pha-combo">Tự&nbsp;pha combo</a></li>
+      <li><a href="#bang-gia">Bảng&nbsp;giá</a></li>
+      <li><a href="#khong-gian">Không&nbsp;gian</a></li>
+      <li><a href="#dat-lich" class="btn btn-sky">Đặt&nbsp;lịch</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="sheet" id="sheet" aria-label="Menu điện thoại">
+  <a href="#lieu-trinh">Liệu&nbsp;trình</a>
+  <a href="#pha-combo">Tự&nbsp;pha combo</a>
+  <a href="#bang-gia">Bảng&nbsp;giá</a>
+  <a href="#khong-gian">Không&nbsp;gian</a>
+  <a href="#danh-gia">Đánh&nbsp;giá</a>
+  <a href="#dat-lich" class="btn btn-sky">Đặt&nbsp;lịch</a>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="cloud c1" aria-hidden="true"><svg viewBox="0 0 200 110"><use href="#cl"/></svg></div>
+  <div class="cloud c2" aria-hidden="true"><svg viewBox="0 0 200 110"><use href="#cl"/></svg></div>
+  <div class="wrap">
+    <div class="h-photo">
+      <div class="win"><img src="https://images.unsplash.com/photo-1759725415895-775562df4088?auto=format&fit=crop&w=1100&q=80" width="1100" height="1375" alt="Cô gái trẻ búi tóc gọn, ngước nhìn lên trong ánh sáng dịu nhẹ" fetchpriority="high"></div>
+      <div class="cloud puff l" aria-hidden="true"><svg viewBox="0 0 200 110"><use href="#cl"/></svg></div>
+      <div class="cloud puff r" aria-hidden="true"><svg viewBox="0 0 200 110"><use href="#cl"/></svg></div>
+    </div>
+    <div class="h-copy">
+      <h1 class="h1" id="h1">
+        <span class="ln"><span>Tan&nbsp;ca&nbsp;rồi,</span></span>
+        <span class="ln b"><span>lên&nbsp;mây gội&nbsp;đầu.</span></span>
+      </h1>
+    </div>
+    <div class="h-side">
+      <p class="lead">Gội đầu dưỡng sinh bằng thảo dược nấu mỗi ngày, massage đầu và cổ vai gáy cho dân văn phòng ngồi máy tính cả ngày. Ghé sau giờ làm, nằm xuống, để Nhà Mây lo phần còn lại.</p>
+      <div class="cta">
+        <a href="#dat-lich" class="btn btn-sky">Đặt&nbsp;lịch tối&nbsp;nay</a>
+        <a href="#pha-combo" class="btn btn-ghost">Tự&nbsp;pha combo</a>
+      </div>
+      <p class="open-now"><span class="dot" aria-hidden="true"></span><span>Mở cửa đến <b>22:00</b> mỗi ngày, kể cả cuối tuần</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="lieu-trinh" aria-labelledby="t-svc">
+  <div class="wrap">
+    <div class="intro rv-up">
+      <h2 class="h2" id="t-svc">Năm&nbsp;cách để đầu óc nhẹ&nbsp;tênh</h2>
+      <p>Mỗi liệu trình đều bắt đầu bằng gội thảo dược. Bạn có thể đi một món, hoặc ghép thêm massage, ngâm chân, ủ tóc tùy hôm đó mỏi chỗ nào.</p>
+    </div>
+    <div class="svc">
+      <article class="s-item s1 rv-up">
+        <figure><img class="par" data-speed="0.06" src="https://images.unsplash.com/photo-1791714887492-d0fe7f9e9993?auto=format&fit=crop&w=1200&q=80" width="1200" height="825" loading="lazy" alt="Kỹ thuật viên gội đầu cho khách tại bồn gội màu trắng"></figure>
+        <h3>Gội&nbsp;đầu dưỡng&nbsp;sinh thảo&nbsp;dược</h3>
+        <p>Khai huyệt, ấn huyệt toàn đầu, gội hai lần bằng nước thảo dược nấu tại tiệm, quấn khăn nóng rồi chải đầu theo kinh lạc.</p>
+        <div class="s-feature"><span class="herb">bồ kết</span><span class="herb">vỏ bưởi</span><span class="herb">hương nhu</span><span class="herb">sả</span></div>
+        <div class="s-meta"><span>45&nbsp;phút</span><span>từ 129.000đ</span></div>
+      </article>
+      <article class="s-item s2 rv-up">
+        <figure><img src="https://images.unsplash.com/photo-1757066033634-bbbf874ce525?auto=format&fit=crop&w=800&q=80" width="800" height="1000" loading="lazy" alt="Khách nằm thư giãn trên gối, được massage vùng đầu và gáy"></figure>
+        <h3>Massage cổ&nbsp;vai&nbsp;gáy</h3>
+        <p>Day ấn theo huyệt đạo vùng cổ, vai, gáy, chỗ hay mỏi nhất sau tám tiếng ngồi máy tính.</p>
+        <div class="s-meta"><span>20&nbsp;phút</span><span>60.000đ</span></div>
+      </article>
+      <article class="s-item s3 rv-up">
+        <figure><img src="https://images.unsplash.com/photo-1717160676422-155f41965293?auto=format&fit=crop&w=800&q=80" width="800" height="800" loading="lazy" alt="Khách nằm nhắm mắt, đội mũ hấp ủ tóc, hơi nước bốc nhẹ"></figure>
+        <h3>Hấp&nbsp;ủ&nbsp;tóc thảo&nbsp;dược</h3>
+        <p>Ủ tinh dầu và máy hấp giúp tóc mềm, da đầu ấm lên, rất hợp những hôm trời mưa.</p>
+        <div class="s-meta"><span>15&nbsp;phút</span><span>50.000đ</span></div>
+      </article>
+      <article class="s-item s4 rv-up">
+        <figure><img class="par" data-speed="0.05" src="https://images.unsplash.com/photo-1675159364615-38e1f6b62282?auto=format&fit=crop&w=1100&q=80" width="1100" height="733" loading="lazy" alt="Đôi tay massage bàn chân với dầu trên khăn trắng"></figure>
+        <h3>Ngâm&nbsp;chân thảo&nbsp;dược</h3>
+        <p>Nước ngâm gừng, sả, ngải cứu ấm vừa phải, kèm vài động tác bấm huyệt bàn chân trong lúc chờ ủ tóc.</p>
+        <div class="s-meta"><span>20&nbsp;phút</span><span>50.000đ</span></div>
+      </article>
+      <article class="s-item s5 rv-up">
+        <figure><img src="https://images.unsplash.com/photo-1741934023052-26baf5535088?auto=format&fit=crop&w=1000&q=80" width="1000" height="625" loading="lazy" alt="Khách nhắm mắt khi được massage mặt nhẹ nhàng"></figure>
+        <h3>Đắp&nbsp;mặt&nbsp;nạ thư&nbsp;giãn</h3>
+        <p>Làm sạch nhẹ, đắp mặt nạ dịu da và massage mặt trong lúc tóc đang ủ. Không nặn mụn, không bán thêm sản phẩm.</p>
+        <div class="s-meta"><span>15&nbsp;phút</span><span>40.000đ</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec proc" aria-labelledby="t-proc">
+  <div class="wrap">
+    <div class="intro rv-up">
+      <h2 class="h2" id="t-proc">Một&nbsp;buổi gội 60&nbsp;phút</h2>
+      <p>Gói Tan ca đi theo đúng thứ tự này. Bạn chỉ cần nằm xuống và báo kỹ thuật viên lực tay mạnh hay nhẹ.</p>
+    </div>
+    <div class="tl" id="tl">
+      <div class="tl-line" aria-hidden="true"><i id="tlFill"></i></div>
+      <div class="st"><time>Phút 0</time><h3>Khai&nbsp;huyệt</h3><p>Làm mềm cơ đầu và vùng cổ vai gáy trước khi gội.</p></div>
+      <div class="st"><time>Phút 5</time><h3>Ấn&nbsp;huyệt đầu</h3><p>Day ấn toàn bộ vùng đầu, thái dương, sau gáy.</p></div>
+      <div class="st"><time>Phút 15</time><h3>Xông&nbsp;hơi tinh&nbsp;dầu</h3><p>Hơi ấm giúp da đầu thông thoáng, dễ chịu.</p></div>
+      <div class="st"><time>Phút 20</time><h3>Gội lần&nbsp;một</h3><p>Nước thảo dược, sau đó quấn khăn nóng quanh đầu và gáy.</p></div>
+      <div class="st"><time>Phút 30</time><h3>Massage cổ&nbsp;vai&nbsp;gáy</h3><p>Giảm căng cơ cho dân ngồi máy tính lâu.</p></div>
+      <div class="st"><time>Phút 45</time><h3>Gội lần&nbsp;hai</h3><p>Dầu gội thảo dược, chải đầu theo kinh lạc, xả sạch.</p></div>
+      <div class="st"><time>Phút 55</time><h3>Sấy&nbsp;khô, uống&nbsp;trà</h3><p>Sấy gọn tóc, mời một ly trà gừng ấm trước khi về.</p></div>
+    </div>
+    <p class="proc-note">Thời lượng từng bước là nội dung mẫu, tiệm thật có thể điều chỉnh.</p>
+  </div>
+</section>
+
+<!-- COMBO BUILDER (signature) -->
+<section class="sec mix" id="pha-combo" aria-labelledby="t-mix">
+  <div class="wrap mix-grid">
+    <div class="mix-head">
+      <h2 class="h2" id="t-mix">Tự&nbsp;pha combo của&nbsp;bạn</h2>
+      <p>Chọn nước gội, thêm món muốn làm. Đám mây phồng lên theo từng lựa chọn, giá và thời gian tự cộng.</p>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <svg viewBox="0 0 500 500" id="cloudArt">
+        <g class="steam" transform="translate(0,0)">
+          <path d="M210 120c-14-18 14-30 0-48"/><path d="M250 112c-14-18 14-30 0-48"/><path d="M290 120c-14-18 14-30 0-48"/>
+        </g>
+        <g class="ghost">
+          <circle cx="330" cy="190" r="70"/><circle cx="96" cy="320" r="58"/><circle cx="170" cy="200" r="64"/><circle cx="410" cy="320" r="54"/><circle cx="252" cy="370" r="66"/>
+        </g>
+        <g class="puffs">
+          <circle class="cloud-body" cx="250" cy="270" r="118" fill="#fff"/>
+          <circle class="cloud-body" cx="160" cy="300" r="78" fill="#fff"/>
+          <circle class="cloud-body" cx="340" cy="300" r="82" fill="#fff"/>
+          <rect class="cloud-body" x="150" y="290" width="200" height="88" rx="40" fill="#fff"/>
+          <circle class="add" data-k="massage" cx="330" cy="190" r="70" fill="#fff"/>
+          <circle class="add" data-k="chan" cx="96" cy="320" r="58" fill="#fff"/>
+          <circle class="add" data-k="u" cx="170" cy="200" r="64" fill="#fff"/>
+          <circle class="add" data-k="mat" cx="410" cy="320" r="54" fill="#fff"/>
+          <circle class="add" data-k="da" cx="252" cy="370" r="66" fill="#fff"/>
+        </g>
+        <g class="tags">
+          <text data-k="massage" x="372" y="118">+ massage</text>
+          <text data-k="chan" x="24" y="250">+ ngâm chân</text>
+          <text data-k="u" x="92" y="124">+ ủ tóc</text>
+          <text data-k="mat" x="418" y="252">+ mặt nạ</text>
+          <text data-k="da" x="210" y="462">+ đá nóng</text>
+        </g>
+      </svg>
+      <div class="stage-read"><div><div class="t" id="tMin">45&nbsp;phút</div><div class="u" id="tHerb">nước gội bồ kết, hương nhu</div></div></div>
+    </div>
+
+    <form class="panel" id="mixForm" onsubmit="return false">
+      <div class="grp">
+        <div class="base"><span><b>Gội đầu dưỡng sinh</b><br><small style="color:var(--ink-2)">Món chính, 45 phút</small></span><b style="white-space:nowrap">129.000đ</b></div>
+      </div>
+      <fieldset class="grp">
+        <legend>Nước gội hôm nay</legend>
+        <div class="herbs">
+          <label class="chip"><input type="radio" name="herb" value="bồ kết, hương nhu" data-c="#FFFBF4" checked><span><i style="background:#9C7A55"></i>Bồ&nbsp;kết – hương&nbsp;nhu</span></label>
+          <label class="chip"><input type="radio" name="herb" value="vỏ bưởi, sả" data-c="#F8FCEE"><span><i style="background:#9DB35A"></i>Vỏ&nbsp;bưởi – sả</span></label>
+          <label class="chip"><input type="radio" name="herb" value="gừng, ngải cứu" data-c="#FFF9E6"><span><i style="background:#D7A93C"></i>Gừng – ngải&nbsp;cứu</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="grp">
+        <legend>Thêm món</legend>
+        <label class="opt"><input type="checkbox" name="add" value="massage" data-p="60000" data-m="20" data-n="Massage cổ vai gáy"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><span class="nm">Massage cổ&nbsp;vai&nbsp;gáy<small>20 phút</small></span><span class="pr">+60.000đ</span></label>
+        <label class="opt"><input type="checkbox" name="add" value="u" data-p="50000" data-m="15" data-n="Hấp ủ tóc thảo dược"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><span class="nm">Hấp&nbsp;ủ&nbsp;tóc thảo&nbsp;dược<small>15 phút</small></span><span class="pr">+50.000đ</span></label>
+        <label class="opt"><input type="checkbox" name="add" value="chan" data-p="50000" data-m="20" data-n="Ngâm chân thảo dược"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><span class="nm">Ngâm&nbsp;chân thảo&nbsp;dược<small>20 phút</small></span><span class="pr">+50.000đ</span></label>
+        <label class="opt"><input type="checkbox" name="add" value="mat" data-p="40000" data-m="15" data-n="Đắp mặt nạ thư giãn"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><span class="nm">Đắp&nbsp;mặt&nbsp;nạ thư&nbsp;giãn<small>15 phút</small></span><span class="pr">+40.000đ</span></label>
+        <label class="opt"><input type="checkbox" name="add" value="da" data-p="60000" data-m="15" data-n="Chườm đá nóng vai gáy"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><span class="nm">Chườm đá&nbsp;nóng vai&nbsp;gáy<small>15 phút</small></span><span class="pr">+60.000đ</span></label>
+      </fieldset>
+      <div class="total" aria-live="polite">
+        <div><small>Combo của bạn</small><span class="sum" id="sum">129.000đ</span></div>
+        <button type="button" class="btn" id="useMix">Đặt&nbsp;combo&nbsp;này</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="sec" id="bang-gia" aria-labelledby="t-price">
+  <div class="wrap">
+    <div class="intro rv-up">
+      <h2 class="h2" id="t-price">Bảng&nbsp;giá tham&nbsp;khảo</h2>
+      <p>Giá niêm yết, không phụ thu, không chèo kéo mua thêm. Ba gói dưới đây là những lựa chọn khách hay đặt sau giờ làm.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pk">
+        <div class="pk-row"><h3>Gói Ghé&nbsp;nhanh</h3><span class="p">129.000đ</span><p class="d"><span class="time">45&nbsp;phút.</span> Gội dưỡng sinh thảo dược hai lần, ấn huyệt đầu, khăn nóng, sấy khô. Hợp giờ nghỉ trưa.</p></div>
+        <div class="pk-row"><h3>Gói Tan&nbsp;ca</h3><span class="p">189.000đ</span><p class="d"><span class="time">60&nbsp;phút.</span> Thêm xông hơi tinh dầu và massage cổ vai gáy, kết thúc bằng một ly trà gừng ấm.</p></div>
+        <div class="pk-row"><h3>Gói Trọn&nbsp;buổi&nbsp;tối</h3><span class="p">299.000đ</span><p class="d"><span class="time">90&nbsp;phút.</span> Gói Tan ca, cộng ngâm chân thảo dược, hấp ủ tóc và đắp mặt nạ thư giãn.</p></div>
+      </div>
+      <div class="ala rv-up">
+        <h3>Dịch&nbsp;vụ lẻ</h3>
+        <ul>
+          <li><span class="n">Gội nhanh, sấy khô</span><span class="lead-dots"></span><span class="m">30&nbsp;phút</span><span class="v">69.000đ</span></li>
+          <li><span class="n">Gội dưỡng sinh cho nam</span><span class="lead-dots"></span><span class="m">45&nbsp;phút</span><span class="v">119.000đ</span></li>
+          <li><span class="n">Massage cổ vai gáy</span><span class="lead-dots"></span><span class="m">20&nbsp;phút</span><span class="v">60.000đ</span></li>
+          <li><span class="n">Ngâm chân thảo dược</span><span class="lead-dots"></span><span class="m">20&nbsp;phút</span><span class="v">50.000đ</span></li>
+          <li><span class="n">Hấp ủ tóc thảo dược</span><span class="lead-dots"></span><span class="m">15&nbsp;phút</span><span class="v">50.000đ</span></li>
+          <li><span class="n">Đắp mặt nạ thư giãn</span><span class="lead-dots"></span><span class="m">15&nbsp;phút</span><span class="v">40.000đ</span></li>
+          <li><span class="n">Chườm đá nóng vai gáy</span><span class="lead-dots"></span><span class="m">15&nbsp;phút</span><span class="v">60.000đ</span></li>
+        </ul>
+        <p class="fine">Giá mẫu để tham khảo, đã gồm khăn, nước gội và trà. Thanh toán tiền mặt hoặc chuyển khoản.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY / SPACE -->
+<section class="sec story" id="khong-gian" aria-labelledby="t-story">
+  <div class="wrap story-grid">
+    <div class="story-wrap rv-up">
+      <div class="story-img"><img class="par" data-speed="0.08" src="https://images.unsplash.com/photo-1709316010508-6c86856540e4?auto=format&fit=crop&w=1000&q=80" width="1000" height="1200" loading="lazy" alt="Khách nằm ngả trên ghế gội, mắt nhắm thư giãn"></div>
+      <div class="story-small"><img src="https://images.unsplash.com/photo-1574421233376-06f2ccf017f7?auto=format&fit=crop&w=600&q=80" width="600" height="600" loading="lazy" alt="Khăn bông xếp gọn cạnh chậu cây nhỏ bên cửa sổ"></div>
+    </div>
+    <div class="story-txt rv-up">
+      <h2 class="h2" id="t-story">Một&nbsp;căn phòng sáng, đủ&nbsp;yên để ngủ&nbsp;quên</h2>
+      <p>Nhà Mây bắt đầu từ một câu hỏi rất văn phòng: tan làm lúc sáu giờ, đi đâu để đầu óc được nghỉ mà không phải đặt lịch trước cả tuần? Vậy là có một tiệm gội nhỏ, mở muộn, giá rõ ràng.</p>
+      <p>Thảo dược được nấu mỗi sáng. Khăn giặt, sấy riêng cho từng khách. Ghế gội nằm ngả, đèn vàng dịu, nhạc nhỏ vừa đủ.</p>
+      <p class="q">“Không cần nói chuyện nếu bạn mệt. Chỉ cần nói lực tay mạnh hay nhẹ.”</p>
+      <div class="facts">
+        <div><b>Phòng riêng cho nam, nữ</b><span>Có rèm che từng giường</span></div>
+        <div><b>Mở cửa đến 22:00</b><span>Kể cả thứ bảy, chủ nhật</span></div>
+        <div><b>Nước gội nấu trong ngày</b><span>Bồ kết, bưởi, sả, gừng</span></div>
+        <div><b>Có chỗ gửi xe máy</b><span>Miễn phí cho khách</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec gal" aria-labelledby="t-gal">
+  <div class="wrap gal-top">
+    <h2 class="h2" id="t-gal">Ghé&nbsp;qua một&nbsp;vòng</h2>
+    <div class="gal-ctl">
+      <button type="button" id="gPrev" aria-label="Ảnh trước"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" id="gNext" aria-label="Ảnh tiếp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="track" id="track" tabindex="0" aria-label="Bộ ảnh không gian, kéo ngang để xem">
+    <figure class="w-a"><img src="https://images.unsplash.com/photo-1615227875116-ae28a77814fb?auto=format&fit=crop&w=800&q=80" width="800" height="1000" loading="lazy" alt="Ly trà thảo mộc trong nắng chiều trên bàn gỗ"><figcaption>Trà gừng sau gội</figcaption></figure>
+    <figure class="w-b"><img src="https://images.unsplash.com/photo-1555820585-c5ae44394b79?auto=format&fit=crop&w=1000&q=80" width="1000" height="667" loading="lazy" alt="Gương mặt khách nhắm mắt thư thái dưới ánh đèn vàng dịu"><figcaption>Thả lỏng</figcaption></figure>
+    <figure class="w-c"><img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&w=900&q=80" width="900" height="900" loading="lazy" alt="Bộ ấm chén trà trên khay gỗ cạnh cửa sổ"><figcaption>Góc chờ</figcaption></figure>
+    <figure class="w-a"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80" width="800" height="1000" loading="lazy" alt="Đá nóng đặt dọc lưng khách bên những bông hoa trắng"><figcaption>Chườm đá nóng</figcaption></figure>
+    <figure class="w-b"><img src="https://images.unsplash.com/photo-1639298109207-5a9ccc254481?auto=format&fit=crop&w=1000&q=80" width="1000" height="667" loading="lazy" alt="Hai chiếc khăn bông gấp gọn trên bàn trắng"><figcaption>Khăn riêng từng khách</figcaption></figure>
+    <figure class="w-a"><img src="https://images.unsplash.com/photo-1775469091692-b575e93fbd24?auto=format&fit=crop&w=800&q=80" width="800" height="1000" loading="lazy" alt="Cô gái lau tóc bằng khăn, nhìn ra núi phủ sương"><figcaption>Nhẹ cả đầu</figcaption></figure>
+    <figure class="w-c"><img src="https://images.unsplash.com/photo-1593532320143-0fe08058387a?auto=format&fit=crop&w=900&q=80" width="900" height="900" loading="lazy" alt="Rót trà từ ấm đồng vào chén"><figcaption>Trà mời</figcaption></figure>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec rev" id="danh-gia" aria-labelledby="t-rev">
+  <div class="wrap">
+    <div class="intro rv-up">
+      <h2 class="h2" id="t-rev">Khách&nbsp;nói gì</h2>
+      <p>Đánh giá mẫu để minh họa bố cục. Khi lên web thật, phần này sẽ dùng nhận xét thật từ Google Maps hoặc Facebook của tiệm.</p>
+    </div>
+    <div class="rev-grid">
+      <figure class="rv rv1 rv-up">
+        <blockquote>“Sáu giờ tan làm, bảy giờ đã nằm ở Nhà Mây. Gội xong đầu nhẹ hẳn, tối đó ngủ một mạch tới sáng.”</blockquote>
+        <figcaption><cite><b>Minh Anh</b>, nhân viên kế toán<br><span class="badge-sample">Đánh giá mẫu</span></cite></figcaption>
+      </figure>
+      <figure class="rv rv2 rv-up">
+        <blockquote>“Thích nhất là giá ghi rõ ràng, không bị mời mua thêm gì. Combo massage cổ vai gáy rất đáng.”</blockquote>
+        <figcaption><cite><b>Quốc Huy</b>, lập trình viên<br><span class="badge-sample">Đánh giá mẫu</span></cite></figcaption>
+      </figure>
+      <figure class="rv rv3 rv-up">
+        <blockquote>“Nước gội có mùi bưởi với sả thơm dịu, chị kỹ thuật viên hỏi lực tay trước khi làm. Lần sau sẽ rủ cả nhóm.”</blockquote>
+        <figcaption><cite><b>Thu Trang</b>, nhân viên marketing<br><span class="badge-sample">Đánh giá mẫu</span></cite></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec book" id="dat-lich" aria-labelledby="t-book">
+  <div class="cloud c3" aria-hidden="true"><svg viewBox="0 0 200 110"><use href="#cl"/></svg></div>
+  <div class="wrap book-grid">
+    <div class="info rv-up">
+      <h2 class="h2" id="t-book">Giữ&nbsp;chỗ trước, đến&nbsp;là&nbsp;nằm</h2>
+      <p>Buổi tối thường kín giường từ 19:00. Đặt trước vài tiếng để tiệm chuẩn bị nước gội và khăn nóng cho bạn.</p>
+      <dl>
+        <div><dt>Địa chỉ</dt><dd>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</dd></div>
+        <div><dt>Điện thoại, Zalo</dt><dd><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></dd></div>
+        <div><dt>Giờ mở cửa</dt><dd class="hours"><span>Thứ 2 – Thứ 6</span><span>10:00 – 22:00</span><span>Thứ 7, Chủ nhật</span><span>09:00 – 22:00</span></dd></div>
+      </dl>
+    </div>
+    <form class="form rv-up" id="bookForm" novalidate>
+      <div class="fgrid">
+        <div class="f"><label for="fName">Họ và tên</label><input id="fName" name="name" autocomplete="name" required><span class="err">Vui lòng nhập họ tên.</span></div>
+        <div class="f"><label for="fPhone">Số điện thoại</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000" required><span class="err">Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.</span></div>
+        <div class="f"><label for="fDate">Ngày đến</label><input id="fDate" name="date" inputmode="numeric" placeholder="dd/mm/yyyy" required><span class="err">Nhập ngày theo dạng dd/mm/yyyy, từ hôm nay trở đi.</span></div>
+        <div class="f"><label for="fTime">Giờ đến</label>
+          <select id="fTime" name="time" required><option value="">Chọn giờ</option></select><span class="err">Vui lòng chọn giờ đến.</span></div>
+        <div class="f full"><label for="fSvc">Liệu trình</label>
+          <select id="fSvc" name="svc" required>
+            <option value="">Chọn liệu trình</option>
+            <option>Gói Ghé nhanh – 45 phút</option>
+            <option>Gói Tan ca – 60 phút</option>
+            <option>Gói Trọn buổi tối – 90 phút</option>
+            <option>Gội dưỡng sinh cho nam – 45 phút</option>
+            <option value="combo">Combo tự pha</option>
+          </select><span class="err">Vui lòng chọn liệu trình.</span></div>
+        <div class="f full"><label for="fNote">Ghi chú cho tiệm (không bắt buộc)</label><textarea id="fNote" name="note" placeholder="Ví dụ: hay mỏi vai, thích lực tay nhẹ"></textarea></div>
+      </div>
+      <button type="submit" class="btn btn-sky">Giữ&nbsp;chỗ</button>
+      <p class="note">Bản mẫu: thông tin không được gửi đi đâu cả.</p>
+      <div class="thanks" role="status" aria-live="polite">
+        <svg viewBox="0 0 200 110" aria-hidden="true"><use href="#cl" style="color:var(--sky-soft)"/></svg>
+        <h3>Đã&nbsp;giữ&nbsp;chỗ cho&nbsp;bạn</h3>
+        <p id="thanksTxt">Nhà Mây sẽ gọi xác nhận trong ít phút. Đây là website mẫu nên thực tế chưa có cuộc gọi nào.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <a href="#top" class="logo"><svg viewBox="0 0 200 110" aria-hidden="true"><use href="#cl" style="color:var(--sky)"/></svg>Nhà&nbsp;Mây</a>
+        <p style="margin-top:14px;color:var(--ink-2);max-width:36ch">Tiệm gội đầu dưỡng sinh thảo dược, mở muộn cho người đi làm.</p>
+      </div>
+      <div><h3>Ghé tiệm</h3><ul><li>Số 00 Đường Mẫu, Phường Mẫu</li><li>TP. Hồ Chí Minh</li><li><a href="tel:0900000000">0900 000 000</a></li></ul></div>
+      <div><h3>Xem nhanh</h3><ul><li><a href="#lieu-trinh">Liệu trình</a></li><li><a href="#pha-combo">Tự pha combo</a></li><li><a href="#bang-gia">Bảng giá</a></li><li><a href="#dat-lich">Đặt lịch</a></li></ul></div>
+    </div>
+    <p class="big" aria-hidden="true">Nhà&nbsp;Mây</p>
+    <div class="disc">
+      <span>Website mẫu. Tên thương hiệu, giá, đánh giá và hình ảnh đều là nội dung minh họa. Ảnh từ Unsplash.</span>
+      <span>Thiết kế: <a href="https://zalo.me/0901432113" target="_blank" rel="noopener">Kim Tuyen Truong</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="sale" href="https://zalo.me/0901432113" target="_blank" rel="noopener">
+  <span class="ic" aria-hidden="true"><svg viewBox="0 0 200 110"><use href="#cl" style="color:#fff"/></svg></span>
+  <span><span class="t-long">Mẫu giao diện · </span>Kim Tuyen Truong — <b>Nhận báo giá</b></span>
+</a>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.body;
+  // hero entrance
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ root.classList.add('ready'); }); });
+
+  // header state
+  var hdr = document.getElementById('hdr');
+  function onHdr(){ hdr.classList.toggle('on', window.scrollY > 20); }
+  onHdr();
+
+  // mobile menu
+  var burger = document.getElementById('burger'), sheet = document.getElementById('sheet');
+  function setMenu(open){
+    burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+    sheet.classList.toggle('open', open); document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ setMenu(burger.getAttribute('aria-expanded') !== 'true'); });
+  sheet.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setMenu(false); });
+
+  // reveals
+  var els = document.querySelectorAll('.rv-up');
+  if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(el){ el.classList.add('in'); }); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  }
+
+  // parallax + timeline progress
+  var pars = [].slice.call(document.querySelectorAll('.par'));
+  var tl = document.getElementById('tl'), fill = document.getElementById('tlFill');
+  var steps = [].slice.call(tl.querySelectorAll('.st'));
+  var ticking = false;
+  function frame(){
+    ticking = false; onHdr();
+    var vh = window.innerHeight;
+    if (!reduce) pars.forEach(function(img){
+      var r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      var c = (r.top + r.height/2 - vh/2);
+      img.style.transform = 'translate3d(0,' + (c * -parseFloat(img.dataset.speed)).toFixed(1) + 'px,0) scale(1.12)';
+    });
+    var tr = tl.getBoundingClientRect();
+    var p = Math.min(1, Math.max(0, (vh*0.75 - tr.top) / (tr.height + vh*0.3)));
+    if (reduce) p = 1;
+    fill.style.transform = 'scaleX(' + p.toFixed(3) + ')';
+    steps.forEach(function(s, i){ s.classList.toggle('lit', p >= i/(steps.length-1) - 0.001); });
+  }
+  window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(frame); } }, {passive:true});
+  window.addEventListener('resize', frame);
+  frame();
+
+  // combo builder
+  var fmt = function(n){ return n.toLocaleString('de-DE') + 'đ'; };
+  var BASE = 129000, BASE_MIN = 45;
+  var form = document.getElementById('mixForm');
+  var adds = [].slice.call(form.querySelectorAll('input[name=add]'));
+  var herbs = [].slice.call(form.querySelectorAll('input[name=herb]'));
+  var sumEl = document.getElementById('sum'), minEl = document.getElementById('tMin'), herbEl = document.getElementById('tHerb');
+  var bodies = document.querySelectorAll('#cloudArt .cloud-body, #cloudArt .add');
+  var shown = BASE, shownMin = BASE_MIN, anim;
+  function animateTo(price, mins){
+    cancelAnimationFrame(anim);
+    if (reduce) { shown = price; shownMin = mins; sumEl.textContent = fmt(price); minEl.innerHTML = mins + '&nbsp;phút'; return; }
+    var p0 = shown, m0 = shownMin, t0 = performance.now();
+    (function step(t){
+      var k = Math.min(1, (t - t0) / 500), e = 1 - Math.pow(1 - k, 3);
+      shown = Math.round((p0 + (price - p0) * e) / 1000) * 1000;
+      shownMin = Math.round(m0 + (mins - m0) * e);
+      sumEl.textContent = fmt(shown); minEl.innerHTML = shownMin + '&nbsp;phút';
+      if (k < 1) anim = requestAnimationFrame(step);
+    })(t0);
+  }
+  function update(){
+    var price = BASE, mins = BASE_MIN;
+    adds.forEach(function(a){
+      var on = a.checked;
+      if (on){ price += +a.dataset.p; mins += +a.dataset.m; }
+      document.querySelector('#cloudArt .add[data-k="' + a.value + '"]').classList.toggle('on', on);
+      document.querySelector('#cloudArt .tags text[data-k="' + a.value + '"]').classList.toggle('on', on);
+    });
+    var h = herbs.filter(function(x){ return x.checked; })[0];
+    herbEl.textContent = 'nước gội ' + h.value;
+    bodies.forEach(function(b){ b.setAttribute('fill', h.dataset.c); });
+    animateTo(price, mins);
+    return {price:price, mins:mins, herb:h.value};
+  }
+  form.addEventListener('change', update);
+  update();
+  document.getElementById('useMix').addEventListener('click', function(){
+    var r = update();
+    var names = adds.filter(function(a){ return a.checked; }).map(function(a){ return a.dataset.n.toLowerCase(); });
+    document.getElementById('fSvc').value = 'combo';
+    document.getElementById('fNote').value = 'Combo tự pha: gội đầu dưỡng sinh (nước gội ' + r.herb + ')' + (names.length ? ' + ' + names.join(' + ') : '') + '. ' + r.mins + ' phút, ' + fmt(r.price) + '.';
+    document.getElementById('dat-lich').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+    setTimeout(function(){ document.getElementById('fName').focus({preventScroll:true}); }, reduce ? 0 : 700);
+  });
+
+  // gallery drag + buttons
+  var track = document.getElementById('track');
+  var down = false, sx = 0, sl = 0, moved = false;
+  track.addEventListener('pointerdown', function(e){ if(e.pointerType !== 'mouse') return; down = true; moved = false; sx = e.clientX; sl = track.scrollLeft; track.classList.add('drag'); });
+  window.addEventListener('pointermove', function(e){ if(!down) return; var dx = e.clientX - sx; if (Math.abs(dx) > 3) moved = true; track.scrollLeft = sl - dx; });
+  window.addEventListener('pointerup', function(){ if(!down) return; down = false; track.classList.remove('drag'); });
+  function step(dir){ var f = track.querySelector('figure'); track.scrollBy({left: dir * (f.offsetWidth + 18), behavior: reduce ? 'auto' : 'smooth'}); }
+  document.getElementById('gPrev').addEventListener('click', function(){ step(-1); });
+  document.getElementById('gNext').addEventListener('click', function(){ step(1); });
+  track.addEventListener('keydown', function(e){ if(e.key === 'ArrowRight'){ e.preventDefault(); step(1); } if(e.key === 'ArrowLeft'){ e.preventDefault(); step(-1); } });
+
+  // booking form (front-end only)
+  var sel = document.getElementById('fTime');
+  for (var h = 9; h <= 21; h++) { ['00','30'].forEach(function(m){ if (h === 21 && m === '30') return; var o = document.createElement('option'); o.textContent = (h < 10 ? '0' + h : h) + ':' + m; sel.appendChild(o); }); }
+  var bf = document.getElementById('bookForm');
+  function parseDate(v){
+    var m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(v.trim()); if(!m) return null;
+    var d = new Date(+m[3], +m[2]-1, +m[1]);
+    if (d.getDate() !== +m[1] || d.getMonth() !== +m[2]-1) return null;
+    var t = new Date(); t.setHours(0,0,0,0); return d >= t ? d : null;
+  }
+  var dateIn = document.getElementById('fDate');
+  dateIn.addEventListener('input', function(){
+    var v = dateIn.value.replace(/[^\d]/g,'').slice(0,8), o = v;
+    if (v.length > 4) o = v.slice(0,2) + '/' + v.slice(2,4) + '/' + v.slice(4); else if (v.length > 2) o = v.slice(0,2) + '/' + v.slice(2);
+    dateIn.value = o;
+  });
+  var checks = {
+    fName: function(v){ return v.trim().length >= 2; },
+    fPhone: function(v){ return /^0\d{9}$/.test(v.replace(/[\s.]/g,'')); },
+    fDate: function(v){ return !!parseDate(v); },
+    fTime: function(v){ return !!v; },
+    fSvc: function(v){ return !!v; }
+  };
+  Object.keys(checks).forEach(function(id){
+    var el = document.getElementById(id);
+    el.addEventListener('input', function(){ if (el.parentElement.classList.contains('bad') && checks[id](el.value)) { el.parentElement.classList.remove('bad'); el.removeAttribute('aria-invalid'); } });
+    el.addEventListener('change', function(){ if (checks[id](el.value)) { el.parentElement.classList.remove('bad'); el.removeAttribute('aria-invalid'); } });
+  });
+  bf.addEventListener('submit', function(e){
+    e.preventDefault();
+    var first = null;
+    Object.keys(checks).forEach(function(id){
+      var el = document.getElementById(id), ok = checks[id](el.value);
+      el.parentElement.classList.toggle('bad', !ok);
+      if (!ok) { el.setAttribute('aria-invalid','true'); if(!first) first = el; } else el.removeAttribute('aria-invalid');
+    });
+    if (first) { first.focus(); return; }
+    var name = document.getElementById('fName').value.trim();
+    document.getElementById('thanksTxt').textContent = 'Cảm ơn ' + name + '. Nhà Mây giữ chỗ lúc ' + sel.value + ' ngày ' + dateIn.value.trim() + ' và sẽ gọi xác nhận trong ít phút. Đây là website mẫu nên thực tế chưa có cuộc gọi nào.';
+    bf.classList.add('done');
+    bf.querySelector('.thanks').focus && bf.querySelector('.thanks').setAttribute('tabindex','-1');
+    bf.querySelector('.thanks').focus();
+  });
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

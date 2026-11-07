@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website gội đầu dưỡng sinh – Tịnh Mộc</title>
+<meta name="description" content="Mẫu website tiệm gội đầu dưỡng sinh Tịnh Mộc: hành trình gội thảo mộc bảy bước, massage cổ vai gáy đá nóng, bảng giá tham khảo và đặt lịch trực tuyến.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Archivo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#191C15;      /* rêu đêm */
+  --bark:#26231C;        /* vỏ gỗ */
+  --bark-2:#302C23;
+  --rice:#EAE3D4;        /* giấy dó */
+  --rice-2:#DCD3C0;
+  --stone:#A39D8E;       /* đá xám ấm */
+  --moss:#6E7A58;        /* rêu */
+  --tea:#C79A5B;         /* nước trà */
+  --ink:#24261F;
+  --line:rgba(234,227,212,.16);
+  --serif:"Fraunces", "Noto Serif", Georgia, serif;
+  --sans:"Archivo", "Be Vietnam Pro", system-ui, sans-serif;
+  --ease:cubic-bezier(.22,.61,.12,1);
+  --gut:clamp(16px,4vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--rice);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto;object-fit:cover;background:var(--bark-2)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.12;letter-spacing:-.012em;font-variation-settings:"opsz" 144}
+.nw{white-space:nowrap}
+:focus-visible{outline:1.5px solid var(--tea);outline-offset:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--rice);color:var(--ink);padding:8px 14px;z-index:100}
+.skip:focus{left:8px}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:0 28px;border-radius:999px;font-family:var(--sans);font-size:.92rem;font-weight:500;letter-spacing:.01em;white-space:nowrap;cursor:pointer;border:1px solid transparent;transition:background .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease)}
+.btn-tea{background:var(--tea);color:#1d1a13}
+.btn-tea:hover{background:var(--rice)}
+.btn-line{border-color:rgba(234,227,212,.45);color:var(--rice)}
+.btn-line:hover{background:var(--rice);color:var(--ink)}
+.btn .dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+
+/* ---------- header ---------- */
+.hd{position:fixed;inset:0 0 auto;z-index:60;transition:background .6s var(--ease),transform .6s var(--ease)}
+.hd.solid{background:rgba(25,28,21,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hd-in{display:flex;align-items:center;justify-content:space-between;height:84px;padding:0 var(--gut);gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.45rem;font-weight:400;letter-spacing:.01em;white-space:nowrap}
+.logo svg{width:30px;height:30px;flex:none}
+.nav{display:flex;align-items:center;gap:clamp(18px,2.4vw,40px);list-style:none;font-size:.9rem}
+.nav a:not(.btn){position:relative;padding:6px 0;color:rgba(234,227,212,.82);transition:color .4s}
+.nav a:not(.btn):hover{color:var(--rice)}
+.nav a:not(.btn)::after{content:"";position:absolute;left:50%;bottom:0;width:4px;height:4px;border-radius:50%;background:var(--tea);transform:translateX(-50%) scale(0);transition:transform .4s var(--ease)}
+.nav a:not(.btn):hover::after{transform:translateX(-50%) scale(1)}
+.nav .btn{min-height:42px;padding:0 22px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:none;cursor:pointer;position:relative}
+.burger i{position:absolute;left:14px;right:14px;height:1.2px;background:var(--rice);transition:transform .45s var(--ease),opacity .3s}
+.burger i:nth-child(1){top:18px}.burger i:nth-child(2){top:26px}
+.menu-open .burger i:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.menu-open .burger i:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100svh;min-height:620px;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:-4% 0 0;z-index:-2}
+.hero-media img{width:100%;height:100%;object-position:62% 50%;transform:scale(1.14);opacity:0;transition:transform 3.4s var(--ease),opacity 2s ease}
+.ready .hero-media img{transform:scale(1.02);opacity:1}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(25,28,21,.55) 0%,rgba(25,28,21,0) 26%,rgba(25,28,21,0) 46%,rgba(25,28,21,.92) 100%),
+  linear-gradient(90deg,rgba(25,28,21,.55) 0%,rgba(25,28,21,0) 60%)}
+.smoke{position:absolute;right:6%;top:6%;width:min(34vw,460px);aspect-ratio:3/4;z-index:-1;mix-blend-mode:screen;opacity:0;pointer-events:none;background:transparent}
+.ready .smoke{opacity:.42;transition:opacity 3s ease 1.2s}
+.smoke img{width:100%;height:100%;background:transparent;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-4%,-6%,0) scale(1.08)}}
+.hero-body{position:absolute;left:0;right:0;bottom:0;padding:0 var(--gut) max(clamp(28px,6vh,64px),78px)}
+.hero h1{font-size:clamp(3.4rem,11.2vw,11.5rem);line-height:.98;letter-spacing:-.035em;font-weight:300}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:block;transform:translateY(105%);transition:transform 1.6s var(--ease)}
+.hero h1 .ln:nth-child(2){padding-left:clamp(0px,9vw,180px)}
+.ready .hero h1 .ln>span{transform:none}
+.ready .hero h1 .ln:nth-child(1)>span{transition-delay:.55s}
+.ready .hero h1 .ln:nth-child(2)>span{transition-delay:.75s}
+.hero-foot{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:clamp(20px,4vw,64px);margin-top:clamp(22px,4vh,44px);padding-top:22px;border-top:1px solid var(--line);opacity:0;transform:translateY(16px);transition:opacity 1.2s ease 1.35s,transform 1.4s var(--ease) 1.35s}
+.ready .hero-foot{opacity:1;transform:none}
+.hero-foot p{font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,1.4vw,1.28rem);line-height:1.5;max-width:30ch;color:rgba(234,227,212,.88)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-hours{text-align:right;font-size:.86rem;color:var(--stone);line-height:1.55}
+.hero-hours b{display:block;font-family:var(--serif);font-weight:400;font-size:1.35rem;color:var(--rice);letter-spacing:.01em}
+.hero-line{position:absolute;left:50%;top:0;width:1px;height:0;background:linear-gradient(var(--tea),transparent);opacity:.7;transition:height 2.4s var(--ease) .2s}
+.ready .hero-line{height:22vh}
+
+/* ---------- intro statement ---------- */
+.intro{padding:clamp(110px,18vh,200px) var(--gut) clamp(90px,14vh,160px);display:grid;grid-template-columns:1fr minmax(0,980px) 1fr}
+.intro-txt{grid-column:2;font-family:var(--serif);font-weight:300;font-size:clamp(1.55rem,3.15vw,2.9rem);line-height:1.32;letter-spacing:-.01em}
+.intro-txt .w{opacity:.16;transition:opacity .5s linear}
+.intro-txt .w.on{opacity:1}
+.intro-herbs{grid-column:2;display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:48px;list-style:none}
+.intro-herbs li{border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-size:.88rem;color:var(--stone);white-space:nowrap}
+
+/* ---------- journey ---------- */
+.journey{position:relative;padding:0 var(--gut);background:linear-gradient(var(--ground),var(--bark) 30%,var(--bark) 70%,var(--ground))}
+.j-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;padding:clamp(40px,8vh,90px) 0 clamp(30px,6vh,70px)}
+.j-head h2{font-size:clamp(2.6rem,6vw,5.6rem)}
+.j-head p{max-width:42ch;color:var(--stone);justify-self:end}
+.j-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,110px)}
+.j-stage{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center}
+.dial{position:relative;width:min(40vw,68vh,600px);aspect-ratio:1}
+.dial-ring{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.dial-ring .tick{stroke:rgba(234,227,212,.28);stroke-width:1}
+.dial-ring .tick.big{stroke:rgba(234,227,212,.55)}
+.dial-ring .node{fill:var(--bark);stroke:rgba(234,227,212,.4);stroke-width:1;transition:fill .6s,stroke .6s}
+.dial-ring .node.on{fill:var(--tea);stroke:var(--tea)}
+.dial-ring text{fill:var(--stone);font-family:var(--sans);font-size:11px}
+.dial-hand{position:absolute;inset:0;transition:transform 1.2s var(--ease);pointer-events:none}
+.dial-hand::before{content:"";position:absolute;left:50%;top:-7px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--tea);box-shadow:0 0 0 6px rgba(199,154,91,.18),0 0 30px rgba(199,154,91,.5)}
+.dial-win{position:absolute;inset:11%;border-radius:50%;overflow:hidden;background:var(--bark-2);transform:translateZ(0)}
+.dial-win img{position:absolute;inset:0;width:100%;height:100%;opacity:0;transform:scale(1.12);transition:opacity 1.3s ease,transform 2.6s var(--ease)}
+.dial-win img.on{opacity:1;transform:scale(1)}
+.dial-read{position:absolute;left:50%;bottom:-62px;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.dial-read b{display:block;font-family:var(--serif);font-weight:300;font-size:2rem;line-height:1;font-variant-numeric:tabular-nums}
+.dial-read span{font-size:.8rem;color:var(--stone)}
+.j-steps{list-style:none;padding:12vh 0 22vh}
+.step{min-height:78vh;display:flex;flex-direction:column;justify-content:center;max-width:470px;opacity:.28;transition:opacity .9s ease}
+.step.on{opacity:1}
+.step-n{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--tea);margin-bottom:18px;display:flex;align-items:center;gap:14px}
+.step-n::after{content:"";width:56px;height:1px;background:currentColor;opacity:.5}
+.step h3{font-size:clamp(1.9rem,3vw,2.75rem);margin-bottom:18px}
+.step p{color:rgba(234,227,212,.74);max-width:44ch}
+.step .min{display:inline-block;margin-top:20px;font-size:.84rem;color:var(--stone)}
+.step-img{display:none}
+
+/* ---------- services ---------- */
+.svc{padding:clamp(110px,16vh,180px) var(--gut) clamp(90px,12vh,150px);position:relative}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:clamp(40px,7vh,80px)}
+.sec-head h2{font-size:clamp(2.4rem,5.2vw,4.8rem)}
+.sec-head p{max-width:44ch;color:var(--stone);justify-self:end}
+.svc-list{list-style:none;border-top:1px solid var(--line)}
+.svc-row{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) 120px;gap:clamp(18px,4vw,60px);align-items:baseline;padding:clamp(26px,4vh,40px) 0;border-bottom:1px solid var(--line);position:relative;cursor:default}
+.svc-row h3{font-size:clamp(1.6rem,3.2vw,2.9rem);transition:transform .7s var(--ease),color .5s}
+.svc-row p{color:rgba(234,227,212,.68);max-width:46ch;transition:color .5s}
+.svc-row .dur{text-align:right;font-family:var(--serif);font-style:italic;color:var(--stone);white-space:nowrap}
+.svc-row::before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(90deg,rgba(199,154,91,.07),transparent 70%);opacity:0;transition:opacity .6s}
+.svc-list:hover .svc-row h3{color:rgba(234,227,212,.4)}
+.svc-list:hover .svc-row:hover h3{color:var(--rice);transform:translateX(18px)}
+.svc-row:hover::before{opacity:1}
+.svc-row .thumb{display:none}
+.peek{position:fixed;left:0;top:0;width:300px;aspect-ratio:4/5;border-radius:160px 160px 6px 6px;overflow:hidden;pointer-events:none;z-index:40;opacity:0;transform:translate3d(-50%,-50%,0) scale(.85);transition:opacity .45s ease,transform .6s var(--ease)}
+.peek.show{opacity:1}
+.peek img{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .5s ease}
+.peek img.on{opacity:1}
+
+/* ---------- pricing (giấy dó) ---------- */
+.price{background:var(--rice);color:var(--ink);padding:clamp(100px,15vh,170px) var(--gut);position:relative}
+.price .sec-head p{color:#5f5b4f}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,120px)}
+.menu h3{font-size:1.5rem;font-style:italic;font-weight:400;margin-bottom:10px;color:#4c5739}
+.menu ul{list-style:none}
+.m-item{display:grid;grid-template-columns:1fr auto;gap:6px 18px;padding:22px 0;border-bottom:1px solid rgba(36,38,31,.14);position:relative;transition:padding .5s var(--ease)}
+.m-item::before{content:"";position:absolute;left:-14px;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--tea);transform:scale(0);transition:transform .45s var(--ease)}
+.m-item:hover{padding-left:14px}
+.m-item:hover::before{transform:scale(1)}
+.m-name{font-family:var(--serif);font-size:1.28rem;font-weight:400;line-height:1.3;display:flex;align-items:baseline;gap:14px}
+.m-name::after{content:"";flex:1;min-width:20px;border-bottom:1px dotted rgba(36,38,31,.35);transform:translateY(-4px)}
+.m-price{font-family:var(--serif);font-size:1.28rem;font-weight:400;white-space:nowrap;font-variant-numeric:lining-nums tabular-nums}
+.m-desc{grid-column:1/-1;font-size:.9rem;color:#625e52;max-width:52ch}
+.m-desc i{font-style:normal;color:#4c5739}
+.price-note{margin-top:46px;display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between;font-size:.9rem;color:#5f5b4f}
+.price-note p{max-width:64ch}
+.price .btn-dark{background:var(--ink);color:var(--rice)}
+.price .btn-dark:hover{background:#4c5739}
+
+/* ---------- space / story ---------- */
+.space{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(30px,6vw,100px);padding:clamp(110px,16vh,190px) var(--gut);align-items:center}
+.space-fig{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:clamp(160px,22vw,340px) clamp(160px,22vw,340px) 4px 4px;background:var(--bark-2)}
+.space-fig img{position:absolute;left:0;top:-12%;width:100%;height:124%;will-change:transform}
+.space-txt h2{font-size:clamp(2.2rem,4.4vw,4rem);margin-bottom:28px}
+.space-txt>p{color:rgba(234,227,212,.76);margin-bottom:20px;max-width:46ch}
+.facts{list-style:none;margin-top:40px;border-top:1px solid var(--line)}
+.facts li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.facts b{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--tea)}
+.facts span{color:rgba(234,227,212,.72)}
+
+/* ---------- gallery ---------- */
+.gal{padding:0 0 clamp(100px,14vh,170px)}
+.gal-head{display:flex;align-items:end;justify-content:space-between;gap:30px;padding:0 var(--gut);margin-bottom:40px}
+.gal-head h2{font-size:clamp(2.2rem,4.4vw,4rem)}
+.gal-ctrl{display:flex;gap:10px}
+.gal-ctrl button{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:none;cursor:pointer;display:grid;place-items:center;transition:background .4s,border-color .4s}
+.gal-ctrl button:hover{background:rgba(234,227,212,.08);border-color:rgba(234,227,212,.45)}
+.gal-ctrl svg{width:18px;height:18px;stroke:var(--rice);fill:none;stroke-width:1.3}
+.strip{scroll-padding-inline:var(--gut);display:flex;gap:clamp(14px,2vw,28px);overflow-x:auto;padding:0 var(--gut) 10px;scroll-snap-type:x proximity;scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{display:none}
+.strip.drag{cursor:grabbing;scroll-snap-type:none}
+.strip figure{flex:none;scroll-snap-align:start;user-select:none}
+.strip figure img{height:clamp(320px,56vh,560px);width:auto;pointer-events:none;border-radius:4px}
+.strip figure:nth-child(3n+2) img{border-radius:999px 999px 4px 4px}
+.strip figure:nth-child(odd){margin-top:clamp(0px,6vh,60px)}
+.strip figcaption{margin-top:12px;font-size:.84rem;color:var(--stone);font-family:var(--serif);font-style:italic}
+.gal-bar{margin:28px var(--gut) 0;height:1px;background:var(--line);position:relative;overflow:hidden}
+.gal-bar i{position:absolute;left:0;top:0;bottom:0;width:30%;background:var(--tea);transform-origin:left;transition:transform .2s linear}
+
+/* ---------- reviews ---------- */
+.rev{padding:clamp(100px,14vh,170px) var(--gut);background:var(--bark)}
+.rev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:20px 40px;margin-bottom:60px}
+.rev-head h2{font-size:clamp(2.2rem,4.4vw,4rem)}
+.tag-sample{display:inline-flex;align-items:center;gap:10px;border:1px dashed rgba(199,154,91,.6);color:var(--tea);border-radius:999px;padding:8px 18px;font-size:.86rem;white-space:nowrap}
+.rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(30px,4vw,70px)}
+.quote{border-top:1px solid var(--line);padding-top:30px}
+.quote blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(1.25rem,1.7vw,1.55rem);line-height:1.45;margin-bottom:28px}
+.quote figcaption{font-size:.88rem;color:var(--stone)}
+.quote figcaption b{display:block;color:var(--rice);font-weight:500}
+.rev-note{margin-top:50px;font-size:.86rem;color:var(--stone);max-width:70ch}
+
+/* ---------- booking ---------- */
+.book{position:relative;isolation:isolate;background:var(--ground);padding:clamp(110px,16vh,180px) var(--gut);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,7vw,120px);overflow:hidden}
+.book-bg{position:absolute;right:-6%;top:-10%;width:min(60vw,800px);height:120%;z-index:-1;opacity:.28;mix-blend-mode:screen;pointer-events:none}
+.book-bg img{width:100%;height:100%;background:transparent;object-position:50% 40%}
+.book-intro h2{font-size:clamp(2.6rem,5.6vw,5.2rem);margin-bottom:26px}
+.book-intro>p{color:rgba(234,227,212,.74);max-width:40ch;margin-bottom:36px}
+.contact{list-style:none;border-top:1px solid var(--line)}
+.contact li{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.contact li>span:first-child{font-family:var(--serif);font-style:italic;color:var(--stone)}
+.contact a{border-bottom:1px solid rgba(199,154,91,.5)}
+.map{margin-top:28px;aspect-ratio:16/8;border-radius:4px;border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--stone);font-size:.88rem;background:
+  repeating-linear-gradient(90deg,transparent 0 46px,rgba(234,227,212,.05) 46px 47px),repeating-linear-gradient(0deg,transparent 0 46px,rgba(234,227,212,.05) 46px 47px),var(--bark);position:relative}
+.map::after{content:"";position:absolute;left:52%;top:44%;width:12px;height:12px;border-radius:50%;background:var(--tea);box-shadow:0 0 0 8px rgba(199,154,91,.18)}
+.map span{position:relative;top:34px}
+.form{background:rgba(38,35,28,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:6px;padding:clamp(26px,4vw,56px)}
+.form h3{font-size:1.7rem;margin-bottom:8px}
+.form .sub{color:var(--stone);font-size:.9rem;margin-bottom:30px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 28px}
+.f-full{grid-column:1/-1}
+.fld label{display:block;font-size:.84rem;color:var(--stone);margin-bottom:6px}
+.fld input,.fld select,.fld textarea{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(234,227,212,.3);padding:10px 0;font-size:1rem;color:var(--rice);border-radius:0;transition:border-color .4s;-webkit-appearance:none;appearance:none}
+.fld select{background-image:linear-gradient(45deg,transparent 50%,var(--stone) 50%),linear-gradient(135deg,var(--stone) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:26px}
+.fld select option{background:var(--bark);color:var(--rice)}
+.fld input[type=date]{color-scheme:dark}
+.fld textarea{resize:vertical;min-height:84px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--tea)}
+.fld.bad input,.fld.bad select{border-color:#D9826B}
+.err{display:block;min-height:1.2em;font-size:.8rem;color:#E59A84;margin-top:6px}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:30px}
+.form-foot small{color:var(--stone);font-size:.8rem;max-width:32ch}
+.thanks{display:none;text-align:left}
+.thanks.show{display:block;animation:rise 1s var(--ease)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.thanks .seal{width:64px;height:64px;border-radius:50%;border:1px solid var(--tea);display:grid;place-items:center;margin-bottom:26px}
+.thanks .seal svg{width:26px;height:26px;stroke:var(--tea);fill:none;stroke-width:1.4}
+.thanks h3{font-size:2.2rem;margin-bottom:14px}
+.thanks p{color:rgba(234,227,212,.78);max-width:44ch;margin-bottom:10px}
+.thanks .sum{margin:22px 0 28px;border-top:1px solid var(--line);list-style:none}
+.thanks .sum li{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.thanks .sum li span:first-child{color:var(--stone)}
+
+/* ---------- footer ---------- */
+.ft{padding:clamp(70px,10vh,110px) var(--gut) 120px;border-top:1px solid var(--line)}
+.ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.ft-word{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,9vw,8.5rem);line-height:.95;letter-spacing:-.035em;color:rgba(234,227,212,.92)}
+.ft h4{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.05rem;color:var(--tea);margin-bottom:14px}
+.ft ul{list-style:none;font-size:.93rem;color:rgba(234,227,212,.74);line-height:2}
+.ft ul a:hover{color:var(--rice)}
+.ft-note{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 30px;font-size:.82rem;color:var(--stone)}
+.ft-note p{max-width:78ch}
+
+/* ---------- sales pill ---------- */
+.pill{position:fixed;left:16px;bottom:16px;z-index:70;display:inline-flex;align-items:center;gap:10px;max-width:calc(100vw - 32px);padding:9px 16px 9px 10px;border-radius:999px;background:rgba(234,227,212,.94);color:var(--ink);font-size:.8rem;line-height:1.3;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .5s var(--ease),background .4s}
+.pill:hover{transform:translateY(-3px);background:var(--rice)}
+.pill .pm{flex:none;width:26px;height:26px;border-radius:50%;background:var(--ground);display:grid;place-items:center}
+.pill .pm svg{width:14px;height:14px}
+.pill b{font-weight:600;color:#4c5739}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .nav li:not(:last-child){display:none}
+  .burger{display:block}
+  .hd-in{gap:12px}
+  .mobile-nav{position:fixed;inset:0;z-index:55;background:var(--ground);display:flex;flex-direction:column;justify-content:center;padding:100px var(--gut) 60px;opacity:0;visibility:hidden;transition:opacity .5s ease,visibility .5s}
+  .menu-open .mobile-nav{opacity:1;visibility:visible}
+  .mobile-nav a{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,8vw,3.2rem);line-height:1.35;display:block;transform:translateY(20px);opacity:0;transition:transform .7s var(--ease),opacity .6s}
+  .menu-open .mobile-nav a{transform:none;opacity:1}
+  .mobile-nav a:nth-child(2){transition-delay:.05s}.mobile-nav a:nth-child(3){transition-delay:.1s}.mobile-nav a:nth-child(4){transition-delay:.15s}.mobile-nav a:nth-child(5){transition-delay:.2s}.mobile-nav a:nth-child(6){transition-delay:.25s}
+  .mobile-nav p{margin-top:40px;color:var(--stone);font-size:.92rem}
+}
+@media (min-width:1101px){.mobile-nav{display:none}}
+@media (max-width:900px){
+  .hero-foot{grid-template-columns:1fr;gap:22px}
+  .hero-hours{text-align:left}
+  .hero-hours b{display:inline;margin-right:10px}
+  .j-head,.sec-head{grid-template-columns:1fr;gap:18px}
+  .j-head p,.sec-head p{justify-self:start}
+  .j-grid{grid-template-columns:1fr}
+  .j-stage{display:none}
+  .j-steps{padding:10px 0 60px}
+  .step{min-height:auto;opacity:1;padding:34px 0;border-top:1px solid var(--line);max-width:none}
+  .step-img{display:block;width:72%;height:auto;aspect-ratio:1;max-width:280px;border-radius:50%;margin-bottom:28px}
+  .svc-row{grid-template-columns:1fr;gap:10px}
+  .svc-row .dur{text-align:left}
+  .svc-row .thumb{display:block;width:100%;aspect-ratio:16/9;border-radius:4px;margin-bottom:10px}
+  .svc-list:hover .svc-row h3{color:var(--rice)}
+  .svc-list:hover .svc-row:hover h3{transform:none}
+  .menu{grid-template-columns:1fr;gap:56px}
+  .space{grid-template-columns:1fr}
+  .space-fig{aspect-ratio:4/4.4;border-radius:999px 999px 4px 4px}
+  .rev-grid{grid-template-columns:1fr;gap:40px}
+  .book{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr 1fr}
+  .ft-top>div:first-child{grid-column:1/-1}
+}
+@media (max-width:560px){
+  .hd-in{height:72px}
+  .logo{font-size:1.25rem}
+  .nav .btn{padding:0 16px;min-height:40px;font-size:.86rem}
+  .hero{min-height:600px}
+  .hero h1{font-size:clamp(3.1rem,15.5vw,5rem)}
+  .hero h1 .ln:nth-child(2){padding-left:0}
+  .hero-cta .btn{flex:1 1 auto}
+  .hero-line{display:none}
+  .smoke{width:60vw;right:-10%;top:10%}
+  .f-grid{grid-template-columns:1fr}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .contact li{grid-template-columns:1fr;gap:2px}
+  .m-name,.m-price{font-size:1.14rem}
+  .strip figure img{height:340px}
+  .gal-head{align-items:start;flex-direction:column}
+  .ft-top{grid-template-columns:1fr}
+  .pill{font-size:.74rem;padding:7px 12px 7px 7px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .hero-media img{opacity:1;transform:none}
+  .hero h1 .ln>span{transform:none}
+  .hero-foot{opacity:1;transform:none}
+  .smoke{opacity:.42}
+  .hero-line{height:22vh}
+  .intro-txt .w{opacity:1}
+  .step{opacity:1}
+  .peek{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#hanh-trinh">Bỏ qua phần mở đầu</a>
+
+<header class="hd" id="hd">
+  <div class="hd-in">
+    <a href="#top" class="logo" aria-label="Tịnh Mộc – về đầu trang">
+      <svg viewBox="0 0 30 30" fill="none" aria-hidden="true"><circle cx="15" cy="15" r="13.5" stroke="#C79A5B" stroke-width="1"/><path d="M15 6v18M10.5 12.5c1.8 0 4.5 1 4.5 3.5M19.5 10.5c-1.8 0-4.5 1-4.5 3.5" stroke="#EAE3D4" stroke-width="1.1" stroke-linecap="round"/></svg>
+      <span>Tịnh&nbsp;Mộc</span>
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <ul class="nav">
+        <li><a href="#hanh-trinh">Hành&nbsp;trình</a></li>
+        <li><a href="#lieu-trinh">Liệu&nbsp;trình</a></li>
+        <li><a href="#bang-gia">Bảng&nbsp;giá</a></li>
+        <li><a href="#khong-gian">Không&nbsp;gian</a></li>
+        <li><a href="#lien-he">Liên&nbsp;hệ</a></li>
+        <li><a href="#dat-lich" class="btn btn-line">Đặt&nbsp;lịch</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button>
+  </div>
+</header>
+<div class="mobile-nav" id="mnav" aria-hidden="true">
+  <a href="#hanh-trinh">Hành&nbsp;trình</a>
+  <a href="#lieu-trinh">Liệu&nbsp;trình</a>
+  <a href="#bang-gia">Bảng&nbsp;giá</a>
+  <a href="#khong-gian">Không&nbsp;gian</a>
+  <a href="#lien-he">Liên&nbsp;hệ</a>
+  <a href="#dat-lich">Đặt&nbsp;lịch</a>
+  <p>Mở cửa 09:00 – 21:00 hằng ngày · Hotline 0900&nbsp;000&nbsp;000</p>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-label="Giới thiệu">
+  <div class="hero-media" data-par="0.18">
+    <img src="https://images.unsplash.com/photo-1628709353367-35f0bb07413d?auto=format&fit=crop&w=2000&q=80" alt="Nén hương trầm toả khói trên mặt gỗ sẫm màu trong ánh sáng dịu" width="2000" height="1333" fetchpriority="high">
+  </div>
+  <div class="smoke" aria-hidden="true"><img src="https://images.unsplash.com/photo-1770217535698-dd125e5d36c5?auto=format&fit=crop&w=900&q=70" alt="" width="900" height="1200"></div>
+  <span class="hero-line" aria-hidden="true"></span>
+  <div class="hero-body">
+    <h1><span class="ln"><span>Gội&nbsp;đầu</span></span><span class="ln"><span>dưỡng&nbsp;sinh</span></span></h1>
+    <div class="hero-foot">
+      <p>Một giờ chậm lại, giữa hương bồ kết, vỏ bưởi và hơi ấm thảo mộc.</p>
+      <div class="hero-cta">
+        <a href="#dat-lich" class="btn btn-tea">Đặt&nbsp;lịch&nbsp;hẹn</a>
+        <a href="#hanh-trinh" class="btn btn-line">Xem&nbsp;hành&nbsp;trình</a>
+      </div>
+      <div class="hero-hours"><b>09:00&nbsp;–&nbsp;21:00</b>mở cửa hằng ngày</div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" aria-label="Về nước gội thảo mộc">
+  <p class="intro-txt" id="introTxt">Ở Tịnh Mộc, nước gội được nấu mới mỗi sáng từ bồ kết, vỏ bưởi, hương nhu và sả chanh. Bạn chỉ cần nằm xuống, tạm cất điện thoại, để đôi tay kỹ thuật viên chăm sóc từ da đầu xuống tới bờ vai.</p>
+  <ul class="intro-herbs" aria-label="Thảo mộc trong nước gội">
+    <li>Bồ kết</li><li>Vỏ bưởi</li><li>Hương nhu</li><li>Sả chanh</li><li>Gừng</li><li>Lá bưởi</li>
+  </ul>
+</section>
+
+<!-- JOURNEY -->
+<section class="journey" id="hanh-trinh" aria-labelledby="j-title">
+  <div class="j-head">
+    <h2 id="j-title">Hành&nbsp;trình bảy&nbsp;bước</h2>
+    <p>Liệu trình gội đầu dưỡng sinh Tịnh Mộc kéo dài khoảng 75 phút. Kỹ thuật viên sẽ hỏi bạn muốn ấn nhẹ hay mạnh tay trước khi bắt đầu.</p>
+  </div>
+  <div class="j-grid">
+    <div class="j-stage" aria-hidden="true">
+      <div class="dial" id="dial">
+        <svg class="dial-ring" viewBox="0 0 600 600" id="ring"></svg>
+        <div class="dial-win" id="dialWin">
+          <img class="on" src="https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?auto=format&fit=crop&w=900&h=900&q=80" alt="" width="900" height="900">
+          <img src="https://images.unsplash.com/photo-1778423618436-75f7620ebd10?auto=format&fit=crop&w=900&h=900&q=80" alt="" width="900" height="900" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1757066033634-bbbf874ce525?auto=format&fit=crop&w=900&h=900&q=80" alt="" width="900" height="900" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1492552085122-36706c238263?auto=format&fit=crop&w=900&h=900&q=80" alt="" width="900" height="900" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1717160675158-fdd75b8595cf?auto=format&fit=crop&w=900&h=900&q=80" alt="" width="900" height="900" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1696841212541-449ca29397cc?auto=format&fit=crop&w=900&h=900&q=80" alt="" width="900" height="900" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=900&h=900&q=80" alt="" width="900" height="900" loading="lazy">
+        </div>
+        <div class="dial-hand" id="hand"></div>
+        <div class="dial-read"><b id="minRead">0&nbsp;phút</b><span id="stepRead">Bước 1 / 7</span></div>
+      </div>
+    </div>
+    <ol class="j-steps" id="steps">
+      <li class="step on" data-min="0">
+        <img class="step-img" src="https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?auto=format&fit=crop&w=700&h=700&q=80" alt="Chén trà thảo mộc màu hổ phách giữa lá xanh" width="700" height="700" loading="lazy">
+        <span class="step-n">Bước 1</span>
+        <h3>Trà&nbsp;thảo&nbsp;mộc, xem da&nbsp;đầu</h3>
+        <p>Mời bạn một chén trà gừng ấm. Kỹ thuật viên kiểm tra da đầu, hỏi về tình trạng tóc, giấc ngủ và chỗ mỏi ở cổ vai để chọn nước gội phù hợp.</p>
+        <span class="min">Khoảng 5 phút</span>
+      </li>
+      <li class="step" data-min="5">
+        <img class="step-img" src="https://images.unsplash.com/photo-1778423618436-75f7620ebd10?auto=format&fit=crop&w=700&h=700&q=80" alt="Nụ hồng khô và thảo mộc trong khay kim loại" width="700" height="700" loading="lazy">
+        <span class="step-n">Bước 2</span>
+        <h3>Ngâm&nbsp;chân thảo&nbsp;mộc</h3>
+        <p>Chậu nước ấm với gừng, sả và muối hột. Đôi chân được làm ấm trước, cơ thể thả lỏng dần trước khi vào phòng gội.</p>
+        <span class="min">Khoảng 10 phút</span>
+      </li>
+      <li class="step" data-min="15">
+        <img class="step-img" src="https://images.unsplash.com/photo-1757066033634-bbbf874ce525?auto=format&fit=crop&w=700&h=700&q=80" alt="Kỹ thuật viên day ấn vùng đầu cho khách nằm trên gối" width="700" height="700" loading="lazy">
+        <span class="step-n">Bước 3</span>
+        <h3>Khai&nbsp;thiên&nbsp;môn, ấn&nbsp;huyệt</h3>
+        <p>Day ấn nhẹ các huyệt vùng trán, thái dương, đỉnh đầu và sau gáy. Đây là bước giúp đầu óc nhẹ nhõm, dễ chìm vào trạng thái nghỉ.</p>
+        <span class="min">Khoảng 10 phút</span>
+      </li>
+      <li class="step" data-min="25">
+        <img class="step-img" src="https://images.unsplash.com/photo-1492552085122-36706c238263?auto=format&fit=crop&w=700&h=700&q=80" alt="Đôi tay giã thảo mộc trong cối đá" width="700" height="700" loading="lazy">
+        <span class="step-n">Bước 4</span>
+        <h3>Gội&nbsp;thảo&nbsp;dược hai&nbsp;lần</h3>
+        <p>Lần đầu làm sạch dầu thừa và bụi bẩn, lần hai massage da đầu với nước bồ kết, vỏ bưởi, hương nhu nấu tại tiệm.</p>
+        <span class="min">Khoảng 15 phút</span>
+      </li>
+      <li class="step" data-min="40">
+        <img class="step-img" src="https://images.unsplash.com/photo-1717160675158-fdd75b8595cf?auto=format&fit=crop&w=700&h=700&q=80" alt="Khách nằm thư giãn trong làn hơi ấm khi được chăm sóc tóc" width="700" height="700" loading="lazy">
+        <span class="step-n">Bước 5</span>
+        <h3>Xông&nbsp;hơi, ủ&nbsp;tóc</h3>
+        <p>Hơi ấm từ lá sả, lá bưởi giúp da đầu thông thoáng. Trong lúc ủ tóc, bạn được rửa mặt và đắp mặt nạ thảo dược.</p>
+        <span class="min">Khoảng 15 phút</span>
+      </li>
+      <li class="step" data-min="55">
+        <img class="step-img" src="https://images.unsplash.com/photo-1696841212541-449ca29397cc?auto=format&fit=crop&w=700&h=700&q=80" alt="Đá nóng đặt dọc lưng khách trong phòng trị liệu ánh đèn ấm" width="700" height="700" loading="lazy">
+        <span class="step-n">Bước 6</span>
+        <h3>Cổ&nbsp;vai&nbsp;gáy với đá&nbsp;nóng</h3>
+        <p>Massage cổ vai gáy kết hợp đá nóng và túi chườm thảo dược, phù hợp với người ngồi máy tính nhiều giờ mỗi ngày.</p>
+        <span class="min">Khoảng 15 phút</span>
+      </li>
+      <li class="step" data-min="70">
+        <img class="step-img" src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=700&h=700&q=80" alt="Ly trà thảo mộc trên bàn gỗ cùng lá dương xỉ" width="700" height="700" loading="lazy">
+        <span class="step-n">Bước 7</span>
+        <h3>Sấy&nbsp;khô, trà&nbsp;và&nbsp;mứt</h3>
+        <p>Xả sạch, lau khô và sấy tóc nhẹ nhàng. Bạn nghỉ thêm vài phút với trà và mứt gừng trước khi ra về.</p>
+        <span class="min">Khoảng 5 phút · tổng 75 phút</span>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc" id="lieu-trinh" aria-labelledby="s-title">
+  <div class="sec-head">
+    <h2 id="s-title">Liệu&nbsp;trình tại Tịnh&nbsp;Mộc</h2>
+    <p>Có thể chọn riêng từng liệu trình hoặc kết hợp. Lần đầu ghé, bạn cứ nói tình trạng của mình, kỹ thuật viên sẽ gợi ý gói phù hợp.</p>
+  </div>
+  <ul class="svc-list" id="svcList">
+    <li class="svc-row" data-img="0">
+      <img class="thumb" src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?auto=format&fit=crop&w=900&h=506&q=80" alt="Khách nằm nhắm mắt thư giãn trong khăn trắng" width="900" height="506" loading="lazy">
+      <h3>Gội&nbsp;đầu dưỡng&nbsp;sinh</h3>
+      <p>Hành trình bảy bước với nước gội thảo dược nấu tại tiệm, ấn huyệt đầu, xông hơi và đá nóng cổ vai.</p>
+      <span class="dur">75 phút</span>
+    </li>
+    <li class="svc-row" data-img="1">
+      <img class="thumb" src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&h=506&q=80" alt="Đá nóng massage lưng cùng hoa lan trắng" width="900" height="506" loading="lazy">
+      <h3>Massage cổ&nbsp;vai&nbsp;gáy đá&nbsp;nóng</h3>
+      <p>Day ấn 12 huyệt vùng lưng và gáy, chườm đá nóng giúp thả lỏng phần cơ hay căng cứng.</p>
+      <span class="dur">30 phút</span>
+    </li>
+    <li class="svc-row" data-img="2">
+      <img class="thumb" src="https://images.unsplash.com/photo-1545840716-c82e9eec6930?auto=format&fit=crop&w=900&h=506&q=80" alt="Kệ lọ thuỷ tinh đựng thảo mộc khô" width="900" height="506" loading="lazy">
+      <h3>Detox da&nbsp;đầu</h3>
+      <p>Tẩy tế bào chết da đầu, làm sạch sâu chân tóc và ủ dưỡng cho tóc khô xơ, dễ gãy rụng.</p>
+      <span class="dur">60 phút</span>
+    </li>
+    <li class="svc-row" data-img="3">
+      <img class="thumb" src="https://images.unsplash.com/photo-1532009877282-3340270e0529?auto=format&fit=crop&w=900&h=506&q=80" alt="Chồng đá cuội đen trên nền lá xanh" width="900" height="506" loading="lazy">
+      <h3>Ngâm&nbsp;chân, xông&nbsp;hơi thảo&nbsp;mộc</h3>
+      <p>Ngâm chân nước gừng sả và xông hơi lá bưởi. Có thể thêm vào bất kỳ liệu trình nào.</p>
+      <span class="dur">20 phút</span>
+    </li>
+    <li class="svc-row" data-img="4">
+      <img class="thumb" src="https://images.unsplash.com/photo-1693578538512-fc66f318c833?auto=format&fit=crop&w=900&h=506&q=80" alt="Phòng trị liệu tông gỗ trầm với ánh đèn vàng" width="900" height="506" loading="lazy">
+      <h3>Liệu&nbsp;trình đôi</h3>
+      <p>Phòng riêng cho hai người, dành cho mẹ con, vợ chồng hoặc hai người bạn muốn đi cùng nhau.</p>
+      <span class="dur">90 phút</span>
+    </li>
+  </ul>
+  <div class="peek" id="peek" aria-hidden="true">
+    <img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?auto=format&fit=crop&w=600&h=750&q=80" alt="" width="600" height="750" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&h=750&q=80" alt="" width="600" height="750" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1545840716-c82e9eec6930?auto=format&fit=crop&w=600&h=750&q=80" alt="" width="600" height="750" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1532009877282-3340270e0529?auto=format&fit=crop&w=600&h=750&q=80" alt="" width="600" height="750" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1693578538512-fc66f318c833?auto=format&fit=crop&w=600&h=750&q=80" alt="" width="600" height="750" loading="lazy">
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="price" id="bang-gia" aria-labelledby="p-title">
+  <div class="sec-head">
+    <h2 id="p-title">Bảng&nbsp;giá tham&nbsp;khảo</h2>
+    <p>Giá đã gồm trà thảo mộc, khăn sạch dùng riêng cho từng khách. Không phụ thu ngoài bảng giá.</p>
+  </div>
+  <div class="menu">
+    <div>
+      <h3>Gội&nbsp;đầu dưỡng&nbsp;sinh</h3>
+      <ul>
+        <li class="m-item"><span class="m-name">Gội&nbsp;thảo&nbsp;mộc thư&nbsp;giãn</span><span class="m-price">160.000đ</span><span class="m-desc"><i>45 phút</i> – gội thảo dược hai lần, massage da đầu, sấy khô.</span></li>
+        <li class="m-item"><span class="m-name">Gội&nbsp;dưỡng&nbsp;sinh Tịnh&nbsp;Mộc</span><span class="m-price">280.000đ</span><span class="m-desc"><i>75 phút</i> – trọn hành trình bảy bước, gồm ngâm chân và đá nóng cổ vai.</span></li>
+        <li class="m-item"><span class="m-name">Gội&nbsp;dưỡng&nbsp;sinh thông&nbsp;kinh&nbsp;lạc</span><span class="m-price">380.000đ</span><span class="m-desc"><i>90 phút</i> – thêm chải thông kinh lạc bằng lược sừng, massage tay và mặt.</span></li>
+        <li class="m-item"><span class="m-name">Liệu&nbsp;trình đôi</span><span class="m-price">620.000đ</span><span class="m-desc"><i>90 phút · 2 người</i> – gội dưỡng sinh Tịnh Mộc trong phòng đôi.</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Liệu&nbsp;trình lẻ, kết&nbsp;hợp</h3>
+      <ul>
+        <li class="m-item"><span class="m-name">Massage cổ&nbsp;vai&nbsp;gáy đá&nbsp;nóng</span><span class="m-price">180.000đ</span><span class="m-desc"><i>30 phút</i> – day ấn huyệt, chườm đá nóng và túi thảo dược.</span></li>
+        <li class="m-item"><span class="m-name">Detox da&nbsp;đầu</span><span class="m-price">320.000đ</span><span class="m-desc"><i>60 phút</i> – tẩy tế bào chết da đầu, ủ dưỡng phục hồi.</span></li>
+        <li class="m-item"><span class="m-name">Ngâm&nbsp;chân thảo&nbsp;mộc</span><span class="m-price">80.000đ</span><span class="m-desc"><i>20 phút</i> – nước gừng, sả, muối hột, massage bàn chân.</span></li>
+        <li class="m-item"><span class="m-name">Combo trọn&nbsp;vẹn</span><span class="m-price">590.000đ</span><span class="m-desc"><i>120 phút</i> – gội dưỡng sinh Tịnh Mộc kết hợp detox da đầu.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="price-note">
+    <p>Giá mang tính tham khảo cho giao diện mẫu, có thể thay đổi theo từng thời điểm. Gọi hoặc nhắn Zalo để được tư vấn liệu trình.</p>
+    <a href="#dat-lich" class="btn btn-dark">Chọn&nbsp;giờ đặt&nbsp;lịch</a>
+  </div>
+</section>
+
+<!-- SPACE / STORY -->
+<section class="space" id="khong-gian" aria-labelledby="sp-title">
+  <figure class="space-fig">
+    <img data-par="-0.12" src="https://images.unsplash.com/photo-1693578538512-fc66f318c833?auto=format&fit=crop&w=1400&q=80" alt="Phòng trị liệu tông gỗ trầm, rèm nâu và ghế bành, ánh đèn vàng dịu" width="1400" height="934" loading="lazy">
+  </figure>
+  <div class="space-txt">
+    <h2 id="sp-title">Một&nbsp;căn&nbsp;phòng gỗ giữa phố&nbsp;thị</h2>
+    <p>Tịnh Mộc là tiệm gội đầu dưỡng sinh nhỏ, chỉ vài giường gội đặt cách nhau bằng rèm vải. Ánh đèn được giữ thấp, nhạc không lời vừa đủ nghe, hương thảo mộc thoảng nhẹ từ gian bếp nấu nước gội.</p>
+    <p>Chúng tôi giữ cách làm cũ: thảo mộc nấu tại tiệm, không dùng nước gội pha sẵn, mỗi khách một bộ khăn riêng.</p>
+    <ul class="facts">
+      <li><b>Thảo mộc</b><span>Bồ kết, vỏ bưởi, hương nhu, sả chanh nấu mới mỗi sáng.</span></li>
+      <li><b>Riêng tư</b><span>Giường gội tách biệt, có phòng đôi cho hai người.</span></li>
+      <li><b>Sạch sẽ</b><span>Khăn giặt sấy sau mỗi lượt khách, dụng cụ được khử khuẩn.</span></li>
+      <li><b>Giá rõ ràng</b><span>Niêm yết trước, không chèo kéo mua thêm sản phẩm.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal" aria-labelledby="g-title">
+  <div class="gal-head">
+    <h2 id="g-title">Góc&nbsp;nhỏ ở Tịnh&nbsp;Mộc</h2>
+    <div class="gal-ctrl">
+      <button type="button" id="gPrev" aria-label="Ảnh trước"><svg viewBox="0 0 18 18"><path d="M11 3 5 9l6 6"/></svg></button>
+      <button type="button" id="gNext" aria-label="Ảnh tiếp theo"><svg viewBox="0 0 18 18"><path d="m7 3 6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <div class="strip" id="strip" tabindex="0" aria-label="Thư viện ảnh, kéo ngang để xem">
+    <figure><img src="https://images.unsplash.com/photo-1545840716-c82e9eec6930?auto=format&fit=crop&w=900&h=1200&q=80" alt="Kệ lọ thuỷ tinh và hộp đồng đựng thảo mộc khô" width="900" height="1200" style="aspect-ratio:3/4" loading="lazy"><figcaption>Kệ thảo mộc khô</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1709316010508-6c86856540e4?auto=format&fit=crop&w=900&h=1200&q=80" alt="Khách nằm nhắm mắt thư giãn trên giường gội" width="900" height="1200" style="aspect-ratio:3/4" loading="lazy"><figcaption>Giờ nghỉ sau khi gội</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1674893168376-c3d8efc23906?auto=format&fit=crop&w=1400&h=1000&q=80" alt="Vườn đá cát cào thành vòng tròn quanh tảng đá" width="1400" height="1000" style="aspect-ratio:7/5" loading="lazy"><figcaption>Góc vườn đá ở sảnh</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1551690935-a9e6f0a7e788?auto=format&fit=crop&w=1200&h=900&q=80" alt="Nén hương cháy trên kệ gỗ cạnh tượng nhỏ" width="1200" height="900" style="aspect-ratio:4/3" loading="lazy"><figcaption>Hương trầm phòng chờ</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&h=1200&q=80" alt="Kỹ thuật viên đặt đá nóng lên lưng khách" width="900" height="1200" style="aspect-ratio:3/4" loading="lazy"><figcaption>Đá nóng cổ vai</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1643684391140-c5056cfd3436?auto=format&fit=crop&w=900&h=1200&q=80" alt="Đôi tay massage nhẹ vùng mặt cho khách" width="900" height="1200" style="aspect-ratio:3/4" loading="lazy"><figcaption>Massage mặt khi ủ tóc</figcaption></figure>
+    <figure><img src="https://images.unsplash.com/photo-1532009877282-3340270e0529?auto=format&fit=crop&w=1400&h=1000&q=80" alt="Chồng đá cuội đen trên nền lá xanh mờ" width="1400" height="1000" style="aspect-ratio:7/5" loading="lazy"><figcaption>Đá cuội ở quầy lễ tân</figcaption></figure>
+  </div>
+  <div class="gal-bar" aria-hidden="true"><i id="galBar"></i></div>
+</section>
+
+<!-- REVIEWS -->
+<section class="rev" aria-labelledby="r-title">
+  <div class="rev-head">
+    <h2 id="r-title">Khách&nbsp;hàng chia&nbsp;sẻ</h2>
+    <span class="tag-sample">Đánh giá mẫu</span>
+  </div>
+  <div class="rev-grid">
+    <figure class="quote">
+      <blockquote>“Nước gội thơm mùi bồ kết, chị kỹ thuật viên ấn huyệt vừa tay. Gội xong thấy đầu nhẹ hẳn, tối về ngủ ngon.”</blockquote>
+      <figcaption><b>Chị Thu H.</b>Đánh giá mẫu · 12/10/2026</figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote>“Ngồi máy tính cả ngày nên hay mỏi cổ vai. Phần đá nóng làm rất kỹ, mình đặt lịch sau giờ làm mỗi tuần.”</blockquote>
+      <figcaption><b>Anh Minh Q.</b>Đánh giá mẫu · 19/10/2026</figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote>“Không gian yên tĩnh, đèn dịu, giá niêm yết rõ. Lần sau sẽ rủ mẹ đi cùng phòng đôi.”</blockquote>
+      <figcaption><b>Chị Lan A.</b>Đánh giá mẫu · 26/10/2026</figcaption>
+    </figure>
+  </div>
+  <p class="rev-note">Các đánh giá trên là nội dung minh hoạ cho giao diện mẫu, sẽ được thay bằng đánh giá thật của khách hàng.</p>
+</section>
+
+<!-- BOOKING + CONTACT -->
+<section class="book" id="dat-lich" aria-labelledby="b-title">
+  <div class="book-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1770217535691-76d80a83f909?auto=format&fit=crop&w=1200&q=70" alt="" width="1200" height="1500" loading="lazy"></div>
+  <div class="book-intro" id="lien-he">
+    <h2 id="b-title">Đặt&nbsp;lịch hẹn</h2>
+    <p>Để lại thông tin, Tịnh Mộc sẽ gọi lại xác nhận trong giờ làm việc. Bạn cũng có thể gọi hoặc nhắn Zalo trực tiếp.</p>
+    <ul class="contact">
+      <li><span>Địa chỉ</span><span>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</span></li>
+      <li><span>Hotline</span><span><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a> (gọi hoặc Zalo)</span></li>
+      <li><span>Giờ mở cửa</span><span>09:00&nbsp;–&nbsp;21:00, tất cả các ngày trong tuần</span></li>
+      <li><span>Đỗ xe</span><span>Có chỗ để xe máy trước tiệm</span></li>
+    </ul>
+    <div class="map" role="img" aria-label="Vị trí bản đồ minh hoạ"><span>Bản đồ Google Maps sẽ hiển thị tại đây</span></div>
+  </div>
+
+  <div>
+    <form class="form" id="bookForm" novalidate>
+      <h3>Chọn liệu trình và giờ hẹn</h3>
+      <p class="sub">Các mục có dấu * là bắt buộc.</p>
+      <div class="f-grid">
+        <div class="fld"><label for="f-name">Họ và tên *</label><input id="f-name" name="name" autocomplete="name" required><span class="err" aria-live="polite"></span></div>
+        <div class="fld"><label for="f-phone">Số điện thoại *</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" required><span class="err" aria-live="polite"></span></div>
+        <div class="fld f-full"><label for="f-svc">Liệu trình *</label>
+          <select id="f-svc" name="svc" required>
+            <option value="">Chọn liệu trình</option>
+            <option>Gội thảo mộc thư giãn – 45 phút</option>
+            <option>Gội dưỡng sinh Tịnh Mộc – 75 phút</option>
+            <option>Gội dưỡng sinh thông kinh lạc – 90 phút</option>
+            <option>Massage cổ vai gáy đá nóng – 30 phút</option>
+            <option>Detox da đầu – 60 phút</option>
+            <option>Combo trọn vẹn – 120 phút</option>
+            <option>Liệu trình đôi – 90 phút</option>
+          </select><span class="err" aria-live="polite"></span></div>
+        <div class="fld"><label for="f-date">Ngày hẹn *</label><input id="f-date" name="date" type="date" required><span class="err" aria-live="polite"></span></div>
+        <div class="fld"><label for="f-time">Giờ hẹn *</label>
+          <select id="f-time" name="time" required>
+            <option value="">Chọn giờ</option>
+            <option>09:00</option><option>10:30</option><option>13:00</option><option>14:30</option><option>16:00</option><option>17:30</option><option>19:00</option>
+          </select><span class="err" aria-live="polite"></span></div>
+        <div class="fld f-full"><label for="f-note">Ghi chú</label><textarea id="f-note" name="note" rows="3" placeholder="Ví dụ: hay mỏi vai trái, muốn ấn nhẹ tay"></textarea></div>
+      </div>
+      <div class="form-foot">
+        <small>Trang mẫu: thông tin không được gửi đi đâu.</small>
+        <button type="submit" class="btn btn-tea">Gửi&nbsp;yêu&nbsp;cầu đặt&nbsp;lịch</button>
+      </div>
+    </form>
+    <div class="form thanks" id="thanks" role="status" aria-live="polite" tabindex="-1">
+      <div class="seal"><svg viewBox="0 0 26 26"><path d="M6 13.5 11 18l9-10"/></svg></div>
+      <h3>Cảm&nbsp;ơn bạn</h3>
+      <p>Tịnh Mộc đã nhận yêu cầu đặt lịch và sẽ gọi lại xác nhận trong giờ làm việc.</p>
+      <ul class="sum" id="sum"></ul>
+      <button type="button" class="btn btn-line" id="again">Đặt&nbsp;thêm lịch&nbsp;khác</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="ft-top">
+    <div><div class="ft-word">Tịnh&nbsp;Mộc</div></div>
+    <div>
+      <h4>Ghé tiệm</h4>
+      <ul>
+        <li>Số 00 Đường Mẫu, Phường Mẫu, TP.&nbsp;Hồ&nbsp;Chí&nbsp;Minh</li>
+        <li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li>
+        <li>09:00&nbsp;–&nbsp;21:00 hằng ngày</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Xem nhanh</h4>
+      <ul>
+        <li><a href="#hanh-trinh">Hành trình bảy bước</a></li>
+        <li><a href="#bang-gia">Bảng giá tham khảo</a></li>
+        <li><a href="#dat-lich">Đặt lịch hẹn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-note">
+    <p>© 2026 Tịnh Mộc. Đây là giao diện mẫu: tên thương hiệu, địa chỉ, số điện thoại, bảng giá, đánh giá và hình ảnh đều là nội dung minh hoạ. Ảnh từ Unsplash.</p>
+    <p>Gội đầu dưỡng sinh thảo mộc</p>
+  </div>
+</footer>
+
+<a class="pill" href="https://zalo.me/0901432113" target="_blank" rel="noopener">
+  <span class="pm"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#C79A5B"/><path d="M7 3.5v7" stroke="#EAE3D4" stroke-linecap="round"/></svg></span>
+  <span>Mẫu giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận báo&nbsp;giá</b></span>
+</a>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+
+  /* hero entrance */
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ document.body.classList.add('ready'); }); });
+
+  /* header */
+  var hd = document.getElementById('hd');
+  function onHd(){ hd.classList.toggle('solid', window.scrollY > 40); }
+  onHd();
+
+  /* mobile menu */
+  var burger = document.getElementById('burger'), mnav = document.getElementById('mnav');
+  function setMenu(open){
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu');
+    mnav.setAttribute('aria-hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ setMenu(!document.body.classList.contains('menu-open')); });
+  mnav.addEventListener('click', function(e){ if(e.target.tagName === 'A') setMenu(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') setMenu(false); });
+
+  /* intro: words light up as you read */
+  var intro = document.getElementById('introTxt');
+  var words = intro.textContent.trim().split(/\s+/);
+  intro.innerHTML = words.map(function(w){ return '<span class="w">' + w + '</span>'; }).join(' ');
+  var wEls = intro.querySelectorAll('.w');
+  function onIntro(){
+    var r = intro.getBoundingClientRect(), vh = window.innerHeight;
+    var p = (vh * 0.85 - r.top) / (r.height + vh * 0.35);
+    p = Math.max(0, Math.min(1, p));
+    var n = Math.round(p * wEls.length);
+    for (var i = 0; i < wEls.length; i++) wEls[i].classList.toggle('on', i < n);
+  }
+
+  /* journey dial */
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  var ring = document.getElementById('ring');
+  var total = 75, ns = 'http://www.w3.org/2000/svg', R = 300, svg = '';
+  for (var m = 0; m < 75; m++) {
+    var a = (m / total) * Math.PI * 2 - Math.PI / 2, big = m % 15 === 0;
+    var r1 = big ? 282 : 288, r2 = 298;
+    svg += '<line class="tick' + (big ? ' big' : '') + '" x1="' + (R + Math.cos(a) * r1).toFixed(1) + '" y1="' + (R + Math.sin(a) * r1).toFixed(1) + '" x2="' + (R + Math.cos(a) * r2).toFixed(1) + '" y2="' + (R + Math.sin(a) * r2).toFixed(1) + '"/>';
+  }
+  steps.forEach(function(s, i){
+    var a = (+s.dataset.min / total) * Math.PI * 2 - Math.PI / 2;
+    svg += '<circle class="node' + (i === 0 ? ' on' : '') + '" r="5" cx="' + (R + Math.cos(a) * 300).toFixed(1) + '" cy="' + (R + Math.sin(a) * 300).toFixed(1) + '"/>';
+  });
+  ring.innerHTML = svg;
+  var nodes = ring.querySelectorAll('.node');
+  var winImgs = document.querySelectorAll('#dialWin img');
+  var hand = document.getElementById('hand'), minRead = document.getElementById('minRead'), stepRead = document.getElementById('stepRead');
+  var cur = -1, turns = 0;
+  function setStep(i){
+    if (i === cur) return; cur = i;
+    var mins = +steps[i].dataset.min;
+    steps.forEach(function(s, k){ s.classList.toggle('on', k === i); });
+    winImgs.forEach(function(im, k){ im.classList.toggle('on', k === i); });
+    nodes.forEach(function(nd, k){ nd.classList.toggle('on', k <= i); });
+    hand.style.transform = 'rotate(' + (mins / total * 360) + 'deg)';
+    minRead.innerHTML = mins + '&nbsp;phút';
+    stepRead.textContent = 'Bước ' + (i + 1) + ' / ' + steps.length;
+  }
+  setStep(0);
+  function onSteps(){
+    if (window.innerWidth <= 900) return;
+    var mid = window.innerHeight * 0.5, best = 0, bd = 1e9;
+    steps.forEach(function(s, i){
+      var r = s.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid);
+      if (d < bd) { bd = d; best = i; }
+    });
+    setStep(best);
+  }
+
+  /* parallax */
+  var pars = [].slice.call(document.querySelectorAll('[data-par]'));
+  function onPar(){
+    if (reduce) return;
+    var vh = window.innerHeight;
+    pars.forEach(function(el){
+      var host = el.parentElement, r = host.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      var c = (r.top + r.height / 2 - vh / 2);
+      el.style.transform = 'translate3d(0,' + (c * +el.dataset.par).toFixed(1) + 'px,0)';
+    });
+  }
+
+  /* gallery progress */
+  var strip = document.getElementById('strip'), bar = document.getElementById('galBar');
+  function onGal(){
+    var max = strip.scrollWidth - strip.clientWidth;
+    var vis = strip.clientWidth / strip.scrollWidth;
+    var p = max > 0 ? strip.scrollLeft / max : 0;
+    bar.style.width = (vis * 100) + '%';
+    bar.style.transform = 'translateX(' + (p * (1 / vis - 1) * 100) + '%)';
+  }
+
+  var ticking = false;
+  function frame(){ ticking = false; onHd(); onIntro(); onSteps(); onPar(); }
+  window.addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, {passive:true});
+  window.addEventListener('resize', function(){ frame(); onGal(); });
+  frame();
+
+  /* gallery drag + buttons */
+  var down = false, sx = 0, sl = 0, moved = 0;
+  strip.addEventListener('pointerdown', function(e){ if (e.pointerType !== 'mouse') return; down = true; moved = 0; sx = e.clientX; sl = strip.scrollLeft; strip.classList.add('drag'); });
+  window.addEventListener('pointermove', function(e){ if (!down) return; var dx = e.clientX - sx; moved = Math.abs(dx); strip.scrollLeft = sl - dx; });
+  window.addEventListener('pointerup', function(){ if (!down) return; down = false; strip.classList.remove('drag'); });
+  strip.addEventListener('scroll', function(){ requestAnimationFrame(onGal); }, {passive:true});
+  function step(dir){ strip.scrollBy({left: dir * strip.clientWidth * 0.6, behavior: reduce ? 'auto' : 'smooth'}); }
+  document.getElementById('gPrev').addEventListener('click', function(){ step(-1); });
+  document.getElementById('gNext').addEventListener('click', function(){ step(1); });
+  strip.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); });
+  window.addEventListener('load', onGal); onGal();
+
+  /* services: cursor-follow preview */
+  var peek = document.getElementById('peek'), pImgs = peek.querySelectorAll('img');
+  var fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (fine && !reduce) {
+    var tx = 0, ty = 0, px = 0, py = 0, raf = null, on = false;
+    function loop(){
+      px += (tx - px) * 0.14; py += (ty - py) * 0.14;
+      var rot = Math.max(-8, Math.min(8, (tx - px) * 0.06));
+      peek.style.transform = 'translate3d(' + (px - 150).toFixed(1) + 'px,' + (py - 187).toFixed(1) + 'px,0) rotate(' + rot.toFixed(2) + 'deg) scale(' + (on ? 1 : .85) + ')';
+      raf = (on || Math.abs(tx - px) > .5) ? requestAnimationFrame(loop) : null;
+    }
+    document.querySelectorAll('.svc-row').forEach(function(row){
+      row.addEventListener('mouseenter', function(e){
+        var k = +row.dataset.img;
+        pImgs.forEach(function(im, j){ im.classList.toggle('on', j === k); });
+        if (!on) { px = tx = e.clientX + 40; py = ty = e.clientY; }
+        on = true; peek.classList.add('show'); if (!raf) raf = requestAnimationFrame(loop);
+      });
+      row.addEventListener('mousemove', function(e){ tx = e.clientX + 40; ty = e.clientY; });
+    });
+    document.getElementById('svcList').addEventListener('mouseleave', function(){ on = false; peek.classList.remove('show'); });
+  }
+
+  /* booking form */
+  var form = document.getElementById('bookForm'), thanks = document.getElementById('thanks');
+  var dateIn = document.getElementById('f-date');
+  var t = new Date(); var iso = t.getFullYear() + '-' + String(t.getMonth() + 1).padStart(2, '0') + '-' + String(t.getDate()).padStart(2, '0');
+  dateIn.min = iso;
+  function fmt(v){ var p = v.split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function setErr(el, msg){ var f = el.closest('.fld'); f.classList.toggle('bad', !!msg); f.querySelector('.err').textContent = msg || ''; }
+  function check(){
+    var ok = true, first = null;
+    var name = form.name, phone = form.phone, svc = form.svc, date = form.date, time = form.time;
+    function fail(el, msg){ setErr(el, msg); ok = false; if (!first) first = el; }
+    if (name.value.trim().length < 2) fail(name, 'Vui lòng nhập họ và tên.'); else setErr(name);
+    var ph = phone.value.replace(/[\s.\-]/g, '');
+    if (!/^(0|\+84)\d{9}$/.test(ph)) fail(phone, 'Số điện thoại gồm 10 số, ví dụ 0901 234 567.'); else setErr(phone);
+    if (!svc.value) fail(svc, 'Vui lòng chọn liệu trình.'); else setErr(svc);
+    if (!date.value) fail(date, 'Vui lòng chọn ngày hẹn.'); else if (date.value < iso) fail(date, 'Ngày hẹn cần từ hôm nay trở đi.'); else setErr(date);
+    if (!time.value) fail(time, 'Vui lòng chọn giờ hẹn.'); else setErr(time);
+    if (first) first.focus();
+    return ok;
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!check()) return;
+    var rows = [['Họ và tên', form.name.value.trim()], ['Điện thoại', form.phone.value.trim()], ['Liệu trình', form.svc.value], ['Thời gian', form.time.value + ', ' + fmt(form.date.value)]];
+    var sum = document.getElementById('sum'); sum.innerHTML = '';
+    rows.forEach(function(r){ var li = document.createElement('li'); var a = document.createElement('span'); a.textContent = r[0]; var b = document.createElement('span'); b.textContent = r[1]; li.appendChild(a); li.appendChild(b); sum.appendChild(li); });
+    form.style.display = 'none'; thanks.classList.add('show'); thanks.focus();
+  });
+  form.addEventListener('input', function(e){ if (e.target.closest('.fld.bad')) setErr(e.target, ''); });
+  document.getElementById('again').addEventListener('click', function(){ form.reset(); thanks.classList.remove('show'); form.style.display = ''; form.name.focus(); });
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

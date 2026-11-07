@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website trang sức – Sương Silver</title>
+<meta name="description" content="Mẫu giao diện website bán trang sức bạc S925 tối giản: bộ sưu tập, sản phẩm, khắc tên miễn phí, chính sách bảo hành – đổi trả – giao hàng.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F6F3; --paper:#FFFFFF; --ink:#1F2428; --muted:#68727A; --line:#E3E1DC;
+  --silver:#B9C1C7; --accent:#4F6672; --accent-soft:#E8EEF0; --sage:#DDE3DA;
+  --serif:"Noto Serif Display", Georgia, serif; --sans:"Be Vietnam Pro", system-ui, sans-serif;
+  --radius:2px; --wrap:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:300 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto;object-fit:cover;background:linear-gradient(135deg,#E6E8EA,#D3D8DC)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,6vw,4.9rem)}
+h2{font-size:clamp(2rem,4vw,3.1rem)}
+h3{font-size:1.45rem}
+.eyebrow{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:500;display:block;margin-bottom:14px}
+.lead{color:var(--muted);font-size:1.05rem;max-width:34rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:background .3s,color .3s,transform .3s;white-space:nowrap}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:54px;flex-wrap:wrap}
+.sec-head p{max-width:28rem;color:var(--muted)}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:#DDE2E5;font-size:.78rem;text-align:center;padding:9px 16px;letter-spacing:.04em}
+header{position:sticky;top:0;z-index:50;background:rgba(247,246,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.logo{font-family:var(--serif);font-size:1.7rem;font-weight:600;letter-spacing:.02em;white-space:nowrap}
+.logo small{font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;display:block;color:var(--muted);font-weight:400;margin-top:-6px}
+.menu{display:flex;gap:34px;font-size:.88rem}
+.menu a{position:relative;padding:4px 0;white-space:nowrap}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--ink);transition:width .3s}
+.menu a:hover::after{width:100%}
+.icons{display:flex;gap:6px;align-items:center}
+.icon-btn{width:42px;height:42px;display:grid;place-items:center;border:0;background:none;cursor:pointer;position:relative;border-radius:50%;transition:background .2s}
+.icon-btn:hover{background:var(--accent-soft)}
+.icon-btn svg{width:21px;height:21px;stroke:var(--ink);fill:none;stroke-width:1.5}
+.cart-count{position:absolute;top:3px;right:2px;min-width:18px;height:18px;border-radius:9px;background:var(--accent);color:#fff;font-size:.66rem;display:grid;place-items:center;font-weight:600;padding:0 4px}
+.cart-count.bump{animation:bump .45s}
+@keyframes bump{40%{transform:scale(1.45)}}
+.burger{display:none}
+
+/* hero */
+.hero{padding:70px 0 100px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lead{margin:26px 0 38px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-points{display:flex;gap:28px;margin-top:46px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap;font-size:.86rem;color:var(--muted)}
+.hero-points b{display:block;color:var(--ink);font-weight:500;font-size:.95rem}
+.hero-media{position:relative;aspect-ratio:4/5}
+.hero-media .main{width:100%;height:100%;aspect-ratio:4/5}
+.hero-media .float{position:absolute;width:42%;aspect-ratio:1;left:-18%;bottom:-8%;border:10px solid var(--bg)}
+.hero-tag{position:absolute;top:24px;right:-14px;background:var(--paper);padding:14px 20px;font-size:.8rem;box-shadow:0 10px 30px rgba(31,36,40,.08)}
+.hero-tag b{font-family:var(--serif);font-size:1.3rem;font-weight:600;display:block}
+
+/* entrance */
+.enter{opacity:0;transform:translateY(24px);animation:enter 1s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}
+@keyframes enter{to{opacity:1;transform:none}}
+.hero-media.enter .main{animation:zoom 1.8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* collections */
+.collections{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.col-card{position:relative;overflow:hidden;display:block}
+.col-card img{width:100%;aspect-ratio:3/4;transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.col-card:hover img{transform:scale(1.06)}
+.col-card .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 22px;color:#fff;background:linear-gradient(transparent,rgba(20,24,27,.62))}
+.col-card .cap h3{font-size:1.6rem}
+.col-card .cap span{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+
+/* products */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--paper);padding:9px 18px;font-size:.84rem;cursor:pointer;transition:all .25s;white-space:nowrap;border-radius:40px}
+.chip.on,.chip:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 22px}
+.product{background:transparent;transition:opacity .35s;display:flex;flex-direction:column}
+.p-body{flex:1;display:flex;flex-direction:column}.p-body .add-m{margin-top:auto}.p-body .price{margin-bottom:12px}
+.product.hide{display:none}
+.p-media{position:relative;overflow:hidden;background:var(--paper)}
+.p-media img{width:100%;aspect-ratio:1;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.product:hover .p-media img{transform:scale(1.05)}
+.badge{position:absolute;top:12px;left:12px;background:var(--paper);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;font-weight:500}
+.badge.sale{background:var(--accent);color:#fff}
+.add{position:absolute;left:12px;right:12px;bottom:12px;transform:translateY(130%);transition:transform .4s cubic-bezier(.2,.7,.2,1);padding:13px 10px}
+.product:hover .add,.add:focus-visible{transform:none}
+.p-body{padding-top:16px}
+.p-body .mat{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.p-body h3{font-size:1.3rem;margin:4px 0 6px}
+.price{font-weight:500;font-size:1rem;white-space:nowrap}
+.price del{color:var(--muted);font-weight:300;margin-left:8px;font-size:.88rem}
+.add-m{display:none;margin-top:12px;width:100%;padding:12px}
+
+/* material */
+.material{background:var(--paper)}
+.mat-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.mat-media{position:relative}
+.mat-media img{width:100%;aspect-ratio:5/6}
+.mat-media .stamp{position:absolute;right:-30px;top:40px;width:130px;height:130px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:1.8rem;line-height:1;animation:spin 24s linear infinite}
+.mat-media .stamp span{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.2em;margin-top:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.facts{margin-top:40px;display:grid;gap:0}
+.fact{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.fact:last-child{border-bottom:1px solid var(--line)}
+.fact .n{font-family:var(--serif);font-size:1.6rem;color:var(--accent)}
+.fact h3{font-size:1.3rem;margin-bottom:4px}
+.fact p{color:var(--muted);font-size:.94rem}
+
+/* engraving */
+.engrave{background:var(--sage)}
+.eng-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.eng-preview{background:var(--paper);padding:60px 40px;text-align:center}
+.band{margin:0 auto;width:min(420px,100%);height:110px;border-radius:60px;background:linear-gradient(180deg,#F4F6F7 0%,#C9D0D5 38%,#EEF1F2 55%,#AEB7BD 100%);box-shadow:inset 0 -6px 14px rgba(0,0,0,.12),inset 0 6px 10px rgba(255,255,255,.8),0 18px 40px rgba(31,36,40,.12);display:grid;place-items:center;overflow:hidden}
+.band span{font-family:var(--serif);font-style:italic;font-size:2.2rem;color:#5D676E;text-shadow:0 1px 0 rgba(255,255,255,.8);letter-spacing:.06em;white-space:nowrap;transition:opacity .2s}
+.eng-preview small{display:block;margin-top:18px;color:var(--muted);font-size:.82rem}
+.eng-form{margin-top:30px;display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;border:1px solid var(--line);background:var(--paper);outline:none;transition:border .2s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+.gift-list{list-style:none;margin:26px 0 32px;display:grid;gap:12px}
+.gift-list li{display:flex;gap:14px;align-items:flex-start}
+.gift-list li::before{content:"";flex:0 0 8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px}
+
+/* policies */
+.policies{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.policy{padding:40px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);transition:background .3s}
+.policy:hover{background:var(--accent-soft)}
+.policy svg{width:34px;height:34px;stroke:var(--accent);fill:none;stroke-width:1.3;margin-bottom:22px}
+.policy h3{font-size:1.4rem;margin-bottom:10px}
+.policy p{color:var(--muted);font-size:.92rem}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review{background:var(--paper);padding:36px 32px;border:1px solid var(--line)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:.9rem}
+.review blockquote{font-family:var(--serif);font-size:1.32rem;line-height:1.45;margin:16px 0 24px}
+.who{display:flex;gap:12px;align-items:center;font-size:.88rem}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;font-weight:500;color:var(--accent)}
+.who span{color:var(--muted);display:block;font-size:.78rem}
+.sample-note{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;border:1px dashed var(--accent);color:var(--accent);padding:4px 10px;margin-left:12px;vertical-align:middle;font-family:var(--sans);font-weight:500}
+
+/* newsletter + contact */
+.news{background:var(--ink);color:#E9ECEE}
+.news-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:70px;align-items:start}
+.news h2{color:#fff}
+.news .lead{color:#B4BCC2}
+.news-form{display:flex;margin-top:30px;border-bottom:1px solid #6B757C}
+.news-form input{flex:1;background:none;border:0;padding:16px 0;color:#fff;outline:none;min-width:0}
+.news-form input::placeholder{color:#8E989F}
+.news-form button{background:none;border:0;color:#fff;cursor:pointer;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:500;padding:0 0 0 16px;white-space:nowrap}
+.contact-list{list-style:none;display:grid;gap:22px}
+.contact-list li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding-bottom:22px;border-bottom:1px solid #3A4248;font-size:.95rem}
+.contact-list span{color:#8E989F;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding-top:3px}
+.thanks{display:none;margin-top:18px;padding:14px 18px;background:rgba(255,255,255,.08);border-left:2px solid var(--silver);font-size:.92rem}
+.thanks.show{display:block;animation:enter .6s forwards}
+
+footer{background:#15191C;color:#9AA3A9;padding:70px 0 110px;font-size:.88rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font-weight:500;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a:hover{color:#fff}
+.foot-logo{font-family:var(--serif);font-size:1.8rem;color:#fff;margin-bottom:12px}
+.copy{margin-top:50px;padding-top:24px;border-top:1px solid #2A3035;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem}
+
+/* toast + sales badge */
+.toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:#fff;padding:14px 20px;font-size:.88rem;transform:translateY(150%);transition:transform .45s cubic-bezier(.2,.7,.2,1);z-index:70;max-width:calc(100% - 40px)}
+.toast.show{transform:none}
+.sales-badge{position:fixed;left:14px;bottom:14px;z-index:80;background:#fff;color:#1F2428;border:1px solid #D5D9DC;border-radius:40px;padding:8px 14px;font:500 12px/1.3 var(--sans);box-shadow:0 6px 20px rgba(0,0,0,.12);display:flex;gap:6px;align-items:center;max-width:calc(100% - 28px)}
+.sales-badge b{color:#0068FF;font-weight:600;white-space:nowrap}
+.sales-badge:hover{box-shadow:0 8px 26px rgba(0,0,0,.2)}
+
+/* responsive */
+@media (max-width:1024px){
+  .menu{gap:22px}
+  .collections{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .policies{grid-template-columns:repeat(2,1fr)}
+  .mat-grid,.eng-grid{gap:50px}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu{position:fixed;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;gap:0;padding:10px 24px 24px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .4s;z-index:-1;visibility:hidden;opacity:0}
+  .menu.open{transform:none;visibility:visible;opacity:1}
+  .menu a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .burger{display:grid}
+  .hero-grid,.mat-grid,.eng-grid,.news-grid{grid-template-columns:1fr}
+  .hero-media{max-width:520px;margin-left:auto}
+  .reviews{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .mat-media .stamp{right:10px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .section{padding:76px 0}
+  .hero{padding:40px 0 70px}
+  .hero-media .float{left:-4%;bottom:-6%;width:40%;border-width:6px}
+  .hero-tag{right:8px;top:12px;padding:10px 14px}
+  .collections{gap:12px}
+  .col-card .cap{padding:16px 14px}
+  .col-card .cap h3{font-size:1.25rem}
+  .grid{gap:28px 12px}
+  .add{display:none}
+  .add-m{display:flex;padding:11px 6px;font-size:.7rem;letter-spacing:.08em}
+  .p-body h3{font-size:1.12rem}
+  .p-body .mat{letter-spacing:.08em;font-size:.68rem}
+  .price{font-size:.92rem}
+  .price del{display:block;margin-left:0}
+  .policies{grid-template-columns:1fr}
+  .eng-preview{padding:40px 18px}
+  .band{height:86px}.band span{font-size:1.7rem}
+  .contact-list li{grid-template-columns:1fr;gap:4px}
+  .foot{grid-template-columns:1fr}
+  .logo{font-size:1.45rem}
+  .sec-head{margin-bottom:36px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .enter,.reveal{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">Miễn phí giao hàng toàn quốc cho đơn từ 500.000đ · Miễn phí khắc tên</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Sương Silver – trang chủ">Sương Silver<small>BẠC S925</small></a>
+    <nav class="menu" id="menu">
+      <a href="#bo-suu-tap">Bộ&nbsp;sưu&nbsp;tập</a>
+      <a href="#san-pham">Sản&nbsp;phẩm</a>
+      <a href="#khac-ten">Khắc&nbsp;tên</a>
+      <a href="#chinh-sach">Chính&nbsp;sách</a>
+      <a href="#lien-he">Liên&nbsp;hệ</a>
+    </nav>
+    <div class="icons">
+      <button class="icon-btn" aria-label="Tìm kiếm"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="icon-btn" aria-label="Giỏ hàng" id="cartBtn"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" id="cartCount">0</span></button>
+      <button class="icon-btn burger" aria-label="Mở menu" id="burger"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow enter d1">Trang&nbsp;sức bạc&nbsp;S925 tối&nbsp;giản</span>
+      <h1 class="enter d2">Nhẹ&nbsp;nhàng <em>mỗi&nbsp;ngày</em>, tinh&nbsp;tế trong từng&nbsp;chi&nbsp;tiết</h1>
+      <p class="lead enter d3">Nhẫn, dây chuyền, lắc tay bạc S925 thiết kế tối giản, dễ đeo hằng ngày. Miễn phí khắc tên và đánh sáng trọn đời cho mọi sản phẩm.</p>
+      <div class="hero-ctas enter d4">
+        <a href="#san-pham" class="btn">Mua&nbsp;ngay</a>
+        <a href="#bo-suu-tap" class="btn ghost">Xem bộ&nbsp;sưu&nbsp;tập</a>
+      </div>
+      <div class="hero-points enter d4">
+        <div><b>Bạc S925</b>Có kiểm định chất liệu</div>
+        <div><b>Khắc tên</b>Miễn phí theo yêu cầu</div>
+        <div><b>Đổi trả 7 ngày</b>Nếu lỗi do nhà sản xuất</div>
+      </div>
+    </div>
+    <div class="hero-media enter d2">
+      <img class="main" src="https://images.unsplash.com/photo-1761222101900-9c9e34fac2ce?auto=format&fit=crop&w=1400&q=80" width="1000" height="1250" alt="Đôi tay đeo lắc tay bạc mảnh">
+      <img class="float" src="https://images.unsplash.com/photo-1620968867360-5cda83d2bffd?auto=format&fit=crop&w=700&q=80" width="400" height="400" alt="Nhẫn bạc đặt trên mặt bàn gỗ">
+      <div class="hero-tag"><b>Mới về</b>Bộ&nbsp;sưu&nbsp;tập Sương&nbsp;Mai</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="bo-suu-tap" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Bộ&nbsp;sưu&nbsp;tập</span><h2>Chọn theo phong&nbsp;cách của&nbsp;bạn</h2></div>
+      <p>Mỗi bộ sưu tập được thiết kế để phối cùng nhau – đeo riêng thanh lịch, đeo chồng (layer) cá tính.</p>
+    </div>
+    <div class="collections">
+      <a href="#san-pham" class="col-card reveal" data-go="nhan"><img src="https://images.unsplash.com/photo-1514612497953-05d1e5e171fa?auto=format&fit=crop&w=800&q=80" width="600" height="800" alt="Nhẫn bạc đính đá trắng" loading="lazy"><div class="cap"><span>12 mẫu</span><h3>Nhẫn&nbsp;bạc</h3></div></a>
+      <a href="#san-pham" class="col-card reveal" data-go="day"><img src="https://images.unsplash.com/photo-1588444968576-f8fe92ce56fd?auto=format&fit=crop&w=800&q=80" width="600" height="800" alt="Dây chuyền bạc mặt trái tim" loading="lazy"><div class="cap"><span>9 mẫu</span><h3>Dây&nbsp;chuyền</h3></div></a>
+      <a href="#san-pham" class="col-card reveal" data-go="lac"><img src="https://images.unsplash.com/photo-1605884878538-6468614df578?auto=format&fit=crop&w=800&q=80" width="600" height="800" alt="Lắc tay bạc dạng xích" loading="lazy"><div class="cap"><span>8 mẫu</span><h3>Lắc&nbsp;tay</h3></div></a>
+      <a href="#san-pham" class="col-card reveal" data-go="doi"><img src="https://images.unsplash.com/photo-1550368566-f9cc32d7392d?auto=format&fit=crop&w=800&q=80" width="600" height="800" alt="Cặp nhẫn bạc" loading="lazy"><div class="cap"><span>6 mẫu</span><h3>Nhẫn&nbsp;đôi</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="san-pham" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Sản&nbsp;phẩm bán&nbsp;chạy</span><h2>Được chọn nhiều tuần&nbsp;này</h2></div>
+      <div class="filters" role="tablist">
+        <button class="chip on" data-f="all">Tất&nbsp;cả</button>
+        <button class="chip" data-f="nhan">Nhẫn</button>
+        <button class="chip" data-f="day">Dây&nbsp;chuyền</button>
+        <button class="chip" data-f="lac">Lắc&nbsp;tay</button>
+        <button class="chip" data-f="doi">Nhẫn&nbsp;đôi</button>
+      </div>
+    </div>
+    <div class="grid" id="grid">
+      <article class="product reveal" data-c="nhan">
+        <div class="p-media"><span class="badge">Mới</span><img src="https://images.unsplash.com/photo-1514612497953-05d1e5e171fa?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Nhẫn bạc S925 đính đá CZ" loading="lazy"><button class="btn add" data-name="Nhẫn Giọt Sương">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925 · đá&nbsp;CZ</span><h3>Nhẫn Giọt&nbsp;Sương</h3><div class="price">450.000đ</div><button class="btn ghost add-m" data-name="Nhẫn Giọt Sương">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+      <article class="product reveal" data-c="day">
+        <div class="p-media"><span class="badge sale">-15%</span><img src="https://images.unsplash.com/photo-1676329947145-99145926d3eb?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Dây chuyền bạc mặt trái tim trên nền trắng" loading="lazy"><button class="btn add" data-name="Dây chuyền Trái Tim">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925 · xi&nbsp;bạch&nbsp;kim</span><h3>Dây&nbsp;chuyền Trái&nbsp;Tim</h3><div class="price">535.000đ<del>630.000đ</del></div><button class="btn ghost add-m" data-name="Dây chuyền Trái Tim">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+      <article class="product reveal" data-c="lac">
+        <div class="p-media"><img src="https://images.unsplash.com/photo-1605884878538-6468614df578?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Lắc tay bạc dạng xích mắt to" loading="lazy"><button class="btn add" data-name="Lắc tay Xích Mảnh">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925</span><h3>Lắc&nbsp;tay Xích&nbsp;Mảnh</h3><div class="price">690.000đ</div><button class="btn ghost add-m" data-name="Lắc tay Xích Mảnh">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+      <article class="product reveal" data-c="nhan">
+        <div class="p-media"><img src="https://images.unsplash.com/photo-1620968867360-5cda83d2bffd?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Nhẫn bạc trơn trên bàn gỗ" loading="lazy"><button class="btn add" data-name="Nhẫn Trơn Basic">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925 · khắc&nbsp;tên</span><h3>Nhẫn Trơn&nbsp;Basic</h3><div class="price">320.000đ</div><button class="btn ghost add-m" data-name="Nhẫn Trơn Basic">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+      <article class="product reveal" data-c="day">
+        <div class="p-media"><img src="https://images.unsplash.com/photo-1636103952204-0b738c225264?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Mặt dây chuyền bạc hình cây sự sống" loading="lazy"><button class="btn add" data-name="Dây chuyền Cây Sự Sống">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925</span><h3>Dây&nbsp;chuyền Cây&nbsp;Sự&nbsp;Sống</h3><div class="price">580.000đ</div><button class="btn ghost add-m" data-name="Dây chuyền Cây Sự Sống">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+      <article class="product reveal" data-c="doi">
+        <div class="p-media"><span class="badge">Khắc tên</span><img src="https://images.unsplash.com/photo-1550368566-f9cc32d7392d?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Cặp nhẫn đôi bằng bạc" loading="lazy"><button class="btn add" data-name="Nhẫn đôi Kết Nối">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925 · cặp&nbsp;2&nbsp;chiếc</span><h3>Nhẫn&nbsp;đôi Kết&nbsp;Nối</h3><div class="price">890.000đ</div><button class="btn ghost add-m" data-name="Nhẫn đôi Kết Nối">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+      <article class="product reveal" data-c="nhan">
+        <div class="p-media"><span class="badge sale">-10%</span><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Nhẫn bạc đính đá trắng trên nền đen" loading="lazy"><button class="btn add" data-name="Nhẫn Ánh Trăng">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925 · đá&nbsp;CZ</span><h3>Nhẫn Ánh&nbsp;Trăng</h3><div class="price">495.000đ<del>550.000đ</del></div><button class="btn ghost add-m" data-name="Nhẫn Ánh Trăng">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+      <article class="product reveal" data-c="doi">
+        <div class="p-media"><img src="https://images.unsplash.com/photo-1511253819057-5408d4d70465?auto=format&fit=crop&w=800&q=80" width="600" height="600" alt="Nhẫn bạc lồng mặt dây chuyền" loading="lazy"><button class="btn add" data-name="Nhẫn đôi Vòng Tròn">Thêm vào&nbsp;giỏ</button></div>
+        <div class="p-body"><span class="mat">Bạc&nbsp;S925 · cặp&nbsp;2&nbsp;chiếc</span><h3>Nhẫn&nbsp;đôi Vòng&nbsp;Tròn</h3><div class="price">760.000đ</div><button class="btn ghost add-m" data-name="Nhẫn đôi Vòng Tròn">Thêm vào&nbsp;giỏ</button></div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:56px" class="reveal"><a href="#san-pham" class="btn ghost">Xem tất&nbsp;cả sản&nbsp;phẩm</a></div>
+  </div>
+</section>
+
+<section class="section material" id="chat-lieu">
+  <div class="wrap mat-grid">
+    <div class="mat-media reveal">
+      <img src="https://images.unsplash.com/photo-1772442125267-7640b4b5f2fe?auto=format&fit=crop&w=1200&q=80" width="900" height="1080" alt="Thợ kim hoàn đang chế tác trang sức tại bàn làm việc" loading="lazy">
+      <div class="stamp">925<span>STERLING</span></div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Chất&nbsp;liệu &amp; chế&nbsp;tác</span>
+      <h2>Bạc S925 – bền&nbsp;đẹp theo&nbsp;năm&nbsp;tháng</h2>
+      <p class="lead" style="margin-top:20px">Bạc S925 gồm 92,5% bạc và 7,5% hợp kim giúp trang sức cứng cáp, giữ form khi đeo hằng ngày. Mỗi sản phẩm đều được đánh bóng thủ công và kiểm tra kỹ trước khi giao.</p>
+      <div class="facts">
+        <div class="fact"><span class="n">01</span><div><h3>Bạc S925 có&nbsp;dấu&nbsp;ấn</h3><p>Sản phẩm có khắc ký hiệu S925 ở mặt trong, kèm phiếu bảo hành ghi rõ chất liệu.</p></div></div>
+        <div class="fact"><span class="n">02</span><div><h3>Xi bạch&nbsp;kim hạn&nbsp;chế xỉn&nbsp;màu</h3><p>Lớp xi bạch kim (rhodium) giúp bạc sáng lâu hơn. Khi bạc xỉn, chỉ cần mang đến cửa hàng để làm sáng miễn phí.</p></div></div>
+        <div class="fact"><span class="n">03</span><div><h3>Đá CZ cắt&nbsp;giác tỉ&nbsp;mỉ</h3><p>Đá được gắn chấu chắc chắn; trong 3 tháng đầu, rơi đá được gắn lại miễn phí.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section engrave" id="khac-ten">
+  <div class="wrap eng-grid">
+    <div class="reveal">
+      <span class="eyebrow">Khắc&nbsp;tên &amp; gói&nbsp;quà</span>
+      <h2>Miễn&nbsp;phí khắc&nbsp;tên, sẵn&nbsp;sàng làm&nbsp;quà&nbsp;tặng</h2>
+      <p class="lead" style="margin-top:20px">Khắc tên, ngày kỷ niệm hoặc một lời nhắn ngắn lên nhẫn và mặt dây chuyền. Thử gõ nội dung để xem trước.</p>
+      <ul class="gift-list">
+        <li>Khắc tối đa 12 ký tự, hỗ trợ chữ có dấu tiếng Việt</li>
+        <li>Tặng kèm hộp quà và thiệp viết tay theo lời nhắn của bạn</li>
+        <li>Hoàn thiện và giao trong 1–2 ngày làm việc</li>
+      </ul>
+      <form class="eng-form" id="engForm">
+        <div class="field"><label for="engText">Nội dung khắc</label><input id="engText" maxlength="12" placeholder="Ví dụ: Mai &amp; Huy" autocomplete="off"></div>
+        <div class="field"><label for="engFont">Kiểu chữ</label><select id="engFont"><option value="serif">Chữ nghiêng mềm mại</option><option value="sans">Chữ in hiện đại</option></select></div>
+        <button class="btn" type="submit">Gửi yêu&nbsp;cầu khắc</button>
+        <div class="thanks" id="engThanks" style="background:#fff;color:var(--ink);border-color:var(--accent)">Cảm ơn bạn! Sương Silver đã nhận yêu cầu khắc và sẽ liên hệ xác nhận qua Zalo.</div>
+      </form>
+    </div>
+    <div class="eng-preview reveal">
+      <div class="band"><span id="engOut">Sương</span></div>
+      <small>Hình minh hoạ – nội dung khắc thực tế phụ thuộc kích thước sản phẩm</small>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="chinh-sach">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Chính&nbsp;sách mua&nbsp;hàng</span><h2>Mua online, an&nbsp;tâm như&nbsp;tại&nbsp;cửa&nbsp;hàng</h2></div>
+      <p>Nội dung chính sách là văn bản mẫu – cửa hàng điều chỉnh theo quy định thực tế.</p>
+    </div>
+    <div class="policies reveal">
+      <div class="policy"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Bảo&nbsp;hành 12&nbsp;tháng</h3><p>Làm sáng, đánh bóng miễn phí trọn đời. Gắn lại đá, sửa khoá miễn phí trong 3 tháng đầu.</p></div>
+      <div class="policy"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><h3>Đổi&nbsp;trả trong 7&nbsp;ngày</h3><p>Đổi mẫu, đổi size trong 7 ngày nếu sản phẩm còn nguyên tem, hộp và chưa qua khắc chữ.</p></div>
+      <div class="policy"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="17" cy="17.5" r="1.5"/></svg><h3>Giao&nbsp;hàng toàn&nbsp;quốc</h3><p>Miễn phí giao hàng cho đơn từ 500.000đ. Nội thành giao trong ngày, tỉnh khác 2–4 ngày.</p></div>
+      <div class="policy"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M3 10h18M7 15h3"/></svg><h3>Kiểm&nbsp;tra trước khi&nbsp;nhận</h3><p>Được mở hộp kiểm tra trước khi thanh toán. Hỗ trợ COD, chuyển khoản và ví điện tử.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><span class="eyebrow">Khách&nbsp;hàng nói&nbsp;gì</span><h2>Cảm&nbsp;nhận sau&nbsp;khi&nbsp;nhận&nbsp;hàng <span class="sample-note">Đánh giá mẫu</span></h2></div>
+    </div>
+    <div class="reviews">
+      <div class="review reveal"><div class="stars">★★★★★</div><blockquote>“Nhẫn đeo vừa tay, khắc tên rõ và đẹp. Hộp quà xinh nên mình tặng luôn không cần gói thêm.”</blockquote><div class="who"><div class="avatar">TL</div><div>Khách hàng mẫu<span>Nhẫn Trơn Basic · nội dung mẫu</span></div></div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><blockquote>“Dây chuyền mảnh, sáng, đeo đi làm rất hợp. Shop tư vấn size nhiệt tình qua Zalo.”</blockquote><div class="who"><div class="avatar">NA</div><div>Khách hàng mẫu<span>Dây chuyền Trái Tim · nội dung mẫu</span></div></div></div>
+      <div class="review reveal"><div class="stars">★★★★★</div><blockquote>“Đặt nhẫn đôi khắc ngày kỷ niệm, giao đúng hẹn. Sau vài tháng mang ra làm sáng lại như mới.”</blockquote><div class="who"><div class="avatar">HP</div><div>Khách hàng mẫu<span>Nhẫn đôi Kết Nối · nội dung mẫu</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section news" id="lien-he">
+  <div class="wrap news-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--silver)">Đăng&nbsp;ký nhận&nbsp;tin</span>
+      <h2>Nhận ưu&nbsp;đãi&nbsp;10% cho&nbsp;đơn&nbsp;đầu&nbsp;tiên</h2>
+      <p class="lead" style="margin-top:18px">Cập nhật mẫu mới, chương trình khuyến mãi và mẹo bảo quản trang sức bạc – mỗi tháng một email, không làm phiền.</p>
+      <form class="news-form" id="newsForm"><input type="email" required placeholder="Email của bạn" aria-label="Email"><button type="submit">Đăng&nbsp;ký</button></form>
+      <div class="thanks" id="newsThanks">Cảm ơn bạn đã đăng ký! Mã ưu đãi sẽ được gửi qua email trong ít phút.</div>
+    </div>
+    <ul class="contact-list reveal">
+      <li><span>Hotline</span><div>0900 000 000 (8:30 – 21:30)</div></li>
+      <li><span>Cửa hàng</span><div>123 Đường Mẫu, Phường Mẫu, TP. Hồ Chí Minh</div></li>
+      <li><span>Zalo</span><div>0900 000 000 – tư vấn size, mẫu khắc</div></li>
+      <li><span>Email</span><div>hello@suongsilver.vn</div></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="foot-logo">Sương Silver</div><p>Trang sức bạc S925 thiết kế tối giản cho những ngày bình thường. Thương hiệu và thông tin trên trang là nội dung mẫu.</p></div>
+      <div><h4>Sản phẩm</h4><ul><li><a href="#san-pham">Nhẫn bạc</a></li><li><a href="#san-pham">Dây chuyền</a></li><li><a href="#san-pham">Lắc tay</a></li><li><a href="#san-pham">Nhẫn đôi</a></li></ul></div>
+      <div><h4>Hỗ trợ</h4><ul><li><a href="#chinh-sach">Chính sách bảo hành</a></li><li><a href="#chinh-sach">Đổi trả trong 7 ngày</a></li><li><a href="#chinh-sach">Giao hàng</a></li><li><a href="#khac-ten">Hướng dẫn khắc tên</a></li></ul></div>
+      <div><h4>Theo dõi</h4><ul><li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© Sương Silver – website mẫu</span><span>Ảnh: Unsplash</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<a class="sales-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener">Mẫu giao diện · Kim Tuyen Truong — <b>Nhận báo giá</b></a>
+
+<script>
+(function(){
+  var count=0, cc=document.getElementById('cartCount'), toast=document.getElementById('toast'), tt;
+  function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2200)}
+  document.querySelectorAll('[data-name]').forEach(function(b){
+    b.addEventListener('click',function(e){e.preventDefault();count++;cc.textContent=count;cc.classList.remove('bump');void cc.offsetWidth;cc.classList.add('bump');showToast('Đã thêm “'+b.dataset.name+'” vào giỏ hàng')});
+  });
+  document.getElementById('cartBtn').addEventListener('click',function(){showToast(count?('Giỏ hàng có '+count+' sản phẩm (bản mẫu)'):'Giỏ hàng đang trống')});
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+  var chips=document.querySelectorAll('.chip'),items=document.querySelectorAll('.product');
+  function filter(f){chips.forEach(function(c){c.classList.toggle('on',c.dataset.f===f)});items.forEach(function(p){p.classList.toggle('hide',f!=='all'&&p.dataset.c!==f)})}
+  chips.forEach(function(c){c.addEventListener('click',function(){filter(c.dataset.f)})});
+  document.querySelectorAll('[data-go]').forEach(function(a){a.addEventListener('click',function(){filter(a.dataset.go)})});
+  var inp=document.getElementById('engText'),out=document.getElementById('engOut'),font=document.getElementById('engFont');
+  inp.addEventListener('input',function(){out.textContent=inp.value.trim()||'Sương'});
+  font.addEventListener('change',function(){out.style.fontFamily=font.value==='sans'?'"Be Vietnam Pro",sans-serif':'';out.style.fontStyle=font.value==='sans'?'normal':'';out.style.fontSize=font.value==='sans'?'1.5rem':''});
+  function fake(formId,thanksId){var f=document.getElementById(formId);f.addEventListener('submit',function(e){e.preventDefault();document.getElementById(thanksId).classList.add('show');f.querySelectorAll('input').forEach(function(i){if(i.type!=='hidden')i.value=''});})}
+  fake('engForm','engThanks');fake('newsForm','newsThanks');
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>

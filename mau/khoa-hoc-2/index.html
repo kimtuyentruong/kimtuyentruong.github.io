@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu website khoá học online – Sao Mai Academy</title>
+<meta name="description" content="Mẫu giao diện học viện online nhiều khoá học: tiếng Anh, marketing, làm bánh, kỹ năng – lộ trình học, giảng viên, học phí ưu đãi, đăng ký tư vấn.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5FA; --white:#fff; --navy:#0F1B47; --navy-2:#1B2A63; --blue:#3456F5; --blue-soft:#E6EBFF;
+  --lime:#D3F25B; --peach:#FFD9C7; --sky:#CDEBFF; --text:#1A2140; --muted:#5F6787; --line:#E1E5F0;
+  --head:"Bricolage Grotesque", system-ui, sans-serif; --sans:"Be Vietnam Pro", system-ui, sans-serif; --wrap:1240px; --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 16px/1.65 var(--sans);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto;object-fit:cover;background:linear-gradient(135deg,#DCE3F5,#C5D0EE)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.12;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:800}
+h2{font-size:clamp(1.9rem,3.6vw,3rem)}
+h3{font-size:1.2rem;line-height:1.3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:14px;background:var(--blue);color:#fff;font-weight:700;border:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s;white-space:nowrap;font-size:.98rem}
+.btn:hover{transform:translateY(-2px);background:#2443D9;box-shadow:0 10px 24px rgba(52,86,245,.3)}
+.btn.lime{background:var(--lime);color:var(--navy)}
+.btn.lime:hover{background:#C3E640;box-shadow:0 10px 24px rgba(160,200,40,.35)}
+.btn.outline{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+.btn.outline:hover{background:var(--navy);color:#fff}
+.btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2}
+.section{padding:96px 0}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--blue-soft);color:var(--blue);font-weight:700;font-size:.82rem;padding:6px 14px;border-radius:30px}
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head-row p{color:var(--muted);max-width:30rem}
+.head-row h2{margin-top:14px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(243,245,250,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:1.35rem;white-space:nowrap;letter-spacing:-.02em}
+.logo .mark{width:36px;height:36px;border-radius:11px;background:var(--navy);display:grid;place-items:center}
+.logo .mark svg{width:20px;height:20px}
+.menu{display:flex;gap:26px;font-weight:600;font-size:.95rem;margin-left:12px}
+.menu a{white-space:nowrap;color:var(--muted);transition:color .2s}
+.menu a:hover{color:var(--blue)}
+.nav-right{margin-left:auto;display:flex;gap:10px;align-items:center}
+.nav-right .login{font-weight:600;padding:10px 14px;white-space:nowrap}
+.nav-right .btn{padding:11px 20px}
+.menu-cta{display:none}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--white);cursor:pointer;place-items:center}
+.burger svg{width:20px;height:20px;stroke:var(--navy);fill:none;stroke-width:2}
+
+/* hero bento */
+.hero{padding:44px 0 70px}
+.bento{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:auto auto;gap:18px}
+.b-main{grid-row:span 2;background:var(--navy);color:#fff;border-radius:32px;padding:56px 52px;position:relative;overflow:hidden}
+.b-main::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(52,86,245,.55),transparent 70%);right:-120px;bottom:-140px}
+.b-main .tag{background:rgba(255,255,255,.1);color:var(--lime)}
+.b-main h1{margin:22px 0 18px;position:relative;z-index:1}
+.b-main h1 .u{color:var(--lime)}
+.b-main p{color:#C4CBE6;max-width:32rem;font-size:1.06rem;position:relative;z-index:1}
+.search{margin-top:32px;display:flex;background:#fff;border-radius:16px;padding:6px;max-width:540px;position:relative;z-index:1}
+.search input{flex:1;min-width:0;border:0;outline:none;padding:12px 14px;color:var(--text)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;position:relative;z-index:1}
+.chips a{font-size:.86rem;padding:6px 14px;border-radius:30px;border:1px solid rgba(255,255,255,.22);color:#E2E6F7;white-space:nowrap;transition:background .2s}
+.chips a:hover{background:rgba(255,255,255,.12)}
+.b-img{border-radius:32px;overflow:hidden;position:relative;min-height:260px}
+.b-img img{width:100%;height:100%;position:absolute;inset:0;transition:transform 1.2s}
+.b-img:hover img{transform:scale(1.05)}
+.b-img .float{position:absolute;left:16px;bottom:16px;background:#fff;border-radius:14px;padding:10px 14px;font-weight:600;font-size:.88rem;display:flex;gap:10px;align-items:center;box-shadow:0 10px 26px rgba(15,27,71,.18)}
+.b-img .float i{width:10px;height:10px;border-radius:50%;background:#2BC46F;display:inline-block;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
+.b-card{background:var(--lime);border-radius:32px;padding:28px 30px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.b-card h3{font-size:1.5rem}
+.b-card p{font-size:.95rem;color:#3B4A1A}
+.b-card .btn{align-self:flex-start;background:var(--navy)}
+.enter{opacity:0;transform:translateY(24px) scale(.98);animation:enter .9s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.2s}.d3{animation-delay:.35s}.d4{animation-delay:.5s}
+@keyframes enter{to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cat{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:transform .25s,border-color .25s,box-shadow .25s}
+.cat:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 14px 30px rgba(15,27,71,.08)}
+.cat .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center}
+.cat .ic svg{width:24px;height:24px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cat b{font-family:var(--head);font-size:1.12rem}
+.cat span{font-size:.86rem;color:var(--muted)}
+
+/* courses */
+.filter{display:flex;gap:6px;background:var(--white);padding:6px;border-radius:14px;border:1px solid var(--line);flex-wrap:wrap}
+.filter button{border:0;background:none;padding:9px 16px;border-radius:10px;font-weight:600;font-size:.9rem;color:var(--muted);cursor:pointer;white-space:nowrap;transition:all .2s}
+.filter button.on{background:var(--navy);color:#fff}
+.courses{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.course{background:var(--white);border-radius:24px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.course:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(15,27,71,.1)}
+.course.hide{display:none}
+.c-media{position:relative;overflow:hidden}
+.c-media img{width:100%;aspect-ratio:16/10;transition:transform .9s}
+.course:hover .c-media img{transform:scale(1.06)}
+.c-media .lvl{position:absolute;top:14px;left:14px;background:#fff;font-size:.76rem;font-weight:700;padding:5px 11px;border-radius:20px;white-space:nowrap}
+.c-media .off{position:absolute;top:14px;right:14px;background:var(--lime);color:var(--navy);font-size:.76rem;font-weight:800;padding:5px 11px;border-radius:20px;white-space:nowrap}
+.c-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.c-cat{font-size:.8rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em}
+.c-body h3{margin:6px 0 12px;font-size:1.22rem}
+.c-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);margin-bottom:16px}
+.c-meta span{display:flex;gap:6px;align-items:center;white-space:nowrap}
+.c-meta svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+.c-teacher{display:flex;gap:10px;align-items:center;font-size:.88rem;padding-top:14px;border-top:1px solid var(--line);margin-top:auto}
+.c-teacher .av{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.78rem}
+.c-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap}
+.c-price b{font-family:var(--head);font-size:1.4rem;white-space:nowrap;display:block;line-height:1.1}
+.c-price del{font-size:.86rem;color:var(--muted);white-space:nowrap}
+.c-foot .btn{padding:11px 16px;font-size:.9rem}
+
+/* roadmap */
+.road{background:var(--navy);color:#fff;border-radius:40px;margin:0 16px;padding:90px 0}
+.road .tag{background:rgba(255,255,255,.1);color:var(--lime)}
+.road .head-row p{color:#AEB7DA}
+.road-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.road-tabs button{border:1px solid rgba(255,255,255,.2);background:transparent;color:#fff;padding:11px 18px;border-radius:12px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .25s}
+.road-tabs button.on{background:var(--lime);color:var(--navy);border-color:var(--lime)}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}
+.stages::before{content:"";position:absolute;left:24px;right:24px;top:24px;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.3) 0 8px,transparent 8px 16px)}
+.stage{position:relative;padding-top:66px}
+.stage .dot{position:absolute;top:0;left:0;width:50px;height:50px;border-radius:16px;background:var(--navy-2);border:2px solid var(--lime);display:grid;place-items:center;font-family:var(--head);font-weight:800;color:var(--lime);font-size:1.1rem}
+.stage .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:22px;height:100%}
+.stage .when{font-size:.8rem;font-weight:700;color:var(--lime);text-transform:uppercase;letter-spacing:.06em}
+.stage h3{margin:6px 0 10px;font-size:1.18rem}
+.stage ul{list-style:none;display:grid;gap:6px;font-size:.9rem;color:#C4CBE6}
+.stage li::before{content:"→ ";color:var(--lime)}
+.road-panel{display:none}
+.road-panel.on{display:block;animation:enter .6s forwards}
+
+/* teachers */
+.teachers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.teacher{background:var(--white);border-radius:28px;padding:14px;border:1px solid var(--line);transition:transform .3s}
+.teacher:hover{transform:translateY(-6px)}
+.teacher .ph{position:relative;border-radius:20px;overflow:hidden}
+.teacher .ph img{width:100%;aspect-ratio:4/4.2}
+.teacher .ph span{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.92);font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:8px;color:var(--muted)}
+.teacher .info{padding:18px 10px 10px}
+.teacher h3{font-size:1.3rem}
+.teacher .role{color:var(--blue);font-weight:600;font-size:.9rem}
+.teacher p{color:var(--muted);font-size:.92rem;margin-top:10px}
+.sample-note{display:inline-block;font-size:.8rem;font-weight:600;color:var(--muted);border:1px dashed #A3AACB;border-radius:8px;padding:4px 10px;margin-top:22px}
+
+/* benefits */
+.bens{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ben{background:var(--white);border-radius:24px;padding:28px 24px;border:1px solid var(--line)}
+.ben .ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px}
+.ben .ic svg{width:26px;height:26px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ben h3{margin-bottom:8px}
+.ben p{color:var(--muted);font-size:.93rem}
+
+/* promo */
+.promo{background:linear-gradient(110deg,var(--blue) 0%,#5D74FF 100%);border-radius:32px;color:#fff;padding:54px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.promo::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:40px solid rgba(211,242,91,.25)}
+.promo h2{font-size:clamp(1.7rem,3vw,2.4rem)}
+.promo p{color:#DCE2FF;margin-top:10px}
+.promo .acts{display:flex;justify-content:flex-end;position:relative;z-index:1}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:var(--white);border-radius:24px;padding:28px;border:1px solid var(--line)}
+.rev .q{font-family:var(--head);font-size:3rem;line-height:.6;color:var(--blue)}
+.rev p{margin:12px 0 20px}
+.rev .who{display:flex;gap:12px;align-items:center}
+.rev .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:700}
+.rev .who b{display:block;font-size:.95rem}
+.rev .who span{font-size:.82rem;color:var(--muted)}
+.sample-badge{display:inline-block;background:var(--peach);color:#7A3418;font-family:var(--sans);font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:0;vertical-align:middle}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.acc details{background:var(--white);border:1px solid var(--line);border-radius:18px;margin-bottom:10px;transition:border-color .2s}
+.acc details[open]{border-color:var(--blue)}
+.acc summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:700;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.acc summary::-webkit-details-marker{display:none}
+.acc .chev{flex:0 0 28px;height:28px;border-radius:8px;background:var(--blue-soft);display:grid;place-items:center;transition:transform .3s}
+.acc .chev svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:2.5}
+.acc details[open] .chev{transform:rotate(180deg)}
+.acc .ans{padding:0 22px 20px;color:var(--muted)}
+
+/* register */
+.reg{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--white);border-radius:36px;overflow:hidden;border:1px solid var(--line)}
+.reg-side{background:var(--navy);color:#fff;padding:54px;position:relative;overflow:hidden}
+.reg-side img{position:absolute;inset:0;width:100%;height:100%;opacity:.22}
+.reg-side > *{position:relative}
+.reg-side p{color:#C4CBE6;margin-top:14px}
+.reg-side ul{list-style:none;margin-top:26px;display:grid;gap:12px}
+.reg-side li{display:flex;gap:12px;align-items:center;font-weight:600}
+.reg-side li::before{content:"✓";width:26px;height:26px;border-radius:8px;background:var(--lime);color:var(--navy);display:grid;place-items:center;font-weight:800;flex:0 0 26px;font-size:.85rem}
+.reg-form{padding:54px}
+.reg-form h3{font-size:1.6rem;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:grid;gap:6px;margin-top:14px}
+.f label{font-weight:600;font-size:.9rem}
+.f input,.f select,.f textarea{width:100%;padding:13px 15px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);outline:none;transition:border .2s}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--blue);background:#fff}
+.reg-form .btn{width:100%;margin-top:22px}
+.thanks{display:none;text-align:center;padding:40px 10px}
+.thanks.show{display:block;animation:enter .6s forwards}
+.thanks .ok{width:70px;height:70px;border-radius:50%;background:var(--lime);display:grid;place-items:center;margin:0 auto 18px;font-size:2rem;color:var(--navy);font-weight:800}
+
+footer{background:var(--navy);color:#AEB7DA;padding:70px 0 110px;margin-top:96px;font-size:.92rem}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer .logo{color:#fff}
+footer h4{color:#fff;font-family:var(--head);font-size:1.05rem;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:var(--lime)}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:46px;padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.84rem}
+
+.toast{position:fixed;right:20px;bottom:20px;z-index:70;background:var(--navy);color:#fff;padding:14px 20px;border-radius:14px;font-size:.9rem;transform:translateY(160%);transition:transform .4s;max-width:calc(100% - 40px)}
+.toast.show{transform:none}
+.sales-badge{position:fixed;left:14px;bottom:14px;z-index:80;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:40px;padding:8px 14px;font:600 12px/1.3 var(--sans);box-shadow:0 6px 20px rgba(15,27,71,.16);display:flex;gap:6px;align-items:center;max-width:calc(100% - 28px)}
+.sales-badge b{color:#0068FF;white-space:nowrap}
+
+@media (max-width:1100px){
+  .menu{gap:18px}
+  .nav-right .login{display:none}
+  .cats{grid-template-columns:repeat(3,1fr)}
+  .courses{grid-template-columns:repeat(2,1fr)}
+  .bens{grid-template-columns:repeat(2,1fr)}
+  .stages{grid-template-columns:repeat(2,1fr);row-gap:30px}
+  .stages::before{display:none}
+}
+@media (max-width:900px){
+  .menu{position:fixed;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--white);padding:8px 24px 20px;margin:0;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:transform .4s;z-index:-1;visibility:hidden;opacity:0}
+  .menu.open{transform:none;visibility:visible;opacity:1}
+  .menu a{padding:14px 0;border-bottom:1px solid var(--line);color:var(--text)}
+  .burger{display:grid}
+  .bento{grid-template-columns:1fr}
+  .b-main{grid-row:auto;padding:44px 32px}
+  .teachers,.revs{grid-template-columns:1fr 1fr}
+  .faq-grid,.reg,.promo{grid-template-columns:1fr}
+  .promo .acts{justify-content:flex-start}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .section{padding:70px 0}
+  .nav{height:68px;gap:12px}
+  .menu{top:68px;padding:8px 16px 20px}
+  .logo{font-size:1.15rem}
+  .nav-right .btn{display:none}
+  .menu .menu-cta{display:block;color:var(--blue);font-weight:700;border-bottom:0}
+  .hero{padding:20px 0 50px}
+  .b-main{padding:34px 22px;border-radius:26px}
+  .search{flex-direction:column;gap:6px}
+  .search .btn{width:100%}
+  .b-img,.b-card{border-radius:26px}
+  .cats{grid-template-columns:1fr 1fr;gap:10px}
+  .cat{padding:16px}
+  .courses,.teachers,.revs,.bens{grid-template-columns:1fr}
+  .road{margin:0 8px;border-radius:28px;padding:64px 0}
+  .stages{grid-template-columns:1fr}
+  .promo{padding:34px 22px;border-radius:26px}
+  .reg-side,.reg-form{padding:32px 20px}
+  .grid2{grid-template-columns:1fr;gap:0}
+  .foot{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .enter,.reveal{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Sao Mai Academy – trang chủ"><span class="mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.9L22 9.3l-5.8 4.6L18.2 21 12 17l-6.2 4 2-7.1L2 9.3l7.4-.4z" fill="#D3F25B"/></svg></span>Sao&nbsp;Mai&nbsp;Academy</a>
+    <nav class="menu" id="menu">
+      <a href="#khoa-hoc">Khoá&nbsp;học</a>
+      <a href="#lo-trinh">Lộ&nbsp;trình</a>
+      <a href="#giang-vien">Giảng&nbsp;viên</a>
+      <a href="#hoi-dap">Hỏi&nbsp;đáp</a>
+      <a href="#dang-ky" class="menu-cta">Đăng&nbsp;ký ngay</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#dang-ky" class="login">Đăng&nbsp;nhập</a>
+      <a href="#dang-ky" class="btn">Đăng&nbsp;ký ngay</a>
+      <button class="burger" id="burger" aria-label="Mở menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap bento">
+    <div class="b-main enter d1">
+      <span class="tag">Học online · Lộ trình rõ ràng</span>
+      <h1>Học kỹ&nbsp;năng mới, <span class="u">mỗi&nbsp;ngày</span>&nbsp;một&nbsp;chút</h1>
+      <p>Khoá học tiếng Anh, marketing, làm bánh và kỹ năng mềm do giảng viên có kinh nghiệm thực tế hướng dẫn. Học trên điện thoại, máy tính – bất cứ lúc nào.</p>
+      <form class="search" id="searchForm" role="search">
+        <input id="q" placeholder="Bạn muốn học gì?" aria-label="Tìm khoá học">
+        <button class="btn" type="submit"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Tìm&nbsp;khoá&nbsp;học</button>
+      </form>
+      <div class="chips"><a href="#khoa-hoc" data-go="anh">Tiếng Anh giao tiếp</a><a href="#khoa-hoc" data-go="mkt">Facebook Ads</a><a href="#khoa-hoc" data-go="banh">Làm bánh</a><a href="#khoa-hoc" data-go="kn">Canva</a></div>
+    </div>
+    <div class="b-img enter d2"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" width="800" height="520" alt="Nhóm học viên cùng học và trao đổi bên bàn"><div class="float"><i></i>Lớp hỏi đáp trực tuyến mỗi tuần</div></div>
+    <div class="b-card enter d3"><div><h3>Học&nbsp;thử miễn&nbsp;phí</h3><p>Mỗi khoá học đều có bài học thử để bạn trải nghiệm trước khi đăng ký.</p></div><a href="#khoa-hoc" class="btn">Xem khoá&nbsp;học</a></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:10px">
+  <div class="wrap">
+    <div class="head-row reveal"><div><span class="tag">Lĩnh vực đào tạo</span><h2>Bạn muốn phát&nbsp;triển kỹ&nbsp;năng&nbsp;nào?</h2></div></div>
+    <div class="cats">
+      <div class="cat reveal" data-go="anh"><span class="ic" style="background:var(--sky)"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></svg></span><b>Tiếng&nbsp;Anh</b><span>Giao tiếp, IELTS</span></div>
+      <div class="cat reveal" data-go="mkt"><span class="ic" style="background:var(--peach)"><svg viewBox="0 0 24 24"><path d="M3 11v3l12 5V6L3 11z"/><path d="M15 9a4 4 0 0 1 0 6M7 15l1 5"/></svg></span><b>Marketing</b><span>Quảng cáo, nội dung</span></div>
+      <div class="cat reveal" data-go="banh"><span class="ic" style="background:#FFF0B8"><svg viewBox="0 0 24 24"><path d="M4 20h16M5 20v-7h14v7M5 13c0-3 3-5 7-5s7 2 7 5M12 8V4"/></svg></span><b>Làm&nbsp;bánh</b><span>Bánh ngọt, bánh mì</span></div>
+      <div class="cat reveal" data-go="kn"><span class="ic" style="background:#DDF5D0"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><b>Thiết&nbsp;kế</b><span>Canva, ảnh sản phẩm</span></div>
+      <div class="cat reveal" data-go="kn"><span class="ic" style="background:#E9E1FF"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><b>Kỹ&nbsp;năng mềm</b><span>Thuyết trình, quản lý</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="khoa-hoc" style="padding-top:10px">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <div><span class="tag">Khoá học nổi bật</span><h2>Chọn khoá&nbsp;học, bắt&nbsp;đầu&nbsp;ngay&nbsp;hôm&nbsp;nay</h2></div>
+      <div class="filter" id="filter">
+        <button class="on" data-f="all">Tất&nbsp;cả</button><button data-f="anh">Tiếng&nbsp;Anh</button><button data-f="mkt">Marketing</button><button data-f="banh">Làm&nbsp;bánh</button><button data-f="kn">Kỹ&nbsp;năng</button>
+      </div>
+    </div>
+    <div class="courses" id="courses">
+      <article class="course reveal" data-c="anh">
+        <div class="c-media"><img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=900&q=80" width="800" height="500" alt="Người học ghi chép vào sổ tay" loading="lazy"><span class="lvl">Cơ bản</span><span class="off">-40%</span></div>
+        <div class="c-body"><span class="c-cat">Tiếng Anh</span><h3>Tiếng&nbsp;Anh giao&nbsp;tiếp cho&nbsp;người&nbsp;mất&nbsp;gốc</h3>
+          <div class="c-meta"><span><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m10 9 5 3-5 3z"/></svg>40 bài học</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Khoảng 12 giờ</span></div>
+          <div class="c-teacher"><span class="av" style="background:var(--sky)">MT</span>Cô Minh Thư</div>
+          <div class="c-foot"><div class="c-price"><b>1.490.000đ</b><del>2.490.000đ</del></div><a href="#dang-ky" class="btn" data-course="Tiếng Anh giao tiếp cho người mất gốc">Đăng&nbsp;ký ngay</a></div></div>
+      </article>
+      <article class="course reveal" data-c="anh">
+        <div class="c-media"><img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&w=900&q=80" width="800" height="500" alt="Laptop và cuốn sách mở trên bàn học" loading="lazy"><span class="lvl">Trung cấp</span><span class="off">-33%</span></div>
+        <div class="c-body"><span class="c-cat">Tiếng Anh</span><h3>IELTS Writing nền&nbsp;tảng <span style="white-space:nowrap">(mục&nbsp;tiêu 5.5–6.5)</span></h3>
+          <div class="c-meta"><span><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m10 9 5 3-5 3z"/></svg>28 bài học</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Khoảng 10 giờ</span></div>
+          <div class="c-teacher"><span class="av" style="background:var(--sky)">MT</span>Cô Minh Thư</div>
+          <div class="c-foot"><div class="c-price"><b>1.990.000đ</b><del>2.990.000đ</del></div><a href="#dang-ky" class="btn" data-course="IELTS Writing nền tảng">Đăng&nbsp;ký ngay</a></div></div>
+      </article>
+      <article class="course reveal" data-c="mkt">
+        <div class="c-media"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" width="800" height="500" alt="Người cầm bút phân tích số liệu bên laptop" loading="lazy"><span class="lvl">Mọi cấp độ</span><span class="off">-41%</span></div>
+        <div class="c-body"><span class="c-cat">Marketing</span><h3>Quảng&nbsp;cáo Facebook cho người&nbsp;bán&nbsp;hàng&nbsp;online</h3>
+          <div class="c-meta"><span><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m10 9 5 3-5 3z"/></svg>32 bài học</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Khoảng 8 giờ</span></div>
+          <div class="c-teacher"><span class="av" style="background:var(--peach)">QH</span>Thầy Quốc Huy</div>
+          <div class="c-foot"><div class="c-price"><b>990.000đ</b><del>1.690.000đ</del></div><a href="#dang-ky" class="btn" data-course="Quảng cáo Facebook cho người bán hàng online">Đăng&nbsp;ký ngay</a></div></div>
+      </article>
+      <article class="course reveal" data-c="mkt">
+        <div class="c-media"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80" width="800" height="500" alt="Nhóm làm việc cùng nhau trên laptop" loading="lazy"><span class="lvl">Cơ bản</span><span class="off">-35%</span></div>
+        <div class="c-body"><span class="c-cat">Marketing</span><h3>Viết content bán&nbsp;hàng cho fanpage&nbsp;&amp;&nbsp;TikTok</h3>
+          <div class="c-meta"><span><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m10 9 5 3-5 3z"/></svg>24 bài học</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Khoảng 6 giờ</span></div>
+          <div class="c-teacher"><span class="av" style="background:var(--peach)">QH</span>Thầy Quốc Huy</div>
+          <div class="c-foot"><div class="c-price"><b>1.290.000đ</b><del>1.990.000đ</del></div><a href="#dang-ky" class="btn" data-course="Viết content bán hàng cho fanpage & TikTok">Đăng&nbsp;ký ngay</a></div></div>
+      </article>
+      <article class="course reveal" data-c="banh">
+        <div class="c-media"><img src="https://images.unsplash.com/photo-1531172079369-5f1a80aa8a99?auto=format&fit=crop&w=900&q=80" width="800" height="500" alt="Bánh muffin vừa nướng bên khay trứng và phới" loading="lazy"><span class="lvl">Cơ bản</span><span class="off">-40%</span></div>
+        <div class="c-body"><span class="c-cat">Làm bánh</span><h3>Làm&nbsp;bánh ngọt &amp;&nbsp;bánh&nbsp;mì cơ&nbsp;bản&nbsp;tại&nbsp;nhà</h3>
+          <div class="c-meta"><span><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m10 9 5 3-5 3z"/></svg>30 bài học</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Khoảng 9 giờ</span></div>
+          <div class="c-teacher"><span class="av" style="background:#FFF0B8">TA</span>Cô Thuỳ An</div>
+          <div class="c-foot"><div class="c-price"><b>890.000đ</b><del>1.490.000đ</del></div><a href="#dang-ky" class="btn" data-course="Làm bánh ngọt & bánh mì cơ bản tại nhà">Đăng&nbsp;ký ngay</a></div></div>
+      </article>
+      <article class="course reveal" data-c="kn">
+        <div class="c-media"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80" width="800" height="500" alt="Người trình bày ý tưởng trong buổi họp nhóm" loading="lazy"><span class="lvl">Mọi cấp độ</span><span class="off">-38%</span></div>
+        <div class="c-body"><span class="c-cat">Kỹ năng</span><h3>Thuyết&nbsp;trình tự&nbsp;tin trước&nbsp;đám&nbsp;đông</h3>
+          <div class="c-meta"><span><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m10 9 5 3-5 3z"/></svg>20 bài học</span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Khoảng 5 giờ</span></div>
+          <div class="c-teacher"><span class="av" style="background:#E9E1FF">QH</span>Thầy Quốc Huy</div>
+          <div class="c-foot"><div class="c-price"><b>790.000đ</b><del>1.290.000đ</del></div><a href="#dang-ky" class="btn" data-course="Thuyết trình tự tin trước đám đông">Đăng&nbsp;ký ngay</a></div></div>
+      </article>
+    </div>
+    <p class="reveal" style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:30px">Tên khoá học, học phí và ưu đãi là nội dung mẫu.</p>
+  </div>
+</section>
+
+<section class="road" id="lo-trinh">
+  <div class="wrap">
+    <div class="head-row reveal"><div><span class="tag">Lộ trình học</span><h2>Biết rõ mình học gì, mỗi&nbsp;giai&nbsp;đoạn</h2></div><p>Mỗi lĩnh vực có lộ trình từ nền tảng đến ứng dụng, kèm bài tập và buổi hỏi đáp với giảng viên.</p></div>
+    <div class="road-tabs reveal" id="roadTabs"><button class="on" data-r="r1">Tiếng&nbsp;Anh giao&nbsp;tiếp</button><button data-r="r2">Marketing online</button><button data-r="r3">Làm&nbsp;bánh tại&nbsp;nhà</button></div>
+    <div class="road-panel on" id="r1"><div class="stages">
+      <div class="stage reveal"><span class="dot">01</span><div class="card"><span class="when">Tháng 1</span><h3>Phát&nbsp;âm &amp;&nbsp;nền&nbsp;tảng</h3><ul><li>Bảng phiên âm IPA</li><li>Nối âm, trọng âm</li><li>500 từ vựng thông dụng</li></ul></div></div>
+      <div class="stage reveal"><span class="dot">02</span><div class="card"><span class="when">Tháng 2–3</span><h3>Mẫu&nbsp;câu theo chủ&nbsp;đề</h3><ul><li>Giới thiệu bản thân</li><li>Mua sắm, ăn uống</li><li>Hỏi đường, du lịch</li></ul></div></div>
+      <div class="stage reveal"><span class="dot">03</span><div class="card"><span class="when">Tháng 4–5</span><h3>Phản&nbsp;xạ giao&nbsp;tiếp</h3><ul><li>Luyện nói cùng bạn học</li><li>Nghe hiểu hội thoại</li><li>Sửa lỗi phát âm 1-1</li></ul></div></div>
+      <div class="stage reveal"><span class="dot">04</span><div class="card"><span class="when">Tháng 6</span><h3>Ứng&nbsp;dụng công&nbsp;việc</h3><ul><li>Email, tin nhắn công việc</li><li>Phỏng vấn cơ bản</li><li>Bài nói tổng kết</li></ul></div></div>
+    </div></div>
+    <div class="road-panel" id="r2"><div class="stages">
+      <div class="stage"><span class="dot">01</span><div class="card"><span class="when">Tuần 1–2</span><h3>Hiểu khách&nbsp;hàng</h3><ul><li>Chân dung khách hàng</li><li>Nghiên cứu đối thủ</li><li>Thông điệp bán hàng</li></ul></div></div>
+      <div class="stage"><span class="dot">02</span><div class="card"><span class="when">Tuần 3–4</span><h3>Viết content</h3><ul><li>Bài đăng fanpage</li><li>Kịch bản video ngắn</li><li>Lịch nội dung</li></ul></div></div>
+      <div class="stage"><span class="dot">03</span><div class="card"><span class="when">Tuần 5–6</span><h3>Chạy quảng&nbsp;cáo</h3><ul><li>Cài đặt tài khoản</li><li>Nhắm chọn đối tượng</li><li>Tối ưu ngân sách</li></ul></div></div>
+      <div class="stage"><span class="dot">04</span><div class="card"><span class="when">Tuần 7–8</span><h3>Đo&nbsp;lường &amp;&nbsp;cải&nbsp;thiện</h3><ul><li>Đọc chỉ số quảng cáo</li><li>Thử nghiệm A/B</li><li>Báo cáo hằng tuần</li></ul></div></div>
+    </div></div>
+    <div class="road-panel" id="r3"><div class="stages">
+      <div class="stage"><span class="dot">01</span><div class="card"><span class="when">Tuần 1</span><h3>Dụng&nbsp;cụ &amp;&nbsp;nguyên&nbsp;liệu</h3><ul><li>Chọn lò, khuôn</li><li>Các loại bột, men</li><li>Cân đo chính xác</li></ul></div></div>
+      <div class="stage"><span class="dot">02</span><div class="card"><span class="when">Tuần 2–3</span><h3>Bánh&nbsp;ngọt cơ&nbsp;bản</h3><ul><li>Bông lan, muffin</li><li>Cookies, bánh quy</li><li>Xử lý lỗi thường gặp</li></ul></div></div>
+      <div class="stage"><span class="dot">03</span><div class="card"><span class="when">Tuần 4–5</span><h3>Bánh&nbsp;mì</h3><ul><li>Nhào và ủ bột</li><li>Bánh mì sandwich</li><li>Bánh mì hoa cúc</li></ul></div></div>
+      <div class="stage"><span class="dot">04</span><div class="card"><span class="when">Tuần 6</span><h3>Hoàn&nbsp;thiện &amp;&nbsp;bán&nbsp;hàng</h3><ul><li>Đóng gói, bảo quản</li><li>Chụp ảnh sản phẩm</li><li>Tính giá vốn</li></ul></div></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="section" id="giang-vien">
+  <div class="wrap">
+    <div class="head-row reveal"><div><span class="tag">Đội ngũ giảng viên</span><h2>Học cùng người làm&nbsp;nghề&nbsp;thực&nbsp;tế</h2></div><p>Giảng viên trực tiếp soạn bài, trả lời câu hỏi và chấm bài tập của học viên.</p></div>
+    <div class="teachers">
+      <div class="teacher reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1607529379169-5804750c1f9a?auto=format&fit=crop&w=800&q=80" width="600" height="630" alt="Chân dung giảng viên nữ mỉm cười" loading="lazy"><span>Ảnh minh hoạ</span></div><div class="info"><h3>Cô Minh&nbsp;Thư</h3><span class="role">Giảng viên Tiếng Anh</span><p>Nhiều năm giảng dạy tiếng Anh giao tiếp cho người đi làm, chú trọng phát âm và phản xạ.</p></div></div>
+      <div class="teacher reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1544168190-79c17527004f?auto=format&fit=crop&w=800&q=80" width="600" height="630" alt="Chân dung giảng viên nam ngồi bên bàn làm việc" loading="lazy"><span>Ảnh minh hoạ</span></div><div class="info"><h3>Thầy Quốc&nbsp;Huy</h3><span class="role">Giảng viên Marketing</span><p>Từng phụ trách quảng cáo cho các shop bán hàng online, hướng dẫn theo tình huống thực tế.</p></div></div>
+      <div class="teacher reveal"><div class="ph"><img src="https://images.unsplash.com/photo-1593872784685-04fc5c975d8f?auto=format&fit=crop&w=800&q=80" width="600" height="630" alt="Chân dung giảng viên nữ đeo kính" loading="lazy"><span>Ảnh minh hoạ</span></div><div class="info"><h3>Cô Thuỳ&nbsp;An</h3><span class="role">Giảng viên Làm bánh</span><p>Chủ một tiệm bánh nhỏ, dạy làm bánh với dụng cụ gia đình, dễ áp dụng tại nhà.</p></div></div>
+    </div>
+    <span class="sample-note reveal">Tên, tiểu sử giảng viên là nội dung mẫu – ảnh minh hoạ từ Unsplash</span>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="head-row reveal"><div><span class="tag">Quyền lợi học viên</span><h2>Học&nbsp;online, vẫn được&nbsp;kèm&nbsp;sát</h2></div></div>
+    <div class="bens">
+      <div class="ben reveal"><span class="ic" style="background:var(--sky)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3>Học trọn&nbsp;đời</h3><p>Thanh toán một lần, xem lại bài giảng không giới hạn.</p></div>
+      <div class="ben reveal"><span class="ic" style="background:var(--peach)"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span><h3>Hỏi&nbsp;đáp mỗi&nbsp;tuần</h3><p>Buổi livestream để hỏi trực tiếp giảng viên.</p></div>
+      <div class="ben reveal"><span class="ic" style="background:#DDF5D0"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7H4V5h11"/></svg></span><h3>Chấm&nbsp;bài tập</h3><p>Nộp bài, nhận nhận xét và hướng sửa cụ thể.</p></div>
+      <div class="ben reveal"><span class="ic" style="background:#E9E1FF"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13.5 8 21l4-2 4 2-1-7.5"/></svg></span><h3>Chứng&nbsp;nhận hoàn&nbsp;thành</h3><p>Nhận chứng nhận khi hoàn thành lộ trình học.</p></div>
+    </div>
+    <div class="promo reveal" style="margin-top:40px">
+      <div><h2>Ưu&nbsp;đãi học&nbsp;phí đến 40% cho&nbsp;học&nbsp;viên&nbsp;mới</h2><p>Đăng ký 2 khoá trở lên được giảm thêm 10%. Áp dụng đến hết 30/11 (nội dung mẫu).</p></div>
+      <div class="acts"><a href="#dang-ky" class="btn lime">Nhận ưu&nbsp;đãi ngay</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="head-row reveal"><div><span class="tag">Cảm nhận học viên</span><h2>Học&nbsp;viên chia&nbsp;sẻ <span class="sample-badge">Đánh giá mẫu</span></h2></div></div>
+    <div class="revs">
+      <div class="rev reveal"><div class="q">“</div><p>Mình học tiếng Anh buổi tối sau giờ làm. Bài ngắn, có bài tập nói nên mình dám mở miệng hơn trước nhiều.</p><div class="who"><span class="av" style="background:var(--sky)">HL</span><div><b>Học viên mẫu</b><span>Tiếng Anh giao tiếp · nội dung mẫu</span></div></div></div>
+      <div class="rev reveal"><div class="q">“</div><p>Khoá quảng cáo Facebook dạy sát với việc bán hàng của mình. Được thầy xem giúp tài khoản quảng cáo trong buổi hỏi đáp.</p><div class="who"><span class="av" style="background:var(--peach)">TN</span><div><b>Học viên mẫu</b><span>Quảng cáo Facebook · nội dung mẫu</span></div></div></div>
+      <div class="rev reveal"><div class="q">“</div><p>Công thức dễ làm theo, dùng lò nhỏ ở nhà vẫn được. Cuối tuần nào cả nhà cũng có bánh ăn.</p><div class="who"><span class="av" style="background:#FFF0B8">PV</span><div><b>Học viên mẫu</b><span>Làm bánh tại nhà · nội dung mẫu</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hoi-dap" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="reveal"><span class="tag">Hỏi đáp</span><h2 style="margin-top:14px">Câu&nbsp;hỏi thường&nbsp;gặp</h2><p style="color:var(--muted);margin-top:14px">Chưa thấy câu trả lời bạn cần? Gọi hoặc nhắn Zalo <b style="white-space:nowrap">0900 000 000</b> để được tư vấn.</p></div>
+    <div class="acc reveal">
+      <details open><summary>Học online thì học như thế nào?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ans">Sau khi đăng ký, bạn nhận tài khoản để xem video bài giảng trên website hoặc điện thoại. Bài tập nộp trực tiếp trên hệ thống, giảng viên nhận xét trong vòng 2–3 ngày.</div></details>
+      <details><summary>Tôi có được học thử trước không?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ans">Có. Mỗi khoá học đều có các bài học thử miễn phí để bạn xem cách giảng dạy trước khi đăng ký.</div></details>
+      <details><summary>Khoá học có thời hạn không?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ans">Bạn được học trọn đời và xem lại không giới hạn số lần, kể cả bài học cập nhật sau này.</div></details>
+      <details><summary>Có lớp học trực tiếp với giảng viên không?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ans">Có buổi hỏi đáp trực tuyến hằng tuần. Một số khoá có thêm gói kèm 1-1 theo lịch hẹn.</div></details>
+      <details><summary>Thanh toán học phí bằng cách nào?<span class="chev"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary><div class="ans">Chuyển khoản ngân hàng, ví điện tử hoặc thẻ. Thông tin thanh toán được gửi sau khi tư vấn viên xác nhận đăng ký.</div></details>
+    </div>
+  </div>
+</section>
+
+<section id="dang-ky">
+  <div class="wrap">
+    <div class="reg reveal">
+      <div class="reg-side">
+        <img src="https://images.unsplash.com/photo-1531496378573-7be09a2697d8?auto=format&fit=crop&w=1000&q=80" width="800" height="900" alt="" loading="lazy">
+        <span class="tag" style="background:rgba(255,255,255,.12);color:var(--lime)">Tư vấn miễn phí</span>
+        <h2 style="margin-top:16px">Nhận tư&nbsp;vấn lộ&nbsp;trình&nbsp;học&nbsp;phù&nbsp;hợp</h2>
+        <p>Để lại thông tin, tư vấn viên sẽ liên hệ giúp bạn chọn khoá học theo mục tiêu và thời gian của mình.</p>
+        <ul><li>Kiểm tra trình độ đầu vào miễn phí</li><li>Gợi ý lộ trình theo mục tiêu</li><li>Nhận ưu đãi học phí hiện hành</li></ul>
+      </div>
+      <div class="reg-form">
+        <form id="regForm">
+          <h3>Đăng&nbsp;ký học</h3>
+          <p style="color:var(--muted);font-size:.92rem">Thông tin của bạn chỉ dùng để tư vấn khoá học.</p>
+          <div class="grid2">
+            <div class="f"><label for="n">Họ và tên</label><input id="n" required placeholder="Nguyễn Văn A"></div>
+            <div class="f"><label for="p">Số điện thoại</label><input id="p" type="tel" required placeholder="0900 000 000"></div>
+          </div>
+          <div class="f"><label for="e">Email</label><input id="e" type="email" placeholder="email@example.com"></div>
+          <div class="f"><label for="c">Khoá học quan tâm</label><select id="c"><option>Tiếng Anh giao tiếp cho người mất gốc</option><option>IELTS Writing nền tảng</option><option>Quảng cáo Facebook cho người bán hàng online</option><option>Viết content bán hàng cho fanpage &amp; TikTok</option><option>Làm bánh ngọt &amp; bánh mì cơ bản tại nhà</option><option>Thuyết trình tự tin trước đám đông</option><option>Chưa chọn – cần tư vấn</option></select></div>
+          <div class="f"><label for="t">Thời gian có thể học</label><select id="t"><option>Buổi tối (19h – 22h)</option><option>Cuối tuần</option><option>Linh hoạt</option></select></div>
+          <button class="btn" type="submit">Đăng&nbsp;ký ngay</button>
+        </form>
+        <div class="thanks" id="regThanks"><div class="ok">✓</div><h3>Đăng&nbsp;ký thành&nbsp;công!</h3><p style="color:var(--muted);margin-top:8px">Cảm ơn bạn. Tư vấn viên Sao Mai Academy sẽ liên hệ trong giờ làm việc.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a href="#" class="logo"><span class="mark" style="background:var(--blue)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 6.9L22 9.3l-5.8 4.6L18.2 21 12 17l-6.2 4 2-7.1L2 9.3l7.4-.4z" fill="#D3F25B"/></svg></span>Sao&nbsp;Mai&nbsp;Academy</a><p style="margin-top:14px">Nền tảng học kỹ năng online. Thương hiệu, giảng viên và thông tin trên trang là nội dung mẫu.</p></div>
+      <div><h4>Khoá học</h4><ul><li><a href="#khoa-hoc">Tiếng Anh</a></li><li><a href="#khoa-hoc">Marketing</a></li><li><a href="#khoa-hoc">Làm bánh</a></li><li><a href="#khoa-hoc">Kỹ năng mềm</a></li></ul></div>
+      <div><h4>Hỗ trợ</h4><ul><li><a href="#hoi-dap">Hỏi đáp</a></li><li><a href="#dang-ky">Tư vấn lộ trình</a></li><li><a href="#hoi-dap">Hướng dẫn thanh toán</a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul><li>Hotline: 0900 000 000</li><li>123 Đường Mẫu, Quận Mẫu, TP. Hồ Chí Minh</li><li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> · <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© Sao Mai Academy – website mẫu</span><span>Ảnh: Unsplash</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<a class="sales-badge" href="https://zalo.me/0901432113" target="_blank" rel="noopener">Mẫu giao diện · Kim Tuyen Truong — <b>Nhận báo giá</b></a>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu');
+  document.getElementById('burger').addEventListener('click',function(){menu.classList.toggle('open')});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open')})});
+  var btns=document.querySelectorAll('#filter button'),cs=document.querySelectorAll('.course');
+  function filter(f){btns.forEach(function(b){b.classList.toggle('on',b.dataset.f===f)});cs.forEach(function(c){c.classList.toggle('hide',f!=='all'&&c.dataset.c!==f)})}
+  btns.forEach(function(b){b.addEventListener('click',function(){filter(b.dataset.f)})});
+  document.querySelectorAll('[data-go]').forEach(function(el){el.addEventListener('click',function(){filter(el.dataset.go);document.getElementById('khoa-hoc').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})})});
+  var toast=document.getElementById('toast'),tt;
+  function showToast(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2600)}
+  document.getElementById('searchForm').addEventListener('submit',function(e){e.preventDefault();var q=document.getElementById('q').value.trim().toLowerCase();var map={anh:['anh','ielts','giao tiếp'],mkt:['marketing','quảng cáo','facebook','content','tiktok'],banh:['bánh'],kn:['canva','thuyết trình','kỹ năng','thiết kế']};var hit='all';Object.keys(map).forEach(function(k){map[k].forEach(function(w){if(q.indexOf(w)>-1)hit=k})});filter(hit);document.getElementById('khoa-hoc').scrollIntoView();if(q)showToast(hit==='all'?'Chưa có khoá phù hợp – xem tất cả khoá học':'Đã lọc khoá học phù hợp')});
+  var sel=document.getElementById('c');
+  document.querySelectorAll('[data-course]').forEach(function(b){b.addEventListener('click',function(){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text.indexOf(b.dataset.course)===0)sel.selectedIndex=i}})});
+  var rt=document.querySelectorAll('#roadTabs button');
+  rt.forEach(function(b){b.addEventListener('click',function(){rt.forEach(function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('.road-panel').forEach(function(p){p.classList.toggle('on',p.id===b.dataset.r)})})});
+  document.getElementById('regForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('regThanks').classList.add('show')});
+  document.querySelectorAll('.acc details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.acc details').forEach(function(o){if(o!==d)o.open=false})})});
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+<style id="kt-pill-mobile">@media (max-width:640px){a.kt-pill-auto{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}a.kt-pill-auto.kt-show{opacity:1;transform:none;pointer-events:auto}}</style>
+<script id="kt-pill-js">(function(){var a=document.querySelector('a[href*="zalo.me/0901432113"]');if(!a)return;a.classList.add('kt-pill-auto');function u(){a.classList.toggle('kt-show',scrollY>innerHeight*0.9)}addEventListener('scroll',u,{passive:true});u()})();</script>
+</body>
+</html>
