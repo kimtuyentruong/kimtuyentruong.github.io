@@ -322,3 +322,26 @@ html[lang="en"] .tile.tpl .img::after{content:"View template ↗"}
 }
 .kinds button{white-space:nowrap}
 @media (max-width:600px){.kinds button{padding:9px 10px;font-size:13px;flex:1;justify-content:center}.kinds .n{display:none}}
+
+/* v6 portfolio marquee rows */
+.pf-rows{display:grid;gap:22px;margin-inline:calc(50% - 50vw);padding-inline:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-row{overflow:hidden}
+.mq-track{display:flex;gap:22px;width:max-content;animation:mq 120s linear infinite;will-change:transform}
+.mq-row.rev .mq-track{animation-direction:reverse}
+.mq-row:hover .mq-track,.mq-row:focus-within .mq-track{animation-play-state:paused}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 11px))}}
+.pf-rows .tile{flex:0 0 auto;width:clamp(240px,22vw,320px);gap:8px;align-content:start}
+.pf-rows .tile .img{aspect-ratio:16/10}
+.pf-rows .tile .img img{height:100%;aspect-ratio:auto}
+.pf-rows .tile .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;min-width:0}
+.pf-rows .tile h3{font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.pf-rows .tile .cat{font-size:12px;white-space:nowrap;flex:none}
+.pf-rows .tile p{font-size:13px;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pf-rows.still{margin-inline:0;-webkit-mask-image:none;mask-image:none}
+.pf-rows.still .mq-track{animation:none;width:auto;flex-wrap:wrap}
+.pf-rows.still .tile{width:calc((100% - 66px)/4)}
+@media (max-width:960px){.pf-rows.still .tile{width:calc((100% - 22px)/2)}}
+@media (max-width:600px){.pf-rows{gap:16px}.mq-track{gap:14px}.pf-rows .tile{width:68vw}@keyframes mq{to{transform:translateX(calc(-50% - 7px))}}.pf-rows.still .mq-track{flex-wrap:nowrap;overflow-x:auto}.pf-rows.still .tile{width:68vw}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+.pf-rows.scroll .mq-row{overflow-x:auto}.pf-rows.scroll .mq-track{flex-wrap:nowrap}.pf-rows.scroll .tile{width:clamp(240px,22vw,320px)}
+.pf-rows .tile{width:clamp(230px,19vw,290px)}.pf-rows{gap:18px}@media (max-width:600px){.pf-rows .tile{width:68vw}}
