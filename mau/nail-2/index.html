@@ -246,7 +246,7 @@ footer a:hover{text-decoration:underline}
 <header class="wrap">
   <nav class="nav" aria-label="Điều hướng chính">
     <a href="#" class="logo"><span class="dot" aria-hidden="true"></span>Kẹo&nbsp;Nail</a>
-    <button class="burger" aria-label="Mở menu" aria-expanded="false">☰</button>
+    <button class="burger" aria-label="Mở menu" aria-expanded="false">☰︎</button>
     <ul class="menu">
       <li><a href="#dich-vu">Dịch&nbsp;vụ</a></li>
       <li><a href="#bang-gia">Bảng&nbsp;giá</a></li>
@@ -261,7 +261,7 @@ footer a:hover{text-decoration:underline}
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="tag">✦ Mẫu mới cập nhật mỗi tuần</span>
+      <span class="tag">✦︎ Mẫu mới cập nhật mỗi tuần</span>
       <h1>Làm&nbsp;nail <span style="white-space:nowrap"><span class="hl">xinh&nbsp;xỉu</span>,</span> <span class="ul">giá&nbsp;dễ&nbsp;thương</span></h1>
       <p class="lead">Sơn gel, sơn thạch, úp móng, đắp bột, vẽ và đính đá theo hình mẫu bạn thích. Gửi hình qua Zalo – tiệm báo giá liền.</p>
       <div class="cta">
@@ -271,7 +271,7 @@ footer a:hover{text-decoration:underline}
       <div class="mini"><span>💅 Sơn gel từ 100.000đ</span><span>🕘 09:00&nbsp;–&nbsp;21:00</span><span>🛡 Bảo hành 5&nbsp;ngày</span></div>
     </div>
     <div class="stack">
-      <span class="star" aria-hidden="true">✦</span>
+      <span class="star" aria-hidden="true">✦︎</span>
       <figure class="p1"><img src="https://images.unsplash.com/photo-1693776529070-2cdea397595b?auto=format&fit=crop&w=900&q=80" alt="Khách đang được làm móng tại tiệm" width="900" height="1080" fetchpriority="high"></figure>
       <figure class="p2"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=700&q=80" alt="Thợ sơn nhũ kim tuyến lên móng hồng" width="700" height="760"></figure>
       <div class="stk">Gửi hình,<br>làm y&nbsp;mẫu</div>
@@ -465,8 +465,8 @@ footer a:hover{text-decoration:underline}
 <script>
 (function(){
   var h=document.querySelector('header'), b=document.querySelector('.burger');
-  b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'✕':'☰'});
-  document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');b.setAttribute('aria-expanded',false);b.textContent='☰'})});
+  b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'✕︎':'☰︎'});
+  document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');b.setAttribute('aria-expanded',false);b.textContent='☰︎'})});
   var els=document.querySelectorAll('.rv');
   if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});

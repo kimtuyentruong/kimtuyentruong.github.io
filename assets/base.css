@@ -119,7 +119,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--hi);outline-offset:
 .tile{display:grid;gap:12px;min-width:0;text-decoration:none}
 .tile .img{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--surface);position:relative}
 .tile .img img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.tile .img::after{content:"Visit site ↗";position:absolute;right:12px;bottom:12px;background:var(--ink);color:var(--paper);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;opacity:0;transform:translateY(6px);transition:.25s}
+.tile .img::after{content:"Visit site \2197\FE0E";position:absolute;right:12px;bottom:12px;background:var(--ink);color:var(--paper);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;opacity:0;transform:translateY(6px);transition:.25s}
 .tile:hover .img img{transform:scale(1.04)}
 .tile:hover .img::after,.tile:focus-visible .img::after{opacity:1;transform:none}
 .tile h3{font-size:21px;font-weight:700;letter-spacing:-.02em}
@@ -212,7 +212,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--hi);outline-offset:
 .plan .price .from{font-size:16px;font-weight:600;letter-spacing:0;margin-right:6px}
 .plan ul{margin:0;padding:0;list-style:none;display:grid;gap:9px;font-size:15.5px}
 .plan li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:8px}
-.plan li::before{content:"✓";font-weight:700;color:var(--url)}
+.plan li::before{content:"\2713\FE0E";font-weight:700;color:var(--url)}
 .plan.hot li::before{color:var(--hi)}
 .plan .cta{margin-top:auto;display:block;text-align:center;font-weight:600;text-decoration:none;padding:12px 16px;border-radius:999px;border:1.5px solid var(--ink)}
 .plan.hot .cta{background:var(--hi);color:#0D1117;border-color:var(--hi)}
@@ -223,7 +223,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--hi);outline-offset:
 .incl h4{margin:0 0 6px;font-family:var(--display);font-size:17px}
 .incl ul{margin:0;padding:0;list-style:none;display:grid;gap:5px;font-size:15px;color:var(--muted)}
 .incl li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:6px}
-.incl li::before{content:"✓";color:var(--url);font-weight:700}
+.incl li::before{content:"\2713\FE0E";color:var(--url);font-weight:700}
 .pnote{margin:18px 0 0;font-size:14px;color:var(--muted)}
 @media (max-width:960px){.plans{grid-template-columns:minmax(0,1fr)}.incl{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:600px){.incl .cols{grid-template-columns:minmax(0,1fr)}}

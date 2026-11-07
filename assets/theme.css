@@ -221,8 +221,8 @@ html[lang="en"] .hero h1{font-size:clamp(40px,5.6vw,80px)}
 .tile[hidden]{display:none}
 /* templates by industry */
 .tfilters{margin-top:-28px}
-.tile.tpl .img::after{content:"Xem mẫu ↗"}
-html[lang="en"] .tile.tpl .img::after{content:"View template ↗"}
+.tile.tpl .img::after{content:"Xem mẫu \2197\FE0E"}
+html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 .tnote{margin:28px 0 0;font-size:13.5px;color:var(--faint)}
 #grid .tile .img{aspect-ratio:16/11}#grid .tile .img img{height:100%}#grid .tile{align-content:start}
 
@@ -345,3 +345,25 @@ html[lang="en"] .tile.tpl .img::after{content:"View template ↗"}
 @media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
 .pf-rows.scroll .mq-row{overflow-x:auto}.pf-rows.scroll .mq-track{flex-wrap:nowrap}.pf-rows.scroll .tile{width:clamp(240px,22vw,320px)}
 .pf-rows .tile{width:clamp(230px,19vw,290px)}.pf-rows{gap:18px}@media (max-width:600px){.pf-rows .tile{width:68vw}}
+
+/* v7 performance: cheaper marquee + lighter effects on phones/tablets */
+.pf-rows{position:relative;-webkit-mask-image:none;mask-image:none}
+.pf-rows::before,.pf-rows::after{content:"";position:absolute;z-index:3;top:0;bottom:0;width:8%;pointer-events:none}
+.pf-rows::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.pf-rows::after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
+.pf-rows.still::before,.pf-rows.still::after{display:none}
+.mq-row{contain:layout paint}
+.mq-track{transform:translate3d(0,0,0);backface-visibility:hidden}
+@keyframes mq{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - 11px),0,0)}}
+.pf-rows.off .mq-track{animation-play-state:paused}
+.tile .kind{-webkit-backdrop-filter:none;backdrop-filter:none}
+.tile .k-client{background:rgba(16,40,26,.92)}.tile .k-demo{background:rgba(40,18,10,.92)}
+.pf-rows .tile .img img{transition:none}
+@media (max-width:900px),(hover:none){
+  .atmo .orb{animation:none;filter:none;opacity:.35}
+  .atmo .noise{display:none}
+  .ribbon{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(20,16,16,.94)}
+  .case .stage::after{filter:none}
+  .pf-rows .tile:hover .img{box-shadow:none}
+}
+@media (max-width:600px){@keyframes mq{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - 7px),0,0)}}}

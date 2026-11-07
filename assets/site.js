@@ -30,7 +30,6 @@
   /* portfolio: two slow marquee rows moving in opposite directions, filtered by industry */
   var src = $('pfsrc'), rowsBox = $('pfrows'), cnt = document.querySelector('.pf-count'), fInd = 'all';
   var build = function () {
-    var w0 = innerWidth;
     if (!src || !rowsBox) return;
     var items = [].filter.call(src.querySelectorAll('.tile'), function (t) { return fInd === 'all' || t.dataset.i === fInd; });
     if (cnt) cnt.textContent = items.length + (document.documentElement.lang === 'en' ? ' sites' : ' website');
@@ -51,6 +50,7 @@
         for (var k = 1; k < reps * 2; k++) add();
         track.style.animationDuration = Math.max(40, list.length * reps * 7) + 's';
       }
+      track.querySelectorAll('img').forEach(function (im) { im.decoding = 'async'; });
       row.appendChild(track); rowsBox.appendChild(row);
     });
   };
@@ -62,7 +62,9 @@
     });
   });
   build();
-  var rt; addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(build, 300); });
+  /* pause the marquee while it is off screen */
+  if (rowsBox && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { rowsBox.classList.toggle('off', !es[0].isIntersecting); }).observe(rowsBox);
+  var rt, lastW = innerWidth; addEventListener('resize', function () { if (Math.abs(innerWidth - lastW) < 40) return; lastW = innerWidth; clearTimeout(rt); rt = setTimeout(build, 300); });
 
   /* copy email */
   var copy = $('copy');
