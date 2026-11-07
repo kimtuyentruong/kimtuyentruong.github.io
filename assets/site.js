@@ -49,24 +49,29 @@
       setInterval(step, 3500);
     }
   }
-  document.querySelectorAll('.filters:not(.tfilters) button').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var f = b.dataset.f;
-      document.querySelectorAll('.filters:not(.tfilters) button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      document.querySelectorAll('#grid .tile').forEach(function (t) { t.hidden = !(f === 'all' || t.dataset.c === f); });
-      if (grid) { grid.scrollLeft = 0; grid.dispatchEvent(new Event('scroll')); }
+  /* portfolio: filter by industry (data-i) and type (data-k) */
+  var fInd = 'all', fKind = 'all', cnt = document.querySelector('.pf-count');
+  var applyF = function () {
+    var shown = 0;
+    document.querySelectorAll('#grid .tile').forEach(function (t) {
+      var ok = (fInd === 'all' || t.dataset.i === fInd) && (fKind === 'all' || t.dataset.k === fKind);
+      t.hidden = !ok; if (ok) shown++;
     });
-  });
-
-
-  /* templates by industry */
-  document.querySelectorAll('.tfilters button').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var f = b.dataset.t;
-      document.querySelectorAll('.tfilters button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      document.querySelectorAll('#tgrid .tile').forEach(function (t) { t.hidden = !(f === 'all' || t.dataset.t === f); });
+    if (cnt) cnt.textContent = shown + (document.documentElement.lang === 'en' ? ' sites' : ' website');
+    if (grid) { grid.scrollLeft = 0; grid.dispatchEvent(new Event('scroll')); }
+  };
+  var bindF = function (sel, attr, set) {
+    document.querySelectorAll(sel).forEach(function (b) {
+      b.addEventListener('click', function () {
+        set(b.dataset[attr]);
+        document.querySelectorAll(sel).forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        applyF();
+      });
     });
-  });
+  };
+  bindF('.pf-ind button', 'i', function (v) { fInd = v; });
+  bindF('.kinds button', 'k', function (v) { fKind = v; });
+  applyF();
 
   /* copy email */
   var copy = $('copy');

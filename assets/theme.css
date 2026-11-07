@@ -298,3 +298,27 @@ html[lang="en"] .tile.tpl .img::after{content:"View template ↗"}
 }
 @media (prefers-reduced-motion:reduce){.editor{transform:none;transition:none}}
 @media (max-width:600px){.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%}.stats li{padding-left:10px}.stats b{font-size:22px}.stats span{font-size:12px;line-height:1.35}}
+
+/* v5 merged portfolio */
+.pf-bar{display:flex;flex-direction:column;gap:14px;margin:-18px 0 26px}
+.kinds{display:inline-flex;align-self:flex-start;padding:4px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface)}
+.kinds button{border:0;background:none;color:var(--muted);font:600 14px/1 var(--body,inherit);padding:10px 16px;border-radius:999px;cursor:pointer;min-height:40px;display:inline-flex;align-items:center;gap:6px;transition:background .2s,color .2s}
+.kinds button[aria-pressed="true"]{background:var(--grad);color:#fff}
+.kinds .n{font-size:12px;opacity:.75}
+.pf-ind{margin:0}
+#grid .tile .img{position:relative}
+.tile .kind{position:absolute;z-index:2;top:10px;left:10px;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+.tile .k-client{background:rgba(16,40,26,.82);color:#9BE7B4;border:1px solid rgba(124,207,150,.45)}
+.tile .k-demo{background:rgba(40,18,10,.82);color:#FFC59A;border:1px solid rgba(255,138,61,.45)}
+.pf-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;flex-wrap:wrap}
+.pf-foot .tnote{margin:0;font-size:13px;color:var(--faint)}
+.pf-foot .sl-nav{margin:0;align-items:center}
+.pf-count{font-size:13px;color:var(--muted);margin-right:6px;font-variant-numeric:tabular-nums}
+@media (max-width:600px){
+  .pf-ind{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);padding-bottom:4px}
+  .pf-ind::-webkit-scrollbar{display:none}
+  .pf-ind button{flex:none}
+  .kinds{align-self:stretch;justify-content:space-between}.kinds button{padding:10px 12px;font-size:13px}
+}
+.kinds button{white-space:nowrap}
+@media (max-width:600px){.kinds button{padding:9px 10px;font-size:13px;flex:1;justify-content:center}.kinds .n{display:none}}
