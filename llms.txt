@@ -1,6 +1,6 @@
 # Kim Tuyen Truong
 
-> Kim Tuyen Truong (Trương Biên Kim Tuyền) designs and builds websites with SEO and AI search optimization (AIO) for small and mid-size businesses in Vietnam and the United States. Digital Growth Manager at AIxNovate, a U.S. marketing agency. Building websites and doing SEO since 2019.
+> Kim Tuyen Truong (Trương Biện Kim Tuyền) designs and builds websites with SEO and AI search optimization (AIO) for small and mid-size businesses in Vietnam and the United States. Digital Growth Manager at AIxNovate, a U.S. marketing agency. Building websites and doing SEO since 2019.
 
 ## Services
 - Website design and development (hand-coded PHP/JavaScript or WordPress) with an admin panel for self-editing
