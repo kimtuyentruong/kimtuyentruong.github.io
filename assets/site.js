@@ -103,6 +103,21 @@
     });
   });
   build(); ribBuild();
+  /* deep link to an industry filter, e.g. /#bat-dong-san */
+  var pfSlug = { 'bat-dong-san': 'realestate', 'real-estate': 'realestate', 'y-te': 'health', 'healthcare': 'health', 'lam-dep': 'beauty', 'beauty': 'beauty', 'nha-hang': 'food', 'food': 'food', 'khach-san': 'stay', 'hospitality': 'stay', 'ban-le': 'retail', 'retail': 'retail', 'xay-dung': 'build', 'construction': 'build', 'dich-vu': 'service', 'services': 'service', 'giao-duc': 'edu', 'education': 'edu' };
+  var pfHash = function (e) {
+    var k = pfSlug[decodeURIComponent(location.hash.slice(1)).toLowerCase()];
+    var b = k && document.querySelector('.pf-ind button[data-i="' + k + '"]');
+    if (!b) return;
+    b.click();
+    var bar = b.parentNode; if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollLeft += b.getBoundingClientRect().left - bar.getBoundingClientRect().left - (bar.clientWidth - b.offsetWidth) / 2;
+    var sec = $('portfolio'); if (sec) setTimeout(function () {
+      var jump = reduce || !e, de = document.documentElement, y = sec.getBoundingClientRect().top + pageYOffset - 16;
+      if (jump) { de.style.scrollBehavior = 'auto'; window.scrollTo(0, y); de.style.scrollBehavior = ''; }
+      else window.scrollTo({ top: y, behavior: 'smooth' });
+    }, e ? 60 : 150);
+  };
+  pfHash(); addEventListener('hashchange', pfHash);
   if (document.fonts && document.fonts.status !== 'loaded') document.fonts.ready.then(function () { build(); ribBuild(); });
   /* pause the marquees while they are off screen */
   if ('IntersectionObserver' in window) {
