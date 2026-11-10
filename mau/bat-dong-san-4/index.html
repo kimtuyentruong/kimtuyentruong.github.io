@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mua Bán, Cho Thuê Nhà TP.HCM – Tin Xác Minh Tại Chỗ | Khoảng Sống</title>
+<meta name="description" content="Mẫu giao diện sàn bất động sản TP.HCM: tìm căn hộ, nhà phố, biệt thự theo khu vực, giá, diện tích, pháp lý; xem bản đồ, so giá/m² với khu vực, ước tính trả góp và đặt lịch xem nhà.">
+<meta name="theme-color" content="#111827">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111827'/%3E%3Cpath d='M16 46V27l16-11 16 11v19' fill='none' stroke='%23fff' stroke-width='5' stroke-linejoin='round'/%3E%3Crect x='27' y='33' width='10' height='13' rx='2' fill='%23E4573D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --ink:#111827;--ink2:#374151;--mute:#6B7280;--line:#E7E3DD;--line2:#D9D4CC;
+  --bg:#F5F3F0;--paper:#fff;--coral:#E4573D;--cta:#C9432A;--cta-d:#AE3720;--coral-soft:#FCEAE5;
+  --ok:#1C7A57;--ok-soft:#E3F3EC;--sky:#BCD6DD;
+  --display:"Bricolage Grotesque",Inter,system-ui,sans-serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:16px;--hdr:72px;--ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--hdr) + 12px)}
+body{margin:0;font:16px/1.6 var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html.lock,html.lock body{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px;border-radius:6px}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;margin:0;text-wrap:balance}
+h2{font-size:clamp(32px,4.2vw,56px);line-height:1.06;font-weight:700}
+.nw{white-space:nowrap}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:600 13px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--cta)}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;transition:background .2s,color .2s,transform .2s var(--ease),border-color .2s;white-space:nowrap}
+.btn-cta{background:var(--cta);color:#fff}
+.btn-cta:hover{background:var(--cta-d)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#000}
+.btn-ghost{border:1.5px solid var(--line2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn .ico{width:18px;height:18px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv[data-d="1"]{transition-delay:.08s}.js .rv[data-d="2"]{transition-delay:.16s}.js .rv[data-d="3"]{transition-delay:.24s}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--hdr);color:#fff;transition:background .3s,color .3s,box-shadow .3s}
+.hdr.solid{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.hdr .wrap{height:100%;display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 21px/1 var(--display);letter-spacing:-.03em;white-space:nowrap}
+.logo svg{width:34px;height:34px}
+.logo .lg-bg{fill:#fff;transition:fill .3s}.hdr.solid .logo .lg-bg{fill:var(--ink)}
+.logo .lg-house{stroke:var(--ink);transition:stroke .3s}.hdr.solid .logo .lg-house{stroke:#fff}
+.nav{display:flex;gap:4px;margin-left:12px}
+.nav a{padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;opacity:.88;transition:background .2s,opacity .2s}
+.nav a:hover{opacity:1;background:rgba(255,255,255,.14)}
+.hdr.solid .nav a:hover{background:var(--bg)}
+.hdr-r{margin-left:auto;display:flex;align-items:center;gap:10px}
+.saved-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:999px;font-weight:600;font-size:15px;border:1.5px solid rgba(255,255,255,.4);transition:border-color .2s}
+.hdr.solid .saved-btn{border-color:var(--line2)}
+.saved-btn .cnt{min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--coral);color:#fff;font-size:12px;display:inline-grid;place-items:center}
+.saved-btn .cnt[data-z="1"]{background:rgba(127,127,127,.35)}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;place-items:center}
+.menu-btn .ico{width:24px;height:24px}
+.mnav{position:fixed;inset:var(--hdr) 0 0 0;z-index:99;background:#fff;color:var(--ink);padding:24px 20px 40px;display:flex;flex-direction:column;gap:4px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s var(--ease),visibility 0s .25s}
+.mnav.open{opacity:1;transform:none;visibility:visible;transition:opacity .25s,transform .25s var(--ease)}
+.mnav a{padding:16px 4px;font:600 22px/1.2 var(--display);text-decoration:none;border-bottom:1px solid var(--line)}
+.mnav .btn{margin-top:20px}
+
+/* hero */
+.hero{position:relative;min-height:min(900px,96svh);display:flex;align-items:flex-end;color:#fff;background:#0d1320;overflow:hidden;padding:calc(var(--hdr) + 60px) 0 64px}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:kb 28s ease-in-out infinite alternate}
+.hero.off .hero-img{animation-play-state:paused}
+@keyframes kb{to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,19,32,.55) 0%,rgba(13,19,32,.1) 30%,rgba(13,19,32,.35) 55%,rgba(13,19,32,.88) 100%),linear-gradient(90deg,rgba(13,19,32,.55),rgba(13,19,32,0) 60%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);font-size:14px;font-weight:500}
+.hero-tag i{width:8px;height:8px;border-radius:50%;background:#5FE0A8;box-shadow:0 0 0 4px rgba(95,224,168,.22)}
+.hero h1{margin-top:22px;font-size:clamp(40px,6.4vw,74px);line-height:1.04;font-weight:700;letter-spacing:-.03em;max-width:none}
+@media (min-width:1241px){.hero h1{font-size:clamp(40px,5.4vw,70px);max-width:calc(100% - 330px)}.hero-sub{max-width:560px}}
+.hero h1 em{font-style:normal;position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.12em;background:var(--coral);border-radius:3px;transform-origin:left;transform:scaleX(0);transition:transform 1.1s .5s var(--ease)}
+.hero.ready h1 em::after{transform:scaleX(1)}
+.hero-sub{max-width:600px;margin:20px 0 0;font-size:18px;line-height:1.6;color:rgba(255,255,255,.86)}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.16em 0 .1em;margin:-.16em 0 -.1em}
+.split .w>span{display:inline-block;transform:translateY(105%);transition:transform .9s var(--ease)}
+.hero.ready .split .w>span{transform:none}
+
+.search{margin-top:36px;max-width:1010px;background:#fff;color:var(--ink);border-radius:22px;padding:8px 8px 8px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45);opacity:0;transform:translateY(20px);transition:opacity .8s .55s var(--ease),transform .8s .55s var(--ease)}
+.hero.ready .search{opacity:1;transform:none}
+.tabs{position:relative;display:flex;gap:2px;padding:6px 8px 0}
+.tab{position:relative;padding:10px 16px 12px;font-weight:600;font-size:15px;color:var(--mute);transition:color .2s}
+.tab[aria-selected="true"]{color:var(--ink)}
+.tab-ind{position:absolute;bottom:0;height:3px;border-radius:3px;background:var(--coral);transition:left .35s var(--ease),width .35s var(--ease)}
+.srow{display:grid;grid-template-columns:1.7fr 1fr 1fr auto;gap:0;align-items:stretch;border-top:1px solid var(--line);padding-top:6px}
+.fld{display:flex;flex-direction:column;justify-content:center;gap:2px;padding:10px 18px;border-radius:14px;position:relative;transition:background .2s}
+.fld+.fld::before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:1px;background:var(--line)}
+.fld:hover{background:var(--bg)}
+.fld>span{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+.fld input,.fld select{border:0;background:transparent;padding:2px 0;font-size:16px;font-weight:500;outline:none;width:100%;min-width:0;-webkit-appearance:none;appearance:none}
+.fld select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right center/18px;padding-right:22px;cursor:pointer}
+.fld-q{flex-direction:row;align-items:center;gap:12px}
+.fld-q>div{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.fld-q>div>span{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+.fld-q .ico{color:var(--coral);width:22px;height:22px}
+.sbtn{margin:6px;min-height:58px;border-radius:16px;padding:0 28px;font-size:16px}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;opacity:0;transition:opacity .8s .8s}
+.hero.ready .quick{opacity:1}
+.quick span{font-size:14px;color:rgba(255,255,255,.75);align-self:center;margin-right:4px}
+.quick button{min-height:38px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(13,19,32,.35);color:#fff;font-size:14px;font-weight:500;transition:background .2s,border-color .2s}
+.quick button:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.6)}
+.proof{position:absolute;right:32px;top:calc(var(--hdr) + 70px);z-index:1;width:300px;background:#fff;color:var(--ink);border-radius:20px;padding:12px;box-shadow:0 30px 60px -25px rgba(0,0,0,.6);opacity:0;transform:translateY(24px) rotate(1.5deg);transition:opacity .9s .9s var(--ease),transform .9s .9s var(--ease)}
+.hero.ready .proof{opacity:1;transform:rotate(1.5deg)}
+.proof img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+.proof-b{padding:12px 6px 4px}
+.proof-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.proof-row b{font:700 22px/1 var(--display)}
+.proof-row small{color:var(--mute);font-size:13px}
+.proof ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px;font-size:13.5px;color:var(--ink2)}
+.proof li{display:flex;gap:8px;align-items:flex-start}
+.proof li .ico{width:18px;height:18px;color:var(--ok);margin-top:1px}
+.stamp{position:absolute;top:-14px;left:-14px;width:76px;height:76px;border-radius:50%;background:var(--ok);color:#fff;display:grid;place-items:center;text-align:center;font:700 10.5px/1.15 var(--sans);letter-spacing:.04em;text-transform:uppercase;transform:rotate(-12deg);box-shadow:0 10px 20px -8px rgba(0,0,0,.4)}
+
+/* compare */
+.why{background:var(--bg);padding:120px 0}
+.why-head{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:end;margin-bottom:56px}
+.why-head p{margin:0;color:var(--ink2);font-size:18px;max-width:520px}
+.why-head h2{margin-top:16px}
+.cmp{border-top:1.5px solid var(--ink)}
+.cmp-row{display:grid;grid-template-columns:70px 1fr 80px 1fr;gap:24px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line2)}
+.cmp-n{font:600 15px/1 var(--display);color:var(--mute)}
+.cmp-pain h3,.cmp-fix h3{font-size:clamp(20px,2vw,26px);line-height:1.2;font-weight:600}
+.cmp-pain p,.cmp-fix p{margin:8px 0 0;font-size:15.5px;color:var(--mute);max-width:440px}
+.cmp-pain h3{position:relative;display:inline;color:var(--ink2);background-image:linear-gradient(var(--coral),var(--coral));background-repeat:no-repeat;background-position:0 58%;background-size:0 2px;transition:background-size 1s .3s var(--ease)}
+.cmp-row.in .cmp-pain h3{background-size:100% 2px}
+.cmp-arr{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--line2);display:grid;place-items:center;color:var(--ink);justify-self:center;transition:background .6s .6s,color .6s .6s,border-color .6s .6s}
+.cmp-row.in .cmp-arr{background:var(--ink);color:#fff;border-color:var(--ink)}
+.cmp-fix{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.cmp-fix .badge{width:44px;height:44px;border-radius:12px;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center}
+.cmp-fix .badge .ico{width:22px;height:22px}
+.cmp-fix p{color:var(--ink2)}
+
+/* listings */
+.market{padding:110px 0 120px}
+.m-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:36px}
+.m-head h2{margin-top:14px;max-width:16ch}
+.m-head p{margin:0;max-width:420px;color:var(--ink2)}
+.modes{display:inline-flex;background:var(--bg);border-radius:999px;padding:4px;position:relative}
+.modes button{position:relative;z-index:1;min-height:42px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;color:var(--mute);transition:color .25s}
+.modes button[aria-pressed="true"]{color:#fff}
+.modes .pill{position:absolute;top:4px;bottom:4px;border-radius:999px;background:var(--ink);transition:left .35s var(--ease),width .35s var(--ease)}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:40px;align-items:start}
+
+.filters{position:sticky;top:calc(var(--hdr) + 20px);max-height:calc(100vh - var(--hdr) - 40px);overflow:auto;overscroll-behavior:contain;padding:0 6px 64px 0;scrollbar-width:thin}
+.f-head{display:none}
+.f-grp{padding:20px 0;border-bottom:1px solid var(--line)}
+.f-grp:first-child{padding-top:0}
+.f-grp>h3,.f-grp legend{font:600 14px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin:0 0 14px;padding:0}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.f-grp legend{float:left;width:100%}
+.f-grp legend+*{clear:both}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line2);font-size:14px;font-weight:500;background:#fff;transition:background .2s,border-color .2s,color .2s;white-space:nowrap}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.seg{display:grid;grid-template-columns:repeat(5,1fr);border:1.5px solid var(--line2);border-radius:12px;overflow:hidden}
+.seg button{min-height:42px;font-size:14px;font-weight:600;border-left:1px solid var(--line);transition:background .2s,color .2s}
+.seg button:first-child{border-left:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.sel{width:100%;min-height:46px;border:1.5px solid var(--line2);border-radius:12px;padding:0 40px 0 14px;font-size:16px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111827' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center/18px;-webkit-appearance:none;appearance:none;cursor:pointer}
+.range-val{display:flex;justify-content:space-between;font-size:14px;color:var(--ink2);margin-bottom:12px;font-weight:500}
+.range{position:relative;height:28px}
+.range .track{position:absolute;left:0;right:0;top:12px;height:4px;border-radius:4px;background:var(--line)}
+.range .fill{position:absolute;top:12px;height:4px;border-radius:4px;background:var(--coral)}
+.range input{position:absolute;inset:0;width:100%;margin:0;background:transparent;pointer-events:none;-webkit-appearance:none;appearance:none;height:28px}
+.range input::-webkit-slider-thumb{-webkit-appearance:none;pointer-events:auto;width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.18);cursor:grab}
+.range input::-moz-range-thumb{pointer-events:auto;width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid var(--ink);cursor:grab}
+.range input:focus-visible::-webkit-slider-thumb{outline:3px solid var(--coral);outline-offset:2px}
+.f-reset{margin-top:20px;font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:4px;color:var(--ink2);min-height:44px}
+
+.toolbar{position:sticky;top:var(--hdr);z-index:20;background:rgba(255,255,255,.97);display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0 14px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.count{font:600 18px/1.3 var(--display);margin-right:auto}
+.count b{color:var(--cta)}
+.tb-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line2);font-weight:600;font-size:14.5px;background:#fff;transition:border-color .2s,background .2s,color .2s}
+.tb-btn:hover{border-color:var(--ink)}
+.tb-btn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tb-btn .ico{width:18px;height:18px}
+.f-open{display:none}
+.f-open .n{min-width:20px;height:20px;border-radius:999px;background:var(--coral);color:#fff;font-size:12px;display:inline-grid;place-items:center;padding:0 5px}
+.sort{min-height:44px;border:1.5px solid var(--line2);border-radius:12px;padding:0 36px 0 12px;font-size:15px;font-weight:600;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111827' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center/16px;-webkit-appearance:none;appearance:none;cursor:pointer}
+.views{display:inline-flex;border:1.5px solid var(--line2);border-radius:12px;overflow:hidden}
+.views button{display:inline-flex;align-items:center;gap:6px;min-height:41px;padding:0 12px;font-size:14px;font-weight:600;transition:background .2s,color .2s}
+.views button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.views .ico{width:18px;height:18px}
+.active{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 20px;min-height:0}
+.active:empty{margin:0 0 14px}
+.achip{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:0 8px 0 12px;border-radius:999px;background:var(--coral-soft);color:#8E2E1A;font-size:13.5px;font-weight:600}
+.achip .ico{width:16px;height:16px}
+.achip:hover{background:#F8D7CE}
+
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+.card{position:relative;display:flex;flex-direction:column;cursor:pointer}
+.c-media{position:relative;display:block;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:var(--bg)}
+.c-media img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.card:hover .c-media img{transform:scale(1.05)}
+.c-badges{position:absolute;left:10px;top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;gap:5px;height:26px;padding:0 9px;border-radius:999px;font-size:12px;font-weight:600;background:#fff;color:var(--ink)}
+.tag.ok{background:var(--ok);color:#fff}
+.tag.new{background:var(--coral);color:#fff}
+.tag .ico{width:14px;height:14px;stroke-width:2.4}
+.c-photos{position:absolute;right:10px;bottom:10px;display:inline-flex;align-items:center;gap:5px;height:26px;padding:0 9px;border-radius:999px;background:rgba(17,24,39,.72);color:#fff;font-size:12px;font-weight:600}
+.c-photos .ico{width:14px;height:14px}
+.fav{position:absolute;right:10px;top:10px;z-index:2;width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ink);box-shadow:0 4px 12px -4px rgba(0,0,0,.25);transition:transform .2s var(--ease)}
+.fav:hover{transform:scale(1.08)}
+.fav .ico{width:20px;height:20px}
+.fav[aria-pressed="true"]{color:var(--coral)}
+.fav[aria-pressed="true"] .ico{fill:var(--coral)}
+.c-body{padding:14px 2px 0}
+.c-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.c-price strong{font:700 24px/1.1 var(--display);letter-spacing:-.02em}
+.c-price span{font-size:14px;color:var(--mute);font-weight:500}
+.c-title{margin:6px 0 0;font:600 16.5px/1.35 var(--sans);letter-spacing:0}
+.c-title button{text-align:left;font-weight:600}
+.c-title button:hover{text-decoration:underline;text-underline-offset:3px}
+.c-loc{display:flex;gap:6px;align-items:flex-start;margin:6px 0 0;font-size:14px;color:var(--mute)}
+.c-loc .ico{width:16px;height:16px;margin-top:3px}
+.specs{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;padding:12px 0 0;margin:12px 0 0;border-top:1px solid var(--line);font-size:14px;color:var(--ink2);font-weight:500}
+.specs li{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.specs .ico{width:17px;height:17px;color:var(--mute)}
+.c-foot{display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:13px;color:var(--mute)}
+.c-foot .lg{font-weight:600;color:var(--ok)}
+.c-foot .lg.wait{color:#9A6A12}
+.empty{grid-column:1/-1;text-align:center;padding:70px 20px;border:1.5px dashed var(--line2);border-radius:20px}
+.empty h3{font-size:26px}
+.empty p{color:var(--mute);margin:10px auto 22px;max-width:420px}
+
+/* map */
+.mapbox{position:relative;border-radius:20px;overflow:hidden;background:#EDE8E0;border:1px solid var(--line)}
+.map-scroll{overflow:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.map-canvas{position:relative;width:100%;aspect-ratio:10/7;min-width:720px}
+.map-canvas svg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;transform:translate(-50%,-100%);display:inline-flex;align-items:center;gap:4px;height:32px;padding:0 10px;border-radius:999px;background:#fff;color:var(--ink);font:700 13px/1 var(--sans);white-space:nowrap;box-shadow:0 6px 14px -6px rgba(0,0,0,.35);transition:background .2s,color .2s,transform .25s var(--ease);z-index:1}
+.pin::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:inherit;transform:translateX(-50%) rotate(45deg);border-radius:2px;z-index:-1}
+.pin:hover,.pin.on{background:var(--ink);color:#fff;transform:translate(-50%,-100%) scale(1.08);z-index:3}
+.pin.fav-pin{box-shadow:0 0 0 2px var(--coral),0 6px 14px -6px rgba(0,0,0,.35)}
+.map-hint{position:absolute;left:14px;top:14px;z-index:4;background:#fff;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;box-shadow:0 4px 12px -6px rgba(0,0,0,.3)}
+.map-card{position:absolute;left:14px;bottom:14px;z-index:5;width:min(340px,calc(100% - 28px));background:#fff;border-radius:16px;padding:10px;display:grid;grid-template-columns:110px 1fr;gap:12px;box-shadow:0 20px 40px -18px rgba(0,0,0,.45);opacity:0;transform:translateY(10px);pointer-events:none;transition:opacity .25s,transform .25s var(--ease)}
+.map-card.show{opacity:1;transform:none;pointer-events:auto}
+.map-card .mc-x{position:absolute;right:6px;top:6px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:var(--mute);min-height:0}
+.map-card .mc-x .ico{width:18px;height:18px}
+.map-card b{padding-right:30px}
+.map-card img{width:110px;height:100%;min-height:96px;object-fit:cover;border-radius:10px}
+.map-card b{font:700 19px/1.1 var(--display)}
+.map-card p{margin:4px 0 8px;font-size:13.5px;line-height:1.35;color:var(--ink2)}
+.map-card button{font-weight:600;font-size:14px;color:var(--cta);display:inline-flex;align-items:center;gap:6px;min-height:32px}
+.map-card button .ico{width:16px;height:16px}
+
+/* areas */
+.areas{background:var(--ink);color:#fff;padding:110px 0}
+.areas .eyebrow{color:#F49A86}
+.areas-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:44px}
+.areas-head h2{margin-top:14px;max-width:15ch}
+.areas-head p{margin:0;max-width:420px;color:rgba(255,255,255,.7)}
+.a-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14);border-radius:20px;overflow:hidden}
+.a-tile{position:relative;background:var(--ink);padding:26px 24px 24px;text-align:left;min-height:210px;display:flex;flex-direction:column;transition:background .3s}
+.a-tile:hover{background:#1B2333}
+.a-tile .old{font-size:13px;color:rgba(255,255,255,.55)}
+.a-tile h3{font-size:24px;line-height:1.15;margin-top:4px;font-weight:600}
+.a-tile .stat{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;align-items:end;gap:10px}
+.a-tile .stat b{font:700 26px/1 var(--display);display:block}
+.a-tile .stat small{font-size:12.5px;color:rgba(255,255,255,.6)}
+.a-tile .bar{height:4px;border-radius:4px;background:rgba(255,255,255,.12);margin-top:14px;overflow:hidden}
+.a-tile .bar i{display:block;height:100%;background:var(--coral);border-radius:4px;transform-origin:left;transform:scaleX(0);transition:transform 1.2s var(--ease)}
+.a-grid.in .bar i{transform:scaleX(var(--v))}
+.a-tile .go{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:background .25s,border-color .25s,transform .25s var(--ease)}
+.a-tile:hover .go{background:var(--coral);border-color:var(--coral);transform:rotate(-45deg)}
+.a-tile .go .ico{width:18px;height:18px}
+.a-note{margin-top:16px;font-size:13px;color:rgba(255,255,255,.5)}
+
+/* projects */
+.projects{padding:120px 0}
+.p-head{margin-bottom:44px;display:flex;justify-content:space-between;align-items:end;gap:40px}
+.p-head h2{margin-top:14px}
+.p-grid{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:22px}
+.proj{position:relative;display:block;border-radius:22px;overflow:hidden;color:#fff;text-decoration:none;min-height:300px;background:#222}
+.proj:first-child{grid-row:span 2;min-height:640px}
+.proj img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.proj:hover img{transform:scale(1.05)}
+.proj::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.78))}
+.proj-b{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:28px}
+.proj .st{display:inline-flex;height:28px;align-items:center;padding:0 12px;border-radius:999px;background:#fff;color:var(--ink);font-size:12.5px;font-weight:700}
+.proj h3{font-size:clamp(26px,2.6vw,38px);line-height:1.08;margin-top:14px;font-weight:700}
+.proj p{margin:8px 0 0;color:rgba(255,255,255,.85);font-size:15.5px;max-width:460px}
+.proj .more{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:600;font-size:15px}
+.proj .more .ico{transition:transform .25s var(--ease)}
+.proj:hover .more .ico{transform:translateX(4px)}
+
+/* consign */
+.consign{padding:0 0 120px}
+.c-box{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:28px;overflow:hidden;background:var(--bg)}
+.c-left{padding:64px 56px;position:relative}
+.c-left h2{font-size:clamp(30px,3.4vw,46px);margin-top:14px}
+.c-left p{color:var(--ink2);margin:18px 0 0;max-width:460px}
+.c-steps{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:16px;counter-reset:s}
+.c-steps li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;counter-increment:s;font-size:15.5px;color:var(--ink2)}
+.c-steps li::before{content:counter(s,decimal-leading-zero);width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font:600 13px/1 var(--display);color:var(--ink)}
+.c-steps b{color:var(--ink);display:block}
+.c-right{background:#fff;margin:14px;border-radius:20px;padding:40px}
+.form h3{font-size:24px;font-weight:600}
+.form .lead{color:var(--mute);margin:6px 0 22px;font-size:15px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.f label,.f .lbl{font-size:14px;font-weight:600}
+.f input,.f select,.f textarea{min-height:50px;border:1.5px solid var(--line2);border-radius:12px;padding:0 14px;font-size:16px;background:#fff;transition:border-color .2s,box-shadow .2s;width:100%}
+.f select{-webkit-appearance:none;appearance:none;padding-right:40px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111827' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 12px center/18px}
+.f textarea{padding:12px 14px;min-height:90px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(17,24,39,.08)}
+.f.err input,.f.err select{border-color:#C0392B}
+.f .msg{display:none;font-size:13px;color:#B42318;font-weight:500}
+.f.err .msg{display:block}
+.chk{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;font-size:13.5px;line-height:1.5;color:var(--ink2);margin-bottom:10px;cursor:pointer}
+.chk input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--ink)}
+.chk.err span{color:#B42318}
+.f-submit{width:100%;margin-top:8px;min-height:54px;font-size:16px}
+.done{display:none;text-align:left;padding:8px 0}
+.done .ok-ic{width:56px;height:56px;border-radius:50%;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center;margin-bottom:16px}
+.done .ok-ic .ico{width:28px;height:28px;stroke-width:2.4}
+.done h3{font-size:24px}
+.done p{color:var(--ink2);margin:8px 0 0}
+.form.sent .form-body{display:none}
+.form.sent .done{display:block;animation:pop .5s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}}
+
+/* drawer */
+.ovl{position:fixed;inset:0;z-index:180;background:rgba(10,14,22,.55);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.ovl.show{opacity:1;visibility:visible;transition:opacity .3s}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:200;width:min(620px,100%);background:#fff;transform:translateX(102%);transition:transform .45s var(--ease),visibility 0s .45s;display:flex;flex-direction:column;visibility:hidden}
+.drawer.open{transform:none;visibility:visible;transition:transform .45s var(--ease)}
+.d-top{display:flex;align-items:center;gap:10px;padding:12px 16px 12px 24px;border-bottom:1px solid var(--line);flex:none}
+.d-top .code{font-size:13px;color:var(--mute);font-weight:600;margin-right:auto}
+.icon-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line2);transition:border-color .2s,background .2s}
+.icon-btn:hover{border-color:var(--ink)}
+.icon-btn[aria-pressed="true"]{color:var(--coral)}
+.icon-btn[aria-pressed="true"] .ico{fill:var(--coral)}
+.d-scroll{overflow:auto;overscroll-behavior:contain;flex:1;-webkit-overflow-scrolling:touch}
+.gal{padding:16px 24px 0}
+.gal-main{position:relative;aspect-ratio:3/2;border-radius:16px;overflow:hidden;background:var(--bg)}
+.gal-main img{width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.gal-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.gal-thumbs button{aspect-ratio:4/3;border-radius:10px;overflow:hidden;opacity:.55;transition:opacity .2s;outline-offset:2px}
+.gal-thumbs button[aria-current="true"]{opacity:1;box-shadow:0 0 0 2px var(--ink)}
+.gal-thumbs img{width:100%;height:100%;object-fit:cover}
+.d-body{padding:24px 24px 40px}
+.d-price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.d-price strong{font:700 36px/1 var(--display);letter-spacing:-.03em}
+.d-price span{color:var(--mute);font-weight:500}
+.d-body h2{font-size:26px;line-height:1.2;margin-top:10px;font-weight:600}
+.d-loc{display:flex;gap:6px;color:var(--mute);margin-top:8px;font-size:15px}
+.d-loc .ico{width:18px;height:18px;margin-top:3px}
+.d-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.d-tags .tag{background:var(--bg)}
+.d-tags .tag.ok{background:var(--ok-soft);color:var(--ok)}
+.d-sec{margin-top:30px}
+.d-sec>h3{font:600 14px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.spec-t{width:100%;border-collapse:collapse;font-size:15px}
+.spec-t th,.spec-t td{text-align:left;padding:11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.spec-t th{color:var(--mute);font-weight:500;width:44%}
+.spec-t td{font-weight:600}
+.hl{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.hl li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px;color:var(--ink2)}
+.hl .ico{color:var(--ok);width:20px;height:20px;margin-top:2px}
+.cmpbar{background:var(--bg);border-radius:16px;padding:18px}
+.cmpbar .lab{display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--ink2)}
+.cmpbar .lab b{color:var(--ink)}
+.cmpbar .trk{position:relative;height:8px;border-radius:8px;background:linear-gradient(90deg,#CFE8DC,#F3E7C9,#F6CFC4);margin:22px 0 10px}
+.cmpbar .mk{position:absolute;top:50%;width:18px;height:18px;border-radius:50%;background:var(--ink);border:3px solid #fff;transform:translate(-50%,-50%);box-shadow:0 2px 6px rgba(0,0,0,.3);animation:mkin .7s .45s var(--ease) backwards}
+@keyframes mkin{from{transform:translate(-50%,-50%) scale(0)}}
+.cmpbar .avg{position:absolute;top:-8px;bottom:-8px;width:2px;background:var(--ink2);transform:translateX(-1px)}
+.cmpbar .verdict{font-size:15px;font-weight:600;margin-top:12px}
+.loan{background:var(--ink);color:#fff;border-radius:16px;padding:22px}
+.loan .res{display:flex;justify-content:space-between;align-items:end;gap:10px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.15)}
+.loan .res small{display:block;font-size:13px;color:rgba(255,255,255,.65)}
+.loan .res b{font:700 30px/1.1 var(--display)}
+.loan .res .sub{text-align:right;font-size:13.5px;color:rgba(255,255,255,.75)}
+.lrow{margin-top:16px}
+.lrow .lab{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px;color:rgba(255,255,255,.8)}
+.lrow .lab b{color:#fff}
+.lrow input[type=range]{width:100%;accent-color:var(--coral);height:28px}
+.loan .note{font-size:12.5px;color:rgba(255,255,255,.55);margin:14px 0 0}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.slot{position:relative}
+.slot input{position:absolute;opacity:0;pointer-events:none}
+.slot span{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:56px;border:1.5px solid var(--line2);border-radius:12px;font-weight:600;font-size:15px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.slot span small{font-weight:500;font-size:12px;color:var(--mute)}
+.slot input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.slot input:checked+span small{color:rgba(255,255,255,.7)}
+.slot input:focus-visible+span{outline:3px solid var(--coral);outline-offset:2px}
+
+/* mobile filter sheet bits */
+.f-foot{display:none}
+.sheet-ovl{display:none}
+
+/* footer */
+.ftr{background:#0B0F19;color:rgba(255,255,255,.75);padding:80px 0 40px;font-size:15px}
+.ftr-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px}
+.ftr .logo{color:#fff}
+.ftr .logo .lg-bg{fill:#fff}.ftr .logo .lg-house{stroke:#0B0F19}
+.ftr p{margin:16px 0 0;max-width:340px}
+.ftr h4{margin:0 0 14px;color:#fff;font:600 14px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase}
+.ftr ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.ftr a{text-decoration:none}
+.ftr a:hover{color:#fff}
+.ftr-bot{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;color:rgba(255,255,255,.55)}
+.ftr-bot .sample{max-width:720px}
+
+/* badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(17,24,39,.94);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.5);transition:transform .25s,background .2s,opacity .25s}
+.kt-badge:hover{transform:translateY(-2px);background:#000}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#3ddc84;flex:none;box-shadow:0 0 0 3px rgba(61,220,132,.25)}
+.kt-badge b{color:#FFB4A3;font-weight:600}
+
+/* responsive */
+@media (max-width:1240px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proof{display:none}
+  .a-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1024px){
+  .wrap{padding:0 24px}
+  .nav{display:none}
+  .menu-btn{display:grid}
+  .saved-btn .txt{display:none}
+  .why{padding:90px 0}
+  .why-head{grid-template-columns:1fr;gap:20px}
+  .cmp-row{grid-template-columns:44px 1fr 56px 1fr;gap:16px}
+  .cmp-arr{width:44px;height:44px}
+  .layout{grid-template-columns:1fr}
+  .f-open{display:inline-flex}
+  .filters{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:210;max-height:86svh;background:#fff;border-radius:22px 22px 0 0;padding:0 20px;transform:translateY(105%);transition:transform .4s var(--ease),visibility 0s .4s;visibility:hidden;overflow:auto}
+  .filters.open{transform:none;visibility:visible;transition:transform .4s var(--ease)}
+  .f-head{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:2;padding:18px 0 14px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .f-head::before{content:"";position:absolute;left:50%;top:7px;width:40px;height:4px;border-radius:4px;background:var(--line2);transform:translateX(-50%)}
+  .f-head h3{font-size:22px}
+  .f-foot{display:flex;gap:12px;position:sticky;bottom:0;background:#fff;padding:14px 0 calc(14px + env(safe-area-inset-bottom));border-top:1px solid var(--line);margin-top:10px}
+  .f-foot .btn{flex:1}
+  .f-reset{display:none}
+  .sheet-ovl{display:block;position:fixed;inset:0;z-index:205;background:rgba(10,14,22,.5);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+  .sheet-ovl.show{opacity:1;visibility:visible;transition:opacity .3s}
+  .areas-head,.p-head,.m-head{flex-direction:column;align-items:flex-start;gap:18px}
+  .p-grid{grid-template-columns:1fr 1fr}
+  .proj:first-child{grid-column:1/-1;grid-row:auto;min-height:440px}
+  .c-box{grid-template-columns:1fr}
+  .c-left{padding:48px 32px 24px}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px) and (min-width:761px){
+  .srow{grid-template-columns:1fr 1fr}
+  .fld-q,.sbtn{grid-column:1/-1}
+  .srow .fld:nth-child(2)::before{display:none}
+  .fld-q{border-bottom:1px solid var(--line);border-radius:14px 14px 0 0}
+}
+@media (max-width:760px){
+  :root{--hdr:64px}
+  .wrap{padding:0 18px}
+  .hdr-r .btn{display:none}
+  .hero{min-height:auto;padding:calc(var(--hdr) + 44px) 0 40px}
+  .hero h1{font-size:clamp(36px,10.4vw,56px)}
+  .br-d{display:none}
+  .hero-sub{font-size:16.5px}
+  .search{border-radius:20px;margin-top:28px}
+  .srow{grid-template-columns:1fr}
+  .fld{padding:12px 14px}
+  .fld+.fld::before{left:14px;right:14px;top:0;bottom:auto;width:auto;height:1px}
+  .sbtn{margin:6px 0 2px;width:100%;min-height:54px}
+  .tabs{padding:4px 6px 0}
+  .quick{margin-top:16px}
+  .quick span{width:100%}
+  .why,.market,.areas,.projects{padding:76px 0}
+  .consign{padding:0 0 76px}
+  .cmp-row{grid-template-columns:1fr;gap:14px;padding:28px 0}
+  .cmp-n{display:none}
+  .cmp-arr{justify-self:start;transform:rotate(90deg);width:40px;height:40px}
+  .cmp-row.in .cmp-arr{transform:rotate(90deg)}
+  .grid{grid-template-columns:1fr;gap:30px}
+  .toolbar{gap:8px;position:relative;top:auto}
+  .count{width:100%;font-size:17px}
+  .views .lbl,#favOnly span{display:none}
+  .sort{order:10;flex:1 1 100%;min-width:0}
+  .f-open{flex:1;justify-content:center}
+  .a-grid{grid-template-columns:1fr}
+  .a-tile{min-height:170px}
+  .p-grid{grid-template-columns:1fr}
+  .proj,.proj:first-child{min-height:380px}
+  .proj-b{padding:22px}
+  .c-left{padding:40px 22px 16px}
+  .c-right{margin:8px;padding:26px 18px}
+  .frow{grid-template-columns:1fr;gap:0}
+  .ftr-grid{grid-template-columns:1fr}
+  .d-body{padding:22px 18px 40px}
+  .gal{padding:14px 18px 0}
+  .d-top{padding:10px 12px 10px 18px}
+  .d-price strong{font-size:32px}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+  .split .w>span{transform:none}
+  .search,.quick,.proof{opacity:1;transform:none}
+  .hero h1 em::after{transform:scaleX(1)}
+  .a-grid .bar i{transform:scaleX(var(--v))}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-9.2-9.1C1.6 7.6 3.8 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.2 0 5.4 3.1 4.2 6.4C19.5 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V7M3 14h18v4M21 14v-2.5A2.5 2.5 0 0 0 18.5 9H11v5"/><circle cx="7" cy="11" r="1.6"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2zM6 12V6a2 2 0 0 1 3.7-1M7 19l-1 2M17 19l1 2"/></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9h3M4 14h2M9 4v3M14 4v2"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="m9 4-5 2v14l5-2 6 2 5-2V4l-5 2-6-2zM9 4v14M15 6v14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16l3.5-4 3 2.5L20 8"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Khoảng Sống – về đầu trang">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect class="lg-bg" width="64" height="64" rx="16"/><path class="lg-house" d="M16 46V27l16-11 16 11v19" fill="none" stroke-width="5" stroke-linejoin="round"/><rect x="27" y="33" width="10" height="13" rx="2" fill="#E4573D"/></svg>
+      Khoảng&nbsp;Sống
+    </a>
+    <nav class="nav" aria-label="Chính">
+      <a href="#tim-nha" data-mode="ban">Mua nhà</a>
+      <a href="#tim-nha" data-mode="thue">Thuê nhà</a>
+      <a href="#du-an">Dự án</a>
+      <a href="#khu-vuc">Khu vực</a>
+      <a href="#ky-gui">Ký gửi</a>
+    </nav>
+    <div class="hdr-r">
+      <button class="saved-btn" id="savedBtn" type="button" aria-label="Xem tin đã lưu"><svg class="ico"><use href="#i-heart"/></svg><span class="txt">Đã&nbsp;lưu</span><span class="cnt" id="savedCnt" data-z="1">0</span></button>
+      <a class="btn btn-cta" href="#ky-gui">Ký gửi nhà</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu điện thoại">
+  <a href="#tim-nha" data-mode="ban">Mua nhà</a>
+  <a href="#tim-nha" data-mode="thue">Thuê nhà</a>
+  <a href="#du-an">Dự án đang mở bán</a>
+  <a href="#khu-vuc">Khám phá khu vực</a>
+  <a href="#ky-gui">Ký gửi nhà</a>
+  <a class="btn btn-cta" href="#ky-gui">Đăng ký ký gửi</a>
+</nav>
+
+<main id="top">
+<section class="hero" id="hero" aria-labelledby="h1">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1521019795854-14e15f600980?auto=format&fit=crop&w=2000&q=80" alt="Toà nhà cao tầng bên sông Sài Gòn, TP.HCM" fetchpriority="high">
+  <div class="proof" aria-hidden="true">
+    <span class="stamp">Đã xác&nbsp;minh tại&nbsp;chỗ</span>
+    <img src="https://images.unsplash.com/photo-1741764014072-68953e93cd48?auto=format&fit=crop&w=700&q=80" alt="">
+    <div class="proof-b">
+      <div class="proof-row"><b>8,6&nbsp;tỷ</b><small>113&nbsp;tr/m²</small></div>
+      <ul>
+        <li><svg class="ico"><use href="#i-camera"/></svg>Ảnh chụp tại căn ngày 08/11/2026</li>
+        <li><svg class="ico"><use href="#i-chart"/></svg>Giá/m² thấp hơn 7% so với khu&nbsp;vực</li>
+        <li><svg class="ico"><use href="#i-doc"/></svg>Sổ hồng riêng, đã đối chiếu bản gốc</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <span class="hero-tag"><i></i>Sàn nhà đất TP.HCM · Tin xác minh tại&nbsp;chỗ</span>
+    <h1 id="h1" class="split">Tìm nhà bằng <em>thông tin thật,</em><br class="br-d"> không phải bằng phỏng&nbsp;đoán.</h1>
+    <p class="hero-sub">Mỗi tin trên Khoảng Sống có ảnh chụp tại căn, giá/m² đặt cạnh mặt bằng khu vực và giấy tờ pháp lý ghi rõ. Bạn chỉ cần đi xem những căn đáng&nbsp;xem.</p>
+
+    <form class="search" id="heroSearch" role="search" aria-label="Tìm bất động sản">
+      <div class="tabs" role="tablist" aria-label="Loại giao dịch">
+        <button class="tab" type="button" role="tab" aria-selected="true" data-tab="ban">Mua</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="thue">Thuê</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="du-an">Dự án</button>
+        <span class="tab-ind" id="tabInd"></span>
+      </div>
+      <div class="srow">
+        <label class="fld fld-q"><svg class="ico"><use href="#i-search"/></svg><div><span>Khu vực, dự án, tên đường</span><input id="hq" type="search" placeholder="Ví dụ: An Khánh, Thảo Điền" autocomplete="off"></div></label>
+        <label class="fld"><span>Loại nhà</span>
+          <select id="htype"><option value="">Tất cả</option><option value="can-ho">Căn hộ</option><option value="nha-pho">Nhà phố</option><option value="biet-thu">Biệt thự</option><option value="shophouse">Shophouse</option></select>
+        </label>
+        <label class="fld"><span id="hpriceLbl">Khoảng giá</span>
+          <select id="hprice"></select>
+        </label>
+        <button class="btn btn-cta sbtn" type="submit"><svg class="ico"><use href="#i-search"/></svg>Tìm&nbsp;nhà</button>
+      </div>
+    </form>
+    <div class="quick" aria-label="Tìm nhanh">
+      <span>Tìm nhanh:</span>
+      <button type="button" data-quick="1">Căn hộ 2PN dưới 9&nbsp;tỷ</button>
+      <button type="button" data-quick="2">Nhà phố có sổ hồng</button>
+      <button type="button" data-quick="3">Thuê căn hộ An&nbsp;Khánh</button>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="vi-sao" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="why-head">
+      <div class="rv"><span class="eyebrow">Vì sao có Khoảng Sống</span><h2 id="why-h">Lướt cả trăm tin, vẫn chưa dám đi xem căn&nbsp;nào?</h2></div>
+      <p class="rv" data-d="1">Người mua nhà ở TP.HCM thường mất nhiều tuần chỉ để lọc tin. Chúng tôi làm phần việc đó trước khi tin được đăng, để mỗi buổi xem nhà của bạn đều có&nbsp;ích.</p>
+    </div>
+    <div class="cmp">
+      <div class="cmp-row rv">
+        <span class="cmp-n">01</span>
+        <div class="cmp-pain"><h3>Một căn, mười tin, mười&nbsp;mức&nbsp;giá</h3><p>Ảnh đẹp nhưng không phải căn đang bán. Gọi điện mới biết căn đã giao dịch từ tháng trước.</p></div>
+        <span class="cmp-arr"><svg class="ico"><use href="#i-arrow"/></svg></span>
+        <div class="cmp-fix"><span class="badge"><svg class="ico"><use href="#i-camera"/></svg></span><div><h3>Mỗi căn một tin, ảnh chụp tại&nbsp;chỗ</h3><p>Chuyên viên đến tận căn, chụp ảnh, ghi ngày xác minh. Tin trùng địa chỉ được gộp làm một.</p></div></div>
+      </div>
+      <div class="cmp-row rv">
+        <span class="cmp-n">02</span>
+        <div class="cmp-pain"><h3>Không biết giá đang cao hay&nbsp;thấp</h3><p>Không có mặt bằng giá khu vực để so, khó biết nên trả giá từ đâu.</p></div>
+        <span class="cmp-arr"><svg class="ico"><use href="#i-arrow"/></svg></span>
+        <div class="cmp-fix"><span class="badge"><svg class="ico"><use href="#i-chart"/></svg></span><div><h3>Giá/m² đặt cạnh trung bình khu&nbsp;vực</h3><p>Mỗi tin cho thấy căn đó cao hay thấp hơn các tin đang bán cùng phường, tính bằng phần trăm.</p></div></div>
+      </div>
+      <div class="cmp-row rv">
+        <span class="cmp-n">03</span>
+        <div class="cmp-pain"><h3>Pháp lý chỉ ghi “sổ đẹp”</h3><p>Sổ hồng riêng, hợp đồng mua bán hay đang chờ sổ thường chỉ rõ khi đã đặt cọc.</p></div>
+        <span class="cmp-arr"><svg class="ico"><use href="#i-arrow"/></svg></span>
+        <div class="cmp-fix"><span class="badge"><svg class="ico"><use href="#i-doc"/></svg></span><div><h3>Ghi rõ loại giấy tờ ngay trên&nbsp;tin</h3><p>Bộ lọc pháp lý giúp bạn bỏ qua những căn chưa đủ giấy tờ ngay từ bước tìm kiếm.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="market" id="tim-nha" aria-labelledby="m-h">
+  <div class="wrap">
+    <div class="m-head">
+      <div class="rv"><span class="eyebrow">Tin đang đăng</span><h2 id="m-h">Nhà đang chờ bạn đến&nbsp;xem</h2></div>
+      <div class="rv" data-d="1">
+        <div class="modes" role="group" aria-label="Loại giao dịch">
+          <span class="pill" id="modePill"></span>
+          <button type="button" data-mode="ban" aria-pressed="true">Mua bán</button>
+          <button type="button" data-mode="thue" aria-pressed="false">Cho thuê</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside class="filters" id="filters" aria-label="Bộ lọc">
+        <div class="f-head"><h3>Bộ lọc</h3><button class="icon-btn" type="button" id="fClose" aria-label="Đóng bộ lọc"><svg class="ico"><use href="#i-close"/></svg></button></div>
+        <fieldset class="f-grp"><legend>Loại bất động sản</legend><div class="chips" id="fType"></div></fieldset>
+        <div class="f-grp"><h3><label for="fWard">Khu vực</label></h3><select class="sel" id="fWard"></select></div>
+        <div class="f-grp">
+          <h3 id="priceH">Khoảng giá</h3>
+          <div class="range-val"><span id="pMinL"></span><span id="pMaxL"></span></div>
+          <div class="range" id="pRange">
+            <span class="track"></span><span class="fill" id="pFill"></span>
+            <input type="range" id="pMin" aria-label="Giá thấp nhất">
+            <input type="range" id="pMax" aria-label="Giá cao nhất">
+          </div>
+        </div>
+        <fieldset class="f-grp"><legend>Diện tích</legend><div class="chips" id="fArea"></div></fieldset>
+        <fieldset class="f-grp"><legend>Phòng ngủ</legend><div class="seg" id="fBeds"></div></fieldset>
+        <fieldset class="f-grp"><legend>Pháp lý</legend><div class="chips" id="fLegal"></div></fieldset>
+        <fieldset class="f-grp"><legend>Hướng nhà</legend><div class="chips" id="fDir"></div></fieldset>
+        <button class="f-reset" type="button" id="fReset">Xoá tất cả bộ lọc</button>
+        <div class="f-foot"><button class="btn btn-ghost" type="button" id="fReset2">Xoá lọc</button><button class="btn btn-ink" type="button" id="fApply">Xem kết quả</button></div>
+      </aside>
+
+      <div class="results">
+        <div class="toolbar">
+          <p class="count" id="count" aria-live="polite"></p>
+          <button class="tb-btn f-open" type="button" id="fOpen"><svg class="ico"><use href="#i-filter"/></svg>Bộ lọc <span class="n" id="fN" hidden>0</span></button>
+          <button class="tb-btn" type="button" id="favOnly" aria-pressed="false" aria-label="Chỉ xem tin đã lưu"><svg class="ico"><use href="#i-heart"/></svg><span>Đã lưu</span></button>
+          <label class="sr" for="sort">Sắp xếp</label>
+          <select class="sort" id="sort">
+            <option value="new">Mới đăng</option>
+            <option value="pa">Giá tăng dần</option>
+            <option value="pd">Giá giảm dần</option>
+            <option value="ppm">Giá/m² thấp trước</option>
+            <option value="area">Diện tích lớn trước</option>
+          </select>
+          <div class="views" role="group" aria-label="Cách xem">
+            <button type="button" data-view="grid" aria-pressed="true"><svg class="ico"><use href="#i-grid"/></svg><span class="lbl">Lưới</span></button>
+            <button type="button" data-view="map" aria-pressed="false"><svg class="ico"><use href="#i-map"/></svg><span class="lbl">Bản đồ</span></button>
+          </div>
+        </div>
+        <div class="active" id="active"></div>
+        <div class="grid" id="grid"></div>
+        <div class="mapbox" id="mapbox" hidden>
+          <span class="map-hint" id="mapHint">Chạm vào giá để xem căn</span>
+          <div class="map-scroll"><div class="map-canvas" id="mapCanvas">
+            <svg viewBox="0 0 1000 700" aria-hidden="true">
+              <rect width="1000" height="700" fill="#EDE8E0"/>
+              <g fill="#E3DDD3"><path d="M60 80h180v120H60zM260 60h150v90H260zM90 230h140v160H90zM250 420h170v120H250zM700 160h160v120H700zM760 420h180v110H760zM560 560h160v90H560zM120 520h110v120H120z" opacity=".7"/></g>
+              <g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".95"><path d="M0 330 C200 320 300 360 430 380"/><path d="M250 0 C260 200 300 330 330 700"/><path d="M380 390 C520 300 700 200 1000 120"/><path d="M420 470 C560 560 700 600 1000 640"/><path d="M0 560 C150 520 300 500 430 470"/></g>
+              <g fill="none" stroke="#fff" stroke-width="4" opacity=".8"><path d="M120 0 L180 700"/><path d="M0 200 C300 210 450 240 560 200"/><path d="M640 300 L900 700"/><path d="M600 0 C650 120 760 160 1000 260"/></g>
+              <path id="river" d="M640 -20 C600 80 560 120 560 200 C560 270 520 300 470 335 C420 370 430 440 505 455 C585 470 640 430 705 470 C770 510 830 560 1020 600" fill="none" stroke="#B9D3DA" stroke-width="40" stroke-linecap="round"/>
+              <path d="M470 335 C380 360 330 420 300 520 C280 590 300 650 320 720" fill="none" stroke="#B9D3DA" stroke-width="16" stroke-linecap="round"/>
+              <text font-family="Inter,sans-serif" font-size="15" font-weight="600" fill="#5D8792" letter-spacing="2"><textPath href="#river" startOffset="76%">SÔNG SÀI GÒN</textPath></text>
+              <path d="M380 395 C480 360 560 330 640 300 C740 260 840 200 980 120" fill="none" stroke="#E4573D" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round" opacity=".85"/>
+              <g font-family="Inter,sans-serif" font-size="13" font-weight="600" fill="#C9432A"><text x="840" y="168" transform="rotate(-24 840 168)">METRO SỐ 1</text></g>
+              <g font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#8A8378" letter-spacing="1.5" id="wardLabels"></g>
+            </svg>
+            <div id="pins"></div>
+          </div></div>
+          <div class="map-card" id="mapCard" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="khu-vuc" aria-labelledby="a-h">
+  <div class="wrap">
+    <div class="areas-head">
+      <div class="rv"><span class="eyebrow">Khám phá theo khu vực</span><h2 id="a-h">Mỗi phường một mặt bằng giá&nbsp;riêng</h2></div>
+      <p class="rv" data-d="1">Tên phường theo địa giới mới từ 01/07/2025, kèm tên khu vực cũ để bạn dễ hình dung. Chạm một khu vực để lọc tin ngay.</p>
+    </div>
+    <div class="a-grid rv" id="aGrid"></div>
+    <p class="a-note">Giá/m² trung bình tính từ các tin đang bán trên trang này (dữ liệu mẫu).</p>
+  </div>
+</section>
+
+<section class="projects" id="du-an" aria-labelledby="p-h">
+  <div class="wrap">
+    <div class="p-head">
+      <div class="rv"><span class="eyebrow">Dự án</span><h2 id="p-h">Dự án đang mở bán và sắp ra&nbsp;mắt</h2></div>
+      <a class="btn btn-ghost rv" data-d="1" href="#ky-gui">Nhận thông tin dự án mới<svg class="ico"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="p-grid">
+      <a class="proj rv" href="../bat-dong-san-1/">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1786883245592-4142cdaaa714?auto=format&fit=crop&w=1400&q=80" alt="Hai toà căn hộ cao tầng mặt kính">
+        <div class="proj-b"><span class="st">Đang nhận đặt chỗ</span><h3>Lam Giang Residences</h3><p>Căn hộ hạng sang ven sông, Phường An Khánh (Thảo Điền cũ). 2PN, 3PN, Duplex, Penthouse.</p><span class="more">Xem dự án<svg class="ico"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="proj rv" data-d="1" href="../bat-dong-san-5/">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1759472018220-d6e258796fce?auto=format&fit=crop&w=1000&q=80" alt="Các toà căn hộ lúc hoàng hôn">
+        <div class="proj-b"><span class="st">Ra mắt 06/12/2026</span><h3>Thiên Thanh Garden City</h3><p>Khu đô thị mới, nhận bảng giá và mặt bằng trước ngày&nbsp;ra&nbsp;mắt.</p><span class="more">Xem dự án<svg class="ico"><use href="#i-arrow"/></svg></span></div>
+      </a>
+      <a class="proj rv" data-d="2" href="../bat-dong-san-2/">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1000&q=80" alt="Biệt thự trắng có hồ bơi">
+        <div class="proj-b"><span class="st">Biệt thự biển</span><h3>Thềm Cát Villas · Hồ&nbsp;Tràm</h3><p>Biệt thự nghỉ dưỡng sát biển, tham quan theo lịch hẹn.</p><span class="more">Xem dự án<svg class="ico"><use href="#i-arrow"/></svg></span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="consign" id="ky-gui" aria-labelledby="c-h">
+  <div class="wrap">
+    <div class="c-box rv">
+      <div class="c-left">
+        <span class="eyebrow">Dành cho chủ nhà</span>
+        <h2 id="c-h">Có nhà cần bán hoặc cho thuê?</h2>
+        <p>Gửi thông tin cơ bản, chuyên viên khu vực sẽ gọi lại để hẹn lịch đến xem và chụp ảnh căn nhà.</p>
+        <ol class="c-steps">
+          <li><div><b>Gửi thông tin</b>Họ tên, số điện thoại và loại nhà.</div></li>
+          <li><div><b>Xác minh tại chỗ</b>Chụp ảnh, đo diện tích, đối chiếu giấy tờ gốc.</div></li>
+          <li><div><b>Đăng tin và dẫn khách</b>Tin có nhãn “Đã xác minh”, bạn duyệt từng lịch xem.</div></li>
+        </ol>
+      </div>
+      <div class="c-right">
+        <form class="form" id="consignForm" novalidate>
+          <div class="form-body">
+            <h3>Đăng ký ký gửi</h3>
+            <p class="lead">Chưa mất phí khi đăng ký. Phí dịch vụ được báo rõ trước khi đăng tin.</p>
+            <div class="frow">
+              <div class="f"><label for="cName">Họ và tên</label><input id="cName" name="name" autocomplete="name" required><span class="msg">Vui lòng nhập họ tên.</span></div>
+              <div class="f"><label for="cPhone">Số điện thoại</label><input id="cPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required><span class="msg">Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.</span></div>
+            </div>
+            <div class="frow">
+              <div class="f"><label for="cType">Loại nhà</label><select id="cType" required><option value="">Chọn loại nhà</option><option>Căn hộ</option><option>Nhà phố</option><option>Biệt thự</option><option>Shophouse</option></select><span class="msg">Vui lòng chọn loại nhà.</span></div>
+              <div class="f"><label for="cNeed">Nhu cầu</label><select id="cNeed"><option>Cần bán</option><option>Cho thuê</option></select></div>
+            </div>
+            <label class="chk" data-req><input type="checkbox" required><span>Tôi đồng ý để Khoảng Sống dùng họ tên và số điện thoại này để liên hệ về việc ký gửi nhà. (Bắt buộc)</span></label>
+            <label class="chk"><input type="checkbox"><span>Nhận tin về dự án mới và báo cáo giá khu vực qua Zalo. (Không bắt buộc)</span></label>
+            <button class="btn btn-cta f-submit" type="submit">Gửi thông tin ký gửi</button>
+          </div>
+          <div class="done" role="status"><span class="ok-ic"><svg class="ico"><use href="#i-check"/></svg></span><h3>Đã nhận thông tin</h3><p id="cDone">Chuyên viên khu vực sẽ gọi lại để hẹn lịch xem nhà.</p></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo" href="#top"><svg viewBox="0 0 64 64" aria-hidden="true"><rect class="lg-bg" width="64" height="64" rx="16"/><path class="lg-house" d="M16 46V27l16-11 16 11v19" fill="none" stroke-width="5" stroke-linejoin="round"/><rect x="27" y="33" width="10" height="13" rx="2" fill="#E4573D"/></svg>Khoảng&nbsp;Sống</a>
+        <p>Sàn giao dịch bất động sản TP.HCM với tin đăng xác minh tại chỗ. Hotline 1900&nbsp;0000 (mẫu) · Thứ Hai đến Chủ Nhật, 8:00–20:00.</p>
+      </div>
+      <div><h4>Mua bán</h4><ul><li><a href="#tim-nha" data-mode="ban">Căn hộ</a></li><li><a href="#tim-nha" data-mode="ban">Nhà phố</a></li><li><a href="#tim-nha" data-mode="ban">Biệt thự</a></li><li><a href="#du-an">Dự án mới</a></li></ul></div>
+      <div><h4>Cho thuê</h4><ul><li><a href="#tim-nha" data-mode="thue">Căn hộ cho thuê</a></li><li><a href="#tim-nha" data-mode="thue">Nhà nguyên căn</a></li><li><a href="#tim-nha" data-mode="thue">Mặt bằng kinh doanh</a></li></ul></div>
+      <div><h4>Hỗ trợ</h4><ul><li><a href="#ky-gui">Ký gửi nhà</a></li><li><a href="#vi-sao">Cách xác minh tin</a></li><li><a href="#top">Chính sách bảo vệ dữ liệu cá nhân</a></li><li><a href="#top">Quy chế hoạt động</a></li></ul></div>
+    </div>
+    <div class="ftr-bot">
+      <span class="sample">Nội dung mẫu: tên dự án, giá, diện tích, chính sách và hình ảnh chỉ để minh hoạ giao diện. Tên phường, lãi suất, giá/m² khu vực là dữ liệu giả lập. Ảnh: Unsplash.</span>
+      <span>© 2026 Khoảng Sống (thương hiệu mẫu)</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sheet-ovl" id="sheetOvl"></div>
+<div class="ovl" id="ovl"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="d-top">
+    <span class="code" id="dCode"></span>
+    <button class="icon-btn" type="button" id="dFav" aria-pressed="false" aria-label="Lưu tin"><svg class="ico"><use href="#i-heart"/></svg></button>
+    <button class="icon-btn" type="button" id="dClose" aria-label="Đóng chi tiết"><svg class="ico"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="d-scroll" id="dScroll"></div>
+</aside>
+
+<a class="kt-badge" id="ktBadge" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var NB=' ';
+var U=function(id,w){return 'https://images.unsplash.com/photo-'+id+'?auto=format&fit=crop&w='+(w||900)+'&q=80'};
+var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- data (mẫu) ---------- */
+var WARDS={
+ 'an-khanh':{n:'Phường An Khánh',o:'Thảo Điền, Thủ Thiêm cũ',x:63,y:52},
+ 'sai-gon':{n:'Phường Sài Gòn',o:'Quận 1 cũ',x:33,y:58},
+ 'thanh-my-tay':{n:'Phường Thạnh Mỹ Tây',o:'Bình Thạnh cũ',x:45,y:34},
+ 'phu-nhuan':{n:'Phường Phú Nhuận',o:'Phú Nhuận cũ',x:23,y:40},
+ 'hiep-binh':{n:'Phường Hiệp Bình',o:'Thủ Đức cũ',x:74,y:19},
+ 'binh-trung':{n:'Phường Bình Trưng',o:'Quận 2 cũ',x:84,y:58},
+ 'tan-my':{n:'Phường Tân Mỹ',o:'Phú Mỹ Hưng, Quận 7 cũ',x:42,y:80}
+};
+var TYPES={'can-ho':'Căn hộ','nha-pho':'Nhà phố','biet-thu':'Biệt thự','shophouse':'Shophouse'};
+var LEGAL={'so-hong':'Sổ hồng riêng','hdmb':'Hợp đồng mua bán','cho-so':'Đang chờ sổ'};
+var DIRS=['Đông','Tây','Nam','Bắc','Đông Nam','Đông Bắc','Tây Nam','Tây Bắc'];
+var EXTRA=['1765862835260-47843a7bba45','1588854337236-6889d631faa8','1649083048428-3d8ed23a3ce0','1699852676054-a55370ac4c7a'];
+// m: ban|thue ; p: tỷ (ban) hoặc triệu/tháng (thue)
+var L=[
+ {id:1024,m:'ban',t:'can-ho',ti:'Căn hộ 2PN view sông, nội thất hoàn thiện',w:'an-khanh',p:8.6,a:76,b:2,ba:2,d:'Đông Nam',lg:'so-hong',f:'Nội thất cao cấp',fl:'Tầng 18/32',img:'1741764014072-68953e93cd48',v:1,dt:'09/11/2026',hl:['Ban công nhìn sông Sài Gòn, đón gió hướng Đông Nam','Hồ bơi, phòng gym và sân chơi trẻ em trong khu','Đi bộ khoảng 6 phút tới ga Metro số 1']},
+ {id:1031,m:'ban',t:'can-ho',ti:'Căn góc 3PN, hai mặt thoáng',w:'tan-my',p:11.2,a:118,b:3,ba:2,d:'Nam',lg:'so-hong',f:'Nội thất cơ bản',fl:'Tầng 12/25',img:'1758448511322-8bfc73daf606',v:1,dt:'07/11/2026',hl:['Căn góc, phòng khách và 2 phòng ngủ có cửa sổ','Gần trường học, bệnh viện quốc tế trong bán kính 2 km','Phí quản lý 18.000đ/m²/tháng (mẫu)']},
+ {id:1036,m:'ban',t:'nha-pho',ti:'Nhà phố 4 tầng hẻm xe hơi, gần công viên',w:'phu-nhuan',p:18.5,a:72,b:4,ba:5,d:'Tây Bắc',lg:'so-hong',f:'Hoàn thiện cơ bản',fl:'1 trệt, 3 lầu, sân thượng',img:'1722421492323-eaf9c401befe',v:1,dt:'08/11/2026',hl:['Hẻm 6 m, xe hơi vào tận nhà','Kết cấu bê tông cốt thép, hoàn công đầy đủ','Phù hợp vừa ở vừa làm văn phòng']},
+ {id:1042,m:'ban',t:'biet-thu',ti:'Biệt thự có hồ bơi riêng, sân vườn rộng',w:'an-khanh',p:42,a:320,b:5,ba:6,d:'Đông',lg:'so-hong',f:'Nội thất cao cấp',fl:'1 trệt, 2 lầu',img:'1580587771525-78b9dba3b914',v:1,dt:'05/11/2026',hl:['Hồ bơi 4 x 10 m, sân vườn quanh nhà','Khu biệt thự có bảo vệ 24/7','Cách trung tâm Phường Sài Gòn khoảng 15 phút lái xe']},
+ {id:1047,m:'thue',t:'can-ho',ti:'Cho thuê căn hộ 2PN đầy đủ nội thất',w:'thanh-my-tay',p:24,a:80,b:2,ba:2,d:'Đông Bắc',lg:'hdmb',f:'Đầy đủ nội thất',fl:'Tầng 21/40',img:'1768144092684-c1a5dd6c7aad',v:1,dt:'10/11/2026',hl:['Dọn vào ở ngay, có máy giặt, tủ lạnh, rèm','Cọc 2 tháng, thanh toán 3 tháng/lần','Ngay khu trung tâm thương mại']},
+ {id:1050,m:'ban',t:'can-ho',ti:'Căn hộ 1PN+ cho người trẻ, gần ga Metro',w:'binh-trung',p:3.9,a:52,b:1,ba:1,d:'Tây Nam',lg:'hdmb',f:'Nội thất cơ bản',fl:'Tầng 9/28',img:'1713832139688-79676097edde',v:0,dt:'09/11/2026',hl:['Phòng đa năng có thể làm phòng làm việc','Ngân hàng hỗ trợ vay đến 70% giá trị (mẫu)','Bàn giao năm 2024, đang làm sổ hồng']},
+ {id:1055,m:'ban',t:'biet-thu',ti:'Biệt thự song lập, hồ bơi và bãi cỏ',w:'binh-trung',p:26.5,a:240,b:4,ba:5,d:'Đông Nam',lg:'so-hong',f:'Hoàn thiện cơ bản',fl:'1 trệt, 2 lầu',img:'1706808849780-7a04fbac83ef',v:1,dt:'04/11/2026',hl:['Khu compound khép kín, cổng an ninh','Bãi cỏ rộng phía trước, hồ bơi sau nhà','Gần trường quốc tế và siêu thị']},
+ {id:1058,m:'thue',t:'nha-pho',ti:'Cho thuê nhà nguyên căn làm văn phòng',w:'sai-gon',p:95,a:120,b:5,ba:5,d:'Nam',lg:'so-hong',f:'Trống, có thang máy',fl:'1 trệt, 4 lầu',img:'1627141234469-24711efb373c',v:1,dt:'06/11/2026',hl:['Mặt tiền 6 m, có thang máy','Phù hợp văn phòng, showroom, spa','Hợp đồng tối thiểu 2 năm']},
+ {id:1063,m:'ban',t:'can-ho',ti:'Duplex 3PN trần cao, nhìn toàn thành phố',w:'sai-gon',p:32,a:165,b:3,ba:4,d:'Đông Nam',lg:'so-hong',f:'Nội thất cao cấp',fl:'Tầng 35–36/36',img:'1697947656193-a87d460b5fb5',v:1,dt:'03/11/2026',hl:['Phòng khách thông tầng cao 6 m','Thang máy riêng tới sảnh căn','Chỗ đậu xe ô tô cố định']},
+ {id:1066,m:'ban',t:'shophouse',ti:'Shophouse khối đế, mặt tiền đường lớn',w:'tan-my',p:21,a:140,b:2,ba:3,d:'Tây Bắc',lg:'hdmb',f:'Bàn giao thô',fl:'Trệt + lửng',img:'1758937502225-d0a428692413',v:0,dt:'08/11/2026',hl:['Mặt tiền 8 m, đón lượng cư dân của 3 toà','Đang có khách thuê làm quán cà phê (mẫu)','Kinh doanh được ngay khi nhận nhà']},
+ {id:1070,m:'thue',t:'can-ho',ti:'Cho thuê căn hộ 3PN view sông',w:'an-khanh',p:45,a:112,b:3,ba:2,d:'Đông Nam',lg:'so-hong',f:'Đầy đủ nội thất',fl:'Tầng 26/32',img:'1765862835260-47843a7bba45',v:1,dt:'10/11/2026',hl:['Ba phòng ngủ đều có cửa sổ lớn','Có chỗ đậu ô tô','Chủ nhà nhận khách thuê dài hạn từ 1 năm']},
+ {id:1074,m:'ban',t:'nha-pho',ti:'Nhà phố hiện đại 3 tầng, mới xây',w:'hiep-binh',p:9.8,a:85,b:4,ba:4,d:'Nam',lg:'so-hong',f:'Nội thất cơ bản',fl:'1 trệt, 2 lầu',img:'1721815693498-cc28507c0ba2',v:1,dt:'07/11/2026',hl:['Nhà mới hoàn thiện năm 2026','Đường trước nhà 8 m','Gần chợ, trường học các cấp']},
+ {id:1079,m:'ban',t:'can-ho',ti:'Căn hộ 2PN tầng trung, giá tốt khu vực',w:'thanh-my-tay',p:7.4,a:72,b:2,ba:2,d:'Bắc',lg:'so-hong',f:'Nội thất cơ bản',fl:'Tầng 15/40',img:'1759472018220-d6e258796fce',v:0,dt:'02/11/2026',hl:['Hướng Bắc mát, ít nắng chiều','Tiện ích trung tâm thương mại dưới chân toà','Đã có sổ hồng, công chứng ngay']},
+ {id:1083,m:'ban',t:'biet-thu',ti:'Biệt thự ven sông có bến thuyền riêng',w:'hiep-binh',p:58,a:450,b:6,ba:7,d:'Đông',lg:'so-hong',f:'Nội thất cao cấp',fl:'1 trệt, 2 lầu, tầng hầm',img:'1613977257363-707ba9348227',v:1,dt:'01/11/2026',hl:['Mặt sông, có bến thuyền riêng','Tầng hầm để 3 ô tô','Hồ bơi tràn nhìn ra sông']},
+ {id:1086,m:'thue',t:'shophouse',ti:'Cho thuê mặt bằng shophouse góc',w:'thanh-my-tay',p:120,a:160,b:0,ba:2,d:'Đông Bắc',lg:'hdmb',f:'Trống',fl:'Trệt + lửng',img:'1665042246630-f70e8ada1c8e',v:0,dt:'05/11/2026',hl:['Căn góc hai mặt tiền','Phù hợp ngân hàng, chuỗi cà phê, nhà hàng','Có chỗ đậu xe trước cửa']},
+ {id:1090,m:'ban',t:'can-ho',ti:'Căn hộ 2PN+1, bàn giao năm 2025',w:'binh-trung',p:6.1,a:84,b:3,ba:2,d:'Tây Nam',lg:'cho-so',f:'Nội thất cơ bản',fl:'Tầng 7/30',img:'1786883245592-4142cdaaa714',v:0,dt:'06/11/2026',hl:['Phòng +1 dùng làm phòng ngủ nhỏ hoặc phòng làm việc','Chủ đầu tư đang làm sổ hồng cho cư dân','Thanh toán theo tiến độ công chứng']},
+ {id:1094,m:'ban',t:'biet-thu',ti:'Biệt thự đơn lập, ba mặt thoáng',w:'tan-my',p:35,a:300,b:5,ba:6,d:'Đông Nam',lg:'so-hong',f:'Nội thất cao cấp',fl:'1 trệt, 2 lầu',img:'1600596542815-ffad4c1539a9',v:1,dt:'09/11/2026',hl:['Ba mặt thoáng, sân trước và sân sau','Khu dân cư hiện hữu, an ninh tốt','Gần hồ bán nguyệt và các trường quốc tế']},
+ {id:1097,m:'ban',t:'nha-pho',ti:'Nhà phố có hồ bơi nhỏ sau nhà',w:'phu-nhuan',p:12.6,a:64,b:4,ba:4,d:'Đông',lg:'so-hong',f:'Nội thất cơ bản',fl:'1 trệt, 3 lầu',img:'1607567618395-62fc2d132c3e',v:0,dt:'04/11/2026',hl:['Hồ bơi nhỏ phía sau, giếng trời giữa nhà','Hẻm thông, cách mặt tiền 30 m','Nhà xây năm 2023']},
+ {id:1101,m:'thue',t:'can-ho',ti:'Cho thuê studio 1PN trung tâm',w:'sai-gon',p:18,a:50,b:1,ba:1,d:'Tây',lg:'so-hong',f:'Đầy đủ nội thất',fl:'Tầng 11/22',img:'1588854337236-6889d631faa8',v:1,dt:'09/11/2026',hl:['Bếp mặt đá, đầy đủ thiết bị','Đi bộ tới phố đi bộ Nguyễn Huệ','Phí quản lý đã gồm trong giá thuê']},
+ {id:1105,m:'thue',t:'biet-thu',ti:'Cho thuê biệt thự sân vườn cho gia đình',w:'an-khanh',p:150,a:380,b:5,ba:6,d:'Nam',lg:'so-hong',f:'Đầy đủ nội thất',fl:'1 trệt, 2 lầu',img:'1512917774080-9991f1c4c750',v:1,dt:'03/11/2026',hl:['Hồ bơi, sân vườn, phòng giúp việc','Gần trường quốc tế, phù hợp gia đình có con nhỏ','Chủ nhà bảo trì định kỳ']}
+];
+var TODAY=new Date(2026,10,10);
+L.forEach(function(l,i){
+  var dd=l.dt.split('/');l.date=new Date(+dd[2],+dd[1]-1,+dd[0]);
+  l.isNew=(TODAY-l.date)/864e5<=2;
+  l.ppm=l.m==='ban'?l.p*1000/l.a:null;
+  var w=WARDS[l.w];w.k=w.k||{ban:0,thue:0};var k=w.k[l.m]++;var OFF=[[0,0],[8.5,-6.5],[-8.5,-6.5],[8.5,6.5],[-8.5,6.5]][k%5];
+  l.x=Math.max(5,Math.min(95,w.x+OFF[0]));l.y=Math.max(9,Math.min(94,w.y+OFF[1]));
+  l.imgs=[l.img].concat(EXTRA.slice(i%2,i%2+3));
+});
+// trung bình giá/m² theo phường (tin bán)
+var AVG={};Object.keys(WARDS).forEach(function(k){var s=L.filter(function(l){return l.m==='ban'&&l.w===k});AVG[k]=s.length?s.reduce(function(t,l){return t+l.ppm},0)/s.length:null;AVG[k+'#n']=s.length});
+
+/* ---------- helpers ---------- */
+function fmt(n,d){return n.toLocaleString('vi-VN',{maximumFractionDigits:d==null?1:d})}
+function price(l){return l.m==='ban'?fmt(l.p,2)+NB+'tỷ':fmt(l.p,0)+NB+'triệu/tháng'}
+function priceShort(l){return l.m==='ban'?fmt(l.p,1)+NB+'tỷ':fmt(l.p,0)+NB+'tr'}
+function ppm(l){return l.m==='ban'?fmt(Math.round(l.ppm),0)+NB+'tr/m²':''}
+function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d')}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function ico(n){return '<svg class="ico" aria-hidden="true"><use href="#i-'+n+'"/></svg>'}
+var store={get:function(){try{return JSON.parse(localStorage.getItem('ks-fav')||'[]')}catch(e){return []}},set:function(v){try{localStorage.setItem('ks-fav',JSON.stringify(v))}catch(e){}}};
+
+/* ---------- state ---------- */
+var RANGE={ban:{min:0,max:60,step:.5},thue:{min:0,max:160,step:5}};
+var S;var favs=store.get();
+function fresh(mode){return {mode:mode||'ban',q:'',types:[],ward:'',pmin:RANGE[mode||'ban'].min,pmax:RANGE[mode||'ban'].max,area:'',beds:0,legal:[],dirs:[],sort:(S&&S.sort)||'new',favOnly:false,view:(S&&S.view)||'grid'}}
+S=fresh('ban');
+var AREAS=[['lt50','Dưới 50 m²',0,50],['50-80','50–80 m²',50,80],['80-120','80–120 m²',80,120],['120-200','120–200 m²',120,200],['gt200','Trên 200 m²',200,1e9]];
+
+/* ---------- build filter controls ---------- */
+function chipHTML(val,label,on){return '<button type="button" class="chip" data-v="'+val+'" aria-pressed="'+(on?'true':'false')+'">'+label+'</button>'}
+function buildFilters(){
+  $('#fType').innerHTML=Object.keys(TYPES).map(function(k){return chipHTML(k,TYPES[k],S.types.indexOf(k)>-1)}).join('');
+  $('#fWard').innerHTML='<option value="">Tất cả khu vực</option>'+Object.keys(WARDS).map(function(k){return '<option value="'+k+'"'+(S.ward===k?' selected':'')+'>'+WARDS[k].n+' ('+WARDS[k].o+')</option>'}).join('');
+  $('#fArea').innerHTML=AREAS.map(function(a){return chipHTML(a[0],a[1].replace(' m²',NB+'m²'),S.area===a[0])}).join('');
+  $('#fBeds').innerHTML=['Tất cả','1','2','3','4+'].map(function(t,i){return '<button type="button" data-v="'+i+'" aria-pressed="'+(S.beds===i?'true':'false')+'">'+t+'</button>'}).join('');
+  $('#fLegal').innerHTML=Object.keys(LEGAL).map(function(k){return chipHTML(k,LEGAL[k],S.legal.indexOf(k)>-1)}).join('');
+  $('#fDir').innerHTML=DIRS.map(function(d){return chipHTML(d,d.replace(' ',NB),S.dirs.indexOf(d)>-1)}).join('');
+  var R=RANGE[S.mode];['#pMin','#pMax'].forEach(function(s){var el=$(s);el.min=R.min;el.max=R.max;el.step=R.step});
+  $('#pMin').value=S.pmin;$('#pMax').value=S.pmax;
+  $('#priceH').textContent=S.mode==='ban'?'Khoảng giá (tỷ đồng)':'Giá thuê (triệu/tháng)';
+  rangeUI();
+}
+function pLabel(v,isMax){var R=RANGE[S.mode];if(isMax&&v>=R.max)return S.mode==='ban'?fmt(R.max,0)+NB+'tỷ trở lên':fmt(R.max,0)+NB+'triệu trở lên';return S.mode==='ban'?(v==0?'0':fmt(+v,1))+NB+'tỷ':fmt(+v,0)+NB+'triệu'}
+function rangeUI(){var R=RANGE[S.mode];var a=(S.pmin-R.min)/(R.max-R.min)*100,b=(S.pmax-R.min)/(R.max-R.min)*100;var f=$('#pFill');f.style.left=a+'%';f.style.width=(b-a)+'%';$('#pMinL').textContent='Từ '+pLabel(S.pmin);$('#pMaxL').textContent='Đến '+pLabel(S.pmax,true)}
+function toggleArr(arr,v){var i=arr.indexOf(v);if(i>-1)arr.splice(i,1);else arr.push(v)}
+function bindChips(id,key,single){$(id).addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var v=b.getAttribute('data-v');
+  if(key==='beds'){S.beds=+v}else if(single){S[key]=S[key]===v?'':v}else toggleArr(S[key],v);
+  syncControls();render()})}
+bindChips('#fType','types');bindChips('#fArea','area',true);bindChips('#fBeds','beds');bindChips('#fLegal','legal');bindChips('#fDir','dirs');
+$('#fWard').addEventListener('change',function(){S.ward=this.value;render()});
+$('#pMin').addEventListener('input',function(){var R=RANGE[S.mode];S.pmin=Math.min(+this.value,S.pmax-R.step);this.value=S.pmin;rangeUI();render()});
+$('#pMax').addEventListener('input',function(){var R=RANGE[S.mode];S.pmax=Math.max(+this.value,S.pmin+R.step);this.value=S.pmax;rangeUI();render()});
+function syncControls(){
+  $$('#fType .chip').forEach(function(b){b.setAttribute('aria-pressed',S.types.indexOf(b.dataset.v)>-1)});
+  $$('#fArea .chip').forEach(function(b){b.setAttribute('aria-pressed',S.area===b.dataset.v)});
+  $$('#fBeds button').forEach(function(b){b.setAttribute('aria-pressed',S.beds===+b.dataset.v)});
+  $$('#fLegal .chip').forEach(function(b){b.setAttribute('aria-pressed',S.legal.indexOf(b.dataset.v)>-1)});
+  $$('#fDir .chip').forEach(function(b){b.setAttribute('aria-pressed',S.dirs.indexOf(b.dataset.v)>-1)});
+  $('#fWard').value=S.ward;$('#pMin').value=S.pmin;$('#pMax').value=S.pmax;rangeUI();
+  $('#sort').value=S.sort;$('#favOnly').setAttribute('aria-pressed',S.favOnly);
+  $$('.modes button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===S.mode)});movePill();
+  $$('.views button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.view===S.view)});
+}
+
+/* ---------- filtering ---------- */
+function match(l){
+  if(l.m!==S.mode)return false;
+  if(S.favOnly&&favs.indexOf(l.id)<0)return false;
+  if(S.q){var q=norm(S.q);var hay=norm(l.ti+' '+WARDS[l.w].n+' '+WARDS[l.w].o+' '+TYPES[l.t]+' '+l.id);if(q.split(/\s+/).some(function(t){return t&&hay.indexOf(t)<0}))return false}
+  if(S.types.length&&S.types.indexOf(l.t)<0)return false;
+  if(S.ward&&l.w!==S.ward)return false;
+  var R=RANGE[S.mode];if(l.p<S.pmin)return false;if(S.pmax<R.max&&l.p>S.pmax)return false;
+  if(S.area){var a=AREAS.filter(function(x){return x[0]===S.area})[0];if(l.a<a[2]||l.a>=a[3])return false}
+  if(S.beds){if(S.beds===4?l.b<4:l.b!==S.beds)return false}
+  if(S.legal.length&&S.legal.indexOf(l.lg)<0)return false;
+  if(S.dirs.length&&S.dirs.indexOf(l.d)<0)return false;
+  return true;
+}
+function sorted(arr){var k=S.sort;return arr.sort(function(a,b){
+  if(k==='pa')return a.p-b.p;if(k==='pd')return b.p-a.p;if(k==='area')return b.a-a.a;
+  if(k==='ppm')return (a.ppm||a.p/a.a)-(b.ppm||b.p/b.a);return b.date-a.date||b.id-a.id})}
+function activeCount(){var R=RANGE[S.mode];return S.types.length+(S.ward?1:0)+((S.pmin>R.min||S.pmax<R.max)?1:0)+(S.area?1:0)+(S.beds?1:0)+S.legal.length+S.dirs.length}
+
+/* ---------- render ---------- */
+var lastCount=null;
+function cardHTML(l){
+  var fav=favs.indexOf(l.id)>-1;var w=WARDS[l.w];
+  var specs='<li>'+ico('area')+fmt(l.a,0)+NB+'m²</li>'+(l.b?'<li>'+ico('bed')+l.b+NB+'PN</li>':'')+'<li>'+ico('bath')+l.ba+NB+'WC</li><li>'+ico('compass')+l.d.replace(' ',NB)+'</li>';
+  return '<article class="card" data-id="'+l.id+'">'+
+   '<div class="c-media"><img loading="lazy" src="'+U(l.img,800)+'" alt="'+esc(l.ti)+'" width="800" height="600">'+
+   '<span class="c-badges">'+(l.v?'<span class="tag ok">'+ico('check')+'Đã xác minh</span>':'')+(l.isNew?'<span class="tag new">Mới</span>':'')+'</span>'+
+   '<span class="c-photos">'+ico('camera')+l.imgs.length+'</span></div>'+
+   '<button class="fav" type="button" aria-pressed="'+fav+'" aria-label="'+(fav?'Bỏ lưu':'Lưu')+' tin '+l.id+'">'+ico('heart')+'</button>'+
+   '<div class="c-body"><div class="c-price"><strong>'+price(l)+'</strong>'+(l.m==='ban'?'<span>'+ppm(l)+'</span>':'')+'</div>'+
+   '<h3 class="c-title"><button type="button" class="c-open">'+esc(l.ti)+'</button></h3>'+
+   '<p class="c-loc">'+ico('pin')+'<span>'+w.n+' · '+w.o+'</span></p>'+
+   '<ul class="specs">'+specs+'</ul>'+
+   '<div class="c-foot"><span class="lg'+(l.lg==='cho-so'?' wait':'')+'">'+LEGAL[l.lg]+'</span><span>Đăng '+l.dt+'</span></div></div></article>';
+}
+function render(opts){
+  var list=sorted(L.filter(match));
+  // count
+  var n=list.length;var cEl=$('#count');
+  var txt=function(v){return 'Có <b>'+v+'</b> '+(S.mode==='ban'?'bất động sản đang bán':'bất động sản cho thuê')+(S.favOnly?' đã lưu':'')};
+  if(lastCount!==null&&lastCount!==n&&!RM){var from=lastCount,t0=performance.now();(function step(t){var k=Math.min(1,(t-t0)/400);cEl.innerHTML=txt(Math.round(from+(n-from)*k));if(k<1)requestAnimationFrame(step)})(t0)}else cEl.innerHTML=txt(n);
+  lastCount=n;
+  $('#fApply').textContent='Xem '+n+' kết quả';
+  var ac=activeCount();var fn=$('#fN');fn.hidden=!ac;fn.textContent=ac;
+  // active chips
+  var R=RANGE[S.mode];var chips=[];
+  if(S.q)chips.push(['q','Từ khoá: “'+esc(S.q)+'”']);
+  S.types.forEach(function(t){chips.push(['type:'+t,TYPES[t]])});
+  if(S.ward)chips.push(['ward',WARDS[S.ward].n]);
+  if(S.pmin>R.min||S.pmax<R.max)chips.push(['price',pLabel(S.pmin)+' – '+pLabel(S.pmax,true)]);
+  if(S.area)chips.push(['area',AREAS.filter(function(a){return a[0]===S.area})[0][1]]);
+  if(S.beds)chips.push(['beds',(S.beds===4?'4+':S.beds)+' phòng ngủ']);
+  S.legal.forEach(function(t){chips.push(['legal:'+t,LEGAL[t]])});
+  S.dirs.forEach(function(t){chips.push(['dir:'+t,'Hướng '+t])});
+  if(S.favOnly)chips.push(['fav','Chỉ tin đã lưu']);
+  $('#active').innerHTML=chips.map(function(c){return '<button type="button" class="achip" data-k="'+c[0]+'" aria-label="Bỏ lọc '+c[1].replace(/<[^>]+>/g,'')+'">'+c[1]+ico('close')+'</button>'}).join('');
+  // grid
+  var g=$('#grid');var mb=$('#mapbox');
+  g.hidden=S.view!=='grid';mb.hidden=S.view!=='map';
+  if(!n){var noFav=S.favOnly&&!favs.length;g.innerHTML='<div class="empty"><h3>'+(noFav?'Bạn chưa lưu tin nào':'Chưa có căn phù hợp')+'</h3><p>'+(noFav?'Chạm biểu tượng trái tim trên mỗi tin để lưu lại và so sánh sau.':'Thử nới khoảng giá, bỏ bớt hướng nhà hoặc chọn thêm khu vực lân cận.')+'</p><button class="btn btn-ink" type="button" data-reset>Xoá bộ lọc</button></div>';g.hidden=false;mb.hidden=true}
+  else{
+    g.innerHTML=list.map(cardHTML).join('');
+    if(!RM&&!(opts&&opts.quiet)&&g.animate){$$('.card',g).slice(0,9).forEach(function(c,i){c.animate([{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'none'}],{duration:520,delay:i*45,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'})})}
+  }
+  renderPins(list);
+}
+$('#active').addEventListener('click',function(e){var b=e.target.closest('.achip');if(!b)return;var k=b.dataset.k,p=k.split(':');var R=RANGE[S.mode];
+  if(k==='q'){S.q='';$('#hq').value=''}else if(p[0]==='type')toggleArr(S.types,p[1]);else if(k==='ward')S.ward='';else if(k==='price'){S.pmin=R.min;S.pmax=R.max}
+  else if(k==='area')S.area='';else if(k==='beds')S.beds=0;else if(p[0]==='legal')toggleArr(S.legal,p[1]);else if(p[0]==='dir')toggleArr(S.dirs,k.slice(4));else if(k==='fav')S.favOnly=false;
+  syncControls();render()});
+function resetAll(){var keepQ=false;var m=S.mode;S=fresh(m);if(!keepQ)$('#hq').value='';buildFilters();syncControls();render()}
+$('#fReset').addEventListener('click',resetAll);$('#fReset2').addEventListener('click',resetAll);
+$('#grid').addEventListener('click',function(e){
+  if(e.target.closest('[data-reset]')){resetAll();return}
+  var card=e.target.closest('.card');if(!card)return;var id=+card.dataset.id;
+  var fb=e.target.closest('.fav');if(fb){toggleFav(id,fb);return}
+  openDrawer(id,card.querySelector('.c-open'));
+});
+$('#sort').addEventListener('change',function(){S.sort=this.value;render()});
+$('#favOnly').addEventListener('click',function(){S.favOnly=!S.favOnly;syncControls();render()});
+$$('.views button').forEach(function(b){b.addEventListener('click',function(){S.view=b.dataset.view;syncControls();render({quiet:true});if(S.view==='map')$('#mapCard').classList.remove('show')})});
+
+/* ---------- mode switch ---------- */
+function movePill(){var on=$('.modes button[aria-pressed="true"]');var p=$('#modePill');if(on&&p){p.style.left=on.offsetLeft+'px';p.style.width=on.offsetWidth+'px'}}
+function setMode(m){if(S.mode===m)return;var keep={q:S.q,sort:S.sort,view:S.view,types:S.types.slice(),ward:S.ward};S=fresh(m);S.q=keep.q;S.sort=keep.sort;S.view=keep.view;S.types=keep.types;S.ward=keep.ward;buildFilters();syncControls();render()}
+$$('.modes button').forEach(function(b){b.addEventListener('click',function(){setMode(b.dataset.mode)})});
+$$('a[data-mode]').forEach(function(a){a.addEventListener('click',function(){setMode(a.dataset.mode);closeMenu()})});
+
+/* ---------- favourites ---------- */
+function updSaved(){var c=$('#savedCnt');c.textContent=favs.length;c.setAttribute('data-z',favs.length?'0':'1')}
+function toggleFav(id,btn){var i=favs.indexOf(id);if(i>-1)favs.splice(i,1);else favs.push(id);store.set(favs);updSaved();
+  var on=favs.indexOf(id)>-1;$$('.card[data-id="'+id+'"] .fav').forEach(function(b){b.setAttribute('aria-pressed',on);b.setAttribute('aria-label',(on?'Bỏ lưu':'Lưu')+' tin '+id)});
+  if(drawerId===id)$('#dFav').setAttribute('aria-pressed',on);
+  var target=btn||null;if(target&&on&&!RM&&target.animate)target.animate([{transform:'scale(1)'},{transform:'scale(1.3)'},{transform:'scale(1)'}],{duration:380,easing:'cubic-bezier(.2,.7,.2,1)'});
+  if(S.favOnly)render({quiet:true});else renderPins(sorted(L.filter(match)));
+}
+$('#savedBtn').addEventListener('click',function(){S.favOnly=true;var m=favs.length&&L.filter(function(l){return favs.indexOf(l.id)>-1&&l.m===S.mode}).length?S.mode:(favs.length?L.filter(function(l){return favs.indexOf(l.id)>-1})[0].m:S.mode);if(m!==S.mode){setMode(m);S.favOnly=true}syncControls();render();document.getElementById('tim-nha').scrollIntoView({behavior:RM?'auto':'smooth'})});
+
+/* ---------- map ---------- */
+(function(){var g=$('#wardLabels');g.innerHTML=Object.keys(WARDS).map(function(k){var w=WARDS[k];return '<text x="'+(w.x*10)+'" y="'+(w.y*7+74)+'" text-anchor="middle" paint-order="stroke" stroke="#EDE8E0" stroke-width="5">'+w.n.replace('Phường ','').toUpperCase()+'</text>'}).join('')})();
+var pinSel=null;
+function renderPins(list){var box=$('#pins');box.innerHTML=list.map(function(l){return '<button type="button" class="pin'+(favs.indexOf(l.id)>-1?' fav-pin':'')+(pinSel===l.id?' on':'')+'" data-id="'+l.id+'" style="left:'+l.x+'%;top:'+l.y+'%" aria-label="'+esc(l.ti)+', '+price(l)+'">'+priceShort(l)+'</button>'}).join('');
+  if(pinSel&&!list.some(function(l){return l.id===pinSel})){pinSel=null;$('#mapCard').classList.remove('show')}}
+$('#pins').addEventListener('click',function(e){var b=e.target.closest('.pin');if(!b)return;var id=+b.dataset.id;pinSel=id;$$('.pin').forEach(function(p){p.classList.toggle('on',p===b)});
+  var l=L.filter(function(x){return x.id===id})[0];var mc=$('#mapCard');
+  mc.innerHTML='<button type="button" class="mc-x" aria-label="Đóng">'+ico('close')+'</button><img src="'+U(l.img,300)+'" alt="">'+'<div><b>'+price(l)+'</b><p>'+esc(l.ti)+'<br><span style="color:var(--mute)">'+WARDS[l.w].n+' · '+fmt(l.a,0)+NB+'m²</span></p><button type="button" data-open="'+l.id+'">Xem chi tiết'+ico('arrow')+'</button></div>';
+  mc.classList.add('show');$('#mapHint').hidden=true});
+$('#mapCard').addEventListener('click',function(e){if(e.target.closest('.mc-x')){this.classList.remove('show');pinSel=null;$$('.pin.on').forEach(function(p){p.classList.remove('on')});return}var b=e.target.closest('[data-open]');if(b)openDrawer(+b.dataset.open,b)});
+
+/* ---------- areas ---------- */
+(function(){var keys=Object.keys(WARDS).filter(function(k){return AVG[k]});keys.sort(function(a,b){return AVG[b]-AVG[a]});var mx=AVG[keys[0]];
+  $('#aGrid').innerHTML=keys.slice(0,8).map(function(k){var w=WARDS[k];return '<button type="button" class="a-tile" data-ward="'+k+'"><span class="old">'+w.o+'</span><h3>'+w.n.replace('Phường ','Phường'+NB)+'</h3><span class="stat"><span><b>'+fmt(Math.round(AVG[k]),0)+NB+'tr/m²</b><small>'+AVG[k+'#n']+' tin đang bán</small></span><span class="go">'+ico('arrow')+'</span></span><span class="bar"><i style="--v:'+(AVG[k]/mx).toFixed(3)+'"></i></span></button>'}).join('')+
+  (keys.length%2?'<a class="a-tile" href="#ky-gui" style="text-decoration:none"><span class="old">Chưa thấy khu vực của bạn?</span><h3>Nhận tin khi có căn mới</h3><span class="stat"><span><small>Đăng ký ở mục Ký gửi</small></span><span class="go">'+ico('arrow')+'</span></span></a>':'');
+  $('#aGrid').addEventListener('click',function(e){var b=e.target.closest('[data-ward]');if(!b)return;if(S.mode!=='ban')setMode('ban');S.ward=b.dataset.ward;syncControls();render();document.getElementById('tim-nha').scrollIntoView({behavior:RM?'auto':'smooth'})});
+})();
+
+/* ---------- drawer ---------- */
+var drawerId=null,lastFocus=null;
+function lockScroll(on){document.documentElement.classList.toggle('lock',on)}
+function openDrawer(id,from){
+  var l=L.filter(function(x){return x.id===id})[0];if(!l)return;drawerId=id;lastFocus=from||document.activeElement;
+  var w=WARDS[l.w];var fav=favs.indexOf(id)>-1;
+  $('#dCode').textContent='Mã tin KS-'+l.id+' · đăng '+l.dt;
+  $('#dFav').setAttribute('aria-pressed',fav);
+  var avg=AVG[l.w];var cmp='';
+  if(l.m==='ban'&&avg&&AVG[l.w+'#n']>1){var diff=(l.ppm-avg)/avg*100;var lo=avg*.6,hi=avg*1.4;var pos=Math.max(4,Math.min(96,(l.ppm-lo)/(hi-lo)*100));
+    cmp='<div class="d-sec"><h3>So với giá khu vực</h3><div class="cmpbar"><div class="lab"><span>Căn này <b>'+ppm(l)+'</b></span><span>Trung bình '+w.n.replace('Phường ','')+' <b>'+fmt(Math.round(avg),0)+NB+'tr/m²</b></span></div><div class="trk"><span class="avg" style="left:50%"></span><span class="mk" style="left:'+pos+'%"></span></div><div class="lab"><small>Thấp hơn</small><small>Cao hơn</small></div><p class="verdict">'+(Math.abs(diff)<2?'Ngang mặt bằng giá các tin đang bán cùng phường.':(diff<0?'Thấp hơn ':'Cao hơn ')+fmt(Math.abs(diff),0)+'% so với giá/m² trung bình các tin đang bán cùng phường.')+'</p></div></div>'}
+  var loan=l.m==='ban'?'<div class="d-sec"><h3>Ước tính trả góp</h3><div class="loan"><div class="res"><div><small>Trả hằng tháng (gốc + lãi)</small><b id="lPay"></b></div><div class="sub" id="lSub"></div></div>'+
+   '<div class="lrow"><div class="lab"><label for="lPct">Tỉ lệ vay</label><b id="lPctV"></b></div><input type="range" id="lPct" min="30" max="70" step="5" value="60"></div>'+
+   '<div class="lrow"><div class="lab"><label for="lYrs">Thời hạn vay</label><b id="lYrsV"></b></div><input type="range" id="lYrs" min="5" max="25" step="5" value="20"></div>'+
+   '<div class="lrow"><div class="lab"><label for="lRate">Lãi suất tham khảo</label><b id="lRateV"></b></div><input type="range" id="lRate" min="6" max="12" step=".5" value="9"></div>'+
+   '<p class="note">Con số chỉ để tham khảo, tính theo cách trả đều hằng tháng (gốc + lãi không đổi). Lãi suất và cách tính thực tế do ngân hàng quyết định.</p></div></div>':'';
+  var spec=[['Loại',TYPES[l.t]],['Diện tích',fmt(l.a,0)+NB+'m²'+(l.t==='can-ho'?' (thông thủy)':'')],['Phòng ngủ',l.b?l.b+' phòng':'Không có'],['Phòng tắm',l.ba+' phòng'],['Hướng',l.d],['Vị trí',l.fl],['Nội thất',l.f],['Pháp lý',LEGAL[l.lg]]];
+  var mn=new Date();var iso=function(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};var tmr=new Date(mn.getTime()+864e5);
+  $('#dScroll').innerHTML=
+   '<div class="gal"><div class="gal-main"><img id="galMain" src="'+U(l.imgs[0],1200)+'" alt="'+esc(l.ti)+'"></div><div class="gal-thumbs">'+l.imgs.map(function(im,i){return '<button type="button" data-img="'+im+'" aria-label="Ảnh '+(i+1)+'" aria-current="'+(i===0)+'"><img loading="lazy" src="'+U(im,300)+'" alt=""></button>'}).join('')+'</div></div>'+
+   '<div class="d-body"><div class="d-price"><strong>'+price(l)+'</strong>'+(l.m==='ban'?'<span>'+ppm(l)+'</span>':'')+'</div>'+
+   '<h2 id="dTitle">'+esc(l.ti)+'</h2><p class="d-loc">'+ico('pin')+'<span>'+w.n+', TP.HCM · '+w.o+'</span></p>'+
+   '<div class="d-tags">'+(l.v?'<span class="tag ok">'+ico('check')+'Đã xác minh tại chỗ</span>':'<span class="tag">Chờ xác minh</span>')+'<span class="tag">'+LEGAL[l.lg]+'</span><span class="tag">'+l.f+'</span></div>'+
+   '<div class="d-sec"><h3>Điểm đáng chú ý</h3><ul class="hl">'+l.hl.map(function(h){return '<li>'+ico('check')+'<span>'+esc(h)+'</span></li>'}).join('')+'</ul></div>'+
+   '<div class="d-sec"><h3>Thông tin chi tiết</h3><table class="spec-t"><tbody>'+spec.map(function(r){return '<tr><th scope="row">'+r[0]+'</th><td>'+r[1]+'</td></tr>'}).join('')+'</tbody></table></div>'+
+   cmp+loan+
+   '<div class="d-sec" id="book"><h3>Đặt lịch xem nhà</h3><form class="form" id="bookForm" novalidate><div class="form-body">'+
+    '<div class="frow"><div class="f"><label for="bName">Họ và tên</label><input id="bName" autocomplete="name" required><span class="msg">Vui lòng nhập họ tên.</span></div>'+
+    '<div class="f"><label for="bPhone">Số điện thoại</label><input id="bPhone" type="tel" inputmode="tel" autocomplete="tel" required><span class="msg">Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.</span></div></div>'+
+    '<div class="f"><label for="bDate">Ngày muốn xem</label><input id="bDate" type="date" min="'+iso(mn)+'" value="'+iso(tmr)+'" required><span class="msg">Vui lòng chọn ngày từ hôm nay trở đi.</span></div>'+
+    '<div class="f"><span class="lbl" id="slotL">Khung giờ</span><div class="slots" role="radiogroup" aria-labelledby="slotL">'+
+     [['09:00','Buổi sáng'],['14:00','Buổi chiều'],['18:30','Buổi tối']].map(function(s,i){return '<label class="slot"><input type="radio" name="slot" value="'+s[0]+'"'+(i===1?' checked':'')+'><span>'+s[0]+'<small>'+s[1]+'</small></span></label>'}).join('')+'</div></div>'+
+    '<div class="f"><label for="bNote">Ghi chú (không bắt buộc)</label><textarea id="bNote" placeholder="Ví dụ: muốn xem thêm căn cùng toà"></textarea></div>'+
+    '<label class="chk" data-req><input type="checkbox" required><span>Tôi đồng ý để Khoảng Sống và chủ nhà dùng họ tên, số điện thoại này để xác nhận lịch xem căn KS-'+l.id+'. (Bắt buộc)</span></label>'+
+    '<label class="chk"><input type="checkbox"><span>Gửi cho tôi các căn tương tự trong khu vực qua Zalo. (Không bắt buộc)</span></label>'+
+    '<button class="btn btn-cta f-submit" type="submit">'+ico('check')+'Đặt lịch xem nhà</button></div>'+
+    '<div class="done" role="status"><span class="ok-ic">'+ico('check')+'</span><h3>Đã nhận lịch hẹn</h3><p class="bDone"></p></div></form></div>'+
+   '</div>';
+  $('#dScroll').scrollTop=0;
+  if(l.m==='ban')loanCalc(l);
+  bindForm($('#bookForm'),function(f){var d=$('#bDate').value.split('-');var s=f.querySelector('input[name=slot]:checked');f.querySelector('.bDone').textContent='Lịch xem căn KS-'+l.id+' lúc '+(s?s.value:'')+', ngày '+d[2]+'/'+d[1]+'/'+d[0]+'. Chuyên viên sẽ gọi để xác nhận trước buổi xem.'},function(){var d=$('#bDate');var ok=d.value&&d.value>=d.min;d.closest('.f').classList.toggle('err',!ok);return ok});
+  $('#drawer').classList.add('open');$('#ovl').classList.add('show');lockScroll(true);
+  setTimeout(function(){$('#dClose').focus({preventScroll:true})},RM?0:380);
+}
+function closeDrawer(){if(drawerId===null)return;$('#drawer').classList.remove('open');$('#ovl').classList.remove('show');lockScroll(false);drawerId=null;if(lastFocus&&lastFocus.focus)lastFocus.focus({preventScroll:true})}
+$('#dClose').addEventListener('click',closeDrawer);$('#ovl').addEventListener('click',closeDrawer);
+$('#dFav').addEventListener('click',function(){if(drawerId!==null)toggleFav(drawerId,this)});
+$('#dScroll').addEventListener('click',function(e){var t=e.target.closest('[data-img]');if(!t)return;var m=$('#galMain');var src=U(t.dataset.img,1200);$$('.gal-thumbs button').forEach(function(b){b.setAttribute('aria-current',b===t)});if(RM){m.src=src;return}m.style.opacity=0;setTimeout(function(){m.src=src;m.onload=function(){m.style.opacity=1}},180)});
+function loanCalc(l){var go=function(){var pct=+$('#lPct').value,yrs=+$('#lYrs').value,rate=+$('#lRate').value;var P=l.p*1e9*pct/100,r=rate/100/12,n=yrs*12;var pay=P*r/(1-Math.pow(1+r,-n));
+  $('#lPay').textContent=fmt(pay/1e6,1)+NB+'triệu';$('#lPctV').textContent=pct+'%';$('#lYrsV').textContent=yrs+NB+'năm';$('#lRateV').textContent=fmt(rate,1)+'%/năm';
+  $('#lSub').innerHTML='Vay '+fmt(P/1e9,2)+NB+'tỷ<br>Trả trước '+fmt(l.p*(100-pct)/100,2)+NB+'tỷ'};
+  ['#lPct','#lYrs','#lRate'].forEach(function(s){$(s).addEventListener('input',go)});go()}
+
+/* ---------- forms ---------- */
+function bindForm(f,onDone,extra){f.addEventListener('submit',function(e){e.preventDefault();var ok=true,first=null;
+  $$('.f',f).forEach(function(box){var el=box.querySelector('input[required],select[required]');if(!el)return;var v=el.value.trim();var good=!!v;
+    if(el.type==='tel')good=/^0\d{9}$/.test(v.replace(/[\s.]/g,''));box.classList.toggle('err',!good);if(!good){ok=false;first=first||el}});
+  $$('.chk[data-req]',f).forEach(function(c){var g=c.querySelector('input').checked;c.classList.toggle('err',!g);if(!g){ok=false;first=first||c.querySelector('input')}});
+  if(extra&&!extra()){ok=false}
+  if(!ok){if(first)first.focus();return}
+  onDone(f);f.classList.add('sent');var d=f.querySelector('.done');if(d)d.setAttribute('tabindex','-1'),d.focus({preventScroll:true})});
+  f.addEventListener('input',function(e){var b=e.target.closest('.f,.chk');if(b&&b.classList.contains('err')){var el=b.querySelector('input,select');var v=(el.value||'').trim();var good=el.type==='checkbox'?el.checked:(el.type==='tel'?/^0\d{9}$/.test(v.replace(/[\s.]/g,'')):!!v);if(good)b.classList.remove('err')}});
+  f.addEventListener('change',function(e){var b=e.target.closest('.chk');if(b&&e.target.checked)b.classList.remove('err')})}
+bindForm($('#consignForm'),function(f){var n=$('#cName').value.trim().split(/\s+/).pop();$('#cDone').textContent='Cảm ơn '+n+'. Chuyên viên khu vực sẽ gọi lại để hẹn lịch xem và chụp ảnh căn nhà.'});
+
+/* ---------- mobile filter sheet ---------- */
+function sheet(on){$('#filters').classList.toggle('open',on);$('#sheetOvl').classList.toggle('show',on);lockScroll(on);if(on)setTimeout(function(){$('#fClose').focus({preventScroll:true})},50);else $('#fOpen').focus({preventScroll:true})}
+$('#fOpen').addEventListener('click',function(){sheet(true)});$('#fClose').addEventListener('click',function(){sheet(false)});$('#sheetOvl').addEventListener('click',function(){sheet(false)});
+$('#fApply').addEventListener('click',function(){sheet(false);document.getElementById('tim-nha').scrollIntoView({behavior:RM?'auto':'smooth'})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(drawerId!==null)closeDrawer();else if($('#filters').classList.contains('open'))sheet(false);else if($('#mnav').classList.contains('open'))closeMenu()}});
+
+/* ---------- hero search ---------- */
+var HP={ban:[['','Mọi mức giá'],['0-5','Dưới 5 tỷ'],['5-10','5–10 tỷ'],['10-20','10–20 tỷ'],['20-60','Trên 20 tỷ']],thue:[['','Mọi mức giá'],['0-20','Dưới 20 triệu'],['20-50','20–50 triệu'],['50-100','50–100 triệu'],['100-160','Trên 100 triệu']]};
+var heroTab='ban';
+function fillHP(){var m=heroTab==='thue'?'thue':'ban';$('#hprice').innerHTML=HP[m].map(function(o){return '<option value="'+o[0]+'">'+o[1].replace(/ (tỷ|triệu)/,NB+'$1')+'</option>'}).join('');$('#hprice').disabled=heroTab==='du-an';$('#htype').disabled=heroTab==='du-an';$('#hq').placeholder=heroTab==='du-an'?'Tên dự án, ví dụ: Lam Giang':'Ví dụ: An Khánh, Thảo Điền'}
+function moveInd(){var t=$('.tab[aria-selected="true"]'),i=$('#tabInd');i.style.left=t.offsetLeft+16+'px';i.style.width=(t.offsetWidth-32)+'px'}
+$$('.tab').forEach(function(t){t.addEventListener('click',function(){heroTab=t.dataset.tab;$$('.tab').forEach(function(x){x.setAttribute('aria-selected',x===t)});moveInd();fillHP()})});
+fillHP();
+function go(){document.getElementById(heroTab==='du-an'?'du-an':'tim-nha').scrollIntoView({behavior:RM?'auto':'smooth'})}
+$('#heroSearch').addEventListener('submit',function(e){e.preventDefault();if(heroTab==='du-an'){go();return}
+  var m=heroTab;var R=RANGE[m];S=fresh(m);S.q=$('#hq').value.trim();var t=$('#htype').value;if(t)S.types=[t];var p=$('#hprice').value;if(p){var a=p.split('-');S.pmin=+a[0];S.pmax=Math.min(+a[1],R.max)}
+  buildFilters();syncControls();render();go()});
+$$('[data-quick]').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.quick;
+  if(k==='1'){S=fresh('ban');S.types=['can-ho'];S.beds=2;S.pmax=9}else if(k==='2'){S=fresh('ban');S.types=['nha-pho'];S.legal=['so-hong']}else{S=fresh('thue');S.types=['can-ho'];S.ward='an-khanh'}
+  $('#hq').value='';buildFilters();syncControls();render();document.getElementById('tim-nha').scrollIntoView({behavior:RM?'auto':'smooth'})})});
+
+/* ---------- header / menu / badge ---------- */
+var hdr=$('#hdr'),badge=$('#ktBadge'),hero=$('#hero');
+function onScroll(){var y=window.scrollY;hdr.classList.toggle('solid',y>40||$('#mnav').classList.contains('open'));badge.classList.toggle('show',y>window.innerHeight*.75)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+function closeMenu(){$('#mnav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded','false');lockScroll(false);onScroll()}
+$('#menuBtn').addEventListener('click',function(){var o=!$('#mnav').classList.contains('open');$('#mnav').classList.toggle('open',o);this.setAttribute('aria-expanded',o);lockScroll(o);onScroll()});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',closeMenu)});
+
+/* ---------- split headline ---------- */
+(function(){var h=$('#h1');var out='';var k=0;
+  h.childNodes.forEach(function(n){var wrapWords=function(t){return t.split(/([ \t\n]+)/).map(function(p){if(!p)return '';if(/^[ \t\n]+$/.test(p))return ' ';return '<span class="w"><span style="transition-delay:'+(0.06*k++)+'s">'+p+'</span></span>'}).join('')};
+    if(n.nodeType===3)out+=wrapWords(n.textContent);else if(n.nodeName==='BR')out+='<br class="br-d">';else{out+='<em>'+wrapWords(n.textContent)+'</em>'}});
+  h.innerHTML=out;h.setAttribute('aria-label',h.textContent.replace(/\s+/g,' '));
+  requestAnimationFrame(function(){requestAnimationFrame(function(){hero.classList.add('ready');moveInd()})});
+})();
+
+/* ---------- reveal + pause hero ---------- */
+if('IntersectionObserver' in window&&!RM){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  $$('.rv').forEach(function(el){io.observe(el)});
+  new IntersectionObserver(function(es){hero.classList.toggle('off',!es[0].isIntersecting)}).observe(hero);
+}else{$$('.rv').forEach(function(el){el.classList.add('in')})}
+
+/* ---------- resize: only real width change ---------- */
+var lastW=window.innerWidth;window.addEventListener('resize',function(){if(window.innerWidth===lastW)return;lastW=window.innerWidth;moveInd();movePill();if(window.innerWidth>1024&&$('#filters').classList.contains('open'))sheet(false)});
+
+/* init */
+updSaved();buildFilters();syncControls();render({quiet:true});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){moveInd();movePill()});
+})();
+</script>
+</body>
+</html>

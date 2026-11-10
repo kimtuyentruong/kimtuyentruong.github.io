@@ -1,0 +1,1175 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thiên Thanh Garden City – Khu đô thị vườn sắp ra mắt | Nhận bảng giá dự kiến</title>
+<meta name="description" content="Mẫu giao diện website dự án bất động sản sắp ra mắt: khu đô thị 28,6 ha, mặt bằng tổng thể tương tác, căn hộ, duplex sân vườn, nhà phố thương mại, biệt thự ven hồ, tiến độ thanh toán, tiến độ xây dựng, pháp lý và đăng ký nhận bảng giá.">
+<meta name="theme-color" content="#0B1626">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230B1626'/%3E%3Cpath d='M8 25 Q20 9 32 25' fill='none' stroke='%23D9B26F' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M20 33V20M20 27q-5-1.5-7-6.5M20 25q5-1.5 7-6.5' fill='none' stroke='%233FB8A6' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap&subset=vietnamese" rel="stylesheet">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1776066361467-f70a25cf0dc8?auto=format&fit=crop&w=2000&q=80">
+<style>
+:root{
+  --night:#0B1626;--night2:#0F1E33;--night3:#15283F;--deep:#081120;
+  --gold:#D9B26F;--gold2:#EBCF97;--gold-d:#9C7A3F;
+  --jade:#3FB8A6;--jade2:#7FD6C8;
+  --ivory:#F2EDE3;--ivory2:#E8E1D3;--ink:#0B1626;
+  --text:#E9EEF5;--mute:#A9B6C7;--mute2:#7F8DA1;
+  --line:rgba(217,178,111,.22);--line2:rgba(233,238,245,.10);
+  --serif:"Noto Serif Display",Georgia,serif;
+  --sans:"Lexend",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.22,.8,.24,1);
+  --wrap:1240px;--gut:clamp(20px,4vw,48px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--night);color:var(--text);font:300 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
+p{margin:0}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.nw{white-space:nowrap}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:500 12px/1.2 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.6vw,64px);line-height:1.08;letter-spacing:-.01em}
+.h2 em{font-style:italic;color:var(--gold)}
+.lead{color:var(--mute);font-size:clamp(16px,1.25vw,18px);max-width:58ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:1px solid transparent;background:transparent;font:500 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold2)}
+.btn-line{border-color:rgba(233,238,245,.38);color:var(--text)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.btn-ink{background:var(--ink);color:var(--ivory)}
+.btn-ink:hover{background:#1b2c45}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}.js .rv.d4{transition-delay:.4s}
+
+/* ===== header ===== */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:60;transition:background .4s var(--ease),border-color .4s var(--ease);border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(11,22,38,.97);border-color:var(--line2)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:38px;height:38px;flex:none}
+.logo b{display:block;font:400 19px/1 var(--serif);letter-spacing:.02em;white-space:nowrap}
+.logo small{display:block;margin-top:5px;font:500 9.5px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.nav{display:flex;align-items:center;gap:clamp(16px,2vw,30px)}
+.nav a{font-size:14px;font-weight:400;text-decoration:none;color:rgba(233,238,245,.82);white-space:nowrap;transition:color .25s}
+.nav a:hover{color:var(--gold)}
+.hdr .btn{min-height:44px;padding:0 20px;font-size:14px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid rgba(233,238,245,.3);background:transparent;cursor:pointer;align-items:center;justify-content:center}
+.burger svg{width:20px;height:20px}
+.mnav{position:fixed;inset:0;z-index:70;background:var(--deep);display:flex;flex-direction:column;padding:22px var(--gut) 32px;opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility 0s .35s}
+.mnav.open{opacity:1;visibility:visible;transition:opacity .35s var(--ease)}
+.mnav-top{display:flex;justify-content:space-between;align-items:center;height:32px;margin-bottom:28px}
+.mnav a.ml{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line2);font:300 clamp(26px,7vw,34px)/1.2 var(--serif);text-decoration:none}
+.mnav a.ml span{font:500 11px/1 var(--sans);color:var(--gold);letter-spacing:.2em}
+.mnav .btn{margin-top:auto}
+@media (max-width:1100px){.nav a.hide-md{display:none}}
+@media (max-width:900px){.nav{display:none}.burger{display:inline-flex}}
+
+/* ===== hero ===== */
+.hero{position:relative;min-height:max(680px,100svh);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero-img{position:absolute;inset:0;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.14);animation:heroZoom 9s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1.02)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(11,22,38,.78) 0%,rgba(11,22,38,.18) 26%,rgba(11,22,38,.3) 52%,rgba(11,22,38,.93) 86%,var(--night) 100%),
+  linear-gradient(90deg,rgba(11,22,38,.72) 0%,rgba(11,22,38,0) 62%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:end;padding-top:140px;padding-bottom:clamp(40px,6vw,72px)}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(42px,6.1vw,96px);line-height:1;letter-spacing:-.02em;margin:22px 0 26px}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .ln>span{display:inline-block}
+.js .hero h1 .ln>span{transform:translateY(105%);transition:transform 1.3s var(--ease)}
+.js .hero.ready h1 .ln>span{transform:none}
+.js .hero.ready h1 .ln:nth-child(2)>span{transition-delay:.12s}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{color:rgba(233,238,245,.84);max-width:52ch;font-size:clamp(16px,1.3vw,18px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.js .hero .fade{opacity:0;transform:translateY(16px);transition:opacity 1s var(--ease) .5s,transform 1s var(--ease) .5s}
+.js .hero.ready .fade{opacity:1;transform:none}
+.js .hero.ready .fade.f2{transition-delay:.7s}
+.cd{background:rgba(8,17,32,.86);border:1px solid var(--line);border-radius:20px;padding:26px 26px 22px}
+.cd-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.cd-top h2{font:400 22px/1.2 var(--serif)}
+.cd-top p{font-size:13px;color:var(--mute);margin-top:6px}
+.live{display:inline-flex;align-items:center;gap:8px;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--jade2);white-space:nowrap}
+.live i{position:relative;width:8px;height:8px;border-radius:50%;background:var(--jade)}
+.live i::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--jade);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(3);opacity:0}}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 18px}
+.cd-cell{background:rgba(233,238,245,.05);border:1px solid var(--line2);border-radius:12px;padding:14px 6px 10px;text-align:center}
+.cd-cell b{display:block;font:300 clamp(30px,3vw,42px)/1 var(--serif);font-variant-numeric:tabular-nums;color:var(--ivory)}
+.cd-cell span{display:block;margin-top:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.cd-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;color:var(--mute);border-top:1px solid var(--line2);padding-top:16px}
+.cd-foot a{color:var(--gold);font-weight:500;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.cd-foot a svg{width:15px;height:15px}
+.scroll-cue{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);width:1px;height:46px;background:rgba(233,238,245,.18);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--gold);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{to{top:100%}}
+
+/* stats */
+.stats{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 24px 32px;border-left:1px solid var(--line2)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font:300 clamp(36px,4vw,56px)/1 var(--serif);color:var(--ivory);white-space:nowrap}
+.stat b small{font-size:.42em;color:var(--gold);margin-left:4px;letter-spacing:.02em}
+.stat>span{display:block;margin-top:10px;color:var(--mute);font-size:14px}
+
+/* ===== pain/answer ===== */
+.why{background:var(--ivory);color:var(--ink);padding:clamp(80px,10vw,140px) 0}
+.why .eyebrow{color:var(--gold-d)}
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
+.why .h2 em{color:var(--gold-d)}
+.why .h2{font-size:clamp(34px,4.2vw,58px)}
+.why-lead{margin-top:26px;color:#4B5568;max-width:44ch}
+.why-sticky{position:sticky;top:120px}
+.qa{border-top:1px solid rgba(11,22,38,.14)}
+.qa-row{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px 20px;padding:34px 0;border-bottom:1px solid rgba(11,22,38,.14)}
+.qa-n{font:300 44px/1 var(--serif);color:var(--gold-d)}
+.qa-q{font-size:14px;color:#6A7385;letter-spacing:.02em;display:flex;gap:10px;align-items:flex-start}
+.qa-q svg{width:16px;height:16px;flex:none;margin-top:3px;color:#B05A45}
+.qa-a{grid-column:2;font:400 clamp(21px,2vw,27px)/1.35 var(--serif);color:var(--ink)}
+
+/* ===== masterplan ===== */
+.mp{padding:clamp(80px,10vw,140px) 0;background:radial-gradient(1200px 600px at 80% 0%,rgba(63,184,166,.08),transparent 60%),var(--night)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.sec-head .h2{margin-top:20px}
+.mp-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(24px,3vw,40px);align-items:stretch}
+.mp-map{position:relative;border:1px solid var(--line2);border-radius:22px;overflow:hidden;background:var(--night2)}
+.mp-map svg{display:block;width:100%;height:auto}
+.zone{cursor:pointer;outline:none}
+.zone .zf{fill:rgba(217,178,111,.05);stroke:rgba(217,178,111,.55);stroke-width:1.4;stroke-dasharray:1;stroke-dashoffset:1;transition:fill .35s var(--ease),stroke .35s var(--ease)}
+.mp-map.in .zone .zf{stroke-dashoffset:0;transition:stroke-dashoffset 2.2s var(--ease),fill .35s var(--ease),stroke .35s var(--ease)}
+.zone:hover .zf,.zone:focus-visible .zf{fill:rgba(217,178,111,.14);stroke:var(--gold)}
+.zone.on .zf{fill:rgba(217,178,111,.22);stroke:var(--gold2);stroke-width:2}
+.zone.park .zf{fill:rgba(63,184,166,.10);stroke:rgba(63,184,166,.7)}
+.zone.park:hover .zf,.zone.park.on .zf{fill:rgba(63,184,166,.26);stroke:var(--jade2)}
+.pin circle{fill:var(--night);stroke:var(--gold);stroke-width:1.4;transition:fill .3s}
+.pin text{font:500 13px var(--sans);fill:var(--gold);text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.zone.on .pin circle{fill:var(--gold)}
+.zone.on .pin text{fill:var(--ink)}
+.mp-map{display:flex;flex-direction:column}
+.mp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.mp-scroll::-webkit-scrollbar{display:none}
+@media (max-width:600px){.mp-scroll svg{width:640px;max-width:none}}
+.mp-foot{margin-top:auto;padding:20px 24px 18px;border-top:1px solid var(--line2)}
+.mp-tot{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.mp-tot b{display:block;font:300 26px/1 var(--serif);color:var(--ivory);white-space:nowrap}
+.mp-tot span{display:block;margin-top:6px;font-size:12px;color:var(--mute);line-height:1.4}
+.mp-legend{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line2);font-size:12px;color:var(--mute)}
+.mp-legend .tap{margin-left:auto;color:var(--gold)}
+.mp-legend .tap svg{width:15px;height:15px}
+.mp-legend span{display:inline-flex;align-items:center;gap:7px}
+.mp-legend i{width:12px;height:12px;border-radius:3px;border:1px solid var(--gold);background:rgba(217,178,111,.15)}
+.mp-legend i.w{border-color:var(--jade);background:rgba(63,184,166,.25)}
+.mp-panel{border:1px solid var(--line);border-radius:22px;padding:clamp(24px,2.6vw,36px);background:linear-gradient(180deg,rgba(217,178,111,.06),rgba(217,178,111,0) 50%),var(--night2);display:flex;flex-direction:column}
+.mp-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.chip{min-height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line2);background:transparent;font-size:13px;color:var(--mute);cursor:pointer;white-space:nowrap;transition:all .25s var(--ease)}
+.chip:hover{border-color:var(--gold);color:var(--text)}
+.chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:500}
+.mp-body{transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.mp-body.swap{opacity:0;transform:translateY(10px)}
+.mp-k{font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.mp-name{font:300 clamp(28px,2.6vw,38px)/1.1 var(--serif);margin:12px 0 14px}
+.mp-desc{color:var(--mute);font-size:15px}
+.mp-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:26px 0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.mp-metrics div{padding:16px 10px 14px 0}
+.mp-metrics div+div{padding-left:14px;border-left:1px solid var(--line2)}
+.mp-metrics b{display:block;font:300 26px/1 var(--serif);color:var(--ivory);white-space:nowrap}
+.mp-metrics span{display:block;margin-top:7px;font-size:12px;color:var(--mute)}
+.mp-list{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:10px;font-size:14.5px}
+.mp-list li{display:flex;gap:12px;align-items:flex-start}
+.mp-list svg{width:16px;height:16px;flex:none;margin-top:4px;color:var(--jade)}
+.mp-panel .btn{margin-top:auto;align-self:flex-start}
+
+/* ===== products ===== */
+.prod{padding:clamp(80px,10vw,140px) 0;background:var(--night2)}
+.acc{display:flex;gap:12px;height:620px}
+.pc{position:relative;flex:1 1 0;min-width:0;border-radius:22px;overflow:hidden;cursor:pointer;isolation:isolate;transition:flex-grow .8s var(--ease);background:var(--night3);border:0;padding:0;text-align:left;color:var(--text)}
+.pc.open{flex-grow:3.2}
+.pc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.06);transition:transform 1.2s var(--ease)}
+.pc.open img{transform:scale(1)}
+.pc::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,17,32,.45) 0%,rgba(8,17,32,.05) 28%,rgba(8,17,32,.55) 52%,rgba(8,17,32,.95) 100%);transition:background .6s}
+.pc:not(.open)::before{background:linear-gradient(180deg,rgba(8,17,32,.55),rgba(8,17,32,.88))}
+.pc-n{position:absolute;top:20px;left:20px;padding:7px 10px 6px;border-radius:999px;background:rgba(8,17,32,.72);font:500 11.5px/1 var(--sans);letter-spacing:.18em;color:var(--gold)}
+.pc-vt{position:absolute;left:24px;bottom:28px;writing-mode:vertical-rl;transform:rotate(180deg);font:300 28px/1 var(--serif);white-space:nowrap;transition:opacity .4s var(--ease)}
+.pc.open .pc-vt{opacity:0}
+.pc-body{position:absolute;left:0;right:0;bottom:0;padding:32px;opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease);pointer-events:none}
+.pc.open .pc-body{opacity:1;transform:none;transition-delay:.3s;pointer-events:auto}
+.pc-type{font-size:13px;color:var(--gold2);letter-spacing:.04em}
+.pc-body h3{font:300 clamp(30px,2.8vw,42px)/1.1 var(--serif);margin:8px 0 18px;max-width:16ch}
+.pc-meta{display:flex;flex-wrap:wrap;gap:10px 28px;padding-top:18px;border-top:1px solid rgba(233,238,245,.18);margin-bottom:22px}
+.pc-meta div span{display:block;font-size:12px;color:var(--mute)}
+.pc-meta div b{display:block;font:400 20px/1.3 var(--serif);white-space:nowrap}
+.pc-meta div b.g{color:var(--gold)}
+.pc-more{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:14px;color:var(--ivory);border-bottom:1px solid var(--gold);padding-bottom:4px}
+.pc-more svg{width:16px;height:16px}
+.prod-note{margin-top:22px;font-size:13px;color:var(--mute2)}
+@media (max-width:1024px){
+  .acc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));height:auto;gap:16px}
+  .pc,.pc.open{aspect-ratio:4/5;flex:none}
+  .pc::before,.pc:not(.open)::before{background:linear-gradient(180deg,rgba(8,17,32,.5) 0%,rgba(8,17,32,.08) 24%,rgba(8,17,32,.7) 50%,rgba(8,17,32,.96) 100%)}
+  .pc-vt{display:none}
+  .pc-body{opacity:1;transform:none;pointer-events:auto;padding:24px}
+  .pc img{transform:none}
+}
+@media (max-width:600px){.acc{grid-template-columns:1fr}.pc,.pc.open{aspect-ratio:4/4.6}}
+
+/* ===== amenities ===== */
+.amen{padding:clamp(80px,10vw,140px) 0;background:var(--night)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:240px;gap:14px}
+.tile{position:relative;border-radius:18px;overflow:hidden;background:var(--night3)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.tile:hover img{transform:scale(1.05)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(8,17,32,.85))}
+.tile figcaption{position:absolute;left:20px;right:20px;bottom:18px;z-index:1}
+.tile figcaption b{display:block;font:400 21px/1.2 var(--serif)}
+.tile figcaption span{display:block;font-size:13px;color:var(--mute);margin-top:4px}
+.t1{grid-column:span 7;grid-row:span 2}.t2{grid-column:span 5}.t3{grid-column:span 5}.t4{grid-column:span 4}.t5{grid-column:span 8}
+.tile figure,.bento figure{margin:0}
+@media (max-width:900px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}.t1{grid-column:span 2;grid-row:span 2}.t2,.t3{grid-column:span 1}.t4{grid-column:span 1}.t5{grid-column:span 1}}
+@media (max-width:560px){.bento{grid-template-columns:1fr;grid-auto-rows:220px}.t1{grid-column:auto;grid-row:span 1}.t1,.t2,.t3,.t4,.t5{grid-column:auto}}
+
+/* ===== payment ===== */
+.pay{background:var(--ivory);color:var(--ink);padding:clamp(80px,10vw,140px) 0}
+.pay .eyebrow{color:var(--gold-d)}
+.pay .h2 em{color:var(--gold-d)}
+.pay .lead{color:#4B5568}
+.pay-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,64px);align-items:start}
+.calc{background:#fff;border:1px solid rgba(11,22,38,.08);border-radius:22px;padding:clamp(22px,2.5vw,32px);box-shadow:0 30px 60px -40px rgba(11,22,38,.35);position:sticky;top:110px}
+.calc h3{font:400 24px/1.2 var(--serif);margin-bottom:20px}
+.fld{display:block;margin-bottom:20px}
+.fld>span{display:block;font-size:13px;font-weight:500;color:#3A4558;margin-bottom:8px}
+.sel{width:100%;min-height:52px;padding:0 44px 0 16px;border-radius:12px;border:1px solid rgba(11,22,38,.18);background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 8l5 5 5-5' fill='none' stroke='%230B1626' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center/18px;font:400 16px var(--sans);color:var(--ink);-webkit-appearance:none;appearance:none}
+.price-out{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.price-out b{font:300 40px/1 var(--serif);white-space:nowrap}
+.price-out span{font-size:13px;color:#6A7385}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin:0}
+input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:4px;background:linear-gradient(90deg,var(--gold-d) var(--p,30%),rgba(11,22,38,.12) var(--p,30%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--ink);border:4px solid #fff;box-shadow:0 0 0 1px var(--gold-d);margin-top:-11px;cursor:pointer}
+input[type=range]::-moz-range-track{height:4px;border-radius:4px;background:rgba(11,22,38,.12)}
+input[type=range]::-moz-range-progress{height:4px;border-radius:4px;background:var(--gold-d)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--ink);border:4px solid #fff;box-shadow:0 0 0 1px var(--gold-d)}
+.range-lbl{display:flex;justify-content:space-between;font-size:12px;color:#6A7385;margin-top:2px}
+.bar{display:flex;height:12px;border-radius:999px;overflow:hidden;margin:24px 0 10px;background:rgba(11,22,38,.08)}
+.bar i{display:block;height:100%;transition:flex-basis .6s var(--ease)}
+.bar-lg{display:flex;justify-content:space-between;font-size:12px;color:#6A7385}
+.calc-sum{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.calc-sum div{background:var(--ivory);border-radius:14px;padding:14px 16px}
+.calc-sum span{display:block;font-size:12px;color:#6A7385}
+.calc-sum b{display:block;font:400 22px/1.25 var(--serif);white-space:nowrap;margin-top:4px}
+.sched{width:100%;border-collapse:collapse;font-size:15px}
+.sched th{text-align:left;font:500 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#6A7385;padding:0 12px 14px 0;border-bottom:1px solid rgba(11,22,38,.16)}
+.sched th:nth-child(n+3),.sched td:nth-child(n+3){text-align:right}
+.sched td{padding:18px 12px 18px 0;border-bottom:1px solid rgba(11,22,38,.1);vertical-align:top}
+.sched td:first-child{width:48px;font:300 22px/1 var(--serif);color:var(--gold-d)}
+.sched td b{display:block;font-weight:500;color:var(--ink)}
+.sched td small{display:block;color:#6A7385;font-size:13px;margin-top:3px}
+.sched td.pct{font:500 16px/1.3 var(--sans);color:var(--ink);white-space:nowrap}
+.sched td.amt{font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums}
+.sched td.cum{color:#6A7385;white-space:nowrap}
+.sched tr{transition:background .3s}
+.sched tbody tr:hover{background:rgba(217,178,111,.1)}
+.law{display:flex;gap:14px;align-items:flex-start;margin-top:24px;padding:18px 20px;border-radius:14px;background:rgba(63,184,166,.1);font-size:14px;color:#2E3A4C}
+.law svg{width:20px;height:20px;flex:none;color:#23897A;margin-top:2px}
+@media (max-width:640px){
+  .sched thead{display:none}
+  .sched,.sched tbody,.sched tr,.sched td{display:block}
+  .sched tr{display:grid;grid-template-columns:44px 1fr auto;grid-template-areas:"n t p" "n a c";gap:2px 10px;padding:16px 0;border-bottom:1px solid rgba(11,22,38,.1)}
+  .sched td{border:0;padding:0;text-align:left!important}
+  .sched td:first-child{grid-area:n;width:auto}
+  .sched td.t{grid-area:t}.sched td.pct{grid-area:p;text-align:right!important}
+  .sched td.amt{grid-area:a;margin-top:6px}.sched td.cum{grid-area:c;text-align:right!important;margin-top:6px;font-size:13px}
+}
+
+/* ===== timeline ===== */
+.tl{padding:clamp(80px,10vw,140px) 0;background:var(--night);overflow:hidden}
+.tl-track{list-style:none;padding:0;margin-left:0;margin-right:0;position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:clamp(40px,5vw,72px)}
+.tl-line{position:absolute;left:0;right:0;top:11px;height:1px;background:rgba(233,238,245,.16)}
+.tl-line i{position:absolute;left:0;top:0;height:1px;width:100%;background:linear-gradient(90deg,var(--gold),var(--jade));transform-origin:left;transform:scaleX(0);transition:transform 2.4s var(--ease)}
+.tl-track.in .tl-line i{transform:scaleX(.1)}
+.tl-item{position:relative;padding-right:24px}
+.tl-dot{position:relative;width:23px;height:23px;border-radius:50%;border:1px solid rgba(233,238,245,.3);background:var(--night);display:grid;place-items:center}
+.tl-dot::after{content:"";width:7px;height:7px;border-radius:50%;background:rgba(233,238,245,.3)}
+.tl-item.now .tl-dot{border-color:var(--gold)}
+.tl-item.now .tl-dot::after{background:var(--gold)}
+.tl-item.now .tl-dot::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--gold);animation:ring 2.4s ease-out infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.2);opacity:0}}
+.tl-when{margin-top:22px;font:500 12px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.tl-item h3{font:400 22px/1.25 var(--serif);margin:10px 0 8px}
+.tl-item p{font-size:14px;color:var(--mute)}
+.tl-tag{display:inline-block;margin-top:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line2);font-size:11.5px;color:var(--mute)}
+.tl-item.now .tl-tag{border-color:var(--gold);color:var(--gold)}
+@media (max-width:900px){
+  .tl-track{grid-template-columns:1fr;gap:34px;padding-left:44px}
+  .tl-line{left:11px;right:auto;top:0;bottom:0;width:1px;height:auto}
+  .tl-line i{width:1px;height:100%;transform-origin:top;transform:scaleY(0);background:linear-gradient(180deg,var(--gold),var(--jade))}
+  .tl-track.in .tl-line i{transform:scaleY(.12)}
+  .tl-dot{position:absolute;left:-44px;top:0}
+  .tl-when{margin-top:2px}
+  .tl-item{padding-right:0}
+}
+
+/* ===== legal ===== */
+.legal{padding:clamp(80px,10vw,140px) 0;background:var(--night2)}
+.lg-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+@media (max-width:1100px){.lg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.doc.key{grid-column:span 2}}
+@media (max-width:600px){.lg-grid{grid-template-columns:1fr}.doc.key{grid-column:auto}}
+.doc{border:1px solid var(--line2);border-radius:18px;padding:26px 24px 22px;background:rgba(233,238,245,.02);display:flex;flex-direction:column;gap:14px;transition:border-color .3s,transform .4s var(--ease)}
+.doc:hover{border-color:var(--line);transform:translateY(-3px)}
+.doc svg.ic{width:30px;height:30px;color:var(--gold)}
+.doc h3{font:400 19px/1.35 var(--serif)}
+.doc p{font-size:13.5px;color:var(--mute)}
+.st{margin-top:auto;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:7px 12px;border-radius:999px;font-size:12.5px;font-weight:500}
+.st svg{width:14px;height:14px}
+.st.ok{background:rgba(63,184,166,.14);color:var(--jade2)}
+.st.wait{background:rgba(217,178,111,.14);color:var(--gold2)}
+.st.no{background:rgba(233,238,245,.08);color:var(--mute)}
+.doc.key{border-color:var(--line);background:linear-gradient(160deg,rgba(217,178,111,.08),transparent 60%)}
+
+/* ===== register ===== */
+.reg{position:relative;padding:clamp(80px,10vw,140px) 0;background:var(--night);overflow:hidden;isolation:isolate}
+.reg-bg{position:absolute;inset:0;z-index:-1;opacity:.22}
+.reg-bg img{width:100%;height:100%;object-fit:cover}
+.reg::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--night) 30%,rgba(11,22,38,.82) 70%,rgba(11,22,38,.9))}
+.reg-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(36px,5vw,80px);align-items:start}
+.gets{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:0;border-top:1px solid var(--line2)}
+.gets li{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line2)}
+.gets svg{width:22px;height:22px;flex:none;color:var(--gold);margin-top:2px}
+.gets b{display:block;font-weight:500}
+.gets span{display:block;font-size:14px;color:var(--mute)}
+.form{background:var(--ivory);color:var(--ink);border-radius:24px;padding:clamp(24px,3vw,40px)}
+.form h3{font:400 clamp(26px,2.4vw,32px)/1.15 var(--serif)}
+.form .fbody>p:first-of-type{font-size:14px;color:#5B6576;margin:8px 0 24px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{display:block;margin-bottom:16px}
+.f>span{display:block;font-size:13px;font-weight:500;color:#2E3A4C;margin-bottom:7px}
+.f>span em{font-style:normal;color:#B05A45}
+.inp{width:100%;min-height:52px;padding:0 16px;border-radius:12px;border:1px solid rgba(11,22,38,.2);background:#fff;font:400 16px var(--sans);color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.inp:focus{outline:none;border-color:var(--gold-d);box-shadow:0 0 0 3px rgba(217,178,111,.3)}
+.f.err .inp,.f.err .sel{border-color:#B05A45}
+.f>.msg,.cb>.msg,fieldset>.msg{display:none;font-size:12.5px;font-weight:400;color:#A4462F;margin:6px 0 0}
+.f.err>.msg,.cb.err>.msg,fieldset.err>.msg{display:block}
+fieldset{border:0;margin:0 0 16px;padding:0}
+legend{font-size:13px;font-weight:500;color:#2E3A4C;margin-bottom:9px;padding:0}
+.picks{display:flex;flex-wrap:wrap;gap:8px}
+.pick{position:relative}
+.pick input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.pick span{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 15px;border-radius:999px;border:1px solid rgba(11,22,38,.2);background:#fff;font-size:14px;white-space:nowrap;transition:all .2s}
+.pick span svg{width:14px;height:14px;display:none}
+.pick input:checked+span{background:var(--ink);border-color:var(--ink);color:var(--ivory)}
+.pick input:checked+span svg{display:block;color:var(--gold)}
+.pick input:focus-visible+span{outline:2px solid var(--gold-d);outline-offset:2px}
+.cb{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;margin:12px 0;font-size:13.5px;color:#3A4558;line-height:1.55}
+.cb input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--ink)}
+.cb .msg{grid-column:2}
+.form .btn{width:100%;margin-top:14px}
+.form-foot{font-size:12px;color:#6A7385;margin-top:14px}
+.ok-box{display:none;text-align:center;padding:30px 6px}
+.ok-box svg{width:56px;height:56px;color:var(--gold-d);margin:0 auto 18px}
+.ok-box h3{margin-bottom:10px}
+.ok-box p{color:#4B5568;max-width:40ch;margin:0 auto}
+.form.done .ok-box{display:block}
+.form.done .fbody{display:none}
+
+/* ===== footer ===== */
+.ftr{background:var(--deep);padding:64px 0 96px;font-size:14px;color:var(--mute)}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line2)}
+.ftr h4{font:500 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.ftr p+p{margin-top:6px}
+.ftr .note{margin-top:28px;font-size:12.5px;color:var(--mute2);max-width:90ch}
+
+/* ===== modal ===== */
+.modal{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:24px;visibility:hidden;opacity:0;transition:opacity .35s var(--ease),visibility 0s .35s}
+.modal.open{visibility:visible;opacity:1;transition:opacity .35s var(--ease)}
+.modal-bg{position:absolute;inset:0;background:rgba(5,10,20,.86)}
+.modal-card{position:relative;width:min(1080px,100%);max-height:calc(100svh - 48px);overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:var(--night2);border:1px solid var(--line);border-radius:24px;display:grid;grid-template-columns:1.05fr 1fr;transform:translateY(24px);transition:transform .45s var(--ease)}
+.modal.open .modal-card{transform:none}
+.m-media{position:sticky;top:0;align-self:start;height:calc(100svh - 50px);background:var(--night3);overflow:hidden;border-radius:24px 0 0 24px}
+.m-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:opacity .5s var(--ease)}
+.m-thumbs{position:absolute;left:16px;bottom:16px;display:flex;gap:8px;z-index:1}
+.m-thumbs button{width:64px;height:48px;padding:0;border-radius:8px;overflow:hidden;border:2px solid transparent;cursor:pointer;background:var(--night)}
+.m-thumbs button[aria-pressed="true"]{border-color:var(--gold)}
+.m-thumbs img{position:static;width:100%;height:100%;object-fit:cover}
+.m-body{padding:clamp(24px,3vw,40px)}
+.m-close{position:absolute;top:14px;right:14px;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);background:var(--night);display:grid;place-items:center;cursor:pointer}
+.m-close svg{width:18px;height:18px}
+.m-body h3{font:300 clamp(28px,2.6vw,38px)/1.1 var(--serif);margin:10px 0 8px;padding-right:40px}
+.m-type{color:var(--mute);font-size:14px}
+.m-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:20px 0 4px}
+.m-price b{font:300 34px/1 var(--serif);color:var(--gold);white-space:nowrap}
+.m-price span{font-size:13px;color:var(--mute)}
+.m-vat{font-size:12px;color:var(--mute2)}
+.spec{width:100%;border-collapse:collapse;margin:22px 0;font-size:14px}
+.spec td{padding:11px 0;border-bottom:1px solid var(--line2);vertical-align:top}
+.spec td:first-child{color:var(--mute);width:44%}
+.m-plan{border:1px solid var(--line2);border-radius:14px;padding:14px;background:rgba(8,17,32,.5);margin-bottom:22px}
+.m-plan p{font-size:12px;color:var(--mute);margin-top:8px}
+.m-plan svg{width:100%;height:auto;display:block}
+@media (max-width:820px){
+  .modal{padding:0;align-items:flex-end}
+  .modal-card{display:block;max-height:92svh;border-radius:22px 22px 0 0}
+  .m-media{position:relative;height:auto;aspect-ratio:16/10;border-radius:22px 22px 0 0}
+}
+
+/* badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:55;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(8,17,32,.95);border:1px solid var(--line);color:#fff;font:400 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.5);transition:transform .3s var(--ease),opacity .3s var(--ease),background .2s}
+.kt-badge:hover{transform:translateY(-2px);background:#000}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#3ddc84;flex:none;box-shadow:0 0 0 3px rgba(61,220,132,.25)}
+.kt-badge b{color:#ffd28a;font-weight:500}
+@media (max-width:760px){.kt-badge{opacity:0;transform:translateY(16px);pointer-events:none}.kt-badge.show{opacity:1;transform:none;pointer-events:auto}}
+
+/* ===== responsive ===== */
+@media (max-width:1024px){
+  .hero::before{background:linear-gradient(180deg,rgba(11,22,38,.8) 0%,rgba(11,22,38,.55) 30%,rgba(11,22,38,.72) 55%,rgba(11,22,38,.95) 85%,var(--night) 100%)}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .cd{max-width:560px}
+  .mp-grid{grid-template-columns:1fr}
+  .sec-head{grid-template-columns:1fr}
+  .pay-grid{grid-template-columns:1fr}
+  .calc{position:static}
+  .reg-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .why-sticky{position:static}
+}
+@media (max-width:760px){
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .stat{padding:24px 16px 22px}
+  .stat:nth-child(odd){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line2)}
+  .ftr-grid{grid-template-columns:1fr}
+  .hero-grid{padding-top:120px}
+  .row2{grid-template-columns:1fr;gap:0}
+  .qa-row{grid-template-columns:48px minmax(0,1fr);padding:26px 0}
+  .qa-n{font-size:34px}
+  .mp-tot{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .mp-legend .tap{margin-left:0}
+}
+@media (max-width:420px){
+  .cd{padding:20px 16px 18px}
+  .cd-grid{gap:6px}
+  .cd-foot{flex-direction:column;align-items:flex-start}
+  .hero-cta .btn{flex:1 1 100%}
+  .mp-metrics b{font-size:22px}
+  .calc-sum{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv,.js .hero .fade{opacity:1;transform:none}
+  .js .hero h1 .ln>span{transform:none}
+  .hero-img img{transform:none}
+  .zone .zf{stroke-dashoffset:0}
+  .tl-track .tl-line i{transform:scaleX(.1)}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="Thiên Thanh Garden City – về đầu trang">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="#D9B26F" stroke-opacity=".5"/><path d="M8 25 Q20 9 32 25" fill="none" stroke="#D9B26F" stroke-width="1.8" stroke-linecap="round"/><path d="M20 33V20M20 27q-5-1.5-7-6.5M20 25q5-1.5 7-6.5" fill="none" stroke="#3FB8A6" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span><b>Thiên&nbsp;Thanh</b><small>Garden City</small></span>
+    </a>
+    <nav class="nav" aria-label="Menu chính">
+      <a href="#mat-bang">Mặt bằng</a>
+      <a href="#san-pham">Sản phẩm</a>
+      <a href="#tien-ich" class="hide-md">Tiện ích</a>
+      <a href="#thanh-toan">Thanh toán</a>
+      <a href="#tien-do" class="hide-md">Tiến độ</a>
+      <a href="#phap-ly">Pháp lý</a>
+      <a class="btn btn-gold" href="#dang-ky">Nhận bảng&nbsp;giá</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mnav-top">
+    <a class="logo" href="#top"><span><b>Thiên&nbsp;Thanh</b><small>Garden City</small></span></a>
+    <button class="burger" id="mclose" aria-label="Đóng menu" style="display:inline-flex">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <a class="ml" href="#mat-bang">Mặt bằng tổng&nbsp;thể <span>01</span></a>
+  <a class="ml" href="#san-pham">Dòng sản&nbsp;phẩm <span>02</span></a>
+  <a class="ml" href="#tien-ich">Tiện ích nội&nbsp;khu <span>03</span></a>
+  <a class="ml" href="#thanh-toan">Tiến độ thanh&nbsp;toán <span>04</span></a>
+  <a class="ml" href="#tien-do">Tiến độ xây&nbsp;dựng <span>05</span></a>
+  <a class="ml" href="#phap-ly">Pháp lý dự&nbsp;án <span>06</span></a>
+  <a class="btn btn-gold" href="#dang-ky">Nhận bảng giá dự&nbsp;kiến</a>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-img"><img src="https://images.unsplash.com/photo-1776066361467-f70a25cf0dc8?auto=format&fit=crop&w=2000&q=80" alt="Khu căn hộ có sân vườn bên trong nhìn từ trên cao" fetchpriority="high"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow fade">Sắp ra mắt · <span class="nw">Phường Long Bình, TP.HCM</span></span>
+      <h1 id="hero-title"><span class="ln"><span>Thành&nbsp;phố vườn</span></span><span class="ln"><span>dưới bầu&nbsp;trời <em>trong&nbsp;xanh</em></span></span></h1>
+      <p class="hero-sub fade">Khu đô thị 28,6&nbsp;ha với công viên trung tâm, hồ cảnh quan và bốn dòng sản phẩm: căn hộ, duplex sân vườn, nhà phố thương mại, biệt thự ven&nbsp;hồ.</p>
+      <div class="hero-cta fade f2">
+        <a class="btn btn-gold" href="#dang-ky">Nhận bảng giá dự&nbsp;kiến <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+        <a class="btn btn-line" href="#mat-bang">Khám phá mặt&nbsp;bằng</a>
+      </div>
+    </div>
+    <aside class="cd fade f2" aria-label="Đếm ngược lễ ra mắt">
+      <div class="cd-top">
+        <div><h2>Lễ ra mắt dự&nbsp;án</h2><p>18:00 · 06/12/2026 · <span class="nw">Nhà mẫu Thiên Thanh</span></p></div>
+        <span class="live"><i></i>Sắp diễn ra</span>
+      </div>
+      <div class="cd-grid" id="cd" aria-live="off">
+        <div class="cd-cell"><b data-u="d">00</b><span>Ngày</span></div>
+        <div class="cd-cell"><b data-u="h">00</b><span>Giờ</span></div>
+        <div class="cd-cell"><b data-u="m">00</b><span>Phút</span></div>
+        <div class="cd-cell"><b data-u="s">00</b><span>Giây</span></div>
+      </div>
+      <div class="cd-foot"><span>Khách đăng ký trước nhận thư mời và chỗ ngồi riêng.</span><a href="#dang-ky">Đăng ký tham dự <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></div>
+    </aside>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<section class="stats" aria-label="Quy mô dự án">
+  <div class="wrap">
+    <div class="stat rv"><b><span data-count="28.6" data-dec="1">0</span><small>ha</small></b><span>Quy mô khu đô thị</span></div>
+    <div class="stat rv d1"><b><span data-count="28">0</span><small>%</small></b><span>Mật độ xây dựng</span></div>
+    <div class="stat rv d2"><b><span data-count="4.2" data-dec="1">0</span><small>ha</small></b><span>Công viên trung tâm</span></div>
+    <div class="stat rv d3"><b><span data-count="2.4" data-dec="1">0</span><small>km</small></b><span>Đường chạy bộ ven hồ</span></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="tong-quan" aria-labelledby="why-title">
+  <div class="wrap why-grid">
+    <div class="why-sticky">
+      <span class="eyebrow rv">Vì sao Thiên&nbsp;Thanh</span>
+      <h2 class="h2 rv d1" id="why-title" style="margin-top:20px">Mua&nbsp;nhà hình&nbsp;thành trong tương&nbsp;lai, bạn cần sự <em>rõ&nbsp;ràng</em></h2>
+      <p class="why-lead rv d2">Người mua dự án mới thường mang ba nỗi lo giống nhau. Chúng tôi trả lời từng điều bằng thông tin cụ thể, kiểm tra được ngay trên trang này.</p>
+    </div>
+    <div class="qa">
+      <div class="qa-row rv">
+        <span class="qa-n">01</span>
+        <p class="qa-q"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v5M10 13.6v.4"/></svg>Pháp lý chỉ được nói miệng, khó tự kiểm&nbsp;tra.</p>
+        <p class="qa-a">Từng loại giấy tờ được công khai kèm số hiệu và tình trạng, kể cả những giấy tờ đang chờ&nbsp;cấp.</p>
+      </div>
+      <div class="qa-row rv">
+        <span class="qa-n">02</span>
+        <p class="qa-q"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v5M10 13.6v.4"/></svg>Tiện ích hứa hẹn rồi để trống nhiều&nbsp;năm.</p>
+        <p class="qa-a">Công viên trung tâm 4,2&nbsp;ha được làm trước, hoàn thiện trước ngày bàn giao căn đầu&nbsp;tiên.</p>
+      </div>
+      <div class="qa-row rv">
+        <span class="qa-n">03</span>
+        <p class="qa-q"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v5M10 13.6v.4"/></svg>Lịch thanh toán dồn dập, khó tính&nbsp;trước.</p>
+        <p class="qa-a">Thanh toán theo tiến độ xây dựng. Bạn tự tính số tiền từng đợt bằng công cụ bên&nbsp;dưới.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MASTERPLAN -->
+<section class="mp" id="mat-bang" aria-labelledby="mp-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Mặt bằng tổng&nbsp;thể</span><h2 class="h2 rv d1" id="mp-title">Năm phân&nbsp;khu quanh một <em>lá&nbsp;phổi&nbsp;xanh</em></h2></div>
+      <p class="lead rv d2">Chạm vào từng phân khu trên bản đồ để xem quy mô, sản phẩm và tiện ích. Mọi lối đi trong khu đều dẫn về công viên trung&nbsp;tâm.</p>
+    </div>
+    <div class="mp-grid">
+      <div class="mp-map rv" id="mpMap">
+        <div class="mp-scroll"><svg viewBox="0 0 800 520" role="group" aria-label="Bản đồ mặt bằng tổng thể, chọn một phân khu">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(233,238,245,.045)"/></pattern>
+            <pattern id="rows" width="14" height="22" patternUnits="userSpaceOnUse"><rect x="1" y="2" width="12" height="7" fill="rgba(242,237,227,.16)"/><rect x="1" y="13" width="12" height="7" fill="rgba(242,237,227,.1)"/></pattern>
+            <pattern id="villas" width="40" height="38" patternUnits="userSpaceOnUse"><rect x="7" y="8" width="18" height="14" rx="1.5" fill="rgba(242,237,227,.18)"/><circle cx="31" cy="28" r="4" fill="rgba(63,184,166,.35)"/></pattern>
+            <pattern id="trees" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="8" cy="8" r="3.4" fill="rgba(63,184,166,.32)"/></pattern>
+            <clipPath id="cA"><polygon points="60,100 360,92 368,250 70,262"/></clipPath>
+            <clipPath id="cB"><polygon points="440,98 750,108 742,250 448,244"/></clipPath>
+            <clipPath id="cC"><polygon points="60,296 290,288 300,404 72,420"/></clipPath>
+          </defs>
+          <rect width="800" height="520" fill="#0F1E33"/>
+          <rect width="800" height="520" fill="url(#grid)"/>
+          <!-- river -->
+          <path d="M0 438 C120 404 214 474 334 458 C452 442 520 386 640 404 C720 416 770 452 800 446 L800 520 L0 520Z" fill="rgba(63,184,166,.16)"/>
+          <path d="M0 438 C120 404 214 474 334 458 C452 442 520 386 640 404 C720 416 770 452 800 446" fill="none" stroke="rgba(63,184,166,.55)" stroke-width="1.2"/>
+          <text x="420" y="490" fill="rgba(127,214,200,.7)" font-family="Lexend" font-size="12" letter-spacing="3">SÔNG ĐỒNG NAI</text>
+          <!-- roads -->
+          <path d="M0 64 C220 52 600 84 800 70" fill="none" stroke="rgba(242,237,227,.2)" stroke-width="12"/>
+          <path d="M0 64 C220 52 600 84 800 70" fill="none" stroke="rgba(242,237,227,.35)" stroke-width="1" stroke-dasharray="10 10"/>
+          <text x="20" y="44" fill="rgba(233,238,245,.5)" font-family="Lexend" font-size="11" letter-spacing="2.5">ĐẠI LỘ THIÊN THANH · 32 M</text>
+          <path d="M404 70 L408 238" stroke="rgba(242,237,227,.16)" stroke-width="7"/>
+          <path d="M20 276 C200 268 600 270 790 264" fill="none" stroke="rgba(242,237,227,.14)" stroke-width="6"/>
+          <path d="M404 238 L410 272" stroke="rgba(242,237,227,.16)" stroke-width="7"/>
+          <!-- zone A -->
+          <g class="zone" data-z="0" tabindex="0" role="button" aria-label="Phân khu 01 – Căn hộ Thanh Vân">
+            <polygon class="zf" pathLength="1" points="60,100 360,92 368,250 70,262"/>
+            <g clip-path="url(#cA)" fill="rgba(242,237,227,.2)">
+              <rect x="96" y="122" width="58" height="40" rx="3" transform="rotate(-4 125 142)"/>
+              <rect x="186" y="116" width="58" height="40" rx="3" transform="rotate(-4 215 136)"/>
+              <rect x="276" y="112" width="58" height="40" rx="3" transform="rotate(-4 305 132)"/>
+              <rect x="108" y="196" width="80" height="34" rx="3"/>
+              <rect x="226" y="192" width="104" height="36" rx="3"/>
+              <circle cx="205" cy="174" r="14" fill="rgba(63,184,166,.35)"/>
+            </g>
+            <g class="pin"><circle cx="214" cy="176" r="15"/><text x="214" y="176">01</text></g>
+          </g>
+          <!-- zone B -->
+          <g class="zone" data-z="1" tabindex="0" role="button" aria-label="Phân khu 02 – Nhà phố thương mại Lam Ngọc">
+            <polygon class="zf" pathLength="1" points="440,98 750,108 742,250 448,244"/>
+            <polygon points="440,98 750,108 742,250 448,244" fill="url(#rows)" clip-path="url(#cB)" pointer-events="none"/>
+            <g class="pin"><circle cx="596" cy="176" r="15"/><text x="596" y="176">02</text></g>
+          </g>
+          <!-- zone C -->
+          <g class="zone" data-z="2" tabindex="0" role="button" aria-label="Phân khu 03 – Biệt thự ven hồ">
+            <polygon class="zf" pathLength="1" points="60,296 290,288 300,404 72,420"/>
+            <polygon points="60,296 290,288 300,404 72,420" fill="url(#villas)" clip-path="url(#cC)" pointer-events="none"/>
+            <g class="pin"><circle cx="178" cy="354" r="15"/><text x="178" y="354">03</text></g>
+          </g>
+          <!-- zone D park -->
+          <g class="zone park" data-z="3" tabindex="0" role="button" aria-label="Phân khu 04 – Công viên trung tâm">
+            <path class="zf" pathLength="1" d="M318 336 C318 296 372 284 424 286 C486 288 534 304 534 338 C534 374 482 396 422 394 C362 392 318 374 318 336Z"/>
+            <path d="M318 336 C318 296 372 284 424 286 C486 288 534 304 534 338 C534 374 482 396 422 394 C362 392 318 374 318 336Z" fill="url(#trees)" pointer-events="none"/>
+            <ellipse cx="426" cy="340" rx="56" ry="24" fill="rgba(63,184,166,.42)" pointer-events="none"/>
+            <g class="pin"><circle cx="500" cy="366" r="15"/><text x="500" y="366">04</text></g>
+          </g>
+          <!-- zone E -->
+          <g class="zone" data-z="4" tabindex="0" role="button" aria-label="Phân khu 05 – Trung tâm tiện ích">
+            <polygon class="zf" pathLength="1" points="566,292 760,286 764,392 572,384"/>
+            <g fill="rgba(242,237,227,.18)" pointer-events="none">
+              <rect x="590" y="306" width="70" height="44" rx="4"/>
+              <rect x="676" y="304" width="66" height="26" rx="3"/>
+              <rect x="676" y="338" width="66" height="10" rx="2" fill="rgba(63,184,166,.5)"/>
+              <circle cx="618" cy="366" r="9" fill="rgba(63,184,166,.3)"/>
+            </g>
+            <g class="pin"><circle cx="716" cy="368" r="15"/><text x="716" y="368">05</text></g>
+          </g>
+          <!-- north + scale -->
+          <g transform="translate(752 26)" fill="none" stroke="rgba(233,238,245,.55)" stroke-width="1.2"><circle r="14"/><path d="M0 -9 L5 6 L0 3 L-5 6Z" fill="rgba(217,178,111,.85)" stroke="none"/></g>
+          <text x="752" y="56" fill="rgba(233,238,245,.55)" font-family="Lexend" font-size="10" text-anchor="middle">B</text>
+          <g transform="translate(610 500)" stroke="rgba(233,238,245,.5)" stroke-width="1"><path d="M0 0H120M0 -4V4M60 -3V3M120 -4V4"/></g>
+          <text x="610" y="514" fill="rgba(233,238,245,.5)" font-family="Lexend" font-size="9">0</text>
+          <text x="716" y="514" fill="rgba(233,238,245,.5)" font-family="Lexend" font-size="9">200 m</text>
+        </svg></div>
+        <div class="mp-foot">
+          <div class="mp-tot"><div><b>28,6&nbsp;ha</b><span>Tổng diện tích</span></div><div><b>5</b><span>Phân khu</span></div><div><b>2.072</b><span>Căn hộ, nhà phố, biệt thự</span></div><div><b>45%</b><span>Cây xanh, mặt nước, giao thông</span></div></div>
+          <div class="mp-legend"><span><i></i>Đất ở</span><span><i class="w"></i>Cây xanh, mặt nước</span><span class="tap"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 11V4.5a1.5 1.5 0 013 0V10l3.2.8a2 2 0 011.5 2.2l-.5 3.4A2 2 0 0113.2 18H9.6a2 2 0 01-1.6-.8L5 13.4a1.4 1.4 0 012-1.9z"/></svg>Chạm vào bản đồ để xem từng phân&nbsp;khu</span></div>
+        </div>
+      </div>
+      <div class="mp-panel rv d1">
+        <div class="mp-chips" role="group" aria-label="Chọn phân khu" id="mpChips"></div>
+        <div class="mp-body" id="mpBody" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="prod" id="san-pham" aria-labelledby="prod-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Dòng sản&nbsp;phẩm</span><h2 class="h2 rv d1" id="prod-title">Bốn cách sống, <em>một khu&nbsp;vườn&nbsp;chung</em></h2></div>
+      <p class="lead rv d2">Từ căn hộ một phòng ngủ cho người trẻ đến biệt thự ven hồ cho gia đình nhiều thế hệ. Chọn một dòng sản phẩm để xem thông số và mặt bằng minh&nbsp;hoạ.</p>
+    </div>
+    <div class="acc rv" id="acc"></div>
+    <p class="prod-note">Giá dự kiến, sẽ công bố chính thức tại lễ ra mắt 06/12/2026. Giá đã gồm VAT, chưa gồm 2% phí bảo&nbsp;trì.</p>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amen" id="tien-ich" aria-labelledby="amen-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Tiện ích nội&nbsp;khu</span><h2 class="h2 rv d1" id="amen-title">Mỗi&nbsp;ngày bắt&nbsp;đầu từ <em>công&nbsp;viên</em></h2></div>
+      <p class="lead rv d2">Hơn 40 tiện ích trải từ mặt đất lên mái nhà. Phần lớn được hoàn thiện cùng giai đoạn một, để cư dân dọn về là dùng&nbsp;được.</p>
+    </div>
+    <div class="bento">
+      <figure class="tile t1 rv"><img loading="lazy" src="https://images.unsplash.com/photo-1776363497229-616cc7a541fe?auto=format&fit=crop&w=1400&q=80" alt="Hồ bơi trên mái lúc chạng vạng"><figcaption><b>Hồ bơi tràn trên mái</b><span>Dài 50&nbsp;m, nhìn về phía sông</span></figcaption></figure>
+      <figure class="tile t2 rv d1"><img loading="lazy" src="https://images.unsplash.com/photo-1742844552193-2fd3425cd26d?auto=format&fit=crop&w=900&q=80" alt="Sảnh đón ngập nắng"><figcaption><b>Sảnh đón cao 2 tầng</b><span>Lễ tân và khu chờ cho khách</span></figcaption></figure>
+      <figure class="tile t3 rv d2"><img loading="lazy" src="https://images.unsplash.com/photo-1514862038465-f9cb76a7a74b?auto=format&fit=crop&w=900&q=80" alt="Sân tập golf trên mái toà nhà"><figcaption><b>Sân tập golf trên&nbsp;mái</b><span>Mở cửa từ 5:30 đến 22:00</span></figcaption></figure>
+      <figure class="tile t4 rv"><img loading="lazy" src="https://images.unsplash.com/photo-1535689077097-a8726b5ff822?auto=format&fit=crop&w=900&q=80" alt="Các toà nhà có vườn xanh trên mái"><figcaption><b>Vườn trên mái</b><span>Mỗi toà có một khu vườn chung</span></figcaption></figure>
+      <figure class="tile t5 rv d1"><img loading="lazy" src="https://images.unsplash.com/photo-1784767348409-2b530cfcb161?auto=format&fit=crop&w=1400&q=80" alt="Đường nội khu chiếu sáng ban đêm"><figcaption><b>Đường dạo bộ chiếu sáng</b><span>Kết nối năm phân khu, có camera và bảo vệ 24/7</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="pay" id="thanh-toan" aria-labelledby="pay-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Tiến độ thanh&nbsp;toán</span><h2 class="h2 rv d1" id="pay-title">Trả theo từng nấc xây&nbsp;dựng, <em>không&nbsp;dồn&nbsp;ép</em></h2></div>
+      <p class="lead rv d2">Chọn dòng sản phẩm hoặc kéo thanh giá trị căn. Bảng bên phải tự tính số tiền từng đợt và tổng đã trả tới mỗi&nbsp;mốc.</p>
+    </div>
+    <div class="pay-grid">
+      <div class="calc rv">
+        <h3>Tự tính số tiền từng&nbsp;đợt</h3>
+        <label class="fld"><span>Dòng sản phẩm</span>
+          <select class="sel" id="cProd"></select>
+        </label>
+        <div class="fld">
+          <span style="display:block;font-size:13px;font-weight:500;color:#3A4558;margin-bottom:8px" id="cLbl">Giá trị căn (đã gồm VAT)</span>
+          <div class="price-out"><b id="cPrice">0</b><span>chưa gồm phí bảo&nbsp;trì</span></div>
+          <input type="range" id="cRange" min="3" max="60" step="0.1" value="5.2" aria-labelledby="cLbl">
+          <div class="range-lbl"><span>3&nbsp;tỷ</span><span>60&nbsp;tỷ</span></div>
+        </div>
+        <div class="bar" id="cBar" aria-hidden="true"></div>
+        <div class="bar-lg"><span>Trước bàn giao: 70%</span><span>Bàn giao + sổ: 30%</span></div>
+        <div class="calc-sum">
+          <div><span>Đặt cọc + ký hợp đồng</span><b id="cFirst">0</b></div>
+          <div><span>Phí bảo trì 2% (khi nhận nhà)</span><b id="cFee">0</b></div>
+        </div>
+      </div>
+      <div class="rv d1">
+        <table class="sched" aria-label="Lịch thanh toán theo tiến độ (mẫu)">
+          <thead><tr><th>Đợt</th><th>Thời điểm</th><th>Tỷ lệ</th><th>Số tiền</th><th>Luỹ kế</th></tr></thead>
+          <tbody id="sched"></tbody>
+        </table>
+        <div class="law"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 2.5l6 2.5v4.5c0 4-2.6 6.8-6 8-3.4-1.2-6-4-6-8V5z"/><path d="M7.2 10l2 2 3.6-4"/></svg><p>Lịch trên tuân theo Luật Kinh doanh bất động sản 2023 cho nhà ở hình thành trong tương lai: tiền cọc không quá 5% giá bán, lần thanh toán đầu không quá 30%, tổng trước bàn giao không quá 70% và giữ lại 5% đến khi bạn nhận sổ&nbsp;hồng.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="tl" id="tien-do" aria-labelledby="tl-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Tiến độ xây&nbsp;dựng</span><h2 class="h2 rv d1" id="tl-title">Từ lễ ra&nbsp;mắt đến ngày <em>nhận&nbsp;chìa&nbsp;khoá</em></h2></div>
+      <p class="lead rv d2">Tiến độ được cập nhật mỗi tháng kèm ảnh chụp công trường trong trang dành cho khách hàng đã ký hợp&nbsp;đồng.</p>
+    </div>
+    <ol class="tl-track" id="tlTrack">
+      <li class="tl-line" aria-hidden="true"><i></i></li>
+      <li class="tl-item now rv"><span class="tl-dot"></span><p class="tl-when">06/12/2026</p><h3>Lễ ra mắt dự&nbsp;án</h3><p>Công bố bảng giá, chính sách bán hàng và mở nhà mẫu.</p><span class="tl-tag">Sắp diễn ra</span></li>
+      <li class="tl-item rv d1"><span class="tl-dot"></span><p class="tl-when">Quý I/2027</p><h3>Khởi công Thanh&nbsp;Vân</h3><p>Thi công móng bốn tháp căn hộ phân khu 01.</p><span class="tl-tag">Dự kiến</span></li>
+      <li class="tl-item rv d2"><span class="tl-dot"></span><p class="tl-when">Quý IV/2027</p><h3>Công viên trung&nbsp;tâm</h3><p>Hoàn thiện hồ cảnh quan và 2,4&nbsp;km đường chạy.</p><span class="tl-tag">Dự kiến</span></li>
+      <li class="tl-item rv d3"><span class="tl-dot"></span><p class="tl-when">Quý III/2028</p><h3>Cất nóc tháp T1, T2</h3><p>Nhà phố và biệt thự hoàn thiện mặt ngoài.</p><span class="tl-tag">Dự kiến</span></li>
+      <li class="tl-item rv d4"><span class="tl-dot"></span><p class="tl-when">Quý II/2029</p><h3>Bàn giao đợt&nbsp;1</h3><p>Bàn giao căn hộ cùng toàn bộ tiện ích giai đoạn một.</p><span class="tl-tag">Dự kiến</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section class="legal" id="phap-ly" aria-labelledby="lg-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow rv">Pháp lý dự&nbsp;án</span><h2 class="h2 rv d1" id="lg-title">Công&nbsp;khai cả giấy&nbsp;tờ <em>đang&nbsp;chờ&nbsp;cấp</em></h2></div>
+      <p class="lead rv d2">Chúng tôi chỉ nhận đặt cọc khi dự án có văn bản đủ điều kiện bán nhà ở hình thành trong tương lai. Trước thời điểm đó, bạn chỉ cần đăng ký nhận thông&nbsp;tin.</p>
+    </div>
+    <div class="lg-grid">
+      <article class="doc rv"><svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 3h10l5 5v19H8z"/><path d="M18 3v5h5M12 14h8M12 18h8M12 22h5"/></svg><h3>Quyết&nbsp;định chấp&nbsp;thuận chủ&nbsp;trương đầu&nbsp;tư</h3><p>Số 0000/QĐ-UBND, cấp ngày 12/03/2025 (số hiệu mẫu).</p><span class="st ok"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Đã có</span></article>
+      <article class="doc rv d1"><svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="4" y="5" width="22" height="20" rx="2"/><path d="M4 12h22M12 12v13M18 18h8"/></svg><h3>Quy&nbsp;hoạch chi&nbsp;tiết tỷ&nbsp;lệ&nbsp;1/500</h3><p>Phê duyệt ngày 28/08/2025 (số hiệu mẫu).</p><span class="st ok"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Đã có</span></article>
+      <article class="doc rv d2"><svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 24l6-15 5 9 3-5 6 11z"/><circle cx="21" cy="7" r="2.5"/></svg><h3>Giấy chứng&nbsp;nhận quyền sử&nbsp;dụng&nbsp;đất</h3><p>Toàn bộ 28,6&nbsp;ha, đã hoàn tất giải phóng mặt bằng.</p><span class="st ok"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg>Đã có</span></article>
+      <article class="doc rv d3"><svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 26V10l9-6 9 6v16z"/><path d="M12 26v-8h6v8"/></svg><h3>Giấy&nbsp;phép xây&nbsp;dựng phân&nbsp;khu&nbsp;01</h3><p>Hồ sơ đã nộp, đang được cơ quan chức năng thẩm định.</p><span class="st wait"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 5v3.5l2 1.5"/></svg>Đang thẩm định</span></article>
+      <article class="doc key rv d4"><svg class="ic" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="15" r="5"/><path d="M16 15h11M23 15v4M27 15v3"/></svg><h3>Văn&nbsp;bản đủ điều&nbsp;kiện bán nhà&nbsp;ở hình&nbsp;thành trong tương&nbsp;lai</h3><p>Chỉ nhận đặt cọc sau khi có văn bản này. Hiện chỉ nhận đăng ký thông&nbsp;tin.</p><span class="st no"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M5.5 8h5"/></svg>Chưa có</span></article>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="reg" id="dang-ky" aria-labelledby="reg-title">
+  <div class="reg-bg"><img loading="lazy" src="https://images.unsplash.com/photo-1759472018220-d6e258796fce?auto=format&fit=crop&w=1800&q=70" alt=""></div>
+  <div class="wrap reg-grid">
+    <div>
+      <span class="eyebrow rv">Đăng ký sớm</span>
+      <h2 class="h2 rv d1" id="reg-title" style="margin-top:20px">Nhận bảng&nbsp;giá và&nbsp;mặt&nbsp;bằng <em>trước lễ&nbsp;ra&nbsp;mắt</em></h2>
+      <ul class="gets">
+        <li class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"/><path d="M9 12h6M9 16h6"/></svg><div><b>Bảng giá dự kiến từng dòng sản&nbsp;phẩm</b><span>Gửi qua email hoặc Zalo trong 24 giờ làm việc.</span></div></li>
+        <li class="rv d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 11h9V4M12 15h9"/></svg><div><b>Mặt bằng điển hình (PDF)</b><span>Kèm diện tích thông thủy và hướng từng căn.</span></div></li>
+        <li class="rv d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><div><b>Thư mời lễ ra mắt 06/12/2026</b><span>Mỗi thư mời dành cho tối đa hai người.</span></div></li>
+      </ul>
+    </div>
+    <form class="form rv d1" id="regForm" novalidate>
+      <div class="fbody">
+        <h3>Thông tin của bạn</h3>
+        <p>Chuyên viên tư vấn sẽ gọi lại trong giờ hành chính.</p>
+        <div class="row2">
+          <label class="f" id="fName"><span>Họ và tên <em>*</em></span><input class="inp" name="name" autocomplete="name" required><span class="msg">Vui lòng nhập họ tên.</span></label>
+          <label class="f" id="fPhone"><span>Số điện thoại <em>*</em></span><input class="inp" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" required><span class="msg">Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.</span></label>
+        </div>
+        <label class="f" id="fEmail"><span>Email</span><input class="inp" name="email" type="email" autocomplete="email" placeholder="ban@email.com"><span class="msg">Email chưa đúng định dạng.</span></label>
+        <fieldset id="fPick"><legend>Sản phẩm quan tâm <em style="font-style:normal;color:#B05A45">*</em></legend>
+          <div class="picks" id="picks"></div>
+          <span class="msg">Chọn ít nhất một dòng sản phẩm.</span>
+        </fieldset>
+        <label class="f"><span>Ngân sách dự kiến</span>
+          <select class="sel" name="budget"><option value="">Chọn khoảng ngân sách</option><option>Dưới 5 tỷ</option><option>5 – 10 tỷ</option><option>10 – 20 tỷ</option><option>Trên 20 tỷ</option></select>
+        </label>
+        <label class="cb"><input type="checkbox" name="event"><span>Tôi muốn tham dự lễ ra mắt ngày 06/12/2026.</span></label>
+        <label class="cb" id="fConsent"><input type="checkbox" name="consent" required><span>Tôi đồng ý để Thiên Thanh Garden City dùng họ tên, số điện thoại và email ở trên để gửi bảng giá và liên hệ tư vấn về dự án. Tôi có thể yêu cầu xoá thông tin bất cứ lúc nào. <em style="font-style:normal;color:#B05A45">*</em></span><span class="msg">Cần đồng ý để chúng tôi gửi bảng giá cho bạn.</span></label>
+        <label class="cb"><input type="checkbox" name="promo"><span>Nhận tin về chính sách bán hàng và sự kiện của dự án (không bắt buộc).</span></label>
+        <button class="btn btn-ink" type="submit">Gửi đăng ký <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></button>
+        <p class="form-foot">Đây là form mẫu, thông tin không được gửi đi.</p>
+      </div>
+      <div class="ok-box" role="status">
+        <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="28" cy="28" r="26"/><path d="M17 29l7 7 15-16"/></svg>
+        <h3 id="okTitle">Đã nhận đăng ký</h3>
+        <p id="okText">Bảng giá dự kiến sẽ được gửi cho bạn trong 24 giờ làm việc.</p>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <a class="logo" href="#top" style="margin-bottom:18px"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="none" stroke="#D9B26F" stroke-opacity=".5"/><path d="M8 25 Q20 9 32 25" fill="none" stroke="#D9B26F" stroke-width="1.8" stroke-linecap="round"/><path d="M20 33V20M20 27q-5-1.5-7-6.5M20 25q5-1.5 7-6.5" fill="none" stroke="#3FB8A6" stroke-width="1.8" stroke-linecap="round"/></svg><span><b>Thiên&nbsp;Thanh</b><small>Garden City</small></span></a>
+        <p>Chủ đầu tư: Công ty Cổ phần Phát triển Đô thị Thiên&nbsp;Thanh (tên mẫu).</p>
+      </div>
+      <div>
+        <h4>Nhà mẫu</h4>
+        <p>Đại lộ Thiên Thanh, Phường Long&nbsp;Bình, TP.HCM</p>
+        <p>Mở cửa 8:00 – 18:00, cả thứ Bảy và Chủ&nbsp;nhật</p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <p>Hotline: 0900&nbsp;000&nbsp;000 (số mẫu)</p>
+        <p>Email: lienhe@thienthanh.example</p>
+      </div>
+    </div>
+    <p class="note">Nội dung mẫu: tên dự án, giá, diện tích, chính sách và hình ảnh chỉ để minh hoạ giao diện. Số hiệu giấy tờ pháp lý, tiến độ và tiện ích là giả định. Ảnh: Unsplash.</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="m-close" data-close aria-label="Đóng"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+    <div class="m-media"><img id="mImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt=""><div class="m-thumbs" id="mThumbs"></div></div>
+    <div class="m-body">
+      <span class="eyebrow" id="mZone"></span>
+      <h3 id="mTitle"></h3>
+      <p class="m-type" id="mType"></p>
+      <div class="m-price"><span>Giá dự kiến từ</span><b id="mPrice"></b></div>
+      <p class="m-vat">Đã gồm VAT, chưa gồm 2% phí bảo trì. Giá chính thức công bố ngày 06/12/2026.</p>
+      <table class="spec"><tbody id="mSpec"></tbody></table>
+      <div class="m-plan"><div id="mPlan"></div><p id="mPlanNote">Mặt bằng minh hoạ, không theo tỷ lệ.</p></div>
+      <a class="btn btn-gold" href="#dang-ky" id="mCta" style="width:100%">Nhận mặt bằng chi tiết <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<a class="kt-badge" id="ktBadge" href="https://zalo.me/0901432113" target="_blank" rel="noopener"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+  'use strict';
+  var U = function(id,w,q){return 'https://images.unsplash.com/'+id+'?auto=format&fit=crop&w='+(w||900)+'&q='+(q||80)};
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var ARROW = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>';
+  var CHECK = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8"/></svg>';
+
+  /* money format: 3.700.000.000 -> "3,7 tỷ"; 185.000.000 -> "185 triệu" */
+  function money(v){
+    if (v >= 1e9){
+      var t = Math.round(v/1e7)/100;
+      return String(t).replace('.', ',') + ' tỷ';
+    }
+    return Math.round(v/1e6).toLocaleString('vi-VN') + ' triệu';
+  }
+
+  /* ---------- header + badge ---------- */
+  var hdr = $('#hdr'), badge = $('#ktBadge');
+  var ticking = false;
+  function onScroll(){
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function(){
+      var y = window.scrollY || window.pageYOffset;
+      hdr.classList.toggle('solid', y > 40);
+      badge.classList.toggle('show', y > window.innerHeight * 0.85);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* ---------- mobile nav ---------- */
+  var mnav = $('#mnav'), burger = $('#burger');
+  function setNav(open){
+    mnav.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    if (open) $('#mclose').focus(); else burger.focus({preventScroll:true});
+  }
+  burger.addEventListener('click', function(){ setNav(true) });
+  $('#mclose').addEventListener('click', function(){ setNav(false) });
+  $$('#mnav a').forEach(function(a){ a.addEventListener('click', function(){ mnav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); document.documentElement.style.overflow=''; }) });
+
+  /* ---------- hero intro ---------- */
+  var hero = $('#hero');
+  requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('ready') }) });
+
+  /* ---------- reveal ---------- */
+  var io = ('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); if (e.target._onIn) e.target._onIn(); } });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.08}) : null;
+  function watch(el, cb){ if (cb) el._onIn = cb; if (io && !reduce) io.observe(el); else { el.classList.add('in'); if (cb) cb(); } }
+  $$('.rv').forEach(function(el){ watch(el) });
+  watch($('#tlTrack'));
+
+  /* ---------- counters ---------- */
+  $$('[data-count]').forEach(function(el){
+    var to = parseFloat(el.getAttribute('data-count')), dec = +(el.getAttribute('data-dec')||0);
+    var fmt = function(v){ return v.toFixed(dec).replace('.', ',') };
+    el.textContent = reduce ? fmt(to) : fmt(0);
+    watch(el.closest('.stat'), function(){
+      if (reduce){ el.textContent = fmt(to); return; }
+      var t0 = null, dur = 1600;
+      function step(ts){ if (!t0) t0 = ts; var p = Math.min(1,(ts-t0)/dur), e = 1-Math.pow(1-p,3); el.textContent = fmt(to*e); if (p<1) requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    });
+  });
+
+  /* ---------- countdown ---------- */
+  var target = new Date('2026-12-06T18:00:00+07:00').getTime();
+  var cells = {}; $$('#cd [data-u]').forEach(function(b){ cells[b.getAttribute('data-u')] = b });
+  var pad = function(n){ return (n<10?'0':'')+n };
+  var cdTimer = null;
+  function tick(){
+    var diff = Math.max(0, target - Date.now());
+    var d = Math.floor(diff/864e5), h = Math.floor(diff/36e5)%24, m = Math.floor(diff/6e4)%60, s = Math.floor(diff/1e3)%60;
+    var v = {d:pad(d),h:pad(h),m:pad(m),s:pad(s)};
+    for (var k in v){ if (cells[k].textContent !== v[k]) cells[k].textContent = v[k]; }
+    if (diff === 0){ $('.live').lastChild.textContent = 'Đã diễn ra'; stopCd(); }
+  }
+  function startCd(){ if (!cdTimer){ tick(); cdTimer = setInterval(tick, 1000); } }
+  function stopCd(){ clearInterval(cdTimer); cdTimer = null; }
+  startCd();
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stopCd() : startCd() });
+
+  /* ---------- masterplan ---------- */
+  var ZONES = [
+    {k:'Phân khu 01', name:'Căn hộ Thanh Vân', desc:'Bốn tháp căn hộ 25–32 tầng quay mặt về công viên trung tâm, khối đế thương mại và vườn treo nối các tháp ở tầng 5.', m:[['6,1 ha','Diện tích'],['1.860','Căn hộ'],['4','Tháp']], l:['Căn 1PN+ đến 3PN và duplex sân vườn','Vườn treo dài 260 m nối bốn tháp','Hầm đỗ xe hai tầng, sạc xe điện'], p:'can-ho'},
+    {k:'Phân khu 02', name:'Nhà phố thương mại Lam Ngọc', desc:'Dãy nhà phố mặt tiền đại lộ 32 m, tầng trệt kinh doanh, ba tầng trên để ở hoặc làm văn phòng.', m:[['5,4 ha','Diện tích'],['148','Căn'],['5×20 m','Lô điển hình']], l:['Vỉa hè 6 m, có mái che đi bộ','Bãi đỗ xe khách phía sau dãy nhà','Hệ thống ngầm hoá điện, cáp quang'], p:'nha-pho'},
+    {k:'Phân khu 03', name:'Biệt thự ven hồ', desc:'Biệt thự đơn lập thấp tầng nằm giữa sông và công viên, mỗi căn có sân vườn riêng và lối ra bờ nước.', m:[['7,3 ha','Diện tích'],['64','Căn'],['300–520 m²','Diện tích đất']], l:['Cổng an ninh riêng cho phân khu','Bến thuyền kayak và đường dạo ven sông','Mật độ xây dựng thấp, nhiều cây xanh'], p:'biet-thu'},
+    {k:'Phân khu 04', name:'Công viên trung tâm', desc:'Lá phổi xanh của khu đô thị: hồ cảnh quan, rừng cây bản địa và đường chạy bộ vòng quanh.', m:[['4,2 ha','Diện tích'],['1,1 ha','Mặt hồ'],['2,4 km','Đường chạy']], l:['Sân chơi trẻ em theo độ tuổi','Khu tập thể thao ngoài trời','Sân khấu cỏ cho sự kiện cuối tuần'], p:null},
+    {k:'Phân khu 05', name:'Trung tâm tiện ích', desc:'Cụm trường học liên cấp, clubhouse và hồ bơi 50 m, đặt cạnh đường vành đai để đón cả khách bên ngoài.', m:[['2,8 ha','Diện tích'],['50 m','Hồ bơi'],['3','Cấp học']], l:['Trường liên cấp mầm non đến THCS','Clubhouse, phòng gym, phòng sinh hoạt chung','Phòng khám đa khoa và nhà thuốc'], p:null}
+  ];
+  var zoneEls = $$('.zone'), chips = $('#mpChips'), body = $('#mpBody'), curZ = -1;
+  ZONES.forEach(function(z,i){
+    var b = document.createElement('button'); b.type='button'; b.className='chip';
+    b.textContent = ['Căn hộ','Nhà phố','Biệt thự','Công viên','Tiện ích'][i];
+    b.setAttribute('aria-pressed','false');
+    b.addEventListener('click', function(){ selectZone(i) });
+    chips.appendChild(b);
+  });
+  function renderZone(i){
+    var z = ZONES[i];
+    body.innerHTML = '<p class="mp-k">'+z.k+'</p><h3 class="mp-name">'+z.name+'</h3><p class="mp-desc">'+z.desc+'</p>'+
+      '<div class="mp-metrics">'+z.m.map(function(x){return '<div><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join('')+'</div>'+
+      '<ul class="mp-list">'+z.l.map(function(x){return '<li>'+CHECK+'<span>'+x+'</span></li>'}).join('')+'</ul>'+
+      (z.p ? '<button type="button" class="btn btn-line" data-open="'+z.p+'">Xem sản phẩm '+ARROW+'</button>' : '<a class="btn btn-line" href="#tien-ich">Xem tiện ích '+ARROW+'</a>');
+    var ob = body.querySelector('[data-open]'); if (ob) ob.addEventListener('click', function(){ openModal(ob.getAttribute('data-open'), ob) });
+  }
+  function selectZone(i){
+    if (i === curZ) return;
+    zoneEls.forEach(function(el,j){ el.classList.toggle('on', j===i); el.setAttribute('aria-pressed', j===i?'true':'false') });
+    $$('.chip', chips).forEach(function(c,j){ c.setAttribute('aria-pressed', j===i?'true':'false') });
+    if (curZ < 0 || reduce){ renderZone(i); }
+    else { body.classList.add('swap'); setTimeout(function(){ renderZone(i); body.classList.remove('swap') }, 260); }
+    curZ = i;
+  }
+  zoneEls.forEach(function(el,i){
+    el.addEventListener('click', function(){ selectZone(i) });
+    el.addEventListener('keydown', function(e){ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); selectZone(i) } });
+  });
+  selectZone(0);
+  watch($('#mpMap'));
+
+  /* ---------- products ---------- */
+  var PRODUCTS = [
+    {id:'can-ho', zone:'Phân khu 01 · Thanh Vân', name:'Căn&nbsp;hộ Thanh&nbsp;Vân', short:'Căn hộ', type:'Căn 1PN+, 2PN, 3PN trong bốn tháp 25–32 tầng', area:'52–118 m²', price:3.7e9,
+      imgs:['photo-1786883245592-4142cdaaa714','photo-1757924461488-ef9ad0670978'],
+      spec:[['Diện tích thông thủy','52–118 m²'],['Phòng ngủ','1–3'],['Hướng ban công','Đông Nam, Tây Bắc'],['Bàn giao','Hoàn thiện cơ bản, Quý II/2029'],['Pháp lý','Sổ hồng lâu dài cho người Việt Nam']], plan:'apt', planNote:'Mặt bằng minh hoạ căn 2PN, 74 m² thông thủy.'},
+    {id:'duplex', zone:'Phân khu 01 · Thanh Vân', name:'Duplex sân&nbsp;vườn', short:'Duplex', type:'Căn hai tầng có sân vườn riêng trên tầng cao', area:'140–190 m²', price:11.5e9,
+      imgs:['photo-1782751042589-b833cc900f18','photo-1776362355123-ca966d36e29c'],
+      spec:[['Diện tích thông thủy','140–190 m²'],['Phòng ngủ','3–4'],['Sân vườn riêng','25–40 m²'],['Bàn giao','Hoàn thiện cơ bản, Quý II/2029'],['Pháp lý','Sổ hồng lâu dài cho người Việt Nam']], plan:'apt', planNote:'Mặt bằng minh hoạ tầng dưới căn duplex 3PN.'},
+    {id:'nha-pho', zone:'Phân khu 02 · Lam Ngọc', name:'Nhà&nbsp;phố thương&nbsp;mại Lam&nbsp;Ngọc', short:'Nhà phố', type:'1 trệt 3 lầu, mặt tiền đại lộ 32 m', area:'Đất 100–150 m²', price:18.9e9,
+      imgs:['photo-1722421492323-eaf9c401befe','photo-1784767348409-2b530cfcb161'],
+      spec:[['Diện tích đất','100–150 m²'],['Kết cấu','1 trệt, 3 lầu, sân thượng'],['Mặt tiền','5–7,5 m'],['Bàn giao','Hoàn thiện mặt ngoài, Quý IV/2028'],['Pháp lý','Sổ hồng lâu dài']], plan:'lot', planNote:'Mặt bằng minh hoạ lô 5×20 m.'},
+    {id:'biet-thu', zone:'Phân khu 03 · Ven hồ', name:'Biệt&nbsp;thự ven&nbsp;hồ', short:'Biệt thự', type:'Biệt thự đơn lập 3 tầng, sân vườn và lối ra bờ nước', area:'Đất 300–520 m²', price:42e9,
+      imgs:['photo-1613977257363-707ba9348227','photo-1706808849780-7a04fbac83ef'],
+      spec:[['Diện tích đất','300–520 m²'],['Kết cấu','3 tầng, tầng hầm tuỳ chọn'],['Phòng ngủ','5'],['Bàn giao','Hoàn thiện mặt ngoài, Quý IV/2028'],['Pháp lý','Sổ hồng lâu dài']], plan:'lot', planNote:'Mặt bằng minh hoạ lô 15×24 m.'}
+  ];
+  var byId = {}; PRODUCTS.forEach(function(p){ byId[p.id] = p });
+
+  var acc = $('#acc');
+  PRODUCTS.forEach(function(p,i){
+    var el = document.createElement('div');
+    el.className = 'pc' + (i===0 ? ' open' : '');
+    el.setAttribute('role','button'); el.tabIndex = 0;
+    el.setAttribute('aria-label', p.name.replace(/&nbsp;/g,' ') + ' – xem chi tiết');
+    el.innerHTML = '<img loading="lazy" src="'+U(p.imgs[0],1200)+'" alt="">'+
+      '<span class="pc-n">0'+(i+1)+' / 04</span><span class="pc-vt" aria-hidden="true">'+p.short+'</span>'+
+      '<div class="pc-body"><p class="pc-type">'+p.zone+'</p><h3>'+p.name+'</h3>'+
+      '<div class="pc-meta"><div><span>Diện tích</span><b>'+p.area+'</b></div><div><span>Giá dự kiến từ</span><b class="g">'+money(p.price)+'</b></div></div>'+
+      '<span class="pc-more">Xem chi tiết và mặt bằng '+ARROW+'</span></div>';
+    var hoverable = window.matchMedia('(hover:hover) and (min-width:1025px)');
+    el.addEventListener('mouseenter', function(){ if (hoverable.matches) openPanel(el) });
+    el.addEventListener('focus', function(){ if (hoverable.matches) openPanel(el) });
+    el.addEventListener('click', function(){
+      if (window.innerWidth > 1024 && !el.classList.contains('open')) { openPanel(el); return; }
+      openModal(p.id, el);
+    });
+    el.addEventListener('keydown', function(e){ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); openModal(p.id, el) } });
+    acc.appendChild(el);
+  });
+  function openPanel(el){ $$('.pc', acc).forEach(function(x){ x.classList.toggle('open', x===el) }) }
+
+  /* plans */
+  function planApt(){
+    return '<svg viewBox="0 0 360 200" fill="none" stroke="rgba(233,238,245,.7)" stroke-width="1.6" font-family="Lexend" font-size="10" aria-hidden="true">'+
+      '<rect x="6" y="6" width="348" height="160" stroke-width="3"/>'+
+      '<path d="M130 6V96M130 120V166M230 6V70M130 96H190M214 96H354M6 96H100"/>'+
+      '<path d="M190 96a24 24 0 0 1 24 -24" stroke-dasharray="3 3" stroke-width="1"/>'+
+      '<rect x="6" y="166" width="348" height="28" stroke="rgba(217,178,111,.7)" stroke-dasharray="4 3"/>'+
+      '<g fill="rgba(233,238,245,.75)" stroke="none"><text x="68" y="52" text-anchor="middle">P. NGỦ MASTER</text><text x="68" y="66" text-anchor="middle" fill="rgba(233,238,245,.45)">14,2 m²</text>'+
+      '<text x="180" y="44" text-anchor="middle">P. NGỦ 2</text><text x="180" y="58" text-anchor="middle" fill="rgba(233,238,245,.45)">10,8 m²</text>'+
+      '<text x="292" y="44" text-anchor="middle">BẾP</text><text x="292" y="58" text-anchor="middle" fill="rgba(233,238,245,.45)">8,6 m²</text>'+
+      '<text x="68" y="136" text-anchor="middle">WC</text><text x="242" y="136" text-anchor="middle">PHÒNG KHÁCH + ĂN</text><text x="242" y="150" text-anchor="middle" fill="rgba(233,238,245,.45)">28,4 m²</text>'+
+      '<text x="180" y="184" text-anchor="middle" fill="#D9B26F">BAN CÔNG · VIEW CÔNG VIÊN</text></g></svg>';
+  }
+  function planLot(){
+    return '<svg viewBox="0 0 360 200" fill="none" stroke="rgba(233,238,245,.7)" stroke-width="1.6" font-family="Lexend" font-size="10" aria-hidden="true">'+
+      '<rect x="6" y="6" width="348" height="188" stroke="rgba(217,178,111,.7)" stroke-dasharray="5 4"/>'+
+      '<rect x="70" y="30" width="230" height="140" stroke-width="3"/>'+
+      '<path d="M150 30V170M230 30V110M230 110H300M150 110H230"/>'+
+      '<circle cx="34" cy="40" r="12" stroke="rgba(63,184,166,.8)"/><circle cx="34" cy="160" r="14" stroke="rgba(63,184,166,.8)"/><circle cx="328" cy="60" r="10" stroke="rgba(63,184,166,.8)"/>'+
+      '<g fill="rgba(233,238,245,.75)" stroke="none"><text x="110" y="104" text-anchor="middle">GARA</text><text x="190" y="74" text-anchor="middle">KHÁCH</text><text x="265" y="74" text-anchor="middle">BẾP</text><text x="190" y="144" text-anchor="middle">SẢNH</text><text x="265" y="144" text-anchor="middle">WC · KHO</text>'+
+      '<text x="20" y="104" fill="#3FB8A6">SÂN</text><text x="306" y="186" fill="#D9B26F" text-anchor="end">RANH ĐẤT</text></g></svg>';
+  }
+
+  /* modal */
+  var modal = $('#modal'), lastFocus = null, curP = null;
+  function setImg(src){
+    var img = $('#mImg'); img.style.opacity = 0;
+    var n = new Image(); n.onload = n.onerror = function(){ img.src = src; img.style.opacity = 1 }; n.src = src;
+  }
+  function openModal(id, from){
+    var p = byId[id]; if (!p) return; curP = p; lastFocus = from || document.activeElement;
+    $('#mZone').textContent = p.zone;
+    $('#mTitle').innerHTML = p.name;
+    $('#mType').textContent = p.type;
+    $('#mPrice').textContent = money(p.price);
+    $('#mSpec').innerHTML = p.spec.map(function(r){ return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td></tr>' }).join('');
+    $('#mPlan').innerHTML = p.plan === 'apt' ? planApt() : planLot();
+    $('#mPlanNote').textContent = p.planNote + ' Không theo tỷ lệ.';
+    $('#mImg').alt = p.name.replace(/&nbsp;/g,' ');
+    setImg(U(p.imgs[0],1400));
+    var th = $('#mThumbs'); th.innerHTML = '';
+    p.imgs.forEach(function(im,k){
+      var b = document.createElement('button'); b.type='button'; b.setAttribute('aria-pressed', k===0?'true':'false'); b.setAttribute('aria-label','Ảnh '+(k+1));
+      b.innerHTML = '<img src="'+U(im,200,60)+'" alt="">';
+      b.addEventListener('click', function(){ setImg(U(im,1400)); $$('button', th).forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false') }) });
+      th.appendChild(b);
+    });
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow = 'hidden';
+    setTimeout(function(){ $('.m-close', modal).focus({preventScroll:true}) }, 60);
+  }
+  function closeModal(){
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true});
+  }
+  $$('[data-close]', modal).forEach(function(b){ b.addEventListener('click', closeModal) });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ if (modal.classList.contains('open')) closeModal(); if (mnav.classList.contains('open')) setNav(false); }
+    if (e.key === 'Tab' && modal.classList.contains('open')){
+      var f = $$('button, a[href], input, select', $('.modal-card')).filter(function(x){ return x.offsetParent !== null });
+      if (!f.length) return;
+      if (e.shiftKey && document.activeElement === f[0]){ e.preventDefault(); f[f.length-1].focus() }
+      else if (!e.shiftKey && document.activeElement === f[f.length-1]){ e.preventDefault(); f[0].focus() }
+    }
+  });
+  $('#mCta').addEventListener('click', function(){
+    closeModal();
+    if (curP){ var cb = $('#picks input[value="'+curP.id+'"]'); if (cb){ cb.checked = true; $('#fPick').classList.remove('err') } }
+  });
+
+  /* ---------- payment calculator ---------- */
+  var SCHED = [
+    ['Đặt cọc','Khi dự án đủ điều kiện kinh doanh',5],
+    ['Ký hợp đồng mua bán','Trong 30 ngày sau đặt cọc',25],
+    ['Hoàn thành móng','Có biên bản nghiệm thu',10],
+    ['Cất nóc','Dự kiến Quý III/2028',15],
+    ['Hoàn thiện mặt ngoài','Trước bàn giao 3 tháng',15],
+    ['Nhận bàn giao nhà','Dự kiến Quý II/2029',25],
+    ['Nhận sổ hồng','Khi cơ quan chức năng cấp sổ',5]
+  ];
+  var cProd = $('#cProd'), cRange = $('#cRange'), tbody = $('#sched'), bar = $('#cBar');
+  PRODUCTS.forEach(function(p){ var o = document.createElement('option'); o.value = p.id; o.textContent = p.name.replace(/&nbsp;/g,' ') + ' – từ ' + money(p.price).replace(' ',' '); cProd.appendChild(o) });
+  var COLORS = ['#9C7A3F','#B8925A','#C9A570','#D9B26F','#E5C48E','#3FB8A6','#0B1626'];
+  bar.innerHTML = SCHED.map(function(s,i){ return '<i style="flex-basis:'+s[2]+'%;background:'+COLORS[i]+'"></i>' }).join('');
+  tbody.innerHTML = SCHED.map(function(s,i){ return '<tr><td>0'+(i+1)+'</td><td class="t"><b>'+s[0]+'</b><small>'+s[1]+'</small></td><td class="pct">'+s[2]+'%</td><td class="amt" data-i="'+i+'">–</td><td class="cum" data-c="'+i+'">–</td></tr>' }).join('');
+  function calc(){
+    var v = parseFloat(cRange.value) * 1e9;
+    var pct = (cRange.value - cRange.min) / (cRange.max - cRange.min) * 100;
+    cRange.style.setProperty('--p', pct + '%');
+    $('#cPrice').textContent = money(v);
+    var cum = 0;
+    SCHED.forEach(function(s,i){
+      cum += s[2];
+      tbody.querySelector('[data-i="'+i+'"]').textContent = money(v*s[2]/100);
+      tbody.querySelector('[data-c="'+i+'"]').textContent = 'Luỹ kế ' + cum + '%';
+    });
+    $('#cFirst').textContent = money(v*0.30);
+    $('#cFee').textContent = money(v*0.02);
+  }
+  cProd.addEventListener('change', function(){ cRange.value = (byId[cProd.value].price/1e9).toFixed(1); calc() });
+  cRange.addEventListener('input', calc);
+  cRange.value = (PRODUCTS[0].price/1e9).toFixed(1); calc();
+
+  /* ---------- form ---------- */
+  var picks = $('#picks');
+  PRODUCTS.forEach(function(p){
+    var l = document.createElement('label'); l.className = 'pick';
+    l.innerHTML = '<input type="checkbox" name="product" value="'+p.id+'"><span>'+CHECK+p.short+'</span>';
+    picks.appendChild(l);
+  });
+  var form = $('#regForm');
+  function setErr(el, bad){ el.classList.toggle('err', bad); return !bad }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var F = form.elements;
+    var name = F['name'].value.trim(), phone = F['phone'].value.replace(/[\s.\-]/g,''), email = F['email'].value.trim();
+    var ok = true;
+    ok = setErr($('#fName'), name.length < 2) && ok;
+    ok = setErr($('#fPhone'), !/^0\d{9}$/.test(phone)) && ok;
+    ok = setErr($('#fEmail'), email !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) && ok;
+    ok = setErr($('#fPick'), !$$('input[name="product"]:checked', form).length) && ok;
+    ok = setErr($('#fConsent'), !F['consent'].checked) && ok;
+    if (!ok){ var first = form.querySelector('.err input, .err select'); if (first) first.focus(); return; }
+    var first = name.split(' ').pop();
+    $('#okTitle').textContent = 'Cảm ơn ' + first + ', đã nhận đăng ký';
+    $('#okText').textContent = 'Bảng giá dự kiến và mặt bằng sẽ được gửi tới số ' + F['phone'].value.trim() + ' qua Zalo trong 24 giờ làm việc.' + (F['event'].checked ? ' Thư mời lễ ra mắt 06/12/2026 sẽ gửi kèm.' : '');
+    form.classList.add('done');
+    form.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'});
+  });
+  $$('input, select', form).forEach(function(i){
+    i.addEventListener('input', function(){ var f = i.closest('.err'); if (f) f.classList.remove('err') });
+    i.addEventListener('change', function(){ var f = i.closest('.err'); if (f) f.classList.remove('err') });
+  });
+})();
+</script>
+</body>
+</html>
