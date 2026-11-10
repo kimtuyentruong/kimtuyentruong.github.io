@@ -377,3 +377,26 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 .ribbon .track.mqx .mq-in{gap:0}
 @media (max-width:600px){.pf-rows .mq-in{gap:14px}}
 @media (max-width:900px),(hover:none){.role .dot{animation:none}}
+
+/* ---------- certificates: compact stack in Experience (v10) ---------- */
+.certs{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;padding-block:26px 8px;border-top:1px solid var(--line);align-items:center}
+.certs-t{display:flex;flex-direction:column;gap:8px}
+.certs-cap{font-size:13.5px;line-height:1.5;color:var(--muted);min-height:3em}
+.cstack{display:flex;align-items:center;height:150px;padding-left:8px}
+.cs:first-child{margin-left:0}
+.cs{position:relative;z-index:var(--i);flex:0 0 auto;height:118px;margin-left:-40px;border-radius:6px;overflow:hidden;opacity:.5;transform:rotate(calc((var(--i) - 1.5) * 3deg));box-shadow:0 14px 28px -14px rgba(0,0,0,.9);transition:opacity .35s ease,transform .4s cubic-bezier(.2,.7,.2,1);-webkit-tap-highlight-color:transparent}
+.cs img{display:block;height:100%;width:auto}
+.cstack:hover .cs,.cstack.has-on .cs{opacity:.3}
+.cstack .cs:hover,.cstack .cs.on,.cstack .cs:focus-visible{opacity:1;z-index:9;transform:translateY(-8px) scale(1.14) rotate(0deg)}
+.cs:focus-visible{outline:2px solid var(--flame);outline-offset:3px}
+.lb{max-width:min(94vw,1100px);max-height:94vh;padding:0;border:1px solid var(--line-2);border-radius:18px;background:var(--surface);color:var(--ink);overflow:hidden}
+.lb::backdrop{background:rgba(6,4,3,.86)}
+.lb[open]{display:flex;flex-direction:column}
+.lb img{display:block;max-width:100%;max-height:calc(94vh - 64px);width:auto;height:auto;margin:0 auto;object-fit:contain;background:#fff}
+.lb-cap{margin:0;padding:12px 60px 14px 18px;font-size:14px;line-height:1.5;color:var(--muted)}
+.lb-cap a{color:var(--url);font-weight:600;white-space:nowrap;margin-left:6px}
+.lb-x{position:absolute;top:10px;right:10px;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:999px;background:rgba(10,7,6,.82);color:var(--ink);cursor:pointer}
+.lb-x:focus-visible{outline:2px solid var(--flame);outline-offset:2px}
+@media (max-width:600px){.certs{grid-template-columns:minmax(0,1fr);gap:6px}}
+@media (max-width:600px){.cstack{height:122px;padding-left:6px}.cs{height:92px;margin-left:-30px}.cs:first-child{margin-left:0}}
+@media (prefers-reduced-motion:reduce){.cs{transition:none}}

@@ -137,3 +137,37 @@
     document.querySelectorAll('.rv').forEach(function (e) { io.observe(e); });
   } else document.querySelectorAll('.rv').forEach(function (e) { e.classList.add('in'); });
 })();
+
+/* certificates (v10): hover/tap brings one forward, click opens <dialog> */
+(function () {
+  var stack = document.querySelector('.cstack'), lb = document.getElementById('certLb');
+  if (!stack) return;
+  var capEl = document.querySelector('.certs-cap'), hint = capEl ? capEl.innerHTML : '';
+  var items = stack.querySelectorAll('.cs'), touch = matchMedia('(hover:none)').matches;
+  if (touch && capEl && capEl.getAttribute('data-touch')) { hint = capEl.getAttribute('data-touch'); capEl.innerHTML = hint; }
+  function on(a) {
+    items.forEach(function (x) { x.classList.toggle('on', x === a); });
+    stack.classList.toggle('has-on', !!a);
+    if (capEl) { if (a) capEl.textContent = a.getAttribute('data-cap'); else capEl.innerHTML = hint; }
+  }
+  items.forEach(function (a) {
+    a.addEventListener('mouseenter', function () { if (!touch) on(a); });
+    a.addEventListener('focus', function () { if (!touch) on(a); });
+    a.addEventListener('click', function (e) {
+      if (touch && !a.classList.contains('on')) { e.preventDefault(); on(a); return; }
+      if (!lb || typeof lb.showModal !== 'function') return;
+      e.preventDefault(); open(a);
+    });
+  });
+  stack.addEventListener('mouseleave', function () { on(null); });
+  if (!lb || typeof lb.showModal !== 'function') return;
+  var img = lb.querySelector('img'), cap = lb.querySelector('.lb-cap span'), ver = lb.querySelector('.lb-cap a');
+  function open(a) {
+    img.src = a.getAttribute('href');
+    var t = a.getAttribute('data-cap') || ''; cap.textContent = t; img.alt = t;
+    var v = a.getAttribute('data-verify'); ver.hidden = !v; if (v) ver.href = v; else ver.removeAttribute('href');
+    lb.showModal();
+  }
+  lb.querySelector('.lb-x').addEventListener('click', function () { lb.close(); });
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
+})();
