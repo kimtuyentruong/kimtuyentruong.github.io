@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cắt Tóc Nam, Fade, Cạo Râu Khăn Nóng TP.HCM | Neon Blade Barber Club</title>
+<meta name="description" content="Mẫu giao diện website barbershop phong cách tối, kim loại và đèn neon: bảng giá cắt tóc nam, skin fade, cạo râu khăn nóng, đội thợ, hình kiểu tóc và đặt lịch theo giờ trống ngay trên web.">
+<meta name="theme-color" content="#08090B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2308090B'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%237DF3FF' stroke-width='3.5'/%3E%3Cpath d='M14 50 50 14' stroke='%23FF2D46' stroke-width='5.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Be+Vietnam+Pro:wght@400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Neon Blade Barber Club (dữ liệu mẫu)","description":"Dữ liệu mẫu cho mẫu giao diện website barbershop. Tên tiệm, địa chỉ, giá và giờ mở cửa chỉ để minh hoạ.","telephone":"+84900000000","priceRange":"120.000đ – 550.000đ","currenciesAccepted":"VND","address":{"@type":"PostalAddress","streetAddress":"86 Lê Thánh Tôn","addressLocality":"Phường Sài Gòn","addressRegion":"TP.HCM","addressCountry":"VN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"21:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"09:00","closes":"22:00"}]}
+</script>
+<style>
+:root{
+  --bg:#08090B;--bg2:#0E1013;--steel:#16191E;--steel2:#22262D;--steel3:#343943;
+  --chrome:#C9CED6;--text:#E8EBEF;--muted:#9CA3AD;--dim:#6B727C;
+  --red:#FF2D46;--red-d:#D61C34;--ice:#7DF3FF;
+  --line:rgba(201,206,214,.13);--line2:rgba(201,206,214,.24);
+  --display:'Barlow Condensed','Arial Narrow',sans-serif;--sans:'Be Vietnam Pro',system-ui,sans-serif;
+  --pad:clamp(18px,4vw,56px);--max:1320px;--ease:cubic-bezier(.2,.7,.1,1);
+  --chrome-grad:linear-gradient(180deg,#F4F6F8 0%,#B9C0C9 42%,#6E7680 50%,#D7DCE2 62%,#9AA2AC 100%);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;line-height:1;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
+p{margin:0}
+.ico{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.steel{background-color:var(--bg2);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),linear-gradient(180deg,rgba(255,255,255,.025),transparent 40%)}
+.kick{display:inline-flex;align-items:center;gap:12px;font:600 14px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;color:var(--ice)}
+.kick::before{content:"";width:34px;height:2px;background:var(--ice);box-shadow:0 0 8px rgba(125,243,255,.8)}
+.h2{font-size:clamp(42px,6.4vw,92px);margin-top:18px}
+.h2 .ch{background:var(--chrome-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.h2 .nr{color:var(--red);text-shadow:0 0 18px rgba(255,45,70,.55)}
+.lead{color:var(--muted);font-size:17px;max-width:560px;margin-top:20px}
+.sec{padding:clamp(80px,11vw,150px) 0;position:relative}
+.sample{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;padding:6px 9px;border:1px solid var(--line2);color:var(--chrome);border-radius:2px;background:rgba(8,9,11,.7)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border:0;border-radius:2px;font:700 17px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s,transform .2s var(--ease),border-color .2s}
+.btn .ico{width:18px;height:18px;transition:transform .25s var(--ease)}
+.btn:hover .ico{transform:translateX(4px)}
+.btn.red{background:var(--red);color:#fff;box-shadow:0 0 0 1px rgba(255,45,70,.6),0 10px 30px -10px rgba(255,45,70,.8)}
+.btn.red:hover{background:var(--red-d)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line2)}
+.btn.ghost:hover{border-color:var(--ice);color:var(--ice)}
+.btn:disabled{opacity:.35;cursor:not-allowed;box-shadow:none}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.hdr.scrolled{background:rgba(8,9,11,.96);border-color:var(--line)}
+.hdr .wrap{height:76px;display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto;min-height:44px}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{display:block;font:800 23px/1 var(--display);letter-spacing:.12em}
+.logo small{display:block;font:600 11px/1 var(--display);letter-spacing:.42em;color:var(--muted);margin-top:4px}
+.nav{display:flex;gap:4px}
+.nav a{font:600 15px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--chrome);padding:14px 12px;position:relative}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:8px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:hover{color:#fff}.nav a:hover::after{transform:scaleX(1)}
+.hdr .btn{min-height:46px;padding:0 20px;font-size:15px}
+.menu-btn{display:none;width:48px;height:48px;border:1px solid var(--line2);background:transparent;border-radius:2px;align-items:center;justify-content:center}
+.mnav{position:fixed;inset:0;z-index:80;background:#08090B;display:flex;flex-direction:column;padding:20px var(--pad) 40px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.mnav.open{opacity:1;visibility:visible}
+.mnav-top{display:flex;justify-content:space-between;align-items:center;height:56px}
+.mnav nav{display:flex;flex-direction:column;margin-top:30px;border-top:1px solid var(--line)}
+.mnav nav a{font:700 40px/1 var(--display);text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.mnav nav a span{font-size:15px;color:var(--ice);letter-spacing:.2em}
+.mnav .btn{margin-top:auto}
+.xbtn{width:48px;height:48px;border:1px solid var(--line2);background:transparent;border-radius:2px;display:flex;align-items:center;justify-content:center}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:118px 0 70px;overflow:hidden;background:radial-gradient(900px 520px at 78% 30%,rgba(125,243,255,.07),transparent 60%),radial-gradient(700px 500px at 10% 90%,rgba(255,45,70,.08),transparent 60%),var(--bg)}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 1px,transparent 1px 4px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,5vw,80px);align-items:center;width:100%}
+.sign{display:inline-flex;align-items:center;gap:12px;padding:10px 18px 11px;border:2px solid rgba(125,243,255,.85);border-radius:40px;box-shadow:0 0 14px rgba(125,243,255,.45),inset 0 0 12px rgba(125,243,255,.3)}
+.sign b{font:italic 600 22px/1 var(--display);letter-spacing:.1em;color:#FFE3E7;text-shadow:0 0 4px #fff,0 0 12px var(--red),0 0 26px var(--red),0 0 44px rgba(255,45,70,.7)}
+.sign i{width:9px;height:9px;border-radius:50%;background:var(--ice);box-shadow:0 0 10px var(--ice)}
+.js .sign{opacity:.12}
+.js .sign.on{opacity:1;animation:flick 1.6s linear}
+@keyframes flick{0%{opacity:.12}6%{opacity:1}9%{opacity:.15}14%{opacity:.95}17%{opacity:.2}30%{opacity:.2}33%{opacity:1}37%{opacity:.35}40%,100%{opacity:1}}
+.h1{font-size:clamp(64px,10.4vw,168px);line-height:.92;margin-top:26px;letter-spacing:0}
+.h1 .ln{display:block;overflow:hidden;padding:.06em 0 .02em}
+.h1 .ln>span{display:block;transform:translateY(105%);transition:transform 1s var(--ease)}
+.loaded .h1 .ln>span{transform:none}
+.h1 .ln:nth-child(2)>span{transition-delay:.12s}
+.h1 .ln:nth-child(3)>span{transition-delay:.24s}
+.h1 .fade{background:linear-gradient(100deg,#9AA2AC 0%,#F4F6F8 20%,#7A828C 34%,#E3E7EB 48%,#9AA2AC 62%,#FFFFFF 78%,#8E96A0 100%);background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent}
+.loaded .h1 .fade{animation:sheen 2.6s .9s var(--ease) forwards}
+@keyframes sheen{to{background-position:0 0}}
+.h1 .dot{color:var(--red);text-shadow:0 0 22px rgba(255,45,70,.7)}
+.hero .lead{margin-top:26px;font-size:18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:0;margin-top:46px;border-top:1px solid var(--line)}
+.hero-facts div{padding:18px 26px 0 0;margin-right:26px;border-right:1px solid var(--line)}
+.hero-facts div:last-child{border:0;margin:0}
+.hero-facts b{display:block;font:700 30px/1 var(--display);letter-spacing:.02em}
+.hero-facts span{font-size:13.5px;color:var(--muted)}
+.hero-art{position:relative;justify-self:end;width:100%;max-width:500px}
+.frame{position:relative;aspect-ratio:4/5;clip-path:polygon(0 0,86% 0,100% 10%,100% 100%,14% 100%,0 90%);background:var(--steel)}
+.frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 2.4s var(--ease)}
+.loaded .frame img{transform:scale(1)}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,9,11,.85))}
+.hero-art .edge{position:absolute;left:-14px;top:12%;bottom:22%;width:3px;background:var(--red);box-shadow:0 0 12px var(--red),0 0 30px rgba(255,45,70,.6)}
+.hero-art .edge2{position:absolute;right:-14px;top:30%;height:30%;width:3px;background:var(--ice);box-shadow:0 0 12px var(--ice)}
+.pole{position:absolute;right:28px;top:-26px;width:20px;height:150px;border-radius:10px;border:2px solid #9AA2AC;background:repeating-linear-gradient(-45deg,#F3F5F7 0 10px,var(--red) 10px 20px,#F3F5F7 20px 30px,#3A7BD5 30px 40px);background-size:100% 56.57px;animation:pole 2.4s linear infinite;z-index:2}
+.pole::before,.pole::after{content:"";position:absolute;left:-5px;right:-5px;height:12px;background:var(--chrome-grad);border-radius:3px}
+.pole::before{top:-10px}.pole::after{bottom:-10px}
+@keyframes pole{to{background-position:0 56.57px}}
+.paused .pole{animation-play-state:paused}
+.hero-tag{position:absolute;left:-30px;bottom:34px;background:var(--bg);border:1px solid var(--line2);padding:14px 18px;display:flex;gap:12px;align-items:center;z-index:2}
+.hero-tag .ico{color:var(--ice);width:26px;height:26px}
+.hero-tag b{display:block;font:700 19px/1.1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.hero-tag span{font-size:13px;color:var(--muted)}
+.scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:2px;height:46px;background:linear-gradient(var(--line2),transparent);overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-14px;width:2px;height:14px;background:var(--ice);animation:cue 2s ease-in-out infinite}
+@keyframes cue{to{transform:translateY(64px)}}
+
+/* ticker */
+.ticker{position:relative;height:74px;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.ticker .tk{position:absolute;top:0;height:74px;display:flex;align-items:center;gap:28px;padding-right:28px;font:700 30px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;color:var(--chrome);will-change:transform}
+.ticker .tk.alt{color:transparent;-webkit-text-stroke:1px rgba(201,206,214,.55)}
+.ticker .dia{width:10px;height:10px;transform:rotate(45deg);background:var(--red);box-shadow:0 0 10px var(--red)}
+.no-tk .ticker{display:flex;justify-content:center}
+.no-tk .ticker .tk{position:static}
+
+/* pain / process */
+.pain{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,96px);align-items:start}
+.pain-list{margin-top:38px;display:grid;gap:0;border-top:1px solid var(--line)}
+.pain-list div{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.pain-list .ico{width:28px;height:28px;color:var(--red)}
+.pain-list b{display:block;font:700 22px/1.15 var(--display);letter-spacing:.03em;text-transform:uppercase}
+.pain-list span{color:var(--muted);font-size:15px}
+.shop{position:relative;margin-top:6px}
+.shop img{width:100%;aspect-ratio:16/11;object-fit:cover;filter:saturate(.9) contrast(1.05)}
+.shop figcaption{position:absolute;right:16px;top:16px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;background:var(--line)}
+.step{background:var(--bg);padding:26px 24px 28px;position:relative;overflow:hidden}
+.step em{font:italic 600 54px/1 var(--display);color:transparent;-webkit-text-stroke:1px var(--steel3);position:absolute;right:16px;top:12px;font-style:italic}
+.step b{display:block;font:700 23px/1.1 var(--display);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+.step b::before{content:"";display:block;width:26px;height:2px;background:var(--ice);margin-bottom:16px;box-shadow:0 0 8px rgba(125,243,255,.7)}
+.step p{color:var(--muted);font-size:15px;max-width:30ch}
+
+/* price */
+.price-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(40px,6vw,90px);align-items:start}
+.price-side{position:sticky;top:110px}
+.price-side .tools{margin-top:34px;position:relative}
+.price-side .tools img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.price-side .tools::before{content:"";position:absolute;left:-10px;top:-10px;width:70px;height:70px;border-left:2px solid var(--red);border-top:2px solid var(--red)}
+.note{font-size:14px;color:var(--muted);margin-top:18px}
+.pgroup+.pgroup{margin-top:54px}
+.pgroup h3{font-size:clamp(26px,3vw,34px);letter-spacing:.06em;display:flex;align-items:baseline;gap:14px;padding-bottom:16px;border-bottom:2px solid var(--steel3)}
+.pgroup h3 small{font:600 13px/1 var(--display);letter-spacing:.2em;color:var(--ice)}
+.prow{position:relative;display:grid;grid-template-columns:1fr auto auto auto;align-items:center;gap:22px;padding:20px 10px 20px 4px;border-bottom:1px solid var(--line);overflow:hidden;isolation:isolate}
+.prow::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,.0) 30%,rgba(230,236,242,.16) 44%,rgba(255,255,255,.34) 50%,rgba(125,243,255,.14) 56%,transparent 72%);transform:translateX(-110%);pointer-events:none}
+.prow::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:linear-gradient(90deg,var(--red),var(--ice));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.prow:hover::before,.prow:focus-within::before,.prow.sweep::before{transform:translateX(110%);transition:transform .9s var(--ease)}
+.prow:hover::after,.prow:focus-within::after{transform:scaleX(1)}
+.prow:hover .pname{color:#fff}
+.pname{font:700 24px/1.1 var(--display);letter-spacing:.03em;text-transform:uppercase;color:var(--text);transition:color .2s}
+.pdesc{display:block;font:400 14px/1.5 var(--sans);color:var(--muted);text-transform:none;letter-spacing:0;margin-top:5px}
+.ptime{display:inline-flex;align-items:center;gap:7px;font:600 15px/1 var(--display);letter-spacing:.1em;color:var(--muted);white-space:nowrap}
+.ptime .ico{width:16px;height:16px;color:var(--ice)}
+.pprice{font:700 30px/1 var(--display);letter-spacing:.02em;white-space:nowrap;background:var(--chrome-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pick{min-width:44px;min-height:44px;padding:0 14px;border:1px solid var(--line2);background:transparent;border-radius:2px;font:700 14px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--chrome);display:inline-flex;align-items:center;gap:6px;transition:border-color .2s,color .2s,background .2s}
+.pick:hover{border-color:var(--red);color:#fff;background:rgba(255,45,70,.12)}
+.pick .ico{width:16px;height:16px}
+.hot{display:inline-block;vertical-align:4px;margin-left:8px;font:700 11px/1 var(--display);letter-spacing:.16em;color:var(--red);border:1px solid rgba(255,45,70,.6);padding:4px 6px}
+
+/* barbers */
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.crew{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.barber{position:relative;background:var(--steel);overflow:hidden}
+.barber .ph{position:relative;aspect-ratio:3/4;overflow:hidden}
+.barber img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.barber:hover img{transform:scale(1.05)}
+.barber .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(8,9,11,.92))}
+.barber .yrs{position:absolute;top:14px;left:14px;z-index:1;font:700 14px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;background:var(--red);color:#fff;padding:7px 9px}
+.barber .info{position:absolute;left:0;right:0;bottom:0;padding:20px 20px 18px;z-index:1}
+.barber h3{font-size:34px;letter-spacing:.04em}
+.barber h3 small{display:block;font:600 13px/1 var(--display);letter-spacing:.2em;color:var(--ice);margin-bottom:8px}
+.barber p{font-size:14px;color:var(--chrome);margin-top:8px}
+.barber .pick{margin-top:14px;background:rgba(8,9,11,.6)}
+.barber::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--ice);box-shadow:0 0 14px var(--ice);transform:scaleX(0);transition:transform .5s var(--ease)}
+.barber:hover::after{transform:scaleX(1)}
+
+/* gallery */
+.gal{display:grid;grid-auto-flow:dense;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(160px,17vw,250px);gap:12px;margin-top:56px}
+.gal figure{margin:0;position:relative;overflow:hidden;background:var(--steel)}
+.gal figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal figure:nth-child(4){grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(8,9,11,.88));font:700 19px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;transform:translateY(8px);opacity:.92;transition:transform .4s var(--ease),opacity .4s}
+.gal figure:hover figcaption{transform:none;opacity:1}
+.gal figcaption::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);transform:rotate(45deg);margin-right:10px;vertical-align:2px}
+
+/* booking */
+.book{position:relative;overflow:hidden}
+.book-bg{position:absolute;inset:0;opacity:.13}
+.book-bg img{width:100%;height:100%;object-fit:cover}
+.book .wrap{position:relative}
+.bk{display:grid;grid-template-columns:1fr 340px;gap:0;margin-top:50px;border:1px solid var(--line2);background:rgba(8,9,11,.94)}
+.bk-main{padding:clamp(22px,3.4vw,44px);min-width:0}
+.bk-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:0 0 30px;padding:0;list-style:none}
+.bk-steps li{font:600 13px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--dim);padding-top:12px;border-top:3px solid var(--steel3)}
+.bk-steps li b{display:block;font-size:22px;letter-spacing:.04em}
+.bk-steps li.on{color:var(--text);border-color:var(--red)}
+.bk-steps li.ok{color:var(--muted);border-color:var(--ice)}
+.bk-panel h3:focus{outline:none}
+.bk-panel h3{font-size:30px;letter-spacing:.04em;margin-bottom:6px}
+.bk-panel .hint{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.opt{position:relative;display:block;cursor:pointer}
+.opt input{position:absolute;opacity:0;width:1px;height:1px}
+.opt .box{display:block;height:100%;min-height:64px;padding:14px 16px;border:1px solid var(--line2);background:var(--steel);transition:border-color .2s,background .2s}
+.opt .box b{display:block;font:700 19px/1.15 var(--display);letter-spacing:.04em;text-transform:uppercase}
+.opt .box span{display:block;font-size:13.5px;color:var(--muted);margin-top:4px}
+.opt:hover .box{border-color:var(--chrome)}
+.opt input:checked+.box{border-color:var(--red);background:rgba(255,45,70,.1);box-shadow:inset 3px 0 0 var(--red)}
+.opt input:focus-visible+.box{outline:2px solid var(--ice);outline-offset:2px}
+.opt.bar .box{display:flex;gap:12px;align-items:center}
+.opt.bar img,.opt.bar .any{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none}
+.opt.bar .any{display:flex;align-items:center;justify-content:center;border:1px dashed var(--chrome);color:var(--ice)}
+.dates{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.dates .opt{flex:0 0 auto}
+.dates .opt .box{min-width:78px;min-height:0;text-align:center;padding:10px 12px}
+.dates .opt .box b{font-size:22px}
+.dates .opt .box span{margin-top:2px;font-size:12px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));gap:8px;margin-top:22px}
+.slots .opt .box{min-height:46px;padding:0;display:flex;align-items:center;justify-content:center;font:600 17px/1 var(--display);letter-spacing:.06em}
+.slots .opt input:disabled+.box{opacity:.32;cursor:not-allowed;text-decoration:line-through;background:transparent}
+.slots-empty{color:var(--muted);font-size:14.5px;margin-top:18px;padding:14px 16px;border:1px dashed var(--line2)}
+.lbl{display:block;font:600 14px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--chrome);margin:22px 0 10px}
+.lbl:first-child{margin-top:0}
+.field{width:100%;min-height:52px;padding:12px 16px;background:var(--steel);border:1px solid var(--line2);border-radius:2px;font-size:16px}
+.field:focus{outline:none;border-color:var(--ice)}
+.field.bad{border-color:var(--red)}
+.err{display:block;color:#FF7385;font-size:13.5px;margin-top:6px;min-height:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:22px;font-size:14px;color:var(--chrome);cursor:pointer}
+.consent input{width:22px;height:22px;flex:none;margin:1px 0 0;accent-color:var(--red)}
+.bk-nav{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.bk-nav .btn{min-height:50px}
+.bk-sum{border-left:1px solid var(--line2);padding:clamp(22px,3vw,36px);background:var(--steel);display:flex;flex-direction:column}
+.bk-sum h4{margin:0 0 18px;font:700 22px/1 var(--display);letter-spacing:.12em;text-transform:uppercase}
+.bk-sum dl{margin:0;display:grid;gap:0}
+.bk-sum dl div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line2);font-size:14.5px}
+.bk-sum dt{color:var(--muted)}
+.bk-sum dd{margin:0;text-align:right;font-weight:500}
+.bk-sum .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:20px}
+.bk-sum .total span{font:600 14px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.bk-sum .total b{font:700 38px/1 var(--display);color:var(--ice);text-shadow:0 0 16px rgba(125,243,255,.45)}
+.bk-sum .priv{margin-top:auto;padding-top:24px;font-size:13px;color:var(--muted);display:flex;gap:10px}
+.bk-sum .priv .ico{color:var(--ice);width:18px;height:18px;margin-top:2px}
+.done{text-align:center;padding:20px 0 10px}
+.done .seal{width:84px;height:84px;margin:0 auto 22px;border-radius:50%;border:2px solid var(--ice);display:flex;align-items:center;justify-content:center;color:var(--ice);box-shadow:0 0 22px rgba(125,243,255,.35),inset 0 0 14px rgba(125,243,255,.25)}
+.done .seal .ico{width:38px;height:38px;stroke-width:2.4}
+.done h3{font-size:clamp(34px,4vw,48px)}
+.done .code{display:inline-block;margin:18px 0 6px;font:700 30px/1 var(--display);letter-spacing:.2em;color:var(--red);text-shadow:0 0 14px rgba(255,45,70,.5);border:1px dashed rgba(255,45,70,.6);padding:12px 18px}
+.done p{color:var(--muted);max-width:520px;margin:12px auto 0}
+.done .btn{margin-top:26px}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.rev{position:relative;background:var(--steel);border:1px solid var(--line);padding:30px 28px 26px;display:flex;flex-direction:column}
+.rev .q{width:40px;height:40px;color:var(--red);filter:drop-shadow(0 0 8px rgba(255,45,70,.6))}
+.rev .stars{display:flex;gap:3px;margin:18px 0 12px;color:var(--ice)}
+.rev .stars svg{width:16px;height:16px;fill:currentColor}
+.rev blockquote{margin:0;font-size:16px;line-height:1.7;color:var(--text);flex:1}
+.rev footer{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.rev footer b{display:block;color:var(--text);font:700 18px/1.1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,5vw,70px);margin-top:56px;align-items:stretch}
+.hours{border:1px solid var(--line2);background:var(--bg)}
+.status{display:flex;align-items:center;gap:12px;padding:20px 24px;border-bottom:1px solid var(--line2);font:600 18px/1.2 var(--display);letter-spacing:.1em;text-transform:uppercase}
+.status i{width:12px;height:12px;border-radius:50%;background:var(--dim);flex:none}
+.status.open i{background:#3DF58A;box-shadow:0 0 10px #3DF58A}
+.status.closed i{background:var(--red);box-shadow:0 0 10px var(--red)}
+.status small{display:block;font:400 13.5px/1.4 var(--sans);letter-spacing:0;text-transform:none;color:var(--muted);margin-top:3px}
+.hours table{width:100%;border-collapse:collapse}
+.hours td{padding:13px 24px;border-bottom:1px solid var(--line);font-size:15px}
+.hours tr:last-child td{border-bottom:0}
+.hours td:last-child{text-align:right;font:600 18px/1 var(--display);letter-spacing:.08em}
+.hours tr.today td{background:rgba(125,243,255,.06);color:#fff}
+.hours tr.today td:first-child{box-shadow:inset 3px 0 0 var(--ice)}
+.hours tr.today td:first-child::after{content:"Hôm nay";margin-left:10px;font:600 11px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--ice);border:1px solid rgba(125,243,255,.5);padding:3px 6px;vertical-align:2px}
+.contact{display:grid;gap:0;margin-top:0;border-top:1px solid var(--line2)}
+.contact a,.contact div{display:flex;gap:14px;align-items:center;padding:16px 24px;border-bottom:1px solid var(--line);text-decoration:none;font-size:15px;min-height:56px}
+.contact .ico{color:var(--red)}
+.contact a:hover{background:var(--steel)}
+.map{position:relative;border:1px solid var(--line2);background:#0B0D10;min-height:400px;overflow:hidden}
+.map svg.streets{position:absolute;inset:0;width:100%;height:100%}
+.map .pin{position:absolute;left:54%;top:46%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center}
+.map .pin b{font:700 15px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;background:var(--red);color:#fff;padding:8px 10px;white-space:nowrap}
+.map .pin svg{width:30px;height:38px}
+.map .ring{position:absolute;left:54%;top:46%;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;border:2px solid var(--red);opacity:0;animation:ring 2.4s ease-out infinite}
+.paused-map .ring{animation-play-state:paused}
+@keyframes ring{0%{transform:scale(.3);opacity:.9}100%{transform:scale(2.2);opacity:0}}
+.map .card{position:absolute;left:18px;right:18px;bottom:18px;background:rgba(8,9,11,.95);border:1px solid var(--line2);padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.map .card b{display:block;font:700 20px/1.1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.map .card span{font-size:14px;color:var(--muted)}
+.map .card .btn{min-height:46px;font-size:15px;padding:0 18px}
+.map .tagm{position:absolute;top:16px;left:16px}
+
+/* footer */
+.cta-band{position:relative;isolation:isolate;padding:clamp(70px,10vw,130px) 0;text-align:center;overflow:hidden;border-top:1px solid var(--line)}
+.cta-band h2{font-size:clamp(46px,8vw,120px)}
+.cta-band .nr{color:var(--red);text-shadow:0 0 18px rgba(255,45,70,.55)}
+.cta-band p{color:var(--muted);margin:18px auto 0;max-width:520px}
+.cta-band .btn{margin-top:32px}
+.cta-band .glow{position:absolute;left:50%;top:-1px;width:min(900px,90vw);height:2px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--red),var(--ice),transparent);z-index:-1}
+.ft{border-top:1px solid var(--line);padding:60px 0 30px;background:var(--bg2)}
+.ft-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.ft h4{margin:0 0 16px;font:700 16px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--chrome)}
+.ft p,.ft li{font-size:14.5px;color:var(--muted)}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.ft ul a{text-decoration:none;display:inline-flex;min-height:36px;align-items:center}
+.ft ul a:hover{color:var(--ice)}
+.ft .logo{margin-bottom:16px}
+.ft-note{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}
+.ft-note .row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(14,16,19,.96);border:1px solid rgba(201,206,214,.22);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#000}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#3ddc84;flex:none;box-shadow:0 0 0 3px rgba(61,220,132,.25)}
+.kt-badge b{color:var(--ice);font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1180px){
+  .nav a{padding:14px 8px;letter-spacing:.12em}
+  .crew{grid-template-columns:repeat(2,1fr)}
+  .bk{grid-template-columns:1fr}
+  .bk-sum{border-left:0;border-top:1px solid var(--line2)}
+  .bk-sum .priv{margin-top:18px}
+}
+@media (max-width:980px){
+  .nav,.hdr .btn{display:none}
+  .menu-btn{display:inline-flex}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{justify-self:start;max-width:560px;margin-top:20px}
+  .hero-tag{left:auto;right:12px;bottom:18px}
+  .scroll-cue{display:none}
+  .pain,.price-grid,.visit{grid-template-columns:1fr}
+  .price-side{position:static}
+  .price-side .tools{display:none}
+  .revs{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(150px,34vw,260px)}
+  .gal figure:nth-child(4){grid-row:span 1}
+  .gal figure:nth-child(7){grid-column:span 2}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .hdr .wrap{height:66px}
+  html{scroll-padding-top:66px}
+  .logo small{display:none}
+  .hero{padding-top:100px}
+  .hero-facts div{padding-right:16px;margin-right:16px}
+  .hero-facts b{font-size:24px}
+  .pole{right:16px;height:110px}
+  .steps{grid-template-columns:1fr}
+  .prow{grid-template-columns:1fr auto;gap:10px 16px;padding:18px 0}
+  .prow .pinfo{grid-column:1/-1}
+  .prow .ptime{order:1}
+  .prow .pprice{order:2;justify-self:end}
+  .prow .pick{order:3;grid-column:1/-1;justify-content:center}
+  .crew{gap:12px}
+  .barber h3{font-size:28px}
+  .barber .info{padding:14px}
+  .barber p{display:none}
+  .two{grid-template-columns:1fr}
+  .bk-steps li{font-size:11px;letter-spacing:.08em}
+  .bk-steps li b{font-size:18px}
+  .bk-nav .btn{flex:1;padding:0 14px}
+  .ft-grid{grid-template-columns:1fr}
+  .map{min-height:420px}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (max-width:480px){
+  .h1{font-size:17.5vw}
+  .opts{grid-template-columns:1fr}
+  .crew{grid-template-columns:1fr 1fr}
+  .barber .pick{width:100%;justify-content:center;padding:0 8px;letter-spacing:.08em}
+  .hero-tag{display:none}
+  .gal{grid-template-columns:1fr 1fr;gap:8px}
+  .gal figcaption{font-size:15px;padding:24px 10px 10px}
+}
+@media (hover:none){.barber:hover img,.gal figure:hover img{transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  .h1 .ln>span{transform:none}
+  .sign{opacity:1}
+  .frame img{transform:none}
+  .h1 .fade{background-position:30% 0}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-blade" viewBox="0 0 24 24"><path d="M3 17 17 3l4 4-9 9H8z"/><path d="M8 16l-4 4"/></symbol>
+  <symbol id="i-wait" viewBox="0 0 24 24"><path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9"/></symbol>
+  <symbol id="i-mirror" viewBox="0 0 24 24"><ellipse cx="12" cy="9" rx="6" ry="7"/><path d="M12 16v5M8 21h8M9.5 6.5l2-1.5"/></symbol>
+  <symbol id="i-talk" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 40 40"><path d="M6 30V20c0-6 3-10 9-12l1.5 3c-3 1.2-4.5 3.4-4.5 6.5H17V30zm17 0V20c0-6 3-10 9-12l1.5 3c-3 1.2-4.5 3.4-4.5 6.5H34V30z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 40 40"><rect x="1" y="1" width="38" height="38" rx="3" fill="#0E1013" stroke="#343943"/><circle cx="20" cy="20" r="11" fill="none" stroke="#7DF3FF" stroke-width="2"/><path d="M9 31 31 9" stroke="#FF2D46" stroke-width="3.2" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Neon Blade Barber Club, về đầu trang"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><b>NEON BLADE</b><small>BARBER CLUB</small></span></a>
+    <nav class="nav" aria-label="Menu chính">
+      <a href="#quy-trinh">Quy&nbsp;trình</a><a href="#bang-gia">Bảng&nbsp;giá</a><a href="#tho">Thợ</a><a href="#kieu-toc">Kiểu&nbsp;tóc</a><a href="#lien-he">Liên&nbsp;hệ</a>
+    </nav>
+    <a class="btn red" href="#dat-lich">Đặt&nbsp;lịch</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mnav-top">
+    <span class="logo"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><b>NEON BLADE</b></span></span>
+    <button class="xbtn" id="menuClose" aria-label="Đóng menu"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <nav aria-label="Menu di động">
+    <a href="#quy-trinh">Quy&nbsp;trình <span>01</span></a>
+    <a href="#bang-gia">Bảng&nbsp;giá <span>02</span></a>
+    <a href="#tho">Thợ <span>03</span></a>
+    <a href="#kieu-toc">Kiểu&nbsp;tóc <span>04</span></a>
+    <a href="#lien-he">Liên&nbsp;hệ <span>05</span></a>
+  </nav>
+  <a class="btn red" href="#dat-lich">Đặt&nbsp;lịch ngay <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+
+<main id="top">
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <div class="sign" id="sign" aria-hidden="true"><i></i><b>OPEN&nbsp;LATE · 22:00</b></div>
+      <h1 class="h1"><span class="ln"><span>Sắc&nbsp;nét</span></span><span class="ln"><span>từng&nbsp;đường</span></span><span class="ln"><span><span class="fade">Fade</span><span class="dot">.</span></span></span><span class="sr"> Cắt tóc nam, fade, cạo râu khăn nóng tại TP.HCM</span></h1>
+      <p class="lead">Barber club mở đến 22:00 giữa trung tâm Sài&nbsp;Gòn. Hẹn giờ trước trên web, đến là ngồi ghế, thợ hỏi kỹ kiểu bạn muốn rồi mới cầm tông&nbsp;đơ.</p>
+      <div class="hero-cta">
+        <a class="btn red" href="#dat-lich">Đặt&nbsp;lịch ngay <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn ghost" href="#bang-gia">Xem&nbsp;bảng&nbsp;giá</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>7&nbsp;ngày</b><span>mở cửa mỗi tuần</span></div>
+        <div><b>4&nbsp;thợ</b><span>đứng ghế chính</span></div>
+        <div><b>từ&nbsp;120.000đ</b><span>một lượt cắt</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <span class="pole" aria-hidden="true"></span>
+      <span class="edge" aria-hidden="true"></span><span class="edge2" aria-hidden="true"></span>
+      <div class="frame"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1000&q=70" alt="Thợ cạo viền râu bằng dao cạo cho khách nam" width="1000" height="1250" fetchpriority="high"></div>
+      <div class="hero-tag"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><div><b>Hẹn&nbsp;giờ · không&nbsp;chờ</b><span>Giữ ghế đúng khung bạn chọn</span></div></div>
+    </div>
+  </div>
+  <span class="scroll-cue" aria-hidden="true"></span>
+</section>
+
+<div class="ticker" id="ticker" aria-hidden="true"></div>
+
+<section class="sec" id="quy-trinh">
+  <div class="wrap pain">
+    <div>
+      <span class="kick rv">01 / Vì sao đặt lịch</span>
+      <h2 class="h2 rv">Cắt xong<br>vẫn thấy <span class="nr">sai&nbsp;sai?</span></h2>
+      <p class="lead rv">Phần lớn anh em đến tiệm đều từng gặp một trong ba chuyện này. Neon Blade làm việc theo cách khác.</p>
+      <div class="pain-list">
+        <div class="rv"><svg class="ico" aria-hidden="true"><use href="#i-wait"/></svg><p><b>Ngồi chờ cả tiếng</b><span>Đến giờ tan làm tiệm đông, không biết bao giờ tới lượt.</span></p></div>
+        <div class="rv d1"><svg class="ico" aria-hidden="true"><use href="#i-mirror"/></svg><p><b>Đường fade lệch, gáy&nbsp;lởm&nbsp;chởm</b><span>Hai bên không đều, vài hôm sau mọc lại là lộ ngay.</span></p></div>
+        <div class="rv d2"><svg class="ico" aria-hidden="true"><use href="#i-talk"/></svg><p><b>Thợ cắt theo ý thợ</b><span>Không hỏi khuôn mặt, kiểu tóc, cách bạn vuốt mỗi sáng.</span></p></div>
+      </div>
+    </div>
+    <div>
+      <figure class="shop rv" style="margin:0"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1100&q=70" alt="Không gian tiệm barbershop với ghế cắt tóc và gương" width="1100" height="756" loading="lazy"><figcaption><span class="sample">Ảnh minh hoạ</span></figcaption></figure>
+      <div class="steps">
+        <div class="step rv"><em>01</em><b>Tư vấn 5&nbsp;phút</b><p>Xem dáng mặt, xoáy tóc, hỏi công việc và thói quen vuốt tóc.</p></div>
+        <div class="step rv d1"><em>02</em><b>Cắt &amp; fade</b><p>Chia đường bằng tông đơ, chuyển lớp đều tay, kiểm tra hai bên trong gương.</p></div>
+        <div class="step rv d2"><em>03</em><b>Cạo viền khăn&nbsp;nóng</b><p>Đắp khăn ấm, cạo gáy và viền tóc mai bằng dao cạo một lần.</p></div>
+        <div class="step rv d3"><em>04</em><b>Chỉ cách vuốt</b><p>Thợ tạo kiểu và chỉ bạn dùng bao nhiêu sáp, sấy theo hướng nào.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec steel" id="bang-gia">
+  <div class="wrap price-grid">
+    <div class="price-side">
+      <span class="kick rv">02 / Bảng giá</span>
+      <h2 class="h2 rv">Giá rõ,<br><span class="ch">không&nbsp;phụ&nbsp;thu</span></h2>
+      <p class="lead rv">Giá đã gồm gội và tạo kiểu. Rê chuột hoặc chạm vào từng dòng, bấm <b>Chọn</b> để đặt lịch luôn dịch vụ đó.</p>
+      <div class="tools rv"><img src="https://images.unsplash.com/photo-1599351431613-18ef1fdd27e1?auto=format&fit=crop&w=800&q=70" alt="Bộ tông đơ và cữ cắt tóc xếp trên bàn gỗ" width="800" height="640" loading="lazy"></div>
+      <p class="note rv">Giá mẫu, áp dụng tại tiệm. Tóc dài hoặc dày cần thêm thời gian, thợ báo trước khi làm.</p>
+    </div>
+    <div id="priceList">
+      <div class="pgroup">
+        <h3 class="rv">Cắt &amp; Fade <small>04&nbsp;dịch&nbsp;vụ</small></h3>
+        <div class="prow" data-id="signature" data-min="45" data-price="180000"><p class="pinfo"><span class="pname">Cắt Tóc Signature</span><span class="hot">Hay chọn</span><span class="pdesc">Tư vấn kiểu, gội, cắt, sấy và vuốt sáp.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>45&nbsp;phút</span><span class="pprice">180.000đ</span><button class="pick" type="button">Chọn</button></div>
+        <div class="prow" data-id="skinfade" data-min="60" data-price="220000"><p class="pinfo"><span class="pname">Skin Fade</span><span class="pdesc">Fade sát da từ 0 mm, chuyển lớp mịn, cạo viền khăn nóng.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>60&nbsp;phút</span><span class="pprice">220.000đ</span><button class="pick" type="button">Chọn</button></div>
+        <div class="prow" data-id="taper" data-min="45" data-price="200000"><p class="pinfo"><span class="pname">Taper Fade Văn Phòng</span><span class="pdesc">Fade nhẹ ở gáy và tóc mai, gọn gàng khi đi làm.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>45&nbsp;phút</span><span class="pprice">200.000đ</span><button class="pick" type="button">Chọn</button></div>
+        <div class="prow" data-id="kid" data-min="30" data-price="120000"><p class="pinfo"><span class="pname">Cắt Tóc Bé Trai</span><span class="pdesc">Dưới 12 tuổi, thợ quen làm với bé, có ghế nâng.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>30&nbsp;phút</span><span class="pprice">120.000đ</span><button class="pick" type="button">Chọn</button></div>
+      </div>
+      <div class="pgroup">
+        <h3 class="rv">Râu &amp; Cạo Mặt <small>03&nbsp;dịch&nbsp;vụ</small></h3>
+        <div class="prow" data-id="shave" data-min="30" data-price="150000"><p class="pinfo"><span class="pname">Cạo Râu Khăn Nóng</span><span class="pdesc">Khăn ấm, dầu làm mềm, cạo dao một lần, đắp khăn lạnh se da.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>30&nbsp;phút</span><span class="pprice">150.000đ</span><button class="pick" type="button">Chọn</button></div>
+        <div class="prow" data-id="beard" data-min="25" data-price="120000"><p class="pinfo"><span class="pname">Tỉa Râu Tạo Dáng</span><span class="pdesc">Tỉa theo dáng hàm, cạo viền má và cổ cho sắc nét.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>25&nbsp;phút</span><span class="pprice">120.000đ</span><button class="pick" type="button">Chọn</button></div>
+        <div class="prow" data-id="combo" data-min="75" data-price="300000"><p class="pinfo"><span class="pname">Combo Cắt + Cạo Râu</span><span class="hot">Tiết kiệm 30.000đ</span><span class="pdesc">Cắt Tóc Signature và Cạo Râu Khăn Nóng trong một lượt.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>75&nbsp;phút</span><span class="pprice">300.000đ</span><button class="pick" type="button">Chọn</button></div>
+      </div>
+      <div class="pgroup">
+        <h3 class="rv">Uốn, Nhuộm &amp; Chăm Sóc <small>03&nbsp;dịch&nbsp;vụ</small></h3>
+        <div class="prow" data-id="perm" data-min="120" data-price="550000"><p class="pinfo"><span class="pname">Uốn Phồng Nam</span><span class="pdesc">Uốn chân tóc tạo độ phồng tự nhiên, giữ nếp khoảng 2–3 tháng.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>120&nbsp;phút</span><span class="pprice">550.000đ</span><button class="pick" type="button">Chọn</button></div>
+        <div class="prow" data-id="color" data-min="90" data-price="450000"><p class="pinfo"><span class="pname">Nhuộm Màu Thời Trang</span><span class="pdesc">Nâu khói, xám khói, đen ánh xanh. Thuốc ít mùi, thử dị ứng trước.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>90&nbsp;phút</span><span class="pprice">450.000đ</span><button class="pick" type="button">Chọn</button></div>
+        <div class="prow" data-id="wash" data-min="20" data-price="100000"><p class="pinfo"><span class="pname">Gội Massage Thư Giãn</span><span class="pdesc">Gội hai lần, bấm huyệt cổ vai gáy, sấy tạo kiểu.</span></p><span class="ptime"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>20&nbsp;phút</span><span class="pprice">100.000đ</span><button class="pick" type="button">Chọn</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tho">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kick rv">03 / Đội thợ</span><h2 class="h2 rv">Bốn tay&nbsp;kéo,<br><span class="ch">bốn&nbsp;thế&nbsp;mạnh</span></h2></div>
+      <p class="lead rv">Mỗi thợ có kiểu tay quen riêng. Chọn đúng người ngay lúc đặt lịch, hoặc để tiệm xếp thợ rảnh trước. <span class="sample">Thông tin thợ mẫu</span></p>
+    </div>
+    <div class="crew" id="crew">
+      <article class="barber rv" data-id="khoa" data-name="Khoa" data-spec="Skin fade, taper" data-img="photo-1531384441138-2736e62e0919"><div class="ph"><img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&w=600&h=800&q=70" alt="Thợ Khoa cầm tông đơ" width="600" height="800" loading="lazy"><span class="yrs">9&nbsp;năm nghề</span></div><div class="info"><h3><small>Head barber</small>Khoa</h3><p>Skin fade, taper, chia đường kẻ bằng dao.</p><button class="pick" type="button">Đặt với Khoa</button></div></article>
+      <article class="barber rv d1" data-id="tuan" data-name="Tuấn" data-spec="Râu, cạo khăn nóng" data-img="photo-1506794778202-cad84cf45f1d"><div class="ph"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&h=800&q=70" alt="Thợ Tuấn chân dung" width="600" height="800" loading="lazy"><span class="yrs">7&nbsp;năm nghề</span></div><div class="info"><h3><small>Beard specialist</small>Tuấn</h3><p>Cạo râu khăn nóng, tạo dáng râu theo hàm.</p><button class="pick" type="button">Đặt với Tuấn</button></div></article>
+      <article class="barber rv d2" data-id="duy" data-name="Duy" data-spec="Uốn, nhuộm, textured crop" data-img="photo-1507003211169-0a1dd7228f2d"><div class="ph"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=800&q=70" alt="Thợ Duy chân dung" width="600" height="800" loading="lazy"><span class="yrs">6&nbsp;năm nghề</span></div><div class="info"><h3><small>Texture &amp; color</small>Duy</h3><p>Uốn phồng, nhuộm khói, textured crop.</p><button class="pick" type="button">Đặt với Duy</button></div></article>
+      <article class="barber rv d3" data-id="bao" data-name="Bảo" data-spec="Pompadour, side part" data-img="photo-1599566150163-29194dcaad36"><div class="ph"><img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=600&h=800&q=70" alt="Thợ Bảo chân dung" width="600" height="800" loading="lazy"><span class="yrs">11&nbsp;năm nghề</span></div><div class="info"><h3><small>Classic cuts</small>Bảo</h3><p>Pompadour, side part, kiểu cổ điển cắt kéo.</p><button class="pick" type="button">Đặt với Bảo</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec steel" id="kieu-toc">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kick rv">04 / Kiểu tóc</span><h2 class="h2 rv">Trên ghế <span class="nr">Neon&nbsp;Blade</span></h2></div>
+      <p class="lead rv">Một vài kiểu anh em hay đặt. Mang ảnh kiểu bạn thích đến, thợ sẽ nói thật kiểu đó có hợp tóc bạn không.</p>
+    </div>
+    <div class="gal">
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1000&q=70" alt="Kiểu textured crop tóc dày" width="1000" height="1000" loading="lazy"><figcaption>Textured Crop</figcaption></figure>
+      <figure class="rv d1"><img src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&fit=crop&w=600&q=70" alt="Mid fade kết hợp râu" width="600" height="500" loading="lazy"><figcaption>Mid Fade + Râu</figcaption></figure>
+      <figure class="rv d2"><img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?auto=format&fit=crop&w=600&q=70" alt="Kiểu side part có đường kẻ" width="600" height="500" loading="lazy"><figcaption>Hard Part</figcaption></figure>
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?auto=format&fit=crop&w=600&h=1000&q=70" alt="Thợ cắt kéo tạo lớp" width="600" height="1000" loading="lazy"><figcaption>Cắt Kéo Tạo Lớp</figcaption></figure>
+      <figure class="rv d1"><img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=600&q=70" alt="Tỉa gáy bằng tông đơ" width="600" height="500" loading="lazy"><figcaption>Tỉa Gáy</figcaption></figure>
+      <figure class="rv d2"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=70" alt="Cạo râu khăn nóng bằng dao cạo" width="600" height="500" loading="lazy"><figcaption>Cạo Khăn Nóng</figcaption></figure>
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1605497787865-e6d4762b386f?auto=format&fit=crop&w=1000&q=70" alt="Sấy tạo phồng sau khi cắt" width="1000" height="500" loading="lazy"><figcaption>Sấy Tạo Phồng</figcaption></figure>
+      <figure class="rv d1"><img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?auto=format&fit=crop&w=600&q=70" alt="Thợ cắt tóc xoăn cho khách" width="600" height="500" loading="lazy"><figcaption>Afro Taper</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec book" id="dat-lich">
+  <div class="book-bg" aria-hidden="true"><img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=1400&q=60" alt="" width="1400" height="900" loading="lazy"></div>
+  <div class="wrap">
+    <span class="kick rv">05 / Đặt lịch</span>
+    <h2 class="h2 rv">Giữ ghế <span class="nr">trong&nbsp;1&nbsp;phút</span></h2>
+    <p class="lead rv">Chọn dịch vụ, thợ và giờ còn trống. Đây là bản mẫu: thông tin bạn nhập không được gửi đi đâu.</p>
+
+    <form class="bk rv" id="bk" novalidate>
+      <div class="bk-main">
+        <ol class="bk-steps" id="bkSteps">
+          <li class="on"><b>01</b>Dịch&nbsp;vụ</li><li><b>02</b>Thợ</li><li><b>03</b>Ngày&nbsp;giờ</li><li><b>04</b>Thông&nbsp;tin</li>
+        </ol>
+
+        <div class="bk-panel" data-step="1">
+          <h3 tabindex="-1">Bạn muốn làm gì?</h3>
+          <p class="hint">Chọn một dịch vụ. Muốn làm thêm, nói với thợ khi đến.</p>
+          <div class="opts" id="optSvc"></div>
+        </div>
+
+        <div class="bk-panel" data-step="2" hidden>
+          <h3 tabindex="-1">Chọn thợ</h3>
+          <p class="hint">Chưa quen ai? Chọn “Thợ rảnh trước” để có nhiều giờ trống hơn.</p>
+          <div class="opts" id="optBar"></div>
+        </div>
+
+        <div class="bk-panel" data-step="3" hidden>
+          <h3 tabindex="-1">Ngày &amp; giờ</h3>
+          <p class="hint" id="slotHint">Giờ gạch ngang là đã có khách.</p>
+          <div class="dates" id="optDate" role="radiogroup" aria-label="Chọn ngày"></div>
+          <div class="slots" id="optTime" role="radiogroup" aria-label="Chọn giờ"></div>
+          <p class="slots-empty" id="slotEmpty" hidden>Ngày này không còn giờ trống cho dịch vụ đã chọn. Bạn chọn ngày khác nhé.</p>
+        </div>
+
+        <div class="bk-panel" data-step="4" hidden>
+          <h3 tabindex="-1">Thông tin liên hệ</h3>
+          <p class="hint">Tiệm gọi hoặc nhắn Zalo xác nhận trước giờ hẹn.</p>
+          <div class="two">
+            <div><label class="lbl" for="fName">Họ tên</label><input class="field" id="fName" name="name" autocomplete="name" maxlength="60"><span class="err" id="eName"></span></div>
+            <div><label class="lbl" for="fPhone">Số điện thoại</label><input class="field" id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="16" placeholder="09xx xxx xxx"><span class="err" id="ePhone"></span></div>
+          </div>
+          <label class="lbl" for="fNote">Ghi chú cho thợ (không bắt buộc)</label>
+          <textarea class="field" id="fNote" name="note" rows="3" maxlength="300" placeholder="Ví dụ: muốn giữ dài phía trên, tóc hay bị dựng ở xoáy"></textarea>
+          <label class="consent"><input type="checkbox" id="fOk"><span>Tôi đồng ý để Neon Blade dùng họ tên và số điện thoại này chỉ để xác nhận lịch hẹn.</span></label>
+          <span class="err" id="eOk"></span>
+        </div>
+
+        <div class="bk-panel done" data-step="5" hidden>
+          <div class="seal"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div>
+          <h3 tabindex="-1">Đã giữ&nbsp;chỗ (bản&nbsp;mẫu)</h3>
+          <span class="code" id="doneCode">NB-0000</span>
+          <p id="doneText"></p>
+          <p><small>Bản mẫu giao diện: không có dữ liệu nào được gửi đi. Tải lại trang là thông tin mất.</small></p>
+          <button class="btn ghost" type="button" id="bkAgain">Đặt&nbsp;lịch khác</button>
+        </div>
+
+        <div class="bk-nav" id="bkNav">
+          <button class="btn ghost" type="button" id="bkBack" hidden>Quay&nbsp;lại</button>
+          <button class="btn red" type="button" id="bkNext" disabled>Tiếp&nbsp;tục <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <button class="btn red" type="submit" id="bkSubmit" hidden>Xác&nbsp;nhận đặt&nbsp;lịch</button>
+        </div>
+      </div>
+
+      <aside class="bk-sum" aria-live="polite">
+        <h4>Lịch của bạn</h4>
+        <dl>
+          <div><dt>Dịch vụ</dt><dd id="sSvc">Chưa chọn</dd></div>
+          <div><dt>Thợ</dt><dd id="sBar">Chưa chọn</dd></div>
+          <div><dt>Ngày</dt><dd id="sDate">Chưa chọn</dd></div>
+          <div><dt>Giờ</dt><dd id="sTime">Chưa chọn</dd></div>
+          <div><dt>Thời lượng</dt><dd id="sDur">–</dd></div>
+        </dl>
+        <div class="total"><span>Tạm tính</span><b id="sPrice">0đ</b></div>
+        <p class="priv"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><span>Bản mẫu: không gửi dữ liệu, không lưu trên máy chủ. Thanh toán tại tiệm.</span></p>
+      </aside>
+    </form>
+  </div>
+</section>
+
+<section class="sec steel" id="danh-gia">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kick rv">06 / Khách nói gì</span><h2 class="h2 rv">Ngồi ghế rồi <span class="ch">mới&nbsp;biết</span></h2></div>
+      <p class="lead rv"><span class="sample">Đánh giá mẫu</span>&nbsp; Nội dung minh hoạ bố cục, sẽ thay bằng đánh giá thật của khách.</p>
+    </div>
+    <div class="revs">
+      <figure class="rev rv" style="margin:0"><svg class="q" aria-hidden="true"><use href="#i-quote"/></svg><div class="stars" aria-label="5 trên 5 sao"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>Đặt 19:30 sau giờ làm, tới nơi là ngồi luôn. Thợ hỏi kỹ chỗ xoáy rồi mới fade, hai tuần sau mọc lại vẫn đều.</blockquote><footer><span><b>Anh Minh</b>Nhân viên văn phòng</span><span class="sample">Đánh giá mẫu</span></footer></figure>
+      <figure class="rev rv d1" style="margin:0"><svg class="q" aria-hidden="true"><use href="#i-quote"/></svg><div class="stars" aria-label="5 trên 5 sao"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>Lần đầu cạo râu khăn nóng, không rát chút nào. Anh thợ còn chỉ cách tỉa râu ở nhà cho khỏi lem viền.</blockquote><footer><span><b>Anh Hoàng</b>Kỹ sư phần mềm</span><span class="sample">Đánh giá mẫu</span></footer></figure>
+      <figure class="rev rv d2" style="margin:0"><svg class="q" aria-hidden="true"><use href="#i-quote"/></svg><div class="stars" aria-label="5 trên 5 sao"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></div><blockquote>Dắt con trai đi cắt chung. Bé ngồi yên vì thợ nói chuyện vui, giá niêm yết rõ nên không phải hỏi trước.</blockquote><footer><span><b>Anh Phúc</b>Phụ huynh</span><span class="sample">Đánh giá mẫu</span></footer></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="lien-he">
+  <div class="wrap">
+    <span class="kick rv">07 / Ghé tiệm</span>
+    <h2 class="h2 rv">Mở đến khuya, <span class="nr">ngay&nbsp;trung&nbsp;tâm</span></h2>
+    <div class="visit">
+      <div class="hours rv">
+        <div class="status" id="status"><i></i><div><span id="stText">Giờ mở cửa</span><small id="stSub">Theo giờ Việt Nam</small></div></div>
+        <table aria-label="Giờ mở cửa">
+          <tbody id="hoursBody">
+            <tr data-d="1"><td>Thứ Hai</td><td>10:00 – 21:00</td></tr>
+            <tr data-d="2"><td>Thứ Ba</td><td>10:00 – 21:00</td></tr>
+            <tr data-d="3"><td>Thứ Tư</td><td>10:00 – 21:00</td></tr>
+            <tr data-d="4"><td>Thứ Năm</td><td>10:00 – 21:00</td></tr>
+            <tr data-d="5"><td>Thứ Sáu</td><td>10:00 – 21:00</td></tr>
+            <tr data-d="6"><td>Thứ Bảy</td><td>09:00 – 22:00</td></tr>
+            <tr data-d="0"><td>Chủ Nhật</td><td>09:00 – 22:00</td></tr>
+          </tbody>
+        </table>
+        <div class="contact">
+          <div><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>86 Lê Thánh Tôn, Phường Sài&nbsp;Gòn, TP.HCM</span></div>
+          <a href="tel:0900000000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Hotline <b class="nw">0900 000 000</b></span></a>
+        </div>
+      </div>
+      <div class="map rv d1" id="map">
+        <svg class="streets" viewBox="0 0 600 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="rgba(201,206,214,.05)"/></pattern></defs>
+          <rect width="600" height="440" fill="url(#g)"/>
+          <path d="M520 -10C470 80 560 160 500 250S540 400 470 460" fill="none" stroke="rgba(125,243,255,.22)" stroke-width="34"/>
+          <g fill="none" stroke="#2A2E35" stroke-width="10" stroke-linecap="round">
+            <path d="M-20 120 620 260"/><path d="M-20 300 460 60"/><path d="M90 -20 250 460"/><path d="M380 -20 300 460"/><path d="M-20 400 600 360"/>
+          </g>
+          <g fill="none" stroke="#3B414B" stroke-width="3"><path d="M-20 200 520 110"/><path d="M160 -20 120 460"/><path d="M-20 40 600 170"/><path d="M220 460 600 300"/></g>
+          <path d="M-20 300 460 60" fill="none" stroke="rgba(255,45,70,.55)" stroke-width="2" stroke-dasharray="6 8"/>
+          <text x="40" y="285" fill="#6B727C" font-family="Barlow Condensed,Arial" font-size="14" letter-spacing="2" transform="rotate(-27 40 285)">LÊ THÁNH TÔN</text>
+          <text x="520" y="200" fill="rgba(125,243,255,.5)" font-family="Barlow Condensed,Arial" font-size="13" letter-spacing="2" transform="rotate(80 520 200)">SÔNG SÀI GÒN</text>
+        </svg>
+        <span class="ring" aria-hidden="true"></span>
+        <div class="pin" aria-hidden="true"><b>Neon Blade</b><svg viewBox="0 0 30 38"><path d="M15 37S3 24 3 14a12 12 0 0 1 24 0c0 10-12 23-12 23z" fill="#FF2D46"/><circle cx="15" cy="14" r="4.5" fill="#08090B"/></svg></div>
+        <span class="sample tagm">Bản đồ minh hoạ</span>
+        <div class="card"><div><b>86 Lê Thánh Tôn</b><span>Phường Sài Gòn, TP.HCM · có chỗ gửi xe máy</span></div><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=86+L%C3%AA+Th%C3%A1nh+T%C3%B4n+TP.HCM" target="_blank" rel="noopener">Chỉ&nbsp;đường <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <span class="glow" aria-hidden="true"></span>
+  <div class="wrap">
+    <h2 class="rv">Ghế đang <span class="nr">chờ&nbsp;bạn</span></h2>
+    <p class="rv">Đặt trước vài phút, đến đúng giờ, ra về với mái tóc gọn gàng cho cả tuần.</p>
+    <a class="btn red rv" href="#dat-lich">Đặt&nbsp;lịch ngay <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <a class="logo" href="#top"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><b>NEON BLADE</b><small>BARBER CLUB</small></span></a>
+        <p>Cắt tóc nam, fade, cạo râu khăn nóng tại trung tâm TP.HCM. Mở cửa 7 ngày, đến 22:00 cuối tuần.</p>
+      </div>
+      <div><h4>Dịch vụ</h4><ul><li><a href="#bang-gia">Cắt Tóc Signature</a></li><li><a href="#bang-gia">Skin Fade</a></li><li><a href="#bang-gia">Cạo Râu Khăn Nóng</a></li><li><a href="#bang-gia">Uốn Phồng Nam</a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul><li>86 Lê Thánh Tôn, Phường Sài&nbsp;Gòn, TP.HCM</li><li><a href="tel:0900000000">0900 000 000</a></li><li><a href="https://zalo.me/0900000000" target="_blank" rel="noopener">Zalo</a></li></ul></div>
+      <div><h4>Theo dõi</h4><ul><li><a href="#top">Facebook</a></li><li><a href="#top">Instagram</a></li><li><a href="#top">TikTok</a></li></ul></div>
+    </div>
+    <div class="ft-note">
+      <span>Dữ liệu cá nhân: họ tên và số điện thoại khách để lại khi đặt lịch chỉ dùng để xác nhận lịch hẹn, không chia sẻ cho bên thứ ba. Khách có thể yêu cầu xem, sửa hoặc xoá thông tin qua hotline.</span>
+      <div class="row"><span>Nội dung mẫu: tên tiệm, giá, thợ, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span><span>© 2026 · Mẫu giao diện</span></div>
+    </div>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var hasIO='IntersectionObserver' in window;
+function vnd(n){return n.toLocaleString('vi-VN').replace(/,/g,'.')+'đ'}
+function pad(n){return (n<10?'0':'')+n}
+function vnNow(){var d=new Date();return new Date(d.getTime()+d.getTimezoneOffset()*60000+7*3600000)}
+function hm(m){return pad(Math.floor(m/60))+':'+pad(m%60)}
+function hoursOf(dow){return (dow===0||dow===6)?[540,1320]:[600,1260]}
+var DOW=['CN','T2','T3','T4','T5','T6','T7'];
+
+/* page loaded: hero motion + neon sign */
+requestAnimationFrame(function(){requestAnimationFrame(function(){
+  document.body.classList.add('loaded');
+  setTimeout(function(){$('#sign').classList.add('on')},RM?0:500);
+})});
+
+/* header + badge */
+var hdr=$('#hdr'),badge=$('#ktBadge');
+function onScroll(){var y=window.pageYOffset;hdr.classList.toggle('scrolled',y>8);badge.classList.toggle('show',y>window.innerHeight*.85)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* mobile menu */
+var mnav=$('#mnav'),mb=$('#menuBtn');
+function lock(on){document.body.classList.toggle('lock',on);document.documentElement.style.overflow=on?'hidden':'';document.body.style.overflow=on?'hidden':''}
+function menu(open){mnav.classList.toggle('open',open);mb.setAttribute('aria-expanded',open);lock(open);if(open){$('#menuClose').focus()}else{mb.focus()}}
+mb.addEventListener('click',function(){menu(true)});
+$('#menuClose').addEventListener('click',function(){menu(false)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');mb.setAttribute('aria-expanded','false');lock(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('open'))menu(false)});
+
+/* reveal */
+if(hasIO&&!RM){
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  $$('.rv').forEach(function(el){ro.observe(el)});
+}else{$$('.rv').forEach(function(el){el.classList.add('in')})}
+
+/* pause hero pole + map ring off-screen */
+if(hasIO){
+  new IntersectionObserver(function(es){es.forEach(function(e){$('#hero').classList.toggle('paused',!e.isIntersecting)})}).observe($('#hero'));
+  new IntersectionObserver(function(es){es.forEach(function(e){$('#map').classList.toggle('paused-map',!e.isIntersecting)})}).observe($('#map'));
+}
+
+/* ticker: each item animated on its own (WAAPI) */
+var WORDS=['Skin Fade','Cạo Râu Khăn Nóng','Taper','Textured Crop','Pompadour','Mở đến 22:00','Uốn Phồng Nam','Hẹn giờ, không chờ'];
+var tk=$('#ticker'),anims=[],lastW=0,tkOn=true;
+function buildTicker(){
+  var w=tk.clientWidth;if(!w||w===lastW)return;lastW=w;
+  anims.forEach(function(a){a.cancel()});anims=[];tk.innerHTML='';
+  if(RM||!tk.animate){document.documentElement.classList.add('no-tk');WORDS.slice(0,4).forEach(function(t,i){var s=document.createElement('span');s.className='tk'+(i%2?' alt':'');s.innerHTML=t+'<span class="dia"></span>';tk.appendChild(s)});return}
+  var items=[],x=0;
+  WORDS.forEach(function(t,i){var s=document.createElement('span');s.className='tk'+(i%2?' alt':'');s.innerHTML=t.replace(/ /g,' ')+'<span class="dia"></span>';tk.appendChild(s);items.push({el:s,x:x});x+=s.offsetWidth});
+  var W=x,K=Math.ceil((w+W)/W),dur=W/60*1000;
+  for(var k=1;k<K;k++){items.slice(0,WORDS.length).forEach(function(it){var c=it.el.cloneNode(true);tk.appendChild(c);items.push({el:c,x:it.x+k*W})})}
+  items.forEach(function(it){
+    it.el.style.left=it.x+'px';
+    var a=it.el.animate([{transform:'translate3d(0,0,0)'},{transform:'translate3d('+(-W)+'px,0,0)'}],{duration:dur,iterations:Infinity,easing:'linear'});
+    if(!tkOn)a.pause();anims.push(a);
+  });
+}
+buildTicker();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){lastW=0;buildTicker()});
+var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(tk.clientWidth!==lastW)buildTicker()},200)});
+if(hasIO)new IntersectionObserver(function(es){es.forEach(function(e){tkOn=e.isIntersecting;anims.forEach(function(a){tkOn?a.play():a.pause()})})}).observe(tk);
+document.addEventListener('visibilitychange',function(){anims.forEach(function(a){document.hidden?a.pause():(tkOn&&a.play())})});
+
+/* signature: chrome sweep runs down the price rows once when the list enters view */
+var rows=$$('.prow');
+if(hasIO&&!RM){
+  var po=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+    var r=e.target;setTimeout(function(){r.classList.add('sweep');setTimeout(function(){r.classList.remove('sweep')},1000)},(rows.indexOf(r)%4)*140);po.unobserve(r)}})},{threshold:.6});
+  rows.forEach(function(r){po.observe(r)});
+}
+rows.forEach(function(r){r.addEventListener('touchstart',function(){r.classList.add('sweep');setTimeout(function(){r.classList.remove('sweep')},950)},{passive:true})});
+
+/* hours status */
+(function(){
+  var n=vnNow(),d=n.getDay(),m=n.getHours()*60+n.getMinutes(),h=hoursOf(d),st=$('#status');
+  var tr=$('#hoursBody tr[data-d="'+d+'"]');if(tr)tr.classList.add('today');
+  if(m>=h[0]&&m<h[1]){st.classList.add('open');$('#stText').textContent='Đang mở cửa';$('#stSub').textContent='Đóng lúc '+hm(h[1])+' hôm nay'}
+  else{st.classList.add('closed');$('#stText').textContent='Đang đóng cửa';
+    $('#stSub').textContent=m<h[0]?'Mở lại lúc '+hm(h[0])+' hôm nay':'Mở lại lúc '+hm(hoursOf((d+1)%7)[0])+' ngày mai'}
+})();
+
+/* ===== booking ===== */
+var SV=rows.map(function(r){return {id:r.dataset.id,n:$('.pname',r).textContent,m:+r.dataset.min,p:+r.dataset.price}});
+var BR=$$('#crew .barber').map(function(b){return {id:b.dataset.id,n:b.dataset.name,s:b.dataset.spec,img:b.dataset.img}});
+BR.push({id:'any',n:'Thợ rảnh trước',s:'Tiệm xếp thợ đang trống'});
+var st={svc:null,bar:null,date:null,time:null},step=1;
+var form=$('#bk'),panels=$$('.bk-panel',form),stepLis=$$('#bkSteps li');
+var bNext=$('#bkNext'),bBack=$('#bkBack'),bSub=$('#bkSubmit');
+function find(a,id){for(var i=0;i<a.length;i++)if(a[i].id===id)return a[i];return null}
+function opt(name,val,inner,cls){return '<label class="opt'+(cls?' '+cls:'')+'"><input type="radio" name="'+name+'" value="'+val+'"><span class="box">'+inner+'</span></label>'}
+
+$('#optSvc').innerHTML=SV.map(function(s){return opt('svc',s.id,'<b>'+s.n+'</b><span>'+s.m+'&nbsp;phút · '+vnd(s.p)+'</span>')}).join('');
+$('#optBar').innerHTML=BR.map(function(b){
+  var pic=b.img?'<img src="https://images.unsplash.com/'+b.img+'?auto=format&fit=crop&w=120&h=120&q=60" alt="" width="46" height="46" loading="lazy">':'<span class="any"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></span>';
+  return opt('bar',b.id,pic+'<span><b>'+b.n+'</b><span>'+b.s+'</span></span>','bar')}).join('');
+
+/* dates: next 7 days in VN time */
+var DAYS=[];(function(){var n=vnNow();for(var i=0;i<7;i++){var d=new Date(n.getFullYear(),n.getMonth(),n.getDate()+i);DAYS.push({id:d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()),key:d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()),dow:d.getDay(),label:pad(d.getDate())+'/'+pad(d.getMonth()+1),full:pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear(),today:i===0})}})();
+$('#optDate').innerHTML=DAYS.map(function(d){return opt('date',d.key,'<span>'+(d.today?'Hôm nay':DOW[d.dow])+'</span><b>'+d.label+'</b>')}).join('');
+
+function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}h^=h>>>13;h=Math.imul(h,1540483477);return (h^(h>>>15))>>>0}
+function renderSlots(){
+  var box=$('#optTime'),empty=$('#slotEmpty');
+  if(!st.date){box.innerHTML='';empty.hidden=true;return}
+  var d=find(DAYS,st.date),h=hoursOf(d.dow),dur=st.svc?find(SV,st.svc).m:30;
+  var n=vnNow(),nowM=n.getHours()*60+n.getMinutes(),html='',free=0;
+  for(var t=h[0];t+dur<=h[1];t+=30){
+    var busy=hash(st.date+(st.bar||'')+t)%(st.bar==='any'?7:3)===0;
+    var past=d.today&&t<=nowM+30;
+    var dis=busy||past;if(!dis)free++;
+    html+='<label class="opt"><input type="radio" name="time" value="'+t+'"'+(dis?' disabled':'')+(String(t)===st.time&&!dis?' checked':'')+'><span class="box">'+hm(t)+'</span></label>';
+  }
+  box.innerHTML=html;empty.hidden=free>0;
+  if(st.time&&!$('input[name="time"][value="'+st.time+'"]:not(:disabled)',box))st.time=null;
+}
+
+function summary(){
+  var s=st.svc&&find(SV,st.svc),b=st.bar&&find(BR,st.bar),d=st.date&&find(DAYS,st.date);
+  $('#sSvc').textContent=s?s.n:'Chưa chọn';
+  $('#sBar').textContent=b?b.n:'Chưa chọn';
+  $('#sDate').textContent=d?(d.today?'Hôm nay, ':DOW[d.dow]+', ')+d.full:'Chưa chọn';
+  $('#sTime').textContent=st.time?hm(+st.time)+(s?' – '+hm(+st.time+s.m):''):'Chưa chọn';
+  $('#sDur').textContent=s?s.m+' phút':'–';
+  $('#sPrice').textContent=s?vnd(s.p):'0đ';
+}
+function canNext(){return step===1?!!st.svc:step===2?!!st.bar:step===3?!!(st.date&&st.time):true}
+function go(n,focus){
+  step=n;
+  panels.forEach(function(p){p.hidden=+p.dataset.step!==n});
+  stepLis.forEach(function(li,i){li.classList.toggle('on',i+1===n);li.classList.toggle('ok',i+1<n)});
+  $('#bkNav').hidden=n===5;
+  bBack.hidden=n===1;bNext.hidden=n>=4;bSub.hidden=n!==4;
+  if(n===3){if(!st.date){st.date=DAYS[0].id;setRadio('date',st.date)}renderSlots();summary()}
+  bNext.disabled=!canNext();
+  if(focus!==false){var h=$('.bk-panel[data-step="'+n+'"] h3');if(h)h.focus({preventScroll:true})}
+}
+function setRadio(name,val){var i=$('input[name="'+name+'"][value="'+val+'"]',form);if(i)i.checked=true}
+
+form.addEventListener('change',function(e){
+  var t=e.target;
+  if(t.name==='svc'){st.svc=t.value;st.time=null}
+  else if(t.name==='bar'){st.bar=t.value;st.time=null}
+  else if(t.name==='date'){st.date=t.value;st.time=null;renderSlots()}
+  else if(t.name==='time'){st.time=t.value}
+  else return;
+  bNext.disabled=!canNext();summary();
+});
+function keepTop(){if(form.getBoundingClientRect().top<0)toBooking()}
+bNext.addEventListener('click',function(){if(canNext()&&step<4){go(step+1);keepTop()}});
+bBack.addEventListener('click',function(){if(step>1){go(step-1);keepTop()}});
+
+function err(id,msg,field){$(id).textContent=msg;if(field)field.classList.toggle('bad',!!msg)}
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  if(step<4){if(canNext())go(step+1);return}
+  if(step!==4)return;
+  var nm=$('#fName'),ph=$('#fPhone'),ok=$('#fOk'),good=true;
+  var name=nm.value.trim(),phone=ph.value.replace(/[\s.\-]/g,'');
+  if(name.length<2){err('#eName','Bạn nhập họ tên giúp tiệm nhé.',nm);good=false}else err('#eName','',nm);
+  if(!/^(0|\+84)\d{9}$/.test(phone)){err('#ePhone','Số điện thoại chưa đúng, ví dụ 0901 234 567.',ph);good=false}else err('#ePhone','',ph);
+  if(!ok.checked){err('#eOk','Bạn cần đồng ý để tiệm liên hệ xác nhận lịch.');good=false}else err('#eOk','');
+  if(!good){var f=$('.field.bad',form)||ok;f.focus();return}
+  var s=find(SV,st.svc),b=find(BR,st.bar),d=find(DAYS,st.date);
+  $('#doneCode').textContent='NB-'+String(1000+Math.floor(Math.random()*9000));
+  $('#doneText').textContent=name+', bạn đã giữ chỗ '+s.n+' với '+(st.bar==='any'?'thợ rảnh trước':'thợ '+b.n)+' lúc '+hm(+st.time)+', '+(d.today?'hôm nay ':'')+d.full+'. Tiệm sẽ gọi số '+ph.value.trim()+' để xác nhận.';
+  go(5);keepTop();
+});
+$('#bkAgain').addEventListener('click',function(){
+  form.reset();st={svc:null,bar:null,date:null,time:null};
+  $$('.field',form).forEach(function(f){f.classList.remove('bad')});$$('.err',form).forEach(function(x){x.textContent=''});
+  renderSlots();summary();go(1);
+});
+
+/* shortcuts from price list and barber cards */
+function toBooking(){var t=$('#bk');t.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})}
+rows.forEach(function(r){$('.pick',r).addEventListener('click',function(){
+  st.svc=r.dataset.id;st.time=null;setRadio('svc',st.svc);summary();go(st.bar?3:2,false);toBooking()})});
+$$('#crew .barber').forEach(function(c){$('.pick',c).addEventListener('click',function(){
+  st.bar=c.dataset.id;st.time=null;setRadio('bar',st.bar);summary();go(st.svc?3:1,false);toBooking()})});
+
+summary();go(1,false);
+})();
+</script>
+</body>
+</html>

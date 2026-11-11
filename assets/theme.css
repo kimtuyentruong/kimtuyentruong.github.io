@@ -318,6 +318,7 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 .tile .k-realestate{background:rgba(28,14,54,.7);color:#C9B2FF;border:1px solid #C9B2FF73}
 .tile .k-service{background:rgba(10,40,22,.7);color:#9BE7B4;border:1px solid #9BE7B473}
 .tile .k-edu{background:rgba(52,12,12,.7);color:#FF9B95;border:1px solid #FF9B9573}
+.tile .k-hair{background:rgba(30,40,6,.7);color:#C6F05C;border:1px solid #C6F05C73}
 .pf-ind button[data-i]:not([data-i="all"])::before{content:"";display:inline-block;width:8px;height:8px;margin-right:7px;border-radius:50%;flex:none;vertical-align:1px;background:var(--dot)}
 .pf-ind button[data-i="health"]{--dot:#7FE0D6}
 .pf-ind button[data-i="beauty"]{--dot:#FFB3D1}
@@ -328,6 +329,7 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 .pf-ind button[data-i="realestate"]{--dot:#C9B2FF}
 .pf-ind button[data-i="service"]{--dot:#9BE7B4}
 .pf-ind button[data-i="edu"]{--dot:#FF9B95}
+.pf-ind button[data-i="hair"]{--dot:#C6F05C}
 .pf-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;flex-wrap:wrap}
 .pf-foot .tnote{margin:0;font-size:13px;color:var(--faint)}
 .pf-foot .sl-nav{margin:0;align-items:center}
@@ -418,3 +420,19 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 @media (max-width:600px){.certs{grid-template-columns:minmax(0,1fr);gap:6px}}
 @media (max-width:600px){.cstack{height:122px;padding-left:6px}.cs{height:92px;margin-left:-30px}.cs:first-child{margin-left:0}}
 @media (prefers-reduced-motion:reduce){.cs{transition:none}}
+
+/* ---------- large screens 27–32" (v13): wider frame + stepped page zoom so the layout fills the screen ---------- */
+@media (min-width:1600px){.wrap{max-width:1280px}}
+@media (min-width:1800px){html{zoom:1.12;--z:1.12}}
+@media (min-width:2100px){html{zoom:1.28;--z:1.28}}
+@media (min-width:2400px){html{zoom:1.42;--z:1.42}}
+@media (min-width:3000px){html{zoom:1.75;--z:1.75}}
+@media (min-width:3600px){html{zoom:2.1;--z:2.1}}
+@media (min-width:1800px){.pf-rows{margin-inline:calc(50% - 50vw / var(--z))}}
+/* experience moved to /kinh-nghiem/ (v16): homepage teaser */
+.exp-teaser{display:flex;align-items:flex-end;justify-content:space-between;gap:24px 40px;flex-wrap:wrap;padding:40px 44px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(150deg,rgba(255,74,28,.14),rgba(20,16,16,.75) 60%);color:var(--ink);text-decoration:none;transition:border-color .3s}
+.exp-teaser:hover{border-color:var(--line-2)}
+.exp-teaser h2{font-size:clamp(28px,3.4vw,46px);line-height:1.12;margin-top:12px;max-width:20ch}
+.exp-teaser p{color:var(--muted);margin:14px 0 0;max-width:60ch}
+.exp-teaser .go{flex:none;font-weight:600;color:var(--flame);white-space:nowrap}
+@media (max-width:600px){.exp-teaser{padding:26px 22px}.exp-teaser .go{white-space:normal}}

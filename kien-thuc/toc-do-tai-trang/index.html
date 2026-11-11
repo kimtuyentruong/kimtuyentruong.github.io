@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tối Ưu Tốc Độ Tải Trang: Core Web Vitals, Ảnh, Font, Hosting</title>
+<meta name="description" content="Tối ưu tốc độ tải trang theo Core Web Vitals (LCP, INP, CLS): cách đo đúng, xử lý ảnh, font, JavaScript, hosting và thứ tự ưu tiên cho website doanh nghiệp nhỏ.">
+<meta name="theme-color" content="#0A0706">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://kimtuyentruong.github.io/kien-thuc/toc-do-tai-trang/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kim Tuyen Truong">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:url" content="https://kimtuyentruong.github.io/kien-thuc/toc-do-tai-trang/">
+<meta property="og:title" content="Tối Ưu Tốc Độ Tải Trang: Core Web Vitals, Ảnh, Font, Hosting">
+<meta property="og:description" content="Tối ưu tốc độ tải trang theo Core Web Vitals (LCP, INP, CLS): cách đo đúng, xử lý ảnh, font, JavaScript, hosting và thứ tự ưu tiên cho website doanh nghiệp nhỏ.">
+<meta property="og:image" content="https://kimtuyentruong.github.io/assets/img/kien-thuc/toc-do-tai-trang.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tối Ưu Tốc Độ Tải Trang: Core Web Vitals, Ảnh, Font, Hosting">
+<meta name="twitter:description" content="Tối ưu tốc độ tải trang theo Core Web Vitals (LCP, INP, CLS): cách đo đúng, xử lý ảnh, font, JavaScript, hosting và thứ tự ưu tiên cho website doanh nghiệp nhỏ.">
+<meta name="twitter:image" content="https://kimtuyentruong.github.io/assets/img/kien-thuc/toc-do-tai-trang.jpg">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="article:published_time" content="2026-11-11">
+<meta property="article:section" content="Kiến thức SEO &amp; AIO">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/base.css?v=12">
+<link rel="stylesheet" href="/assets/theme.css?v=16">
+<link rel="stylesheet" href="/assets/blog.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "@id": "https://kimtuyentruong.github.io/kien-thuc/toc-do-tai-trang/#article", "headline": "Tối ưu tốc độ tải trang theo Core Web Vitals: sửa gì trước, sửa thế nào", "name": "Tối Ưu Tốc Độ Tải Trang: Core Web Vitals, Ảnh, Font, Hosting", "description": "Tối ưu tốc độ tải trang theo Core Web Vitals (LCP, INP, CLS): cách đo đúng, xử lý ảnh, font, JavaScript, hosting và thứ tự ưu tiên cho website doanh nghiệp nhỏ.", "image": {"@type": "ImageObject", "url": "https://kimtuyentruong.github.io/assets/img/kien-thuc/toc-do-tai-trang.jpg", "width": 1200, "height": 630}, "datePublished": "2026-11-11", "dateModified": "2026-11-11", "inLanguage": "vi", "author": {"@type": "Person", "@id": "https://kimtuyentruong.github.io/#person", "name": "Kim Tuyen Truong", "url": "https://kimtuyentruong.github.io/"}, "publisher": {"@type": "Organization", "name": "Kim Tuyen Truong · Thiết kế website & SEO", "url": "https://kimtuyentruong.github.io/", "logo": {"@type": "ImageObject", "url": "https://kimtuyentruong.github.io/assets/apple-touch-icon.png"}}, "mainEntityOfPage": "https://kimtuyentruong.github.io/kien-thuc/toc-do-tai-trang/", "keywords": "tối ưu tốc độ tải trang", "articleSection": "Kiến thức SEO & AIO", "wordCount": 1102}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://kimtuyentruong.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Kiến thức", "item": "https://kimtuyentruong.github.io/kien-thuc/"}, {"@type": "ListItem", "position": 3, "name": "Kiến thức SEO & AIO", "item": "https://kimtuyentruong.github.io/kien-thuc/#kien-thuc"}, {"@type": "ListItem", "position": 4, "name": "Tối ưu tốc độ tải trang theo Core Web Vitals: sửa gì trước, sửa thế nào"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Điểm PageSpeed Insights bao nhiêu là đạt?", "acceptedAnswer": {"@type": "Answer", "text": "Điểm 0–100 là điểm phòng thí nghiệm, chỉ để tham khảo. Thứ Google dùng là dữ liệu thật của người dùng: LCP, INP, CLS đạt ngưỡng tốt. Website điểm 85 nhưng ba chỉ số đều tốt vẫn ổn hơn website điểm 98 mà người dùng thật thấy chậm."}}, {"@type": "Question", "name": "Tốc độ tải trang có ảnh hưởng thứ hạng Google không?", "acceptedAnswer": {"@type": "Answer", "text": "Có, Core Web Vitals là một phần trong các tín hiệu trải nghiệm trang mà Google dùng. Nhưng nội dung phù hợp với câu tìm kiếm vẫn quan trọng hơn. Trang nhanh mà nội dung kém thì không lên được."}}, {"@type": "Question", "name": "Website ít người vào thì sao PageSpeed không có dữ liệu thật?", "acceptedAnswer": {"@type": "Answer", "text": "Dữ liệu thật lấy từ người dùng Chrome; website ít lượt truy cập có thể chưa đủ mẫu. Khi đó bạn dựa vào phần đo phòng thí nghiệm và thử trên điện thoại thật với mạng 4G."}}, {"@type": "Question", "name": "Đổi hosting có làm web nhanh hơn không?", "acceptedAnswer": {"@type": "Answer", "text": "Chỉ khi hosting là nguyên nhân, tức máy chủ phản hồi chậm (thời gian đến byte đầu tiên cao). Nếu chậm vì ảnh nặng hay quá nhiều plugin, đổi hosting không giải quyết được."}}]}]}</script>
+</head>
+<body class="sub">
+<div class="atmo" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="noise"></span></div>
+<header class="subhdr"><div class="wrap"><div class="nav">
+<a class="me" href="/" style="text-decoration:none"><span class="mark">KT</span>Kim Tuyen Truong</a><div class="right"><nav aria-label="Trang"><a href="/#work">Dự án</a><a href="/#portfolio">Mẫu theo ngành</a><a href="/bang-gia/">Bảng giá</a><a href="/kinh-nghiem/">Kinh nghiệm</a><a href="/kien-thuc/" aria-current="page">Kiến thức</a><a href="/lien-he/">Liên hệ</a></nav><span class="lang" aria-label="Language"><a href="/" hreflang="vi" aria-current="page">VI</a><a href="/en/" hreflang="en">EN</a></span></div>
+</div></div></header>
+<main class="post">
+<div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Trang chủ</a></li><li><a href="/kien-thuc/">Kiến thức</a></li><li><a href="/kien-thuc/#kien-thuc">Kiến thức SEO &amp; AIO</a></li><li aria-current="page">Tối ưu tốc độ tải trang theo Core Web Vitals: sửa gì trước, sửa thế nào</li></ol></nav>
+<header class="post-hd">
+  <a class="kcat" href="/kien-thuc/#kien-thuc">Kiến thức SEO & AIO</a>
+  <h1>Tối ưu tốc độ tải trang theo Core Web Vitals: sửa gì trước, sửa thế nào</h1>
+  <p class="lede">Tối ưu tốc độ tải trang theo Core Web Vitals (LCP, INP, CLS): cách đo đúng, xử lý ảnh, font, JavaScript, hosting và thứ tự ưu tiên cho website doanh nghiệp nhỏ.</p>
+  <p class="meta"><span>Kim Tuyen Truong</span><span>11/11/2026</span><span>5&nbsp;phút đọc</span></p>
+  <img class="cover" src="/assets/img/kien-thuc/toc-do-tai-trang.jpg" alt="Tối ưu tốc độ tải trang theo Core Web Vitals: sửa gì trước, sửa thế nào" width="1200" height="630" fetchpriority="high" decoding="async">
+</header>
+<div class="post-grid">
+  <aside class="toc" aria-label="Mục lục"><p>Mục lục</p><ol><li><a href="#core-web-vitals-gom-nhung-chi-so-nao">Core Web Vitals gồm những chỉ số nào?</a></li><li><a href="#do-toc-do-tai-trang-dung-cach">Đo tốc độ tải trang đúng cách</a></li><li><a href="#anh-nguyen-nhan-pho-bien-lam-lcp-cham">Ảnh: nguyên nhân phổ biến làm LCP chậm</a></li><li><a href="#font-chu-tieng-viet-dep-nhung-dung-nang">Font chữ tiếng Việt: đẹp nhưng đừng nặng</a></li><li><a href="#javascript-plugin-va-inp">JavaScript, plugin và INP</a></li><li><a href="#hosting-va-may-chu">Hosting và máy chủ</a></li><li><a href="#thu-tu-uu-tien-khi-toi-uu-toc-do-tai-trang">Thứ tự ưu tiên khi tối ưu tốc độ tải trang</a></li></ol></aside>
+  <article class="prose">
+<p>Tối ưu tốc độ tải trang là làm cho website đạt ngưỡng tốt của ba chỉ số Core Web Vitals: LCP (nội dung chính hiện trong 2,5 giây), INP (phản hồi thao tác trong 200 mili giây) và CLS (bố cục không xê dịch quá 0,1). Với website doanh nghiệp nhỏ, phần lớn vấn đề nằm ở bốn chỗ: ảnh quá nặng, font tải chậm, JavaScript và plugin thừa, hosting phản hồi chậm.</p>
+<p>Bài này đi theo đúng thứ tự tôi dùng khi nhận một website chậm: đo đúng, tìm nguyên nhân, sửa phần có tác động lớn trước.</p>
+<h2 id="core-web-vitals-gom-nhung-chi-so-nao">Core Web Vitals gồm những chỉ số nào?</h2>
+<p>Google định nghĩa Core Web Vitals trong tài liệu <a target="_blank" rel="noopener" href="https://web.dev/articles/vitals">Web Vitals trên web.dev</a>. Ba chỉ số hiện nay:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Chỉ số</th>
+<th>Đo cái gì</th>
+<th>Tốt</th>
+<th>Kém</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LCP (Largest Contentful Paint)</td>
+<td>Thời gian hiện phần nội dung lớn trong màn hình đầu</td>
+<td>≤ 2,5 giây</td>
+<td>&gt; 4 giây</td>
+</tr>
+<tr>
+<td>INP (Interaction to Next Paint)</td>
+<td>Độ trễ từ lúc bấm, gõ đến khi màn hình phản hồi</td>
+<td>≤ 200 ms</td>
+<td>&gt; 500 ms</td>
+</tr>
+<tr>
+<td>CLS (Cumulative Layout Shift)</td>
+<td>Mức bố cục bị xê dịch khi đang xem</td>
+<td>≤ 0,1</td>
+<td>&gt; 0,25</td>
+</tr>
+</tbody>
+</table></div>
+<p>INP đã thay FID (First Input Delay) từ ngày 12/03/2024, theo <a target="_blank" rel="noopener" href="https://web.dev/blog/inp-cwv-march-12">thông báo của web.dev</a>. Nhiều bài viết cũ vẫn nhắc FID; nếu bạn thấy công cụ hay báo cáo nào còn dùng FID, đó là thông tin đã cũ.</p>
+<p>Một trang "đạt" khi tối thiểu 75% lượt tải trang có cả ba chỉ số ở mức tốt, tính riêng cho điện thoại và máy tính.</p>
+<h2 id="do-toc-do-tai-trang-dung-cach">Đo tốc độ tải trang đúng cách</h2>
+<figure class="art-fig info"><img src="/assets/img/kien-thuc/toc-do-tai-trang-info.jpg" alt="Ngưỡng tốt của Core Web Vitals: LCP: nội dung chính hiện trong 2,5 giây; INP: phản hồi thao tác trong 200 mili giây; CLS: độ xê dịch bố cục không quá 0,1; Đo ở 75% lượt tải, tách điện thoại và máy tính; INP thay FID làm chỉ số chính từ 12/03/2024" width="1200" height="750" loading="lazy" decoding="async"><figcaption>Ngưỡng tốt của Core Web Vitals</figcaption></figure>
+<p>Mở <a target="_blank" rel="noopener" href="https://pagespeed.web.dev/">PageSpeed Insights</a>, dán đường dẫn, bạn sẽ thấy hai phần:</p>
+<ul>
+<li><strong>Dữ liệu thật (field data):</strong> lấy từ người dùng Chrome trong 28 ngày gần đây. Đây là phần Google dùng. Website ít truy cập có thể chưa có phần này.</li>
+<li><strong>Dữ liệu phòng thí nghiệm (lab data):</strong> một lần đo giả lập, kèm điểm 0–100 và danh sách gợi ý. Dùng để tìm nguyên nhân, không phải để khoe điểm.</li>
+</ul>
+<p>Ngoài ra, Search Console có báo cáo Core Web Vitals theo nhóm trang, cho biết trang nào kém và vì chỉ số nào. Tôi luôn thử thêm bằng điện thoại thật, mạng 4G, vì khách của tiệm nail hay quán ăn phần lớn mở website từ điện thoại khi đang ở ngoài đường.</p>
+<h2 id="anh-nguyen-nhan-pho-bien-lam-lcp-cham">Ảnh: nguyên nhân phổ biến làm LCP chậm</h2>
+<p>Ảnh bìa đầu trang thường chính là phần tử LCP. Lỗi tôi gặp nhiều: ảnh chụp từ điện thoại rộng 4.000px, nặng 5–8MB, tải nguyên vào khung chỉ rộng 400px trên điện thoại.</p>
+<p>Cách xử lý:</p>
+<ul>
+<li><strong>Đổi định dạng sang WebP hoặc AVIF</strong>, thường nhẹ hơn JPEG đáng kể với cùng độ nét.</li>
+<li><strong>Cắt đúng kích thước hiển thị</strong>, cung cấp nhiều kích thước bằng <code>srcset</code> để điện thoại tải ảnh nhỏ.</li>
+<li><strong>Lazy-load ảnh phía dưới</strong> bằng <code>loading="lazy"</code>, nhưng <strong>không</strong> lazy-load ảnh bìa đầu trang. Ảnh đầu trang nên có <code>fetchpriority="high"</code> để trình duyệt tải trước.</li>
+<li><strong>Luôn khai báo <code>width</code> và <code>height</code></strong> để trình duyệt giữ chỗ, tránh làm bố cục giật (CLS).</li>
+</ul>
+<p>Hướng dẫn chi tiết có ở bài <a target="_blank" rel="noopener" href="https://web.dev/articles/optimize-lcp">tối ưu LCP của web.dev</a>.</p>
+<h2 id="font-chu-tieng-viet-dep-nhung-dung-nang">Font chữ tiếng Việt: đẹp nhưng đừng nặng</h2>
+<p>Font tiếng Việt có dấu cần bộ ký tự riêng. Khi dùng Google Fonts, chỉ tải phần ký tự <code>vietnamese</code> và <code>latin</code>, chỉ chọn 2–3 độ đậm thật sự dùng. Mỗi độ đậm, mỗi kiểu nghiêng là một file riêng.</p>
+<ul>
+<li>Dùng <code>font-display: swap</code> để chữ hiện ngay bằng font hệ thống rồi mới đổi sang font đẹp, thay vì để trang trắng chờ font.</li>
+<li>Font dùng ở tiêu đề đầu trang có thể <code>preload</code> để tải sớm.</li>
+<li>Tránh dùng 4–5 họ font khác nhau trên một website. Hai họ font là đủ cho hầu hết thiết kế.</li>
+</ul>
+<p>Font cũng là nguồn gây CLS: font dự phòng và font thật có độ rộng khác nhau làm dòng chữ nhảy khi font tải xong.</p>
+<h2 id="javascript-plugin-va-inp">JavaScript, plugin và INP</h2>
+<p>INP kém khi trình duyệt bận chạy JavaScript lúc người dùng bấm. Trên website doanh nghiệp nhỏ, thủ phạm thường là:</p>
+<ul>
+<li>Nhiều plugin cùng tải script trên mọi trang, kể cả trang không dùng đến.</li>
+<li>Thanh trượt ảnh (slider) nặng ở đầu trang.</li>
+<li>Nhiều đoạn mã theo dõi: pixel quảng cáo, chat, bản đồ nhúng, tất cả tải ngay khi mở trang.</li>
+<li>Hiệu ứng chuyển động chạy liên tục, không dừng khi đã ra khỏi màn hình.</li>
+</ul>
+<p>Cách sửa: bỏ plugin không dùng, chỉ tải script ở trang cần, trì hoãn bản đồ và khung chat đến khi người dùng cuộn tới hoặc bấm mở. Đây cũng là lý do tôi so sánh kỹ hai hướng làm web trong bài <a href="/kien-thuc/wordpress-hay-code-tay/">nên làm website WordPress hay code tay</a>: không phải WordPress luôn chậm, nhưng càng nhiều plugin thì càng phải kiểm soát.</p>
+<h2 id="hosting-va-may-chu">Hosting và máy chủ</h2>
+<p>Nếu máy chủ phản hồi chậm, mọi thứ phía sau đều chậm theo. Chỉ số cần xem là TTFB (thời gian đến byte đầu tiên); web.dev gợi ý phần lớn website nên đạt 0,8 giây trở xuống.</p>
+<ul>
+<li>Chọn hosting có máy chủ gần khách: khách ở Việt Nam thì máy chủ ở Việt Nam hoặc Singapore thường cho TTFB tốt hơn máy chủ ở Mỹ.</li>
+<li>Bật bộ nhớ đệm (cache) trang và nén Gzip hoặc Brotli.</li>
+<li>Website tĩnh hoặc code tay gọn nhẹ có thể đặt trên hosting tĩnh kèm CDN.</li>
+</ul>
+<p>Cách chọn hosting cho người mới ở bài <a href="/kien-thuc/ten-mien-va-hosting/">tên miền và hosting cho người mới</a>.</p>
+<h2 id="thu-tu-uu-tien-khi-toi-uu-toc-do-tai-trang">Thứ tự ưu tiên khi tối ưu tốc độ tải trang</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Thứ tự</th>
+<th>Việc</th>
+<th>Ảnh hưởng chỉ số</th>
+<th>Độ khó</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Nén, đổi định dạng, cắt đúng cỡ ảnh</td>
+<td>LCP</td>
+<td>Dễ</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bỏ lazy-load ở ảnh đầu trang, thêm width/height</td>
+<td>LCP, CLS</td>
+<td>Dễ</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Giảm font, thêm font-display: swap</td>
+<td>LCP, CLS</td>
+<td>Dễ</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Gỡ plugin và script thừa, trì hoãn chat, bản đồ</td>
+<td>INP, LCP</td>
+<td>Trung bình</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Bật cache, nén, CDN</td>
+<td>LCP</td>
+<td>Trung bình</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Đổi hosting hoặc làm lại giao diện</td>
+<td>Tất cả</td>
+<td>Khó</td>
+</tr>
+</tbody>
+</table></div>
+<p>Làm xong bước 1–3 là nhiều website đã đạt ngưỡng tốt. Tốc độ là một phần trong bộ tiêu chí <a href="/kien-thuc/website-chuan-seo-la-gi/">website chuẩn SEO</a>, và nằm trong <a href="/kien-thuc/checklist-truoc-khi-ra-mat-website/">checklist trước khi ra mắt website</a> mà tôi làm cho mọi dự án.</p>
+<p>Nếu website của bạn đang chậm và bạn không chắc nên sửa hay làm lại, gửi đường dẫn qua <a href="/lien-he/">trang liên hệ</a>. Nếu cần làm mới, bạn xem các gói ở <a href="/bang-gia/">bảng giá</a>; website nào tôi làm cũng được thử tốc độ trên điện thoại thật trước khi ra mắt.</p>
+    <section class="post-faq" id="hoi-dap"><h2>Câu hỏi thường gặp</h2><div class="faq"><details class="qa"><summary><h3>Điểm PageSpeed Insights bao nhiêu là đạt?</h3><span class="pm" aria-hidden="true"></span></summary><p>Điểm 0–100 là điểm phòng thí nghiệm, chỉ để tham khảo. Thứ Google dùng là dữ liệu thật của người dùng: LCP, INP, CLS đạt ngưỡng tốt. Website điểm 85 nhưng ba chỉ số đều tốt vẫn ổn hơn website điểm 98 mà người dùng thật thấy chậm.</p></details><details class="qa"><summary><h3>Tốc độ tải trang có ảnh hưởng thứ hạng Google không?</h3><span class="pm" aria-hidden="true"></span></summary><p>Có, Core Web Vitals là một phần trong các tín hiệu trải nghiệm trang mà Google dùng. Nhưng nội dung phù hợp với câu tìm kiếm vẫn quan trọng hơn. Trang nhanh mà nội dung kém thì không lên được.</p></details><details class="qa"><summary><h3>Website ít người vào thì sao PageSpeed không có dữ liệu thật?</h3><span class="pm" aria-hidden="true"></span></summary><p>Dữ liệu thật lấy từ người dùng Chrome; website ít lượt truy cập có thể chưa đủ mẫu. Khi đó bạn dựa vào phần đo phòng thí nghiệm và thử trên điện thoại thật với mạng 4G.</p></details><details class="qa"><summary><h3>Đổi hosting có làm web nhanh hơn không?</h3><span class="pm" aria-hidden="true"></span></summary><p>Chỉ khi hosting là nguyên nhân, tức máy chủ phản hồi chậm (thời gian đến byte đầu tiên cao). Nếu chậm vì ảnh nặng hay quá nhiều plugin, đổi hosting không giải quyết được.</p></details></div></section>
+    <aside class="author">
+      <span class="mark">KT</span>
+      <div><b>Kim Tuyen Truong</b><p>Làm website và SEO từ 2019, hơn 100 website cho doanh nghiệp tại Mỹ và Việt Nam. Digital Growth Manager tại AIxNovate, agency marketing ở Mỹ.</p>
+      <p class="cta"><a class="btn" href="https://zalo.me/0901432113" target="_blank" rel="noopener">Nhắn Zalo tư vấn</a><a class="btn ghost" href="/bang-gia/">Xem bảng giá</a></p></div>
+    </aside>
+  </article>
+</div>
+<section class="more"><h2>Bài viết liên quan</h2><div class="kgrid"><a class="kcard" href="/kien-thuc/wordpress-hay-code-tay/" data-c="kien-thuc"><div class="kimg"><img src="/assets/img/kien-thuc/wordpress-hay-code-tay.jpg" alt="Nên làm website WordPress hay code tay: chọn theo cách bạn sẽ dùng web" width="1200" height="630" loading="lazy" decoding="async"></div><div class="kb"><span class="kcat">Kiến thức SEO & AIO</span><h3>Nên làm website WordPress hay code tay: chọn theo cách bạn sẽ dùng web</h3><p>Nên làm website WordPress hay code tay? So sánh công bằng về tốc độ, bảo mật, tự sửa nội dung, bảo trì, kèm 5 tình huống thực tế giúp bạn chọn đúng cách.</p></div></a><a class="kcard" href="/kien-thuc/ten-mien-va-hosting/" data-c="kien-thuc"><div class="kimg"><img src="/assets/img/kien-thuc/ten-mien-va-hosting.jpg" alt="Tên miền và hosting cho người mới: hiểu đúng để không mất website" width="1200" height="630" loading="lazy" decoding="async"></div><div class="kb"><span class="kcat">Kiến thức SEO & AIO</span><h3>Tên miền và hosting cho người mới: hiểu đúng để không mất website</h3><p>Tên miền và hosting cho người mới: chọn .vn hay .com, loại hosting nào, SSL là gì và vì sao tên miền phải đứng tên bạn. Kèm checklist giữ quyền sở hữu.</p></div></a><a class="kcard" href="/kien-thuc/thiet-ke-website-cho-doanh-nghiep-viet-tai-my/" data-c="khu-vuc"><div class="kimg"><img src="/assets/img/kien-thuc/thiet-ke-website-cho-doanh-nghiep-viet-tai-my.jpg" alt="Thiết kế website cho doanh nghiệp Việt tại Mỹ: phục vụ cả khách Việt lẫn khách bản xứ" width="1200" height="630" loading="lazy" decoding="async"></div><div class="kb"><span class="kcat">Website & SEO theo khu vực</span><h3>Thiết kế website cho doanh nghiệp Việt tại Mỹ: phục vụ cả khách Việt lẫn khách bản xứ</h3><p>Thiết kế website cho doanh nghiệp Việt tại Mỹ: song ngữ Anh – Việt, đánh giá đúng quy định FTC, dễ tiếp cận theo ADA/WCAG, lên Google Maps. Xem kinh nghiệm.</p></div></a></div></section>
+</div>
+</main>
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="rv">Bạn cần làm website?<br>Liên hệ để được tư vấn.</h2>
+    <p>Chia sẻ với tôi về công việc kinh doanh và website bạn cần, tôi sẽ tư vấn miễn phí để chọn gói phù hợp.</p>
+    <div class="reach rv"><a href="https://zalo.me/0901432113" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1.5 1.5 0 011.5 1.5v9A1.5 1.5 0 0120 17h-8.5L7 20.5V17H4a1.5 1.5 0 01-1.5-1.5v-9A1.5 1.5 0 014 5z"/><path d="M7.5 9.5h9M7.5 12.5h6"/></svg></span><span><small>Zalo</small><b>0901 432 113</b></span><span class="go" aria-hidden="true">&#x2197;&#xFE0E;</span></a><a href="https://t.me/kimtuyen21297" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6L2.9 10.7c-.9.4-.9 1.6.1 1.9l4.6 1.5 1.8 5.5c.3.9 1.4 1.1 2 .4l2.6-2.7 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.9c.2-1-.7-1.8-1.6-1.5z"/><path d="M7.6 14.1L18.6 6.8l-8.3 9.3"/></svg></span><span><small>Telegram</small><b>@kimtuyen21297</b></span><span class="go" aria-hidden="true">&#x2197;&#xFE0E;</span></a></div>
+    <div class="mail"><span class="addr" id="addr">kimtuyentb97@gmail.com</span><button type="button" id="copy">Sao chép email</button><span class="ok" id="ok" hidden>Đã sao chép</span></div>
+    <div class="foot"><span>© 2026 Kim Tuyen Truong</span><span><a href="/bang-gia/">Bảng giá</a> · <a href="/kinh-nghiem/">Kinh nghiệm</a> · <a href="/kien-thuc/">Kiến thức</a> · <a href="/lien-he/">Liên hệ</a></span></div>
+  </div>
+</footer>
+<div class="dock"><a href="https://zalo.me/0901432113" target="_blank" rel="noopener" aria-label="Zalo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1.5 1.5 0 011.5 1.5v9A1.5 1.5 0 0120 17h-8.5L7 20.5V17H4a1.5 1.5 0 01-1.5-1.5v-9A1.5 1.5 0 014 5z"/><path d="M7.5 9.5h9M7.5 12.5h6"/></svg><span>Zalo</span></a><a href="https://t.me/kimtuyen21297" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6L2.9 10.7c-.9.4-.9 1.6.1 1.9l4.6 1.5 1.8 5.5c.3.9 1.4 1.1 2 .4l2.6-2.7 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.9c.2-1-.7-1.8-1.6-1.5z"/><path d="M7.6 14.1L18.6 6.8l-8.3 9.3"/></svg><span>Telegram</span></a></div>
+<script src="/assets/site.js?v=13"></script>
+</body>
+</html>

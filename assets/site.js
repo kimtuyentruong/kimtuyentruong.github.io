@@ -37,8 +37,10 @@
     var inn = document.createElement('div'); inn.className = 'mq-in';
     nodes.forEach(function (n) { inn.appendChild(n); });
     box.appendChild(inn);
-    var gap = parseFloat(getComputedStyle(inn).columnGap) || 0, r0 = inn.getBoundingClientRect().left;
-    var rs = nodes.map(function (n) { return n.getBoundingClientRect(); });
+    /* Z: page zoom on large screens (html{zoom}); rects come back zoomed, transforms are local px */
+    var ib = inn.getBoundingClientRect(), Z = (inn.offsetWidth && ib.width / inn.offsetWidth) || 1;
+    var gap = parseFloat(getComputedStyle(inn).columnGap) || 0, r0 = ib.left / Z;
+    var rs = nodes.map(function (n) { var b = n.getBoundingClientRect(); return { left: b.left / Z, right: b.right / Z, width: b.width / Z, height: b.height / Z }; });
     var M = 0, H = 0; rs.forEach(function (r) { M = Math.max(M, r.width); H = Math.max(H, r.height); });
     var S = rs[rs.length - 1].right - r0 + gap, vw = box.clientWidth || innerWidth;
     var sets = Math.max(1, Math.ceil((vw + M + gap) / S)), L = sets * S, T = L / speed * 1000;
@@ -104,7 +106,7 @@
   });
   build(); ribBuild();
   /* deep link to an industry filter, e.g. /#bat-dong-san */
-  var pfSlug = { 'bat-dong-san': 'realestate', 'real-estate': 'realestate', 'y-te': 'health', 'healthcare': 'health', 'lam-dep': 'beauty', 'beauty': 'beauty', 'nha-hang': 'food', 'food': 'food', 'khach-san': 'stay', 'hospitality': 'stay', 'ban-le': 'retail', 'retail': 'retail', 'xay-dung': 'build', 'construction': 'build', 'dich-vu': 'service', 'services': 'service', 'giao-duc': 'edu', 'education': 'edu' };
+  var pfSlug = { 'bat-dong-san': 'realestate', 'real-estate': 'realestate', 'y-te': 'health', 'healthcare': 'health', 'lam-dep': 'beauty', 'beauty': 'beauty', 'nha-hang': 'food', 'food': 'food', 'khach-san': 'stay', 'hospitality': 'stay', 'ban-le': 'retail', 'retail': 'retail', 'xay-dung': 'build', 'construction': 'build', 'dich-vu': 'service', 'services': 'service', 'giao-duc': 'edu', 'education': 'edu', 'toc-barber': 'hair', 'barber': 'hair', 'hair': 'hair' };
   var pfHash = function (e) {
     var k = pfSlug[decodeURIComponent(location.hash.slice(1)).toLowerCase()];
     var b = k && document.querySelector('.pf-ind button[data-i="' + k + '"]');
