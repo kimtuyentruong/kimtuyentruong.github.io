@@ -253,8 +253,10 @@
   var box = document.getElementById('qrIn'), Z = 'https://zalo.me/0901432113';
   var P = {
     lp: ['Landing Page', '3.500.000đ', 'Một trang tập trung vào một sản phẩm hoặc dịch vụ, có form và nút gọi, Zalo, gắn sẵn mã quảng cáo. Làm trong 7–10 ngày.'],
-    cb: ['Website Cơ Bản', '9.500.000đ', 'Đủ các trang Trang chủ, Giới thiệu, Dịch vụ, Liên hệ, có trang quản trị để bạn tự sửa nội dung và giá. Làm trong 2–4 tuần.'],
-    dn: ['Website Doanh Nghiệp', 'từ 15.000.000đ', 'Nhiều trang dịch vụ, sản phẩm, khu vực, giỏ hàng và thanh toán online, blog, song ngữ nếu cần. Làm trong 5–8 tuần.'],
+    mau: ['Website Theo Mẫu', '5.000.000đ', 'Chọn một mẫu có sẵn theo ngành, tôi đổi màu, logo, nội dung và hình ảnh theo thương hiệu của bạn.'],
+    cb: ['Website Cơ Bản', '9.500.000đ', 'Tối đa 7 trang: Trang chủ, Giới thiệu, Dịch vụ, Liên hệ…, có trang quản trị để bạn tự sửa nội dung và giá. Làm trong 2–4 tuần.'],
+    dn: ['Website Doanh Nghiệp', '18.500.000đ', 'Website chuyên nghiệp, đầy đủ chức năng, tối đa 20 trang, tặng 5 bài blog chuẩn SEO, AIO. Làm trong 5–8 tuần.'],
+    bh: ['Website Bán Hàng', '22.500.000đ', 'Cửa hàng online có danh mục, giỏ hàng, đặt hàng, thanh toán và quản lý đơn hàng trong trang quản trị.'],
     seo: ['SEO & Google Maps', 'Báo giá theo website', 'Website đã có thì tôi xem trước, rồi đề xuất phần cần sửa để lên Google và Google Maps, kèm báo giá riêng.']
   };
   var val = function (n) { var c = qz.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : ''; };
@@ -262,9 +264,9 @@
   qz.addEventListener('change', function () {
     var a = val('q1'), b = val('q2'), c = val('q3'); if (!a && !b) return;
     var k = b === 'seo' ? 'seo' : (a || 'cb');
-    if (k === 'lp' && c === 'yes') k = 'cb';
-    var p = P[k], note = c === 'yes' && k !== 'lp' && k !== 'seo' ? ' Gói này có trang quản trị để bạn tự cập nhật.' : '';
-    var link = k === 'seo' ? '/dich-vu/seo-google-maps/' : '/bang-gia/#goi';
+    if ((k === 'lp' || k === 'mau') && c === 'yes') k = 'cb';
+    var p = P[k], note = c === 'yes' && k !== 'lp' && k !== 'seo' && k !== 'mau' ? ' Gói này có trang quản trị để bạn tự cập nhật.' : '';
+    var link = k === 'seo' ? '/dich-vu/seo-google-maps/' : k === 'mau' ? '/mau-website/' : '/dich-vu/thiet-ke-website/#bang-gia';
     box.innerHTML = '<div class="rec"><small>Gợi ý cho bạn</small><h3>' + esc(p[0]) + '</h3><div class="price">' + esc(p[1]) + '</div><p>' + esc(p[2] + note) + '</p>' +
       '<p class="cta"><a class="btn" href="/lien-he/?goi=' + encodeURIComponent(p[0]) + '">Nhận báo giá gói này</a><a class="btn ghost" href="' + link + '">Xem chi tiết</a></p></div>';
   });
