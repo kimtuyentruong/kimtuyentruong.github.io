@@ -129,3 +129,15 @@
 .plans .price.ask{font-size:clamp(28px,2.6vw,38px)}
 @media (max-width:1100px){.plans.six{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:700px){.plans.six{grid-template-columns:minmax(0,1fr)}}
+/* 4 service paths + SEO plans (v4) */
+.paths.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.paths.four .path{padding:24px 22px 22px}
+.paths.four .path h2,.paths.four .path h3{font-size:clamp(19px,1.6vw,23px)}
+.plans .price small{font-size:.42em}
+.pnote{margin-top:16px;font-size:14px;color:var(--faint);max-width:90ch}
+.qr .addon{margin-top:16px;padding:16px;border-radius:14px;border:1px dashed rgba(255,138,61,.55);background:rgba(10,7,6,.5)}
+.qr .addon b{display:block;color:var(--ink);font-family:var(--display);font-size:17px}
+.qr .addon span{display:block;color:#FFB070;font-weight:700;margin:2px 0 6px}
+.qr .addon p{margin:0 0 10px;font-size:14.5px}
+@media (max-width:1100px){.paths.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.paths.four{grid-template-columns:minmax(0,1fr)}}
