@@ -1,0 +1,1359 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Xét Nghiệm Máu Tại Nhà Hà Nội – Lấy Mẫu Từ 06:00, Kết Quả Online | Lam Kính Lab</title>
+<meta name="description" content="Mẫu giao diện phòng xét nghiệm lấy mẫu tại nhà ở Hà Nội: tự chọn chỉ số hoặc gói (máu tổng quát, mỡ máu, đường huyết, gan thận, người lớn tuổi), xem tổng giá, số ống mẫu, có cần nhịn ăn; hẹn khung giờ sáng sớm theo phường; theo dõi mẫu và đọc phiếu kết quả online.">
+<meta name="theme-color" content="#F4F6F7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230E1012'/%3E%3Crect x='12' y='24' width='40' height='16' rx='2' fill='none' stroke='%23F4F6F7' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='4.5' fill='%23E8502A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..110,500..800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Lam Kính Lab (mẫu)","description":"Mẫu giao diện: phòng xét nghiệm có dịch vụ lấy mẫu tại nhà ở Hà Nội. Dữ liệu minh hoạ.","url":"https://example.com/","telephone":"+84-900-000-000","priceRange":"40.000đ – 1.203.000đ","areaServed":"Hà Nội","address":{"@type":"PostalAddress","addressLocality":"Phường Cầu Giấy","addressRegion":"Hà Nội","addressCountry":"VN"},"openingHours":"Mo-Su 06:00-21:00"}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --bg:#F4F6F7;--paper:#FFFFFF;--bg2:#E9EDEF;--ink:#0E1012;--ink2:#2A2F33;--muted:#596168;--faint:#8A9298;
+  --line:rgba(14,16,18,.12);--line2:rgba(14,16,18,.22);--grid:rgba(14,16,18,.055);
+  --red:#E8502A;--red-d:#B5391A;--red-l:#FCE9E3;
+  --c-tim:#6E4FA8;--c-vang:#E2B13C;--c-xam:#8D959B;--c-lo:#E9D98A;
+  --disp:'Archivo',system-ui,-apple-system,sans-serif;--sans:'Inter',system-ui,-apple-system,sans-serif;
+  --pad:clamp(16px,4vw,48px);--ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.num,.mono{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1,"zero" 1}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.gridbg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px}
+
+/* type */
+.lbl{display:flex;align-items:center;gap:12px;font:600 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-feature-settings:"tnum" 1,"zero" 1}
+.lbl b{color:var(--red-d);font-weight:700}
+.lbl::after{content:"";flex:1;max-width:120px;height:1px;background:var(--line2)}
+h1,h2,h3{font-family:var(--disp);margin:0;text-wrap:balance;letter-spacing:-.02em}
+.h2{font-weight:750;font-stretch:88%;font-size:clamp(34px,4.4vw,64px);line-height:1;letter-spacing:-.03em;margin-top:18px}
+.h2 em{font-style:normal;color:var(--red)}
+.lead{font-size:clamp(16px,1.25vw,18px);color:var(--ink2);max-width:58ch;margin:18px 0 0}
+.sec{padding:clamp(72px,9vw,128px) 0;position:relative}
+.sec-hd{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 48px;align-items:end;margin-bottom:clamp(36px,4.5vw,64px)}
+.sec-hd .lead{margin:0}
+.note{font-size:13px;color:var(--muted)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 24px;border:1px solid var(--ink);background:var(--ink);color:#fff;font:600 15px/1 var(--sans);text-decoration:none;border-radius:2px;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:#000}
+.btn .dot{width:8px;height:8px;border-radius:50%;background:var(--red)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.btn.red{background:var(--red);border-color:var(--red);color:var(--ink)}
+.btn.red:hover{background:#F0603C}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.sm{height:42px;padding:0 16px;font-size:14px}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;background:rgba(244,246,247,.97);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{display:block;font:800 19px/1 var(--disp);font-stretch:92%;letter-spacing:.02em;text-transform:uppercase}
+.logo small{display:block;font:600 10.5px/1 var(--sans);letter-spacing:.16em;color:var(--muted);margin-top:5px;text-transform:uppercase}
+.nav{display:flex;gap:4px}
+.nav a{font:500 14px/1 var(--sans);text-decoration:none;padding:12px 12px;color:var(--ink2);position:relative}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-r{display:flex;align-items:center;gap:12px}
+.tel{font:600 14px/1 var(--sans);text-decoration:none;display:flex;align-items:center;gap:8px}
+.menu-btn{display:none;width:46px;height:46px;border:1px solid var(--line2);background:#fff;border-radius:2px;align-items:center;justify-content:center}
+.mnav{position:fixed;inset:0;z-index:80;background:var(--ink);color:#fff;display:flex;flex-direction:column;padding:16px var(--pad) 32px;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;overflow-y:auto}
+.mnav.open{opacity:1;visibility:visible}
+.mnav-top{display:flex;justify-content:space-between;align-items:center;height:48px}
+.mnav-top .logo small{color:#AEB5BA}
+.mnav-top button{width:46px;height:46px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;border-radius:2px}
+.mnav nav{display:flex;flex-direction:column;margin:28px 0 28px;border-top:1px solid rgba(255,255,255,.16)}
+.mnav nav a{font:700 30px/1.1 var(--disp);font-stretch:88%;text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.16);display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.mnav nav a span{font:600 12px/1 var(--sans);letter-spacing:.14em;color:var(--red)}
+.mnav .btn{margin-top:auto}
+
+/* hero */
+.hero{padding:118px 0 0;position:relative;overflow:hidden}
+.hero-g{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);align-items:start}
+.hero .lbl::after{display:none}
+.h1{font-weight:800;font-stretch:84%;font-size:clamp(46px,6.3vw,98px);line-height:.96;letter-spacing:-.032em;margin:22px 0 0}
+.h1 .r{color:var(--red)}
+.h1 .ln{display:block;overflow:hidden;padding:.12em 0 .06em;margin-top:-.12em}
+.h1 .ln>span{display:block}
+.js .h1 .ln>span{transform:translateY(105%);transition:transform 1s var(--ease)}
+.js .loaded .h1 .ln>span{transform:none}
+.js .loaded .h1 .ln:nth-child(2)>span{transition-delay:.08s}
+.js .loaded .h1 .ln:nth-child(3)>span{transition-delay:.16s}
+.hero .lead{max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.readout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(36px,4vw,56px);border-top:1px solid var(--ink);border-bottom:1px solid var(--line2)}
+.readout div{padding:16px 16px 16px 0}
+.readout div+div{padding-left:16px;border-left:1px solid var(--line2)}
+.readout b{display:block;font:700 clamp(26px,2.6vw,38px)/1 var(--disp);font-stretch:85%;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.readout span{display:block;font-size:13px;color:var(--muted);margin-top:8px;line-height:1.4}
+.spec{position:relative;margin-top:6px}
+.frame{position:relative;aspect-ratio:4/5;background:var(--bg2);overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:cover}
+.corner{position:absolute;width:22px;height:22px;border:2px solid var(--ink);z-index:3}
+.corner.tl{left:-8px;top:-8px;border-right:0;border-bottom:0}.corner.tr{right:-8px;top:-8px;border-left:0;border-bottom:0}
+.corner.bl{left:-8px;bottom:-8px;border-right:0;border-top:0}.corner.br{right:-8px;bottom:-8px;border-left:0;border-top:0}
+.scan{position:absolute;left:0;right:0;top:0;height:2px;background:var(--red);z-index:2;will-change:transform}
+.scan::after{content:"";position:absolute;left:0;right:0;top:2px;height:60px;background:linear-gradient(rgba(232,80,42,.18),rgba(232,80,42,0))}
+.js .spec .scan{animation:scan 4.6s cubic-bezier(.45,0,.55,1) infinite alternate}
+@keyframes scan{from{transform:translateY(0)}to{transform:translateY(var(--sh,560px))}}
+.paused .scan,.paused .flow-dot{animation-play-state:paused!important}
+.ruler{position:absolute;right:-34px;top:0;bottom:0;width:22px}
+.ruler svg{width:100%;height:100%}
+.tag{position:absolute;left:-28px;bottom:28px;z-index:4;background:#fff;border:1px solid var(--ink);padding:14px 16px;min-width:250px;font-size:12.5px;line-height:1.5;box-shadow:8px 8px 0 var(--ink)}
+.tag .t1{display:flex;justify-content:space-between;gap:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--muted)}
+.tag .code{font:700 22px/1.1 var(--disp);font-stretch:85%;letter-spacing:.01em;margin:6px 0 8px;display:flex;align-items:center;gap:10px}
+.bars{display:flex;gap:2px;height:22px;align-items:stretch}
+.bars i{display:block;background:var(--ink)}
+.tag dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:8px 0 0}
+.tag dt{color:var(--muted)}.tag dd{margin:0;font-weight:600;text-align:right}
+.live{display:inline-flex;align-items:center;gap:6px;color:var(--red-d)}
+.live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red)}
+.mini-tube{position:absolute;right:-18px;top:44px;z-index:4;width:150px;background:var(--ink);color:#fff;padding:10px}
+.mini-tube img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.mini-tube span{display:block;font:600 10.5px/1.3 var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:8px;color:#C9CED2}
+.panel-strip{margin-top:clamp(56px,6vw,88px);border-top:1px solid var(--ink);background:var(--paper)}
+.panel-strip .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.ps{padding:20px 18px 22px;border-right:1px solid var(--line);text-decoration:none;display:block;transition:background .2s}
+.ps:first-child{border-left:1px solid var(--line)}
+.ps:hover{background:var(--bg)}
+.ps small{display:block;font:600 11px/1 var(--sans);letter-spacing:.14em;color:var(--red-d)}
+.ps b{display:block;font:700 18px/1.15 var(--disp);font-stretch:90%;margin-top:10px}
+.ps span{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+
+/* pain table */
+.ptable{border-top:1px solid var(--ink)}
+.prow{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1.15fr);gap:24px;padding:26px 0;border-bottom:1px solid var(--line2);position:relative;overflow:hidden}
+.prow .n{font:700 14px/1.6 var(--sans);color:var(--red-d);font-variant-numeric:tabular-nums}
+.prow h3{font-size:clamp(20px,1.8vw,26px);font-weight:700;font-stretch:90%;line-height:1.2}
+.prow p{margin:0;color:var(--ink2)}
+.prow .fix{display:flex;gap:14px}
+.prow .fix .ico{color:var(--red);margin-top:3px}
+.ptable-hd{display:grid;grid-template-columns:72px minmax(0,1fr) minmax(0,1.15fr);gap:24px;padding:12px 0;font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.prow::before{content:"";position:absolute;inset:0;background:var(--red-l);transform:scaleX(0);transform-origin:left;z-index:-1}
+.prow{z-index:0}
+.prow.sweep::before{animation:sweep 1.1s var(--ease)}
+@keyframes sweep{0%{transform:scaleX(0);opacity:1}60%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+
+/* process */
+.proc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative;border-top:1px solid var(--ink)}
+.flow{position:absolute;left:0;right:0;top:-1px;height:1px}
+.flow-dot{position:absolute;top:-4px;left:0;width:9px;height:9px;background:var(--red);border-radius:50%}
+.js .flow-dot{animation:flow 7s linear infinite}
+@keyframes flow{from{transform:translateX(0)}to{transform:translateX(var(--fw,1200px))}}
+.step{padding:28px 24px 8px 0}
+.step+.step{padding-left:24px;border-left:1px solid var(--line)}
+.step .k{display:flex;justify-content:space-between;align-items:center;font:600 12px/1 var(--sans);letter-spacing:.14em;color:var(--muted)}
+.step svg.art{width:64px;height:64px;margin:26px 0 22px;stroke:var(--ink);stroke-width:1.3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.step svg.art .a{stroke:var(--red)}
+.step h3{font-size:22px;font-weight:700;font-stretch:90%;line-height:1.2}
+.step p{color:var(--ink2);font-size:15px;margin:10px 0 0}
+.step .t{display:inline-block;margin-top:14px;font:600 13px/1 var(--sans);font-variant-numeric:tabular-nums;padding:7px 10px;background:var(--bg2)}
+.visit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);margin-top:clamp(56px,6vw,88px);align-items:center}
+.visit figure{margin:0;position:relative}
+.visit figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.visit figcaption{font-size:12.5px;color:var(--muted);margin-top:10px;display:flex;justify-content:space-between;gap:12px}
+.kit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink)}
+.kit li{list-style:none;padding:18px 18px 18px 0;border-bottom:1px solid var(--line);display:flex;gap:14px}
+.kit li:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
+.kit li .ico{color:var(--red);margin-top:2px}
+.kit b{display:block;font-weight:600}
+.kit span{font-size:14px;color:var(--muted)}
+.kit{padding:0;margin:24px 0 0}
+
+/* builder */
+.builder{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:clamp(24px,3vw,40px);align-items:start}
+.pk-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.pk{border:1px solid var(--line2);background:#fff;padding:10px 14px;border-radius:2px;font:600 14px/1.2 var(--sans);text-align:left;display:flex;flex-direction:column;gap:4px;min-height:58px;transition:border-color .2s,background .2s}
+.pk small{font:500 12px/1 var(--sans);color:var(--muted);font-variant-numeric:tabular-nums}
+.pk:hover{border-color:var(--ink)}
+.pk[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pk[aria-pressed="true"] small{color:#C9CED2}
+.grp{background:#fff;border:1px solid var(--line);margin-bottom:12px}
+.grp-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);font:600 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.grp-h b{color:var(--ink)}
+.ti{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line);cursor:pointer;position:relative;transition:background .15s}
+.ti:last-child{border-bottom:0}
+.ti:hover{background:#FAFBFB}
+.ti input{position:absolute;opacity:0;width:1px;height:1px}
+.ti .cb{width:22px;height:22px;border:1.5px solid var(--ink2);border-radius:2px;display:flex;align-items:center;justify-content:center;background:#fff;transition:background .15s,border-color .15s}
+.ti .cb svg{width:14px;height:14px;stroke:#fff;stroke-width:2.6;fill:none;opacity:0}
+.ti input:checked~.cb{background:var(--red);border-color:var(--red)}
+.ti input:checked~.cb svg{opacity:1}
+.ti input:focus-visible~.cb{outline:2px solid var(--red);outline-offset:3px}
+.ti .nm b{display:block;font-weight:600;font-size:15px;line-height:1.35}
+.ti .nm span{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12.5px;color:var(--muted);margin-top:4px}
+.ti .nm i{font-style:normal;display:inline-flex;align-items:center;gap:6px}
+.cap{width:10px;height:10px;border-radius:2px;display:inline-block}
+.cap.tim{background:var(--c-tim)}.cap.vang{background:var(--c-vang)}.cap.xam{background:var(--c-xam)}.cap.lo{background:var(--c-lo);border:1px solid #B7A75A}
+.fast{color:var(--red-d);font-weight:600}
+.ti .pr{font:600 15px/1 var(--sans);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ti input:checked~.nm b{color:var(--ink)}
+.sheet{position:sticky;top:96px;background:var(--ink);color:#fff;padding:24px;border-radius:2px}
+.sheet .gridline{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px}
+.sheet>*{position:relative}
+.sheet-hd{display:flex;justify-content:space-between;align-items:center;font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#AEB5BA;padding-bottom:14px;border-bottom:1px dashed rgba(255,255,255,.28)}
+.sheet h3{font-size:24px;font-weight:700;font-stretch:88%;margin-top:16px;line-height:1.15}
+.sel-list{margin:14px 0 0;padding:0;list-style:none;max-height:180px;overflow:auto;font-size:13.5px;color:#D7DBDE}
+.sel-list li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.sel-list li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+.sel-list .empty{color:#AEB5BA;border:0}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.14);margin-top:18px;border:1px solid rgba(255,255,255,.14)}
+.metrics div{background:var(--ink);padding:14px}
+.metrics small{display:block;font:600 10.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#AEB5BA}
+.metrics b{display:block;font:700 22px/1.1 var(--disp);font-stretch:88%;margin-top:8px;font-variant-numeric:tabular-nums}
+.metrics span{display:block;font-size:12.5px;color:#C9CED2;margin-top:4px;line-height:1.4}
+.metrics b.warn{color:#FF8A66}
+.tubes{display:flex;gap:10px;align-items:flex-end;min-height:76px;margin-top:16px;padding:12px 14px;border:1px dashed rgba(255,255,255,.28)}
+.tubes .tb{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10.5px;color:#C9CED2;text-align:center;width:58px;line-height:1.25}
+.tubes svg{width:18px;height:52px}
+.tubes .none{font-size:13px;color:#AEB5BA;align-self:center}
+.js .tubes .tb{animation:drop .5s var(--ease) both}
+@keyframes drop{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.total{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:20px;padding-top:16px;border-top:1px dashed rgba(255,255,255,.28)}
+.total small{display:block;font-size:12.5px;color:#AEB5BA}
+.total .price{font:800 34px/1 var(--disp);font-stretch:85%;font-variant-numeric:tabular-nums;white-space:nowrap}
+.total s{color:#8E979D;font-size:14px}
+.sheet .btn{width:100%;margin-top:18px}
+.sheet .note{color:#AEB5BA;font-size:12px;margin:12px 0 0}
+.bd-bar{display:none}
+
+/* elderly */
+.elder{background:var(--ink);color:#fff;overflow:hidden}
+.elder .lbl{color:#AEB5BA}.elder .lbl::after{background:rgba(255,255,255,.3)}.elder .lbl b{color:var(--red)}
+.elder-g{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(28px,4vw,72px);align-items:center}
+.elder figure{margin:0;position:relative}
+.elder figure img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.elder figure::after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);pointer-events:none}
+.elder .lead{color:#D2D7DA}
+.elist{list-style:none;padding:0;margin:28px 0 0;border-top:1px solid rgba(255,255,255,.2)}
+.elist li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.elist li span{font:600 13px/1.6 var(--sans);color:var(--red);font-variant-numeric:tabular-nums}
+.elist b{display:block}
+.elist p{margin:2px 0 0;font-size:14.5px;color:#C9CED2}
+.elder .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.elder .row .price{font:800 30px/1 var(--disp);font-stretch:85%;font-variant-numeric:tabular-nums}
+.elder .row small{color:#AEB5BA;font-size:13px}
+
+/* booking */
+.book{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,3vw,48px);align-items:start}
+.form{background:#fff;border:1px solid var(--line);padding:clamp(20px,3vw,36px)}
+.fs{border:0;padding:0;margin:0 0 26px}
+.fs legend{display:flex;align-items:center;gap:10px;font:700 18px/1.2 var(--disp);font-stretch:90%;padding:0;margin-bottom:14px}
+.fs legend span{font:600 11px/1 var(--sans);letter-spacing:.12em;color:#fff;background:var(--ink);padding:5px 7px;font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.fld label{font-size:13.5px;font-weight:600}
+.fld input,.fld select,.fld textarea{height:48px;border:1px solid var(--line2);background:#fff;padding:0 14px;border-radius:2px;font-size:16px;width:100%}
+.fld textarea{height:auto;min-height:84px;padding:12px 14px;resize:vertical}
+.fld select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E1012' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:38px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--ink);outline:2px solid var(--red);outline-offset:1px}
+.fld .hint{font-size:12.5px;color:var(--muted)}
+.err{color:var(--red-d);font-size:13px;font-weight:600;min-height:0}
+.fld.bad input,.fld.bad select{border-color:var(--red-d)}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:58px;border:1px solid var(--line2);background:#fff;border-radius:2px;font-size:12px;color:var(--muted);text-align:center;cursor:pointer;transition:border-color .15s,background .15s;padding:6px 4px}
+.chip span b{font:600 15px/1 var(--sans);color:var(--ink);font-variant-numeric:tabular-nums}
+.chip input:checked+span{background:var(--ink);border-color:var(--ink);color:#C9CED2}
+.chip input:checked+span b{color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--red);outline-offset:2px}
+.chip input:disabled+span{background:repeating-linear-gradient(135deg,#F4F6F7 0 6px,#ECEFF1 6px 12px);color:#8A9298;cursor:not-allowed;border-style:dashed}
+.chip input:disabled+span b{color:#8A9298;text-decoration:line-through}
+.slots{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.slots .chip span{min-height:52px}
+.slot-h{display:flex;justify-content:space-between;gap:12px;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px}
+.slot-h:first-child{margin-top:0}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;margin:6px 0 4px;cursor:pointer}
+.consent input{width:22px;height:22px;margin:1px 0 0;accent-color:var(--red);flex:none}
+.form .btn{width:100%;margin-top:18px}
+.ok{display:none;border:1px solid var(--ink);padding:22px;background:var(--bg)}
+.ok.show{display:block}
+.ok h3{font-size:22px;font-weight:700;font-stretch:90%;margin:8px 0 6px}
+.ok p{margin:6px 0;font-size:14.5px}
+.ok .code{font:800 26px/1 var(--disp);font-stretch:85%;letter-spacing:.02em}
+.side{position:sticky;top:96px}
+.side .card{background:#fff;border:1px solid var(--line);padding:22px;margin-bottom:14px}
+.side h3{font-size:20px;font-weight:700;font-stretch:90%}
+.side dl{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;margin:14px 0 0;font-size:14px}
+.side dt{color:var(--muted)}.side dd{margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.prep{list-style:none;padding:0;margin:12px 0 0;font-size:14.5px}
+.prep li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.prep li:last-child{border:0}
+.prep .ico{color:var(--red);margin-top:2px}
+
+/* tracker */
+.track{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.track::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.track .wrap{position:relative}
+.track .lbl{color:#AEB5BA}.track .lbl::after{background:rgba(255,255,255,.3)}.track .lbl b{color:var(--red)}
+.track .lead{color:#D2D7DA}
+.tq{display:flex;gap:10px;flex-wrap:wrap;margin-top:0}
+.tq input{height:52px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:0 16px;border-radius:2px;font:600 18px/1 var(--sans);letter-spacing:.06em;font-variant-numeric:tabular-nums;width:240px;max-width:100%}
+.tq input:focus{border-color:#fff;outline:2px solid var(--red);outline-offset:1px}
+.stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:48px;position:relative}
+.rail{position:absolute;left:0;right:0;top:15px;height:2px;background:rgba(255,255,255,.18)}
+.rail i{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease)}
+.stg{position:relative;padding-right:20px}
+.stg .nd{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.35);background:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .3s,border-color .3s}
+.stg .nd svg{width:16px;height:16px;stroke:#fff;stroke-width:2.4;fill:none;opacity:0}
+.stg.done .nd{background:var(--red);border-color:var(--red)}
+.stg.done .nd svg{opacity:1}
+.stg.now .nd{border-color:var(--red)}
+.stg.now .nd::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--red)}
+.js .stg.now .nd::after{animation:blink 1s steps(2,end) infinite}
+@keyframes blink{50%{opacity:.2}}
+.stg small{display:block;font:600 11px/1 var(--sans);letter-spacing:.14em;color:#AEB5BA;margin-top:18px;font-variant-numeric:tabular-nums}
+.stg h3{font-size:20px;font-weight:700;font-stretch:90%;margin-top:8px;color:#8E979D;transition:color .3s}
+.stg.done h3,.stg.now h3{color:#fff}
+.stg p{font-size:14px;color:#AEB5BA;margin:6px 0 0}
+.tlog{margin-top:40px;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,3vw,48px)}
+.log{border:1px solid rgba(255,255,255,.2);padding:18px 20px;font-size:13.5px;min-height:250px;background:rgba(0,0,0,.25)}
+.log-h{display:flex;justify-content:space-between;font:600 11px/1 var(--sans);letter-spacing:.14em;color:#AEB5BA;text-transform:uppercase;padding-bottom:12px;border-bottom:1px dashed rgba(255,255,255,.25);margin-bottom:8px}
+.log ol{list-style:none;margin:0;padding:0}
+.log li{display:grid;grid-template-columns:56px 1fr;gap:12px;padding:6px 0;color:#D7DBDE;font-variant-numeric:tabular-nums;animation:drop .4s var(--ease) both}
+.log li time{color:var(--red);font-weight:600}
+.track figure{margin:0}
+.track figure img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.track figcaption{font-size:12.5px;color:#AEB5BA;margin-top:10px}
+
+/* report */
+.report{display:grid;grid-template-columns:minmax(0,7.4fr) minmax(0,4.6fr);gap:clamp(20px,3vw,40px);align-items:start}
+.paper{background:#fff;border:1px solid var(--line2);box-shadow:0 1px 0 var(--line),12px 12px 0 var(--bg2)}
+.p-hd{display:grid;grid-template-columns:1fr auto;gap:12px;padding:20px 22px;border-bottom:2px solid var(--ink)}
+.p-hd b{font:800 18px/1.1 var(--disp);font-stretch:90%;letter-spacing:.02em;text-transform:uppercase}
+.p-hd small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
+.p-hd .stamp{font:700 11px/1.3 var(--sans);letter-spacing:.14em;color:var(--red-d);border:1.5px solid var(--red-d);padding:6px 8px;text-transform:uppercase;align-self:start;text-align:center}
+.p-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.p-meta div{padding:12px 22px 12px 22px;font-size:13px;min-width:0}
+.p-meta div+div{border-left:1px solid var(--line);padding-left:16px}
+.p-meta small{display:block;color:var(--muted);font-size:11.5px}
+.p-meta b{font-weight:600;font-variant-numeric:tabular-nums}
+.r-hd,.rr{display:grid;grid-template-columns:minmax(0,1.7fr) 90px 80px minmax(0,1.5fr);gap:14px;align-items:center;padding:0 22px}
+.r-hd{font:600 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.r-grp{padding:10px 22px 6px;font:700 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--bg)}
+.rr{width:100%;border:0;border-bottom:1px solid var(--line);background:#fff;text-align:left;padding-top:12px;padding-bottom:12px;font-size:14px;transition:background .15s;position:relative}
+.rr:hover{background:#FAFBFB}
+.rr[aria-pressed="true"]{background:var(--red-l)}
+.rr[aria-pressed="true"]::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--red)}
+.rr .nm{font-weight:600}
+.rr .vl{font:700 15px/1 var(--sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:6px}
+.flag{font:700 10.5px/1 var(--sans);padding:3px 5px;background:var(--red);color:var(--ink);border-radius:2px}
+.rr .un{font-size:12.5px;color:var(--muted)}
+.rng{display:flex;flex-direction:column;gap:6px}
+.rng span{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{position:relative;height:8px;background:var(--bg2)}
+.bar .ref{position:absolute;top:0;bottom:0;background:#BFC6CB}
+.bar .mk{position:absolute;top:-4px;width:3px;height:16px;background:var(--ink);transform:translateX(-50%);transition:left 1s var(--ease)}
+.rr.hi .bar .mk{background:var(--red)}
+.p-ft{padding:14px 22px;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.explain{position:sticky;top:96px;background:#fff;border:1px solid var(--ink);padding:24px}
+.explain .k{font:600 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--red-d)}
+.explain h3{font-size:26px;font-weight:750;font-stretch:88%;margin-top:10px;line-height:1.1}
+.explain .val{display:flex;align-items:baseline;gap:10px;margin-top:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.explain .val b{font:800 40px/1 var(--disp);font-stretch:85%;font-variant-numeric:tabular-nums}
+.explain .val span{color:var(--muted);font-size:14px}
+.explain h4{font:600 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:18px 0 6px}
+.explain p{margin:0;font-size:15px;color:var(--ink2)}
+.doc{margin-top:18px;padding:14px 16px;background:var(--ink);color:#fff;font-size:14px;line-height:1.5;display:flex;gap:12px}
+.doc .ico{color:var(--red);margin-top:2px}
+.howto{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:28px;border-top:1px solid var(--line2)}
+.howto div{padding:16px 18px 0 0;font-size:14px;color:var(--ink2)}
+.howto div+div{padding-left:18px;border-left:1px solid var(--line)}
+.howto b{display:block;font:700 15px/1.3 var(--disp);font-stretch:92%;color:var(--ink);margin-bottom:4px}
+
+/* lab standards */
+.lab-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);align-items:start}
+.lab-imgs{position:sticky;top:96px;display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.lab-imgs img{width:100%;object-fit:cover}
+.lab-imgs img:first-child{grid-row:span 2;aspect-ratio:3/4;height:100%}
+.lab-imgs img:not(:first-child){aspect-ratio:1/1}
+.stds{border-top:1px solid var(--ink);margin-top:28px}
+.std{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.std dt{font-weight:600}
+.std dd{margin:0;color:var(--ink2);font-size:15px}
+.cert{margin-top:22px;border:1.5px dashed var(--line2);padding:16px 18px;display:flex;gap:16px;align-items:center;font-size:14px;color:var(--ink2)}
+.cert .box{width:56px;height:56px;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;font:800 11px/1.1 var(--disp);text-align:center;flex:none;letter-spacing:.04em}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink)}
+.rev{padding:28px 28px 8px 0;display:flex;flex-direction:column}
+.rev+.rev{padding-left:28px;border-left:1px solid var(--line)}
+.rev .tg{align-self:flex-start;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line2);padding:6px 8px;color:var(--muted)}
+.rev blockquote{margin:20px 0 0;font:500 clamp(18px,1.5vw,21px)/1.45 var(--disp);font-stretch:95%;letter-spacing:-.01em}
+.rev .who{margin-top:auto;padding-top:22px;display:flex;justify-content:space-between;gap:12px;font-size:13.5px}
+.rev .who b{display:block}
+.rev .who span{color:var(--muted)}
+.rev .who .pk2{font-variant-numeric:tabular-nums;color:var(--red-d);font-weight:600;text-align:right}
+
+/* faq */
+.faq-g{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,4vw,64px)}
+.faq{border-top:1px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line2)}
+.faq summary{list-style:none;display:grid;grid-template-columns:48px 1fr 28px;gap:12px;align-items:center;padding:20px 0;cursor:pointer;font:700 clamp(17px,1.4vw,20px)/1.3 var(--disp);font-stretch:92%}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary small{font:600 12px/1 var(--sans);color:var(--red-d);font-variant-numeric:tabular-nums}
+.faq summary .pm{width:28px;height:28px;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;transition:transform .25s,background .2s}
+.faq summary .pm svg{transition:transform .25s}.faq details[open] summary .pm svg{transform:rotate(45deg)}.faq details[open] summary .pm{background:var(--ink);color:#fff;border-color:var(--ink)}
+.faq .ans{padding:0 40px 22px 60px;color:var(--ink2)}
+.faq .ans p{margin:0 0 8px}
+
+/* contact + footer */
+.cta{background:var(--red);color:var(--ink);position:relative;overflow:hidden}
+.cta .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:end;padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px)}
+.cta h2{font-weight:800;font-stretch:84%;font-size:clamp(38px,5vw,76px);line-height:.96;letter-spacing:-.035em}
+.cta p{margin:16px 0 0;font-size:17px;max-width:48ch}
+.cta-r{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+.cta-r .btn{height:58px}
+.cta svg.mol{position:absolute;right:-40px;top:-40px;width:340px;height:340px;opacity:.22;stroke:var(--ink);fill:none;stroke-width:1.2}
+.ft{background:var(--ink);color:#C9CED2;padding:64px 0 96px;font-size:14px}
+.ft-g{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.ft h4{font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#fff;margin:0 0 16px}
+.ft ul{list-style:none;padding:0;margin:0}
+.ft li{padding:4px 0}
+.ft a{text-decoration:none}
+.ft a:hover{color:#fff;text-decoration:underline}
+.ft .logo b{color:#fff}.ft .logo small{color:#AEB5BA}
+.ft p{margin:14px 0 0;max-width:36ch}
+.ft-b{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12.5px;color:#AEB5BA}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(14,16,18,.96);border:1px solid rgba(201,206,214,.22);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s,background .2s,opacity .3s,bottom .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#000}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:var(--red);flex:none;box-shadow:0 0 0 3px rgba(232,80,42,.28)}
+.kt-badge b{color:#FF8A66;font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1180px){
+  .nav a{padding:12px 8px;font-size:13.5px}
+  .tel span{display:none}
+  .builder{grid-template-columns:minmax(0,1fr) 360px}
+  .r-hd,.rr{grid-template-columns:minmax(0,1.6fr) 84px 70px minmax(0,1.3fr)}
+}
+@media (max-width:1024px){
+  .nav,.tel{display:none}
+  .menu-btn{display:inline-flex}
+  .hero-g{grid-template-columns:1fr}
+  .spec{max-width:560px;margin:24px 0 0 28px}
+  .frame{aspect-ratio:5/4}
+  .panel-strip .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ps:nth-child(4){border-left:1px solid var(--line)}
+  .ps:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .sec-hd{grid-template-columns:1fr}
+  .proc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .step:nth-child(3){border-left:0;padding-left:0}
+  .step:nth-child(n+3){border-top:1px solid var(--line);margin-top:20px}
+  .flow{display:none}
+  .visit,.elder-g,.lab-g,.faq-g,.book,.tlog,.report{grid-template-columns:1fr}
+  .side,.explain,.lab-imgs{position:static}
+  .builder{grid-template-columns:1fr}
+  .sheet{position:static}
+  .bd-bar{display:flex;position:sticky;bottom:0;z-index:20;margin-top:12px;background:var(--ink);color:#fff;padding:10px 12px 10px 16px;align-items:center;justify-content:space-between;gap:12px;border-radius:2px}
+  .bd-bar b{font:800 22px/1 var(--disp);font-stretch:85%;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .bd-bar small{display:block;font-size:12px;color:#C9CED2;margin-top:4px}
+  .revs{grid-template-columns:1fr}
+  .rev+.rev{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .rev{padding:24px 0}
+  .cta .wrap{grid-template-columns:1fr}
+  .ft-g{grid-template-columns:1fr 1fr}
+  .tag{left:-20px}
+}
+@media (max-width:720px){
+  .hdr .wrap{height:64px}
+  html{scroll-padding-top:64px}
+  .hdr-r .btn{display:none}
+  .hero{padding-top:96px}
+  .readout{grid-template-columns:1fr 1fr}
+  .readout div:nth-child(3){grid-column:1/-1;border-left:0;padding-left:0;border-top:1px solid var(--line2)}
+  .spec{margin:20px 22px 0 10px}
+  .frame{aspect-ratio:4/5}
+  .ruler{display:none}
+  .mini-tube{width:104px;right:-12px;top:24px;padding:7px}
+  .mini-tube span{font-size:9.5px}
+  .tag{left:-10px;bottom:16px;min-width:0;width:calc(100% - 24px);max-width:290px;box-shadow:6px 6px 0 var(--ink)}
+  .panel-strip .wrap{grid-template-columns:1fr 1fr;padding:0}
+  .ps,.ps:first-child,.ps:nth-child(4){border-left:0}
+  .ps{border-bottom:1px solid var(--line)}
+  .ps:nth-child(odd){border-right:1px solid var(--line)}
+  .ps:nth-child(even){border-right:0}
+  .ps:last-child{grid-column:1/-1;border-right:0}
+  .ptable-hd{display:none}
+  .prow{grid-template-columns:44px 1fr;gap:10px 14px;padding:22px 0}
+  .prow .fix{grid-column:2}
+  .proc{grid-template-columns:1fr}
+  .step,.step+.step{padding:24px 0 8px;border-left:0}
+  .step:nth-child(n+2){border-top:1px solid var(--line);margin-top:0}
+  .step svg.art{margin:16px 0 14px}
+  .kit{grid-template-columns:1fr}
+  .kit li:nth-child(even){padding-left:0;border-left:0}
+  .ti{grid-template-columns:22px minmax(0,1fr);padding:12px 14px}
+  .ti .pr{grid-column:2;font-size:14px}
+  .two{grid-template-columns:1fr}
+  .days{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stages{grid-template-columns:1fr;gap:0;margin-top:32px}
+  .rail{left:15px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .rail i{transform:scaleY(0);transform-origin:top}
+  .stg{display:grid;grid-template-columns:32px 1fr;gap:4px 16px;padding:0 0 22px}
+  .stg .nd{grid-row:span 3}
+  .stg small{margin-top:8px}
+  .p-meta{grid-template-columns:1fr 1fr}
+  .p-meta div:nth-child(3){border-left:0;padding-left:22px}
+  .p-meta div:nth-child(n+3){border-top:1px solid var(--line)}
+  .r-hd{display:none}
+  .rr{grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;padding:14px 16px}
+  .rr .un{display:none}
+  .rr .rng{grid-column:1/-1}
+  .r-grp{padding-left:16px}
+  .p-hd{padding:16px}
+  .howto{grid-template-columns:1fr}
+  .howto div+div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:14px}
+  .lab-imgs{grid-template-columns:1fr 1fr}
+  .std{grid-template-columns:1fr;gap:4px}
+  .faq summary{grid-template-columns:34px 1fr 28px}
+  .faq .ans{padding:0 0 20px 46px}
+  .ft-g{grid-template-columns:1fr}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+  body.bar-on .kt-badge{bottom:84px}
+}
+@media (max-width:420px){
+  .h1{font-size:13.2vw}
+  .hero-cta .btn{flex:1 1 100%}
+  .days{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .js .rv{opacity:1;transform:none}
+  .js .h1 .ln>span{transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 6v12M6 12h12"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s-6 6.4-6 10.8a6 6 0 0 0 12 0C18 9.9 12 3.5 12 3.5z"/></symbol>
+<symbol id="i-pill" viewBox="0 0 24 24"><rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="m9.2 8 5.6 8"/></symbol>
+<symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 4 4 6.5l1.5 4L7 10v10h10V10l1.5.5 1.5-4L16 4a4 4 0 0 1-8 0z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.2 3 7.6 7 9 4-1.4 7-4.8 7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><circle cx="9" cy="11" r="2"/><path d="M6 15.5c.6-1.3 1.7-2 3-2s2.4.7 3 2M14.5 10h3M14.5 13h3"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M6.5 3.5h7l4 4v13h-11z"/><path d="M13.5 3.5v4h4M9 12h6M9 15.5h6"/></symbol>
+<symbol id="i-steth" viewBox="0 0 24 24"><path d="M6 3.5v5a4 4 0 0 0 8 0v-5M10 12.5v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="10.5" r="2"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Lam Kính Lab – về đầu trang">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="#0E1012"/><rect x="7" y="14" width="26" height="12" fill="none" stroke="#F4F6F7" stroke-width="2"/><circle cx="20" cy="20" r="3.4" fill="#E8502A"/></svg>
+      <span><b>Lam&nbsp;Kính</b><small>Xét&nbsp;nghiệm · Hà&nbsp;Nội</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#goi">Gói xét nghiệm</a>
+      <a href="#hen">Lấy mẫu tại nhà</a>
+      <a href="#theo-doi">Theo dõi mẫu</a>
+      <a href="#ket-qua">Đọc kết quả</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </nav>
+    <div class="hdr-r">
+      <a class="tel" href="tel:0900000000" aria-label="Gọi 0900 000 000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">0900&nbsp;000&nbsp;000</span></a>
+      <a class="btn sm" href="#hen"><span class="dot"></span>Đặt&nbsp;lấy&nbsp;mẫu</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mnav-top">
+    <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="#F4F6F7"/><rect x="7" y="14" width="26" height="12" fill="none" stroke="#0E1012" stroke-width="2"/><circle cx="20" cy="20" r="3.4" fill="#E8502A"/></svg><span><b>Lam&nbsp;Kính</b><small>Xét&nbsp;nghiệm · Hà&nbsp;Nội</small></span></a>
+    <button id="menuClose" aria-label="Đóng menu"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <nav aria-label="Menu di động">
+    <a href="#goi">Gói xét nghiệm<span>01</span></a>
+    <a href="#hen">Lấy mẫu tại nhà<span>02</span></a>
+    <a href="#theo-doi">Theo dõi mẫu<span>03</span></a>
+    <a href="#ket-qua">Đọc kết quả<span>04</span></a>
+    <a href="#hoi-dap">Hỏi đáp<span>05</span></a>
+  </nav>
+  <a class="btn red" href="tel:0900000000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Gọi 0900&nbsp;000&nbsp;000</a>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero gridbg" id="hero">
+  <div class="wrap hero-g">
+    <div>
+      <p class="lbl"><b>[00]</b> Phòng xét nghiệm · Lấy mẫu tận nhà tại Hà&nbsp;Nội</p>
+      <h1 class="h1"><span class="ln"><span>Lấy máu tại nhà</span></span><span class="ln"><span>từ <span class="r num">06:00</span>.</span></span><span class="ln"><span>Kết quả gửi về điện&nbsp;thoại.</span></span></h1>
+      <p class="lead">Không phải nhịn đói ngồi xếp hàng ở viện. Kỹ thuật viên đến tận nhà lấy mẫu, phòng xét nghiệm chạy máy trong ngày, phiếu kết quả có giải thích từng chỉ số và bác sĩ gọi lại tư vấn khi bạn cần.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#goi"><span class="dot"></span>Chọn chỉ số cần xét&nbsp;nghiệm</a>
+        <a class="btn ghost" href="#ket-qua">Xem phiếu kết quả mẫu</a>
+      </div>
+      <div class="readout">
+        <div><b class="num">06:00–09:00</b><span>Khung lấy mẫu sáng sớm, kịp nhịn ăn qua đêm</span></div>
+        <div><b class="num">4–24&nbsp;giờ</b><span>Có kết quả tuỳ chỉ số, xem trên điện thoại</span></div>
+        <div><b class="num">0đ</b><span>Phí đến nhà nội thành cho đơn từ 300.000đ (mẫu)</span></div>
+      </div>
+    </div>
+    <div class="spec" id="spec">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="frame" id="frame">
+        <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?auto=format&fit=crop&w=1200&q=80" alt="Kỹ thuật viên đeo găng dùng pipet nhỏ mẫu vào dãy ống nghiệm" width="1200" height="1500" fetchpriority="high">
+        <span class="scan" aria-hidden="true"></span>
+      </div>
+      <div class="ruler" aria-hidden="true"><svg viewBox="0 0 22 500" preserveAspectRatio="none"><g stroke="#0E1012" stroke-width="1"><path d="M0 0v500"/></g><g id="ticks" stroke="#0E1012" stroke-width="1"></g></svg></div>
+      <div class="mini-tube"><img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=400&q=80" alt="Các ống mẫu máu nắp tím xếp trên giá" width="400" height="400"><span>Ống EDTA · 2&nbsp;ml</span></div>
+      <div class="tag" aria-label="Nhãn mẫu minh hoạ">
+        <div class="t1"><span>Nhãn mẫu</span><span class="live" id="tagState">Đang quét</span></div>
+        <div class="code num"><span id="tagCode">LK-1211-0642</span><span class="bars" aria-hidden="true" id="barcode"></span></div>
+        <dl class="num">
+          <dt>Lấy lúc</dt><dd>06:42 · 12/11/2026</dd>
+          <dt>Tại</dt><dd>Phường Cầu&nbsp;Giấy</dd>
+          <dt>Ống</dt><dd>2 ống · 2–8°C</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="panel-strip">
+    <div class="wrap">
+      <a class="ps" href="#goi" data-pk="co_ban"><small class="num">PK-01</small><b>Máu tổng quát</b><span>9 chỉ số · cần nhịn ăn</span></a>
+      <a class="ps" href="#goi" data-pk="mo_mau"><small class="num">PK-02</small><b>Mỡ máu</b><span>4 chỉ số · cần nhịn ăn</span></a>
+      <a class="ps" href="#goi" data-pk="duong"><small class="num">PK-03</small><b>Đường huyết</b><span>Glucose + HbA1c</span></a>
+      <a class="ps" href="#goi" data-pk="gan_than"><small class="num">PK-04</small><b>Chức năng gan&nbsp;thận</b><span>7 chỉ số · không cần nhịn</span></a>
+      <a class="ps" href="#goi" data-pk="cao_tuoi"><small class="num">PK-05</small><b>Người lớn tuổi&nbsp;60+</b><span>17 chỉ số · lấy tại giường</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -> FIX -->
+<section class="sec" id="van-de">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div>
+        <p class="lbl rv"><b>[01]</b> Vì sao nhiều người ngại đi xét&nbsp;nghiệm</p>
+        <h2 class="h2 rv d1">Một lần lấy máu mà mất <em>trọn buổi&nbsp;sáng</em></h2>
+      </div>
+      <p class="lead rv d2">Nhịn ăn từ tối hôm trước, sáng ra chen chỗ gửi xe, bốc số, ngồi chờ, rồi cầm tờ kết quả đầy chữ viết tắt mà không biết hỏi ai. Lam Kính sắp xếp lại từng bước để bạn chỉ cần mở cửa và đưa tay.</p>
+    </div>
+    <div class="ptable-hd" aria-hidden="true"><span>STT</span><span>Điều bạn lo</span><span>Cách Lam Kính làm</span></div>
+    <div class="ptable" id="ptable">
+      <div class="prow rv"><span class="n">01</span><h3>Nhịn đói mà vẫn phải đi xa, xếp&nbsp;hàng</h3><div class="fix"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><p>Kỹ thuật viên đến nhà từ 06:00. Lấy mẫu xong là bạn ăn sáng được ngay, không phải ra khỏi nhà.</p></div></div>
+      <div class="prow rv"><span class="n">02</span><h3>Bố mẹ lớn tuổi đi lại khó, con cái bận&nbsp;đi&nbsp;làm</h3><div class="fix"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><p>Lấy mẫu tại giường hoặc ghế quen thuộc. Kết quả gửi cùng lúc cho người bệnh và người nhà được ghi trong phiếu đặt.</p></div></div>
+      <div class="prow rv"><span class="n">03</span><h3>Không biết nên xét nghiệm chỉ số&nbsp;nào</h3><div class="fix"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><p>Chọn theo gói hoặc tick từng chỉ số, thấy ngay giá, số ống máu và có cần nhịn ăn không. Chưa chắc thì để tư vấn viên gọi lại.</p></div></div>
+      <div class="prow rv"><span class="n">04</span><h3>Cầm kết quả mà không hiểu, lại ngại&nbsp;hỏi</h3><div class="fix"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><p>Phiếu kết quả online có vạch tham chiếu và lời giải thích dễ hiểu. Bác sĩ gọi lại để đọc kết quả cùng bạn, không để bạn tự đoán.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="quy-trinh" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div>
+        <p class="lbl rv"><b>[02]</b> Quy trình</p>
+        <h2 class="h2 rv d1">Bốn bước, từ lúc đặt lịch đến khi đọc&nbsp;kết&nbsp;quả</h2>
+      </div>
+      <p class="lead rv d2">Mỗi ống mẫu được dán mã vạch ngay tại nhà bạn, đi trong thùng giữ lạnh và được ghi lại thời điểm ở từng khâu. Bạn theo dõi được mẫu của mình đang ở đâu.</p>
+    </div>
+    <div class="proc" id="proc">
+      <div class="flow" aria-hidden="true"><span class="flow-dot"></span></div>
+      <div class="step rv">
+        <div class="k"><span>BƯỚC 01</span><span class="num">~2 phút</span></div>
+        <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="8" width="40" height="48" rx="2"/><path d="M20 20h24M20 28h24M20 36h14"/><path class="a" d="m36 44 5 5 9-10"/></svg>
+        <h3>Chọn chỉ số và&nbsp;đặt&nbsp;lịch</h3>
+        <p>Chọn gói hoặc từng chỉ số, chọn phường và khung giờ. Tư vấn viên gọi xác nhận, nhắc giờ nhịn ăn tối hôm trước.</p>
+      </div>
+      <div class="step rv d1">
+        <div class="k"><span>BƯỚC 02</span><span class="num">~10 phút</span></div>
+        <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 30 32 12l22 18"/><path d="M16 26v28h32V26"/><path class="a" d="M29 54V38h6v16"/><path class="a" d="M32 30v-2"/></svg>
+        <h3>Lấy mẫu tại&nbsp;nhà</h3>
+        <p>Kỹ thuật viên mang đủ dụng cụ dùng một lần, đối chiếu tên và năm sinh, lấy mẫu, dán mã vạch trước mặt bạn.</p>
+        <span class="t">06:00–09:00</span>
+      </div>
+      <div class="step rv d2">
+        <div class="k"><span>BƯỚC 03</span><span class="num">4–24 giờ</span></div>
+        <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><path d="M22 8v34a10 10 0 0 0 20 0V8"/><path d="M18 8h28"/><path class="a" d="M22 30h20"/><circle class="a" cx="30" cy="40" r="2.5"/><circle class="a" cx="35" cy="34" r="1.6"/></svg>
+        <h3>Chạy máy tại phòng xét&nbsp;nghiệm</h3>
+        <p>Mẫu được vận chuyển lạnh 2–8°C, chạy trên máy phân tích tự động. Kết quả được kiểm tra và ký duyệt trước khi gửi.</p>
+      </div>
+      <div class="step rv d3">
+        <div class="k"><span>BƯỚC 04</span><span class="num">Khi có kết quả</span></div>
+        <svg class="art" viewBox="0 0 64 64" aria-hidden="true"><rect x="18" y="6" width="28" height="52" rx="4"/><path d="M28 50h8"/><path class="a" d="M24 34l5-6 4 4 7-10"/></svg>
+        <h3>Nhận kết quả, bác sĩ giải&nbsp;thích</h3>
+        <p>Đường link phiếu kết quả gửi qua tin nhắn. Bác sĩ gọi lại đọc kết quả cùng bạn và gợi ý khi nào nên đi khám.</p>
+      </div>
+    </div>
+
+    <div class="visit">
+      <figure class="rv">
+        <img src="https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&w=1200&q=80" alt="Nhân viên y tế đeo khẩu trang dán băng lên tay người đàn ông sau khi lấy mẫu" width="1200" height="900" loading="lazy">
+        <figcaption><span>Ảnh minh hoạ · Kỹ thuật viên lấy mẫu</span><span class="num">KTV-03</span></figcaption>
+      </figure>
+      <div>
+        <p class="lbl rv"><b>[02.1]</b> Kỹ thuật viên mang theo gì</p>
+        <h2 class="h2 rv d1" style="font-size:clamp(28px,3vw,44px)">Bộ lấy mẫu dùng một lần, mở trước mặt&nbsp;bạn</h2>
+        <ul class="kit rv d2">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><div><b>Kim, ống, bông cồn mới</b><span>Đóng gói riêng, mở seal khi bắt đầu lấy mẫu</span></div></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-id"/></svg><div><b>Đối chiếu danh tính</b><span>Hỏi lại họ tên, năm sinh trước khi dán nhãn</span></div></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-snow"/></svg><div><b>Thùng giữ lạnh 2–8°C</b><span>Có nhiệt kế ghi lại nhiệt độ suốt đường đi</span></div></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg><div><b>Biên nhận điện tử</b><span>Gửi mã mẫu qua tin nhắn để bạn tự tra cứu</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDER -->
+<section class="sec gridbg" id="goi" style="background-color:var(--paper)">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div>
+        <p class="lbl rv"><b>[03]</b> Chọn gói xét nghiệm</p>
+        <h2 class="h2 rv d1">Tick từng chỉ số hoặc&nbsp;chọn gói, <em>thấy&nbsp;ngay</em> mình cần&nbsp;chuẩn&nbsp;bị&nbsp;gì</h2>
+      </div>
+      <p class="lead rv d2">Phiếu bên cạnh tự tính tổng giá, số ống máu cần lấy, có phải nhịn ăn không và khi nào có kết quả. Giá trong mẫu chỉ để minh hoạ.</p>
+    </div>
+    <div class="builder">
+      <div>
+        <div class="pk-tabs" id="pkTabs" role="group" aria-label="Chọn gói có sẵn"></div>
+        <div id="tests"></div>
+        <div class="bd-bar" id="bdBar" aria-hidden="true">
+          <div><b id="barTotal">0đ</b><small id="barSub">Chưa chọn chỉ số</small></div>
+          <a class="btn red sm" href="#sheet">Xem phiếu</a>
+        </div>
+      </div>
+      <aside class="sheet" id="sheet" aria-live="polite">
+        <span class="gridline" aria-hidden="true"></span>
+        <div class="sheet-hd"><span>Phiếu chỉ định tạm tính</span><span class="num" id="selCount">0 chỉ số</span></div>
+        <h3 id="pkName">Tự chọn</h3>
+        <ul class="sel-list" id="selList"><li class="empty">Chưa chọn chỉ số nào. Bấm một gói hoặc tick chỉ số bên cạnh.</li></ul>
+        <div class="tubes" id="tubes"><span class="none">Ống mẫu sẽ hiện ở đây</span></div>
+        <div class="metrics">
+          <div><small>Nhịn ăn</small><b id="mFast">Không</b><span id="mFastSub">Không cần nhịn ăn</span></div>
+          <div><small>Có kết quả</small><b id="mTat">–</b><span id="mTatSub">Tính theo chỉ số lâu nhất</span></div>
+          <div><small>Số ống</small><b id="mTube">0</b><span id="mTubeSub">Khoảng 0&nbsp;ml máu</span></div>
+          <div><small>Phí đến nhà</small><b id="mShip">–</b><span>Nội thành Hà&nbsp;Nội (mẫu)</span></div>
+        </div>
+        <div class="total">
+          <div><small>Tổng tạm tính</small><s id="mWas"></s></div>
+          <div class="price" id="mTotal">0đ</div>
+        </div>
+        <a class="btn red" href="#hen" id="toBook">Hẹn lấy mẫu với phiếu&nbsp;này<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="note">Giá, thời gian trả kết quả và yêu cầu nhịn ăn là số liệu minh hoạ. Tư vấn viên xác nhận lại trước khi lấy mẫu.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ELDERLY -->
+<section class="sec elder" id="nguoi-lon-tuoi">
+  <div class="wrap elder-g">
+    <figure class="rv">
+      <img src="https://images.unsplash.com/photo-1559234938-b60fff04894d?auto=format&fit=crop&w=1400&q=80" alt="Hai người lớn tuổi khoác tay nhau đi dạo trên lối mòn trong vườn" width="1400" height="1120" loading="lazy">
+    </figure>
+    <div>
+      <p class="lbl rv"><b>[04]</b> Gói người lớn tuổi 60+</p>
+      <h2 class="h2 rv d1">Xét nghiệm cho&nbsp;bố mẹ, con ở xa vẫn nhận được&nbsp;kết&nbsp;quả</h2>
+      <p class="lead rv d2">Nhiều cụ ngại đi viện vì đường xa, chờ lâu. Gói này gom các chỉ số thường được bác sĩ đề nghị theo dõi định kỳ ở người lớn tuổi; bác sĩ của bạn vẫn là người quyết định cần làm chỉ số nào.</p>
+      <ul class="elist rv d2">
+        <li><span>01</span><div><b>Lấy mẫu tại giường, không vội</b><p>Kỹ thuật viên được dặn trước về tuổi, thuốc đang dùng và tình trạng ven của người bệnh.</p></div></li>
+        <li><span>02</span><div><b>Gửi kết quả cho người nhà</b><p>Ghi thêm số điện thoại con cháu khi đặt lịch, phiếu kết quả gửi cùng lúc cho cả hai.</p></div></li>
+        <li><span>03</span><div><b>Bác sĩ gọi lại đọc kết quả</b><p>Giải thích bằng lời dễ hiểu, gợi ý khi nào nên mang kết quả đi khám chuyên khoa.</p></div></li>
+      </ul>
+      <div class="row rv d3">
+        <span class="price num" id="elderPrice">1.203.000đ</span><small>17 chỉ số · giá mẫu</small>
+        <button class="btn light" type="button" data-pick="cao_tuoi">Xem chi tiết gói</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec" id="hen">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div>
+        <p class="lbl rv"><b>[05]</b> Hẹn lấy mẫu tại nhà</p>
+        <h2 class="h2 rv d1">Chọn phường và&nbsp;khung giờ, kỹ thuật viên đến&nbsp;tận&nbsp;cửa</h2>
+      </div>
+      <p class="lead rv d2">Khung sáng sớm dành cho chỉ số cần nhịn ăn. Nếu phiếu của bạn không cần nhịn ăn, có thể chọn thêm khung chiều tối sau giờ làm.</p>
+    </div>
+    <div class="book">
+      <form class="form" id="bookForm" novalidate>
+        <fieldset class="fs">
+          <legend><span>01</span>Địa chỉ lấy mẫu</legend>
+          <div class="two">
+            <div class="fld" id="fArea"><label for="area">Khu vực</label><select id="area" name="area" required><option value="">Chọn khu vực</option></select><span class="hint">Nhóm theo tên quận cũ để dễ tìm</span></div>
+            <div class="fld" id="fWard"><label for="ward">Phường</label><select id="ward" name="ward" required disabled><option value="">Chọn khu vực trước</option></select><span class="err" id="eWard"></span></div>
+          </div>
+          <div class="fld" id="fAddr"><label for="addr">Số nhà, ngõ, đường</label><input id="addr" name="addr" autocomplete="street-address" placeholder="Ví dụ: số 12, ngõ 45, phố Trần Thái Tông"><span class="err" id="eAddr"></span></div>
+        </fieldset>
+        <fieldset class="fs">
+          <legend><span>02</span>Ngày và khung giờ</legend>
+          <div class="days" id="days" role="radiogroup" aria-label="Chọn ngày"></div>
+          <div id="slotWrap" style="margin-top:14px"></div>
+          <span class="err" id="eSlot"></span>
+        </fieldset>
+        <fieldset class="fs">
+          <legend><span>03</span>Người được lấy mẫu</legend>
+          <div class="two">
+            <div class="fld" id="fName"><label for="name">Họ và tên</label><input id="name" name="name" autocomplete="name" required><span class="err" id="eName"></span></div>
+            <div class="fld" id="fPhone"><label for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000" required><span class="err" id="ePhone"></span></div>
+          </div>
+          <div class="two">
+            <div class="fld"><label for="yob">Năm sinh</label><input id="yob" name="yob" inputmode="numeric" maxlength="4" placeholder="Ví dụ: 1958"></div>
+            <div class="fld"><label for="phone2">Số người nhà nhận kết quả (không bắt buộc)</label><input id="phone2" name="phone2" type="tel" inputmode="tel" placeholder="0900 000 000"></div>
+          </div>
+          <div class="fld"><label for="msg">Ghi chú cho kỹ thuật viên</label><textarea id="msg" name="msg" placeholder="Ví dụ: bố tôi 78 tuổi, lấy mẫu tại giường; đang dùng thuốc huyết áp buổi sáng"></textarea></div>
+        </fieldset>
+        <label class="consent"><input type="checkbox" id="consent"><span>Tôi đồng ý để Lam Kính xử lý dữ liệu cá nhân và thông tin sức khoẻ trên để liên hệ, lấy mẫu và gửi kết quả, theo quy định bảo vệ dữ liệu cá nhân.</span></label>
+        <span class="err" id="eConsent"></span>
+        <button class="btn" type="submit"><span class="dot"></span>Gửi yêu cầu lấy&nbsp;mẫu</button>
+        <div class="ok" id="ok" role="status" tabindex="-1">
+          <span class="lbl"><b>Đã&nbsp;ghi&nbsp;nhận</b></span>
+          <h3>Mã mẫu của&nbsp;bạn: <span class="code num" id="okCode">LK-0000-0000</span></h3>
+          <p id="okText"></p>
+          <p class="note">Đây là trang mẫu: thông tin không được gửi đi đâu. Website thật sẽ gửi tin nhắn xác nhận và tư vấn viên gọi lại.</p>
+          <a class="btn ghost sm" href="#theo-doi" id="okTrack" style="width:auto;margin-top:8px">Theo dõi mẫu minh hoạ</a>
+        </div>
+      </form>
+      <div class="side">
+        <div class="card rv">
+          <p class="lbl"><b>Phiếu</b> Đang đặt</p>
+          <h3 id="bkPk" style="margin-top:10px">Chưa chọn chỉ số</h3>
+          <dl>
+            <dt>Số chỉ số</dt><dd id="bkN">0</dd>
+            <dt>Nhịn ăn</dt><dd id="bkFast">Không</dd>
+            <dt>Số ống</dt><dd id="bkTube">0</dd>
+            <dt>Tạm tính</dt><dd id="bkTotal">0đ</dd>
+          </dl>
+          <a class="btn ghost sm" href="#goi" style="width:100%;margin-top:16px">Sửa chỉ số</a>
+        </div>
+        <div class="card rv d1">
+          <h3>Chuẩn bị tối hôm trước</h3>
+          <ul class="prep">
+            <li><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg><span>Nếu cần nhịn ăn: ăn tối xong trước 22:00, sau đó chỉ uống nước lọc.</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-pill"/></svg><span>Đang dùng thuốc hằng ngày: báo tư vấn viên, không tự ý ngừng thuốc.</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-shirt"/></svg><span>Mặc áo dễ xắn tay. Uống đủ nước giúp lấy ven dễ hơn.</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg><span>Xét nghiệm nước tiểu: lấy mẫu nước tiểu đầu buổi sáng vào lọ được gửi kèm.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKER -->
+<section class="sec track" id="theo-doi">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div>
+        <p class="lbl rv"><b>[06]</b> Theo dõi mẫu</p>
+        <h2 class="h2 rv d1">Biết mẫu máu của&nbsp;mình đang ở&nbsp;đâu</h2>
+      </div>
+      <div class="rv d2">
+        <p class="lead" style="margin-bottom:18px">Nhập mã mẫu trên tin nhắn biên nhận. Bản minh hoạ dưới đây chạy thử hành trình của một mẫu máu từ nhà bạn đến lúc có kết quả.</p>
+        <form class="tq" id="tq">
+          <label class="sr" for="tcode">Mã mẫu</label>
+          <input id="tcode" value="LK-1211-0642" autocomplete="off" spellcheck="false">
+          <button class="btn red" type="submit">Tra cứu mẫu</button>
+        </form>
+      </div>
+    </div>
+    <div class="stages" id="stages">
+      <div class="rail" aria-hidden="true"><i id="railFill"></i></div>
+      <div class="stg"><span class="nd"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><small class="num" data-t="06:42">06:42</small><h3>Đã lấy mẫu</h3><p>2 ống máu + 1 lọ nước tiểu, dán mã vạch tại nhà.</p></div>
+      <div class="stg"><span class="nd"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><small class="num">07:55</small><h3>Đã nhận tại phòng xét&nbsp;nghiệm</h3><p>Quét mã, kiểm tra nhiệt độ thùng và chất lượng mẫu.</p></div>
+      <div class="stg"><span class="nd"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><small class="num">08:20</small><h3>Đang chạy máy</h3><p>Huyết học, sinh hoá và nước tiểu chạy song song.</p></div>
+      <div class="stg"><span class="nd"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><small class="num">11:45</small><h3>Có kết quả</h3><p>Đã ký duyệt, gửi link phiếu kết quả qua tin nhắn.</p></div>
+    </div>
+    <div class="tlog">
+      <div class="log" aria-live="polite">
+        <div class="log-h"><span>Nhật ký mẫu <span id="logCode" class="num">LK-1211-0642</span></span><span>Minh hoạ</span></div>
+        <ol id="log"></ol>
+      </div>
+      <figure class="rv">
+        <img src="https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=1200&q=80" alt="Các lọ và ống thuỷ tinh trong phòng xét nghiệm, ảnh đen trắng" width="1200" height="900" loading="lazy">
+        <figcaption>Thời gian trong nhật ký là ví dụ. Thời gian thật phụ thuộc chỉ số và số lượng mẫu trong ngày.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- REPORT -->
+<section class="sec" id="ket-qua">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div>
+        <p class="lbl rv"><b>[07]</b> Phiếu kết quả online</p>
+        <h2 class="h2 rv d1">Bấm vào từng dòng để hiểu chỉ số đó <em>đo&nbsp;gì</em></h2>
+      </div>
+      <p class="lead rv d2">Mỗi chỉ số có vạch tham chiếu để bạn thấy kết quả nằm ở đâu. Phần giải thích giúp bạn hỏi bác sĩ đúng câu, không thay cho việc bác sĩ đọc kết quả.</p>
+    </div>
+    <div class="report">
+      <div class="paper rv" id="paper">
+        <div class="p-hd">
+          <div><b>Phiếu kết quả xét nghiệm</b><small>Lam Kính Lab · bản minh hoạ, không phải kết quả thật</small></div>
+          <span class="stamp">Mẫu<br>minh hoạ</span>
+        </div>
+        <div class="p-meta">
+          <div><small>Họ tên</small><b>Nguyễn Văn A</b></div>
+          <div><small>Năm sinh</small><b class="num">1962 · Nam</b></div>
+          <div><small>Mã mẫu</small><b class="num">LK-1211-0642</b></div>
+          <div><small>Lấy mẫu</small><b class="num">12/11/2026</b></div>
+        </div>
+        <div class="r-hd"><span>Chỉ số</span><span>Kết quả</span><span>Đơn vị</span><span>Khoảng tham chiếu (mẫu)</span></div>
+        <div id="rows"></div>
+        <div class="p-ft"><span>C = cao hơn khoảng tham chiếu · T = thấp hơn</span><span>Khoảng tham chiếu là số liệu minh hoạ</span></div>
+      </div>
+      <aside class="explain rv d1" id="explain" aria-live="polite">
+        <span class="k" id="exK">Đường huyết</span>
+        <h3 id="exN">Glucose lúc đói</h3>
+        <div class="val"><b id="exV">5,4</b><span id="exU">mmol/L</span></div>
+        <h4>Chỉ số này đo gì</h4>
+        <p id="exWhat"></p>
+        <h4>Cách đọc dòng này</h4>
+        <p id="exRead"></p>
+        <h4>Có thể bị ảnh hưởng bởi</h4>
+        <p id="exAff"></p>
+        <div class="doc"><svg class="ico" aria-hidden="true"><use href="#i-steth"/></svg><span>Kết quả cần được bác sĩ đọc cùng tiền sử, triệu chứng và các chỉ số khác. Một chỉ số nằm ngoài khoảng tham chiếu chưa đủ để kết luận bệnh.</span></div>
+      </aside>
+    </div>
+    <div class="howto rv">
+      <div><b>Cột kết quả</b>Con số đo được từ mẫu của bạn, kèm đơn vị. Cùng chỉ số nhưng mỗi phòng xét nghiệm có thể dùng đơn vị khác nhau.</div>
+      <div><b>Khoảng tham chiếu</b>Khoảng giá trị thường gặp ở người khoẻ mạnh, thay đổi theo máy, giới tính, tuổi. Không phải ranh giới khoẻ hay bệnh.</div>
+      <div><b>Ký hiệu C / T</b>Đánh dấu kết quả cao hoặc thấp hơn khoảng tham chiếu, để bạn và bác sĩ chú ý. Chưa phải là chẩn đoán.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB -->
+<section class="sec" id="phong-xet-nghiem" style="background:var(--paper)">
+  <div class="wrap lab-g">
+    <div class="lab-imgs rv">
+      <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=80" alt="Phòng xét nghiệm sáng sủa với dãy máy phân tích trên bàn" width="900" height="1200" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=600&q=80" alt="Nhân viên phòng xét nghiệm quan sát mẫu qua kính hiển vi" width="600" height="600" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80" alt="Pipet nhỏ dung dịch vào khay giếng nhựa" width="600" height="600" loading="lazy">
+    </div>
+    <div>
+      <p class="lbl rv"><b>[08]</b> Phòng xét nghiệm</p>
+      <h2 class="h2 rv d1">Mẫu lấy ở nhà, phân tích theo quy trình của&nbsp;phòng&nbsp;xét&nbsp;nghiệm</h2>
+      <p class="lead rv d2">Lấy mẫu tại nhà chỉ thay đổi chỗ lấy máu. Từ lúc mẫu về đến phòng xét nghiệm, mọi bước vẫn theo quy trình kiểm soát chất lượng như mẫu lấy tại chỗ.</p>
+      <dl class="stds rv d2">
+        <div class="std"><dt>Máy phân tích</dt><dd>Máy huyết học và sinh hoá tự động (tên máy điền theo thực tế).</dd></div>
+        <div class="std"><dt>Kiểm soát chất lượng</dt><dd>Chạy mẫu nội kiểm mỗi ngày trước khi phân tích mẫu của khách; tham gia chương trình ngoại kiểm (điền theo thực tế).</dd></div>
+        <div class="std"><dt>Vận chuyển mẫu</dt><dd>Thùng giữ lạnh 2–8°C, ghi nhiệt độ và thời gian từ lúc lấy đến lúc nhận.</dd></div>
+        <div class="std"><dt>Duyệt kết quả</dt><dd>Kết quả được kỹ thuật viên kiểm tra và người có chuyên môn ký duyệt trước khi gửi.</dd></div>
+        <div class="std"><dt>Giờ làm việc</dt><dd class="num">Lấy mẫu 06:00–19:00 · Phòng xét nghiệm 06:00–21:00, cả tuần</dd></div>
+      </dl>
+      <div class="cert rv d3"><span class="box">GIẤY<br>PHÉP</span><span>Ô dành cho giấy phép hoạt động và chứng nhận chất lượng (ví dụ ISO 15189) nếu phòng xét nghiệm có. Trang mẫu không ghi chứng nhận nào.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="danh-gia">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div>
+        <p class="lbl rv"><b>[09]</b> Khách hàng nói gì</p>
+        <h2 class="h2 rv d1">Đỡ một buổi sáng xin nghỉ&nbsp;làm</h2>
+      </div>
+      <p class="lead rv d2">Các đánh giá dưới đây là nội dung mẫu để minh hoạ giao diện.</p>
+    </div>
+    <div class="revs">
+      <article class="rev rv"><span class="tg">Đánh giá mẫu</span><blockquote>“Đặt khung 06:30 cho bố mẹ, kỹ thuật viên đến đúng giờ, lấy máu nhẹ tay. Tôi đi làm vẫn nhận được kết quả của cả hai cụ trên điện thoại.”</blockquote><div class="who"><div><b>Chị Thu Hà</b><span>Phường Cầu Giấy</span></div><span class="pk2">Gói 60+</span></div></article>
+      <article class="rev rv d1"><span class="tg">Đánh giá mẫu</span><blockquote>“Trước giờ cầm kết quả mỡ máu chỉ nhìn chữ in đậm. Lần này bấm vào từng dòng đọc giải thích, rồi bác sĩ gọi lại nói thêm, dễ hiểu hơn nhiều.”</blockquote><div class="who"><div><b>Anh Quang Minh</b><span>Phường Hoàng Mai</span></div><span class="pk2">Gói mỡ máu</span></div></article>
+      <article class="rev rv d2"><span class="tg">Đánh giá mẫu</span><blockquote>“Tôi tự tick mấy chỉ số bác sĩ dặn, thấy luôn phải nhịn ăn và lấy mấy ống. Tối hôm trước còn có tin nhắn nhắc giờ ăn tối.”</blockquote><div class="who"><div><b>Cô Lan</b><span>Phường Hà Đông</span></div><span class="pk2">Tự chọn</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="hoi-dap" style="padding-top:0">
+  <div class="wrap faq-g">
+    <div>
+      <p class="lbl rv"><b>[10]</b> Hỏi đáp</p>
+      <h2 class="h2 rv d1">Câu hỏi hay gặp trước khi lấy&nbsp;mẫu</h2>
+      <p class="lead rv d2">Chưa thấy câu trả lời? Gọi <a href="tel:0900000000" class="num">0900&nbsp;000&nbsp;000</a> hoặc nhắn Zalo, tư vấn viên trực từ 06:00 đến 21:00.</p>
+    </div>
+    <div class="faq rv d1">
+      <details open><summary><small>Q.01</small>Chỉ số nào cần nhịn ăn, nhịn bao lâu?<span class="pm"><svg class="ico" aria-hidden="true" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Thường là đường huyết lúc đói và mỡ máu, nên nhịn ăn khoảng 8–10 tiếng, vẫn được uống nước lọc. Phiếu chỉ định ở trên sẽ báo rõ phiếu của bạn có cần nhịn ăn không; tư vấn viên nhắc lại khi gọi xác nhận.</p></div></details>
+      <details><summary><small>Q.02</small>Kết quả lấy mẫu tại nhà có khác đến tận nơi không?<span class="pm"><svg class="ico" aria-hidden="true" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Mẫu được lấy bằng cùng loại ống, bảo quản lạnh và phân tích trên cùng hệ thống máy như mẫu lấy tại phòng xét nghiệm. Kết quả xét nghiệm nào cũng có thể chịu ảnh hưởng bởi ăn uống, thuốc, thời điểm lấy mẫu, vì vậy cần bác sĩ đọc kết quả.</p></div></details>
+      <details><summary><small>Q.03</small>Ai sẽ giải thích kết quả cho tôi?<span class="pm"><svg class="ico" aria-hidden="true" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Phiếu online có phần giải thích chung cho từng chỉ số. Bác sĩ của Lam Kính gọi lại để đọc kết quả cùng bạn và gợi ý khi nào nên đi khám chuyên khoa. Phần giải thích không thay thế việc khám và chẩn đoán.</p></div></details>
+      <details><summary><small>Q.04</small>Sáng đó tôi có được uống thuốc huyết áp không?<span class="pm"><svg class="ico" aria-hidden="true" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Đừng tự ý ngừng thuốc. Hãy ghi tên thuốc vào ô ghi chú khi đặt lịch, tư vấn viên sẽ hướng dẫn theo chỉ định của bác sĩ điều trị.</p></div></details>
+      <details><summary><small>Q.05</small>Phí đến nhà tính thế nào, có xuất hoá đơn không?<span class="pm"><svg class="ico" aria-hidden="true" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Trong mẫu: miễn phí đến nhà nội thành cho phiếu từ 300.000đ, dưới mức đó là 50.000đ. Có xuất hoá đơn điện tử theo thông tin bạn cung cấp. Thanh toán tiền mặt hoặc chuyển khoản sau khi lấy mẫu.</p></div></details>
+      <details><summary><small>Q.06</small>Bao lâu thì xem được kết quả, xem ở đâu?<span class="pm"><svg class="ico" aria-hidden="true" style="width:16px;height:16px"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Phần lớn chỉ số máu có kết quả trong ngày nếu lấy mẫu trước 09:00; một số chỉ số như vitamin D cần lâu hơn. Đường link phiếu kết quả gửi qua tin nhắn, mở bằng mã mẫu và năm sinh.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="lien-he">
+  <svg class="mol" viewBox="0 0 200 200" aria-hidden="true"><circle cx="60" cy="60" r="10"/><circle cx="130" cy="44" r="8"/><circle cx="150" cy="120" r="12"/><circle cx="80" cy="140" r="9"/><circle cx="104" cy="92" r="6"/><path d="M68 64l30 24M126 50l-18 36M110 96l30 18M98 98l-14 34M138 128l-48 10"/></svg>
+  <div class="wrap">
+    <div>
+      <h2>Đặt lịch tối nay, sáng mai có người đến lấy&nbsp;mẫu.</h2>
+      <p>Tư vấn viên trực 06:00–21:00 mỗi ngày. Chưa biết chọn chỉ số nào, cứ gọi để được hỏi vài câu và gợi ý gói phù hợp.</p>
+    </div>
+    <div class="cta-r">
+      <a class="btn" href="#hen"><span class="dot" style="background:#fff"></span>Hẹn lấy mẫu tại&nbsp;nhà</a>
+      <a class="btn ghost" href="tel:0900000000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Gọi 0900&nbsp;000&nbsp;000</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-g">
+      <div>
+        <a class="logo" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" fill="#F4F6F7"/><rect x="7" y="14" width="26" height="12" fill="none" stroke="#0E1012" stroke-width="2"/><circle cx="20" cy="20" r="3.4" fill="#E8502A"/></svg><span><b>Lam&nbsp;Kính</b><small>Xét&nbsp;nghiệm · Hà&nbsp;Nội</small></span></a>
+        <p>Phòng xét nghiệm có dịch vụ lấy mẫu tại nhà ở nội thành Hà Nội. Kết quả gửi online, có bác sĩ gọi lại giải thích.</p>
+      </div>
+      <div><h4>Dịch vụ</h4><ul><li><a href="#goi">Xét nghiệm máu tổng quát</a></li><li><a href="#goi">Mỡ máu, đường huyết</a></li><li><a href="#goi">Chức năng gan thận</a></li><li><a href="#nguoi-lon-tuoi">Gói người lớn tuổi 60+</a></li></ul></div>
+      <div><h4>Tiện ích</h4><ul><li><a href="#hen">Hẹn lấy mẫu tại nhà</a></li><li><a href="#theo-doi">Theo dõi mẫu</a></li><li><a href="#ket-qua">Cách đọc kết quả</a></li><li><a href="#hoi-dap">Hỏi đáp</a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul class="num"><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li>Phường Cầu Giấy, Hà&nbsp;Nội</li><li>Lấy mẫu 06:00–19:00</li><li>Phòng xét nghiệm 06:00–21:00</li></ul></div>
+    </div>
+    <div class="ft-b">
+      <span>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span>
+      <span>Thông tin trên trang không thay thế cho chẩn đoán của bác sĩ.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var hasIO='IntersectionObserver' in window;
+function vnd(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'đ'}
+function pad(n){return (n<10?'0':'')+n}
+function vnNow(){var d=new Date();return new Date(d.getTime()+d.getTimezoneOffset()*60000+7*3600000)}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+requestAnimationFrame(function(){requestAnimationFrame(function(){document.body.classList.add('loaded')})});
+
+/* header badge */
+var badge=$('#ktBadge');
+function onScroll(){badge.classList.toggle('show',window.pageYOffset>window.innerHeight*.85)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* mobile menu */
+var mnav=$('#mnav'),mb=$('#menuBtn');
+function lock(on){document.body.classList.toggle('lock',on);document.documentElement.style.overflow=on?'hidden':'';document.body.style.overflow=on?'hidden':''}
+function menu(open){mnav.classList.toggle('open',open);mb.setAttribute('aria-expanded',open);lock(open);if(open){$('#menuClose').focus()}else{mb.focus()}}
+mb.addEventListener('click',function(){menu(true)});
+$('#menuClose').addEventListener('click',function(){menu(false)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');mb.setAttribute('aria-expanded','false');lock(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('open'))menu(false)});
+
+/* reveal */
+if(hasIO&&!RM){
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});
+  $$('.rv').forEach(function(el){ro.observe(el)});
+}else{$$('.rv').forEach(function(el){el.classList.add('in')})}
+
+/* hero: barcode, ruler, scanner sizing, pause off-screen */
+(function(){
+  var bc=$('#barcode'),w=[1,2,1,3,1,1,2,1,3,2,1,1,2,1],h='';
+  w.forEach(function(x,i){h+='<i style="width:'+x+'px;'+(i%2?'background:transparent':'')+'"></i>'});bc.innerHTML=h;
+  var tk=$('#ticks'),t='';for(var y=0;y<=500;y+=10){var L=y%50===0?22:(y%25===0?14:8);t+='<path d="M0 '+y+'h'+L+'"/>'}tk.innerHTML=t;
+  var fr=$('#frame'),sp=$('#spec');
+  function size(){sp.style.setProperty('--sh',(fr.clientHeight-2)+'px');var p=$('#proc');p.style.setProperty('--fw',(p.clientWidth-9)+'px')}
+  size();var lw=innerWidth;window.addEventListener('resize',function(){if(innerWidth!==lw){lw=innerWidth;size()}});
+  if(hasIO){
+    new IntersectionObserver(function(es){es.forEach(function(e){sp.classList.toggle('paused',!e.isIntersecting)})}).observe(sp);
+    new IntersectionObserver(function(es){es.forEach(function(e){$('#proc').classList.toggle('paused',!e.isIntersecting)})}).observe($('#proc'));
+  }
+  var states=['Đang quét','Đã đọc mã','Đang quét','Nhiệt độ 4°C'],si=0,st=$('#tagState');
+  if(!RM)setInterval(function(){if(sp.classList.contains('paused')||document.hidden)return;si=(si+1)%states.length;st.textContent=states[si]},2300);
+})();
+
+/* pain table sweep */
+if(hasIO&&!RM){
+  var prs=$$('.prow');
+  var po=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var r=e.target;setTimeout(function(){r.classList.add('sweep')},300+prs.indexOf(r)%4*120);po.unobserve(r)}})},{threshold:.6});
+  prs.forEach(function(r){po.observe(r)});
+}
+
+/* ===== test builder ===== */
+var TUBE={tim:{n:'EDTA nắp tím',c:'#6E4FA8',ml:2},vang:{n:'Serum nắp vàng',c:'#E2B13C',ml:4},xam:{n:'NaF nắp xám',c:'#8D959B',ml:2},lo:{n:'Lọ nước tiểu',c:'#E9D98A',ml:0}};
+var T=[
+ {id:'cbc',g:'Huyết học',n:'Tổng phân tích tế bào máu (18 thông số)',tube:'tim',fast:0,tat:4,p:90000},
+ {id:'glu',g:'Đường huyết',n:'Glucose lúc đói',tube:'xam',fast:1,tat:4,p:40000},
+ {id:'a1c',g:'Đường huyết',n:'HbA1c',tube:'tim',fast:0,tat:6,p:150000},
+ {id:'chol',g:'Mỡ máu',n:'Cholesterol toàn phần',tube:'vang',fast:1,tat:4,p:50000},
+ {id:'tg',g:'Mỡ máu',n:'Triglyceride',tube:'vang',fast:1,tat:4,p:50000},
+ {id:'hdl',g:'Mỡ máu',n:'HDL-Cholesterol',tube:'vang',fast:1,tat:4,p:60000},
+ {id:'ldl',g:'Mỡ máu',n:'LDL-Cholesterol',tube:'vang',fast:1,tat:4,p:60000},
+ {id:'ast',g:'Chức năng gan',n:'AST (GOT)',tube:'vang',fast:0,tat:4,p:40000},
+ {id:'alt',g:'Chức năng gan',n:'ALT (GPT)',tube:'vang',fast:0,tat:4,p:40000},
+ {id:'ggt',g:'Chức năng gan',n:'GGT',tube:'vang',fast:0,tat:4,p:50000},
+ {id:'bil',g:'Chức năng gan',n:'Bilirubin toàn phần',tube:'vang',fast:0,tat:4,p:50000},
+ {id:'ure',g:'Chức năng thận',n:'Ure',tube:'vang',fast:0,tat:4,p:40000},
+ {id:'cre',g:'Chức năng thận',n:'Creatinin (kèm eGFR)',tube:'vang',fast:0,tat:4,p:45000},
+ {id:'uric',g:'Chức năng thận',n:'Acid uric',tube:'vang',fast:0,tat:4,p:50000},
+ {id:'ele',g:'Khác',n:'Điện giải đồ (Na, K, Cl)',tube:'vang',fast:0,tat:6,p:120000},
+ {id:'tsh',g:'Khác',n:'TSH (tuyến giáp)',tube:'vang',fast:0,tat:24,p:120000},
+ {id:'vitd',g:'Khác',n:'Vitamin D (25-OH)',tube:'vang',fast:0,tat:48,p:350000},
+ {id:'uri',g:'Khác',n:'Tổng phân tích nước tiểu (10 thông số)',tube:'lo',fast:0,tat:4,p:60000}
+];
+var PK={
+ co_ban:{n:'Máu tổng quát',ids:['cbc','glu','chol','tg','ast','alt','ure','cre','uri'],off:.1},
+ mo_mau:{n:'Mỡ máu',ids:['chol','tg','hdl','ldl'],off:.1},
+ duong:{n:'Đường huyết',ids:['glu','a1c'],off:.1},
+ gan_than:{n:'Chức năng gan thận',ids:['ast','alt','ggt','bil','ure','cre','uric'],off:.1},
+ cao_tuoi:{n:'Người lớn tuổi 60+',ids:['cbc','glu','a1c','chol','tg','hdl','ldl','ast','alt','ggt','ure','cre','uric','ele','tsh','vitd','uri'],off:.15}
+};
+function byId(id){for(var i=0;i<T.length;i++)if(T[i].id===id)return T[i]}
+function pkPrice(k){var s=0;PK[k].ids.forEach(function(id){s+=byId(id).p});return {was:s,now:Math.round(s*(1-PK[k].off)/1000)*1000}}
+$('#elderPrice').textContent=vnd(pkPrice('cao_tuoi').now);
+
+var tabs=$('#pkTabs'),th='';
+Object.keys(PK).forEach(function(k){var pp=pkPrice(k);th+='<button type="button" class="pk" data-k="'+k+'" aria-pressed="false">'+PK[k].n.replace(/ (\S+)$/,'&nbsp;$1')+'<small>'+PK[k].ids.length+' chỉ số · '+vnd(pp.now)+'</small></button>'});
+th+='<button type="button" class="pk" data-k="clear" aria-pressed="false">Bỏ chọn hết<small>Tự tick từng chỉ số</small></button>';
+tabs.innerHTML=th;
+
+var groups=[],gm={};T.forEach(function(t){if(!gm[t.g]){gm[t.g]=[];groups.push(t.g)}gm[t.g].push(t)});
+var gh='';
+groups.forEach(function(g){
+  gh+='<div class="grp"><div class="grp-h"><b>'+g+'</b><span class="num" data-gc="'+g+'">0/'+gm[g].length+'</span></div>';
+  gm[g].forEach(function(t){
+    var tat=t.tat<=6?'~'+t.tat+' giờ':(t.tat===24?'Sáng hôm sau':'~2 ngày');
+    gh+='<label class="ti"><input type="checkbox" value="'+t.id+'"><span class="cb"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span class="nm"><b>'+t.n+'</b><span><i><span class="cap '+t.tube+'"></span>'+TUBE[t.tube].n+'</i><i>'+tat+'</i>'+(t.fast?'<i class="fast">Cần nhịn ăn</i>':'')+'</span></span><span class="pr num">'+vnd(t.p)+'</span></label>';
+  });
+  gh+='</div>';
+});
+$('#tests').innerHTML=gh;
+var boxes=$$('#tests input');
+
+var STATE={ids:[],pk:null,total:0,fast:false,tubes:0};
+function tubeSvg(c){return '<svg viewBox="0 0 18 52" aria-hidden="true"><rect x="2" y="1" width="14" height="9" rx="1.5" fill="'+c+'"/><path d="M4 10v34a5 5 0 0 0 10 0V10" fill="rgba(255,255,255,.08)" stroke="#fff" stroke-width="1.2"/><path d="M4.6 28v16a4.4 4.4 0 0 0 8.8 0V28z" fill="#B3261E"/></svg>'}
+function lotSvg(c){return '<svg viewBox="0 0 18 52" aria-hidden="true"><rect x="1" y="12" width="16" height="6" rx="1" fill="#fff"/><rect x="2" y="18" width="14" height="32" rx="2" fill="rgba(255,255,255,.08)" stroke="#fff" stroke-width="1.2"/><rect x="3" y="32" width="12" height="17" fill="'+c+'"/></svg>'}
+function compute(){
+  var ids=boxes.filter(function(b){return b.checked}).map(function(b){return b.value});
+  var sum=0,fast=false,tat=0,tt={};
+  ids.forEach(function(id){var t=byId(id);sum+=t.p;if(t.fast)fast=true;if(t.tat>tat)tat=t.tat;tt[t.tube]=1});
+  var pk=null;Object.keys(PK).forEach(function(k){var a=PK[k].ids;if(a.length===ids.length&&a.every(function(x){return ids.indexOf(x)>=0}))pk=k});
+  var total=pk?pkPrice(pk).now:sum;
+  var tkeys=['tim','xam','vang','lo'].filter(function(k){return tt[k]});
+  var blood=tkeys.filter(function(k){return k!=='lo'}),ml=0;blood.forEach(function(k){ml+=TUBE[k].ml});
+  STATE={ids:ids,pk:pk,total:total,sum:sum,fast:fast,tat:tat,tubes:tkeys.length,blood:blood.length,ml:ml,tkeys:tkeys};
+  render();
+}
+function tatText(h){if(!h)return ['–','Tính theo chỉ số lâu nhất'];if(h<=6)return ['Trong ngày','Lấy mẫu trước 09:00, có kết quả khoảng '+pad(9+h)+':00'];if(h<=24)return ['Hôm sau','Khoảng 10:00 sáng hôm sau'];return ['~2 ngày','Vitamin D cần thời gian chạy lâu hơn']}
+function render(){
+  var s=STATE,n=s.ids.length;
+  $$('.pk',tabs).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.k===s.pk))});
+  groups.forEach(function(g){var c=gm[g].filter(function(t){return s.ids.indexOf(t.id)>=0}).length;$('[data-gc="'+g+'"]').textContent=c+'/'+gm[g].length});
+  $('#selCount').textContent=n+' chỉ số';
+  $('#pkName').innerHTML=s.pk?'Gói '+PK[s.pk].n.replace(/ (\S+)$/,'&nbsp;$1'):(n?'Tự chọn':'Chưa chọn chỉ số');
+  $('#selList').innerHTML=n?s.ids.map(function(id){var t=byId(id);return '<li><span>'+t.n+'</span><span>'+vnd(t.p)+'</span></li>'}).join(''):'<li class="empty">Chưa chọn chỉ số nào. Bấm một gói hoặc tick chỉ số bên cạnh.</li>';
+  $('#tubes').innerHTML=n?s.tkeys.map(function(k,i){return '<span class="tb" style="animation-delay:'+(i*.08)+'s">'+(k==='lo'?lotSvg(TUBE[k].c):tubeSvg(TUBE[k].c))+TUBE[k].n+'</span>'}).join(''):'<span class="none">Ống mẫu sẽ hiện ở đây</span>';
+  var f=$('#mFast');f.textContent=s.fast?'Có':'Không';f.classList.toggle('warn',s.fast);
+  $('#mFastSub').textContent=s.fast?'Nhịn ăn 8–10 tiếng, được uống nước lọc':'Không cần nhịn ăn';
+  var tt=tatText(s.tat);$('#mTat').textContent=tt[0];$('#mTatSub').textContent=tt[1];
+  $('#mTube').textContent=s.tubes;
+  $('#mTubeSub').innerHTML=s.blood?s.blood+' ống máu, khoảng '+s.ml+'&nbsp;ml'+(s.tkeys.indexOf('lo')>=0?' + 1 lọ nước tiểu':''):(s.tubes?'Chỉ lấy nước tiểu':'Khoảng 0&nbsp;ml máu');
+  var ship=n?(s.total>=300000?0:50000):null;
+  $('#mShip').textContent=ship===null?'–':(ship?vnd(ship):'Miễn phí');
+  var grand=n?s.total+(ship||0):0;
+  $('#mTotal').textContent=vnd(grand);
+  $('#mWas').textContent=s.pk?'Giá lẻ '+vnd(s.sum)+' · giảm '+Math.round(PK[s.pk].off*100)+'%':(n?'Đã gồm phí đến nhà':'');
+  $('#barTotal').textContent=vnd(grand);
+  $('#barSub').textContent=n?(n+' chỉ số · '+s.tubes+' ống · '+(s.fast?'cần nhịn ăn':'không cần nhịn')):'Chưa chọn chỉ số';
+  $('#bkPk').innerHTML=s.pk?'Gói '+PK[s.pk].n.replace(/ (\S+)$/,'&nbsp;$1'):(n?'Tự chọn '+n+' chỉ số':'Chưa chọn chỉ số');
+  $('#bkN').textContent=n;$('#bkFast').textContent=s.fast?'Có, 8–10 tiếng':'Không';$('#bkTube').textContent=s.tubes;$('#bkTotal').textContent=vnd(grand);
+  renderSlots();
+}
+function setPk(k){boxes.forEach(function(b){b.checked=k!=='clear'&&PK[k].ids.indexOf(b.value)>=0});compute()}
+tabs.addEventListener('click',function(e){var b=e.target.closest('.pk');if(b)setPk(b.dataset.k)});
+boxes.forEach(function(b){b.addEventListener('change',compute)});
+$$('[data-pk]').forEach(function(a){a.addEventListener('click',function(){setPk(a.dataset.pk)})});
+$$('[data-pick]').forEach(function(a){a.addEventListener('click',function(){setPk(a.dataset.pick);$('#goi').scrollIntoView({behavior:RM?'auto':'smooth'})})});
+
+/* mobile sticky bar pushes badge */
+if(hasIO){new IntersectionObserver(function(es){es.forEach(function(e){document.body.classList.toggle('bar-on',e.isIntersecting&&getComputedStyle($('#bdBar')).display!=='none')})}).observe($('#goi .builder'))}
+
+/* ===== booking ===== */
+var AREAS={
+ 'Ba Đình':['Ba Đình','Ngọc Hà','Giảng Võ'],
+ 'Hoàn Kiếm':['Hoàn Kiếm','Cửa Nam'],
+ 'Đống Đa':['Đống Đa','Kim Liên','Văn Miếu - Quốc Tử Giám','Láng','Ô Chợ Dừa'],
+ 'Hai Bà Trưng':['Hai Bà Trưng','Vĩnh Tuy','Bạch Mai'],
+ 'Cầu Giấy':['Cầu Giấy','Nghĩa Đô','Yên Hòa'],
+ 'Thanh Xuân':['Thanh Xuân','Khương Đình','Phương Liệt'],
+ 'Tây Hồ':['Tây Hồ','Phú Thượng'],
+ 'Hoàng Mai':['Hoàng Mai','Định Công','Tương Mai','Vĩnh Hưng','Hoàng Liệt','Yên Sở','Lĩnh Nam'],
+ 'Long Biên':['Long Biên','Bồ Đề','Việt Hưng','Phúc Lợi'],
+ 'Hà Đông':['Hà Đông','Dương Nội','Yên Nghĩa','Phú Lương','Kiến Hưng'],
+ 'Nam & Bắc Từ Liêm':['Từ Liêm','Xuân Phương','Tây Mỗ','Đại Mỗ','Phú Diễn','Xuân Đỉnh','Đông Ngạc','Tây Tựu','Thượng Cát']
+};
+var area=$('#area'),ward=$('#ward');
+area.innerHTML+=Object.keys(AREAS).map(function(a){return '<option>'+a+' (cũ)</option>'}).join('');
+area.addEventListener('change',function(){
+  var k=area.value.replace(' (cũ)','');
+  ward.disabled=!k;
+  ward.innerHTML=k?'<option value="">Chọn phường</option>'+AREAS[k].map(function(w){return '<option>Phường '+w+'</option>'}).join(''):'<option value="">Chọn khu vực trước</option>';
+});
+var DOW=['CN','T2','T3','T4','T5','T6','T7'],DAYS=[];
+(function(){var n=vnNow();for(var i=1;i<=7;i++){var d=new Date(n.getFullYear(),n.getMonth(),n.getDate()+i);DAYS.push({k:pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear(),l:pad(d.getDate())+'/'+pad(d.getMonth()+1),w:i===1?'Mai':DOW[d.getDay()]})}})();
+$('#days').innerHTML=DAYS.map(function(d,i){return '<label class="chip"><input type="radio" name="day" value="'+d.k+'"'+(i===0?' checked':'')+'><span>'+d.w+'<b>'+d.l+'</b></span></label>'}).join('');
+var AM=['06:00','06:30','07:00','07:30','08:00','08:30'],PM=['16:00','16:30','17:00','17:30','18:00','18:30'];
+function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+function renderSlots(){
+  var dEl=$('input[name=day]:checked'),day=dEl?dEl.value:'',cur=($('input[name=slot]:checked')||{}).value;
+  function row(list,dis){return '<div class="slots">'+list.map(function(t){var busy=hash(day+t)%5===0,off=busy||dis;return '<label class="chip"><input type="radio" name="slot" value="'+t+'"'+(off?' disabled':'')+(t===cur&&!off?' checked':'')+'><span><b>'+t+'</b>'+(busy?'Đã kín':(dis?'Cần nhịn':'Còn chỗ'))+'</span></label>'}).join('')+'</div>'}
+  $('#slotWrap').innerHTML='<div class="slot-h"><span>Sáng sớm · hợp chỉ số cần nhịn ăn</span></div>'+row(AM,false)+'<div class="slot-h"><span>Chiều tối</span><span>'+(STATE.fast?'Không dùng cho phiếu cần nhịn ăn':'Sau giờ làm')+'</span></div>'+row(PM,STATE.fast);
+}
+$('#days').addEventListener('change',renderSlots);
+
+var form=$('#bookForm');
+function setErr(id,msg,fld){$('#'+id).textContent=msg||'';if(fld)$('#'+fld).classList.toggle('bad',!!msg)}
+form.addEventListener('submit',function(e){
+  e.preventDefault();var bad=null;
+  function chk(c,id,msg,fld,el){if(!c){setErr(id,msg,fld);bad=bad||el}else setErr(id,'',fld)}
+  chk(!!ward.value,'eWard',area.value?'Vui lòng chọn phường.':'Vui lòng chọn khu vực và phường.','fWard',area.value?ward:area);
+  chk($('#addr').value.trim().length>=5,'eAddr','Vui lòng nhập số nhà, ngõ, đường.','fAddr',$('#addr'));
+  chk(!!$('input[name=slot]:checked'),'eSlot','Vui lòng chọn một khung giờ còn chỗ.',null,$('#slotWrap'));
+  chk($('#name').value.trim().length>=2,'eName','Vui lòng nhập họ tên.','fName',$('#name'));
+  chk(/^0\d{9}$/.test($('#phone').value.replace(/[\s.]/g,'')),'ePhone','Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.','fPhone',$('#phone'));
+  chk($('#consent').checked,'eConsent','Vui lòng tick đồng ý xử lý dữ liệu cá nhân để gửi yêu cầu.',null,$('#consent'));
+  if(bad){if(bad.focus)bad.focus();if(bad.scrollIntoView)bad.scrollIntoView({block:'center',behavior:RM?'auto':'smooth'});return}
+  var n=vnNow(),code='LK-'+pad(n.getDate())+pad(n.getMonth()+1)+'-'+String(1000+hash($('#phone').value+n.getTime())%9000);
+  $('#okCode').textContent=code;
+  var s=STATE,slot=$('input[name=slot]:checked').value,day=$('input[name=day]:checked').value;
+  $('#okText').innerHTML='Kỹ thuật viên đến <b>'+esc(ward.value)+'</b> lúc <b class="num">'+slot+'</b> ngày <b class="num">'+day+'</b>. '+(s.ids.length?'Phiếu: '+(s.pk?'gói '+PK[s.pk].n:s.ids.length+' chỉ số tự chọn')+', tạm tính '+vnd(s.total+(s.total>=300000?0:50000))+'. '+(s.fast?'Nhớ nhịn ăn 8–10 tiếng trước giờ lấy mẫu.':'Không cần nhịn ăn.'):'Bạn chưa chọn chỉ số, tư vấn viên sẽ gọi để gợi ý gói phù hợp.');
+  $('#ok').classList.add('show');$('#ok').focus();
+  $('#tcode').value=code;
+});
+$('#okTrack').addEventListener('click',function(){playTrack($('#tcode').value)});
+
+/* ===== tracker ===== */
+var LOG=[
+ ['06:42','Kỹ thuật viên lấy 2 ống máu + 1 lọ nước tiểu, dán mã vạch.',0],
+ ['06:50','Đặt mẫu vào thùng giữ lạnh, nhiệt độ 4°C.',0],
+ ['07:55','Phòng xét nghiệm nhận mẫu, quét mã, kiểm tra chất lượng mẫu đạt.',1],
+ ['08:20','Bắt đầu chạy: huyết học, sinh hoá, nước tiểu.',2],
+ ['10:05','Máy trả kết quả, kỹ thuật viên kiểm tra lại.',2],
+ ['11:40','Kết quả được ký duyệt.',3],
+ ['11:45','Gửi link phiếu kết quả qua tin nhắn. Bác sĩ sẽ gọi lại trong ngày.',3]
+];
+var stg=$$('.stg'),timer=[],playing=false;
+function setStage(i,done){stg.forEach(function(s,j){s.classList.toggle('done',j<i||(done&&j===i));s.classList.toggle('now',j===i&&!done)});
+  var p=Math.max(0,Math.min(1,(i+(done?0:.5))/(stg.length-1)));var mob=innerWidth<=720;$('#railFill').style.transform=mob?'scaleY('+p+')':'scaleX('+p+')'}
+function playTrack(code){
+  code=(code||'').trim().toUpperCase()||'LK-1211-0642';$('#logCode').textContent=code;
+  timer.forEach(clearTimeout);timer=[];var ol=$('#log');ol.innerHTML='';
+  var gap=RM?0:850;
+  LOG.forEach(function(l,i){timer.push(setTimeout(function(){
+    var li=document.createElement('li');li.innerHTML='<time>'+l[0]+'</time><span>'+l[1]+'</span>';ol.appendChild(li);
+    setStage(l[2],i===LOG.length-1);
+  },gap*i))});
+}
+setStage(0,false);
+$('#tq').addEventListener('submit',function(e){e.preventDefault();playTrack($('#tcode').value)});
+if(hasIO){var to=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){playTrack($('#tcode').value);to.disconnect()}})},{threshold:.3});to.observe($('#stages'))}else{playTrack()}
+
+/* ===== report ===== */
+var R=[
+ {g:'Đường huyết',n:'Glucose lúc đói',v:5.4,u:'mmol/L',lo:3.9,hi:6.4,d:[2,9],
+  what:'Lượng đường trong máu sau khi nhịn ăn khoảng 8 tiếng. Là chỉ số cơ bản để theo dõi chuyển hoá đường.',
+  aff:'Bữa tối muộn hoặc ăn vặt đêm, một số thuốc, căng thẳng, mất ngủ.'},
+ {g:'Đường huyết',n:'HbA1c',v:5.8,u:'%',lo:4,hi:6,d:[3,9],
+  what:'Phản ánh mức đường huyết trung bình trong khoảng 2–3 tháng gần đây, không phụ thuộc bữa ăn hôm trước.',
+  aff:'Thiếu máu, một số bệnh lý về hồng cầu, mới truyền máu.'},
+ {g:'Mỡ máu',n:'Cholesterol toàn phần',v:5.6,u:'mmol/L',lo:null,hi:5.2,d:[2,8],
+  what:'Tổng lượng cholesterol trong máu, gồm cả loại “tốt” (HDL) và loại “xấu” (LDL).',
+  aff:'Chế độ ăn, cân nặng, vận động, thuốc đang dùng, yếu tố gia đình.'},
+ {g:'Mỡ máu',n:'Triglyceride',v:1.9,u:'mmol/L',lo:null,hi:1.7,d:[0,4],
+  what:'Một dạng mỡ trong máu, tăng giảm khá nhanh theo bữa ăn, rượu bia và đồ ngọt.',
+  aff:'Không nhịn ăn đủ giờ, rượu bia mấy ngày trước, đồ ngọt, một số thuốc.'},
+ {g:'Mỡ máu',n:'HDL-Cholesterol',v:1.3,u:'mmol/L',lo:1.0,hi:null,d:[0,3],
+  what:'Thường được gọi là cholesterol “tốt”, giúp đưa cholesterol về gan để xử lý.',
+  aff:'Vận động, hút thuốc, cân nặng, yếu tố di truyền.'},
+ {g:'Mỡ máu',n:'LDL-Cholesterol',v:3.5,u:'mmol/L',lo:null,hi:3.4,d:[1,6],
+  what:'Thường được gọi là cholesterol “xấu”. Bác sĩ đánh giá chỉ số này cùng tuổi, huyết áp và các yếu tố nguy cơ khác.',
+  aff:'Chế độ ăn nhiều mỡ động vật, ít vận động, yếu tố gia đình, thuốc.'},
+ {g:'Chức năng gan',n:'AST (GOT)',v:26,u:'U/L',lo:null,hi:40,d:[0,80],
+  what:'Men có trong gan và một số cơ quan khác như cơ, tim. Giúp bác sĩ xem tế bào gan có bị tổn thương không.',
+  aff:'Tập luyện nặng ngày trước đó, rượu bia, một số thuốc và thực phẩm chức năng.'},
+ {g:'Chức năng gan',n:'ALT (GPT)',v:33,u:'U/L',lo:null,hi:41,d:[0,80],
+  what:'Men tập trung chủ yếu ở gan, thường được xem cùng AST.',
+  aff:'Rượu bia, một số thuốc, thực phẩm chức năng, cân nặng.'},
+ {g:'Chức năng thận',n:'Creatinin',v:84,u:'µmol/L',lo:62,hi:106,d:[30,160],
+  what:'Chất thải từ hoạt động của cơ, được thận lọc ra. Dùng để ước tính mức lọc cầu thận (eGFR).',
+  aff:'Khối lượng cơ, ăn nhiều thịt trước khi lấy mẫu, uống ít nước, một số thuốc.'},
+ {g:'Chức năng thận',n:'Acid uric',v:395,u:'µmol/L',lo:202,hi:416,d:[100,600],
+  what:'Sản phẩm chuyển hoá của purin có trong thức ăn và trong cơ thể.',
+  aff:'Hải sản, nội tạng, bia rượu, nhịn đói lâu, một số thuốc lợi tiểu.'}
+];
+function fmt(v){return String(v).replace('.',',')}
+function refText(r){return r.lo===null?'< '+fmt(r.hi):(r.hi===null?'> '+fmt(r.lo):fmt(r.lo)+' – '+fmt(r.hi))}
+function flagOf(r){return (r.hi!==null&&r.v>r.hi)?'C':((r.lo!==null&&r.v<r.lo)?'T':'')}
+var rh='',lastG='';
+R.forEach(function(r,i){
+  if(r.g!==lastG){rh+='<div class="r-grp">'+r.g+'</div>';lastG=r.g}
+  var f=flagOf(r),d0=r.d[0],d1=r.d[1],pc=function(x){return Math.max(0,Math.min(100,(x-d0)/(d1-d0)*100))};
+  var a=r.lo===null?0:pc(r.lo),b=r.hi===null?100:pc(r.hi);
+  rh+='<button type="button" class="rr'+(f?' hi':'')+'" data-i="'+i+'" aria-pressed="false"><span class="nm">'+r.n+'</span><span class="vl num">'+fmt(r.v)+(f?'<span class="flag" aria-label="'+(f==='C'?'Cao hơn khoảng tham chiếu':'Thấp hơn khoảng tham chiếu')+'">'+f+'</span>':'')+'</span><span class="un">'+r.u+'</span><span class="rng"><span>'+refText(r)+' '+r.u+'</span><span class="bar"><span class="ref" style="left:'+a+'%;width:'+(b-a)+'%"></span><span class="mk" data-l="'+pc(r.v)+'" style="left:'+(RM?pc(r.v):50)+'%"></span></span></span></button>';
+});
+$('#rows').innerHTML=rh;
+var rrs=$$('.rr');
+function showRow(i){
+  var r=R[i],f=flagOf(r);
+  rrs.forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.i===i))});
+  $('#exK').textContent=r.g;$('#exN').textContent=r.n;$('#exV').textContent=fmt(r.v);$('#exU').textContent=r.u+(f?(f==='C'?' · cao hơn khoảng tham chiếu':' · thấp hơn khoảng tham chiếu'):' · trong khoảng tham chiếu');
+  $('#exWhat').textContent=r.what;
+  $('#exRead').textContent=f?'Kết quả '+fmt(r.v)+' '+r.u+' nằm '+(f==='C'?'trên':'dưới')+' khoảng tham chiếu mẫu ('+refText(r)+'). Điều này chưa đủ để kết luận có bệnh; bác sĩ sẽ xem cùng các chỉ số khác, tiền sử và có thể đề nghị làm lại xét nghiệm.':'Kết quả '+fmt(r.v)+' '+r.u+' nằm trong khoảng tham chiếu mẫu ('+refText(r)+'). Bác sĩ vẫn cần xem cùng các chỉ số khác và tình trạng sức khoẻ của bạn.';
+  $('#exAff').textContent=r.aff;
+}
+rrs.forEach(function(b){b.addEventListener('click',function(){showRow(+b.dataset.i);if(innerWidth<=1024)$('#explain').scrollIntoView({block:'nearest',behavior:RM?'auto':'smooth'})})});
+showRow(0);
+function settle(){$$('.mk').forEach(function(m){m.style.left=m.dataset.l+'%'})}
+if(hasIO&&!RM){var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){setTimeout(settle,250);mo.disconnect()}})},{threshold:.25});mo.observe($('#paper'))}else settle();
+
+setPk('co_ban');
+})();
+</script>
+</body>
+</html>
