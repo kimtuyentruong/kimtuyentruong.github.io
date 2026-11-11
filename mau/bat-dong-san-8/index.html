@@ -1,0 +1,1298 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cho Thuê Văn Phòng Hạng B Ven Sông Hàn, Đà Nẵng | Bến Hàn 15</title>
+<meta name="description" content="Mẫu giao diện website toà văn phòng hạng B Bến Hàn 15 trên đường Bạch Đằng, Đà Nẵng: xem mặt cắt 15 tầng và diện tích còn trống, tính chi phí thuê theo số nhân viên, đặt lịch xem văn phòng.">
+<meta name="theme-color" content="#F3F4F6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231F45D6'/%3E%3Cpath d='M14 50h36M18 50V14h28v36M18 23h28M18 32h28M18 41h28' fill='none' stroke='%23fff' stroke-width='3.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--paper:#F3F4F6;--paper2:#E8EAEE;--white:#fff;--ink:#0C0E13;--ink2:#2B303B;--muted:#555C6B;--line:rgba(12,14,19,.12);--line2:rgba(12,14,19,.24);--co:#1F45D6;--co-d:#1633A8;--co-l:#E6EBFC;--co-m:#A9BBF6;--occ:#D3D7DE;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--num:'Montserrat','Inter',system-ui,sans-serif;--pad:clamp(16px,4vw,56px);--gut:clamp(12px,1.7vw,24px);--hh:72px;--ease:cubic-bezier(.2,.7,.1,1)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{margin:0;font-weight:700;letter-spacing:-.025em;text-wrap:balance}
+p{margin:0}
+.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--co);color:#fff;padding:10px 16px;text-decoration:none}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--co);outline-offset:3px}
+.wrap{max-width:1400px;margin:0 auto;padding:0 var(--pad);position:relative}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut)}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.eyebrow{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border:1.5px solid var(--ink);background:var(--ink);color:#fff;font:600 15px/1.2 var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--co);border-color:var(--co)}
+.btn.co{background:var(--co);border-color:var(--co)}
+.btn.co:hover{background:var(--co-d);border-color:var(--co-d)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn .ico{transition:transform .25s var(--ease)}
+.btn:hover .ico{transform:translateX(4px)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:80;background:rgba(255,255,255,.98);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+.hdr.scrolled{box-shadow:0 1px 0 var(--line2)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;height:var(--hh)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.logo svg{width:36px;height:36px;flex:none}
+.logo b{display:block;font:800 17px/1 var(--num);letter-spacing:-.01em}
+.logo small{display:block;font:500 11.5px/1.3 var(--sans);color:var(--muted);margin-top:4px}
+.nav{display:flex;gap:2px}
+.nav a{padding:10px 12px;font:500 14.5px/1 var(--sans);text-decoration:none;color:var(--ink2);position:relative}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:var(--co);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:hover{color:var(--ink)}.nav a:hover::after{transform:none}
+.hdr .btn{min-height:44px;padding:0 18px;font-size:14px}
+.menu-btn{display:none;width:46px;height:46px;align-items:center;justify-content:center;border:1.5px solid var(--ink);background:#fff;cursor:pointer}
+.mnav{position:fixed;inset:0;z-index:120;background:#fff;display:flex;flex-direction:column;padding:0 var(--pad) 32px;visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s}
+.mnav.open{visibility:visible;opacity:1}
+.mnav-top{display:flex;align-items:center;justify-content:space-between;height:var(--hh);border-bottom:1px solid var(--line)}
+.mnav ol{list-style:none;margin:16px 0 auto;padding:0;counter-reset:m}
+.mnav li a{display:flex;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;font:700 26px/1.15 var(--sans);letter-spacing:-.02em}
+.mnav li a span{font:600 13px var(--num);color:var(--co);width:26px}
+.mnav .btn{margin-top:24px;width:100%}
+
+/* guides */
+.guides{position:absolute;inset:0;pointer-events:none;z-index:0}
+.guides .wrap{height:100%}
+.guides .g12{height:100%}
+.guides i{border-left:1px solid var(--line)}
+.guides i:last-child{border-right:1px solid var(--line)}
+
+/* hero */
+.hero{position:relative;padding:calc(var(--hh) + clamp(24px,3.4vw,48px)) 0 0;overflow:hidden}
+.hero .g12{position:relative;z-index:1}
+.hmeta{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gut)}
+.hmeta div{border-top:2px solid var(--ink);padding-top:10px;font:500 13px/1.4 var(--sans);color:var(--ink2)}
+.hmeta div b{display:block;font:700 11px/1.4 var(--num);letter-spacing:.08em;color:var(--co);margin-bottom:2px}
+.h1{grid-column:1/span 7;margin-top:clamp(36px,4.6vw,72px);font-size:clamp(40px,5.5vw,82px);line-height:1.02;letter-spacing:-.04em}
+.h1 em{font-style:normal;color:var(--co)}
+.hlead{grid-column:1/span 6;margin-top:28px;font-size:clamp(16px,1.25vw,18.5px);color:var(--ink2);max-width:60ch}
+.hcta{grid-column:1/span 7;display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hfig{grid-column:8/-1;grid-row:2/span 4;margin:clamp(36px,4.6vw,72px) 0 0;position:relative;align-self:start}
+.hfig .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper2)}
+.hfig img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.hfig:hover img{transform:scale(1.03)}
+.hfig figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:1px solid var(--ink);margin-top:10px;font:500 12.5px/1.4 var(--sans);color:var(--muted)}
+.hfig .coord{position:absolute;right:0;top:0;z-index:2;background:var(--co);color:#fff;padding:12px 14px;font:600 11.5px/1.5 var(--num);letter-spacing:.06em}
+.hbig{grid-column:1/span 7;display:grid;grid-template-columns:auto 1fr;align-items:end;gap:0 clamp(20px,3vw,44px);margin-top:clamp(32px,4vw,60px)}
+.n15{font:800 clamp(150px,21vw,300px)/.74 var(--num);letter-spacing:-.075em;color:var(--ink);margin-left:-.04em;padding-bottom:4px}
+.n15 span{color:var(--co)}
+.n15 span{display:inline-block;transform-origin:50% 80%;animation:dotP 3.2s ease-in-out infinite}
+@keyframes dotP{0%,100%{transform:none}50%{transform:translateY(-.04em) scale(.9)}}
+.dot{animation:blink 2s ease-in-out infinite}@keyframes blink{50%{opacity:.35}}
+.hstats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--gut)}
+.hstats li{border-top:1px solid var(--line2);padding:10px 0 14px}
+.hstats b{display:block;font:700 clamp(19px,1.7vw,24px)/1.2 var(--num);letter-spacing:-.02em}
+.hstats span{font-size:13px;color:var(--muted)}
+.avail{position:relative;z-index:1;margin-top:clamp(40px,5vw,72px);background:var(--ink);color:#fff}
+.avail .wrap{display:grid;grid-template-columns:minmax(0,2fr) repeat(5,minmax(0,1fr));column-gap:var(--gut)}
+.avail-h{padding:18px 0;display:flex;flex-direction:column;justify-content:center}
+.avail-h b{font:700 15px/1.3 var(--sans)}
+.avail-h span{font-size:12.5px;color:#AEB4C2;margin-top:2px}
+.avail a{display:block;padding:18px 0 18px 16px;border-left:1px solid rgba(255,255,255,.16);text-decoration:none;transition:background .2s}
+.avail a:hover{background:var(--co)}
+.avail a small{display:block;font:600 11px/1.3 var(--num);letter-spacing:.08em;color:#AEB4C2;text-transform:uppercase}
+.avail a:hover small{color:#fff}
+.avail a b{display:block;font:700 20px/1.3 var(--num);margin-top:4px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#5B7CFF;margin-right:8px;vertical-align:middle}
+
+/* sections */
+.sec{position:relative;padding:clamp(72px,9vw,136px) 0}
+.sec.white{background:var(--white)}
+.shead{border-top:2px solid var(--ink);padding-top:16px;margin-bottom:clamp(36px,5vw,72px);align-items:start}
+.sh-no{grid-column:1/span 1;font:700 14px/1.6 var(--num);color:var(--co)}
+.sh-lab{grid-column:2/span 3;font:600 13px/1.6 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.h2{grid-column:5/-1;font-size:clamp(32px,4vw,58px);line-height:1.04;letter-spacing:-.035em}
+.slead{grid-column:5/span 6;margin-top:20px;font-size:clamp(16px,1.2vw,18px);color:var(--ink2)}
+
+/* pains */
+.pains{border-bottom:1px solid var(--line2)}
+.prow{position:relative;padding:30px 0;border-top:1px solid var(--line2);align-items:start;transition:background .3s}
+.prow::before{content:"";position:absolute;left:calc(var(--pad) * -1);top:-1px;bottom:0;width:4px;background:var(--co);transform:scaleY(0);transform-origin:top;transition:transform .4s var(--ease)}
+.prow:hover::before{transform:none}
+.p-no{grid-column:1/span 1;font:700 28px/1 var(--num);color:var(--co)}
+.p-t{grid-column:2/span 4;font-size:clamp(20px,1.7vw,25px);line-height:1.2;letter-spacing:-.02em}
+.p-d{grid-column:6/span 3;color:var(--muted);font-size:15.5px}
+.p-s{grid-column:9/span 4;font-size:15.5px;padding-left:18px;border-left:2px solid var(--co)}
+.p-s b{display:block;font:700 11.5px/1.4 var(--num);letter-spacing:.08em;text-transform:uppercase;color:var(--co);margin-bottom:6px}
+
+/* plans */
+.plans{row-gap:48px}
+.plan{display:flex;flex-direction:column}
+.plan-a{grid-column:1/span 6}
+.plan-b{grid-column:7/span 3;padding-left:var(--gut);border-left:1px solid var(--line2)}
+.plan-c{grid-column:10/span 3;padding-left:var(--gut);border-left:1px solid var(--line2)}
+.plan-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:18px}
+.plan-top .L{font:800 46px/1 var(--num);color:var(--co);letter-spacing:-.04em}
+.plan-top span{font:600 12.5px/1.3 var(--num);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:right}
+.plan .ph{overflow:hidden;background:var(--paper2);height:clamp(220px,25vw,380px)}
+.plan .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.plan:hover .ph img{transform:scale(1.04)}
+.plan h3{font-size:clamp(22px,1.9vw,28px);line-height:1.15;margin-top:22px}
+.plan p{margin-top:10px;color:var(--ink2);font-size:15.5px}
+.spec{margin:20px 0 0;display:grid;grid-template-columns:auto 1fr;font-size:14.5px}
+.spec dt,.spec dd{margin:0;padding:10px 0;border-top:1px solid var(--line)}
+.spec dt{color:var(--muted);padding-right:16px}
+.spec dd{text-align:right;font-weight:600}
+.plan .more{margin-top:auto;padding-top:22px}
+.lnk{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--co);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+.lnk .ico{width:18px;height:18px;transition:transform .25s}
+.lnk:hover .ico{transform:translateX(4px)}
+.plan-a .spec{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 var(--gut)}
+.plan-a .spec div{border-top:1px solid var(--line);padding:10px 0}
+.plan-a .spec dt,.plan-a .spec dd{border:0;padding:0;text-align:left}
+.plan-a .spec dt{font-size:13px}
+.plan-a .spec dd{font:700 16px/1.35 var(--num);margin-top:4px}
+
+/* floors */
+.fl-tools{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:40px;padding:0 16px;border:1.5px solid var(--line2);background:transparent;font:600 14px/1 var(--sans);cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:13.5px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:18px;height:12px;display:inline-block}
+.lg-v{background:var(--co)}.lg-o{background:repeating-linear-gradient(-45deg,var(--occ) 0 3px,#EEF0F3 3px 6px)}.lg-s{background:#fff;border:1px solid var(--line2)}
+.fl-svg{grid-column:1/span 5}
+.fl-svg svg{width:100%;height:auto;display:block;overflow:visible}
+.fl-panel{grid-column:7/-1;align-self:start;position:sticky;top:calc(var(--hh) + 24px);background:#fff;border-top:4px solid var(--co);padding:clamp(22px,2.6vw,36px)}
+.fl .flr{cursor:pointer;outline:none}
+.fl .flr .bg{fill:#fff;stroke:rgba(12,14,19,.28);stroke-width:1}
+.fl .flr .occ{fill:url(#hatch)}
+.fl .flr .vac{fill:var(--co);transform-box:fill-box;transform-origin:left;transform:scaleX(0);transition:transform .9s var(--ease)}
+.fl.on .flr .vac{transform:none}
+.fl .flr .lbl{font:600 13px var(--num);fill:var(--muted)}
+.fl .flr .core{fill:none;stroke:rgba(12,14,19,.35);stroke-dasharray:3 3}
+.fl .flr .hit{fill:transparent}
+.fl .flr .ring{fill:none;stroke:transparent;stroke-width:2.5}
+.fl .flr:hover .ring,.fl .flr:focus-visible .ring{stroke:var(--co-m)}
+.fl .flr.sel .ring{stroke:var(--ink)}
+.fl .flr.sel .lbl{fill:var(--ink);font-weight:800}
+.fl .flr.dim{opacity:.28}
+.fl .flr .tag{font:600 11px var(--sans);fill:#fff;pointer-events:none}
+.fl .flr .tag.dk{fill:var(--ink2)}
+.fl .river{fill:none;stroke:var(--co-m);stroke-width:1.5}
+.fl .viewln{stroke:var(--co);stroke-width:1;stroke-dasharray:2 5;opacity:.6}
+.fl .gl{stroke:var(--ink);stroke-width:2}
+.fl .bsm{fill:url(#hatch2);stroke:rgba(12,14,19,.28)}
+.fl text.cap{font:500 12px var(--sans);fill:var(--muted)}
+.fl text.capb{font:700 12px var(--num);fill:var(--co);letter-spacing:.06em}
+.fl .ptr{fill:var(--ink);transition:transform .45s var(--ease)}
+.fp-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.st{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;font:600 12.5px/1 var(--sans);background:var(--co-l);color:var(--co-d)}
+.st.full{background:var(--paper2);color:var(--ink2)}
+.st.lob{background:var(--paper2);color:var(--ink2)}
+.fp-num{display:flex;align-items:flex-end;gap:18px;margin-top:10px}
+.fp-num b{font:800 clamp(96px,10vw,148px)/.8 var(--num);letter-spacing:-.06em;color:var(--co)}
+.fp-num span{font:600 15px/1.35 var(--sans);color:var(--ink2);padding-bottom:6px;max-width:22ch}
+.fp-dl{margin:26px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+.fp-dl dt,.fp-dl dd{margin:0;padding:11px 0;border-top:1px solid var(--line)}
+.fp-dl dt{color:var(--muted);font-size:14.5px}
+.fp-dl dd{font-weight:600;text-align:right;font-size:15px}
+.fp-dl dd.big{font:700 19px/1.3 var(--num)}
+.fp-plate{margin-top:22px}
+.fp-plate svg{width:100%;height:auto;display:block}
+.fp-plate p{font-size:12.5px;color:var(--muted);margin-top:6px}
+.fp-act{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.fp-act .btn{flex:1 1 200px;padding:0 16px;font-size:14.5px}
+.fp-anim{animation:fpIn .45s var(--ease)}
+@keyframes fpIn{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* calculator */
+.calc{align-items:start}
+.c-in{grid-column:1/span 5}
+.c-out{grid-column:6/-1;background:var(--co);color:#fff;padding:clamp(24px,3vw,44px);position:relative}
+.fld{border-top:1px solid var(--ink);padding:18px 0 26px}
+.fld>label,.fld>.lab{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:600 14px/1.3 var(--sans)}
+.fld>label small,.fld>.lab small{font-weight:500;color:var(--muted)}
+.people{display:flex;align-items:center;gap:12px;margin-top:14px}
+.people output{font:800 64px/1 var(--num);letter-spacing:-.04em;min-width:2.4ch}
+.people span{font-size:14px;color:var(--muted)}
+.step{width:46px;height:46px;border:1.5px solid var(--ink);background:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.step:hover{background:var(--ink);color:#fff}
+.people .sp{margin-left:auto;display:flex;gap:8px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:30px;background:transparent;margin-top:12px;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:2px;background:linear-gradient(to right,var(--co) var(--p,20%),var(--line2) var(--p,20%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;background:var(--co);border:3px solid #fff;margin-top:-10px;box-shadow:0 0 0 1.5px var(--co)}
+input[type=range]::-moz-range-track{height:2px;background:var(--line2)}
+input[type=range]::-moz-range-progress{height:2px;background:var(--co)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--co);border:3px solid #fff;border-radius:0}
+.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:14px}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.seg span{display:block;padding:12px 10px;border:1.5px solid var(--line2);background:#fff;text-align:left;transition:all .2s;height:100%}
+.seg span b{display:block;font:700 20px/1.1 var(--num)}
+.seg span small{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.3}
+.seg input:checked+span{border-color:var(--co);background:var(--co-l);box-shadow:inset 0 0 0 1px var(--co)}
+.seg input:focus-visible+span{outline:3px solid var(--co);outline-offset:2px}
+select,input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number],textarea{width:100%;min-height:50px;padding:12px 14px;border:1.5px solid var(--line2);background:#fff;border-radius:0;font-size:16px;-webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230C0E13' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:40px}
+select:focus,input:focus,textarea:focus{border-color:var(--co);outline:none;box-shadow:0 0 0 3px rgba(31,69,214,.18)}
+.fld select{margin-top:12px}
+.fit{margin-top:12px;font-size:14px;padding:12px 14px;background:#fff;border-left:3px solid var(--co)}
+.fit.warn{border-left-color:#B4541A}
+.co-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:12px;font:600 12.5px/1.3 var(--num);letter-spacing:.08em;text-transform:uppercase}
+.co-total{margin-top:22px}
+.co-total small{display:block;font-size:14px;color:#DCE3FB}
+.co-total b{display:block;font:800 clamp(44px,5.2vw,78px)/1 var(--num);letter-spacing:-.045em;margin-top:6px;white-space:nowrap}
+.co-total span{display:block;font-size:14px;margin-top:8px;color:#DCE3FB}
+.co-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gut);margin-top:28px}
+.co-rows{margin:0;display:grid;grid-template-columns:1fr auto;font-size:14.5px;align-content:start}
+.co-rows dt,.co-rows dd{margin:0;padding:9px 0;border-top:1px solid rgba(255,255,255,.28)}
+.co-rows dd{text-align:right;font:600 15px/1.4 var(--num)}
+.co-rows dt{color:#E3E8FB}
+.cells-h{display:flex;justify-content:space-between;font-size:12.5px;color:#DCE3FB;margin-bottom:8px}
+.cells{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;max-width:340px}
+.cells i{aspect-ratio:1;background:rgba(255,255,255,.1);transition:background .35s}
+.cells i.f{background:rgba(255,255,255,.32)}
+.cells i.n{background:#fff}
+.cells i.x{background:#0C0E13}
+.cells-l{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px;font-size:12px;color:#DCE3FB}
+.cells-l i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+.cmp{margin-top:30px;border-top:1px solid rgba(255,255,255,.35);padding-top:14px}
+.cmp h3{font:600 12.5px/1.3 var(--num);letter-spacing:.08em;text-transform:uppercase}
+.bar{display:grid;grid-template-columns:132px 1fr auto;gap:12px;align-items:center;margin-top:12px;font-size:14px}
+.bar .tr{height:10px;background:rgba(255,255,255,.14)}
+.bar .tr i{display:block;height:100%;background:#fff;width:0;transition:width .6s var(--ease)}
+.bar b{font:600 14px var(--num);white-space:nowrap}
+.bar.na{opacity:.55}
+.co-note{margin-top:20px;font-size:12.5px;color:#DCE3FB;line-height:1.55}
+.co-out-act{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.c-out .btn{background:#fff;color:var(--co-d);border-color:#fff}
+.c-out .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* spec & location */
+.specs{align-items:start;row-gap:56px}
+.sp-t{grid-column:1/span 6}
+.sp-img{grid-column:8/-1}
+.sp-img .ph{aspect-ratio:4/5;overflow:hidden;background:var(--paper2)}
+.sp-img img{width:100%;height:100%;object-fit:cover}
+.sp-img figcaption,.map figcaption{font-size:12.5px;color:var(--muted);padding-top:10px;border-top:1px solid var(--ink);margin-top:10px}
+.sptab{width:100%;border-collapse:collapse;font-size:15.5px}
+.sptab th,.sptab td{padding:15px 0;border-top:1px solid var(--line2);text-align:left;vertical-align:top}
+.sptab th{width:42%;font-weight:500;color:var(--muted);padding-right:16px}
+.sptab td{font-weight:600}
+.sptab td small{display:block;font-weight:400;color:var(--muted);font-size:13.5px}
+.sptab tr:last-child th,.sptab tr:last-child td{border-bottom:1px solid var(--line2)}
+.map{grid-column:1/span 7;margin:0}
+.map svg{width:100%;height:auto;display:block;background:#fff}
+.dist{grid-column:9/-1;list-style:none;margin:0;padding:0;align-self:end}
+.dist li{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:baseline;padding:16px 0;border-top:1px solid var(--line2)}
+.dist li:last-child{border-bottom:1px solid var(--line2)}
+.dist b{font:700 26px/1 var(--num);letter-spacing:-.03em}
+.dist b small{font:600 13px var(--sans);letter-spacing:0;color:var(--muted);margin-left:4px}
+.dist span{font-size:15px}
+.dist-h{grid-column:9/-1}
+
+/* reviews */
+.revs{row-gap:48px;align-items:start}
+.rv-big{grid-column:1/span 8}
+.rv-img{grid-column:9/-1;margin:0}
+.rv-img .ph{aspect-ratio:1/1;overflow:hidden;background:var(--paper2)}
+.rv-img img{width:100%;height:100%;object-fit:cover}
+.rv-img figcaption{font-size:12.5px;color:var(--muted);padding-top:8px}
+.quote blockquote{margin:0}
+.quote .tag{display:inline-block;font:600 11.5px/1 var(--num);letter-spacing:.08em;text-transform:uppercase;background:var(--paper2);color:var(--ink2);padding:6px 10px;margin-bottom:18px}
+.rv-big blockquote p{font-size:clamp(24px,2.6vw,38px);line-height:1.25;letter-spacing:-.025em;font-weight:500}
+.rv-big blockquote p::before{content:"\201C";display:block;font:800 96px/.6 var(--num);color:var(--co);margin-bottom:14px}
+.quote footer{display:flex;gap:16px;align-items:center;margin-top:24px;padding-top:16px;border-top:1px solid var(--line2);font-size:14.5px}
+.quote footer b{display:block}
+.quote footer span{color:var(--muted);font-size:13.5px}
+.av{width:44px;height:44px;flex:none;background:var(--co);color:#fff;display:flex;align-items:center;justify-content:center;font:700 15px var(--num)}
+.rv-sm{grid-column:span 6;border-top:2px solid var(--ink);padding-top:22px}
+.rv-sm blockquote p{font-size:clamp(18px,1.5vw,21px);line-height:1.45;font-weight:500;letter-spacing:-.01em}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--gut);position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--line2)}
+.steps::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--co);transform:scaleX(0);transform-origin:left;transition:transform 1.6s var(--ease)}
+.steps.in::after{transform:none}
+.steps li{padding-top:22px;position:relative}
+.steps li::before{content:"";position:absolute;top:-5px;left:0;width:12px;height:12px;background:var(--co)}
+.steps .sn{font:800 54px/1 var(--num);letter-spacing:-.05em;color:var(--ink)}
+.steps .sd{display:block;font:600 12px/1.3 var(--num);letter-spacing:.06em;text-transform:uppercase;color:var(--co);margin-top:16px}
+.steps h3{font-size:19px;line-height:1.25;margin-top:8px;letter-spacing:-.015em}
+.steps p{font-size:14.5px;color:var(--muted);margin-top:8px}
+
+/* faq */
+.faqs{align-items:start}
+.faq-side{grid-column:1/span 4;background:var(--paper);padding:24px;position:sticky;top:calc(var(--hh) + 24px)}
+.faq-side h3{font-size:20px}
+.faq-side p{font-size:15px;color:var(--ink2);margin-top:8px}
+.faq-side a.tel{display:block;font:800 30px/1.2 var(--num);letter-spacing:-.03em;color:var(--co);text-decoration:none;margin-top:14px}
+.faq-list{grid-column:5/-1}
+.faq-list details{border-top:1px solid var(--line2)}
+.faq-list details:last-child{border-bottom:1px solid var(--line2)}
+.faq-list summary{list-style:none;display:grid;grid-template-columns:48px 1fr 28px;gap:12px;align-items:center;padding:22px 0;cursor:pointer;font:600 clamp(17px,1.4vw,20px)/1.35 var(--sans);letter-spacing:-.01em}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .q{font:700 13px var(--num);color:var(--co)}
+.faq-list summary .pm{width:28px;height:28px;position:relative}
+.faq-list summary .pm::before,.faq-list summary .pm::after{content:"";position:absolute;left:6px;right:6px;top:13px;height:2px;background:var(--ink);transition:transform .3s var(--ease)}
+.faq-list summary .pm::after{transform:rotate(90deg)}
+.faq-list details[open] summary .pm::after{transform:rotate(0)}
+.faq-list summary:hover{color:var(--co)}
+.faq-list .a{padding:0 40px 24px 60px;color:var(--ink2);font-size:15.5px;max-width:72ch}
+
+/* booking */
+.book{align-items:start}
+.bk-form{grid-column:1/span 7}
+.bk-side{grid-column:9/-1;position:sticky;top:calc(var(--hh) + 24px)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px var(--gut);margin-bottom:16px}
+.frow.one{grid-template-columns:1fr}
+.f label{display:block;font:600 14px/1.3 var(--sans);margin-bottom:8px}
+.f label small{font-weight:400;color:var(--muted)}
+.slots{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.slots label{position:relative;margin:0}
+.slots input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.slots span{display:flex;align-items:center;justify-content:center;min-height:48px;border:1.5px solid var(--line2);background:#fff;font:600 15px var(--num);cursor:pointer;transition:all .2s}
+.slots input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.slots input:focus-visible+span{outline:3px solid var(--co);outline-offset:2px}
+.hint{font-size:13px;color:var(--muted);margin-top:6px;min-height:1.2em}
+.hint.err{color:#B3261E}
+.consent{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;font-size:14px;color:var(--ink2);padding:16px;background:#fff;border:1px solid var(--line2);margin:8px 0 20px;cursor:pointer}
+.consent input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--co);cursor:pointer}
+.bk-sum{background:var(--ink);color:#fff;padding:28px}
+.bk-sum h3{font:600 12.5px/1.3 var(--num);letter-spacing:.08em;text-transform:uppercase;color:#AEB4C2}
+.bk-sum .when{font:800 34px/1.1 var(--num);letter-spacing:-.03em;margin-top:14px}
+.bk-sum .when small{display:block;font:500 15px/1.4 var(--sans);letter-spacing:0;color:#C9CEDA;margin-top:6px}
+.bk-sum dl{margin:20px 0 0;display:grid;grid-template-columns:auto 1fr;font-size:14.5px}
+.bk-sum dt,.bk-sum dd{margin:0;padding:10px 0;border-top:1px solid rgba(255,255,255,.16)}
+.bk-sum dt{color:#AEB4C2;padding-right:14px}
+.bk-sum dd{text-align:right;font-weight:600}
+.contact{margin-top:20px;list-style:none;padding:0}
+.contact li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line2);font-size:15px}
+.contact li:last-child{border-bottom:1px solid var(--line2)}
+.contact .ico{color:var(--co);margin-top:2px}
+.contact a{text-decoration:none;font-weight:600}
+.ok{display:none;background:#fff;border-top:4px solid var(--co);padding:28px}
+.ok.show{display:block;animation:fpIn .5s var(--ease)}
+.ok h3{font-size:26px;display:flex;align-items:center;gap:12px}
+.ok h3 .ico{width:30px;height:30px;color:var(--co)}
+.ok p{margin-top:10px;color:var(--ink2)}
+
+/* footer */
+.ft{background:var(--ink);color:#C9CEDA;padding:clamp(56px,7vw,96px) 0 28px}
+.ft .wm{grid-column:1/-1;font:800 clamp(64px,13vw,200px)/.85 var(--num);letter-spacing:-.06em;color:#fff;border-bottom:1px solid rgba(255,255,255,.16);padding-bottom:28px}
+.ft .wm span{color:#5B7CFF}
+.ft-c{grid-column:span 3;padding-top:28px;font-size:14.5px}
+.ft-c h4{font:600 12px/1.3 var(--num);letter-spacing:.08em;text-transform:uppercase;color:#8C93A3;margin-bottom:12px}
+.ft-c a{text-decoration:none;color:#fff}
+.ft-c a:hover{color:#9DB2FF}
+.ft-c ul{list-style:none;margin:0;padding:0}
+.ft-c li{padding:3px 0}
+.ft-note{grid-column:1/-1;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);font-size:13px;color:#9AA1B0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(14,16,19,.96);border:1px solid rgba(201,206,214,.22);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#000}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#5B7CFF;flex:none;box-shadow:0 0 0 3px rgba(91,124,255,.3)}
+.kt-badge b{color:#A9BBF6;font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1180px){
+  .nav a{padding:10px 8px;font-size:14px}
+  .plan-a{grid-column:1/-1}
+  .plan-b{grid-column:1/span 6;padding-left:0;border-left:0}
+  .plan-c{grid-column:7/span 6}
+  .plan-a .ph{height:clamp(260px,40vw,420px)}
+  .c-in{grid-column:1/span 5}
+  .c-out{grid-column:6/-1}
+  .co-grid{grid-template-columns:1fr}
+}
+@media (max-width:1024px){
+  .nav,.hdr .btn{display:none}
+  .menu-btn{display:inline-flex}
+  .h1{grid-column:1/-1}
+  .hlead{grid-column:1/span 9}
+  .hcta{grid-column:1/-1}
+  .hfig{grid-column:1/-1;grid-row:auto;margin-top:40px}
+  .hfig .ph{aspect-ratio:16/10}
+  .hbig{grid-column:1/-1}
+  .avail .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .avail-h{grid-column:1/-1;padding-bottom:6px}
+  .avail a{border-left:0;border-top:1px solid rgba(255,255,255,.16);padding-left:0}
+  .h2{grid-column:1/-1;margin-top:18px}
+  .slead{grid-column:1/span 10}
+  .sh-lab{grid-column:2/-1}
+  .p-t{grid-column:2/span 5}
+  .p-d{grid-column:2/span 5;margin-top:10px}
+  .p-s{grid-column:8/-1;grid-row:1/span 2}
+  .fl-svg{grid-column:1/-1;max-width:620px;margin:0 auto 32px;width:100%}
+  .fl-panel{grid-column:1/-1;position:static}
+  .c-in,.c-out{grid-column:1/-1}
+  .c-out{margin-top:16px}
+  .co-grid{grid-template-columns:1fr 1fr}
+  .sp-t{grid-column:1/-1}
+  .sp-img{grid-column:1/-1}
+  .sp-img .ph{aspect-ratio:16/9}
+  .map{grid-column:1/-1}
+  .dist,.dist-h{grid-column:1/-1}
+  .rv-big{grid-column:1/-1}
+  .rv-img{grid-column:1/span 6}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:40px}
+  .steps::before,.steps::after{display:none}
+  .steps li{border-top:2px solid var(--line2)}
+  .faq-side{grid-column:1/-1;position:static;margin-bottom:24px}
+  .faq-list{grid-column:1/-1}
+  .bk-form{grid-column:1/-1}
+  .bk-side{grid-column:1/-1;position:static;margin-top:40px}
+  .ft-c{grid-column:span 6}
+}
+@media (max-width:720px){
+  :root{--hh:64px}
+  .logo small{display:none}
+  .hmeta{grid-template-columns:1fr 1fr;row-gap:14px}
+  .hlead{grid-column:1/-1}
+  .slead{grid-column:1/-1}
+  .guides{display:none}
+  .n15{margin-left:0}
+  .hcta .btn{flex:1 1 100%}
+  .hbig{grid-template-columns:1fr;gap:20px}
+  .n15{font-size:44vw}
+  .avail .wrap{grid-template-columns:1fr 1fr}
+  .prow{padding:24px 0}
+  .p-no{grid-column:1/-1;font-size:22px;margin-bottom:10px}
+  .p-t,.p-d{grid-column:1/-1}
+  .p-s{grid-column:1/-1;grid-row:auto;margin-top:16px}
+  .prow::before{display:none}
+  .plan-b,.plan-c{grid-column:1/-1;padding-left:0;border-left:0}
+  .plan-a .spec{grid-template-columns:1fr 1fr}
+  .fl-tools{flex-direction:column;align-items:flex-start}
+  .fp-dl{grid-template-columns:1fr 1.2fr}
+  .co-grid{grid-template-columns:1fr}
+  .seg{grid-template-columns:1fr 1fr}
+  .people output{font-size:54px}
+  .bar{grid-template-columns:96px 1fr;row-gap:4px}
+  .bar b{grid-column:2}
+  .rv-img{grid-column:1/-1}
+  .rv-sm{grid-column:1/-1}
+  .steps{grid-template-columns:1fr 1fr}
+  .frow{grid-template-columns:1fr}
+  .slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .faq-list summary{grid-template-columns:34px 1fr 28px}
+  .faq-list .a{padding:0 0 22px 46px}
+  .ft-c{grid-column:1/-1;padding-top:22px}
+  .ft{padding-bottom:84px}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (max-width:420px){
+  .hmeta{grid-template-columns:1fr}
+  .hmeta div:nth-child(n+3){display:none}
+  .steps{grid-template-columns:1fr}
+  .co-total b{font-size:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-arr" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5 9.5 18 20 6.5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Bến Hàn 15, về đầu trang">
+      <svg viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" fill="#1F45D6"/><path d="M8 29h20M11 29V7h14v22M11 12.5h14M11 18h14M11 23.5h14" fill="none" stroke="#fff" stroke-width="2"/></svg>
+      <span><b>Bến&nbsp;Hàn&nbsp;15</b><small>Văn phòng ven sông Hàn · Đà&nbsp;Nẵng</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#cach-thue">Cách thuê</a>
+      <a href="#mat-cat">Tầng trống</a>
+      <a href="#chi-phi">Chi phí</a>
+      <a href="#toa-nha">Toà nhà</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </nav>
+    <a class="btn co" href="#dat-lich">Đặt lịch xem&nbsp;văn&nbsp;phòng</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mnav-top">
+    <span class="logo"><svg viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" fill="#1F45D6"/><path d="M8 29h20M11 29V7h14v22M11 12.5h14M11 18h14M11 23.5h14" fill="none" stroke="#fff" stroke-width="2"/></svg><span><b>Bến&nbsp;Hàn&nbsp;15</b></span></span>
+    <button class="menu-btn" id="menuClose" type="button" aria-label="Đóng menu" style="display:inline-flex"><svg class="ico"><use href="#i-close"/></svg></button>
+  </div>
+  <ol>
+    <li><a href="#cach-thue"><span>01</span>Cách thuê</a></li>
+    <li><a href="#mat-cat"><span>02</span>Tầng còn trống</a></li>
+    <li><a href="#chi-phi"><span>03</span>Tính chi phí</a></li>
+    <li><a href="#toa-nha"><span>04</span>Toà nhà &amp;&nbsp;vị&nbsp;trí</a></li>
+    <li><a href="#hoi-dap"><span>05</span>Hỏi đáp</a></li>
+  </ol>
+  <a class="btn co" href="#dat-lich">Đặt lịch xem&nbsp;văn&nbsp;phòng <svg class="ico"><use href="#i-arr"/></svg></a>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="guides" aria-hidden="true"><div class="wrap"><div class="g12"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+  <div class="wrap g12">
+    <div class="hmeta">
+      <div><b>A / 01</b>Toà văn phòng hạng&nbsp;B</div>
+      <div><b>A / 02</b>Đường Bạch Đằng, Phường Hải&nbsp;Châu, Đà&nbsp;Nẵng</div>
+      <div><b>A / 03</b>Sàn trống · Trọn gói · Coworking</div>
+      <div><b>A / 04</b>Diện tích cập nhật ngày 10/11/2026</div>
+    </div>
+    <h1 class="h1">Văn phòng ven <em>sông&nbsp;Hàn</em>, chi&nbsp;phí rõ ngay từ&nbsp;đầu.</h1>
+    <p class="hlead">Bến Hàn 15 là toà văn phòng 15&nbsp;tầng trên đường Bạch&nbsp;Đằng. Thuê nguyên sàn cho đội 30–200&nbsp;người, văn phòng trọn gói cho nhóm nhỏ, hoặc chỗ ngồi coworking theo tháng. Diện tích trống, giá thuê và phí quản lý của từng tầng đều công khai ngay trên trang này.</p>
+    <div class="hcta">
+      <a class="btn co" href="#mat-cat">Xem tầng còn&nbsp;trống <svg class="ico"><use href="#i-arr"/></svg></a>
+      <a class="btn ghost" href="#chi-phi">Tính chi&nbsp;phí&nbsp;thuê</a>
+    </div>
+    <figure class="hfig">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" width="1200" height="1500" alt="Mặt kính toà văn phòng cao tầng nhìn từ dưới lên, nền trời xanh" fetchpriority="high"></div>
+      <span class="coord">16°04′&nbsp;B<br>108°13′&nbsp;Đ</span>
+      <figcaption><span>Hình 01 — Mặt kính hướng sông (ảnh minh hoạ)</span><span class="num">15F</span></figcaption>
+    </figure>
+    <div class="hbig">
+      <div class="n15" aria-hidden="true">15<span>.</span></div>
+      <ul class="hstats">
+        <li><b class="num">640&nbsp;m²</b><span>Sàn điển hình thông thuỷ</span></li>
+        <li><b class="num">2&nbsp;hầm</b><span>Ô tô và xe máy</span></li>
+        <li><b class="num">240.000đ</b><span>Giá thuê từ, mỗi m²/tháng</span></li>
+        <li><b class="num">60.000đ</b><span>Phí quản lý mỗi m²/tháng</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="avail" aria-label="Các tầng đang còn trống">
+    <div class="wrap">
+      <div class="avail-h"><b><span class="dot"></span>Đang còn trống</b><span>Chạm để xem trên mặt cắt</span></div>
+      <a href="#mat-cat" data-floor="15"><small>Tầng 15</small><b>320&nbsp;m²</b></a>
+      <a href="#mat-cat" data-floor="11"><small>Tầng 11</small><b>640&nbsp;m²</b></a>
+      <a href="#mat-cat" data-floor="8"><small>Tầng 08</small><b>380&nbsp;m²</b></a>
+      <a href="#mat-cat" data-floor="3"><small>Tầng 03 · Trọn gói</small><b>6&nbsp;phòng</b></a>
+      <a href="#mat-cat" data-floor="2"><small>Tầng 02 · Coworking</small><b>34&nbsp;chỗ</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -> SOLUTION -->
+<section class="sec" id="noi-lo" aria-labelledby="h-noilo">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">02</div>
+      <div class="sh-lab">Điều khiến việc thuê văn phòng mất&nbsp;thời&nbsp;gian</div>
+      <h2 class="h2" id="h-noilo">Thuê văn phòng thường vướng bốn&nbsp;chuyện quen&nbsp;thuộc</h2>
+      <p class="slead">Đây là những câu hỏi gặp ở hầu hết buổi xem mặt bằng. Toà nhà được vận hành để trả lời từng câu, bằng giấy trắng mực đen.</p>
+    </div>
+    <div class="pains">
+      <div class="prow g12 rv">
+        <div class="p-no">01</div>
+        <h3 class="p-t">Giá chào một đằng, hoá&nbsp;đơn một&nbsp;nẻo</h3>
+        <p class="p-d">Phí quản lý, máy lạnh ngoài giờ, gửi xe, VAT… cộng hết vào mới ra con số thật phải trả.</p>
+        <p class="p-s"><b>Tại Bến Hàn 15</b>Bảng giá ghi riêng giá thuê, phí quản lý, VAT và phí ngoài giờ. Công cụ tính chi phí bên dưới cộng sẵn cho bạn.</p>
+      </div>
+      <div class="prow g12 rv">
+        <div class="p-no">02</div>
+        <h3 class="p-t">Đội tăng người là phải chuyển&nbsp;nhà</h3>
+        <p class="p-d">Văn phòng vừa đủ hôm nay, sang năm đã chật. Chuyển địa điểm tốn tiền thi công, đổi giấy phép, đổi địa chỉ hoá đơn.</p>
+        <p class="p-s"><b>Tại Bến Hàn 15</b>Khách đang thuê được ưu tiên ô trống cùng tầng hoặc tầng khác trong toà, giữ nguyên địa chỉ đăng ký kinh doanh.</p>
+      </div>
+      <div class="prow g12 rv">
+        <div class="p-no">03</div>
+        <h3 class="p-t">Hợp đồng dài, khó xoay khi kế&nbsp;hoạch&nbsp;đổi</h3>
+        <p class="p-d">Dự án mới, văn phòng đại diện hay nhóm thử thị trường chưa muốn ràng buộc vài năm.</p>
+        <p class="p-s"><b>Tại Bến Hàn 15</b>Sàn văn phòng từ 2&nbsp;năm. Văn phòng trọn gói và coworking từ 1&nbsp;tháng, có thể chuyển lên sàn riêng khi đội lớn lên.</p>
+      </div>
+      <div class="prow g12 rv">
+        <div class="p-no">04</div>
+        <h3 class="p-t">Khách đến họp không có chỗ đậu&nbsp;xe</h3>
+        <p class="p-d">Văn phòng mặt tiền đẹp nhưng khách phải gửi xe xa, đối tác ngại ghé.</p>
+        <p class="p-s"><b>Tại Bến Hàn 15</b>Hai tầng hầm cho ô tô và xe máy, có khu đậu xe dành cho khách đến làm việc trong giờ hành chính.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="sec white" id="cach-thue" aria-labelledby="h-plans">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">03</div>
+      <div class="sh-lab">Cách thuê</div>
+      <h2 class="h2" id="h-plans">Một toà nhà, ba&nbsp;cách&nbsp;thuê</h2>
+      <p class="slead">Từ một chỗ ngồi đến nguyên sàn 640&nbsp;m². Bắt đầu nhỏ ở tầng 02, mở rộng lên sàn riêng mà không đổi địa chỉ.</p>
+    </div>
+    <div class="plans g12">
+      <article class="plan plan-a rv">
+        <div class="plan-top"><span class="L">A</span><span>Tầng 04–15</span></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80" width="1400" height="875" loading="lazy" alt="Sàn văn phòng trống với vách kính lớn, trần bê tông và bàn họp dài"></div>
+        <h3>Sàn văn&nbsp;phòng</h3>
+        <p>Ô từ 150&nbsp;m² đến nguyên sàn 640&nbsp;m². Bàn giao trần, sàn, máy lạnh trung tâm và hệ thống đèn; bạn thi công nội thất theo nhận diện riêng của công ty.</p>
+        <dl class="spec">
+          <div><dt>Diện tích</dt><dd>150–640&nbsp;m²</dd></div>
+          <div><dt>Kỳ hạn</dt><dd>Từ 2&nbsp;năm</dd></div>
+          <div><dt>Giá thuê/m²/tháng</dt><dd>Từ&nbsp;240.000đ</dd></div>
+          <div><dt>Phù hợp</dt><dd>20–200&nbsp;người</dd></div>
+        </dl>
+        <div class="more"><a class="lnk" href="#mat-cat" data-filter="san">Xem sàn còn&nbsp;trống <svg class="ico"><use href="#i-arr"/></svg></a></div>
+      </article>
+      <article class="plan plan-b rv d1">
+        <div class="plan-top"><span class="L">B</span><span>Tầng 03</span></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=900&q=80" width="900" height="1100" loading="lazy" alt="Phòng họp riêng có bàn gỗ dài, cửa sổ nhìn ra thành phố"></div>
+        <h3>Văn phòng trọn&nbsp;gói</h3>
+        <p>Phòng riêng có sẵn bàn ghế, internet, lễ tân nhận thư. Ký trong tuần, vào làm ngay.</p>
+        <dl class="spec">
+          <dt>Quy mô</dt><dd>2–12&nbsp;người</dd>
+          <dt>Kỳ hạn</dt><dd>Từ 1&nbsp;tháng</dd>
+          <dt>Giá từ</dt><dd>9.500.000đ/phòng</dd>
+          <dt>Đã gồm</dt><dd>Phí quản lý, điện, mạng</dd>
+        </dl>
+        <div class="more"><a class="lnk" href="#mat-cat" data-floor="3">Xem tầng&nbsp;03 <svg class="ico"><use href="#i-arr"/></svg></a></div>
+      </article>
+      <article class="plan plan-c rv d2">
+        <div class="plan-top"><span class="L">C</span><span>Tầng 02</span></div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&w=900&q=80" width="900" height="1100" loading="lazy" alt="Khu coworking có nhiều người đang làm việc bên cửa kính nhìn ra phố"></div>
+        <h3>Chỗ ngồi coworking</h3>
+        <p>Chỗ linh hoạt hoặc bàn cố định, dùng chung bếp, phòng họp và phòng gọi điện riêng.</p>
+        <dl class="spec">
+          <dt>Linh hoạt</dt><dd>2.200.000đ/người</dd>
+          <dt>Bàn cố định</dt><dd>2.900.000đ/người</dd>
+          <dt>Kỳ hạn</dt><dd>Từ 1&nbsp;tháng</dd>
+          <dt>Giờ mở</dt><dd>07:00–21:00</dd>
+        </dl>
+        <div class="more"><a class="lnk" href="#mat-cat" data-floor="2">Xem tầng&nbsp;02 <svg class="ico"><use href="#i-arr"/></svg></a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION CUT -->
+<section class="sec" id="mat-cat" aria-labelledby="h-floors">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">04</div>
+      <div class="sh-lab">Mặt cắt toà nhà</div>
+      <h2 class="h2" id="h-floors">Chọn một tầng, xem ngay chỗ&nbsp;trống</h2>
+      <p class="slead">Rê chuột hoặc chạm vào từng tầng trên mặt cắt. Phần màu xanh là diện tích còn trống; số liệu cập nhật đến 10/11/2026 và chỉ để minh hoạ.</p>
+    </div>
+    <div class="g12">
+      <div class="fl-tools">
+        <div class="chips" role="group" aria-label="Lọc theo cách thuê">
+          <button class="chip" type="button" data-f="all" aria-pressed="true">Tất cả</button>
+          <button class="chip" type="button" data-f="san" aria-pressed="false">Sàn văn phòng</button>
+          <button class="chip" type="button" data-f="goi" aria-pressed="false">Trọn gói</button>
+          <button class="chip" type="button" data-f="cow" aria-pressed="false">Coworking</button>
+          <button class="chip" type="button" data-f="vac" aria-pressed="false">Chỉ tầng còn trống</button>
+        </div>
+        <div class="legend"><span><i class="lg-v"></i>Còn trống</span><span><i class="lg-o"></i>Đã cho thuê</span><span><i class="lg-s"></i>Tiện ích chung</span></div>
+      </div>
+      <div class="fl-svg">
+        <svg class="fl" id="fl" viewBox="0 0 470 790" role="group" aria-label="Mặt cắt toà nhà 15 tầng, chọn một tầng để xem chi tiết"></svg>
+      </div>
+      <div class="fl-panel" id="fp" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="sec white" id="chi-phi" aria-labelledby="h-calc">
+  <div class="guides" aria-hidden="true"><div class="wrap"><div class="g12"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+  <div class="wrap" style="z-index:1">
+    <div class="shead g12 rv">
+      <div class="sh-no">05</div>
+      <div class="sh-lab">Tính chi phí thuê</div>
+      <h2 class="h2" id="h-calc">Bao nhiêu người, bấy nhiêu mét&nbsp;vuông</h2>
+      <p class="slead">Nhập số nhân viên và cách bố trí chỗ ngồi. Công cụ quy ra diện tích cần thuê và tổng chi phí mỗi tháng, đã gồm phí quản lý và VAT&nbsp;10%.</p>
+    </div>
+    <div class="calc g12">
+      <form class="c-in rv" id="calc" onsubmit="return false" aria-label="Thông số tính chi phí">
+        <div class="fld">
+          <div class="lab"><label for="cN">Số nhân viên làm việc tại văn phòng</label><small>5–150 người</small></div>
+          <div class="people">
+            <output id="cNo" for="cN" class="num">30</output><span>người</span>
+            <div class="sp"><button class="step" type="button" data-d="-1" aria-label="Bớt 1 người"><svg class="ico"><use href="#i-minus"/></svg></button><button class="step" type="button" data-d="1" aria-label="Thêm 1 người"><svg class="ico"><use href="#i-plus"/></svg></button></div>
+          </div>
+          <input type="range" id="cN" min="5" max="150" step="1" value="30" aria-describedby="cNo">
+        </div>
+        <fieldset class="fld" style="border-left:0;border-right:0;border-bottom:0;margin:0;padding-left:0;padding-right:0">
+          <legend class="sr">Cách bố trí</legend>
+          <div class="lab" aria-hidden="true">Cách bố trí<small>m² mỗi người</small></div>
+          <div class="seg">
+            <label><input type="radio" name="dens" value="6"><span><b class="num">6&nbsp;m²</b><small>Gọn, bàn dài</small></span></label>
+            <label><input type="radio" name="dens" value="8" checked><span><b class="num">8&nbsp;m²</b><small>Tiêu chuẩn</small></span></label>
+            <label><input type="radio" name="dens" value="10"><span><b class="num">10&nbsp;m²</b><small>Thêm phòng họp</small></span></label>
+            <label><input type="radio" name="dens" value="12"><span><b class="num">12&nbsp;m²</b><small>Có phòng riêng</small></span></label>
+          </div>
+        </fieldset>
+        <div class="fld">
+          <div class="lab"><label for="cF">Tầng muốn thuê</label><small>Giá chưa VAT</small></div>
+          <select id="cF"></select>
+          <p class="fit" id="cFit"></p>
+        </div>
+      </form>
+      <div class="c-out rv d1" aria-live="polite">
+        <div class="co-h"><span>Ước tính mỗi tháng</span><span id="oFloor">Tầng 11</span></div>
+        <div class="co-total"><small>Tổng chi phí thuê văn phòng, gồm VAT</small><b class="num" id="oTotal">0đ</b><span id="oPer">0đ mỗi người/tháng</span></div>
+        <div class="co-grid">
+          <dl class="co-rows">
+            <dt>Diện tích cần thuê</dt><dd id="oArea">0&nbsp;m²</dd>
+            <dt>Tiền thuê</dt><dd id="oRent">0đ</dd>
+            <dt>Phí quản lý</dt><dd id="oMg">0đ</dd>
+            <dt>VAT 10%</dt><dd id="oVat">0đ</dd>
+            <dt>Tiền cọc (3&nbsp;tháng)</dt><dd id="oDep">0đ</dd>
+          </dl>
+          <div>
+            <div class="cells-h"><span>Mặt bằng tầng, mỗi ô = 10&nbsp;m²</span><span id="oCells">0/64</span></div>
+            <div class="cells" id="cells" aria-hidden="true"></div>
+            <div class="cells-l"><span><i style="background:#fff"></i>Bạn cần</span><span><i style="background:rgba(255,255,255,.32)"></i>Còn trống</span><span><i style="background:rgba(255,255,255,.1)"></i>Đã thuê</span><span><i style="background:#0C0E13"></i>Thiếu</span></div>
+          </div>
+        </div>
+        <div class="cmp">
+          <h3>So với hai cách thuê còn lại</h3>
+          <div class="bar" id="bS"><span>Sàn văn phòng</span><div class="tr"><i></i></div><b>0đ</b></div>
+          <div class="bar" id="bG"><span>Trọn gói</span><div class="tr"><i></i></div><b>0đ</b></div>
+          <div class="bar" id="bC"><span>Coworking</span><div class="tr"><i></i></div><b>0đ</b></div>
+        </div>
+        <p class="co-note">Ước tính tham khảo. Chưa gồm chi phí thi công nội thất sàn văn phòng, điện tiêu thụ trong văn phòng và phí gửi xe. Trọn gói tính khoảng 2.450.000đ/người, coworking 2.200.000đ/người (đã gồm phí quản lý, chưa VAT).</p>
+        <div class="co-out-act"><a class="btn" href="#dat-lich" id="calcBook">Đặt lịch xem tầng&nbsp;này <svg class="ico"><use href="#i-arr"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDING SPECS + LOCATION -->
+<section class="sec" id="toa-nha" aria-labelledby="h-spec">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">06</div>
+      <div class="sh-lab">Toà nhà &amp;&nbsp;vị&nbsp;trí</div>
+      <h2 class="h2" id="h-spec">Thông số rõ ràng, vị&nbsp;trí ngay mặt&nbsp;sông</h2>
+    </div>
+    <div class="specs g12">
+      <div class="sp-t rv">
+        <table class="sptab">
+          <caption class="sr">Thông số kỹ thuật toà nhà</caption>
+          <tbody>
+            <tr><th scope="row">Quy mô</th><td>15&nbsp;tầng nổi, 2&nbsp;tầng hầm<small>Tầng 01: sảnh, lễ tân, café</small></td></tr>
+            <tr><th scope="row">Sàn điển hình</th><td>640&nbsp;m² thông thuỷ<small>Có thể chia 2–4 ô</small></td></tr>
+            <tr><th scope="row">Trần hoàn thiện</th><td>2,8&nbsp;m</td></tr>
+            <tr><th scope="row">Thang máy</th><td>4 thang khách, 1 thang hàng</td></tr>
+            <tr><th scope="row">Máy lạnh</th><td>Trung tâm VRV<small>Ngoài giờ đăng ký qua lễ tân</small></td></tr>
+            <tr><th scope="row">Điện dự phòng</th><td>Máy phát cho thang máy, chiếu sáng chung và ổ cắm văn phòng</td></tr>
+            <tr><th scope="row">Internet</th><td>Cáp quang từ 2 nhà mạng</td></tr>
+            <tr><th scope="row">Đậu xe</th><td>Khoảng 60 ô tô, 450 xe máy</td></tr>
+            <tr><th scope="row">Giờ hoạt động</th><td>07:00–19:00 thứ Hai–thứ Sáu<small>07:00–12:00 thứ Bảy · ra vào bằng thẻ ngoài giờ</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="sp-img rv d1" style="margin:0">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=1100&q=80" width="1100" height="1375" loading="lazy" alt="Các toà nhà kính cao tầng nhìn từ dưới lên trong sương sớm"></div>
+        <figcaption>Hình 02 — Ảnh minh hoạ kiến trúc kính</figcaption>
+      </figure>
+      <figure class="map rv">
+        <svg viewBox="0 0 640 420" role="img" aria-label="Sơ đồ vị trí: toà nhà nằm trên đường Bạch Đằng, bờ tây sông Hàn, giữa cầu Sông Hàn và cầu Rồng">
+          <defs><pattern id="mg" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#E8EAEE" stroke-width="1"/></pattern></defs>
+          <rect width="640" height="420" fill="url(#mg)"/>
+          <path d="M300 0 C 290 90, 330 150, 320 220 S 290 340, 315 420 L 420 420 C 395 340, 430 260, 420 200 S 390 70, 400 0 Z" fill="#E6EBFC"/>
+          <path d="M296 0 C 286 90, 326 150, 316 220 S 286 340, 311 420" fill="none" stroke="#0C0E13" stroke-width="2.5"/>
+          <text x="276" y="380" font-family="Inter" font-size="11.5" font-weight="600" letter-spacing="1" fill="#555C6B" transform="rotate(-87 276 380)">ĐƯỜNG BẠCH ĐẰNG</text>
+          <g stroke="#0C0E13" stroke-width="5"><line x1="300" y1="118" x2="410" y2="118"/><line x1="292" y1="300" x2="420" y2="300"/></g>
+          <g font-family="Inter" font-size="12.5" font-weight="600" fill="#0C0E13"><text x="430" y="122">Cầu Sông Hàn</text><text x="430" y="304">Cầu Rồng</text></g>
+          <text x="355" y="214" font-family="Inter" font-size="13" font-weight="700" fill="#1F45D6" text-anchor="middle" transform="rotate(-88 355 214)">SÔNG HÀN</text>
+          <g font-family="Montserrat" font-size="13" font-weight="700" fill="#555C6B" letter-spacing="1.5"><text x="60" y="380">HẢI CHÂU</text><text x="480" y="380">AN HẢI · SƠN TRÀ</text></g>
+          <line x1="292" y1="205" x2="200" y2="205" stroke="#1F45D6" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <rect x="246" y="186" width="38" height="38" fill="#1F45D6"/>
+          <text x="265" y="211" font-family="Montserrat" font-size="15" font-weight="800" fill="#fff" text-anchor="middle">15</text>
+          <text x="60" y="200" font-family="Inter" font-size="14" font-weight="700" fill="#0C0E13">Bến Hàn 15</text>
+          <text x="60" y="219" font-family="Inter" font-size="12" fill="#555C6B">Mặt tiền đường Bạch Đằng</text>
+          <g transform="translate(590 48)"><circle r="20" fill="#fff" stroke="#0C0E13"/><path d="M0 -13 6 6 0 2 -6 6Z" fill="#0C0E13"/><text y="34" font-family="Montserrat" font-size="11" font-weight="700" text-anchor="middle" fill="#0C0E13">B</text></g>
+          <g transform="translate(560 220)" font-family="Inter" font-size="12" fill="#555C6B"><path d="M0 0h40M32 -6l8 6-8 6" fill="none" stroke="#555C6B" stroke-width="1.5"/><text x="0" y="22">Biển Mỹ Khê</text></g>
+        </svg>
+        <figcaption>Sơ đồ minh hoạ, không theo tỉ lệ</figcaption>
+      </figure>
+      <ul class="dist rv d1" aria-label="Khoảng cách tham khảo">
+        <li><span>Cầu Rồng</span><b class="num">~600<small>m</small></b></li>
+        <li><span>Biển Mỹ Khê</span><b class="num">~10<small>phút</small></b></li>
+        <li><span>Ga Đà Nẵng</span><b class="num">~10<small>phút</small></b></li>
+        <li><span>Sân bay quốc tế Đà Nẵng</span><b class="num">~15<small>phút</small></b></li>
+        <li><span>Phố cổ Hội An</span><b class="num">~45<small>phút</small></b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec white" id="danh-gia" aria-labelledby="h-rev">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">07</div>
+      <div class="sh-lab">Khách thuê nói gì</div>
+      <h2 class="h2" id="h-rev">Những người đang làm việc ở Bến&nbsp;Hàn&nbsp;15</h2>
+    </div>
+    <div class="revs g12">
+      <figure class="quote rv-big rv" style="margin:0">
+        <span class="tag">Đánh giá mẫu</span>
+        <blockquote><p>Chúng tôi chuyển từ một căn nhà phố về tầng&nbsp;10. Điều đội vận hành thích là hoá đơn hằng tháng khớp với bảng tính lúc đi xem văn phòng, không có khoản nào phát sinh ngoài&nbsp;dự&nbsp;tính.</p></blockquote>
+        <footer><span class="av" aria-hidden="true">HN</span><div><b>Chị H. Ngọc</b><span>Giám đốc vận hành, công ty phần mềm · 42&nbsp;người, thuê nguyên sàn</span></div></footer>
+      </figure>
+      <figure class="rv-img rv d1">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?auto=format&fit=crop&w=900&q=80" width="900" height="900" loading="lazy" alt="Hai người đàn ông mặc vest trao đổi trong văn phòng kính sáng"></div>
+        <figcaption>Ảnh minh hoạ</figcaption>
+      </figure>
+      <figure class="quote rv-sm rv" style="margin:0">
+        <span class="tag">Đánh giá mẫu</span>
+        <blockquote><p>Mở văn phòng đại diện miền Trung bằng một phòng 6&nbsp;người ở tầng&nbsp;03. Ký trong tuần, đầu tuần sau đã có bàn ghế, mạng và lễ tân nhận thư giúp.</p></blockquote>
+        <footer><span class="av" aria-hidden="true">TQ</span><div><b>Anh T. Quang</b><span>Trưởng văn phòng đại diện, công ty logistics</span></div></footer>
+      </figure>
+      <figure class="quote rv-sm rv d1" style="margin:0">
+        <span class="tag">Đánh giá mẫu</span>
+        <blockquote><p>Tôi ngồi coworking theo tháng. Có phòng gọi điện riêng nên họp với khách nước ngoài buổi tối không lo ồn, sáng ra đi bộ dọc bờ sông là tới.</p></blockquote>
+        <footer><span class="av" aria-hidden="true">MA</span><div><b>Chị M. Anh</b><span>Nhà thiết kế tự do</span></div></footer>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="quy-trinh" aria-labelledby="h-step">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">08</div>
+      <div class="sh-lab">Quy trình thuê</div>
+      <h2 class="h2" id="h-step">Từ buổi xem đến ngày dọn&nbsp;vào</h2>
+    </div>
+    <ol class="steps" id="steps">
+      <li class="rv"><span class="sn num">01</span><span class="sd">Ngày 1</span><h3>Xem văn phòng</h3><p>Khoảng 45 phút cùng chuyên viên: xem tầng trống, sảnh, hầm xe và phòng kỹ thuật.</p></li>
+      <li class="rv d1"><span class="sn num">02</span><span class="sd">Trong 2 ngày làm việc</span><h3>Phương án và báo&nbsp;giá</h3><p>Gửi bản bố trí chỗ ngồi sơ bộ và báo giá chi tiết từng khoản qua email.</p></li>
+      <li class="rv d2"><span class="sn num">03</span><span class="sd">Tối đa 14 ngày</span><h3>Giữ chỗ</h3><p>Ký thoả thuận giữ ô trống trong lúc hai bên thống nhất các điều khoản hợp đồng.</p></li>
+      <li class="rv d3"><span class="sn num">04</span><span class="sd">Ký kết</span><h3>Hợp đồng thuê</h3><p>Hợp đồng tiếng Việt, có bản song ngữ Việt–Anh khi cần. Xuất hoá đơn VAT hằng kỳ.</p></li>
+      <li class="rv d3"><span class="sn num">05</span><span class="sd">Bàn giao</span><h3>Thi công và dọn&nbsp;vào</h3><p>Sàn văn phòng có thời gian thi công nội thất theo thoả thuận. Trọn gói nhận chìa khoá trong 3&nbsp;ngày.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec white" id="hoi-dap" aria-labelledby="h-faq">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">09</div>
+      <div class="sh-lab">Câu hỏi thường gặp</div>
+      <h2 class="h2" id="h-faq">Những điều nên hỏi trước khi ký hợp&nbsp;đồng</h2>
+    </div>
+    <div class="faqs g12">
+      <aside class="faq-side rv">
+        <h3>Cần hỏi thêm?</h3>
+        <p>Bộ phận cho thuê trả lời trong giờ hành chính, thứ Hai đến thứ Bảy.</p>
+        <a class="tel" href="tel:0900000000">0900&nbsp;000&nbsp;000</a>
+      </aside>
+      <div class="faq-list rv d1">
+        <details open><summary><span class="q">Q1</span>Giá thuê trên trang đã gồm VAT chưa?<span class="pm" aria-hidden="true"></span></summary><div class="a">Chưa. Giá thuê và phí quản lý là giá chưa VAT 10%. Công cụ tính chi phí ở mục 05 đã cộng VAT vào tổng để bạn thấy con số thực trả.</div></details>
+        <details><summary><span class="q">Q2</span>Phí quản lý gồm những gì?<span class="pm" aria-hidden="true"></span></summary><div class="a">Vệ sinh khu vực chung, bảo vệ 24/7, vận hành thang máy, máy lạnh trung tâm trong giờ hành chính và bảo trì hệ thống phòng cháy chữa cháy. Điện trong văn phòng tính theo đồng hồ riêng của từng ô.</div></details>
+        <details><summary><span class="q">Q3</span>Làm thêm ngoài giờ thì máy lạnh tính thế nào?<span class="pm" aria-hidden="true"></span></summary><div class="a">Đăng ký trước với lễ tân, tính theo giờ sử dụng và theo khu vực. Mức phí ghi rõ trong phụ lục hợp đồng, không thay đổi giữa kỳ.</div></details>
+        <details><summary><span class="q">Q4</span>Tiền cọc và kỳ thanh toán ra sao?<span class="pm" aria-hidden="true"></span></summary><div class="a">Sàn văn phòng: cọc 3 tháng tiền thuê và phí quản lý, thanh toán theo quý. Văn phòng trọn gói và coworking: cọc 1 tháng, thanh toán theo tháng.</div></details>
+        <details><summary><span class="q">Q5</span>Có được thi công nội thất theo thiết kế riêng không?<span class="pm" aria-hidden="true"></span></summary><div class="a">Được. Bạn gửi bản vẽ để ban quản lý duyệt trước khi thi công; các hạng mục gây ồn làm ngoài giờ hành chính để không ảnh hưởng các tầng khác.</div></details>
+        <details><summary><span class="q">Q6</span>Có thể dùng làm địa chỉ đăng ký kinh doanh không?<span class="pm" aria-hidden="true"></span></summary><div class="a">Sàn văn phòng và văn phòng trọn gói dùng được làm trụ sở hoặc địa chỉ văn phòng đại diện. Với coworking, bộ phận cho thuê sẽ tư vấn gói phù hợp theo nhu cầu cụ thể.</div></details>
+        <details><summary><span class="q">Q7</span>Có xem văn phòng ngoài giờ được không?<span class="pm" aria-hidden="true"></span></summary><div class="a">Được, hẹn trước đến 19:00 các ngày trong tuần. Chọn khung 17:00 trong lịch bên dưới và ghi chú giờ mong muốn.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec" id="dat-lich" aria-labelledby="h-book">
+  <div class="wrap">
+    <div class="shead g12 rv">
+      <div class="sh-no">10</div>
+      <div class="sh-lab">Đặt lịch xem văn phòng</div>
+      <h2 class="h2" id="h-book">Hẹn một buổi xem, chúng tôi chuẩn bị sẵn tầng&nbsp;trống</h2>
+      <p class="slead">Chọn ngày và khung giờ. Chuyên viên cho thuê gọi lại xác nhận trong giờ làm việc và gửi kèm báo giá của tầng bạn quan tâm.</p>
+    </div>
+    <div class="book g12">
+      <div class="bk-form">
+        <form id="bk" novalidate>
+          <div class="frow">
+            <div class="f"><label for="bName">Họ và tên</label><input type="text" id="bName" name="name" autocomplete="name" required></div>
+            <div class="f"><label for="bCo">Công ty <small>(không bắt buộc)</small></label><input type="text" id="bCo" name="company" autocomplete="organization"></div>
+          </div>
+          <div class="frow">
+            <div class="f"><label for="bTel">Số điện thoại</label><input type="tel" id="bTel" name="tel" autocomplete="tel" inputmode="tel" placeholder="0900 000 000" required pattern="[0-9 +.]{9,15}"></div>
+            <div class="f"><label for="bMail">Email <small>(nhận báo giá)</small></label><input type="email" id="bMail" name="email" autocomplete="email"></div>
+          </div>
+          <div class="frow">
+            <div class="f"><label for="bFloor">Tầng quan tâm</label><select id="bFloor" name="floor"></select></div>
+            <div class="f"><label for="bTeam">Số nhân viên</label><input type="number" id="bTeam" name="team" min="1" max="500" inputmode="numeric" value="30"></div>
+          </div>
+          <div class="frow">
+            <div class="f"><label for="bDate">Ngày xem</label><input type="date" id="bDate" name="date" required><p class="hint" id="bDateHint">Thứ Hai đến thứ Bảy</p></div>
+            <div class="f"><span id="slotLab" style="display:block;font:600 14px/1.3 var(--sans);margin-bottom:8px">Khung giờ</span>
+              <div class="slots" role="radiogroup" aria-labelledby="slotLab">
+                <label><input type="radio" name="slot" value="08:30"><span>08:30</span></label>
+                <label><input type="radio" name="slot" value="10:00" checked><span>10:00</span></label>
+                <label><input type="radio" name="slot" value="14:00"><span>14:00</span></label>
+                <label><input type="radio" name="slot" value="15:30"><span>15:30</span></label>
+                <label><input type="radio" name="slot" value="17:00"><span>17:00</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="frow one"><div class="f"><label for="bNote">Ghi chú <small>(không bắt buộc)</small></label><textarea id="bNote" name="note" rows="3" placeholder="Ví dụ: cần 2 phòng họp, muốn xem cả hầm xe"></textarea></div></div>
+          <label class="consent" for="bOk"><input type="checkbox" id="bOk" name="consent" required><span>Tôi đồng ý để Bến Hàn 15 xử lý dữ liệu cá nhân (họ tên, số điện thoại, email) nhằm liên hệ sắp xếp lịch xem văn phòng, theo quy định về bảo vệ dữ liệu cá nhân.</span></label>
+          <p class="hint err" id="bErr" role="alert"></p>
+          <button class="btn co" type="submit" id="bSend">Gửi yêu cầu đặt&nbsp;lịch <svg class="ico"><use href="#i-arr"/></svg></button>
+        </form>
+        <div class="ok" id="bOkMsg" tabindex="-1">
+          <h3><svg class="ico"><use href="#i-check"/></svg>Đã ghi nhận lịch&nbsp;hẹn</h3>
+          <p id="bOkTxt"></p>
+          <p><small>Đây là bản minh hoạ giao diện, thông tin chưa được gửi đi đâu.</small></p>
+        </div>
+      </div>
+      <aside class="bk-side">
+        <div class="bk-sum" aria-live="polite">
+          <h3>Lịch hẹn của bạn</h3>
+          <div class="when num" id="sWhen">Chưa chọn ngày<small>Khung giờ 10:00</small></div>
+          <dl>
+            <dt>Tầng</dt><dd id="sFloor">Cần tư vấn</dd>
+            <dt>Cách thuê</dt><dd id="sKind">—</dd>
+            <dt>Số người</dt><dd id="sTeam">30</dd>
+          </dl>
+        </div>
+        <ul class="contact">
+          <li><svg class="ico"><use href="#i-phone"/></svg><div>Bộ phận cho thuê<br><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></div></li>
+          <li><svg class="ico"><use href="#i-mail"/></svg><div><a href="mailto:thue@benhan15.vn">thue@benhan15.vn</a></div></li>
+          <li><svg class="ico"><use href="#i-pin"/></svg><div>Đường Bạch Đằng, Phường Hải&nbsp;Châu, TP.&nbsp;Đà&nbsp;Nẵng</div></li>
+          <li><svg class="ico"><use href="#i-clock"/></svg><div>Xem văn phòng 08:00–17:30, thứ Hai–thứ Bảy</div></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap g12">
+    <div class="wm">Bến Hàn 15<span>.</span></div>
+    <div class="ft-c"><h4>Toà nhà</h4><p>Toà văn phòng hạng B, 15 tầng<br>Đường Bạch Đằng, Phường Hải&nbsp;Châu, TP.&nbsp;Đà&nbsp;Nẵng</p></div>
+    <div class="ft-c"><h4>Cho thuê</h4><ul><li><a href="#cach-thue">Sàn văn phòng</a></li><li><a href="#cach-thue">Văn phòng trọn gói</a></li><li><a href="#cach-thue">Coworking</a></li><li><a href="#chi-phi">Tính chi phí</a></li></ul></div>
+    <div class="ft-c"><h4>Liên hệ</h4><ul><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:thue@benhan15.vn">thue@benhan15.vn</a></li><li>08:00–17:30, thứ Hai–thứ Bảy</li></ul></div>
+    <div class="ft-c"><h4>Đặt lịch</h4><p>Xem văn phòng cùng chuyên viên, khoảng 45&nbsp;phút.</p><p style="margin-top:10px"><a href="#dat-lich" style="color:#9DB2FF;font-weight:600">Chọn ngày xem</a></p></div>
+    <div class="ft-note"><span>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span><span>© <span id="yr">2026</span> Bến Hàn 15 (mẫu)</span></div>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var hasIO='IntersectionObserver' in window;
+var NS='http://www.w3.org/2000/svg';
+function vnd(n){return Math.round(n).toLocaleString('vi-VN').replace(/,/g,'.')+'đ'}
+function pad(n){return (n<10?'0':'')+n}
+function nb(s){return s.replace(/ /g,' ')}
+
+requestAnimationFrame(function(){requestAnimationFrame(function(){document.body.classList.add('ready')})});
+
+/* header + badge */
+var hdr=$('#hdr'),badge=$('#ktBadge');
+function onScroll(){var y=window.pageYOffset;hdr.classList.toggle('scrolled',y>8);badge.classList.toggle('show',y>window.innerHeight*.85)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* mobile menu */
+var mnav=$('#mnav'),mb=$('#menuBtn');
+function lock(on){document.body.classList.toggle('lock',on);document.documentElement.style.overflow=on?'hidden':'';document.body.style.overflow=on?'hidden':''}
+function menu(open){mnav.classList.toggle('open',open);mb.setAttribute('aria-expanded',open);lock(open);if(open){$('#menuClose').focus()}else{mb.focus()}}
+mb.addEventListener('click',function(){menu(true)});
+$('#menuClose').addEventListener('click',function(){menu(false)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');mb.setAttribute('aria-expanded','false');lock(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('open'))menu(false)});
+
+/* reveal */
+if(hasIO&&!RM){
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});
+  $$('.rv,#steps').forEach(function(el){ro.observe(el)});
+}else{$$('.rv,#steps').forEach(function(el){el.classList.add('in')})}
+
+/* ===== DATA ===== */
+var MG=60000;
+var VIEW_HI='Nhìn trọn sông Hàn và cầu Rồng',VIEW_MID='Nhìn ra sông Hàn phía trên hàng cây',VIEW_LO='Hướng phố Bạch Đằng, thấy sông qua hàng cây';
+var F={
+ 15:{k:'san',p:300000,u:[[320,1],[320,0]],note:'Tầng cao nhất, liền sân thượng chung'},
+ 14:{k:'san',p:290000,u:[[640,0]]},
+ 13:{k:'san',p:285000,u:[[380,0],[260,0]]},
+ 12:{k:'san',p:280000,u:[[210,1],[430,0]]},
+ 11:{k:'san',p:270000,u:[[640,1]],note:'Nguyên sàn, chia được 2–4 ô'},
+ 10:{k:'san',p:265000,u:[[640,0]]},
+ 9:{k:'san',p:260000,u:[[300,0],[340,0]]},
+ 8:{k:'san',p:255000,u:[[380,1],[260,0]]},
+ 7:{k:'san',p:250000,u:[[640,0]]},
+ 6:{k:'san',p:245000,u:[[150,1],[240,0],[250,0]]},
+ 5:{k:'san',p:240000,u:[[420,0],[220,0]]},
+ 4:{k:'san',p:240000,u:[[260,1],[180,0],[200,0]]},
+ 3:{k:'goi',rooms:22,vac:[1,4,8,12,15,19],p:9500000},
+ 2:{k:'cow',seats:120,vac:34,p:2200000,p2:2900000},
+ 1:{k:'lob'}
+};
+Object.keys(F).forEach(function(n){var f=F[n];f.n=+n;
+  if(f.k==='san'){f.tot=640;f.vacA=f.u.reduce(function(s,x){return s+(x[1]?x[0]:0)},0);f.view=f.n>=12?VIEW_HI:f.n>=8?VIEW_MID:VIEW_LO}
+});
+function frac(f){if(f.k==='san')return f.vacA/f.tot;if(f.k==='goi')return f.vac.length/f.rooms;if(f.k==='cow')return f.vac/f.seats;return 0}
+function hasVac(f){return frac(f)>0}
+function fn(n){return pad(n)}
+
+/* ===== SECTION SVG ===== */
+var svg=$('#fl'),X0=86,FW=300,FH=40,TOP=74,GH=4;
+function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+var defs=el('defs',{},svg);
+var h1=el('pattern',{id:'hatch',width:6,height:6,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'},defs);el('rect',{width:6,height:6,fill:'#EEF0F3'},h1);el('rect',{width:2.6,height:6,fill:'#D3D7DE'},h1);
+var h2=el('pattern',{id:'hatch2',width:8,height:8,patternUnits:'userSpaceOnUse',patternTransform:'rotate(-45)'},defs);el('rect',{width:8,height:8,fill:'#fff'},h2);el('rect',{width:1.2,height:8,fill:'#C2C7D0'},h2);
+/* roof */
+el('rect',{x:X0+110,y:TOP-38,width:80,height:34,fill:'#fff',stroke:'rgba(12,14,19,.28)'},svg);
+el('line',{x1:X0+150,y1:TOP-38,x2:X0+150,y2:TOP-66,stroke:'#0C0E13','stroke-width':1.5},svg);
+el('line',{x1:X0-6,y1:TOP-4,x2:X0+FW+6,y2:TOP-4,stroke:'#0C0E13','stroke-width':2},svg);
+var tx=el('text',{x:X0+FW/2+48,y:TOP-46,'class':'capb'},svg);tx.textContent='MÁI · +62,4 M';
+/* view lines to river */
+[15,11,8].forEach(function(n){var y=TOP+(15-n)*FH+FH/2;el('line',{x1:X0+FW+8,y1:y,x2:458,y2:TOP+15*FH+12,'class':'viewln'},svg)});
+var floors={};
+for(var n=15;n>=1;n--){
+  (function(n){
+  var f=F[n],y=TOP+(15-n)*FH,h=FH-GH;
+  var g=el('g',{'class':'flr','data-n':n,tabindex:0,role:'button'},svg);
+  var lab=n===1?'Tầng 01, sảnh và café':n===2?'Tầng 02, coworking, còn '+f.vac+' chỗ':n===3?'Tầng 03, văn phòng trọn gói, còn '+f.vac.length+' phòng':'Tầng '+fn(n)+(f.vacA?', còn trống '+f.vacA+' mét vuông':', đã cho thuê kín');
+  g.setAttribute('aria-label',lab);
+  el('rect',{'class':'bg',x:X0,y:y,width:FW,height:h},g);
+  if(f.k==='lob'){el('rect',{x:X0,y:y,width:FW,height:h,fill:'#fff',stroke:'rgba(12,14,19,.28)'},g);var t=el('text',{x:X0+14,y:y+h/2+4,'class':'tag dk'},g);t.textContent='Sảnh · Lễ tân · Café'}
+  else{
+    var vf=frac(f),vw=Math.round(FW*vf);
+    el('rect',{'class':'occ',x:X0+vw,y:y,width:FW-vw,height:h},g);
+    if(vw>0)el('rect',{'class':'vac',x:X0,y:y,width:vw,height:h},g);
+    var tag=f.k==='san'?(f.vacA?f.vacA+' m²':''):f.k==='goi'?'Trọn gói · '+f.vac.length+'/'+f.rooms+' phòng':'Coworking · '+f.vac+'/'+f.seats+' chỗ';
+    if(tag){var tt=el('text',{x:X0+10,y:y+h/2+4,'class':'tag'+(vw<110?' dk':'')},g);if(vw<110&&f.k!=='san'){tt.setAttribute('x',X0+vw+8)}else if(vw<110){tt.setAttribute('x',X0+vw+8)}tt.textContent=tag}
+    if(f.k==='san')el('rect',{'class':'core',x:X0+FW/2-18,y:y+6,width:36,height:h-12},g);
+  }
+  var lt=el('text',{x:X0-14,y:y+h/2+4.5,'text-anchor':'end','class':'lbl'},g);lt.textContent=fn(n);
+  el('rect',{'class':'ring',x:X0-1,y:y-1,width:FW+2,height:h+2},g);
+  el('rect',{'class':'hit',x:0,y:y-GH/2,width:X0+FW+10,height:FH},g);
+  floors[n]=g;
+  })(n);
+}
+/* ground + basements */
+var GY=TOP+15*FH;
+el('line',{x1:20,y1:GY,x2:462,y2:GY,'class':'gl'},svg);
+el('rect',{x:X0,y:GY+6,width:FW,height:34,'class':'bsm'},svg);
+el('rect',{x:X0,y:GY+44,width:FW,height:34,'class':'bsm'},svg);
+var b1=el('text',{x:X0-14,y:GY+27,'text-anchor':'end','class':'lbl',style:'font:600 13px Montserrat,sans-serif;fill:#555C6B'},svg);b1.textContent='B1';
+var b2=el('text',{x:X0-14,y:GY+65,'text-anchor':'end','class':'lbl',style:'font:600 13px Montserrat,sans-serif;fill:#555C6B'},svg);b2.textContent='B2';
+var bt=el('text',{x:X0+12,y:GY+28,'class':'cap'},svg);bt.textContent='Hầm xe · khoảng 60 ô tô, 450 xe máy';
+/* river */
+for(var r=0;r<3;r++){el('path',{d:'M404 '+(GY+16+r*10)+' q 7 -5 14 0 t 14 0 t 14 0 t 14 0','class':'river'},svg)}
+var rv1=el('text',{x:404,y:GY+62,'class':'capb'},svg);rv1.textContent='SÔNG HÀN';
+var rv2=el('text',{x:404,y:GY+78,'class':'cap'},svg);rv2.textContent='hướng Đông';
+var st=el('text',{x:X0,y:GY+102,'class':'cap'},svg);st.textContent='Mặt cắt minh hoạ · cao tầng 3,6 m';
+/* pointer */
+var ptr=el('path',{d:'M0 0 L10 -7 L10 7 Z','class':'ptr'},svg);
+
+/* animate bars when in view */
+if(hasIO&&!RM){new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){svg.classList.add('on');o.disconnect()}})},{threshold:.15}).observe(svg)}else svg.classList.add('on');
+
+/* ===== PANEL ===== */
+var fp=$('#fp'),sel=11;
+function plateSVG(f){
+  var s='<svg viewBox="0 0 400 150" role="img" aria-label="Sơ đồ mặt bằng tầng '+fn(f.n)+'">';
+  s+='<rect x="1" y="1" width="398" height="148" fill="#fff" stroke="#0C0E13" stroke-width="2"/>';
+  if(f.k==='san'){
+    var x=4,W=392,lbls=['A','B','C','D'];
+    f.u.forEach(function(u,i){var w=W*u[0]/f.tot;s+='<rect x="'+x+'" y="4" width="'+(w-3)+'" height="142" fill="'+(u[1]?'#1F45D6':'url(#hatchP)')+'"/>';
+      s+='<text x="'+(x+10)+'" y="24" font-family="Montserrat" font-size="12" font-weight="700" fill="'+(u[1]?'#fff':'#2B303B')+'">'+lbls[i]+' · '+u[0]+' m²</text>';
+      s+='<text x="'+(x+10)+'" y="40" font-family="Inter" font-size="11" fill="'+(u[1]?'#DCE3FB':'#555C6B')+'">'+(u[1]?'Còn trống':'Đã cho thuê')+'</text>';x+=w});
+    s+='<rect x="176" y="50" width="48" height="50" fill="#F3F4F6" stroke="#0C0E13"/><text x="200" y="79" text-anchor="middle" font-family="Inter" font-size="10" fill="#2B303B">Lõi</text>';
+  }else if(f.k==='goi'){
+    var cw=392/11;for(var i=0;i<22;i++){var r=i<11?0:1,c=i%11,v=f.vac.indexOf(i)>=0;s+='<rect x="'+(4+c*cw)+'" y="'+(r?92:4)+'" width="'+(cw-3)+'" height="54" fill="'+(v?'#1F45D6':'url(#hatchP)')+'"/>'}
+    s+='<text x="200" y="80" text-anchor="middle" font-family="Inter" font-size="11" fill="#555C6B">Hành lang · lễ tân · 3 phòng họp chung</text>';
+  }else if(f.k==='cow'){
+    var k=0;for(var rr=0;rr<6;rr++)for(var cc=0;cc<20;cc++){var vv=k<f.vac;s+='<rect x="'+(14+cc*19)+'" y="'+(12+rr*22)+'" width="12" height="12" fill="'+(vv?'#1F45D6':'#D3D7DE')+'"/>';k++}
+  }else{
+    s+='<text x="200" y="80" text-anchor="middle" font-family="Inter" font-size="13" fill="#555C6B">Sảnh đón · quầy lễ tân · café · khu chờ khách</text>';
+  }
+  s+='<defs><pattern id="hatchP" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#EEF0F3"/><rect width="2.6" height="6" fill="#D3D7DE"/></pattern></defs></svg>';
+  return s;
+}
+function render(n,anim){
+  var f=F[n],h='',stt,typ,rows=[],btns='';
+  if(f.k==='san'){
+    stt=f.vacA===f.tot?'<span class="st">Trống nguyên sàn</span>':f.vacA?'<span class="st">Còn một phần</span>':'<span class="st full">Đã cho thuê kín</span>';
+    typ='Sàn văn phòng · bàn giao trần, sàn, máy lạnh, đèn';
+    rows.push(['Diện tích trống',f.vacA?nb(f.vacA+' m²')+' / '+nb(f.tot+' m²'):'0 m²',1]);
+    rows.push(['Giá thuê',nb(vnd(f.p))+'/m²/tháng']);
+    rows.push(['Phí quản lý',nb(vnd(MG))+'/m²/tháng']);
+    if(f.vacA)rows.push(['Ước tính phần trống/tháng, gồm VAT',nb(vnd((f.p+MG)*f.vacA*1.1))]);
+    rows.push(['Hướng nhìn',f.view]);
+    if(f.note)rows.push(['Ghi chú',f.note]);
+  }else if(f.k==='goi'){
+    stt='<span class="st">Còn '+f.vac.length+' phòng</span>';typ='Văn phòng trọn gói · phòng 2–12 người';
+    rows.push(['Phòng trống',f.vac.length+' / '+f.rooms+' phòng',1]);
+    rows.push(['Giá thuê','từ '+nb(vnd(f.p))+'/phòng 4 người/tháng']);
+    rows.push(['Phí quản lý','Đã gồm trong giá']);
+    rows.push(['Đã gồm','Bàn ghế, internet, điện, lễ tân, 10 giờ phòng họp/tháng']);
+    rows.push(['Kỳ hạn','Từ 1 tháng']);
+  }else if(f.k==='cow'){
+    stt='<span class="st">Còn '+f.vac+' chỗ</span>';typ='Coworking · mở cửa 07:00–21:00';
+    rows.push(['Chỗ trống',f.vac+' / '+f.seats+' chỗ',1]);
+    rows.push(['Chỗ linh hoạt',nb(vnd(f.p))+'/người/tháng']);
+    rows.push(['Bàn cố định',nb(vnd(f.p2))+'/người/tháng']);
+    rows.push(['Phí quản lý','Đã gồm trong giá']);
+    rows.push(['Tiện ích','Bếp chung, phòng họp, phòng gọi điện riêng']);
+  }else{
+    stt='<span class="st lob">Không cho thuê</span>';typ='Sảnh đón khách, lễ tân, café';
+    rows.push(['Mở cửa','07:00–19:00 thứ Hai–thứ Sáu']);
+    rows.push(['Thứ Bảy','07:00–12:00']);
+    rows.push(['Ngoài giờ','Ra vào bằng thẻ từ']);
+  }
+  h+='<div class="fp-top"><span class="eyebrow">Tầng đang xem</span>'+stt+'</div>';
+  h+='<div class="fp-num"><b>'+fn(n)+'</b><span>'+typ+'</span></div>';
+  h+='<dl class="fp-dl">'+rows.map(function(r){return '<dt>'+r[0]+'</dt><dd'+(r[2]?' class="big"':'')+'>'+r[1]+'</dd>'}).join('')+'</dl>';
+  h+='<div class="fp-plate">'+plateSVG(f)+'<p>Sơ đồ mặt bằng tầng '+fn(n)+', minh hoạ</p></div>';
+  var canCalc=f.k==='san'&&f.vacA>0;
+  if(f.k!=='lob'){
+    h+='<div class="fp-act">';
+    if(f.k==='san')h+='<button class="btn ghost" type="button" data-calc="'+n+'"'+(canCalc?'':' disabled')+'>Tính chi phí tầng&nbsp;'+fn(n)+'</button>';
+    h+='<a class="btn co" href="#dat-lich" data-book="'+n+'">'+(hasVac(f)?'Đặt lịch xem tầng&nbsp;'+fn(n):'Báo tôi khi có chỗ&nbsp;trống')+'</a></div>';
+  }
+  fp.innerHTML=h;
+  if(anim&&!RM){fp.classList.remove('fp-anim');void fp.offsetWidth;fp.classList.add('fp-anim')}
+  var y=TOP+(15-n)*FH+(FH-GH)/2;ptr.setAttribute('transform','translate('+(X0+FW+4)+' '+y+')');
+}
+function select(n,anim){sel=n;Object.keys(floors).forEach(function(k){floors[k].classList.toggle('sel',+k===n);floors[k].setAttribute('aria-pressed',+k===n)});render(n,anim)}
+var hoverT;
+Object.keys(floors).forEach(function(k){var g=floors[k],n=+k;
+  g.addEventListener('click',function(){select(n,true)});
+  g.addEventListener('mouseenter',function(e){if(window.matchMedia('(hover:hover)').matches){clearTimeout(hoverT);render(n,false)}});
+  g.addEventListener('mouseleave',function(){hoverT=setTimeout(function(){render(sel,false)},120)});
+  g.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();select(n,true)}
+    else if(e.key==='ArrowUp'&&n<15){e.preventDefault();floors[n+1].focus();select(n+1,false)}
+    else if(e.key==='ArrowDown'&&n>1){e.preventDefault();floors[n-1].focus();select(n-1,false)}
+  });
+});
+select(11,false);
+fp.addEventListener('click',function(e){
+  var c=e.target.closest('[data-calc]'),b=e.target.closest('[data-book]');
+  if(c){cF.value=c.getAttribute('data-calc');calc();$('#chi-phi').scrollIntoView({behavior:RM?'auto':'smooth'})}
+  if(b){setBookFloor(b.getAttribute('data-book'))}
+});
+/* filters */
+$$('.chip').forEach(function(c){c.addEventListener('click',function(){applyFilter(c.getAttribute('data-f'))})});
+function applyFilter(m){
+  $$('.chip').forEach(function(x){x.setAttribute('aria-pressed',x.getAttribute('data-f')===m)});
+  Object.keys(floors).forEach(function(k){var f=F[k],show=m==='all'||(m==='vac'?hasVac(f):f.k===m);floors[k].classList.toggle('dim',!show)});
+  if(m!=='all'){var cand=Object.keys(F).map(Number).sort(function(a,b){return b-a}).filter(function(k){var f=F[k];return m==='vac'?hasVac(f):(f.k===m&&hasVac(f))})[0];if(cand&&F[sel]&&floors[sel].classList.contains('dim'))select(cand,true)}
+}
+/* jump links */
+$$('[data-floor]').forEach(function(a){a.addEventListener('click',function(){var n=+a.getAttribute('data-floor');applyFilter('all');select(n,true)})});
+$$('[data-filter]').forEach(function(a){a.addEventListener('click',function(){applyFilter(a.getAttribute('data-filter'))})});
+
+/* ===== CALCULATOR ===== */
+var cN=$('#cN'),cNo=$('#cNo'),cF=$('#cF'),fit=$('#cFit');
+var SAN=Object.keys(F).map(Number).filter(function(k){return F[k].k==='san'&&F[k].vacA>0}).sort(function(a,b){return b-a});
+SAN.forEach(function(k){var o=document.createElement('option');o.value=k;o.textContent='Tầng '+fn(k)+' · trống '+F[k].vacA+' m² · '+vnd(F[k].p)+'/m²';cF.appendChild(o)});
+cF.value='11';
+var cells=$('#cells');for(var i=0;i<64;i++)cells.appendChild(document.createElement('i'));
+var tw={};
+function tween(id,val,fmt){var e=document.getElementById(id),from=tw[id]||0;tw[id]=val;if(RM||!window.requestAnimationFrame){e.textContent=fmt(val);return}
+  var t0=null,d=420;function st(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/d),q=1-Math.pow(1-p,3);e.textContent=fmt(from+(val-from)*q);if(p<1)requestAnimationFrame(st)}requestAnimationFrame(st)}
+function calc(){
+  var n=+cN.value,d=+($('input[name=dens]:checked')||{value:8}).value,f=F[cF.value];
+  cNo.textContent=n;cN.style.setProperty('--p',((n-5)/145*100)+'%');
+  var need=Math.ceil(n*d/10)*10,area=Math.max(need,100);
+  var rent=area*f.p,mg=area*MG,vat=(rent+mg)*.1,tot=rent+mg+vat;
+  tween('oTotal',tot,vnd);tween('oRent',rent,vnd);tween('oMg',mg,vnd);tween('oVat',vat,vnd);tween('oDep',(rent+mg)*3,vnd);
+  $('#oArea').textContent=nb(area+' m²');$('#oPer').textContent=nb(vnd(tot/n))+' mỗi người/tháng';$('#oFloor').textContent='Tầng '+fn(f.n);
+  var msg,warn=false;
+  if(need<100){msg='Sàn văn phòng nhận thuê từ 100 m², nên phần ước tính tính theo 100 m². Với '+n+' người, văn phòng trọn gói hoặc coworking có thể tiết kiệm hơn.';warn=true}
+  else if(f.vacA>=need){msg='Tầng '+fn(f.n)+' còn '+f.vacA+' m², đủ cho '+n+' người'+(f.vacA-need>=50?', còn dư '+(f.vacA-need)+' m² để mở rộng sau này.':'.')}
+  else{var alt=SAN.filter(function(k){return F[k].vacA>=need}).sort(function(a,b){return F[a].vacA-F[b].vacA})[0];warn=true;
+    msg='Tầng '+fn(f.n)+' chỉ còn '+f.vacA+' m², bạn cần khoảng '+need+' m². '+(alt?'Gợi ý: tầng '+fn(alt)+' còn '+F[alt].vacA+' m².':'Có thể ghép ô ở hai tầng; bộ phận cho thuê sẽ gửi phương án.')}
+  fit.textContent=msg;fit.classList.toggle('warn',warn);
+  var vc=Math.round(f.vacA/10),nc=Math.ceil(need/10);
+  $$('i',cells).forEach(function(c,i){c.className=i<Math.min(nc,vc)?'n':i<vc?'f':(i<nc&&i<64?'x':'')});
+  $('#oCells').textContent=Math.min(nc,64)+'/64 ô';
+  var g=n<=40?n*2450000*1.1:0,c=n<=f2.vac?n*2200000*1.1:0,mx=Math.max(tot,g,c);
+  setBar('bS',tot,mx,vnd(tot));setBar('bG',g,mx,g?vnd(g):'Quá sức chứa tầng 03');setBar('bC',c,mx,c?vnd(c):'Còn '+f2.vac+' chỗ, chưa đủ');
+  $('#calcBook').setAttribute('data-book',f.n);
+}
+var f2=F[2];
+function setBar(id,v,mx,t){var b=document.getElementById(id);b.classList.toggle('na',!v);$('i',b).style.width=(v?Math.max(4,v/mx*100):0)+'%';$('b',b).textContent=nb(t)}
+cN.addEventListener('input',calc);cF.addEventListener('change',calc);
+$$('input[name=dens]').forEach(function(r){r.addEventListener('change',calc)});
+$$('.step').forEach(function(b){b.addEventListener('click',function(){cN.value=Math.min(150,Math.max(5,+cN.value+ +b.getAttribute('data-d')));calc()})});
+$('#calcBook').addEventListener('click',function(){setBookFloor(cF.value);$('#bTeam').value=cN.value;sum()});
+calc();
+
+/* ===== BOOKING ===== */
+var bF=$('#bFloor'),bD=$('#bDate'),bk=$('#bk');
+(function(){var o=document.createElement('option');o.value='';o.textContent='Chưa chọn, cần tư vấn';bF.appendChild(o);
+  [15,14,13,12,11,10,9,8,7,6,5,4,3,2].forEach(function(k){var f=F[k],o=document.createElement('option');o.value=k;
+    o.textContent='Tầng '+fn(k)+(f.k==='goi'?' · Văn phòng trọn gói':f.k==='cow'?' · Coworking':f.vacA?' · trống '+f.vacA+' m²':' · đã kín, nhận tin khi trống');bF.appendChild(o)})})();
+var tmr=new Date();tmr.setDate(tmr.getDate()+1);
+function iso(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())}
+bD.min=iso(tmr);var mx=new Date();mx.setDate(mx.getDate()+60);bD.max=iso(mx);
+var DOW=['Chủ nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+function kindOf(v){if(!v)return'—';var f=F[v];return f.k==='goi'?'Trọn gói':f.k==='cow'?'Coworking':'Sàn văn phòng'}
+function setBookFloor(n){bF.value=String(n);sum()}
+function sum(){
+  var slot=($('input[name=slot]:checked')||{}).value||'';
+  var v=bD.value,w='Chưa chọn ngày',hint='Thứ Hai đến thứ Bảy',bad=false;
+  if(v){var p=v.split('-'),d=new Date(+p[0],+p[1]-1,+p[2]);w=pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear();
+    if(d.getDay()===0){hint='Chủ nhật bộ phận cho thuê nghỉ, vui lòng chọn ngày khác.';bad=true}else hint=DOW[d.getDay()]+', '+w}
+  bD.setCustomValidity(bad?'Chủ nhật nghỉ':'');var hh=$('#bDateHint');hh.textContent=hint;hh.classList.toggle('err',bad);
+  $('#sWhen').innerHTML=w+'<small>'+(slot?'Khung giờ '+slot:'Chưa chọn giờ')+(v&&!bad?' · '+DOW[new Date(+v.split('-')[0],+v.split('-')[1]-1,+v.split('-')[2]).getDay()]:'')+'</small>';
+  $('#sFloor').textContent=bF.value?'Tầng '+fn(+bF.value):'Cần tư vấn';
+  $('#sKind').textContent=kindOf(bF.value);
+  $('#sTeam').textContent=($('#bTeam').value||'—')+' người';
+}
+['change','input'].forEach(function(ev){bk.addEventListener(ev,sum)});sum();
+bk.addEventListener('submit',function(e){
+  e.preventDefault();var err=$('#bErr');err.textContent='';
+  var nm=$('#bName'),tel=$('#bTel'),ok=$('#bOk');
+  if(!nm.value.trim()){err.textContent='Vui lòng nhập họ và tên.';nm.focus();return}
+  if(!tel.checkValidity()||!tel.value.trim()){err.textContent='Vui lòng nhập số điện thoại hợp lệ, ví dụ 0900 000 000.';tel.focus();return}
+  if(!bD.value||!bD.checkValidity()){err.textContent=bD.validationMessage&&bD.value?'Chủ nhật nghỉ, vui lòng chọn ngày khác.':'Vui lòng chọn ngày xem (từ ngày mai, trong vòng 60 ngày).';bD.focus();return}
+  if(!ok.checked){err.textContent='Vui lòng đánh dấu đồng ý xử lý dữ liệu cá nhân để gửi yêu cầu.';ok.focus();return}
+  var p=bD.value.split('-');
+  $('#bOkTxt').textContent='Cảm ơn '+nm.value.trim()+'. Lịch xem '+(bF.value?'tầng '+fn(+bF.value):'văn phòng')+' lúc '+(($('input[name=slot]:checked')||{}).value||'')+' ngày '+p[2]+'/'+p[1]+'/'+p[0]+' đã được ghi nhận. Chuyên viên sẽ gọi số '+tel.value.trim()+' để xác nhận.';
+  bk.style.display='none';var m=$('#bOkMsg');m.classList.add('show');m.focus();
+});
+
+$('#yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đất Nền Sổ Riêng Từng Lô Long Thành, Đồng Nai | Thửa Xanh</title>
+<meta name="description" content="Mẫu giao diện dự án đất nền phân lô Thửa Xanh ở vùng ven Long Thành, Đồng Nai: mặt bằng 40 lô bấm xem diện tích, hướng, giá/m², tình trạng; tính tiến độ thanh toán và vay ngân hàng; pháp lý sổ riêng, quy hoạch 1/500 giải thích dễ hiểu.">
+<meta name="theme-color" content="#0B241E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B241E'/%3E%3Cpath d='M14 14h36v36H14z' fill='none' stroke='%238BD9B7' stroke-width='3'/%3E%3Cpath d='M32 14v36M14 32h36' stroke='%238BD9B7' stroke-width='1.6' stroke-dasharray='3 3'/%3E%3Crect x='33.5' y='33.5' width='15' height='15' fill='%23F2B430'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Thửa Xanh (mẫu)","description":"Mẫu giao diện: dự án đất nền phân lô 40 lô, sổ riêng từng lô, vùng ven Long Thành, Đồng Nai. Dữ liệu minh hoạ.","url":"https://example.com/","telephone":"+84-900-000-000","areaServed":"Đồng Nai","address":{"@type":"PostalAddress","addressLocality":"Khu vực Long Thành","addressRegion":"Đồng Nai","addressCountry":"VN"},"openingHours":"Mo-Su 08:00-17:30"}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --g950:#071B16;--g900:#0B241E;--g850:#0F2D25;--g800:#133A30;--g700:#1C4B3E;--road:#17392F;
+  --mint:#8BD9B7;--mint2:#63C49B;--mint-ink:#C9EEDD;
+  --line:rgba(139,217,183,.2);--line2:rgba(139,217,183,.38);--grid:rgba(139,217,183,.06);
+  --paper:#EDEFE6;--paper2:#E4E8DC;--paper3:#F6F7F1;--ink:#10291F;--ink2:#2F463D;--muted:#53675E;
+  --pline:rgba(16,41,31,.14);--pline2:rgba(16,41,31,.28);--pgrid:rgba(16,41,31,.045);
+  --on-d:#E7F0EA;--on-d2:#A9C6B9;
+  --amber:#F2B430;--amber-d:#8A5F00;--sold:#C7D2CB;
+  --head:'Archivo',system-ui,-apple-system,sans-serif;--sans:'Inter',system-ui,-apple-system,sans-serif;
+  --pad:clamp(16px,4vw,48px);--ease:cubic-bezier(.2,.7,.2,1);--hdr:68px
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hdr);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans);font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.i{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--amber);color:var(--ink);padding:10px 14px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+h1,h2,h3,h4{font-family:var(--head);margin:0;text-wrap:balance;font-weight:760;letter-spacing:-.015em}
+h2{font-size:clamp(30px,3.7vw,52px);line-height:1.04;font-stretch:106%}
+h3{font-size:clamp(19px,1.6vw,23px);line-height:1.2;font-stretch:102%}
+p{margin:0}
+.num{font-variant-numeric:tabular-nums}
+.eb{display:inline-flex;align-items:center;gap:10px;font:600 12px/1.2 var(--head);font-stretch:82%;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.eb b{white-space:nowrap;display:inline-grid;place-items:center;min-width:30px;height:22px;padding:0 6px;border:1px solid currentColor;font-weight:700;letter-spacing:.06em}
+.dark .eb{color:var(--mint)}
+.lead{font-size:clamp(16px,1.25vw,18px);color:var(--ink2);max-width:60ch}
+.dark .lead{color:var(--on-d2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border:1px solid transparent;font:650 15px/1.1 var(--head);font-stretch:96%;letter-spacing:.01em;text-decoration:none;cursor:pointer;background:transparent;transition:background .2s,color .2s,border-color .2s,transform .2s;white-space:nowrap}
+.btn .i{width:18px;height:18px;transition:transform .2s}
+.btn:hover .i{transform:translateX(3px)}
+.btn-a{background:var(--amber);color:#14231C}
+.btn-a:hover{background:#FFC64A}
+.btn-g{border-color:var(--line2);color:var(--on-d)}
+.btn-g:hover{border-color:var(--mint);color:#fff}
+.btn-i{background:var(--ink);color:var(--paper3)}
+.btn-i:hover{background:var(--g700)}
+.btn-o{border-color:var(--pline2);color:var(--ink)}
+.btn-o:hover{border-color:var(--ink)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.dark{background:var(--g900);color:var(--on-d);position:relative}
+.gridbg{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(rgba(139,217,183,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,217,183,.05) 1px,transparent 1px);background-size:24px 24px,24px 24px,120px 120px,120px 120px;background-position:-1px -1px}
+.paper{background-color:var(--paper);background-image:linear-gradient(var(--pgrid) 1px,transparent 1px),linear-gradient(90deg,var(--pgrid) 1px,transparent 1px),linear-gradient(rgba(16,41,31,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(16,41,31,.05) 1px,transparent 1px);background-size:20px 20px,20px 20px,100px 100px,100px 100px;background-position:-1px -1px}
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec-hd{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px 64px;align-items:end;margin-bottom:clamp(36px,4.5vw,60px)}
+.sec-hd h2{margin-top:16px}
+.tag-sample{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border:1px dashed currentColor;font:600 11.5px/1.2 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--amber-d)}
+.dark .tag-sample{color:var(--amber)}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:80;background:#0B241E;border-bottom:1px solid var(--line);color:var(--on-d)}
+.hdr .wrap{height:var(--hdr);display:flex;align-items:center;gap:28px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.logo svg{width:36px;height:36px;flex:none}
+.logo b{display:block;font:800 19px/1 var(--head);font-stretch:118%;letter-spacing:.04em;text-transform:uppercase}
+.logo small{display:block;margin-top:4px;font:500 11px/1 var(--head);font-stretch:84%;letter-spacing:.14em;text-transform:uppercase;color:var(--on-d2)}
+.nav{display:flex;gap:4px}
+.nav a{display:flex;align-items:baseline;gap:6px;padding:10px 12px;text-decoration:none;font:550 14px/1 var(--head);font-stretch:94%;color:var(--on-d2);transition:color .2s}
+.nav a span{font-size:10.5px;color:var(--mint2);letter-spacing:.06em}
+.nav a:hover{color:#fff}
+.hdr .btn{min-height:42px;padding:0 16px;font-size:14px}
+.menu-btn{display:none;width:46px;height:46px;align-items:center;justify-content:center;background:none;border:1px solid var(--line2);color:var(--on-d);cursor:pointer}
+.menu-btn .i{width:22px;height:22px}
+.mnav{position:fixed;inset:0;z-index:120;background:var(--g950);color:var(--on-d);display:flex;flex-direction:column;padding:16px var(--pad) 32px;visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s;overflow-y:auto}
+.mnav.open{visibility:visible;opacity:1}
+.mnav-top{display:flex;justify-content:space-between;align-items:center;height:52px;margin-bottom:28px}
+.mnav-top span{font:600 12px/1 var(--head);letter-spacing:.16em;text-transform:uppercase;color:var(--mint)}
+.mnav a.ml{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;font:700 26px/1.1 var(--head);font-stretch:104%}
+.mnav a.ml small{font:600 12px/1 var(--head);color:var(--mint2);letter-spacing:.08em}
+.mnav .btn{margin-top:28px}
+.mnav p{margin-top:20px;color:var(--on-d2);font-size:14px}
+
+/* hero */
+.hero{padding:calc(var(--hdr) + 28px) 0 40px;overflow:hidden}
+.sheet{position:relative;border:1px solid var(--line2);padding:0}
+.rx,.ry{position:absolute;display:flex;font:600 10.5px/1 var(--head);letter-spacing:.1em;color:var(--mint2)}
+.rx{left:0;right:0;top:-1px;transform:translateY(-100%);height:20px}
+.rx span{flex:1;text-align:center;border-left:1px solid var(--line);padding-top:4px}
+.rx span:first-child{border-left:0}
+.ry{top:0;bottom:0;left:-1px;transform:translateX(-100%);width:20px;flex-direction:column}
+.ry span{flex:1;display:grid;place-items:center;border-top:1px solid var(--line)}
+.ry span:first-child{border-top:0}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr)}
+.hero-txt{padding:clamp(28px,4vw,56px) clamp(22px,3.4vw,52px);border-right:1px solid var(--line);display:flex;flex-direction:column}
+.hero h1{margin-top:22px;font-size:clamp(38px,4.7vw,70px);line-height:.98;font-weight:800;font-stretch:108%;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:var(--mint)}
+.hero .lead{margin-top:22px;max-width:52ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-note{margin-top:auto;padding-top:28px;display:flex;gap:24px;flex-wrap:wrap;font-size:13.5px;color:var(--on-d2)}
+.hero-note span{display:inline-flex;align-items:center;gap:8px}
+.hero-note .i{color:var(--mint);width:16px;height:16px}
+.hero-fig{position:relative;margin:0;min-height:100%;background:var(--g800);overflow:hidden}
+.hero-fig img{width:100%;height:100%;object-fit:cover;filter:grayscale(.55) contrast(1.05);aspect-ratio:4/3}
+.hero-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,36,30,.15),rgba(11,36,30,.55));pointer-events:none}
+.hero-fig .tint{position:absolute;inset:0;background:#1C4B3E;mix-blend-mode:multiply;opacity:.55;pointer-events:none}
+.hero-ov{position:absolute;inset:0;width:100%;height:100%;z-index:2}
+.hero-ov .ln{fill:none;stroke:var(--mint);stroke-width:1;opacity:.75}
+.hero-ov .bd{fill:rgba(242,180,48,.08);stroke:var(--amber);stroke-width:1.6;stroke-dasharray:6 4}
+.hero-ov .mk{fill:var(--g900);stroke:var(--amber);stroke-width:1.4}
+.hero-ov text{font:600 8.5px var(--head);fill:var(--mint-ink);letter-spacing:.06em}
+.hero-ov .sel{fill:var(--amber);opacity:.78}
+.js .hero-ov .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s var(--ease) .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.callout{position:absolute;z-index:3;right:16px;bottom:16px;background:rgba(7,27,22,.94);border:1px solid var(--line2);padding:12px 14px;min-width:210px;font-size:12.5px}
+.callout b{display:block;font:750 18px/1.1 var(--head);font-stretch:104%;color:#fff}
+.callout dl{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:8px 0 0}
+.callout dt{color:var(--on-d2)}
+.callout dd{margin:0;text-align:right;color:var(--on-d)}
+.coord{position:absolute;z-index:3;left:16px;top:14px;font:600 11px/1 var(--head);letter-spacing:.08em;color:var(--mint-ink);background:rgba(7,27,22,.85);padding:7px 9px;border:1px solid var(--line)}
+.tblock{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--line2)}
+.tblock div{padding:14px 18px;border-left:1px solid var(--line)}
+.tblock div:first-child{border-left:0}
+.tblock span{display:block;font:600 10.5px/1.2 var(--head);font-stretch:84%;letter-spacing:.14em;text-transform:uppercase;color:var(--on-d2)}
+.tblock b{display:block;margin-top:6px;font:700 19px/1.15 var(--head);font-stretch:100%;color:#fff;white-space:nowrap}
+.tblock b small{font-size:13px;font-weight:600;color:var(--on-d2)}
+.js .hero-txt>*{animation:rise .9s var(--ease) both}
+.js .hero-txt>*:nth-child(2){animation-delay:.08s}.js .hero-txt>*:nth-child(3){animation-delay:.16s}.js .hero-txt>*:nth-child(4){animation-delay:.24s}.js .hero-txt>*:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* pain */
+.pain-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px);align-items:start}
+.pain-side{position:sticky;top:calc(var(--hdr) + 32px)}
+.pain-side h2{margin-top:16px}
+.pain-side .lead{margin-top:20px}
+.pain-fig{margin:28px 0 0;position:relative;border:1px solid var(--pline2);padding:8px;background:var(--paper3)}
+.pain-fig img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.pain-fig figcaption{display:flex;justify-content:space-between;gap:12px;padding:10px 4px 2px;font:600 11px/1.3 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.notes{border-top:2px solid var(--ink)}
+.note{display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid var(--pline2)}
+.note>*{padding:24px 20px}
+.note .n{white-space:nowrap;font:800 15px/1 var(--head);font-stretch:90%;letter-spacing:.06em;border-right:1px solid var(--pline);padding-left:0}
+.note .bad h3{font-size:19px}
+.note .bad p{margin-top:8px;color:var(--muted);font-size:15px}
+.note .fix{background:rgba(255,255,255,.55);border-left:1px solid var(--pline)}
+.note .fix span{display:inline-flex;align-items:center;gap:6px;font:700 11px/1 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--g700)}
+.note .fix span .i{width:15px;height:15px;stroke-width:2.2}
+.note .fix p{margin-top:10px;font-size:15px;color:var(--ink2)}
+.notes-hd{display:grid;grid-template-columns:64px 1fr 1fr;font:700 11px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.notes-hd span{padding:12px 20px}
+.notes-hd span:first-child{padding-left:0}
+
+/* plan */
+.plan-sec{padding:clamp(72px,9vw,120px) 0}
+.tools{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;padding:16px 0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line)}
+.fg{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.fg>span{font:600 11px/1 var(--head);font-stretch:84%;letter-spacing:.14em;text-transform:uppercase;color:var(--on-d2);margin-right:6px}
+.chip{min-height:38px;padding:0 13px;border:1px solid var(--line2);background:transparent;color:var(--on-d);font:600 13.5px/1 var(--head);font-stretch:94%;cursor:pointer;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
+.chip:hover{border-color:var(--mint)}
+.chip[aria-pressed="true"]{background:var(--mint);border-color:var(--mint);color:var(--g950)}
+.tools .cnt{margin-left:auto;font:600 13px/1.3 var(--head);color:var(--on-d2)}
+.tools .cnt b{color:#fff;font-size:15px}
+.plan-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;margin-top:28px;align-items:start}
+.plan-box{border:1px solid var(--line2);background:var(--g950)}
+.plan-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+#plan{display:block;width:100%;height:auto;min-width:640px;user-select:none;-webkit-user-select:none}
+#plan .gl{stroke:rgba(139,217,183,.07);stroke-width:1}
+#plan .gl.mj{stroke:rgba(139,217,183,.14)}
+#plan .gt{font:600 10px var(--head);fill:rgba(169,198,185,.75)}
+#plan .rd{fill:var(--road)}
+#plan .rd-e{fill:none;stroke:rgba(139,217,183,.3);stroke-width:1}
+#plan .rd-c{stroke:rgba(242,180,48,.5);stroke-width:1.2;stroke-dasharray:10 8;fill:none}
+#plan .rt{font:600 10.5px var(--head);fill:rgba(201,238,221,.7);letter-spacing:.14em}
+#plan .park{fill:#123629;stroke:rgba(139,217,183,.25)}
+#plan .tree{fill:rgba(99,196,155,.22);stroke:rgba(139,217,183,.35);stroke-width:.8}
+#plan .pt{font:700 10px var(--head);fill:var(--mint);letter-spacing:.12em}
+#plan .lot{cursor:pointer;outline:none}
+#plan .lot rect{stroke-width:1.2;transition:fill .25s,stroke .25s,opacity .3s}
+#plan .lot text{pointer-events:none;font-family:var(--head);text-anchor:middle;transition:fill .25s}
+#plan .lot .lid{font-size:12.5px;font-weight:750;font-stretch:80%}
+#plan .lot .la{font-size:10px;font-weight:550;font-stretch:80%}
+#plan .st-con rect{fill:rgba(139,217,183,.1);stroke:var(--mint)}
+#plan .st-con text{fill:var(--mint-ink)}
+#plan .st-coc rect{fill:url(#hatchA);stroke:var(--amber)}
+#plan .st-coc text{fill:#FBE3A8}
+#plan .st-ban rect{fill:url(#hatchS);stroke:rgba(199,210,203,.45)}
+#plan .st-ban text{fill:rgba(199,210,203,.6)}
+#plan .lot:hover rect{stroke:#fff;stroke-width:2}
+#plan .lot:focus-visible rect{stroke:#fff;stroke-width:3}
+#plan .lot.on rect{fill:var(--amber);stroke:#fff;stroke-width:2.4}
+#plan .lot.on text{fill:#14231C}
+#plan .lot.dim{opacity:.18}
+#plan .lot.dim.on{opacity:1}
+#plan .dim-l{stroke:var(--amber);stroke-width:1.2;fill:none}
+#plan .dim-t{font:700 11px var(--head);fill:var(--amber);text-anchor:middle}
+#plan .dim-bg{fill:var(--g950)}
+#plan .xh{stroke:rgba(242,180,48,.35);stroke-width:1;stroke-dasharray:3 4;pointer-events:none}
+.js #plan .lot{opacity:0}
+.js #plan.drawn .lot{opacity:1;transition:opacity .5s var(--ease)}
+.js #plan.drawn .lot.dim{opacity:.18}
+.js #plan.drawn .lot.dim.on{opacity:1}
+.plan-ft{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding:12px 16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--on-d2)}
+.lg{display:inline-flex;align-items:center;gap:8px}
+.lg i{width:18px;height:12px;border:1.5px solid;display:inline-block}
+.lg .c{border-color:var(--mint);background:rgba(139,217,183,.12)}
+.lg .d{border-color:var(--amber);background:repeating-linear-gradient(45deg,rgba(242,180,48,.5) 0 2px,transparent 2px 5px)}
+.lg .b{border-color:rgba(199,210,203,.5);background:repeating-linear-gradient(45deg,rgba(199,210,203,.35) 0 1px,transparent 1px 4px)}
+.lg .s{border-color:#fff;background:var(--amber)}
+.plan-ft .xy{margin-left:auto;font:600 11.5px/1 var(--head);letter-spacing:.06em;color:var(--mint-ink)}
+.swipe{display:none;align-items:center;gap:8px;padding:10px 16px;border-bottom:1px solid var(--line);font-size:12.5px;color:var(--on-d2)}
+.chips-t{margin-top:18px;font:600 11px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--on-d2)}
+.lot-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.lot-chips button{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 11px;border:1px solid var(--line);background:rgba(139,217,183,.04);color:var(--on-d);font:600 12.5px/1 var(--head);font-stretch:90%;cursor:pointer;white-space:nowrap}
+.lot-chips button:hover{border-color:var(--mint)}
+.lot-chips button.on{border-color:var(--amber);color:var(--amber)}
+.lot-chips i{width:8px;height:8px;border-radius:50%;background:var(--mint)}
+.lot-chips .coc i{background:var(--amber)}
+.lot-chips .ban{opacity:.55}
+.lot-chips .ban i{background:var(--sold)}
+.spec{position:sticky;top:calc(var(--hdr) + 20px);border:1px solid var(--line2);background:var(--g850)}
+.spec-hd{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px}
+.spec-hd span.l{display:block;width:100%;font:600 11px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--on-d2)}
+.spec-hd b{font:800 46px/1 var(--head);font-stretch:96%;color:#fff;letter-spacing:-.01em}
+.st{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;font:700 12px/1 var(--head);letter-spacing:.06em;text-transform:uppercase;border:1px solid}
+.st i{width:8px;height:8px;border-radius:50%;background:currentColor}
+.st.con{color:var(--mint)}.st.coc{color:var(--amber)}.st.ban{color:var(--sold)}
+.spec table{width:100%;border-collapse:collapse;font-size:14px}
+.spec th,.spec td{padding:10px 20px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.spec th{font-weight:500;color:var(--on-d2);width:44%}
+.spec td{color:#fff;font-weight:600;text-align:right}
+.spec tr.tot td{font:750 19px/1.2 var(--head);color:var(--amber)}
+.spec tr.tot td small{display:block;font:500 12.5px/1.3 var(--sans);color:var(--on-d2);margin-top:3px}
+.spec-act{display:grid;gap:8px;padding:18px 20px}
+.spec-act .btn{width:100%}
+.spec-note{padding:0 20px 18px;font-size:12px;color:var(--on-d2)}
+
+/* site */
+.site-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.ph{margin:0;position:relative;background:var(--paper2);overflow:hidden;border:1px solid var(--pline2)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.ph:hover img{transform:scale(1.03)}
+.ph figcaption{position:absolute;left:0;bottom:0;right:0;display:flex;gap:10px;align-items:baseline;padding:28px 14px 12px;background:linear-gradient(transparent,rgba(7,27,22,.85));color:#fff;font-size:13.5px}
+.ph figcaption b{font:700 11px/1 var(--head);letter-spacing:.12em;color:var(--amber);flex:none}
+.ph1{grid-column:span 7;aspect-ratio:7/5}
+.ph2{grid-column:span 5;aspect-ratio:5/5}
+.ph3{grid-column:span 5;aspect-ratio:5/4}
+.dist{grid-column:span 7;border:1px solid var(--pline2);background:var(--paper3);padding:22px 24px;display:flex;flex-direction:column}
+.dist h3{font-size:20px}
+.dist table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+.dist td{padding:11px 0;border-bottom:1px dashed var(--pline2)}
+.dist td:last-child{text-align:right;font:700 15px var(--head);white-space:nowrap}
+.dist .bar{display:block;height:3px;background:var(--pline);margin-top:7px;position:relative}
+.dist .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--g700);width:0;transition:width 1.1s var(--ease)}
+.dist p{margin-top:auto;padding-top:14px;font-size:12.5px;color:var(--muted)}
+
+/* legal */
+.legal-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.legal-l{position:sticky;top:calc(var(--hdr) + 28px)}
+.legal-l .lead{margin-top:18px}
+.legal-l .ph{margin-top:28px;aspect-ratio:4/3}
+.docs{margin-top:22px;border:1px solid var(--pline2);background:var(--paper3)}
+.docs div{display:flex;gap:12px;align-items:flex-start;padding:13px 16px;border-bottom:1px solid var(--pline);font-size:14.5px}
+.docs div:last-child{border-bottom:0}
+.docs .i{color:var(--g700);margin-top:2px}
+.docs small{display:block;color:var(--muted);font-size:12.5px}
+.art{border-top:2px solid var(--ink)}
+.art article{padding:28px 0;border-bottom:1px solid var(--pline2);display:grid;grid-template-columns:72px minmax(0,1fr);gap:0 8px}
+.art .sg{font:800 30px/1 var(--head);font-stretch:88%;color:var(--g700)}
+.art h3{font-size:clamp(20px,1.8vw,25px)}
+.art p{margin-top:10px;color:var(--ink2)}
+.art .kv{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.art .kv span{padding:6px 10px;border:1px solid var(--pline2);background:var(--paper3);font-size:13px}
+.art .kv b{font-family:var(--head)}
+.cmp{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmp figure{margin:0;border:1px solid var(--pline2);background:var(--paper3);padding:12px}
+.cmp svg{width:100%;height:auto;display:block}
+.cmp figcaption{margin-top:8px;font-size:13px;color:var(--ink2)}
+.cmp figcaption b{display:block;font:700 12px/1.2 var(--head);letter-spacing:.1em;text-transform:uppercase}
+.cmp .bad b{color:#9A3B23}.cmp .good b{color:var(--g700)}
+.scale{margin-top:16px;display:flex;align-items:center;gap:14px;font-size:13.5px;color:var(--ink2);flex-wrap:wrap}
+.scale .bar{display:flex;height:10px;width:200px;border:1px solid var(--ink)}
+.scale .bar i{flex:1}.scale .bar i:nth-child(odd){background:var(--ink)}
+.chk{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+.chk li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink2)}
+.chk .i{color:var(--g700);stroke-width:2.2;margin-top:3px;width:16px;height:16px}
+
+/* calc */
+.calc-grid{display:grid;grid-template-columns:380px minmax(0,1fr);gap:28px;align-items:start}
+.cin{border:1px solid var(--line2);background:var(--g850);padding:22px}
+.fld{display:block;margin-bottom:20px}
+.fld>span{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font:600 12px/1.2 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--on-d2);margin-bottom:9px}
+.fld>span output,.fld>span b{font:750 17px/1 var(--head);letter-spacing:0;text-transform:none;color:#fff}
+.cin select,.cin input[type=date]{width:100%;min-height:48px;padding:0 14px;background:var(--g950);border:1px solid var(--line2);color:#fff;border-radius:0;-webkit-appearance:none;appearance:none}
+.cin select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238BD9B7' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:40px}
+.cin input[type=date]{color-scheme:dark}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line2)}
+.seg button{min-height:46px;padding:6px 10px;background:transparent;border:0;color:var(--on-d2);font:600 13.5px/1.2 var(--head);cursor:pointer}
+.seg button+button{border-left:1px solid var(--line2)}
+.seg button[aria-pressed="true"]{background:var(--mint);color:var(--g950)}
+input[type=range]{width:100%;height:28px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:4px;background:linear-gradient(90deg,var(--amber) var(--p,50%),rgba(139,217,183,.25) var(--p,50%))}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;margin-top:-9px;background:var(--g950);border:3px solid var(--amber);border-radius:0;transform:rotate(45deg)}
+input[type=range]::-moz-range-track{height:4px;background:rgba(139,217,183,.25)}
+input[type=range]::-moz-range-progress{height:4px;background:var(--amber)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;background:var(--g950);border:3px solid var(--amber);border-radius:0}
+.rg-l{display:flex;justify-content:space-between;font-size:11.5px;color:var(--on-d2);margin-top:2px}
+.cout{border:1px solid var(--line2)}
+.kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line2)}
+.kpi div{padding:18px 20px;border-left:1px solid var(--line)}
+.kpi div:first-child{border-left:0}
+.kpi span{display:block;font:600 11px/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--on-d2)}
+.kpi b{display:block;margin-top:8px;font:750 clamp(19px,1.7vw,25px)/1.1 var(--head);color:#fff;white-space:nowrap}
+.kpi small{display:block;margin-top:4px;font-size:12.5px;color:var(--on-d2)}
+.kpi .am b{color:var(--amber)}
+.sched{width:100%;border-collapse:collapse;font-size:14px}
+.sched th{padding:12px 16px;text-align:left;font:600 11px/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--on-d2);border-bottom:1px solid var(--line2);background:rgba(139,217,183,.04)}
+.sched td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.sched td.r,.sched th.r{text-align:right}
+.sched td b{font-family:var(--head);font-weight:700}
+.sched .w{display:block;color:var(--on-d2);font-size:12.5px;margin-top:2px}
+.sched .mb{display:flex;height:4px;margin-top:8px;background:rgba(139,217,183,.12);width:100%}
+.sched .mb i{display:block;height:100%;background:var(--mint)}
+.sched .mb em{display:block;height:100%;background:var(--amber)}
+.sched .bk{color:var(--amber)}
+.sched tfoot td{font-weight:700;border-bottom:0;background:rgba(139,217,183,.04)}
+.loan{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);border-top:1px solid var(--line2)}
+.loan-n{padding:18px 20px;border-right:1px solid var(--line)}
+.loan-n dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:10px 16px;font-size:14px}
+.loan-n dt{color:var(--on-d2)}
+.loan-n dd{margin:0;text-align:right;font:700 16px/1.3 var(--head);color:#fff;white-space:nowrap}
+.loan-n h3{font-size:16px;margin-bottom:12px;color:var(--mint)}
+.loan-c{padding:18px 20px}
+.loan-c h3{font-size:16px;color:var(--mint)}
+.loan-c svg{display:block;width:100%;height:150px;margin-top:10px}
+.loan-c .yb{fill:var(--mint);opacity:.75}
+.loan-c .yb:first-child{fill:var(--amber);opacity:1}
+.loan-c text{font:600 9.5px var(--head);fill:var(--on-d2)}
+.noloan{padding:26px 20px;color:var(--on-d2);font-size:14.5px;grid-column:1/-1}
+.disc{margin-top:14px;font-size:12.5px;color:var(--on-d2);max-width:90ch}
+
+/* route */
+.route{position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;margin-top:8px}
+.route::before{content:"";position:absolute;left:0;right:0;top:27px;height:10px;background:var(--ink);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:repeating-linear-gradient(90deg,var(--paper3) 0 22px,var(--ink) 22px 30px)}
+.stn{position:relative;padding:0 16px 0 0}
+.stn .km{display:inline-block;font:700 11px/1 var(--head);letter-spacing:.1em;color:var(--muted);height:18px}
+.stn .dot{position:relative;z-index:1;width:22px;height:22px;margin:0 0 18px;background:var(--paper);border:3px solid var(--ink);transform:rotate(45deg) translate(1px,1px)}
+.stn.hl .dot{background:var(--amber)}
+.stn h3{font-size:17px;line-height:1.25}
+.stn p{margin-top:8px;font-size:14px;color:var(--muted)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.rev{position:relative;background:var(--paper3);border:1px solid var(--pline2);padding:28px 24px 24px;display:flex;flex-direction:column}
+.rev::before{content:"";position:absolute;left:-1px;right:-1px;top:-6px;height:6px;background:radial-gradient(circle at 6px 6px,var(--paper2) 3.5px,transparent 4px) 0 0/12px 12px repeat-x}
+.rev .stamp{align-self:flex-start;padding:5px 9px;border:1.5px solid #9A3B23;color:#9A3B23;font:700 11px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;transform:rotate(-3deg)}
+.rev blockquote{margin:18px 0 0;font:500 17px/1.55 var(--sans);color:var(--ink)}
+.rev .who{margin-top:auto;padding-top:20px;display:flex;align-items:center;gap:12px;border-top:1px dashed var(--pline2);margin-top:22px}
+.rev .av{width:42px;height:42px;display:grid;place-items:center;background:var(--g800);color:var(--mint);font:700 15px/1 var(--head)}
+.rev .who b{display:block;font:700 15px/1.2 var(--head)}
+.rev .who small{color:var(--muted);font-size:13px}
+.rev .lotref{position:absolute;right:20px;top:26px;font:700 11px/1 var(--head);letter-spacing:.1em;color:var(--muted)}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,5vw,80px);align-items:start}
+.faq-l .lead{margin-top:16px}
+.faq-l .btn{margin-top:24px}
+.qa{border-top:2px solid var(--ink)}
+.qa details{border-bottom:1px solid var(--pline2)}
+.qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;cursor:pointer;font:700 clamp(17px,1.4vw,20px)/1.3 var(--head)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{flex:none;width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--pline2);transition:transform .25s,background .2s}
+.qa details[open] summary .pm{transform:rotate(45deg);background:var(--amber);border-color:var(--amber)}
+.qa .ans{padding:0 52px 24px 0;color:var(--ink2)}
+
+/* contact */
+.ct-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.ct-l .lead{margin-top:18px}
+.ct-info{margin-top:28px;border-top:1px solid var(--line2)}
+.ct-info>div{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ct-info .i{color:var(--mint);margin-top:3px}
+.ct-info b{display:block;font:700 16px/1.3 var(--head)}
+.ct-info span{color:var(--on-d2);font-size:14.5px}
+.ct-info a{color:#fff;text-decoration:none;border-bottom:1px solid var(--line2)}
+.form{border:1px solid var(--line2);background:var(--g850);padding:clamp(20px,3vw,32px)}
+.form h3{font-size:22px}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label.f{display:block;margin-top:16px}
+.form label.f>span{display:block;font:600 12px/1.2 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--on-d2);margin-bottom:8px}
+.form input[type=text],.form input[type=tel],.form input[type=date],.form select{width:100%;min-height:48px;padding:0 14px;background:var(--g950);border:1px solid var(--line2);color:#fff;border-radius:0;-webkit-appearance:none;appearance:none;font-size:16px}
+.form input[type=date]{color-scheme:dark}
+.form select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238BD9B7' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px;padding-right:40px}
+.form input::placeholder{color:#7F9C90}
+.form input:focus,.form select:focus{border-color:var(--mint);outline:none;box-shadow:0 0 0 2px rgba(139,217,183,.35)}
+.form .seg{margin-top:0}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-size:13.5px;color:var(--on-d2);cursor:pointer}
+.consent input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--amber)}
+.err{display:none;margin-top:10px;color:#FFB4A0;font-size:13.5px}
+.err.show{display:block}
+.form .btn{width:100%;margin-top:20px}
+.ok{display:none;text-align:left}
+.ok.show{display:block}
+.ok .tick{width:56px;height:56px;display:grid;place-items:center;background:var(--mint);color:var(--g950)}
+.ok .tick .i{width:28px;height:28px;stroke-width:2.4}
+.ok h3{margin-top:18px}
+.ok p{margin-top:10px;color:var(--on-d2)}
+.ok .btn{width:auto;margin-top:22px}
+
+/* footer */
+.ft{background:var(--g950);color:var(--on-d2);padding:64px 0 32px;font-size:14.5px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.ft .logo{margin:0}
+.ft p{margin-top:16px;max-width:44ch}
+.ft h4{font:700 12px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--mint);margin-bottom:14px}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.ft a{text-decoration:none;color:var(--on-d)}
+.ft a:hover{color:#fff}
+.ft-b{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;display:grid;gap:6px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(7,27,22,.96);border:1px solid rgba(139,217,183,.28);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#000}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#F2B430;flex:none;box-shadow:0 0 0 3px rgba(242,180,48,.25)}
+.kt-badge b{color:var(--mint);font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1180px){
+  .nav a span{display:none}
+  .nav a{padding:10px 8px}
+  .plan-grid{grid-template-columns:minmax(0,1fr) 320px}
+  .calc-grid{grid-template-columns:340px minmax(0,1fr)}
+  .tblock{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tblock div:nth-child(4){border-left:0}
+  .tblock div:nth-child(n+4){border-top:1px solid var(--line)}
+}
+@media (max-width:1024px){
+  .nav,.hdr .btn{display:none}
+  .menu-btn{display:inline-flex}
+  .hero-in{grid-template-columns:minmax(0,1fr)}
+  .hero-txt{border-right:0;border-bottom:1px solid var(--line)}
+  .hero-fig{aspect-ratio:16/10}
+  .hero-fig img{position:absolute;inset:0;aspect-ratio:auto}
+  .sec-hd{grid-template-columns:minmax(0,1fr)}
+  .pain-grid,.legal-grid,.faq-grid,.ct-grid{grid-template-columns:minmax(0,1fr)}
+  .pain-side,.legal-l{position:static}
+  .plan-grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .plan-grid>div:first-child{display:contents}
+  .plan-box{order:1}.spec{order:2;margin-top:20px}.chips-t{order:3;margin-top:22px}.lot-chips{order:4}
+  .spec{position:static;display:grid;grid-template-columns:1fr 1fr}
+  .spec-hd{grid-column:1/-1}
+  .spec table{grid-column:1}
+  .spec-act{grid-column:2;align-content:start}
+  .spec-note{grid-column:1/-1}
+  .calc-grid{grid-template-columns:minmax(0,1fr)}
+  .route{grid-template-columns:1fr;padding-left:8px}
+  .route::before{left:18px;right:auto;top:0;bottom:0;width:10px;height:auto;border:0;border-left:2px solid var(--ink);border-right:2px solid var(--ink);background:repeating-linear-gradient(180deg,var(--paper3) 0 22px,var(--ink) 22px 30px)}
+  .stn{display:grid;grid-template-columns:44px 1fr;gap:0 18px;padding:0 0 28px}
+  .stn .dot{grid-row:1/4;grid-column:1;margin:4px 0 0 2px}
+  .stn .km,.stn h3,.stn p{grid-column:2}
+  .revs{grid-template-columns:1fr 1fr}
+  .revs .rev:last-child{grid-column:1/-1}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .ft-grid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:820px){
+  .rx,.ry{display:none}
+  .hero{padding-top:calc(var(--hdr) + 16px)}
+  .sheet{border-left:0;border-right:0;margin:0 calc(var(--pad) * -1)}
+  .note{grid-template-columns:52px minmax(0,1fr)}
+  .note .n{font-size:13px}
+  .note .fix{grid-column:2;border-left:0;border-top:1px dashed var(--pline)}
+  .note>*{padding:18px 16px}
+  .note .n{grid-row:1/3;padding-left:0}
+  .notes-hd{display:none}
+  .site-grid>*{grid-column:1/-1!important}
+  .ph1,.ph2,.ph3{aspect-ratio:4/3}
+  .spec{display:block}
+  .kpi{grid-template-columns:1fr}
+  .kpi div{border-left:0;border-top:1px solid var(--line)}
+  .kpi div:first-child{border-top:0}
+  .loan{grid-template-columns:1fr}
+  .loan-n{border-right:0;border-bottom:1px solid var(--line)}
+  .sched thead{display:none}
+  .sched,.sched tbody,.sched tr,.sched td,.sched tfoot{display:block;width:100%}
+  .sched tr{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);padding:12px 16px}
+  .sched td{border:0;padding:3px 0}
+  .sched td:first-child{grid-column:1/-1}
+  .sched td.r{text-align:left}
+  .sched td[data-l]::before{content:attr(data-l);display:block;font:600 10.5px/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--on-d2)}
+  .sched tfoot tr{padding:12px 16px}
+  .revs{grid-template-columns:1fr}
+  .form .two{grid-template-columns:1fr;gap:0}
+  .swipe{display:flex}
+  .tools .cnt{margin-left:0;width:100%}
+  .cmp{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  :root{--hdr:62px}
+  .logo small{display:none}
+  .tblock{grid-template-columns:1fr 1fr}
+  .tblock div:nth-child(odd){border-left:0}
+  .tblock div:nth-child(4){border-left:1px solid var(--line)}
+  .tblock div:nth-child(n+3){border-top:1px solid var(--line)}
+  .callout{left:12px;right:auto;bottom:12px;min-width:0;width:calc(100% - 24px);max-width:270px}
+  .coord{display:none}
+  .hero-fig{aspect-ratio:4/5}
+  .hero-note{gap:10px 18px}
+  .btn{white-space:normal;text-align:center}
+  .hero-cta .btn{flex:1 1 100%}
+  .art article{grid-template-columns:1fr}
+  .art .sg{margin-bottom:10px;font-size:24px}
+  .qa .ans{padding-right:0}
+  .ft-grid{grid-template-columns:1fr}
+  .spec-hd b{font-size:40px}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .rv,.js .hero-txt>*{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}
+  .js .hero-ov .draw{animation:none;stroke-dashoffset:0}
+  .js #plan .lot{opacity:1;transition:none}
+  .ph img,.dist .bar i{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+<symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v-4l2-5h12l2 5v4z"/><path d="M4 12h16"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.2 7.5 9.5 4.3-1.3 7.5-5 7.5-9.5V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 15 15 3l6 6L9 21z"/><path d="m7 11 2 2M10 8l2 2M13 5l2 2"/></symbol>
+<symbol id="i-road" viewBox="0 0 24 24"><path d="M8 3 4 21M16 3l4 18M12 4v3M12 10.5v3M12 17v3"/></symbol>
+<symbol id="i-swipe" viewBox="0 0 24 24"><path d="M4 12h16M8 8l-4 4 4 4M16 8l4 4-4 4"/></symbol>
+<symbol id="i-stamp" viewBox="0 0 24 24"><path d="M9 3h6v5l-1.5 4h-3L9 8z"/><path d="M4 15h16v3H4zM6 21h12"/></symbol>
+</svg>
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Thửa Xanh, về đầu trang">
+      <svg viewBox="0 0 36 36" aria-hidden="true"><rect x="1" y="1" width="34" height="34" fill="none" stroke="#8BD9B7" stroke-width="1.6"/><path d="M18 1v34M1 18h34" stroke="#8BD9B7" stroke-width="1" stroke-dasharray="2 2.5"/><rect x="19.5" y="19.5" width="14" height="14" fill="#F2B430"/></svg>
+      <span><b>Thửa&nbsp;Xanh</b><small>Đất nền sổ riêng · Đồng&nbsp;Nai</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#mat-bang"><span>01</span>Mặt bằng</a>
+      <a href="#hien-trang"><span>02</span>Hiện trạng</a>
+      <a href="#phap-ly"><span>03</span>Pháp lý</a>
+      <a href="#tien-do"><span>04</span>Tiến độ</a>
+      <a href="#hoi-dap"><span>05</span>Hỏi đáp</a>
+    </nav>
+    <a class="btn btn-a" href="#lien-he">Đặt lịch xem&nbsp;đất</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="i"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mnav-top"><span>Thửa Xanh · Menu</span><button class="menu-btn" id="menuClose" type="button" aria-label="Đóng menu" style="display:inline-flex"><svg class="i"><use href="#i-x"/></svg></button></div>
+  <a class="ml" href="#mat-bang">Mặt bằng 40&nbsp;lô <small>01</small></a>
+  <a class="ml" href="#hien-trang">Hiện trạng khu&nbsp;đất <small>02</small></a>
+  <a class="ml" href="#phap-ly">Pháp lý dễ&nbsp;hiểu <small>03</small></a>
+  <a class="ml" href="#tien-do">Tiến độ thanh&nbsp;toán <small>04</small></a>
+  <a class="ml" href="#hoi-dap">Hỏi đáp <small>05</small></a>
+  <a class="btn btn-a" href="#lien-he">Đặt lịch xem&nbsp;đất <svg class="i"><use href="#i-arrow"/></svg></a>
+  <p>Hotline mẫu: 0900&nbsp;000&nbsp;000 · 08:00–17:30 mỗi ngày</p>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero dark gridbg" id="top">
+  <div class="wrap">
+    <div class="sheet">
+      <div class="rx" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span></div>
+      <div class="ry" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span></div>
+      <div class="hero-in">
+        <div class="hero-txt">
+          <span class="eb"><b>TX-01</b>Khu đất nền phân lô · Vùng ven Long&nbsp;Thành</span>
+          <h1>Mỗi lô một sổ. <em>Mỗi mét</em> đều có trên bản&nbsp;vẽ.</h1>
+          <p class="lead">Thửa Xanh là khu đất nền 40 lô ở vùng ven Long Thành, Đồng Nai. Đường nội bộ, điện, nước đã làm xong, từng lô đã cắm mốc và có giấy chứng nhận riêng. Bạn xem mặt bằng, chọn lô, tính tiền từng đợt ngay trên trang này rồi mới hẹn đi xem đất.</p>
+          <div class="hero-cta">
+            <a class="btn btn-a" href="#mat-bang">Xem mặt bằng 40&nbsp;lô <svg class="i"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-g" href="#tien-do">Tính tiến độ thanh&nbsp;toán</a>
+          </div>
+          <div class="hero-note">
+            <span><svg class="i"><use href="#i-shield"/></svg>Sổ riêng từng&nbsp;lô</span>
+            <span><svg class="i"><use href="#i-ruler"/></svg>Đã cắm mốc&nbsp;ranh</span>
+            <span><svg class="i"><use href="#i-road"/></svg>Đường nhựa 12–17&nbsp;m</span>
+          </div>
+        </div>
+        <figure class="hero-fig" id="heroFig">
+          <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=1600&q=80" width="1600" height="1200" alt="Khu dân cư nhìn từ trên cao với các lô nhà và tuyến đường chia ô bàn cờ" fetchpriority="high">
+          <span class="tint" aria-hidden="true"></span>
+          <svg class="hero-ov" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path class="bd draw" pathLength="1" d="M72 104 L328 92 L338 300 L82 312 Z"/>
+            <path class="ln draw" pathLength="1" d="M76 174 L331 162 M79 242 L335 230 M136 101 L146 309 M200 98 L210 306 M264 95 L274 303"/>
+            <path class="ln draw" pathLength="1" d="M104 102 L114 310 M168 100 L178 308 M232 97 L242 305 M296 94 L306 302" style="opacity:.4"/>
+            <rect class="sel" x="203" y="168" width="58" height="64" transform="rotate(-2.7 232 200)"/>
+            <circle class="mk" cx="72" cy="104" r="4.5"/><circle class="mk" cx="328" cy="92" r="4.5"/><circle class="mk" cx="338" cy="300" r="4.5"/><circle class="mk" cx="82" cy="312" r="4.5"/>
+            <text x="56" y="96">M1</text><text x="334" y="86">M2</text><text x="344" y="312">M3</text><text x="66" y="326">M4</text>
+          </svg>
+          <span class="coord" id="heroXY">X 1.191.240 · Y 412.380</span>
+          <div class="callout">
+            <b>Lô B-07 <small style="font-size:12px;color:var(--mint)">· còn trống</small></b>
+            <dl><dt>Diện tích</dt><dd>90&nbsp;m²</dd><dt>Hướng</dt><dd>Đông&nbsp;Nam</dd><dt>Mặt tiền</dt><dd>Đường N1, 17&nbsp;m</dd></dl>
+          </div>
+        </figure>
+      </div>
+      <div class="tblock">
+        <div><span>Quy mô</span><b>1,42&nbsp;ha</b></div>
+        <div><span>Số lô</span><b>40&nbsp;lô</b></div>
+        <div><span>Diện tích lô</span><b>90–144&nbsp;m²</b></div>
+        <div><span>Đường nội bộ</span><b>12–17&nbsp;m</b></div>
+        <div><span>Pháp lý</span><b>Sổ riêng</b></div>
+        <div><span>Giá từ</span><b id="heroFrom">1,48&nbsp;tỷ <small>/lô</small></b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -> FIX -->
+<section class="sec paper" id="noi-lo">
+  <div class="wrap pain-grid">
+    <div class="pain-side rv">
+      <span class="eb"><b>00</b>Nỗi lo &amp; cách làm</span>
+      <h2>Mua đất vùng ven, ai cũng lo mấy chuyện&nbsp;này</h2>
+      <p class="lead">Đất nền vùng ven có giá dễ tiếp cận hơn nội thành, nhưng người mua hay vướng sổ chung, quy hoạch mập mờ, hạ tầng còn hẹn. Thửa Xanh làm phần khó trước, rồi mới mở bán.</p>
+      <figure class="pain-fig">
+        <img src="https://images.unsplash.com/photo-1762146828422-50a8bd416d3c?auto=format&fit=crop&w=1200&q=80" width="1200" height="750" loading="lazy" alt="Bản vẽ quy hoạch trải trên bàn làm việc">
+        <figcaption><span>H.00 · Bản vẽ phân lô</span><span>Tỷ lệ 1/500</span></figcaption>
+      </figure>
+    </div>
+    <div>
+      <div class="notes-hd" aria-hidden="true"><span>Mục</span><span>Điều hay gặp</span><span>Ở Thửa Xanh</span></div>
+      <div class="notes">
+        <div class="note rv"><div class="n">N-01</div><div class="bad"><h3>Sổ chung, chia nhau bằng vi&nbsp;bằng</h3><p>Nhiều người cùng đứng một sổ lớn, mỗi người giữ một tờ vi bằng. Muốn bán, thế chấp hay xin phép xây đều vướng.</p></div><div class="fix"><span><svg class="i"><use href="#i-check"/></svg>Cách làm</span><p>Mỗi lô có giấy chứng nhận quyền sử dụng đất riêng, mục đích đất ở. Công chứng xong, bạn làm thủ tục sang tên để đứng tên mình.</p></div></div>
+        <div class="note rv"><div class="n">N-02</div><div class="bad"><h3>Diện tích trên giấy khác ngoài thực&nbsp;địa</h3><p>Đến lúc xây mới biết lô hẹp hơn vài tấc, mốc ranh bị xê dịch.</p></div><div class="fix"><span><svg class="i"><use href="#i-check"/></svg>Cách làm</span><p>Cột mốc bê tông ở bốn góc lô, toạ độ khớp với bản vẽ. Hôm xem đất, kỹ thuật viên đo lại trước mặt bạn.</p></div></div>
+        <div class="note rv"><div class="n">N-03</div><div class="bad"><h3>Quy hoạch không rõ, sợ dính lộ&nbsp;giới</h3><p>Không biết lô có nằm trong phần mở đường, được xây mấy tầng, lùi vào bao nhiêu mét.</p></div><div class="fix"><span><svg class="i"><use href="#i-check"/></svg>Cách làm</span><p>Bản vẽ quy hoạch chi tiết 1/500 để công khai tại văn phòng dự án. Lộ giới từng tuyến đường ghi ngay trên mặt bằng.</p></div></div>
+        <div class="note rv"><div class="n">N-04</div><div class="bad"><h3>Đường chưa làm, điện nước còn&nbsp;hẹn</h3><p>Mua xong chờ vài năm mới có đường vào, muốn xây cũng chưa kéo được điện.</p></div><div class="fix"><span><svg class="i"><use href="#i-check"/></svg>Cách làm</span><p>Đường nhựa 12–17 m, vỉa hè, cống thoát nước, điện và nước máy đã đấu nối tới từng lô trước khi mở bán.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section class="plan-sec dark gridbg" id="mat-bang">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="rv"><span class="eb"><b>01</b>Mặt bằng phân lô · Bản vẽ TX-01</span><h2>Bấm vào từng lô để xem số liệu, như cầm bản vẽ trên&nbsp;tay</h2></div>
+      <p class="lead rv d1">40 lô, chia 4 khu A, B, C, D hai bên đường chính N1. Lọc theo diện tích và hướng, bấm vào lô để xem kích thước, giá mỗi mét vuông và tình trạng hiện tại. Giá và tình trạng là dữ liệu mẫu.</p>
+    </div>
+    <div class="tools" role="toolbar" aria-label="Bộ lọc lô đất">
+      <div class="fg" role="group" aria-label="Lọc theo diện tích"><span>Diện tích</span>
+        <button class="chip" type="button" data-f="area" data-v="all" aria-pressed="true">Tất cả</button>
+        <button class="chip" type="button" data-f="area" data-v="s" aria-pressed="false">Dưới 100&nbsp;m²</button>
+        <button class="chip" type="button" data-f="area" data-v="m" aria-pressed="false">100–120&nbsp;m²</button>
+        <button class="chip" type="button" data-f="area" data-v="l" aria-pressed="false">Trên 120&nbsp;m²</button>
+      </div>
+      <div class="fg" role="group" aria-label="Lọc theo hướng"><span>Hướng</span>
+        <button class="chip" type="button" data-f="dir" data-v="all" aria-pressed="true">Tất cả</button>
+        <button class="chip" type="button" data-f="dir" data-v="DN" aria-pressed="false">Đông&nbsp;Nam</button>
+        <button class="chip" type="button" data-f="dir" data-v="TB" aria-pressed="false">Tây&nbsp;Bắc</button>
+        <button class="chip" type="button" data-f="dir" data-v="goc" aria-pressed="false">Lô góc</button>
+      </div>
+      <div class="fg"><button class="chip" type="button" id="onlyAv" aria-pressed="false">Chỉ hiện lô còn&nbsp;trống</button></div>
+      <p class="cnt" id="cnt" aria-live="polite"></p>
+    </div>
+    <div class="plan-grid">
+      <div>
+        <div class="plan-box rv">
+          <div class="swipe"><svg class="i"><use href="#i-swipe"/></svg>Vuốt ngang để xem hết bản vẽ</div>
+          <div class="plan-scroll" id="planScroll">
+            <svg id="plan" viewBox="0 0 962 871" role="group" aria-label="Mặt bằng phân lô 40 lô của Thửa Xanh"></svg>
+          </div>
+          <div class="plan-ft">
+            <span class="lg"><i class="c"></i>Còn trống</span>
+            <span class="lg"><i class="d"></i>Đã đặt cọc</span>
+            <span class="lg"><i class="b"></i>Đã bán</span>
+            <span class="lg"><i class="s"></i>Đang chọn</span>
+            <span class="xy" id="planXY">Toạ độ minh hoạ · rê chuột trên bản vẽ</span>
+          </div>
+        </div>
+        <p class="chips-t">Danh sách lô theo bộ lọc</p>
+        <div class="lot-chips" id="lotChips"></div>
+      </div>
+      <aside class="spec rv d1" id="spec" aria-live="polite" aria-label="Thông số lô đang chọn">
+        <div class="spec-hd"><span class="l">Lô đang chọn</span><b id="sId">A-10</b><span class="st con" id="sSt"><i></i>Còn trống</span></div>
+        <table>
+          <tbody>
+            <tr><th scope="row">Diện tích</th><td id="sArea"></td></tr>
+            <tr><th scope="row">Kích thước</th><td id="sDim"></td></tr>
+            <tr><th scope="row">Hướng chính</th><td id="sDir"></td></tr>
+            <tr><th scope="row">Mặt tiền</th><td id="sRoad"></td></tr>
+            <tr><th scope="row">Giá mỗi m²</th><td id="sPm"></td></tr>
+            <tr class="tot"><th scope="row">Giá trị lô</th><td id="sTot"></td></tr>
+          </tbody>
+        </table>
+        <div class="spec-act">
+          <button class="btn btn-a" type="button" id="sCalc">Tính tiến độ cho lô&nbsp;này <svg class="i"><use href="#i-arrow"/></svg></button>
+          <button class="btn btn-g" type="button" id="sBook">Hẹn xem lô này tại&nbsp;đất</button>
+        </div>
+        <p class="spec-note" id="sNote"></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SITE -->
+<section class="sec paper" id="hien-trang">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="rv"><span class="eb"><b>02</b>Hiện trạng &amp; xung quanh</span><h2>Đất đã sẵn hạ tầng, xung quanh là khu dân cư hiện&nbsp;hữu</h2></div>
+      <p class="lead rv d1">Ảnh dưới đây là ảnh minh hoạ cho giao diện. Với dự án thật, mục này đặt ảnh chụp flycam và ảnh thực địa theo từng tháng để người mua ở xa vẫn theo dõi được.</p>
+    </div>
+    <div class="site-grid">
+      <figure class="ph ph1 rv"><img src="https://images.unsplash.com/photo-1784767348409-2b530cfcb161?auto=format&fit=crop&w=1600&q=80" width="1400" height="1000" loading="lazy" alt="Khu dân cư nhìn từ trên cao, nhà thấp tầng hai bên đường nội khu"><figcaption><b>H.01</b>Khu dân cư hiện hữu sát ranh dự án (ảnh minh hoạ)</figcaption></figure>
+      <figure class="ph ph2 rv d1"><img src="https://images.unsplash.com/photo-1772442198624-4fc4d7281e89?auto=format&fit=crop&w=1000&q=80" width="1000" height="1000" loading="lazy" alt="Kỹ sư cầm bản vẽ kiểm tra tại hiện trường"><figcaption><b>H.02</b>Đối chiếu mốc ranh với bản vẽ</figcaption></figure>
+      <figure class="ph ph3 rv"><img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1000&q=80" width="1000" height="800" loading="lazy" alt="Nông dân làm đồng cạnh máy cày ở vùng ven"><figcaption><b>H.03</b>Nhịp sống vùng ven, nhiều mảng xanh</figcaption></figure>
+      <div class="dist rv d1">
+        <h3>Khoảng cách tới tiện ích quanh khu&nbsp;đất</h3>
+        <table id="distT">
+          <tbody>
+            <tr><td>Tuyến đường tỉnh<span class="bar"><i data-w="8"></i></span></td><td>~600&nbsp;m</td></tr>
+            <tr><td>Chợ, cửa hàng tiện lợi<span class="bar"><i data-w="16"></i></span></td><td>~1,2&nbsp;km</td></tr>
+            <tr><td>Trường tiểu học, trung học cơ sở<span class="bar"><i data-w="20"></i></span></td><td>~1,5&nbsp;km</td></tr>
+            <tr><td>Trạm y tế xã<span class="bar"><i data-w="27"></i></span></td><td>~2&nbsp;km</td></tr>
+            <tr><td>Trung tâm hành chính xã<span class="bar"><i data-w="40"></i></span></td><td>~3&nbsp;km</td></tr>
+            <tr><td>Khu công nghiệp lân cận<span class="bar"><i data-w="80"></i></span></td><td>~6&nbsp;km</td></tr>
+          </tbody>
+        </table>
+        <p>Khoảng cách là số liệu minh hoạ, dự án thật cần đo theo bản đồ thực tế.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section class="sec paper" id="phap-ly" style="background-color:var(--paper2)">
+  <div class="wrap legal-grid">
+    <div class="legal-l rv">
+      <span class="eb"><b>03</b>Pháp lý</span>
+      <h2 style="margin-top:16px">Pháp lý, giải thích bằng lời dễ&nbsp;hiểu</h2>
+      <p class="lead">Không cần thuộc luật đất đai mới mua được đất. Bốn mục bên cạnh là những điều nên hiểu trước khi đặt cọc, viết lại bằng lời thường.</p>
+      <p style="margin-top:16px"><span class="tag-sample"><svg class="i" style="width:14px;height:14px"><use href="#i-doc"/></svg>Nội dung mẫu, cần đối chiếu hồ sơ thật</span></p>
+      <figure class="ph"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" width="1200" height="900" loading="lazy" alt="Người mua ký giấy tờ hợp đồng trên bàn"><figcaption><b>H.04</b>Đọc kỹ hợp đồng trước khi ký</figcaption></figure>
+      <div class="docs">
+        <div><svg class="i"><use href="#i-doc"/></svg><span>Quyết định phê duyệt quy hoạch chi tiết 1/500<small>Bản sao xem tại văn phòng dự án</small></span></div>
+        <div><svg class="i"><use href="#i-doc"/></svg><span>Giấy chứng nhận của 40 lô<small>Đối chiếu số thửa, số tờ bản đồ từng lô</small></span></div>
+        <div><svg class="i"><use href="#i-doc"/></svg><span>Biên bản nghiệm thu hạ tầng<small>Đường, thoát nước, điện, nước</small></span></div>
+      </div>
+    </div>
+    <div class="art">
+      <article class="rv">
+        <span class="sg">§1</span>
+        <div>
+          <h3>Sổ riêng từng lô là&nbsp;gì?</h3>
+          <p>Là mỗi lô có một giấy chứng nhận quyền sử dụng đất riêng, ghi rõ số thửa, số tờ bản đồ, diện tích, mục đích sử dụng. Khác với “sổ chung” (nhiều người cùng đứng một sổ), bạn tự sang tên, thế chấp vay ngân hàng hay xin phép xây dựng cho lô của mình mà không phụ thuộc người khác.</p>
+          <div class="cmp">
+            <figure class="bad">
+              <svg viewBox="0 0 200 110" aria-hidden="true"><rect x="10" y="10" width="180" height="70" fill="#F6F7F1" stroke="#9A3B23" stroke-width="1.5"/><path d="M46 10v70M82 10v70M118 10v70M154 10v70" stroke="#9A3B23" stroke-width="1" stroke-dasharray="3 3"/><rect x="70" y="86" width="60" height="20" fill="#9A3B23"/><text x="100" y="100" text-anchor="middle" font-size="10" font-family="Archivo" font-weight="700" fill="#fff">1 SỔ</text></svg>
+              <figcaption><b>Sổ chung</b>5 người, 1 sổ. Ranh giữa các phần chỉ là thoả thuận.</figcaption>
+            </figure>
+            <figure class="good">
+              <svg viewBox="0 0 200 110" aria-hidden="true"><g fill="#F6F7F1" stroke="#1C4B3E" stroke-width="1.5"><rect x="10" y="10" width="32" height="70"/><rect x="47" y="10" width="32" height="70"/><rect x="84" y="10" width="32" height="70"/><rect x="121" y="10" width="32" height="70"/><rect x="158" y="10" width="32" height="70"/></g><g fill="#1C4B3E"><rect x="14" y="86" width="24" height="18"/><rect x="51" y="86" width="24" height="18"/><rect x="88" y="86" width="24" height="18"/><rect x="125" y="86" width="24" height="18"/><rect x="162" y="86" width="24" height="18"/></g></svg>
+              <figcaption><b>Sổ riêng</b>5 lô, 5 sổ. Mỗi lô có ranh, mốc và chủ riêng.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      <article class="rv">
+        <span class="sg">§2</span>
+        <div>
+          <h3>Quy hoạch chi tiết 1/500 là&nbsp;gì?</h3>
+          <p>Là bản vẽ quy hoạch tỷ lệ 1/500 do cơ quan nhà nước có thẩm quyền phê duyệt. Bản vẽ thể hiện ranh từng lô, lộ giới đường, khoảng lùi xây dựng, mật độ và số tầng được xây. Nói gọn: 1 cm trên giấy bằng 5 m ngoài thực địa, đủ chi tiết để biết lô của bạn được xây gì, xây tới đâu.</p>
+          <div class="scale"><span class="bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>1&nbsp;cm trên bản vẽ = 5&nbsp;m ngoài thực địa</span></div>
+        </div>
+      </article>
+      <article class="rv">
+        <span class="sg">§3</span>
+        <div>
+          <h3>Đất ở khác đất trồng cây ra&nbsp;sao?</h3>
+          <p>Sổ ghi mục đích “đất ở tại nông thôn” (ký hiệu ONT) hoặc “đất ở tại đô thị” (ODT) thì được xây nhà ở, sau khi xin phép theo quy định. Đất trồng cây lâu năm (CLN) muốn xây nhà phải xin chuyển mục đích và nộp tiền sử dụng đất. Các lô ở Thửa Xanh ghi mục đích đất ở trên sổ (thông tin mẫu).</p>
+          <div class="kv"><span><b>ONT</b> · Đất ở nông thôn</span><span><b>ODT</b> · Đất ở đô thị</span><span><b>CLN</b> · Đất trồng cây lâu năm</span></div>
+        </div>
+      </article>
+      <article class="rv">
+        <span class="sg">§4</span>
+        <div>
+          <h3>Tự kiểm tra gì trước khi đặt&nbsp;cọc?</h3>
+          <p>Dù mua ở đâu, bạn nên tự làm những việc sau. Đội ngũ dự án sẽ chỉ chỗ tra cứu, không thay bạn quyết định.</p>
+          <ul class="chk">
+            <li><svg class="i"><use href="#i-check"/></svg>Đối chiếu bản sao sổ với sổ gốc: số thửa, số tờ, diện tích, mục đích sử dụng.</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Tra cứu thông tin thửa đất tại chi nhánh văn phòng đăng ký đất đai nơi có đất.</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Xem quyết định phê duyệt quy hoạch 1/500 và vị trí lô trên bản vẽ.</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Ra thực địa đo lại mốc ranh, chụp ảnh lưu lại.</li>
+            <li><svg class="i"><use href="#i-check"/></svg>Đọc kỹ điều khoản hoàn cọc, phạt cọc trong hợp đồng đặt cọc.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CALC -->
+<section class="sec dark gridbg" id="tien-do">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="rv"><span class="eb"><b>04</b>Tiến độ thanh toán · Vay ngân hàng</span><h2>Tính tiền từng đợt, có hoặc&nbsp;không vay ngân&nbsp;hàng</h2></div>
+      <p class="lead rv d1">Chọn lô, phương án thanh toán và tỷ lệ vay. Bảng bên cạnh cho biết mỗi đợt bạn trả bao nhiêu, ngày nào, phần nào ngân hàng giải ngân, và tiền trả hằng tháng ước tính.</p>
+    </div>
+    <div class="calc-grid">
+      <form class="cin rv" id="calcF" onsubmit="return false" aria-label="Thông số tính tiến độ">
+        <label class="fld"><span>Lô đất</span><select id="cLot" aria-label="Chọn lô đất"></select></label>
+        <div class="fld"><span>Phương án thanh toán</span>
+          <div class="seg" role="group" aria-label="Phương án thanh toán">
+            <button type="button" data-plan="std" aria-pressed="true">Tiến độ 5&nbsp;đợt</button>
+            <button type="button" data-plan="fast" aria-pressed="false">Thanh toán nhanh (−2%)</button>
+          </div>
+        </div>
+        <label class="fld"><span>Ngày đặt cọc dự kiến</span><input type="date" id="cDate"></label>
+        <label class="fld"><span>Tỷ lệ vay ngân hàng <output id="oLoan" for="cLoan">50%</output></span><input type="range" id="cLoan" min="0" max="70" step="5" value="50"><span class="rg-l"><span>Không vay</span><span>70%</span></span></label>
+        <label class="fld"><span>Thời hạn vay <output id="oYrs" for="cYrs">15 năm</output></span><input type="range" id="cYrs" min="5" max="25" step="1" value="15"><span class="rg-l"><span>5 năm</span><span>25 năm</span></span></label>
+        <label class="fld" style="margin-bottom:0"><span>Lãi suất giả định <output id="oRate" for="cRate">9,0%/năm</output></span><input type="range" id="cRate" min="6" max="13" step="0.1" value="9"><span class="rg-l"><span>6%</span><span>13%</span></span></label>
+      </form>
+      <div class="rv d1">
+        <div class="cout">
+          <div class="kpi">
+            <div><span>Giá trị lô</span><b id="kPrice"></b><small id="kPriceS"></small></div>
+            <div class="am"><span>Vốn tự có cần chuẩn bị</span><b id="kOwn"></b><small id="kOwnS"></small></div>
+            <div><span>Số tiền vay</span><b id="kLoan"></b><small id="kLoanS"></small></div>
+          </div>
+          <table class="sched" aria-label="Lịch thanh toán theo đợt">
+            <thead><tr><th>Đợt</th><th>Ngày dự kiến</th><th class="r">Tỷ lệ</th><th class="r">Bạn trả</th><th class="r">Ngân hàng giải ngân</th></tr></thead>
+            <tbody id="schedB"></tbody>
+            <tfoot id="schedF"></tfoot>
+          </table>
+          <div class="loan" id="loanBox"></div>
+        </div>
+        <p class="disc">Công cụ minh hoạ: lãi suất là giả định, tính theo dư nợ giảm dần, chưa gồm phí bảo hiểm khoản vay, lệ phí trước bạ, phí công chứng. Tỷ lệ cho vay, lãi suất và thời điểm giải ngân thực tế do ngân hàng thẩm định. Đây không phải báo giá hay lời khuyên tài chính.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTE -->
+<section class="sec paper" id="quy-trinh">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="rv"><span class="eb"><b>05</b>Lý trình mua đất</span><h2>Từ lúc xem bản vẽ đến ngày cầm sổ đứng tên&nbsp;mình</h2></div>
+      <p class="lead rv d1">Bảy chặng, mỗi chặng có giấy tờ rõ ràng. Bạn có thể dừng ở bất kỳ chặng nào trước khi đặt cọc mà không mất gì.</p>
+    </div>
+    <div class="route">
+      <div class="stn rv"><span class="km">KM 0+000</span><div class="dot"></div><h3>Xem bản vẽ online</h3><p>Chọn lô trên mặt bằng, tính thử tiến độ thanh toán.</p></div>
+      <div class="stn rv d1"><span class="km">KM 0+100</span><div class="dot"></div><h3>Hẹn lịch xem&nbsp;đất</h3><p>Chọn ngày, có xe đưa đón cuối tuần (lịch mẫu).</p></div>
+      <div class="stn rv d2"><span class="km">KM 0+200</span><div class="dot"></div><h3>Đo lại mốc tại&nbsp;lô</h3><p>Kỹ thuật viên đo kích thước, chỉ mốc bốn góc.</p></div>
+      <div class="stn rv d3"><span class="km">KM 0+300</span><div class="dot"></div><h3>Kiểm tra pháp&nbsp;lý</h3><p>Xem sổ gốc, quy hoạch 1/500, tự tra cứu thông tin thửa.</p></div>
+      <div class="stn hl rv"><span class="km">KM 0+400</span><div class="dot"></div><h3>Đặt cọc giữ&nbsp;lô</h3><p>Ký hợp đồng đặt cọc, nhận lịch thanh toán từng đợt.</p></div>
+      <div class="stn rv d1"><span class="km">KM 0+500</span><div class="dot"></div><h3>Công chứng chuyển&nbsp;nhượng</h3><p>Ký hợp đồng tại văn phòng công chứng, nộp hồ sơ sang tên.</p></div>
+      <div class="stn hl rv d2"><span class="km">KM 0+600</span><div class="dot"></div><h3>Nhận sổ đứng tên&nbsp;bạn</h3><p>Nhận giấy chứng nhận, bàn giao mốc ranh ngoài thực địa.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec paper" id="danh-gia" style="background-color:var(--paper2)">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="rv"><span class="eb"><b>06</b>Phiếu ghi nhận</span><h2>Người đã đi xem đất nói&nbsp;gì</h2></div>
+      <p class="lead rv d1">Ba đánh giá dưới đây là đánh giá mẫu để minh hoạ giao diện, không phải ý kiến của khách hàng thật.</p>
+    </div>
+    <div class="revs">
+      <article class="rev rv"><span class="stamp">Đánh giá mẫu</span><span class="lotref">LÔ C-03</span><blockquote>“Tôi mang bản sao sổ lên văn phòng đăng ký đất đai tra trước, khớp số thửa rồi mới đặt cọc. Bên dự án chỉ chỗ tra, không hối thúc gì.”</blockquote><div class="who"><span class="av" aria-hidden="true">NH</span><div><b>Chị Ngọc Hân</b><small>Mua đất xây nhà cho ba mẹ</small></div></div></article>
+      <article class="rev rv d1"><span class="stamp">Đánh giá mẫu</span><span class="lotref">LÔ B-09</span><blockquote>“Hôm xem đất trời mưa, kỹ thuật vẫn dắt đi từng cột mốc, kéo thước đo lại chiều ngang lô. Thấy rõ ràng nên tôi yên tâm.”</blockquote><div class="who"><span class="av" aria-hidden="true">QB</span><div><b>Anh Quốc Bảo</b><small>Kỹ sư, sống ở TP.HCM</small></div></div></article>
+      <article class="rev rv d2"><span class="stamp">Đánh giá mẫu</span><span class="lotref">LÔ D-06</span><blockquote>“Bảng tiến độ ghi ngày cụ thể từng đợt, vợ chồng tôi tính được phần vay ngân hàng và tiền trả mỗi tháng trước khi ký.”</blockquote><div class="who"><span class="av" aria-hidden="true">MT</span><div><b>Anh Minh, chị Thảo</b><small>Gia đình trẻ ở Đồng Nai</small></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec paper" id="hoi-dap">
+  <div class="wrap faq-grid">
+    <div class="faq-l rv">
+      <span class="eb"><b>07</b>Hỏi đáp</span>
+      <h2 style="margin-top:16px">Câu hỏi người mua hay&nbsp;gặp</h2>
+      <p class="lead">Chưa thấy câu bạn cần? Gọi hotline mẫu 0900&nbsp;000&nbsp;000 hoặc để lại số, tư vấn viên gọi lại trong giờ làm việc.</p>
+      <a class="btn btn-i" href="#lien-he">Để lại số điện&nbsp;thoại <svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="qa">
+      <details class="rv"><summary>Sổ riêng từng lô nghĩa là tôi đứng tên ngay khi đặt&nbsp;cọc? <span class="pm" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans">Chưa. Đặt cọc là giữ lô. Sau khi thanh toán theo hợp đồng và công chứng chuyển nhượng, hồ sơ sang tên được nộp tại chi nhánh văn phòng đăng ký đất đai. Thời gian xử lý theo quy định của địa phương; tư vấn viên sẽ báo mốc dự kiến khi bạn ký.</div></details>
+      <details class="rv"><summary>Mua xong có xây nhà ngay được&nbsp;không? <span class="pm" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans">Lô là đất ở, hạ tầng đã có. Bạn cần xin giấy phép xây dựng (hoặc thuộc diện được miễn phép, tuỳ quy định địa phương) và xây theo khoảng lùi, mật độ, số tầng ghi trong quy hoạch 1/500.</div></details>
+      <details class="rv"><summary>Giá trên mặt bằng đã gồm thuế, phí&nbsp;chưa? <span class="pm" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans">Giá mẫu trên trang chưa gồm lệ phí trước bạ, phí công chứng và phí thẩm định hồ sơ. Các khoản này thu theo quy định nhà nước; tư vấn viên gửi bảng tạm tính trước khi bạn ký.</div></details>
+      <details class="rv"><summary>Đặt cọc rồi đổi ý thì&nbsp;sao? <span class="pm" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans">Điều kiện hoàn cọc và phạt cọc ghi rõ trong hợp đồng đặt cọc. Bạn có thể xin hợp đồng mẫu mang về đọc trước, hỏi luật sư hoặc người thân rồi mới ký.</div></details>
+      <details class="rv"><summary>Dự án có hỗ trợ vay ngân hàng&nbsp;không? <span class="pm" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans">Có thể giới thiệu ngân hàng cho vay mua đất ở. Tỷ lệ cho vay, lãi suất, thời hạn do ngân hàng thẩm định theo hồ sơ của bạn. Máy tính trên trang chỉ để ước tính.</div></details>
+      <details class="rv"><summary>Có xe đưa đón đi xem đất&nbsp;không? <span class="pm" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div class="ans">Thứ Bảy, Chủ nhật có xe đưa đón từ TP.HCM và Biên Hoà, đăng ký trước một ngày (lịch mẫu). Ngày thường, bạn tự đến văn phòng dự án, có người dẫn ra lô.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec dark gridbg" id="lien-he">
+  <div class="wrap ct-grid">
+    <div class="ct-l rv">
+      <span class="eb"><b>08</b>Đặt lịch</span>
+      <h2 style="margin-top:16px">Đặt lịch xem đất tận&nbsp;nơi</h2>
+      <p class="lead">Chọn lô và ngày bạn muốn đến. Kỹ thuật viên sẽ đo lại mốc ngay tại lô, mang theo bản sao sổ và bản vẽ quy hoạch để bạn đối chiếu.</p>
+      <div class="ct-info">
+        <div><svg class="i"><use href="#i-phone"/></svg><div><b><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></b><span>Hotline mẫu, có Zalo</span></div></div>
+        <div><svg class="i"><use href="#i-pin"/></svg><div><b>Văn phòng dự án</b><span>Khu vực Long Thành, tỉnh Đồng Nai (địa chỉ minh hoạ)</span></div></div>
+        <div><svg class="i"><use href="#i-clock"/></svg><div><b>08:00–17:30, mỗi ngày</b><span>Cả Thứ Bảy, Chủ nhật</span></div></div>
+        <div><svg class="i"><use href="#i-car"/></svg><div><b>Xe đưa đón cuối tuần</b><span>Từ TP.HCM và Biên Hoà, đăng ký trước một ngày (lịch mẫu)</span></div></div>
+      </div>
+    </div>
+    <div class="form rv d1">
+      <form id="bookF" novalidate>
+        <h3>Phiếu hẹn xem đất</h3>
+        <div class="two">
+          <label class="f"><span>Họ và tên</span><input type="text" id="fName" name="name" autocomplete="name" placeholder="Nguyễn Văn An" required></label>
+          <label class="f"><span>Số điện thoại</span><input type="tel" id="fPhone" name="phone" autocomplete="tel" inputmode="tel" placeholder="0900 000 000" required></label>
+        </div>
+        <label class="f"><span>Lô quan tâm</span><select id="fLot" name="lot"></select></label>
+        <div class="two">
+          <label class="f"><span>Ngày muốn xem</span><input type="date" id="fDate" name="date" required></label>
+          <label class="f"><span>Khung giờ</span><select id="fTime" name="time"><option>08:00–10:00</option><option>10:00–12:00</option><option>14:00–16:00</option><option>16:00–17:30</option></select></label>
+        </div>
+        <div class="f" style="margin-top:16px"><span style="display:block;font:600 12px/1.2 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--on-d2);margin-bottom:8px">Hình thức</span>
+          <div class="seg" role="group" aria-label="Hình thức xem đất">
+            <button type="button" data-mode="Xem tại đất" aria-pressed="true">Xem tại đất</button>
+            <button type="button" data-mode="Gọi video xem bản vẽ" aria-pressed="false">Gọi video xem bản&nbsp;vẽ</button>
+          </div>
+        </div>
+        <label class="consent"><input type="checkbox" id="fOk" name="consent"><span>Tôi đồng ý để Thửa Xanh xử lý dữ liệu cá nhân (họ tên, số điện thoại) nhằm liên hệ hẹn lịch xem đất, theo quy định về bảo vệ dữ liệu cá nhân.</span></label>
+        <p class="err" id="fErr" role="alert"></p>
+        <button class="btn btn-a" type="submit">Gửi phiếu hẹn <svg class="i"><use href="#i-arrow"/></svg></button>
+      </form>
+      <div class="ok" id="okBox" tabindex="-1">
+        <div class="tick"><svg class="i"><use href="#i-check"/></svg></div>
+        <h3>Đã ghi nhận phiếu hẹn</h3>
+        <p id="okTxt"></p>
+        <p style="font-size:13px">Đây là form minh hoạ: dữ liệu không được gửi đi đâu.</p>
+        <button class="btn btn-g" type="button" id="okBack">Đặt thêm lịch khác</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <a class="logo" href="#top" aria-label="Thửa Xanh, về đầu trang">
+          <svg viewBox="0 0 36 36" aria-hidden="true"><rect x="1" y="1" width="34" height="34" fill="none" stroke="#8BD9B7" stroke-width="1.6"/><path d="M18 1v34M1 18h34" stroke="#8BD9B7" stroke-width="1" stroke-dasharray="2 2.5"/><rect x="19.5" y="19.5" width="14" height="14" fill="#F2B430"/></svg>
+          <span><b style="color:#fff">Thửa&nbsp;Xanh</b><small>Đất nền sổ riêng · Đồng&nbsp;Nai</small></span>
+        </a>
+        <p>Khu đất nền phân lô 40 lô, sổ riêng từng lô, vùng ven Long Thành, Đồng Nai. Chủ đầu tư và thông tin dự án trên trang là mẫu.</p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li>Khu vực Long Thành, Đồng Nai</li><li>08:00–17:30, mỗi ngày</li></ul>
+      </div>
+      <div>
+        <h4>Trên trang</h4>
+        <ul><li><a href="#mat-bang">Mặt bằng 40 lô</a></li><li><a href="#phap-ly">Pháp lý dễ hiểu</a></li><li><a href="#tien-do">Tiến độ thanh toán</a></li><li><a href="#lien-he">Đặt lịch xem đất</a></li></ul>
+      </div>
+    </div>
+    <div class="ft-b">
+      <span>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span>
+      <span>Thông tin pháp lý, quy hoạch, toạ độ, khoảng cách và lãi suất trên trang là minh hoạ, không phải cam kết hay lời khuyên đầu tư.</span>
+      <span>© <span id="yr">2026</span> Thửa Xanh (mẫu)</span>
+    </div>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var NB=' ';
+var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function fmt(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+function vnd(n){return fmt(Math.round(n/1000)*1000)+'đ'}
+function ty(n){var t=n/1e9;return (t>=10?t.toFixed(1):t.toFixed(2)).replace('.',',')+NB+'tỷ'}
+function trieu(n){var t=n/1e6;return (Math.round(t*10)/10).toString().replace('.',',')+NB+'triệu'}
+function dec(n){return String(n).replace('.',',')}
+var TODAY=new Date();TODAY.setHours(0,0,0,0);
+function p2(n){return (n<10?'0':'')+n}
+function dmy(d){return p2(d.getDate())+'/'+p2(d.getMonth()+1)+'/'+d.getFullYear()}
+function iso(d){return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())}
+function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x}
+$('#yr').textContent=TODAY.getFullYear();
+
+/* ---------- dữ liệu lô (mẫu) ---------- */
+var S=7,MG=40;
+var DIRN={TB:'Tây Bắc',DN:'Đông Nam',DB:'Đông Bắc',TN:'Tây Nam'};
+var ROWS=[
+ {y:12,face:'TB',road:'D1',rw:12,L:[7.5,6,6,6,8],R:[8,6,5.5,6,8]},
+ {y:30,face:'DN',road:'N1',rw:17,L:[8,5,5.5,7,8],R:[8,5,6.5,6,8]},
+ {y:65,face:'TB',road:'N1',rw:17,L:[6.5,6.5,6.5,6,8],R:[8,6,6,5.5,8]},
+ {y:83,face:'DN',road:'D2',rw:12,L:[7,5,5.5,8,8],R:[8,5.5,6,6,8]}
+];
+var SOLD={'A-02':1,'A-03':1,'A-07':1,'B-01':1,'B-04':1,'B-08':1,'C-02':1,'C-06':1,'D-03':1,'D-09':1};
+var RES={'A-05':1,'B-06':1,'C-04':1,'C-08':1,'D-05':1,'D-07':1,'A-09':1};
+var LOTS=[],BY={};
+ROWS.forEach(function(r,ri){
+  ['L','R'].forEach(function(side){
+    var blk=side==='L'?(ri<2?'A':'C'):(ri<2?'B':'D');
+    var x=side==='L'?5:50.5,top=(ri%2===0);
+    r[side].forEach(function(w,i){
+      var no=(top?0:5)+i+1,id=blk+'-'+p2(no);
+      var corner=side==='L'?i===4:(i===0||i===4);
+      var side2=!corner?null:(side==='L'||i===4?'DB':'TN');
+      var road2=!corner?null:((side==='L'&&i===4)||(side==='R'&&i===0)?'D3':'D4');
+      var area=Math.round(w*18*10)/10;
+      var pm=15800000+(r.road==='N1'?2400000:0)+(r.face==='DN'?600000:0)+(corner?1500000:0);
+      var st=SOLD[id]?'ban':(RES[id]?'coc':'con');
+      var L={id:id,blk:blk,x:x,y:r.y,w:w,d:18,area:area,face:r.face,corner:corner,side2:side2,road:r.road,rw:r.rw,road2:road2,pm:pm,total:pm*area,st:st};
+      LOTS.push(L);BY[id]=L;x+=w;
+    });
+  });
+});
+LOTS.sort(function(a,b){return a.id<b.id?-1:1});
+var STN={con:'Còn trống',coc:'Đã đặt cọc',ban:'Đã bán'};
+var avail=LOTS.filter(function(l){return l.st==='con'});
+var minTot=Math.min.apply(null,avail.map(function(l){return l.total}));
+$('#heroFrom').innerHTML=ty(minTot)+' <small>/lô</small>';
+function dirText(l){return DIRN[l.face]+(l.corner?' + '+DIRN[l.side2]+' (lô góc)':'')}
+function roadText(l){return 'Đường '+l.road+', '+l.rw+NB+'m'+(l.corner?' · góc đường '+l.road2:'')}
+
+/* ---------- vẽ mặt bằng ---------- */
+var svg=$('#plan'),X=function(m){return MG+m*S},W=function(m){return m*S};
+function sv(tag,attrs,txt){var s='<'+tag;for(var k in attrs)s+=' '+k+'="'+attrs[k]+'"';return s+(txt!=null?'>'+txt+'</'+tag+'>':'/>')}
+(function draw(){
+  var h=[];
+  h.push('<defs><pattern id="hatchA" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="rgba(242,180,48,.12)"/><line x1="0" y1="0" x2="0" y2="7" stroke="rgba(242,180,48,.75)" stroke-width="2.2"/></pattern>');
+  h.push('<pattern id="hatchS" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="6" height="6" fill="rgba(199,210,203,.05)"/><line x1="0" y1="0" x2="0" y2="6" stroke="rgba(199,210,203,.28)" stroke-width="1"/></pattern></defs>');
+  // lưới
+  for(var gx=0;gx<=126;gx+=5){h.push(sv('line',{'class':'gl'+(gx%10===0?' mj':''),x1:X(gx),y1:MG-8,x2:X(gx),y2:X(113)+8}));if(gx%20===0)h.push(sv('text',{'class':'gt',x:X(gx),y:MG-14,'text-anchor':'middle'},gx));}
+  for(var gy=0;gy<=113;gy+=5){h.push(sv('line',{'class':'gl'+(gy%10===0?' mj':''),x1:MG-8,y1:X(gy),x2:X(126)+8,y2:X(gy)}));if(gy%20===0)h.push(sv('text',{'class':'gt',x:MG-12,y:X(gy)+3,'text-anchor':'end'},gy));}
+  h.push(sv('text',{'class':'gt',x:X(126),y:MG-14,'text-anchor':'end'},'m'));
+  // công viên + dải cây
+  h.push(sv('rect',{'class':'park',x:X(96),y:X(0),width:W(30),height:W(48)}));
+  h.push(sv('rect',{'class':'park',x:X(96),y:X(65),width:W(30),height:W(48)}));
+  h.push(sv('rect',{'class':'park',x:X(0),y:X(12),width:W(5),height:W(36)}));
+  h.push(sv('rect',{'class':'park',x:X(0),y:X(65),width:W(5),height:W(36)}));
+  var seed=7;function rnd(){seed=(seed*9301+49297)%233280;return seed/233280}
+  for(var t=0;t<26;t++){h.push(sv('circle',{'class':'tree',cx:X(99+rnd()*24).toFixed(1),cy:X(16+rnd()*30).toFixed(1),r:(6+rnd()*7).toFixed(1)}))}
+  for(var t2=0;t2<7;t2++){h.push(sv('circle',{'class':'tree',cx:X(2.5),cy:X(15+t2*5),r:6}));h.push(sv('circle',{'class':'tree',cx:X(2.5),cy:X(68+t2*5),r:6}))}
+  h.push(sv('rect',{x:X(100),y:X(72),width:W(16),height:W(12),fill:'none',stroke:'rgba(139,217,183,.6)','stroke-width':1.2}));
+  h.push(sv('rect',{x:X(100),y:X(90),width:W(22),height:W(16),fill:'none',stroke:'rgba(139,217,183,.4)','stroke-width':1,'stroke-dasharray':'4 3'}));
+  h.push(sv('text',{'class':'pt',x:X(111),y:X(40),'text-anchor':'middle'},'CÔNG VIÊN'));
+  h.push(sv('text',{'class':'pt',x:X(111),y:X(43),'text-anchor':'middle',style:'font-size:9px;opacity:.75'},'NỘI KHU'));
+  h.push(sv('text',{'class':'pt',x:X(108),y:X(78.6),'text-anchor':'middle',style:'font-size:8.5px'},'NHÀ SHCĐ'));
+  h.push(sv('text',{'class':'pt',x:X(111),y:X(98.6),'text-anchor':'middle',style:'font-size:8.5px'},'SÂN CHƠI'));
+  // đường
+  var roads=[[0,0,96,12],[0,48,126,17],[0,101,96,12],[38.5,0,12,113],[84,0,12,113]];
+  roads.forEach(function(r){h.push(sv('rect',{'class':'rd',x:X(r[0]),y:X(r[1]),width:W(r[2]),height:W(r[3])}))});
+  h.push(sv('line',{'class':'rd-c',x1:X(0),y1:X(56.5),x2:X(126),y2:X(56.5)}));
+  [[0,48,126],[0,65,126],[5,12,33.5],[50.5,12,33.5],[5,101,33.5],[50.5,101,33.5]].forEach(function(e){h.push(sv('line',{'class':'rd-e',x1:X(e[0]),y1:X(e[1]),x2:X(e[0]+e[2]),y2:X(e[1])}))});
+  h.push(sv('text',{'class':'rt',x:X(20),y:X(57.6)},'ĐƯỜNG N1 · LỘ GIỚI 17 M'));
+  h.push(sv('text',{'class':'rt',x:X(60),y:X(7.3)},'ĐƯỜNG D1 · 12 M'));
+  h.push(sv('text',{'class':'rt',x:X(60),y:X(108.3)},'ĐƯỜNG D2 · 12 M'));
+  h.push(sv('text',{'class':'rt',transform:'translate('+X(45.6)+' '+X(40)+') rotate(-90)'},'D3 · 12 M'));
+  h.push(sv('text',{'class':'rt',transform:'translate('+X(91.1)+' '+X(40)+') rotate(-90)'},'D4 · 12 M'));
+  h.push(sv('text',{'class':'rt',x:X(1),y:X(63.5),style:'fill:#F2B430;font-size:9px'},'CỔNG CHÍNH'));
+  // lô
+  LOTS.forEach(function(l,i){
+    var lab='Lô '+l.id+', '+dec(l.area)+' mét vuông, hướng '+dirText(l)+', '+STN[l.st];
+    h.push('<g class="lot st-'+l.st+'" data-id="'+l.id+'" tabindex="0" role="button" aria-label="'+lab+'" style="transition-delay:'+(RM?0:(i*18))+'ms">');
+    h.push(sv('rect',{x:X(l.x)+1.5,y:X(l.y)+1.5,width:W(l.w)-3,height:W(l.d)-3}));
+    var cx=X(l.x+l.w/2),cy=X(l.y+l.d/2);
+    h.push(sv('text',{'class':'lid',x:cx,y:cy-2},l.id.replace('-','')));
+    h.push(sv('text',{'class':'la',x:cx,y:cy+12},dec(l.area)));
+    h.push('</g>');
+  });
+  // la bàn (bắc lệch 45°) + thước tỷ lệ
+  var cxp=X(118),cyp=X(7.5);
+  h.push('<g transform="translate('+cxp+' '+cyp+')" aria-hidden="true"><circle r="24" fill="#0B241E" stroke="rgba(139,217,183,.5)"/><g transform="rotate(45)"><path d="M0 -20 L6 4 L0 0 L-6 4 Z" fill="#F2B430"/><path d="M0 20 L6 4 L0 0 L-6 4 Z" fill="rgba(139,217,183,.4)"/><text y="-25" text-anchor="middle" style="font:700 11px Archivo,sans-serif;fill:#F2B430">B</text></g></g>');
+  var sx=X(0),sy=X(113)+26;
+  h.push('<g aria-hidden="true">'+sv('rect',{x:sx,y:sy,width:W(10),height:6,fill:'#C9EEDD'})+sv('rect',{x:sx+W(10),y:sy,width:W(10),height:6,fill:'none',stroke:'#C9EEDD'})+sv('text',{'class':'gt',x:sx,y:sy-5},'0')+sv('text',{'class':'gt',x:sx+W(10),y:sy-5,'text-anchor':'middle'},'10')+sv('text',{'class':'gt',x:sx+W(20),y:sy-5,'text-anchor':'middle'},'20 m')+sv('text',{'class':'gt',x:X(126),y:sy+6,'text-anchor':'end'},'MẶT BẰNG PHÂN LÔ · TỶ LỆ MINH HOẠ · BẢN VẼ TX-01')+'</g>');
+  h.push('<g id="dims" aria-hidden="true"></g><g id="xh" aria-hidden="true" style="display:none"><line class="xh" id="xhV" y1="'+(MG-8)+'" y2="'+(X(113)+8)+'"/><line class="xh" id="xhH" x1="'+(MG-8)+'" x2="'+(X(126)+8)+'"/></g>');
+  svg.innerHTML=h.join('');
+})();
+
+/* ---------- lọc + chọn lô ---------- */
+var F={area:'all',dir:'all',av:false},SEL=null;
+function match(l){
+  var a=F.area==='all'||(F.area==='s'&&l.area<100)||(F.area==='m'&&l.area>=100&&l.area<=120)||(F.area==='l'&&l.area>120);
+  var d=F.dir==='all'||(F.dir==='goc'?l.corner:l.face===F.dir);
+  return a&&d&&(!F.av||l.st==='con');
+}
+var chipsBox=$('#lotChips');
+function applyF(){
+  var m=0,mc=0,html='';
+  LOTS.forEach(function(l){
+    var ok=match(l),g=svg.querySelector('[data-id="'+l.id+'"]');
+    g.classList.toggle('dim',!ok);
+    if(ok){m++;if(l.st==='con')mc++;html+='<button type="button" class="'+l.st+(SEL&&SEL.id===l.id?' on':'')+'" data-id="'+l.id+'" aria-label="Chọn lô '+l.id+', '+STN[l.st]+'"><i></i>'+l.id+' · '+dec(l.area)+NB+'m²</button>';}
+  });
+  chipsBox.innerHTML=html||'<span style="color:var(--on-d2);font-size:14px">Không có lô nào khớp bộ lọc. Thử bỏ bớt điều kiện.</span>';
+  $('#cnt').innerHTML='Khớp bộ lọc: <b>'+m+'</b> lô · còn trống: <b>'+mc+'</b>';
+}
+$$('.tools .chip[data-f]').forEach(function(b){b.addEventListener('click',function(){
+  var f=b.getAttribute('data-f');F[f]=b.getAttribute('data-v');
+  $$('.tools .chip[data-f="'+f+'"]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});applyF();
+})});
+$('#onlyAv').addEventListener('click',function(){F.av=!F.av;this.setAttribute('aria-pressed',F.av?'true':'false');applyF()});
+
+function dimLines(l){
+  var x1=X(l.x),x2=X(l.x+l.w),y1=X(l.y),y2=X(l.y+l.d),top=(l.face==='TB');
+  var yy=top?y1-4:y2+4; // đường kích thước nằm phía mặt tiền (trên lòng đường)
+  var g='';
+  var ly=top?y1+16:y2-16;
+  g+=sv('line',{'class':'dim-l',x1:x1+2,y1:ly,x2:x2-2,y2:ly});
+  g+=sv('line',{'class':'dim-l',x1:x1+2,y1:ly-5,x2:x1+2,y2:ly+5})+sv('line',{'class':'dim-l',x1:x2-2,y1:ly-5,x2:x2-2,y2:ly+5});
+  var tw=44,ty2=top?y1-22:y2+8;
+  g+=sv('rect',{'class':'dim-bg',x:(x1+x2)/2-tw/2,y:ty2,width:tw,height:15})+sv('text',{'class':'dim-t',x:(x1+x2)/2,y:ty2+11.5},dec(l.w)+' m');
+  return g;
+}
+function select(id,opts){
+  var l=BY[id];if(!l)return;SEL=l;
+  $$('#plan .lot').forEach(function(g){g.classList.toggle('on',g.getAttribute('data-id')===id)});
+  $$('#lotChips button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-id')===id)});
+  $('#dims').innerHTML=dimLines(l);
+  $('#sId').textContent=l.id;
+  var st=$('#sSt');st.className='st '+l.st;st.innerHTML='<i></i>'+STN[l.st];
+  $('#sArea').innerHTML=dec(l.area)+NB+'m²';
+  $('#sDim').innerHTML=dec(l.w)+' × '+dec(l.d)+NB+'m';
+  $('#sDir').textContent=dirText(l);
+  $('#sRoad').textContent=roadText(l);
+  $('#sPm').textContent=vnd(l.pm);
+  $('#sTot').innerHTML=vnd(l.total)+'<small>≈ '+ty(l.total)+' · giá mẫu</small>';
+  var c=$('#sCalc'),b=$('#sBook');
+  if(l.st==='con'){c.innerHTML='Tính tiến độ cho lô'+NB+'này <svg class="i"><use href="#i-arrow"/></svg>';b.disabled=false;$('#sNote').textContent='Giá mẫu, cập nhật ngày '+dmy(TODAY)+'. Giá đã gồm hạ tầng, chưa gồm lệ phí trước bạ và phí công chứng.';}
+  else{c.innerHTML='Gợi ý lô còn trống tương'+NB+'tự <svg class="i"><use href="#i-arrow"/></svg>';b.disabled=true;$('#sNote').textContent=l.st==='ban'?'Lô này đã bán. Bấm nút trên để xem lô còn trống có diện tích và hướng gần giống.':'Lô này đang có khách đặt cọc. Bấm nút trên để xem lô còn trống gần giống.';}
+  if(opts&&opts.scroll){var sc=$('#planScroll');if(sc.scrollWidth>sc.clientWidth){var k=sc.scrollWidth/962;sc.scrollTo({left:Math.max(0,X(l.x+l.w/2)*k-sc.clientWidth/2),behavior:RM?'auto':'smooth'})}}
+}
+function similar(l){
+  return avail.slice().sort(function(a,b){
+    var sa=Math.abs(a.area-l.area)+(a.face===l.face?0:30)+(a.corner===l.corner?0:15);
+    var sb=Math.abs(b.area-l.area)+(b.face===l.face?0:30)+(b.corner===l.corner?0:15);return sa-sb})[0];
+}
+svg.addEventListener('click',function(e){var g=e.target.closest('.lot');if(g)select(g.getAttribute('data-id'))});
+svg.addEventListener('keydown',function(e){var g=e.target.closest&&e.target.closest('.lot');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(g.getAttribute('data-id'))}});
+chipsBox.addEventListener('click',function(e){var b=e.target.closest('button');if(b)select(b.getAttribute('data-id'),{scroll:true})});
+// toạ độ minh hoạ khi rê chuột
+var xh=$('#xh'),xy=$('#planXY');
+svg.addEventListener('mousemove',function(e){
+  var pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;var ctm=svg.getScreenCTM();if(!ctm)return;var p=pt.matrixTransform(ctm.inverse());
+  var mx=(p.x-MG)/S,my=(p.y-MG)/S;if(mx<0||my<0||mx>126||my>113){xh.style.display='none';return}
+  xh.style.display='';$('#xhV').setAttribute('x1',p.x);$('#xhV').setAttribute('x2',p.x);$('#xhH').setAttribute('y1',p.y);$('#xhH').setAttribute('y2',p.y);
+  xy.textContent='X '+fmt(1191200+Math.round(113-my))+' · Y '+fmt(412300+Math.round(mx))+' (minh hoạ)';
+});
+svg.addEventListener('mouseleave',function(){xh.style.display='none'});
+
+/* ---------- máy tính tiến độ ---------- */
+var PLANS={
+  std:{disc:0,steps:[['Đợt 1','Ký hợp đồng đặt cọc',0,10],['Đợt 2','Ký hợp đồng chuyển nhượng',15,20],['Đợt 3','Thanh toán giữa kỳ',60,30],['Đợt 4','Công chứng, nộp hồ sơ sang tên',90,35],['Đợt 5','Nhận sổ đứng tên bạn',120,5]]},
+  fast:{disc:.02,steps:[['Đợt 1','Ký hợp đồng đặt cọc',0,20],['Đợt 2','Công chứng chuyển nhượng',30,75],['Đợt 3','Nhận sổ đứng tên bạn',60,5]]}
+};
+var C={plan:'std'};
+var cLot=$('#cLot'),fLot=$('#fLot');
+cLot.innerHTML=avail.map(function(l){return '<option value="'+l.id+'">Lô '+l.id+' · '+dec(l.area)+' m² · '+DIRN[l.face]+(l.corner?' · góc':'')+'</option>'}).join('');
+fLot.innerHTML='<option value="">Chưa chọn, cần tư vấn</option>'+avail.map(function(l){return '<option value="'+l.id+'">Lô '+l.id+' · '+dec(l.area)+' m² · '+DIRN[l.face]+'</option>'}).join('');
+var cDate=$('#cDate');cDate.value=iso(addDays(TODAY,3));cDate.min=iso(TODAY);
+function rangeFill(r){var p=(r.value-r.min)/(r.max-r.min)*100;r.style.setProperty('--p',p+'%')}
+function calc(){
+  var l=BY[cLot.value];if(!l)return;
+  var P=PLANS[C.plan],price=l.total*(1-P.disc);
+  var lr=+$('#cLoan').value/100,yrs=+$('#cYrs').value,rate=+$('#cRate').value;
+  $('#oLoan').textContent=Math.round(lr*100)+'%';$('#oYrs').textContent=yrs+' năm';$('#oRate').textContent=dec(rate.toFixed(1))+'%/năm';
+  ['#cLoan','#cYrs','#cRate'].forEach(function(s){rangeFill($(s))});
+  var loan=Math.round(price*lr/1e6)*1e6,own=price-loan;
+  var start=cDate.value?new Date(cDate.value+'T00:00:00'):TODAY;if(isNaN(start))start=TODAY;
+  // phân bổ khoản vay vào các đợt cuối
+  var rows=P.steps.map(function(s){return {n:s[0],w:s[1],d:addDays(start,s[2]),p:s[3],amt:price*s[3]/100,bank:0}});
+  var rem=loan;for(var i=rows.length-1;i>=0&&rem>0;i--){var b=Math.min(rows[i].amt,rem);rows[i].bank=b;rem-=b}
+  $('#kPrice').innerHTML=vnd(price);$('#kPriceS').textContent='≈ '+ty(price).replace(NB,' ')+(P.disc?' · đã trừ chiết khấu 2% (mẫu)':' · lô '+l.id);
+  $('#kOwn').innerHTML=vnd(own);$('#kOwnS').textContent=Math.round((1-lr)*100)+'% giá trị lô';
+  $('#kLoan').innerHTML=loan?vnd(loan):'0đ';$('#kLoanS').textContent=loan?Math.round(lr*100)+'% giá trị lô':'Không vay';
+  $('#schedB').innerHTML=rows.map(function(r){
+    var you=r.amt-r.bank,pc=r.amt?you/r.amt*100:0;
+    return '<tr><td><b>'+r.n+'</b><span class="w">'+r.w+'</span><span class="mb" aria-hidden="true"><i style="width:'+pc+'%"></i><em style="width:'+(100-pc)+'%"></em></span></td><td data-l="Ngày dự kiến"><b>'+dmy(r.d)+'</b></td><td class="r" data-l="Tỷ lệ">'+r.p+'%</td><td class="r" data-l="Bạn trả"><b>'+vnd(you)+'</b></td><td class="r bk" data-l="Ngân hàng">'+(r.bank?vnd(r.bank):'–')+'</td></tr>';
+  }).join('');
+  $('#schedF').innerHTML='<tr><td>Tổng cộng</td><td data-l=""></td><td class="r" data-l="Tỷ lệ">100%</td><td class="r" data-l="Bạn trả">'+vnd(own)+'</td><td class="r bk" data-l="Ngân hàng">'+(loan?vnd(loan):'–')+'</td></tr>';
+  var box=$('#loanBox');
+  if(!loan){box.innerHTML='<p class="noloan">Bạn đang chọn không vay. Toàn bộ giá trị lô thanh toán bằng vốn tự có theo các đợt ở bảng trên.</p>';return}
+  var n=yrs*12,r=rate/100/12,pr=loan/n,first=pr+loan*r,last=pr+pr*r,interest=loan*r*(n+1)/2;
+  var years=[],mx=0;for(var y=0;y<yrs;y++){var s=0;for(var m=y*12;m<y*12+12;m++){s+=pr+(loan-m*pr)*r}years.push(s);if(s>mx)mx=s}
+  var bw=300/yrs,bars='';years.forEach(function(v,k){var hh=v/mx*110;bars+='<rect class="yb" x="'+(k*bw+1).toFixed(1)+'" y="'+(120-hh).toFixed(1)+'" width="'+Math.max(1,bw-2).toFixed(1)+'" height="'+hh.toFixed(1)+'"/>'});
+  box.innerHTML='<div class="loan-n"><h3>Khoản vay ước tính</h3><dl><dt>Tháng đầu trả</dt><dd>'+vnd(first)+'</dd><dt>Tháng cuối trả</dt><dd>'+vnd(last)+'</dd><dt>Tổng lãi ước tính</dt><dd>'+vnd(interest)+'</dd><dt>Tổng gốc + lãi</dt><dd>'+vnd(loan+interest)+'</dd></dl></div>'+
+   '<div class="loan-c"><h3>Tiền trả mỗi năm, giảm dần theo dư nợ</h3><svg viewBox="0 0 300 140" preserveAspectRatio="none" role="img" aria-label="Biểu đồ tiền trả mỗi năm trong '+yrs+' năm, năm đầu khoảng '+trieu(years[0])+', năm cuối khoảng '+trieu(years[yrs-1])+'"><g>'+bars+'</g><text x="0" y="136">Năm 1 · '+trieu(years[0])+'</text><text x="300" y="136" text-anchor="end">Năm '+yrs+' · '+trieu(years[yrs-1])+'</text></svg></div>';
+}
+$$('#calcF .seg button').forEach(function(b){b.addEventListener('click',function(){C.plan=b.getAttribute('data-plan');$$('#calcF .seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});calc()})});
+['#cLoan','#cYrs','#cRate'].forEach(function(s){$(s).addEventListener('input',calc)});
+cLot.addEventListener('change',function(){calc();select(cLot.value)});cDate.addEventListener('change',calc);
+
+$('#sCalc').addEventListener('click',function(){
+  if(!SEL)return;
+  if(SEL.st!=='con'){var s=similar(SEL);if(s){select(s.id,{scroll:true});}return}
+  cLot.value=SEL.id;calc();$('#tien-do').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
+});
+$('#sBook').addEventListener('click',function(){
+  if(!SEL||SEL.st!=='con')return;fLot.value=SEL.id;$('#lien-he').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
+});
+
+/* giữ cụm từ trong tiêu đề, nút */
+$$('h1,h2,h3,h4,.btn,.chip').forEach(function(el){var w=document.createTreeWalker(el,4),n;while(n=w.nextNode()){n.nodeValue=n.nodeValue.replace(/(^|\s)(và|cho|của|với|hoặc|để|&)\s+/gi,function(m,a,b){return a+b+NB})}});
+/* khởi tạo */
+applyF();select('A-10');cLot.value='A-10';calc();
+
+/* ---------- form ---------- */
+var fDate=$('#fDate');fDate.min=iso(TODAY);fDate.value=iso(addDays(TODAY,2));
+var mode='Xem tại đất';
+$$('#bookF .seg button').forEach(function(b){b.addEventListener('click',function(){mode=b.getAttribute('data-mode');$$('#bookF .seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')})})});
+$('#bookF').addEventListener('submit',function(e){
+  e.preventDefault();var err=$('#fErr'),name=$('#fName').value.trim(),ph=$('#fPhone').value.replace(/\D/g,'');
+  var msg='';
+  if(name.length<2)msg='Vui lòng nhập họ và tên.';
+  else if(ph.length<9||ph.length>11)msg='Số điện thoại chưa đúng, vui lòng kiểm tra lại.';
+  else if(!fDate.value)msg='Vui lòng chọn ngày muốn xem.';
+  else if(!$('#fOk').checked)msg='Vui lòng tick đồng ý xử lý dữ liệu cá nhân để gửi phiếu hẹn.';
+  if(msg){err.textContent=msg;err.classList.add('show');return}
+  err.classList.remove('show');
+  var d=new Date(fDate.value+'T00:00:00'),lot=fLot.value?'lô '+fLot.value:'tư vấn chọn lô';
+  $('#okTxt').textContent='Cảm ơn '+name+'. Thửa Xanh đã ghi nhận lịch '+mode.toLowerCase()+' ('+lot+') ngày '+dmy(d)+', khung giờ '+$('#fTime').value+'. Tư vấn viên sẽ gọi số '+$('#fPhone').value.trim()+' để xác nhận.';
+  $('#bookF').style.display='none';var ok=$('#okBox');ok.classList.add('show');ok.focus();
+});
+$('#okBack').addEventListener('click',function(){$('#okBox').classList.remove('show');var f=$('#bookF');f.reset();fDate.value=iso(addDays(TODAY,2));f.style.display='';$('#fName').focus()});
+
+/* ---------- header, menu, badge ---------- */
+var badge=$('#ktBadge'),mb=$('#menuBtn'),mnav=$('#mnav');
+function onScroll(){var y=window.pageYOffset;badge.classList.toggle('show',y>window.innerHeight*.85)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+function lock(on){document.body.classList.toggle('lock',on);document.documentElement.style.overflow=on?'hidden':'';document.body.style.overflow=on?'hidden':''}
+function menu(open){mnav.classList.toggle('open',open);mb.setAttribute('aria-expanded',open?'true':'false');lock(open);if(open){$('#menuClose').focus()}else{mb.focus()}}
+mb.addEventListener('click',function(){menu(true)});
+$('#menuClose').addEventListener('click',function(){menu(false)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');mb.setAttribute('aria-expanded','false');lock(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('open'))menu(false)});
+var lastW=window.innerWidth;window.addEventListener('resize',function(){if(window.innerWidth===lastW)return;lastW=window.innerWidth;if(lastW>1024&&mnav.classList.contains('open'))menu(false)});
+
+/* toạ độ hero */
+var hf=$('#heroFig'),hxy=$('#heroXY');
+if(hf&&window.matchMedia('(hover:hover)').matches){hf.addEventListener('mousemove',function(e){var r=hf.getBoundingClientRect();var px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;hxy.textContent='X '+fmt(1191300-Math.round(py*140))+' · Y '+fmt(412300+Math.round(px*160))})}
+
+/* ---------- hiện dần ---------- */
+var rv=$$('.rv'),planEl=$('#plan'),bars=$$('.dist .bar i');
+function clearDelay(){$$('#plan .lot').forEach(function(g){g.style.transitionDelay=''})}
+function showDist(){bars.forEach(function(b){b.style.width=b.getAttribute('data-w')+'%'})}
+if(!('IntersectionObserver' in window)||RM){rv.forEach(function(e){e.classList.add('in')});planEl.classList.add('drawn');showDist()}
+else{
+  var vh=window.innerHeight;
+  rv.forEach(function(e){if(e.getBoundingClientRect().top<vh)e.classList.add('in')});
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  rv.forEach(function(e){if(!e.classList.contains('in'))io.observe(e)});
+  var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){if(en.target===planEl){planEl.classList.add('drawn');setTimeout(clearDelay,1500)}else showDist();io2.unobserve(en.target)}})},{threshold:.15});
+  io2.observe(planEl);io2.observe($('#distT'));
+  if(planEl.getBoundingClientRect().top<vh){planEl.classList.add('drawn');setTimeout(clearDelay,1500)}
+}
+})();
+</script>
+</body>
+</html>

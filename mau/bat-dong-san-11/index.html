@@ -1,0 +1,1267 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quản Lý Cho Thuê Căn Hộ Cho Chủ Nhà Tại TP.HCM | Sổ Thuê</title>
+<meta name="description" content="Sổ Thuê quản lý căn hộ cho thuê thay chủ nhà ở TP.HCM: tìm khách, ký hợp đồng, thu tiền, điều phối bảo trì và gửi báo cáo thu chi ngày 05 hằng tháng. Tính thử thu nhập ròng của căn bạn.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0A5547">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A5547'/%3E%3Cpath d='M7 22.5l5.5-5.5 4 3 8-9' fill='none' stroke='%23F7E39A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --bg:#FFFFFF;--bg2:#F4F7F5;--bg3:#EAF1EE;
+  --ink:#0F1F1B;--ink2:#3E504B;--mute:#5B6C67;--line:#E1E9E5;--line2:#CFDBD6;
+  --g9:#06372E;--g8:#084639;--g7:#0A5547;--g5:#0F7A64;--g3:#7CC8B0;--g1:#E3F2EC;
+  --y1:#FFF8DD;--y2:#FCEFB8;--y3:#F7E39A;--y5:#E2BC3B;
+  --red:#B4451F;--red1:#FBEAE3;
+  --head:'Lexend',system-ui,-apple-system,sans-serif;--sans:'Roboto',system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.22,.8,.24,1);--r:18px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.62 var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+ul,ol{list-style:none}
+:focus-visible{outline:3px solid var(--y5);outline-offset:3px;border-radius:6px}
+.num{font-variant-numeric:tabular-nums}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.ic{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+h1,h2,h3,h4{font-family:var(--head);font-weight:600;letter-spacing:-.022em;line-height:1.14;text-wrap:balance}
+.h2{font-size:clamp(30px,3.5vw,48px)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 13px/1 var(--head);letter-spacing:.09em;text-transform:uppercase;color:var(--g5)}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--y5)}
+.sec{padding:112px 0;position:relative}
+.sec-hd{max-width:740px;margin-bottom:56px}
+.sec-hd h2{margin-top:16px}
+.sec-hd p{margin-top:18px;color:var(--ink2);font-size:17.5px;max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 22px;border-radius:12px;font:500 15.5px/1 var(--head);text-decoration:none;white-space:nowrap;transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn .ic{width:18px;height:18px;transition:transform .3s var(--ease)}
+.btn:hover .ic{transform:translateX(3px)}
+.btn:active{transform:scale(.98)}
+.btn-p{background:var(--g7);color:#fff}
+.btn-p:hover{background:var(--g9)}
+.btn-g{background:#fff;color:var(--ink);border:1px solid var(--line2)}
+.btn-g:hover{border-color:var(--g7);color:var(--g7)}
+.btn-y{background:var(--y3);color:var(--g9)}
+.btn-y:hover{background:#fff}
+.chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font:500 12.5px/1 var(--head);white-space:nowrap}
+.chip-g{background:var(--g1);color:var(--g7)}
+.chip-y{background:var(--y2);color:#6B5310}
+.chip-r{background:var(--red1);color:var(--red)}
+.dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.tag-mau{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:6px;background:var(--y1);border:1px solid var(--y3);color:#6B5310;font:500 11.5px/1 var(--head);letter-spacing:.04em}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;background:rgba(255,255,255,.98);border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.scrolled{border-color:var(--line)}
+.hdr .wrap{height:72px;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);flex:none}
+.logo svg{width:36px;height:36px}
+.logo b{display:block;font:600 19px/1.1 var(--head);letter-spacing:-.02em}
+.logo small{display:block;font:400 11.5px/1.3 var(--sans);color:var(--mute)}
+.nav{display:flex;gap:2px;margin-left:auto}
+.nav a{padding:9px 12px;border-radius:9px;color:var(--ink2);font:500 14.5px/1 var(--head);text-decoration:none;transition:background .2s,color .2s}
+.nav a:hover{background:var(--g1);color:var(--g7)}
+.hdr .btn{height:44px;padding:0 18px;font-size:14.5px}
+.menu-btn{display:none;margin-left:auto;width:46px;height:46px;border-radius:12px;border:1px solid var(--line2);align-items:center;justify-content:center;color:var(--ink)}
+.menu-btn .ic{width:22px;height:22px}
+.menu-btn .i-x{display:none}
+body.lock .menu-btn .i-x{display:block}
+body.lock .menu-btn .i-m{display:none}
+.drawer{position:fixed;inset:72px 0 0;z-index:59;background:#fff;padding:20px 20px 32px;display:flex;flex-direction:column;gap:4px;overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s,transform .3s var(--ease),visibility 0s .3s}
+.drawer.open{opacity:1;visibility:visible;transform:none;transition:opacity .3s,transform .3s var(--ease)}
+.drawer a:not(.btn){display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border-bottom:1px solid var(--line);font:500 19px/1.2 var(--head);text-decoration:none}
+.drawer a:not(.btn) span{font:400 13px var(--sans);color:var(--mute)}
+.drawer .btn{margin-top:20px}
+body.lock{overflow:hidden}
+
+/* hero */
+.hero{padding:140px 0 88px;position:relative;overflow:hidden;background-color:#fff;background-image:radial-gradient(circle at 1px 1px,#DCE6E1 1.1px,transparent 0);background-size:26px 26px}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,.75) 60%,#fff 100%),linear-gradient(90deg,#fff 0%,rgba(255,255,255,.4) 45%,rgba(255,255,255,0) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr 1fr;gap:60px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;height:34px;padding:0 14px 0 6px;border-radius:999px;background:#fff;border:1px solid var(--line2);font:500 13.5px/1 var(--head);color:var(--ink2)}
+.hero-tag i{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px;border-radius:999px;background:var(--g7);color:#fff;font-style:normal;font-size:12px}
+.hero h1{font-size:clamp(40px,5.3vw,74px);line-height:1.04;letter-spacing:-.038em;margin-top:24px;font-weight:600}
+.mk{background-image:linear-gradient(var(--y3),var(--y3));background-repeat:no-repeat;background-position:0 86%;background-size:0% 34%;transition:background-size 1.2s var(--ease);padding:0 .04em}
+.ready .mk{background-size:100% 34%}
+.lead{font-size:18.5px;color:var(--ink2);max-width:52ch;margin-top:24px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-facts{display:flex;flex-wrap:wrap;margin-top:46px;padding-top:24px;border-top:1px solid var(--line)}
+.hero-facts div{padding-right:28px;margin-right:28px;border-right:1px solid var(--line)}
+.hero-facts div:last-child{border:0;margin:0;padding:0}
+.hero-facts b{display:block;font:600 28px/1.1 var(--head);letter-spacing:-.02em;color:var(--g7);font-variant-numeric:tabular-nums}
+.hero-facts span{display:block;font-size:13.5px;color:var(--mute);margin-top:4px}
+
+.hv{position:relative;width:100%;max-width:560px;justify-self:end;aspect-ratio:560/620}
+.hv-photo{position:absolute;inset:0 0 56px 56px;border-radius:26px;overflow:hidden;background:var(--bg3)}
+.hv-photo img{width:100%;height:100%;object-fit:cover}
+.w{position:absolute;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 22px 44px -22px rgba(6,55,46,.42);padding:15px 17px}
+.js .w{transform:translateY(22px)}
+.ready .w{transform:none;transition:transform .7s var(--ease)}
+.ready .w2{transition-duration:1s}.ready .w3{transition-duration:1.3s}.ready .w4{transition-duration:1.6s}
+.w1{top:30px;left:0;display:flex;align-items:center;gap:12px}
+.w1 .th{width:40px;height:40px;border-radius:10px;background:var(--g1);color:var(--g7);display:grid;place-items:center}
+.w1 b{display:block;font:500 14.5px/1.3 var(--head)}
+.w1 small{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--g5)}
+.w2{left:0;bottom:0;width:312px}
+.w2 .lb{display:flex;justify-content:space-between;align-items:center;font:500 12.5px/1 var(--head);color:var(--mute);letter-spacing:.02em}
+.w2 .big{font:600 34px/1.1 var(--head);letter-spacing:-.03em;margin-top:10px;color:var(--ink)}
+.w2 .sub{font-size:12.5px;color:var(--mute);margin-top:2px}
+.w2 svg{display:block;width:100%;height:64px;margin-top:10px}
+.spark-l{fill:none;stroke:var(--g7);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.js .spark-l{stroke-dasharray:600;stroke-dashoffset:600}
+.ready .spark-l{stroke-dashoffset:0;transition:stroke-dashoffset 2s var(--ease)}
+.w3{right:22px;top:40%;width:252px;display:flex;gap:12px;align-items:flex-start}
+.w3 .th{width:34px;height:34px;border-radius:50%;background:var(--g7);color:var(--y3);display:grid;place-items:center;flex:none}
+.w3 .th .ic{width:18px;height:18px;stroke-width:2.4}
+.w3 b{display:block;font:500 13.5px/1.3 var(--head)}
+.w3 span{display:block;font-size:12.5px;color:var(--mute);margin-top:3px}
+.w3 strong{font:600 15px var(--head);color:var(--g7)}
+.w4{right:-4px;top:122px;display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px}
+.w4 .ic{color:var(--g5)}
+.w4 b{font:500 13px/1.3 var(--head)}
+.w4 .chip{height:22px;font-size:11.5px}
+
+/* strip */
+.strip{border-block:1px solid var(--line);background:var(--bg2)}
+.strip ul{display:grid;grid-template-columns:repeat(5,1fr)}
+.strip li{display:flex;align-items:center;gap:12px;padding:22px 18px;border-left:1px solid var(--line);font:500 14.5px/1.35 var(--head);color:var(--ink2)}
+.strip li:first-child{border-left:0;padding-left:0}
+.strip li span{width:38px;height:38px;border-radius:10px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--g7);flex:none}
+
+/* pain */
+.pain{display:grid;grid-template-columns:.86fr 1.14fr;gap:72px;align-items:start}
+.pain-l{position:sticky;top:112px}
+.pain-l p{color:var(--ink2);font-size:17.5px;margin-top:18px}
+.sw{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin-top:32px;padding:5px;border-radius:999px;background:var(--bg2);border:1px solid var(--line)}
+.sw::before{content:"";position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:999px;background:var(--g7);transition:transform .45s var(--ease)}
+.sw[data-m="b"]::before{transform:translateX(100%)}
+.sw button{position:relative;z-index:1;height:44px;padding:0 20px;border-radius:999px;font:500 14.5px/1 var(--head);color:var(--ink2);transition:color .3s;white-space:nowrap}
+.sw button[aria-pressed="true"]{color:#fff}
+.meter{margin-top:30px;padding:20px;border-radius:16px;border:1px solid var(--line);background:#fff;max-width:420px}
+.meter .t{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:500 13.5px/1.3 var(--head);color:var(--mute)}
+.meter .t b{white-space:nowrap;font:600 26px/1 var(--head);color:var(--ink);letter-spacing:-.02em}
+.meter .bar{height:10px;border-radius:99px;background:var(--bg3);margin-top:14px;overflow:hidden}
+.meter .bar i{display:block;height:100%;width:100%;border-radius:99px;background:var(--red);transform-origin:left;transition:transform .8s var(--ease),background .5s}
+.meter[data-m="b"] .bar i{transform:scaleX(.04);background:var(--g5)}
+.meter small{display:block;font-size:12px;color:var(--mute);margin-top:10px}
+.log{position:relative;display:grid;gap:14px}
+.log::before{content:"";position:absolute;left:83px;top:20px;bottom:20px;width:1px;background:var(--line2)}
+.log li{display:grid;grid-template-columns:84px 1fr;gap:22px;align-items:start}
+.log .d{white-space:nowrap;font:600 15px/1.25 var(--head);color:var(--ink);padding-top:18px;font-variant-numeric:tabular-nums}
+.log .d small{display:block;font:400 12.5px var(--sans);color:var(--mute)}
+.lc{position:relative;display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 20px;border-radius:16px;background:#fff;border:1px solid var(--line);transition:border-color .4s}
+.lc::before{content:"";position:absolute;left:-28px;top:26px;width:11px;height:11px;border-radius:50%;background:#fff;border:2px solid var(--red);transition:border-color .4s}
+.lc .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--red1);color:var(--red);transition:background .4s,color .4s}
+.lc .ico svg{grid-area:1/1;transition:opacity .35s,transform .45s var(--ease)}
+.lc .ico .ok{opacity:0;transform:scale(.4) rotate(-30deg)}
+.lc .txt{display:grid}
+.lc .txt p{grid-area:1/1;font-size:15.5px;color:var(--ink2);transition:opacity .4s,transform .5s var(--ease)}
+.lc .txt p b{color:var(--ink);font-weight:500}
+.lc .txt .b{opacity:0;transform:translateY(10px)}
+.log[data-m="b"] .lc{border-color:#BFE0D4}
+.log[data-m="b"] .lc::before{border-color:var(--g5)}
+.log[data-m="b"] .lc .ico{background:var(--g1);color:var(--g7)}
+.log[data-m="b"] .lc .ico .no{opacity:0;transform:scale(.4) rotate(30deg)}
+.log[data-m="b"] .lc .ico .ok{opacity:1;transform:none}
+.log[data-m="b"] .lc .txt .a{opacity:0;transform:translateY(-10px)}
+.log[data-m="b"] .lc .txt .b{opacity:1;transform:none}
+.log li:nth-child(2) .lc *{transition-delay:.05s}.log li:nth-child(3) .lc *{transition-delay:.1s}.log li:nth-child(4) .lc *{transition-delay:.15s}.log li:nth-child(5) .lc *{transition-delay:.2s}
+
+/* steps */
+.svc{background:var(--bg2);border-block:1px solid var(--line)}
+.stp{display:grid;grid-template-columns:380px 1fr;gap:40px;align-items:stretch}
+.stp-list{display:grid;gap:8px;align-content:start}
+.stp-list button{position:relative;display:grid;grid-template-columns:44px 1fr;gap:4px 14px;text-align:left;padding:18px 20px;border-radius:16px;border:1px solid transparent;overflow:hidden;transition:background .3s,border-color .3s}
+.stp-list button:hover{background:rgba(255,255,255,.6)}
+.stp-list button[aria-selected="true"]{background:#fff;border-color:var(--line2)}
+.stp-list .n{grid-row:span 2;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font:600 14px var(--head);background:#fff;border:1px solid var(--line);color:var(--mute);transition:all .3s;font-variant-numeric:tabular-nums}
+.stp-list button[aria-selected="true"] .n{background:var(--g7);border-color:var(--g7);color:var(--y3)}
+.stp-list b{font:600 17px/1.3 var(--head);align-self:end}
+.stp-list span{font-size:13.5px;color:var(--mute);line-height:1.4}
+.stp-list .pg{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--y5);transform:scaleX(0);transform-origin:left}
+.stp-list button.run .pg{animation:pg 7s linear forwards}
+@keyframes pg{to{transform:scaleX(1)}}
+.stp-panes{position:relative;display:grid}
+.pane{grid-area:1/1;display:grid;grid-template-columns:1fr 1fr;border-radius:22px;background:#fff;border:1px solid var(--line);overflow:hidden;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .45s,transform .55s var(--ease),visibility 0s .45s}
+.pane.on{opacity:1;visibility:visible;transform:none;transition:opacity .45s,transform .55s var(--ease)}
+.pane figure{position:relative;min-height:100%;background:var(--bg3)}
+.pane figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pane .pc{padding:36px 34px;display:flex;flex-direction:column}
+.pane .k{font:500 12.5px/1 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--g5)}
+.pane h3{font-size:26px;margin-top:12px}
+.pane p{color:var(--ink2);margin-top:12px;font-size:15.5px}
+.ticks{display:grid;gap:10px;margin-top:20px}
+.ticks li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:15px;color:var(--ink)}
+.ticks .ic{width:20px;height:20px;color:var(--g5);stroke-width:2.2;margin-top:1px}
+.get{margin-top:auto;padding:14px 16px;border-radius:12px;background:var(--y1);border:1px solid var(--y2);font-size:14.5px;color:#4E3D0A}
+.get b{display:block;font:600 12px/1.2 var(--head);letter-spacing:.07em;text-transform:uppercase;color:#7A5E10;margin-bottom:4px}
+.pane .get{margin-top:24px}
+.get a{color:var(--g7);font-weight:500}
+
+/* calculator */
+.calc-sec{background:#fff}
+.calc{display:grid;grid-template-columns:1.04fr .96fr;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(6,55,46,.35)}
+.cf{padding:40px;background:#fff;display:flex;flex-direction:column;gap:26px}
+.how-calc{margin-top:auto;padding:16px 18px;border-radius:14px;background:var(--bg2);border:1px dashed var(--line2);font-size:13.5px;color:var(--ink2);line-height:1.55}
+.how-calc b{display:block;font:600 12.5px var(--head);letter-spacing:.06em;text-transform:uppercase;color:var(--g5);margin-bottom:4px}
+.csum{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.csum div{padding:12px 14px;border-radius:12px;background:var(--bg2)}
+.csum span{display:block;font-size:12.5px;color:var(--mute)}
+.csum b{display:block;font:600 17px/1.3 var(--head);font-variant-numeric:tabular-nums;margin-top:2px;white-space:nowrap}
+.fl{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:500 14.5px/1.3 var(--head);color:var(--ink);margin-bottom:10px}
+.fl small{font:400 12.5px var(--sans);color:var(--mute)}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.seg.two{grid-template-columns:1fr 1fr}
+.seg.three{grid-template-columns:repeat(3,1fr)}
+.seg button{min-height:50px;padding:6px 8px;border-radius:12px;border:1px solid var(--line2);background:#fff;font:500 14.5px/1.2 var(--head);color:var(--ink2);transition:background .2s,border-color .2s,color .2s,transform .15s}
+.seg button small{display:block;font:400 12px/1.2 var(--sans);color:var(--mute);margin-top:3px}
+.seg button:hover{border-color:var(--g5)}
+.seg button:active{transform:scale(.97)}
+.seg button[aria-pressed="true"]{background:var(--g1);border-color:var(--g7);color:var(--g9);box-shadow:inset 0 0 0 1px var(--g7)}
+.sel{position:relative}
+.sel select,.fld input,.fld select,.fld textarea{width:100%;height:52px;padding:0 44px 0 16px;border-radius:12px;border:1px solid var(--line2);background:#fff;font:400 15.5px var(--sans);color:var(--ink);appearance:none;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s}
+.sel::after,.fld .sel::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;border-right:2px solid var(--mute);border-bottom:2px solid var(--mute);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.sel select:focus,.fld input:focus,.fld select:focus,.fld textarea:focus{outline:0;border-color:var(--g7);box-shadow:0 0 0 4px rgba(15,122,100,.15)}
+.price-in{display:flex;align-items:center;height:52px;border-radius:12px;border:1px solid var(--line2);padding:0 16px;gap:6px;transition:border-color .2s,box-shadow .2s}
+.price-in:focus-within{border-color:var(--g7);box-shadow:0 0 0 4px rgba(15,122,100,.15)}
+.price-in input{flex:1;min-width:0;border:0;outline:0;font:600 22px var(--head);letter-spacing:-.01em;font-variant-numeric:tabular-nums;background:transparent}
+.price-in span{font:500 14px var(--head);color:var(--mute)}
+.rng{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent;margin-top:10px;--p:50%}
+.rng::-webkit-slider-runnable-track{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--g7) var(--p),var(--bg3) var(--p))}
+.rng::-moz-range-track{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--g7) var(--p),var(--bg3) var(--p))}
+.rng::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:3px solid var(--g7);margin-top:-9px;transition:transform .15s}
+.rng::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--g7)}
+.rng:active::-webkit-slider-thumb{transform:scale(1.15)}
+.rng-l{display:flex;justify-content:space-between;font-size:12px;color:var(--mute);font-variant-numeric:tabular-nums}
+.cr{background:var(--g9);color:#E9F3EF;padding:40px;display:flex;flex-direction:column;gap:22px;position:relative;overflow:hidden}
+.cr::before{content:"";position:absolute;right:-120px;top:-120px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(247,227,154,.14)}
+.cr::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;border:1px solid rgba(247,227,154,.12)}
+.cr > *{position:relative;z-index:1}
+.cr .lb{font:500 12.5px/1 var(--head);letter-spacing:.08em;text-transform:uppercase;color:#9CC9BA}
+.mkt b{display:block;font:600 22px/1.2 var(--head);color:#fff;margin-top:8px;font-variant-numeric:tabular-nums}
+.gauge{position:relative;height:10px;border-radius:99px;margin-top:16px;background:linear-gradient(90deg,#2E7564 0 36.6%,#7CC8B0 36.6% 63.4%,#E2BC3B 63.4%)}
+.gauge i{position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:#fff;border:4px solid var(--g9);box-shadow:0 0 0 2px #fff;transition:left .6s var(--ease)}
+.gauge-l{display:grid;grid-template-columns:36.6% 26.8% 36.6%;font-size:12px;color:#9CC9BA;margin-top:10px;text-align:center}
+.gauge-l span:first-child{text-align:left}.gauge-l span:last-child{text-align:right}
+.msg{font-size:14px;color:#CFE5DD;min-height:42px}
+.rows{border-top:1px solid rgba(255,255,255,.12)}
+.rows div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:15px}
+.rows dt{color:#CFE5DD}
+.rows dd{font:500 16.5px var(--head);color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rows .neg dd{color:#F3C4B2}
+.net{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.net .v{font:600 clamp(36px,4vw,50px)/1 var(--head);color:var(--y3);letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.net small{display:block;font-size:13px;color:#9CC9BA;margin-top:8px}
+.split{display:flex;height:12px;border-radius:99px;overflow:hidden;background:rgba(255,255,255,.1);gap:2px}
+.split i{display:block;height:100%;transition:flex-grow .6s var(--ease)}
+.split .s1{background:var(--y3)}.split .s2{background:#7CC8B0}.split .s3{background:#F3C4B2}
+.split-l{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:#CFE5DD;margin-top:-10px}
+.split-l span{display:inline-flex;align-items:center;gap:6px}
+.split-l i{width:9px;height:9px;border-radius:3px}
+.warn{display:grid;grid-template-columns:22px 1fr;gap:10px;padding:14px 16px;border-radius:12px;background:rgba(247,227,154,.1);border:1px solid rgba(247,227,154,.34);font-size:13.5px;color:#F4E8BE;line-height:1.5}
+.warn .ic{color:var(--y3);width:20px;height:20px}
+.warn b{color:var(--y3);font-weight:500}
+
+/* dashboard */
+.dash{border-radius:24px;border:1px solid var(--line2);background:var(--bg2);overflow:hidden;box-shadow:0 40px 80px -50px rgba(6,55,46,.45)}
+.dbar{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:16px 22px;background:#fff;border-bottom:1px solid var(--line)}
+.dbar .logo svg{width:30px;height:30px}
+.dbar .logo b{font-size:16px}
+.dbar h3{font-size:15px;font-weight:500;color:var(--mute);padding-left:18px;border-left:1px solid var(--line)}
+.dbar h3 b{color:var(--ink);font-weight:600}
+.dbar .r{margin-left:auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.pill{display:inline-flex;padding:4px;border-radius:12px;background:var(--bg2);border:1px solid var(--line)}
+.pill button{height:34px;padding:0 13px;border-radius:9px;font:500 13.5px/1 var(--head);color:var(--ink2);white-space:nowrap;transition:background .25s,color .25s}
+.pill button[aria-pressed="true"]{background:#fff;color:var(--g7);box-shadow:0 1px 2px rgba(6,55,46,.15),0 0 0 1px var(--line2)}
+.dl{height:42px;padding:0 14px;border-radius:10px;border:1px solid var(--line2);display:inline-flex;align-items:center;gap:8px;font:500 13.5px var(--head);background:#fff;transition:border-color .2s,color .2s}
+.dl:hover{border-color:var(--g7);color:var(--g7)}
+.dl .ic{width:17px;height:17px}
+.dbody{padding:22px;display:grid;gap:18px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;transition:transform .3s var(--ease),border-color .3s}
+.kpi:hover{transform:translateY(-3px);border-color:var(--line2)}
+.kpi .t{display:flex;justify-content:space-between;align-items:center;gap:8px;font:500 13px/1.3 var(--head);color:var(--mute)}
+.kpi .t .ic{width:18px;height:18px;color:var(--g5)}
+.kpi .v{font:600 26px/1.1 var(--head);letter-spacing:-.025em;margin-top:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi .chip{margin-top:10px;height:auto;min-height:24px;padding:4px 9px;font-size:12px;line-height:1.3;white-space:normal}
+.kpi.hl{background:var(--g7);border-color:var(--g7);color:#fff}
+.kpi.hl .t,.kpi.hl .t .ic{color:#B9DCCF}
+.kpi.hl .v{color:var(--y3)}
+.kpi.hl .chip{background:rgba(255,255,255,.12);color:#fff}
+.dgrid{display:grid;grid-template-columns:1.55fr 1fr;gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.card-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.card-h h4{font-size:16px;font-weight:600}
+.card-h small{font-size:12.5px;color:var(--mute)}
+.chart{position:relative;margin-top:14px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .grid line{stroke:var(--line);stroke-width:1}
+.chart .grid text,.chart .xl text{font:400 11px var(--sans);fill:var(--mute)}
+.chart .area{fill:url(#ga)}
+.chart .line{fill:none;stroke:var(--g7);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.chart .pt{fill:#fff;stroke:var(--g7);stroke-width:2}
+.chart .sel{fill:var(--y5);stroke:#fff;stroke-width:3}
+.chart .cross{stroke:var(--g5);stroke-width:1;stroke-dasharray:3 4;opacity:0;transition:opacity .2s}
+.chart .hov{fill:var(--g7);stroke:#fff;stroke-width:3;opacity:0;transition:opacity .2s}
+.chart.h .cross,.chart.h .hov{opacity:1}
+.tip{position:absolute;top:0;left:0;pointer-events:none;background:var(--g9);color:#fff;border-radius:10px;padding:8px 11px;font-size:12.5px;line-height:1.35;white-space:nowrap;opacity:0;transform:translate(-50%,-120%);transition:opacity .2s}
+.tip b{display:block;font:600 14px var(--head);color:var(--y3);font-variant-numeric:tabular-nums}
+.chart.h .tip{opacity:1}
+.legend{display:flex;gap:16px;font-size:12.5px;color:var(--mute)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:3px;border-radius:2px;background:var(--g7)}
+.legend i.y{width:9px;height:9px;border-radius:50%;background:var(--y5)}
+.tbl{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
+.tbl th{text-align:left;font:500 12px var(--head);color:var(--mute);letter-spacing:.03em;padding:8px 0;border-bottom:1px solid var(--line)}
+.tbl td{padding:11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl td:last-child,.tbl th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tbl td small{display:block;font-size:12px;color:var(--g5)}
+.tbl tfoot td{border:0;font:600 15px var(--head);padding-top:14px}
+.tbl tbody tr{animation:rowin .45s var(--ease) both}
+@keyframes rowin{from{opacity:0;transform:translateY(6px)}}
+.info{display:grid;gap:10px;margin-top:16px}
+.info div{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:10px 12px;border-radius:10px;background:var(--bg2)}
+.info span{color:var(--mute)}
+.info b{font-weight:500;text-align:right;font-variant-numeric:tabular-nums}
+.dnote{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;color:var(--mute);padding:0 22px 18px}
+.toast{position:fixed;left:50%;bottom:84px;z-index:95;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--g9);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;transition:opacity .3s,transform .3s var(--ease);max-width:calc(100vw - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* plans */
+.plans-sec{background:var(--bg2);border-block:1px solid var(--line)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plan{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 28px;transition:transform .35s var(--ease),border-color .3s}
+.plan:hover{transform:translateY(-4px);border-color:var(--line2)}
+.plan.feat{border:2px solid var(--g7);padding:29px 27px}
+.plan .badge{position:absolute;top:-14px;left:26px;height:28px;padding:0 12px;border-radius:999px;background:var(--y3);color:var(--g9);font:600 12.5px/28px var(--head)}
+.plan h3{font-size:22px}
+.plan .ds{font-size:14.5px;color:var(--mute);margin-top:6px;min-height:46px}
+.plan .pr{display:flex;align-items:baseline;gap:8px;margin-top:20px}
+.plan .pr b{font:600 54px/1 var(--head);letter-spacing:-.04em;color:var(--g7);font-variant-numeric:tabular-nums}
+.plan .pr span{font-size:14px;color:var(--mute)}
+.plan .eq{margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--g1);font-size:13.5px;color:var(--g9)}
+.plan .eq b{font:600 15px var(--head);font-variant-numeric:tabular-nums}
+.plan .fee{font-size:13.5px;color:var(--ink2);margin-top:12px}
+.plan .ticks{margin:22px 0 26px;padding-top:20px;border-top:1px solid var(--line)}
+.plan .ticks li{font-size:14.5px}
+.plan .btn{margin-top:auto;width:100%}
+.cmp-wrap{margin-top:40px;border-radius:20px;background:#fff;border:1px solid var(--line);overflow:hidden}
+.cmp-wrap summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 26px;cursor:pointer;font:600 17px var(--head)}
+.cmp-wrap summary::-webkit-details-marker{display:none}
+.cmp-wrap summary .ic{transition:transform .3s var(--ease)}
+.cmp-wrap[open] summary .ic{transform:rotate(45deg)}
+.cmp{width:100%;border-collapse:collapse;font-size:14.5px}
+.cmp th,.cmp td{padding:13px 16px;border-top:1px solid var(--line);text-align:center}
+.cmp th:first-child,.cmp td:first-child{text-align:left;padding-left:26px}
+.cmp thead th{font:600 14px var(--head);background:var(--bg2)}
+.cmp tbody tr{transition:background .2s}
+.cmp tbody tr:hover{background:var(--y1)}
+.cmp .ic{width:20px;height:20px;color:var(--g5);stroke-width:2.4;vertical-align:middle}
+.cmp .no{color:var(--line2)}
+.cmp td.c2,.cmp th.c2{background:rgba(227,242,236,.55)}
+.plans-note{font-size:13.5px;color:var(--mute);margin-top:16px}
+
+/* reviews */
+.rv-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:20px}
+.rv-big{position:relative;border-radius:24px;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;padding:22px;background:var(--g9)}
+.rv-big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rv-big::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,55,46,0) 30%,rgba(6,55,46,.55) 100%)}
+.quote{position:relative;z-index:1;background:#fff;border-radius:18px;padding:26px;border:1px solid var(--line)}
+.quote .qm{width:34px;height:34px;color:var(--y5)}
+.quote blockquote{font:400 17px/1.6 var(--head);color:var(--ink);margin-top:12px;letter-spacing:-.005em}
+.rv-big .quote blockquote{font-size:19.5px}
+.who{display:flex;align-items:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:600 15px var(--head);background:var(--g1);color:var(--g7);flex:none}
+.who b{display:block;font:600 15px/1.3 var(--head)}
+.who small{display:block;font-size:13px;color:var(--mute)}
+.who .tag-mau{margin-left:auto}
+.rv-side{display:grid;gap:20px}
+.rv-side .quote{background:#fff}
+.rv-side .quote.y{background:var(--y1);border-color:var(--y2)}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.faq-l{position:sticky;top:112px}
+.faq-l p{color:var(--ink2);margin-top:16px;font-size:17px}
+.mini{margin-top:28px;padding:20px;border-radius:16px;background:var(--g1);display:flex;gap:14px;align-items:center}
+.mini .th{width:46px;height:46px;border-radius:12px;background:var(--g7);color:var(--y3);display:grid;place-items:center;flex:none}
+.mini b{display:block;font:600 16px var(--head)}
+.mini a{font:600 20px var(--head);color:var(--g7);text-decoration:none;white-space:nowrap}
+.acc{border-top:1px solid var(--line)}
+.acc-i{border-bottom:1px solid var(--line)}
+.acc-i h3{font-size:inherit;font-weight:inherit;letter-spacing:0}
+.acc-b{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;text-align:left;font:500 18px/1.4 var(--head);color:var(--ink)}
+.acc-b .pl{width:34px;height:34px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;flex:none;transition:background .3s,border-color .3s,transform .4s var(--ease)}
+.acc-b .pl .ic{width:16px;height:16px}
+.acc-b[aria-expanded="true"] .pl{background:var(--g7);border-color:var(--g7);color:#fff;transform:rotate(45deg)}
+.acc-p{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.acc-p > div{overflow:hidden}
+.acc-p p{padding:0 56px 24px 0;color:var(--ink2);font-size:16px}
+.acc-i.open .acc-p{grid-template-rows:1fr}
+
+/* contact */
+.ct{display:grid;grid-template-columns:1fr 1.08fr;border-radius:28px;overflow:hidden;border:1px solid var(--line)}
+.ct-l{position:relative;padding:48px 44px;color:#fff;background:var(--g9);display:flex;flex-direction:column;gap:24px;overflow:hidden}
+.ct-l img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26}
+.ct-l::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,55,46,.72),rgba(6,55,46,.96) 70%)}
+.ct-l > *{position:relative;z-index:1}
+.ct-l .eyebrow{color:var(--y3)}
+.ct-l h2{color:#fff}
+.ct-l p{color:#CFE5DD}
+.how{display:grid;gap:14px;counter-reset:h}
+.how li{display:grid;grid-template-columns:34px 1fr;gap:12px;font-size:15px;color:#E4F1EC;counter-increment:h}
+.how li::before{content:counter(h,decimal-leading-zero);width:34px;height:34px;border-radius:10px;background:rgba(247,227,154,.14);color:var(--y3);display:grid;place-items:center;font:600 13px var(--head)}
+.how b{color:#fff;font-weight:500}
+.cinfo{display:grid;gap:12px;margin-top:auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
+.cinfo a,.cinfo span{display:flex;align-items:center;gap:12px;color:#E4F1EC;text-decoration:none;font-size:15px}
+.cinfo .ic{color:var(--y3)}
+.cinfo a:hover{color:#fff}
+.ct-r{padding:44px;background:#fff}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fld{display:grid;gap:8px}
+.fld.full{grid-column:1/-1}
+.fld label{font:500 14px var(--head)}
+.fld label i{font-style:normal;color:var(--red)}
+.fld input,.fld select{padding-right:16px}
+.fld .sel select{padding-right:44px}
+.fld textarea{height:96px;padding:14px 16px;resize:vertical}
+.fld input::placeholder,.fld textarea::placeholder{color:#8A9994}
+.consent{grid-column:1/-1;display:grid;grid-template-columns:24px 1fr;gap:12px;font-size:14px;color:var(--ink2);cursor:pointer;align-items:start}
+.consent input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border-radius:6px;border:2px solid var(--line2);margin-top:1px;display:grid;place-items:center;transition:background .2s,border-color .2s;cursor:pointer}
+.consent input::after{content:"";width:6px;height:11px;border-right:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(45deg) scale(0);margin-top:-3px;transition:transform .2s var(--ease)}
+.consent input:checked{background:var(--g7);border-color:var(--g7)}
+.consent input:checked::after{transform:rotate(45deg) scale(1)}
+.consent a{color:var(--g7)}
+.form .btn{grid-column:1/-1;height:56px;width:100%}
+.form-note{grid-column:1/-1;font-size:12.5px;color:var(--mute);text-align:center}
+.ok{display:none;text-align:center;padding:40px 10px}
+.ok .th{width:64px;height:64px;border-radius:50%;background:var(--g1);color:var(--g7);display:grid;place-items:center;margin:0 auto}
+.ok .th .ic{width:30px;height:30px;stroke-width:2.4}
+.ok h3{font-size:26px;margin-top:20px}
+.ok p{color:var(--ink2);margin:12px auto 0;max-width:42ch}
+.ok .btn{margin-top:24px}
+.sent .form{display:none}
+.sent .ok{display:block;animation:rowin .5s var(--ease)}
+.form-hd h3{font-size:24px}
+.form-hd p{color:var(--mute);font-size:14.5px;margin:6px 0 26px}
+
+/* footer */
+.ft{background:var(--g9);color:#B9D4CA;padding:72px 0 120px;font-size:14.5px}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.ft .logo{color:#fff}
+.ft .logo small{color:#9CC9BA}
+.ft p{margin-top:16px;max-width:36ch}
+.ft h4{font:600 14px var(--head);color:#fff;letter-spacing:.04em;margin-bottom:14px}
+.ft ul{display:grid;gap:10px}
+.ft a{text-decoration:none}
+.ft a:hover{color:#fff}
+.ft-b{margin-top:52px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#93B8AB}
+
+/* grid items may shrink below select/img intrinsic width */
+.calc>*,.stp>*,.stp-panes>*,.pane>*,.ct>*,.form>*,.fld,.dgrid>*,.kpis>*,.rv-grid>*,.pain>*,.faq>*{min-width:0}
+.sel select{max-width:100%;text-overflow:ellipsis}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(6,55,46,.97);border:1px solid rgba(247,227,154,.22);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#03241E}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#F7E39A;flex:none;box-shadow:0 0 0 3px rgba(247,227,154,.25)}
+.kt-badge b{color:var(--y3);font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1180px){
+  .nav a{padding:9px 9px;font-size:14px}
+  .stp{grid-template-columns:320px 1fr}
+  .pane{grid-template-columns:1fr}
+  .pane figure{min-height:220px;aspect-ratio:16/8}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .strip ul{grid-template-columns:repeat(3,1fr)}
+  .strip li:nth-child(n+4){display:none}
+}
+@media (max-width:1060px){
+  .nav,.hdr .btn{display:none}
+  .menu-btn{display:inline-flex}
+  .hero .wrap{grid-template-columns:1fr;gap:56px}
+  .hv{justify-self:center;max-width:600px}
+  .pain,.faq{grid-template-columns:1fr;gap:44px}
+  .pain-l,.faq-l{position:static}
+  .stp{grid-template-columns:1fr}
+  .stp-list{grid-template-columns:repeat(5,1fr);gap:6px}
+  .stp-list button{grid-template-columns:1fr;padding:12px;text-align:center;justify-items:center}
+  .stp-list .n{grid-row:auto}
+  .stp-list span{display:none}
+  .stp-list b{font-size:14px}
+  .pane{grid-template-columns:1fr 1fr}
+  .calc{grid-template-columns:1fr}
+  .dgrid{grid-template-columns:1fr}
+  .plans{grid-template-columns:1fr;max-width:560px;margin-inline:auto}
+  .rv-grid{grid-template-columns:1fr}
+  .rv-big{min-height:460px}
+  .ct{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .wrap{width:calc(100% - 32px)}
+  .sec{padding:80px 0}
+  .sec-hd{margin-bottom:40px}
+  .hdr .wrap{height:66px}
+  .drawer{top:66px}
+  html{scroll-padding-top:74px}
+  .logo small{display:none}
+  .hero{padding:104px 0 64px}
+  .hero-facts div{padding-right:16px;margin-right:16px}
+  .hero-facts b{font-size:22px}
+  .hero-facts span{font-size:12.5px}
+  .hv{aspect-ratio:auto;height:560px}
+  .hv-photo{inset:0 0 70px 0}
+  .w1{top:16px;left:12px}
+  .w2{left:12px;bottom:0;width:min(296px,calc(100% - 24px))}
+  .w3{right:12px;top:auto;bottom:212px;width:min(240px,calc(100% - 24px))}
+  .w4{display:none}
+  .strip ul{grid-template-columns:1fr 1fr}
+  .strip li{padding:16px 10px;font-size:13.5px}
+  .strip li:nth-child(odd){border-left:0;padding-left:0}
+  .strip li:nth-child(n+3){border-top:1px solid var(--line)}
+  .strip li:nth-child(n+4){display:flex}
+  .strip li:nth-child(5){display:none}
+  .log::before{left:64px}
+  .log li{grid-template-columns:64px 1fr;gap:14px}
+  .log .d{font-size:13.5px}
+  .w2 .lb .chip{display:none}
+  .lc{grid-template-columns:1fr;padding:16px}
+  .lc::before{left:-20px}
+  .lc .ico{width:34px;height:34px;border-radius:10px}
+  .sw{display:grid;width:100%}
+  .sw button{padding:0 10px;font-size:14px}
+  .stp-list{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+  .stp-list button{padding:10px 2px;border-radius:12px}
+  .stp-list .n{width:38px;height:38px}
+  .stp-list b{font-size:12px;line-height:1.25}
+  .pane{grid-template-columns:1fr}
+  .pane .pc{padding:24px 20px}
+  .pane h3{font-size:22px}
+  .cf,.cr{padding:26px 20px}
+  .seg{grid-template-columns:repeat(2,1fr)}
+  .seg.three{grid-template-columns:repeat(3,1fr)}
+  .seg.three button{font-size:13.5px}
+  .dbar{padding:14px}
+  .dbar h3{border:0;padding:0;width:100%;order:3}
+  .dbar .r{margin-left:0;width:100%}
+  .dbar .dl{margin-left:auto}
+  .dbody{padding:14px;gap:14px}
+  .kpis{gap:10px}
+  .kpi{padding:14px}
+  .kpi .v{font-size:19px}
+  .kpi .t{font-size:12px}
+  .kpi .t .ic{display:none}
+  .card{padding:16px}
+  .csum{grid-template-columns:1fr;gap:6px}
+  .csum div{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:10px 12px}
+  .csum b{font-size:15px}
+  .dnote{padding:0 14px 16px}
+  .plan{padding:26px 22px}
+  .plan.feat{padding:25px 21px}
+  .cmp{font-size:13px}
+  .cmp th,.cmp td{padding:11px 6px}
+  .cmp th:first-child,.cmp td:first-child{padding-left:14px}
+  .cmp-wrap summary{padding:18px 16px}
+  .rv-big{min-height:0;padding:14px;padding-top:200px}
+  .quote{padding:20px}
+  .rv-big .quote blockquote{font-size:17px}
+  .who .tag-mau{margin-left:0}
+  .acc-b{font-size:16.5px;padding:18px 0}
+  .acc-p p{padding-right:0}
+  .ct-l,.ct-r{padding:30px 20px}
+  .form{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (max-width:420px){
+  .hero h1{font-size:39px}
+  .hero-facts{display:grid;grid-template-columns:repeat(3,auto)}
+  .hero-facts div{padding-right:12px;margin-right:12px}
+  .hero-facts b{font-size:20px}
+  .w2 .big{font-size:28px}
+  .seg.three button small{display:none}
+  .pill button{padding:0 10px;font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .js .rv,.js .w{opacity:1;transform:none}
+  .js .spark-l{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M7 12h10"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5L2.8 19.5h18.4z"/><path d="M12 10v4.2M12 17h.01"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 10.5L12 4l8.5 6.5V20h-5.5v-5.5h-6V20H3.5z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3.5h8l4 4V20.5H6z"/><path d="M14 3.5v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7.5h14.5a1.5 1.5 0 011.5 1.5v9.5a1.5 1.5 0 01-1.5 1.5H5.5A1.5 1.5 0 014 18.5z"/><path d="M4 7.5l11-3.5v3.5M15.5 13.5h1.5"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 00-5.2 5.2L4 17l3 3 5.3-5.3a4 4 0 005.2-5.2l-2.6 2.6-2.4-.6-.6-2.4z"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M7.5 15l4-4.5 3 2.5L20 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 006 6l1.5-2 4 1.5v3a2 2 0 01-2 2A16 16 0 014.5 5.5a2 2 0 012-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M3.5 18.5v-5.2c0-4.3 2.4-7.2 6.3-7.8l.6 1.9c-2.3.8-3.4 2.4-3.5 4.5h3v6.6zm10.2 0v-5.2c0-4.3 2.4-7.2 6.3-7.8l.6 1.9c-2.3.8-3.4 2.4-3.5 4.5h3v6.6z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="logo" viewBox="0 0 36 36"><rect width="36" height="36" rx="10" fill="#0A5547"/><path d="M9 25.5h18" stroke="#2E7564" stroke-width="2" stroke-linecap="round"/><path d="M9.5 21.5l5.5-5.5 4.2 3.2L26.5 11" fill="none" stroke="#F7E39A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="26.5" cy="11" r="2.6" fill="#F7E39A"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Sổ Thuê, về đầu trang">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span><b>Sổ&nbsp;Thuê</b><small>Quản lý cho thuê căn&nbsp;hộ · TP.HCM</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#noi-lo">Vì sao cần</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#tinh-thu-nhap">Tính thu nhập</a>
+      <a href="#bao-cao">Báo cáo mẫu</a>
+      <a href="#bang-gia">Gói phí</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </nav>
+    <a class="btn btn-p" href="#lien-he">Định giá căn&nbsp;hộ <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false" aria-controls="drawer">
+      <svg class="ic i-m"><use href="#i-menu"/></svg><svg class="ic i-x"><use href="#i-x"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Menu di động">
+  <a href="#noi-lo">Vì sao cần <span>01</span></a>
+  <a href="#dich-vu">Dịch vụ <span>02</span></a>
+  <a href="#tinh-thu-nhap">Tính thu nhập ròng <span>03</span></a>
+  <a href="#bao-cao">Báo cáo tháng mẫu <span>04</span></a>
+  <a href="#bang-gia">Gói phí <span>05</span></a>
+  <a href="#hoi-dap">Hỏi đáp <span>06</span></a>
+  <a class="btn btn-p" href="#lien-he">Định giá căn&nbsp;hộ miễn&nbsp;phí <svg class="ic"><use href="#i-arrow"/></svg></a>
+</nav>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-tag"><i><span class="dot"></span>Mới</i>Báo cáo thu chi gửi ngày 05 hằng&nbsp;tháng</span>
+      <h1>Bạn giữ&nbsp;căn&nbsp;hộ. <span class="mk">Sổ&nbsp;Thuê lo phần cho&nbsp;thuê.</span></h1>
+      <p class="lead">Tìm khách, ký hợp đồng, nhắc và đối soát tiền thuê, gọi thợ khi có hỏng hóc. Cuối tháng, bạn nhận một bản báo cáo ghi rõ từng khoản thu, từng khoản&nbsp;chi.</p>
+      <div class="hero-cta">
+        <a class="btn btn-p" href="#tinh-thu-nhap">Tính thu&nbsp;nhập ròng <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-g" href="#bao-cao">Xem báo&nbsp;cáo&nbsp;mẫu</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>48&nbsp;giờ</b><span>đăng tin sau khi nhận&nbsp;căn</span></div>
+        <div><b>Ngày&nbsp;05</b><span>gửi báo cáo hằng&nbsp;tháng</span></div>
+        <div><b>Từ&nbsp;6%</b><span>phí quản lý mỗi&nbsp;tháng</span></div>
+      </div>
+    </div>
+    <div class="hv" aria-label="Minh hoạ bảng theo dõi căn hộ cho thuê">
+      <div class="hv-photo"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=80" alt="Phòng khách căn hộ sáng sủa với sofa xám, gối trắng và cây xanh" width="1200" height="1300" fetchpriority="high"></div>
+      <div class="w w1"><span class="th"><svg class="ic"><use href="#i-home"/></svg></span><div><b>Căn 2PN · Phường An&nbsp;Khánh</b><small><span class="dot"></span>Đang cho thuê · hợp đồng đến 31/05/2027</small></div></div>
+      <div class="w w3"><span class="th"><svg class="ic"><use href="#i-check"/></svg></span><div><b>Tiền thuê tháng 11 đã về tài&nbsp;khoản</b><span><strong class="num">18.500.000đ</strong> · 03/11/2026 09:12</span></div></div>
+      <div class="w w4"><svg class="ic"><use href="#i-tool"/></svg><b>Phiếu #118 · Sửa khoá ban&nbsp;công</b><span class="chip chip-g">Đã xong</span></div>
+      <div class="w w2">
+        <div class="lb"><span>THU NHẬP RÒNG · T10/2026</span><span class="chip chip-g" style="height:22px">Đã đối soát</span></div>
+        <div class="big num" id="heroNet" data-to="16670000">16.670.000đ</div>
+        <div class="sub">Đã trừ phí quản lý và sửa&nbsp;chữa</div>
+        <svg viewBox="0 0 280 64" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A5547" stop-opacity=".16"/><stop offset="1" stop-color="#0A5547" stop-opacity="0"/></linearGradient></defs><path id="sparkA" fill="url(#gs)" d=""/><path id="sparkL" class="spark-l" d=""/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <ul class="wrap">
+    <li><span><svg class="ic"><use href="#i-search"/></svg></span>Tìm và sàng lọc người&nbsp;thuê</li>
+    <li><span><svg class="ic"><use href="#i-doc"/></svg></span>Hợp đồng, biên bản có&nbsp;ảnh</li>
+    <li><span><svg class="ic"><use href="#i-wallet"/></svg></span>Nhắc và đối soát tiền&nbsp;thuê</li>
+    <li><span><svg class="ic"><use href="#i-tool"/></svg></span>Điều phối thợ sửa&nbsp;chữa</li>
+    <li><span><svg class="ic"><use href="#i-chart"/></svg></span>Báo cáo tháng trên điện&nbsp;thoại</li>
+  </ul>
+</div>
+
+<!-- PAIN -->
+<section class="sec" id="noi-lo">
+  <div class="wrap pain">
+    <div class="pain-l rv">
+      <span class="eyebrow">Một tháng của chủ nhà</span>
+      <h2 class="h2" style="margin-top:16px">Cho thuê căn&nbsp;hộ tưởng nhàn, cho&nbsp;đến khi tự&nbsp;làm.</h2>
+      <p>Đây là những việc rất thường gặp trong một tháng có người thuê. Bấm để xem cùng ngày đó, khi căn hộ do Sổ&nbsp;Thuê quản&nbsp;lý.</p>
+      <div class="sw" id="sw" data-m="a" role="group" aria-label="Chọn cách quản lý">
+        <button type="button" aria-pressed="true" data-m="a">Tự quản&nbsp;lý</button>
+        <button type="button" aria-pressed="false" data-m="b">Giao cho Sổ&nbsp;Thuê</button>
+      </div>
+      <div class="meter" id="meter" data-m="a">
+        <div class="t"><span>Thời gian bạn bỏ ra trong&nbsp;tháng</span><b class="num" id="meterV">~14 giờ</b></div>
+        <div class="bar"><i></i></div>
+        <small>Con số ước tính để minh hoạ, tuỳ từng căn và từng&nbsp;tháng.</small>
+      </div>
+    </div>
+    <ol class="log" id="log" data-m="a">
+      <li class="rv"><div class="d">Ngày 02<small>22:40</small></div><div class="lc"><span class="ico"><svg class="ic no"><use href="#i-alert"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><div class="txt"><p class="a"><b>Khách nhắn máy lạnh phòng ngủ chảy nước.</b> Bạn đang công tác ở Hà Nội, không biết gọi thợ nào cho đáng&nbsp;tin.</p><p class="b"><b>Thợ quen đến lúc 09:00 sáng hôm sau.</b> Ảnh trước–sau và hoá đơn 450.000đ được đưa thẳng vào báo&nbsp;cáo.</p></div></div></li>
+      <li class="rv"><div class="d">Ngày 05<small>08:00</small></div><div class="lc"><span class="ico"><svg class="ic no"><use href="#i-alert"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><div class="txt"><p class="a"><b>Đến hạn thu tiền.</b> Nhắn lần một, lần hai, khách hẹn &ldquo;cuối tuần chuyển&rdquo;. Bạn ngại nhắc&nbsp;thêm.</p><p class="b"><b>Nhắc từ ngày 01, gọi điện nếu trễ hạn.</b> Tiền chuyển thẳng vào tài khoản của bạn, kèm ảnh chứng&nbsp;từ.</p></div></div></li>
+      <li class="rv"><div class="d">Ngày 12<small>19:15</small></div><div class="lc"><span class="ico"><svg class="ic no"><use href="#i-alert"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><div class="txt"><p class="a"><b>Khách báo trả nhà cuối tháng.</b> Lúc bàn giao không chụp ảnh, giờ không biết đối chiếu tiền cọc thế&nbsp;nào.</p><p class="b"><b>Biên bản bàn giao có ảnh từng phòng</b>, chỉ số điện nước, danh sách nội thất. Hoàn cọc theo đúng biên&nbsp;bản.</p></div></div></li>
+      <li class="rv"><div class="d">Ngày 18<small>12:30</small></div><div class="lc"><span class="ico"><svg class="ic no"><use href="#i-alert"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><div class="txt"><p class="a"><b>Đăng tin tìm khách mới.</b> Điện thoại reo cả ngày hỏi giá, hẹn xem thì người đến người&nbsp;không.</p><p class="b"><b>Chúng tôi chụp ảnh, đăng tin, dẫn xem.</b> Bạn chỉ đọc hồ sơ người thuê đã sàng lọc và chọn&nbsp;người.</p></div></div></li>
+      <li class="rv"><div class="d">Ngày 30<small>21:00</small></div><div class="lc"><span class="ico"><svg class="ic no"><use href="#i-alert"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><div class="txt"><p class="a"><b>Ngồi cộng sổ.</b> Tháng này đã chi bao nhiêu cho căn hộ? Hoá đơn sửa vòi nước để đâu&nbsp;rồi?</p><p class="b"><b>Báo cáo tháng gửi qua email và Zalo.</b> Thu, chi, thu nhập ròng và ảnh hoá đơn nằm trên một màn&nbsp;hình.</p></div></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec svc" id="dich-vu">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="eyebrow">Dịch vụ</span>
+      <h2 class="h2">Năm việc Sổ&nbsp;Thuê làm thay&nbsp;bạn, mỗi&nbsp;tháng.</h2>
+      <p>Bạn vẫn là người quyết định: chọn người thuê, duyệt khoản sửa chữa lớn, đặt mức giá. Phần việc chạy hằng ngày để chúng tôi&nbsp;lo.</p>
+    </div>
+    <div class="stp rv">
+      <div class="stp-list" role="tablist" aria-label="Các bước dịch vụ" id="stpList">
+        <button role="tab" aria-selected="true" aria-controls="p1" id="t1"><span class="n">01</span><b>Tìm khách</b><span>Chụp ảnh, đăng tin, lọc khách, dẫn&nbsp;xem</span><i class="pg"></i></button>
+        <button role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1"><span class="n">02</span><b>Hợp đồng</b><span>Soạn hợp&nbsp;đồng, bàn giao có&nbsp;ảnh</span><i class="pg"></i></button>
+        <button role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1"><span class="n">03</span><b>Thu tiền</b><span>Nhắc hạn, đối soát từng&nbsp;khoản</span><i class="pg"></i></button>
+        <button role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1"><span class="n">04</span><b>Bảo trì</b><span>Thợ quen, báo giá trước khi&nbsp;làm</span><i class="pg"></i></button>
+        <button role="tab" aria-selected="false" aria-controls="p5" id="t5" tabindex="-1"><span class="n">05</span><b>Báo cáo</b><span>Thu, chi, ròng trên một màn&nbsp;hình</span><i class="pg"></i></button>
+      </div>
+      <div class="stp-panes">
+        <article class="pane on" role="tabpanel" id="p1" aria-labelledby="t1">
+          <figure><img src="https://images.unsplash.com/photo-1757924461488-ef9ad0670978?auto=format&fit=crop&w=1000&q=80" alt="Phòng khách căn hộ có cửa kính lớn và sofa màu kem, được chụp để đăng tin cho thuê" loading="lazy" width="1000" height="1000"></figure>
+          <div class="pc"><span class="k">Bước 01 · Tìm khách</span><h3>Căn trống ít ngày, người&nbsp;thuê đúng&nbsp;ý</h3><p>Nhận căn trong 48&nbsp;giờ, chúng tôi chụp ảnh, viết tin, đăng trên các kênh cho thuê và nghe mọi cuộc gọi hỏi&nbsp;giá.</p>
+            <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Ảnh sáng, đúng hiện trạng, không chỉnh quá&nbsp;tay</li><li><svg class="ic"><use href="#i-check"/></svg>Hỏi kỹ nghề nghiệp, số người ở, thời gian&nbsp;thuê</li><li><svg class="ic"><use href="#i-check"/></svg>Dẫn xem theo lịch, bạn không cần có&nbsp;mặt</li></ul>
+            <div class="get"><b>Bạn nhận được</b>Hồ sơ 1–3 người thuê phù hợp để chọn</div></div>
+        </article>
+        <article class="pane" role="tabpanel" id="p2" aria-labelledby="t2">
+          <figure><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80" alt="Người ký hợp đồng thuê nhà trên bàn" loading="lazy" width="1000" height="1000"></figure>
+          <div class="pc"><span class="k">Bước 02 · Hợp đồng</span><h3>Giấy tờ rõ ràng từ ngày&nbsp;đầu&nbsp;tiên</h3><p>Hợp đồng ký giữa bạn và người thuê; chúng tôi soạn, giải thích từng điều khoản và làm thủ tục thay bạn theo uỷ&nbsp;quyền.</p>
+            <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Hợp đồng song ngữ Việt–Anh khi khách là người nước&nbsp;ngoài</li><li><svg class="ic"><use href="#i-check"/></svg>Biên bản bàn giao: ảnh từng phòng, chỉ số điện&nbsp;nước</li><li><svg class="ic"><use href="#i-check"/></svg>Hỗ trợ khai báo tạm trú theo quy&nbsp;định</li></ul>
+            <div class="get"><b>Bạn nhận được</b>Bản scan hợp đồng và biên bản trong hồ sơ căn</div></div>
+        </article>
+        <article class="pane" role="tabpanel" id="p3" aria-labelledby="t3">
+          <figure><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80" alt="Người dùng bút đối chiếu số liệu bên cạnh máy tính xách tay" loading="lazy" width="1000" height="1000"></figure>
+          <div class="pc"><span class="k">Bước 03 · Thu tiền</span><h3>Tiền về đúng hạn, có chứng&nbsp;từ</h3><p>Người thuê chuyển thẳng vào tài khoản của bạn. Chúng tôi nhắc hạn, theo dõi và đối soát để bạn không phải hỏi&nbsp;han.</p>
+            <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Nhắc từ ngày 01, gọi điện nếu quá&nbsp;hạn</li><li><svg class="ic"><use href="#i-check"/></svg>Đối soát tiền điện, nước, phí quản lý toà&nbsp;nhà</li><li><svg class="ic"><use href="#i-check"/></svg>Không thu phí quản lý tháng căn&nbsp;trống</li></ul>
+            <div class="get"><b>Bạn nhận được</b>Tin báo ngay khi tiền về, kèm ảnh chứng từ</div></div>
+        </article>
+        <article class="pane" role="tabpanel" id="p4" aria-labelledby="t4">
+          <figure><img src="https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?auto=format&fit=crop&w=1000&q=80" alt="Thợ kỹ thuật kiểm tra cụm dàn nóng máy lạnh trên sân thượng toà nhà" loading="lazy" width="1000" height="1000"></figure>
+          <div class="pc"><span class="k">Bước 04 · Bảo trì</span><h3>Hỏng gì cũng có người&nbsp;đến</h3><p>Tiếp nhận báo hỏng từ 07:00–22:00 mỗi ngày, điều thợ quen đã làm việc lâu với chúng tôi, giá báo trước khi&nbsp;sửa.</p>
+            <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Khoản trên 500.000đ gửi báo giá để bạn&nbsp;duyệt</li><li><svg class="ic"><use href="#i-check"/></svg>Ảnh trước–sau và hoá đơn cho từng&nbsp;phiếu</li><li><svg class="ic"><use href="#i-check"/></svg>Vệ sinh máy lạnh, kiểm tra đường nước định&nbsp;kỳ</li></ul>
+            <div class="get"><b>Bạn nhận được</b>Phiếu sửa chữa có ảnh, nằm sẵn trong báo cáo</div></div>
+        </article>
+        <article class="pane" role="tabpanel" id="p5" aria-labelledby="t5">
+          <figure><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=80" alt="Căn hộ sáng với góc làm việc, sofa xám và nhiều cây xanh" loading="lazy" width="1000" height="1000"></figure>
+          <div class="pc"><span class="k">Bước 05 · Báo cáo</span><h3>Ngày 05, mở điện thoại là thấy&nbsp;hết</h3><p>Báo cáo tháng gửi qua email và Zalo, đọc được trên điện thoại. Cuối năm có bảng tổng hợp để kê khai thuế cho thuê&nbsp;nhà.</p>
+            <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Tiền thuê đã thu, từng khoản chi, thu nhập&nbsp;ròng</li><li><svg class="ic"><use href="#i-check"/></svg>Biểu đồ thu nhập ròng 12&nbsp;tháng</li><li><svg class="ic"><use href="#i-check"/></svg>Tình trạng hợp đồng, phiếu sửa&nbsp;chữa</li></ul>
+            <div class="get"><b>Bạn nhận được</b><a href="#bao-cao">Mở bản báo cáo mẫu ngay bên dưới</a></div></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="sec calc-sec" id="tinh-thu-nhap">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="eyebrow">Tính thử</span>
+      <h2 class="h2">Căn của bạn mỗi&nbsp;tháng còn lại bao&nbsp;nhiêu?</h2>
+      <p>Chọn loại căn, khu vực và giá bạn muốn cho thuê. Bảng tính trừ phí quản lý và khoản dự phòng sửa chữa để ra thu nhập ròng ước&nbsp;tính.</p>
+    </div>
+    <div class="calc rv">
+      <form class="cf" id="calcForm" onsubmit="return false" aria-label="Máy tính thu nhập ròng dự kiến">
+        <div>
+          <div class="fl"><span id="lbType">Loại căn hộ</span></div>
+          <div class="seg" role="group" aria-labelledby="lbType" data-k="type">
+            <button type="button" data-v="studio" aria-pressed="false">Studio<small>25–35&nbsp;m²</small></button>
+            <button type="button" data-v="1pn" aria-pressed="false">1 phòng ngủ<small>45–55&nbsp;m²</small></button>
+            <button type="button" data-v="2pn" aria-pressed="true">2 phòng ngủ<small>65–80&nbsp;m²</small></button>
+            <button type="button" data-v="3pn" aria-pressed="false">3 phòng ngủ<small>95–120&nbsp;m²</small></button>
+          </div>
+        </div>
+        <div>
+          <div class="fl"><label for="area">Khu vực</label><small>Tên phường sau sáp nhập&nbsp;2025</small></div>
+          <div class="sel"><select id="area"></select></div>
+        </div>
+        <div>
+          <div class="fl"><span id="lbFurn">Nội thất</span></div>
+          <div class="seg two" role="group" aria-labelledby="lbFurn" data-k="furn">
+            <button type="button" data-v="1" aria-pressed="true">Đầy đủ nội&nbsp;thất<small>Vào ở ngay</small></button>
+            <button type="button" data-v="0" aria-pressed="false">Nội thất cơ&nbsp;bản<small>Bếp, rèm, máy lạnh</small></button>
+          </div>
+        </div>
+        <div>
+          <div class="fl"><label for="price">Giá thuê bạn mong muốn</label><small>mỗi tháng</small></div>
+          <div class="price-in"><input id="price" inputmode="numeric" autocomplete="off" value="19.500.000" aria-describedby="priceHint"><span>đ/tháng</span></div>
+          <input class="rng" id="rng" type="range" min="3000000" max="50000000" step="100000" value="19500000" aria-label="Kéo để chọn giá thuê mong muốn">
+          <div class="rng-l num" id="priceHint"><span>3 triệu</span><span>50 triệu</span></div>
+        </div>
+        <div>
+          <div class="fl"><span id="lbPkg">Gói quản lý</span><a href="#bang-gia" style="font:400 13px var(--sans);color:var(--g7)">So sánh gói</a></div>
+          <div class="seg three" role="group" aria-labelledby="lbPkg" data-k="pkg">
+            <button type="button" data-v="6" aria-pressed="false">Thiết&nbsp;yếu<small>6%</small></button>
+            <button type="button" data-v="8" aria-pressed="true">Trọn&nbsp;gói<small>8%</small></button>
+            <button type="button" data-v="10" aria-pressed="false">An&nbsp;tâm<small>10%</small></button>
+          </div>
+        </div>
+      </form>
+      <div class="cr" aria-live="polite">
+        <div class="mkt">
+          <span class="lb">Mặt bằng thuê ước tính</span>
+          <b id="mkt">18.000.000đ – 21.000.000đ</b>
+          <div class="gauge" aria-hidden="true"><i id="gauge"></i></div>
+          <div class="gauge-l"><span>Thấp hơn</span><span>Phù hợp</span><span>Cao hơn</span></div>
+        </div>
+        <p class="msg" id="msg">Giá mong muốn nằm trong khoảng mặt bằng ước tính của khu vực.</p>
+        <dl class="rows">
+          <div><dt>Tiền thuê ước tính</dt><dd id="rRent">19.500.000đ</dd></div>
+          <div class="neg"><dt>Phí quản lý (<span id="rPct">8</span>%)</dt><dd id="rFee">−1.560.000đ</dd></div>
+          <div class="neg"><dt>Dự phòng bảo trì, sửa chữa</dt><dd id="rMaint">−590.000đ</dd></div>
+        </dl>
+        <div class="net">
+          <div><span class="lb">Thu nhập ròng / tháng</span><div class="v" id="rNet" style="margin-top:10px">17.350.000đ</div></div>
+          <small id="rYear" class="num">≈ 208.200.000đ cho 12 tháng có&nbsp;khách</small>
+        </div>
+        <div class="split" aria-hidden="true"><i class="s1" id="s1" style="flex-grow:89"></i><i class="s2" id="s2" style="flex-grow:8"></i><i class="s3" id="s3" style="flex-grow:3"></i></div>
+        <div class="split-l"><span><i style="background:var(--y3)"></i>Bạn nhận</span><span><i style="background:#7CC8B0"></i>Phí quản lý</span><span><i style="background:#F3C4B2"></i>Bảo trì</span></div>
+        <div class="warn"><svg class="ic"><use href="#i-alert"/></svg><p><b>Con số tham khảo, không cam kết.</b> Ước tính theo mặt bằng chào thuê chung của khu vực và loại căn; chưa tính thuế cho thuê nhà, phí quản lý toà nhà, tháng căn trống. Giá thực tế tuỳ toà nhà, tầng, hướng, tình trạng căn và thời&nbsp;điểm.</p></div>
+        <a class="btn btn-y" href="#lien-he" id="toForm">Gửi số này, nhận định&nbsp;giá&nbsp;thật <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD DEMO -->
+<section class="sec" id="bao-cao" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="eyebrow">Báo cáo tháng mẫu</span>
+      <h2 class="h2">Mỗi đồng ra vào đều có dòng, có&nbsp;ảnh.</h2>
+      <p>Đây là bản báo cáo chủ nhà nhận vào ngày 05 hằng tháng. Bấm đổi căn, đổi tháng, rê chuột lên biểu đồ để xem từng&nbsp;tháng.</p>
+    </div>
+    <div class="dash rv" id="dash">
+      <div class="dbar">
+        <span class="logo"><svg aria-hidden="true"><use href="#logo"/></svg><b>Sổ&nbsp;Thuê</b></span>
+        <h3>Báo cáo <b id="dMonthT">tháng 10/2026</b> · gửi ngày <span id="dSent" class="num">05/11/2026</span></h3>
+        <div class="r">
+          <div class="pill" role="group" aria-label="Chọn căn hộ" id="dApt">
+            <button type="button" aria-pressed="true" data-v="A">2PN · An&nbsp;Khánh</button>
+            <button type="button" aria-pressed="false" data-v="B">Studio · Bến&nbsp;Thành</button>
+          </div>
+          <div class="pill" role="group" aria-label="Chọn tháng" id="dMonth">
+            <button type="button" aria-pressed="false" data-v="9">T8</button>
+            <button type="button" aria-pressed="false" data-v="10">T9</button>
+            <button type="button" aria-pressed="true" data-v="11">T10</button>
+          </div>
+          <button type="button" class="dl" id="dPdf"><svg class="ic"><use href="#i-down"/></svg>Tải PDF</button>
+        </div>
+      </div>
+      <div class="dbody">
+        <div class="kpis">
+          <div class="kpi"><div class="t">Tiền thuê đã thu<svg class="ic"><use href="#i-wallet"/></svg></div><div class="v" id="kRent">18.500.000đ</div><span class="chip chip-g" id="kRentD">bằng tháng trước</span></div>
+          <div class="kpi"><div class="t">Tổng chi trong tháng<svg class="ic"><use href="#i-tool"/></svg></div><div class="v" id="kCost">1.830.000đ</div><span class="chip chip-y" id="kCostD">+170.000đ</span></div>
+          <div class="kpi hl"><div class="t">Thu nhập ròng<svg class="ic"><use href="#i-chart"/></svg></div><div class="v" id="kNet">16.670.000đ</div><span class="chip" id="kNetD">−170.000đ</span></div>
+          <div class="kpi"><div class="t">Ngày căn trống<svg class="ic"><use href="#i-cal"/></svg></div><div class="v" id="kVac">0 ngày</div><span class="chip chip-g" id="kVacD">Đang có khách</span></div>
+        </div>
+        <div class="dgrid">
+          <div class="card">
+            <div class="card-h"><h4>Thu nhập ròng 12 tháng</h4><div class="legend"><span><i></i>Ròng mỗi tháng</span><span><i class="y"></i>Tháng đang xem</span></div></div>
+            <div class="chart" id="chart"><svg id="chartSvg" viewBox="0 0 640 260" role="img" aria-label="Biểu đồ đường thu nhập ròng 12 tháng của căn hộ"></svg><div class="tip" id="tip"></div></div>
+            <div class="csum"><div><span>Tổng ròng 12 tháng</span><b id="cTot">0đ</b></div><div><span>Trung bình mỗi tháng</span><b id="cAvg">0đ</b></div><div><span>Ngày trống trong năm</span><b id="cVac">12 ngày</b></div></div>
+          </div>
+          <div class="card">
+            <div class="card-h"><h4>Khoản chi tháng</h4><small id="dPkg">Gói Trọn gói · 8%</small></div>
+            <table class="tbl"><thead><tr><th>Ngày</th><th>Hạng mục</th><th>Số tiền</th></tr></thead><tbody id="dRows"></tbody><tfoot><tr><td></td><td>Tổng chi</td><td id="dTotal">1.830.000đ</td></tr></tfoot></table>
+            <div class="info">
+              <div><span>Tiền thuê về tài khoản</span><b id="dPaid">03/10/2026</b></div>
+              <div><span>Hợp đồng hiện tại</span><b id="dCt">đến 31/05/2027</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dnote"><span>Dữ liệu minh hoạ, không phải căn hộ thật.</span><span>Báo cáo gửi qua email và Zalo · xem được trên điện thoại</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="sec plans-sec" id="bang-gia">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="eyebrow">Gói phí</span>
+      <h2 class="h2">Ba gói, tính theo phần trăm tiền&nbsp;thuê thực&nbsp;thu.</h2>
+      <p>Tháng căn trống không thu phí quản lý. Số tiền minh hoạ bên dưới lấy theo tiền thuê bạn vừa nhập ở bảng&nbsp;tính: <b class="num" id="plRent" style="color:var(--g7)">19.500.000đ</b>/tháng.</p>
+    </div>
+    <div class="plans">
+      <article class="plan rv">
+        <h3>Thiết&nbsp;yếu</h3>
+        <p class="ds">Cho chủ nhà ở gần, muốn tự lo phần sửa&nbsp;chữa.</p>
+        <div class="pr"><b>6%</b><span>tiền thuê / tháng</span></div>
+        <div class="eq">≈ <b data-pct="6">1.170.000đ</b> mỗi tháng</div>
+        <p class="fee">Phí tìm khách mới: 50% một tháng&nbsp;thuê</p>
+        <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Tìm khách, dẫn xem, sàng lọc</li><li><svg class="ic"><use href="#i-check"/></svg>Hợp đồng và biên bản có ảnh</li><li><svg class="ic"><use href="#i-check"/></svg>Nhắc, đối soát tiền thuê</li><li><svg class="ic"><use href="#i-check"/></svg>Báo cáo tháng</li></ul>
+        <a class="btn btn-g" href="#lien-he" data-plan="Thiết&nbsp;yếu">Chọn gói Thiết&nbsp;yếu</a>
+      </article>
+      <article class="plan feat rv d1">
+        <span class="badge">Hợp với căn đủ nội thất</span>
+        <h3>Trọn&nbsp;gói</h3>
+        <p class="ds">Cho chủ nhà ở xa, đi làm bận, muốn giao hết phần vận&nbsp;hành.</p>
+        <div class="pr"><b>8%</b><span>tiền thuê / tháng</span></div>
+        <div class="eq">≈ <b data-pct="8">1.560.000đ</b> mỗi tháng</div>
+        <p class="fee">Phí tìm khách mới: 25% một tháng&nbsp;thuê</p>
+        <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Mọi việc của gói Thiết yếu</li><li><svg class="ic"><use href="#i-check"/></svg>Điều phối thợ, ảnh trước–sau</li><li><svg class="ic"><use href="#i-check"/></svg>Kiểm tra căn 6 tháng một lần</li><li><svg class="ic"><use href="#i-check"/></svg>Vệ sinh máy lạnh định kỳ</li></ul>
+        <a class="btn btn-p" href="#lien-he" data-plan="Trọn&nbsp;gói">Chọn gói Trọn&nbsp;gói <svg class="ic"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="plan rv d2">
+        <h3>An&nbsp;tâm</h3>
+        <p class="ds">Cho chủ nhà sống ở nước ngoài hoặc có từ hai căn trở&nbsp;lên.</p>
+        <div class="pr"><b>10%</b><span>tiền thuê / tháng</span></div>
+        <div class="eq">≈ <b data-pct="10">1.950.000đ</b> mỗi tháng</div>
+        <p class="fee">Phí tìm khách mới: không&nbsp;thu</p>
+        <ul class="ticks"><li><svg class="ic"><use href="#i-check"/></svg>Mọi việc của gói Trọn gói</li><li><svg class="ic"><use href="#i-check"/></svg>Sửa nhỏ dưới 500.000đ làm ngay</li><li><svg class="ic"><use href="#i-check"/></svg>Dọn dẹp giữa hai lượt khách</li><li><svg class="ic"><use href="#i-check"/></svg>Hỗ trợ hồ sơ kê khai thuế</li></ul>
+        <a class="btn btn-g" href="#lien-he" data-plan="An&nbsp;tâm">Chọn gói An&nbsp;tâm</a>
+      </article>
+    </div>
+    <details class="cmp-wrap rv" open>
+      <summary>So sánh chi tiết ba gói <svg class="ic"><use href="#i-plus"/></svg></summary>
+      <table class="cmp">
+        <thead><tr><th>Hạng mục</th><th>Thiết yếu</th><th class="c2">Trọn gói</th><th>An tâm</th></tr></thead>
+        <tbody>
+          <tr><td>Chụp ảnh, đăng tin, dẫn xem</td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td class="c2"><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Hợp đồng, biên bản bàn giao có ảnh</td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td class="c2"><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Nhắc và đối soát tiền thuê</td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td class="c2"><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Báo cáo tháng trên điện thoại</td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td class="c2"><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Điều phối thợ, ảnh trước–sau</td><td><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td class="c2"><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Kiểm tra căn định kỳ</td><td><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td class="c2">6&nbsp;tháng/lần</td><td>3&nbsp;tháng/lần</td></tr>
+          <tr><td>Sửa nhỏ dưới 500.000đ không chờ duyệt</td><td><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td class="c2"><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Dọn dẹp giữa hai lượt khách</td><td><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td class="c2"><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Hỗ trợ hồ sơ kê khai thuế cho thuê nhà</td><td><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td class="c2"><svg class="ic no" aria-label="Không"><use href="#i-dash"/></svg></td><td><svg class="ic" aria-label="Có"><use href="#i-check"/></svg></td></tr>
+          <tr><td>Phí tìm khách mới</td><td class="num">50%</td><td class="c2 num">25%</td><td>Không thu</td></tr>
+        </tbody>
+      </table>
+    </details>
+    <p class="plans-note">Phí quản lý tính trên tiền thuê thực thu, chưa gồm VAT. Chi phí sửa chữa thanh toán theo hoá đơn&nbsp;thật.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="danh-gia">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="eyebrow">Chủ nhà nói gì</span>
+      <h2 class="h2">Ở xa vẫn biết căn&nbsp;hộ đang thế&nbsp;nào.</h2>
+    </div>
+    <div class="rv-grid">
+      <div class="rv-big rv">
+        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=1400&q=80" alt="Toà nhà cao tầng ven sông Sài Gòn lúc hoàng hôn" loading="lazy" width="1400" height="1000">
+        <figure class="quote">
+          <svg class="ic qm"><use href="#i-quote"/></svg>
+          <blockquote>Trước đây tháng nào tôi cũng bay vào một lần chỉ để giải quyết chuyện của khách thuê. Giờ tôi đọc báo cáo trên điện thoại, hoá đơn sửa máy lạnh có ảnh đầy đủ, tiền về đúng ngày.</blockquote>
+          <figcaption class="who"><span class="av">NH</span><span><b>Chị Ngọc Hân</b><small>Căn 2PN ở Phường An Khánh, đang sống tại Hà&nbsp;Nội</small></span><span class="tag-mau">Đánh giá mẫu</span></figcaption>
+        </figure>
+      </div>
+      <div class="rv-side">
+        <figure class="quote rv d1">
+          <svg class="ic qm"><use href="#i-quote"/></svg>
+          <blockquote>Tôi thích phần đối soát. Cuối năm có sẵn bảng tổng hợp thu chi, mang đi kê khai thuế nhẹ hẳn so với tự cộng&nbsp;sổ.</blockquote>
+          <figcaption class="who"><span class="av">QB</span><span><b>Anh Quốc Bảo</b><small>Studio ở Phường Bến Thành</small></span><span class="tag-mau">Đánh giá mẫu</span></figcaption>
+        </figure>
+        <figure class="quote y rv d2">
+          <svg class="ic qm"><use href="#i-quote"/></svg>
+          <blockquote>Tôi không rành điện thoại lắm, nên mỗi tháng nhân viên vẫn gọi đọc báo cáo cho tôi nghe. Có gì cần sửa lớn đều hỏi tôi&nbsp;trước.</blockquote>
+          <figcaption class="who"><span class="av">TL</span><span><b>Cô Thu Lan</b><small>Hai căn ở Phường Tân Mỹ, đã nghỉ&nbsp;hưu</small></span><span class="tag-mau">Đánh giá mẫu</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="hoi-dap" style="background:var(--bg2);border-top:1px solid var(--line)">
+  <div class="wrap faq">
+    <div class="faq-l rv">
+      <span class="eyebrow">Hỏi đáp</span>
+      <h2 class="h2" style="margin-top:16px">Chủ nhà thường hỏi trước khi giao&nbsp;căn</h2>
+      <p>Chưa thấy câu bạn cần? Gọi cho chúng tôi trong giờ làm việc, 08:00–18:00 từ thứ Hai đến thứ&nbsp;Bảy.</p>
+      <div class="mini"><span class="th"><svg class="ic"><use href="#i-phone"/></svg></span><div><b>Tư vấn cho chủ nhà</b><a href="tel:0900000000" class="num">0900&nbsp;000&nbsp;000</a></div></div>
+    </div>
+    <div class="acc rv" id="acc">
+      <div class="acc-i open"><h3><button class="acc-b" aria-expanded="true">Hợp đồng thuê ký giữa ai với&nbsp;ai?<span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3><div class="acc-p"><div><p>Hợp đồng thuê ký giữa bạn và người thuê. Sổ Thuê ký với bạn một hợp đồng dịch vụ quản lý kèm giấy uỷ quyền, ghi rõ phạm vi việc chúng tôi được làm thay: dẫn xem, ký biên bản bàn giao, điều phối sửa chữa.</p></div></div></div>
+      <div class="acc-i"><h3><button class="acc-b" aria-expanded="false">Tiền thuê chuyển vào tài&nbsp;khoản&nbsp;nào?<span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3><div class="acc-p"><div><p>Mặc định người thuê chuyển thẳng vào tài khoản của bạn. Chúng tôi theo dõi, đối soát và gửi ảnh chứng từ. Phí quản lý xuất hoá đơn riêng mỗi tháng, bạn thanh toán sau khi nhận báo cáo.</p></div></div></div>
+      <div class="acc-i"><h3><button class="acc-b" aria-expanded="false">Sửa chữa lớn thì ai quyết&nbsp;định?<span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3><div class="acc-p"><div><p>Bạn quyết. Khoản nào trên 500.000đ (hoặc mức bạn tự đặt) đều có ảnh hiện trạng và báo giá gửi bạn duyệt trước. Riêng gói An tâm, việc nhỏ dưới mức đó được làm ngay để khách thuê không phải chờ.</p></div></div></div>
+      <div class="acc-i"><h3><button class="acc-b" aria-expanded="false">Tháng căn trống có tính&nbsp;phí&nbsp;không?<span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3><div class="acc-p"><div><p>Không. Phí quản lý tính theo phần trăm tiền thuê thực thu, tháng nào không có tiền thuê thì không thu phí quản lý. Phí tìm khách mới chỉ tính khi hợp đồng thuê được ký.</p></div></div></div>
+      <div class="acc-i"><h3><button class="acc-b" aria-expanded="false">Người thuê là người nước&nbsp;ngoài có được&nbsp;không?<span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3><div class="acc-p"><div><p>Được. Chúng tôi dùng hợp đồng song ngữ Việt–Anh, kiểm tra hộ chiếu, thị thực và hỗ trợ khai báo tạm trú cho người nước ngoài theo quy định hiện hành.</p></div></div></div>
+      <div class="acc-i"><h3><button class="acc-b" aria-expanded="false">Thuế cho&nbsp;thuê nhà xử lý thế&nbsp;nào?<span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3><div class="acc-p"><div><p>Nghĩa vụ thuế vẫn đứng tên chủ nhà. Báo cáo tháng và bảng tổng hợp cuối năm giúp bạn có số liệu để kê khai; gói An tâm hỗ trợ chuẩn bị hồ sơ. Mức thuế áp dụng theo quy định hiện hành, chúng tôi sẽ đối chiếu với trường hợp cụ thể của bạn.</p></div></div></div>
+      <div class="acc-i"><h3><button class="acc-b" aria-expanded="false">Muốn ngừng dịch vụ thì làm&nbsp;sao?<span class="pl"><svg class="ic"><use href="#i-plus"/></svg></span></button></h3><div class="acc-p"><div><p>Báo trước 30 ngày. Chúng tôi bàn giao lại toàn bộ hồ sơ: hợp đồng, biên bản, ảnh hiện trạng, lịch sử thu chi và liên hệ thợ đã làm cho căn hộ của bạn.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="lien-he">
+  <div class="wrap">
+    <div class="ct rv">
+      <div class="ct-l">
+        <img src="https://images.unsplash.com/photo-1521019795854-14e15f600980?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy" width="1200" height="800">
+        <span class="eyebrow">Định giá miễn phí</span>
+        <h2 class="h2">Gửi thông tin căn, nhận mức giá chào thuê đề&nbsp;xuất.</h2>
+        <p>Trong một ngày làm việc, chuyên viên gọi lại hỏi thêm về căn và gửi bạn khoảng giá đề xuất kèm căn tương tự đang cho thuê gần&nbsp;đó.</p>
+        <ol class="how">
+          <li><span><b>Gọi lại trao đổi</b> về căn, mức giá bạn mong muốn</span></li>
+          <li><span><b>Xem căn tại chỗ</b> hoặc qua video, chụp ảnh hiện trạng</span></li>
+          <li><span><b>Gửi đề xuất</b>: giá chào thuê, gói phù hợp, thời gian dự kiến có khách</span></li>
+        </ol>
+        <div class="cinfo">
+          <a href="tel:0900000000"><svg class="ic"><use href="#i-phone"/></svg><span class="num">0900&nbsp;000&nbsp;000</span></a>
+          <a href="mailto:chunha@sothue.vn"><svg class="ic"><use href="#i-mail"/></svg>chunha@sothue.vn</a>
+          <span><svg class="ic"><use href="#i-clock"/></svg>08:00–18:00, thứ Hai – thứ&nbsp;Bảy</span>
+          <span><svg class="ic"><use href="#i-pin"/></svg>Văn phòng tại Phường Bến Thành, TP.HCM</span>
+        </div>
+      </div>
+      <div class="ct-r" id="ctR">
+        <div class="form-hd"><h3>Nhận định&nbsp;giá căn&nbsp;hộ</h3><p>Mất khoảng 1 phút. Các ô có dấu * là bắt buộc.</p></div>
+        <form class="form" id="leadForm" novalidate>
+          <div class="fld"><label for="fName">Họ và tên <i>*</i></label><input id="fName" name="name" required autocomplete="name" placeholder="Nguyễn Văn A"></div>
+          <div class="fld"><label for="fPhone">Số điện thoại <i>*</i></label><input id="fPhone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" pattern="[0-9 +.]{9,15}" placeholder="0900 000 000"></div>
+          <div class="fld"><label for="fType">Loại căn</label><div class="sel"><select id="fType" name="type"><option value="studio">Studio</option><option value="1pn">1 phòng ngủ</option><option value="2pn" selected>2 phòng ngủ</option><option value="3pn">3 phòng ngủ</option></select></div></div>
+          <div class="fld"><label for="fArea">Khu vực</label><div class="sel"><select id="fArea" name="area"></select></div></div>
+          <div class="fld"><label for="fPrice">Giá mong muốn (đ/tháng)</label><input id="fPrice" name="price" inputmode="numeric" placeholder="15.000.000"></div>
+          <div class="fld"><label for="fPkg">Gói quan tâm</label><div class="sel"><select id="fPkg" name="pkg"><option>Chưa chắc, cần tư vấn</option><option>Thiết yếu</option><option>Trọn gói</option><option>An tâm</option></select></div></div>
+          <div class="fld full"><label for="fNote">Ghi chú</label><textarea id="fNote" name="note" placeholder="Tên toà nhà, tầng, tình trạng căn, khi nào có thể bàn giao..."></textarea></div>
+          <label class="consent"><input type="checkbox" id="fOk" required><span>Tôi đồng ý để Sổ Thuê xử lý dữ liệu cá nhân (họ tên, số điện thoại, thông tin căn hộ) nhằm liên hệ tư vấn, theo Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân. <i style="color:var(--red);font-style:normal">*</i></span></label>
+          <button class="btn btn-p" type="submit">Gửi yêu cầu định&nbsp;giá <svg class="ic"><use href="#i-arrow"/></svg></button>
+          <p class="form-note">Đây là trang mẫu: thông tin bạn nhập không được gửi đi&nbsp;đâu.</p>
+        </form>
+        <div class="ok" role="status">
+          <span class="th"><svg class="ic"><use href="#i-check"/></svg></span>
+          <h3>Đã nhận yêu cầu (bản minh&nbsp;hoạ)</h3>
+          <p id="okMsg">Trên website thật, chuyên viên sẽ gọi lại trong một ngày làm việc. Vì đây là trang mẫu nên thông tin chưa được gửi đi.</p>
+          <button type="button" class="btn btn-g" id="again">Gửi yêu cầu khác</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <a class="logo" href="#top"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Sổ&nbsp;Thuê</b><small>Quản lý cho thuê căn&nbsp;hộ · TP.HCM</small></span></a>
+        <p>Thay chủ nhà vận hành căn hộ cho thuê: tìm khách, hợp đồng, thu tiền, bảo trì và báo cáo thu chi hằng&nbsp;tháng.</p>
+      </div>
+      <div><h4>Dịch vụ</h4><ul><li><a href="#dich-vu">Tìm khách thuê</a></li><li><a href="#dich-vu">Hợp đồng, bàn giao</a></li><li><a href="#dich-vu">Thu tiền, đối soát</a></li><li><a href="#dich-vu">Bảo trì, sửa chữa</a></li></ul></div>
+      <div><h4>Công cụ</h4><ul><li><a href="#tinh-thu-nhap">Tính thu nhập ròng</a></li><li><a href="#bao-cao">Báo cáo tháng mẫu</a></li><li><a href="#bang-gia">So sánh gói phí</a></li><li><a href="#hoi-dap">Hỏi đáp</a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul><li><a href="tel:0900000000" class="num">0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:chunha@sothue.vn">chunha@sothue.vn</a></li><li>08:00–18:00, thứ Hai – thứ&nbsp;Bảy</li><li>Phường Bến Thành, TP.HCM</li></ul></div>
+    </div>
+    <div class="ft-b"><span>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span><span>© 2026 Sổ Thuê (mẫu)</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function fmt(n){n=Math.round(n);var s=String(Math.abs(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');return (n<0?'−':'')+s+'đ'}
+function grp(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+function r10k(n){return Math.round(n/10000)*10000}
+function count(el,to,prefix){
+  prefix=prefix||'';var from=el._v==null?to:el._v;el._v=to;
+  if(RM||from===to){el.textContent=prefix+fmt(to);return}
+  var t0=null,d=550;
+  function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/d),e=1-Math.pow(1-p,3);el.textContent=prefix+fmt(from+(to-from)*e);if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);
+}
+var toastT;function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on')},2600)}
+
+/* header, badge, menu */
+var hdr=$('#hdr'),badge=$('#ktBadge');
+function onScroll(){var y=window.pageYOffset;hdr.classList.toggle('scrolled',y>8);badge.classList.toggle('show',y>window.innerHeight*.85)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var menuBtn=$('#menuBtn'),drawer=$('#drawer');
+function setMenu(o){drawer.classList.toggle('open',o);document.body.classList.toggle('lock',o);menuBtn.setAttribute('aria-expanded',o);menuBtn.setAttribute('aria-label',o?'Đóng menu':'Mở menu')}
+menuBtn.addEventListener('click',function(){setMenu(!drawer.classList.contains('open'))});
+$$('a',drawer).forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&drawer.classList.contains('open')){setMenu(false);menuBtn.focus()}});
+var lastW=window.innerWidth;window.addEventListener('resize',function(){if(window.innerWidth!==lastW){lastW=window.innerWidth;if(lastW>1060)setMenu(false);drawChart()}});
+
+/* reveal */
+var rvs=$$('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  rvs.forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('in');else io.observe(el)});
+}else rvs.forEach(function(el){el.classList.add('in')});
+requestAnimationFrame(function(){document.documentElement.classList.add('ready')});
+
+/* data */
+var AREAS=[
+  {v:'ben-thanh',n:'Phường Sài Gòn, Bến Thành (Quận 1 cũ)',s:'Bến Thành',m:1.35},
+  {v:'an-khanh',n:'Phường An Khánh (Thảo Điền, Thủ Thiêm cũ)',s:'An Khánh',m:1.25},
+  {v:'xuan-hoa',n:'Phường Xuân Hòa, Bàn Cờ (Quận 3 cũ)',s:'Xuân Hòa',m:1.15},
+  {v:'tan-my',n:'Phường Tân Mỹ, Tân Hưng (Quận 7 cũ)',s:'Tân Mỹ',m:1.05},
+  {v:'thanh-my-tay',n:'Phường Thạnh Mỹ Tây, Gia Định (Bình Thạnh cũ)',s:'Thạnh Mỹ Tây',m:1},
+  {v:'duc-nhuan',n:'Phường Đức Nhuận, Phú Nhuận',s:'Đức Nhuận',m:1},
+  {v:'binh-trung',n:'Phường Bình Trưng, Thủ Đức (TP Thủ Đức cũ)',s:'Bình Trưng',m:.85}
+];
+var BASE={studio:6500000,'1pn':9000000,'2pn':13000000,'3pn':18000000};
+var TYPE_N={studio:'Studio','1pn':'1 phòng ngủ','2pn':'2 phòng ngủ','3pn':'3 phòng ngủ'};
+var PKG_N={'6':'Thiết yếu','8':'Trọn gói','10':'An tâm'};
+var areaSel=$('#area'),fArea=$('#fArea');
+AREAS.forEach(function(a){var o=document.createElement('option');o.value=a.v;o.textContent=a.n;if(a.v==='an-khanh')o.selected=true;areaSel.appendChild(o);fArea.appendChild(o.cloneNode(true))});
+
+/* hero spark + count */
+var A_RENT=[17.5,17.5,17.5,17.5,17.5,17.5,17.5,11.1,18.5,18.5,18.5,18.5],A_MT=[.25,0,.45,0,.3,0,.2,1.2,0,.45,.18,.35];
+(function(){
+  var net=A_RENT.map(function(r,i){return r*.92-A_MT[i]});var mn=Math.min.apply(0,net)-14,mx=Math.max.apply(0,net)+1;
+  var pts=net.map(function(v,i){return [6+i*(268/11),58-(v-mn)/(mx-mn)*50]});
+  var d=smooth(pts);$('#sparkL').setAttribute('d',d);$('#sparkA').setAttribute('d',d+' L274 64 L6 64 Z');
+  
+})();
+function smooth(p){var d='M'+p[0][0].toFixed(1)+' '+p[0][1].toFixed(1);for(var i=0;i<p.length-1;i++){var p0=p[i-1]||p[i],p1=p[i],p2=p[i+1],p3=p[i+2]||p2;var c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6,c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;d+=' C'+c1x.toFixed(1)+' '+c1y.toFixed(1)+' '+c2x.toFixed(1)+' '+c2y.toFixed(1)+' '+p2[0].toFixed(1)+' '+p2[1].toFixed(1)}return d}
+
+/* pain toggle */
+var sw=$('#sw'),log=$('#log'),meter=$('#meter');
+$$('button',sw).forEach(function(b){b.addEventListener('click',function(){var m=b.dataset.m;sw.dataset.m=m;log.dataset.m=m;meter.dataset.m=m;$$('button',sw).forEach(function(x){x.setAttribute('aria-pressed',x===b)});$('#meterV').textContent=m==='b'?'~20 phút':'~14 giờ'})});
+
+/* stepper */
+var tabs=$$('#stpList [role=tab]'),cur=0,auto=!RM,timer=null,inView=false;
+function showStep(i,user){
+  cur=i;tabs.forEach(function(t,k){var on=k===i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;t.classList.remove('run');$('#'+t.getAttribute('aria-controls')).classList.toggle('on',on)});
+  if(user){auto=false;clearTimeout(timer)}
+  if(auto&&inView){void tabs[i].offsetWidth;tabs[i].classList.add('run');clearTimeout(timer);timer=setTimeout(function(){showStep((cur+1)%tabs.length)},7000)}
+}
+tabs.forEach(function(t,i){t.addEventListener('click',function(){showStep(i,true)});t.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'||e.key==='ArrowDown'?1:e.key==='ArrowLeft'||e.key==='ArrowUp'?-1:0;if(k){e.preventDefault();var n=(cur+k+tabs.length)%tabs.length;showStep(n,true);tabs[n].focus()}})});
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){inView=es[0].isIntersecting;if(inView&&auto)showStep(cur);else{clearTimeout(timer);tabs.forEach(function(t){t.classList.remove('run')})}},{threshold:.35}).observe($('#stpList'))}
+
+/* calculator */
+var st={type:'2pn',furn:'1',pkg:'8',price:19500000};
+var priceIn=$('#price'),rng=$('#rng');
+function market(){var a=AREAS.filter(function(x){return x.v===areaSel.value})[0]||AREAS[1];return Math.round(BASE[st.type]*a.m*(st.furn==='1'?1.2:1)/100000)*100000}
+function setPrice(v,from){v=Math.max(3000000,Math.min(50000000,v||0));st.price=v;if(from!=='input')priceIn.value=grp(v);if(from!=='range')rng.value=v;rng.style.setProperty('--p',((v-3000000)/(47000000)*100)+'%')}
+function calc(){
+  var mk=market(),lo=Math.round(mk*.92/100000)*100000,hi=Math.round(mk*1.08/100000)*100000,p=st.price;
+  $('#mkt').textContent=fmt(lo)+' – '+fmt(hi);
+  var pos=Math.max(0,Math.min(1,(p/mk-.7)/.6));$('#gauge').style.left=(pos*100)+'%';
+  var rent=p,msg;
+  if(p<lo){msg='Giá mong muốn thấp hơn mặt bằng ước tính. Căn có thể cho thuê nhanh; bạn có thể cân nhắc chào cao hơn một chút.'}
+  else if(p>hi){rent=hi;msg='Giá mong muốn cao hơn mặt bằng ước tính khoảng '+Math.round((p/mk-1)*100)+'%. Bảng tính dùng mức trần '+fmt(hi)+'; giữ giá cao, căn có thể trống lâu hơn.'}
+  else msg='Giá mong muốn nằm trong khoảng mặt bằng ước tính của khu vực.';
+  $('#msg').textContent=msg;
+  var pct=+st.pkg,fee=r10k(rent*pct/100),mt=r10k(rent*(st.furn==='1'?.03:.015)),net=rent-fee-mt;
+  st.rent=rent;
+  count($('#rRent'),rent);count($('#rFee'),-fee);count($('#rMaint'),-mt);count($('#rNet'),net);
+  $('#rPct').textContent=pct;
+  $('#rYear').textContent='≈ '+fmt(net*12)+' cho 12 tháng có khách';
+  $('#s1').style.flexGrow=net;$('#s2').style.flexGrow=fee;$('#s3').style.flexGrow=mt;
+  $('#plRent').textContent=fmt(rent);
+  $$('[data-pct]').forEach(function(b){count(b,r10k(rent*(+b.dataset.pct)/100))});
+}
+$$('.seg').forEach(function(g){var k=g.dataset.k;$$('button',g).forEach(function(b){b.addEventListener('click',function(){$$('button',g).forEach(function(x){x.setAttribute('aria-pressed',x===b)});st[k]=b.dataset.v;if(k!=='pkg')setPrice(Math.round(market()/500000)*500000);calc()})})});
+areaSel.addEventListener('change',function(){setPrice(Math.round(market()/500000)*500000);calc()});
+rng.addEventListener('input',function(){setPrice(+rng.value,'range');calc()});
+priceIn.addEventListener('input',function(){var v=+priceIn.value.replace(/\D/g,'');var pos=priceIn.value.length-priceIn.selectionStart;priceIn.value=v?grp(v):'';try{var np=priceIn.value.length-pos;priceIn.setSelectionRange(np,np)}catch(e){}if(v>=3000000){setPrice(v,'input');calc()}});
+priceIn.addEventListener('blur',function(){setPrice(+priceIn.value.replace(/\D/g,''));calc()});
+setPrice(19500000);calc();
+$('#toForm').addEventListener('click',function(){$('#fType').value=st.type;fArea.value=areaSel.value;$('#fPrice').value=grp(st.price);$('#fPkg').value=PKG_N[st.pkg];var n=$('#fNote');if(!n.value)n.value=(st.furn==='1'?'Căn đầy đủ nội thất':'Căn nội thất cơ bản')+', muốn tư vấn gói '+PKG_N[st.pkg]+'.'});
+$$('[data-plan]').forEach(function(b){b.addEventListener('click',function(){$('#fPkg').value=b.dataset.plan;$('#fType').value=st.type;fArea.value=areaSel.value;$('#fPrice').value=grp(st.price)})});
+
+/* dashboard */
+var MON=['T11/25','T12/25','T1/26','T2/26','T3/26','T4/26','T5/26','T6/26','T7/26','T8/26','T9/26','T10/26'];
+var MFULL={9:'tháng 8/2026',10:'tháng 9/2026',11:'tháng 10/2026'},SENT={9:'05/09/2026',10:'05/10/2026',11:'05/11/2026'};
+var APT={
+  A:{vy:12,pct:8,pkg:'Gói Trọn gói · 8%',rent:A_RENT,mt:A_MT,ct:'đến 31/05/2027',
+    vac:{9:0,10:0,11:0},paid:{9:'03/08/2026',10:'02/09/2026',11:'03/10/2026'},
+    items:{9:[['14/08','Vệ sinh máy lạnh 2 bộ',450000]],10:[['09/09','Thay vòi sen phòng tắm',180000]],11:[['21/10','Sửa khoá cửa ban công',350000]]}},
+  B:{vy:10,pct:10,pkg:'Gói An tâm · 10%',rent:[9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,9.5,6.35,9.8],mt:[0,.15,0,0,.3,0,0,.2,0,.12,.65,.1],ct:'đến 30/09/2027',
+    vac:{9:0,10:10,11:0},paid:{9:'02/08/2026',10:'11/09/2026',11:'03/10/2026'},
+    items:{9:[['18/08','Thay bóng đèn bếp',120000]],10:[['01–10/09','Dọn dẹp giữa hai lượt khách (trong gói)',0],['12/09','Thay rèm phòng ngủ',650000]],11:[['26/10','Thay pin khoá điện tử',100000]]}}
+};
+var dv={apt:'A',m:11};
+function netOf(a,i){var r=a.rent[i]*1e6,f=r10k(r*a.pct/100);return {rent:r,fee:f,mt:a.mt[i]*1e6,net:r-f-a.mt[i]*1e6}}
+function chip(el,d,goodUp,unit){var t=d===0?'bằng tháng trước':(d>0?'+':'−')+(unit?Math.abs(d)+unit:fmt(Math.abs(d)))+' so với tháng trước';el.textContent=t;if(el.parentNode.classList.contains('hl'))return;el.className='chip '+(d===0?'chip-g':((d>0)===goodUp?'chip-g':'chip-r'))}
+function renderDash(){
+  var a=APT[dv.apt],i=dv.m,c=netOf(a,i),p=netOf(a,i-1);
+  var cost=c.fee+c.mt,pc=p.fee+p.mt;
+  count($('#kRent'),c.rent);count($('#kCost'),cost);count($('#kNet'),c.net);
+  chip($('#kRentD'),c.rent-p.rent,true);chip($('#kCostD'),cost-pc,false);chip($('#kNetD'),c.net-p.net,true);
+  var v=a.vac[i];$('#kVac').textContent=v+' ngày';var kd=$('#kVacD');kd.textContent=v?'Đã có khách mới':'Đang có khách';kd.className='chip '+(v?'chip-y':'chip-g');
+  $('#dMonthT').textContent=MFULL[i];$('#dSent').textContent=SENT[i];$('#dPkg').textContent=a.pkg;$('#dPaid').textContent=a.paid[i]+(v?' (khách mới)':'');$('#dCt').textContent=a.ct;
+  var rows='<tr><td class="num">01/'+MON[i].slice(1,3).replace('/','').padStart(2,'0')+'</td><td>Phí quản lý ('+a.pct+'%)<small>Hoá đơn dịch vụ</small></td><td>'+fmt(c.fee)+'</td></tr>';
+  a.items[i].forEach(function(it,k){rows+='<tr style="animation-delay:'+(k+1)*.06+'s"><td class="num">'+it[0]+'</td><td>'+it[1]+'<small>'+(it[2]?'Có ảnh trước–sau, hoá đơn':'Không phát sinh chi phí')+'</small></td><td>'+fmt(it[2])+'</td></tr>'});
+  $('#dRows').innerHTML=rows;$('#dTotal').textContent=fmt(cost);
+  var tot=0;for(var j=0;j<12;j++)tot+=netOf(a,j).net;$('#cTot').textContent=fmt(tot);$('#cAvg').textContent=fmt(r10k(tot/12));$('#cVac').textContent=a.vy+' ngày';
+  drawChart();
+}
+function drawChart(){
+  var svg=$('#chartSvg');if(!svg)return;var a=APT[dv.apt];
+  var net=a.rent.map(function(r,i){return netOf(a,i).net/1e6});
+  var nar=svg.getBoundingClientRect().width<520,W=nar?360:640,H=nar?230:260,L=nar?38:44,R=nar?10:12,T=16,B=34;svg.setAttribute('viewBox','0 0 '+W+' '+H);var mx=Math.ceil((Math.max.apply(0,net)+1)/5)*5,mn=Math.max(0,Math.floor((Math.min.apply(0,net)-1)/5)*5);
+  var X=function(i){return L+i*(W-L-R)/11},Y=function(v){return T+(1-(v-mn)/(mx-mn))*(H-T-B)};
+  var g='<defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F7A64" stop-opacity=".22"/><stop offset="1" stop-color="#0F7A64" stop-opacity="0"/></linearGradient></defs><g class="grid">';
+  for(var s=mn;s<=mx;s+=5){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(s)+'" y2="'+Y(s)+'"/><text x="'+(L-8)+'" y="'+(Y(s)+4)+'" text-anchor="end">'+s+'tr</text>'}
+  g+='</g><g class="xl">';
+  MON.forEach(function(m,i){if(!nar||i%2===1)g+='<text x="'+X(i)+'" y="'+(H-10)+'" text-anchor="middle">'+m.split('/')[0]+'</text>'});
+  var pts=net.map(function(v,i){return [X(i),Y(v)]}),d=smooth(pts);
+  g+='</g><path class="area" d="'+d+' L'+X(11)+' '+Y(mn)+' L'+X(0)+' '+Y(mn)+' Z"/><path class="line" id="cLine" d="'+d+'"/>';
+  pts.forEach(function(p,i){g+='<circle class="'+(i===dv.m?'sel':'pt')+'" cx="'+p[0]+'" cy="'+p[1]+'" r="'+(i===dv.m?7:3.5)+'"/>'});
+  g+='<line class="cross" id="cx" y1="'+T+'" y2="'+(H-B)+'"/><circle class="hov" id="ch" r="6"/><rect id="hit" x="'+L+'" y="0" width="'+(W-L-R)+'" height="'+H+'" fill="transparent"/>';
+  svg.innerHTML=g;
+  var line=$('#cLine');if(!RM&&line.getTotalLength){var len=line.getTotalLength();line.style.strokeDasharray=len;line.style.strokeDashoffset=len;line.getBoundingClientRect();line.style.transition='stroke-dashoffset 1.1s cubic-bezier(.22,.8,.24,1)';line.style.strokeDashoffset=0}
+  var chart=$('#chart'),tip=$('#tip'),hit=$('#hit');
+  function mv(e){var r=svg.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*W,i=Math.max(0,Math.min(11,Math.round((x-L)/((W-L-R)/11))));
+    var cx=$('#cx'),ch=$('#ch');cx.setAttribute('x1',X(i));cx.setAttribute('x2',X(i));ch.setAttribute('cx',X(i));ch.setAttribute('cy',Y(net[i]));
+    var full='Tháng '+MON[i].replace('T','').replace('/','/20');tip.innerHTML=full+'<b>'+fmt(net[i]*1e6)+'</b>';
+    tip.style.left=(X(i)/W*r.width)+'px';tip.style.top=(Y(net[i])/H*r.height-8)+'px';chart.classList.add('h')}
+  hit.addEventListener('pointermove',mv);hit.addEventListener('pointerdown',mv);hit.addEventListener('pointerleave',function(){chart.classList.remove('h')});
+}
+$$('#dApt button').forEach(function(b){b.addEventListener('click',function(){$$('#dApt button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});dv.apt=b.dataset.v;renderDash()})});
+$$('#dMonth button').forEach(function(b){b.addEventListener('click',function(){$$('#dMonth button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});dv.m=+b.dataset.v;renderDash()})});
+$('#dPdf').addEventListener('click',function(){toast('Bản minh hoạ: trên website thật, nút này tải báo cáo PDF.')});
+renderDash();
+
+/* faq */
+$$('.acc-b').forEach(function(b){b.addEventListener('click',function(){var o=b.getAttribute('aria-expanded')==='true';$$('.acc-b').forEach(function(x){x.setAttribute('aria-expanded','false');x.closest('.acc-i').classList.remove('open')});b.setAttribute('aria-expanded',!o);b.closest('.acc-i').classList.toggle('open',!o)})});
+
+/* form */
+var form=$('#leadForm'),ctR=$('#ctR');
+form.addEventListener('submit',function(e){e.preventDefault();
+  if(!form.checkValidity()){var bad=$$('input,select,textarea',form).filter(function(x){return !x.checkValidity()})[0];
+    if(bad&&bad.id==='fOk'){toast('Vui lòng tick ô đồng ý xử lý dữ liệu cá nhân để gửi.')}else if(bad){toast(bad.id==='fPhone'&&bad.value?'Số điện thoại chưa đúng định dạng.':'Vui lòng điền các ô có dấu *.')}
+    if(bad)bad.focus();return}
+  var n=$('#fName').value.trim().split(' ').pop();$('#okMsg').textContent='Cảm ơn '+n+'. Trên website thật, chuyên viên sẽ gọi lại trong một ngày làm việc. Vì đây là trang mẫu nên thông tin chưa được gửi đi.';
+  ctR.classList.add('sent');$('.ok',ctR).focus&&$('.ok h3',ctR).setAttribute('tabindex','-1');$('.ok h3',ctR).focus()});
+$('#again').addEventListener('click',function(){form.reset();ctR.classList.remove('sent')});
+})();
+</script>
+</body>
+</html>

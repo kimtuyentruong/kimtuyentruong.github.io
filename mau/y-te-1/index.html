@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nha Khoa Gia Đình Tân Định, TP.HCM | Nha Khoa Bạc Hà</title>
+<meta name="description" content="Mẫu giao diện website nha khoa gia đình ở TP.HCM: khám tổng quát, cạo vôi, trám răng, niềng răng trong suốt, implant, nha khoa trẻ em. Sơ đồ răng bấm chọn vấn đề, bảng giá tham khảo và đặt lịch theo giờ trống.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23D3F1E7'/%3E%3Cpath d='M20 16c-5 0-8 4-8 10 0 7 4 10 5 18 1 5 3 8 5 8 3 0 3-6 5-11 1-3 2-4 5-4s4 1 5 4c2 5 2 11 5 11 2 0 4-3 5-8 1-8 5-11 5-18 0-6-3-10-8-10-5 0-7 3-12 3s-7-3-12-3z' fill='%23fff' stroke='%230E6F58' stroke-width='3' stroke-linejoin='round'/%3E%3Ccircle cx='49' cy='15' r='6' fill='%23FF7E6B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap&subset=vietnamese" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dentist","name":"Nha Khoa Bạc Hà (dữ liệu mẫu)","description":"Dữ liệu mẫu cho mẫu giao diện website nha khoa gia đình. Tên phòng khám, địa chỉ, bác sĩ, giá và giờ mở cửa chỉ để minh hoạ.","telephone":"+84900000000","priceRange":"100.000đ – 85.000.000đ","currenciesAccepted":"VND","address":{"@type":"PostalAddress","streetAddress":"88 Hai Bà Trưng","addressLocality":"Phường Tân Định","addressRegion":"TP.HCM","addressCountry":"VN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"12:00"}]}
+</script>
+<style>
+:root{
+  --bg:#F6FBF9;--white:#fff;--mint-50:#EAF8F3;--mint-100:#D3F1E7;--mint-200:#AEE6D4;--mint:#5ACFAE;--mint-600:#13866A;--mint-700:#0E6F58;
+  --ink:#0F2E29;--ink-2:#2E4A44;--muted:#55706A;--line:#DCECE6;--line-2:#C6E2D8;
+  --coral:#FF7E6B;--coral-50:#FFF2EE;--coral-100:#FFDDD5;--coral-ink:#B23E2C;--sky:#5BA8E0;--amber:#EFB13F;--grey:#8FA39E;
+  --display:'Lexend',system-ui,sans-serif;--sans:'Nunito',system-ui,sans-serif;
+  --r-xl:40px;--r-lg:30px;--r:22px;--r-sm:14px;
+  --pad:clamp(18px,4vw,56px);--max:1240px;--ease:cubic-bezier(.2,.7,.1,1);--spring:cubic-bezier(.34,1.56,.64,1);
+  --sh:0 1px 2px rgba(15,46,41,.05),0 14px 34px -16px rgba(15,46,41,.22);
+  --sh-lg:0 2px 4px rgba(15,46,41,.04),0 30px 60px -28px rgba(15,46,41,.28);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.nw{white-space:nowrap}
+.ico{width:1em;height:1em;display:inline-block;vertical-align:-.15em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;margin:0;line-height:1.12;letter-spacing:-.02em;text-wrap:balance;color:var(--ink)}
+h2{font-size:clamp(32px,4.1vw,54px)}
+h3{font-size:clamp(20px,1.7vw,24px);letter-spacing:-.01em}
+p{margin:0}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font:600 13px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--mint-700)}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--coral)}
+.lead{font-size:clamp(17px,1.35vw,19px);color:var(--ink-2);max-width:56ch}
+.sec{padding:clamp(80px,10vw,140px) 0;position:relative}
+.sec-head{display:grid;gap:18px;max-width:760px;margin-bottom:clamp(36px,5vw,60px)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16px/1.2 var(--display);text-decoration:none;white-space:nowrap;transition:transform .25s var(--ease),background .2s,color .2s,border-color .2s}
+.btn .ico{font-size:18px;transition:transform .3s var(--ease)}
+.btn:hover .ico{transform:translateX(3px)}
+.btn-p{background:var(--mint-700);color:#fff}
+.btn-p:hover{background:var(--ink);transform:translateY(-2px)}
+.btn-c{background:var(--coral);color:#2A0F0A}
+.btn-c:hover{background:#FF6A55;transform:translateY(-2px)}
+.btn-g{border:1.5px solid var(--line-2);background:#fff;color:var(--ink)}
+.btn-g:hover{border-color:var(--mint-700);color:var(--mint-700)}
+.btn-sm{min-height:42px;padding:0 18px;font-size:14.5px}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;background:rgba(255,255,255,.97);border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.scrolled{border-bottom-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:24px;height:78px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
+.logo svg{width:42px;height:42px;flex:none}
+.logo b{display:block;font:600 19px/1.05 var(--display);letter-spacing:-.02em}
+.logo small{display:block;font:600 11.5px/1.3 var(--sans);color:var(--muted);letter-spacing:.04em}
+.nav{display:flex;gap:4px}
+.nav a{padding:10px 13px;border-radius:999px;font:500 15px/1 var(--display);text-decoration:none;color:var(--ink-2);transition:background .2s,color .2s}
+.nav a:hover{background:var(--mint-50);color:var(--mint-700)}
+.hdr-tel{display:flex;align-items:center;gap:8px;font:600 15px/1 var(--display);text-decoration:none;color:var(--ink)}
+.hdr-tel .ico{font-size:18px;color:var(--mint-700)}
+.menu-btn{display:none;width:46px;height:46px;border-radius:50%;background:var(--mint-50);align-items:center;justify-content:center;color:var(--ink)}
+.menu-btn .ico{font-size:22px}
+.mnav{position:fixed;inset:0;z-index:80;background:#fff;display:flex;flex-direction:column;padding:18px var(--pad) 28px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.mnav.open{opacity:1;visibility:visible}
+.mnav-top{display:flex;align-items:center;justify-content:space-between;height:46px;margin-bottom:26px}
+.mnav-top b{font:600 18px var(--display)}
+.mnav nav{display:grid;gap:4px}
+.mnav nav a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;border-bottom:1px solid var(--line);font:500 24px/1.2 var(--display);text-decoration:none}
+.mnav nav a .ico{font-size:20px;color:var(--mint-700)}
+.mnav-foot{margin-top:auto;display:grid;gap:12px}
+.mnav-foot p{color:var(--muted);font-size:15px}
+
+/* hero */
+.hero{padding:clamp(120px,13vw,160px) 0 clamp(50px,6vw,80px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-12vw;top:-14vw;width:min(62vw,860px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--mint-100),rgba(211,241,231,0) 68%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(30px,5vw,72px);align-items:center;position:relative}
+.hero-copy>*{animation:up .9s var(--ease) both}
+.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}.hero-copy>*:nth-child(5){animation-delay:.32s}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);font:600 14px/1.2 var(--sans);color:var(--ink-2)}
+.pill i{width:26px;height:26px;border-radius:50%;background:var(--mint-100);display:grid;place-items:center;color:var(--mint-700)}
+.pill i .ico{font-size:15px}
+.h1{font-size:clamp(42px,5vw,72px);line-height:1.04;letter-spacing:-.035em;margin:22px 0 22px;font-weight:600}
+.h1 .hl{position:relative;display:inline-block;color:var(--mint-700)}
+.h1 .hl svg{position:absolute;left:-2%;bottom:-.2em;width:104%;height:.36em;overflow:visible}
+.h1 .hl path{fill:none;stroke:var(--coral);stroke-width:6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s .7s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:40px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-facts div{display:flex;align-items:center;gap:12px}
+.hero-facts .ico{font-size:22px;color:var(--mint-700)}
+.hero-facts b{display:block;font:600 16px/1.2 var(--display)}
+.hero-facts span{display:block;font-size:13.5px;color:var(--muted);line-height:1.3}
+
+.hero-art{position:relative;aspect-ratio:5/5.6;max-width:560px;justify-self:end;width:100%;animation:up 1s .15s var(--ease) both}
+.arch{position:absolute;inset:0 0 0 8%;border-radius:999px 999px var(--r-xl) var(--r-xl);overflow:hidden;background:var(--mint-100)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:45% 50%}
+.arch-ring{position:absolute;inset:-14px -14px auto calc(8% - 14px);height:60%;border:1.5px dashed var(--mint-200);border-bottom:0;border-radius:999px 999px 0 0;pointer-events:none}
+.tooth-draw{position:absolute;left:-4%;bottom:6%;width:38%;color:var(--mint-700)}
+.tooth-draw svg{width:100%;height:auto;overflow:visible}
+.tooth-draw .td{fill:#fff;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.8s .5s var(--ease) forwards}
+.tooth-draw .td2{fill:none;stroke:var(--coral);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s 1.6s var(--ease) forwards}
+.float{position:absolute;display:flex;align-items:center;gap:12px;padding:13px 18px 13px 13px;border-radius:20px;background:#fff;box-shadow:var(--sh);text-decoration:none;font-size:14px;line-height:1.3;color:var(--ink-2)}
+.float b{display:block;font:600 15px/1.25 var(--display);color:var(--ink)}
+.float .fi{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;flex:none}
+.float .fi .ico{font-size:21px}
+.float-1{top:16%;right:-3%;animation:bob 6s ease-in-out infinite}
+.float-1 .fi{background:var(--coral-50);color:var(--coral-ink)}
+.float-2{bottom:26%;right:-6%;animation:bob 7s 1.2s ease-in-out infinite}
+.float-2 .fi{background:var(--mint-50);color:var(--mint-700)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero.paused .float{animation-play-state:paused}
+.spark{position:absolute;color:var(--coral);fill:currentColor;width:26px;height:26px}
+.spark-1{top:4%;left:2%}.spark-2{top:46%;left:-2%;width:16px;height:16px;color:var(--mint)}
+
+.hero .wrap.rail-wrap{display:block}
+.rail{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(40px,5vw,64px)}
+.rail a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px 11px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);text-decoration:none;font:500 15px/1 var(--display);color:var(--ink-2);transition:border-color .2s,transform .25s var(--ease),color .2s}
+.rail a i{width:30px;height:30px;border-radius:50%;background:var(--mint-50);display:grid;place-items:center;color:var(--mint-700)}
+.rail a i .ico{font-size:17px}
+.rail a:hover{border-color:var(--mint);transform:translateY(-2px);color:var(--mint-700)}
+
+/* worries */
+.worry{background:#fff;border-radius:var(--r-xl) var(--r-xl) 0 0;padding-bottom:clamp(50px,6vw,80px)}
+.worry .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,90px);align-items:start}
+.worry-side{position:sticky;top:120px;display:grid;gap:20px}
+.worry-ill{margin-top:12px;width:min(100%,320px);color:var(--mint-700)}
+.worry-ill svg{width:100%;height:auto}
+.worry-list{display:grid;gap:18px}
+.wcard{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;padding:28px 30px;border-radius:var(--r-lg);background:var(--bg);border:1px solid var(--line);transition:transform .35s var(--ease),border-color .3s,background .3s}
+.wcard:nth-child(even){margin-left:clamp(0px,4vw,56px)}
+.wcard:hover{transform:translateY(-3px);border-color:var(--mint-200);background:var(--mint-50)}
+.wcard .num{grid-row:span 2;width:52px;height:52px;border-radius:18px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font:600 18px var(--display);color:var(--coral-ink)}
+.wcard q{display:block;font:500 clamp(19px,1.6vw,22px)/1.35 var(--display);quotes:"“" "”";color:var(--ink)}
+.wcard p{display:flex;gap:10px;color:var(--ink-2);margin-top:8px}
+.wcard p .ico{font-size:20px;color:var(--mint-700);margin-top:3px}
+
+/* tooth map */
+.map-sec{background:linear-gradient(180deg,#fff 0,var(--mint-50) 140px,var(--mint-50) 100%)}
+.tm{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(20px,3vw,36px);align-items:start}
+.tm-chart{background:#fff;border-radius:var(--r-xl);padding:clamp(18px,2.6vw,32px);box-shadow:var(--sh-lg);position:relative}
+.tm-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.seg{display:inline-flex;padding:4px;border-radius:999px;background:var(--mint-50);position:relative}
+.seg button{position:relative;z-index:1;padding:9px 16px;border-radius:999px;font:500 14px/1.2 var(--display);color:var(--ink-2);transition:color .25s}
+.seg button[aria-pressed="true"]{color:#fff}
+.seg .knob{position:absolute;top:4px;bottom:4px;left:0;border-radius:999px;background:var(--mint-700);transition:transform .35s var(--ease),width .35s var(--ease)}
+.tm-count{font:500 14px/1.2 var(--display);color:var(--muted)}
+.tm-count b{color:var(--ink)}
+.jaw{display:block;width:100%;height:auto;max-width:520px;margin:0 auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.jaw .lbl{font:600 12px var(--display);fill:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.jaw .side{font:500 12px var(--sans);fill:var(--grey)}
+.jaw .no{font:600 11px var(--display);fill:#9AB0AA;text-anchor:middle;dominant-baseline:middle;pointer-events:none;transition:fill .2s}
+.tooth{cursor:pointer;outline:none}
+.tooth .crown{fill:#fff;stroke:#7FA79C;stroke-width:1.6;transition:fill .25s,stroke .25s,stroke-width .2s}
+.tooth .fis{fill:none;stroke:#B6CEC7;stroke-width:1.3;stroke-linecap:round;pointer-events:none;transition:stroke .25s}
+.tooth .pop{transform-box:fill-box;transform-origin:center;transition:transform .35s var(--spring)}
+.tooth:hover .crown{fill:var(--mint-50);stroke:var(--mint-600)}
+.tooth:focus-visible .crown{stroke:var(--coral);stroke-width:3}
+.tooth.sel .crown{stroke:var(--ink);stroke-width:2.6}
+.tooth.sel .pop{transform:scale(1.12)}
+.tooth.is-ebuot .crown{fill:#DDEEFA;stroke:var(--sky)}
+.tooth.is-sau .crown{fill:var(--coral-100);stroke:var(--coral)}
+.tooth.is-mat .crown{fill:rgba(255,255,255,.4);stroke:var(--grey);stroke-dasharray:4 4}
+.tooth.is-mat .fis{stroke:transparent}
+.tooth.is-lech .crown{fill:#FCEBC7;stroke:var(--amber)}
+.tooth.is-lung .crown{fill:#E9E3FA;stroke:#8C76D9}
+.tooth.sel.is-ebuot .crown,.tooth.sel.is-sau .crown,.tooth.sel.is-mat .crown,.tooth.sel.is-lech .crown,.tooth.sel.is-lung .crown{stroke:var(--ink)}
+.hint-ring{fill:none;stroke:var(--coral);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ring 1.8s ease-out infinite;pointer-events:none}
+@keyframes ring{0%{opacity:.9;transform:scale(.7)}100%{opacity:0;transform:scale(1.6)}}
+.map-sec.paused .hint-ring{animation-play-state:paused}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-top:8px;font-size:13.5px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:14px;height:14px;border-radius:5px;border:1.6px solid}
+
+.tm-panel{display:grid;gap:16px;position:sticky;top:100px}
+.card{background:#fff;border-radius:var(--r-lg);padding:clamp(20px,2.4vw,28px);border:1px solid var(--line)}
+.tm-sel h3{font-size:20px}
+.tm-sel .muted{color:var(--muted);font-size:15px;margin-top:4px}
+.tm-empty{display:flex;gap:14px;align-items:flex-start}
+.tm-empty .ico{font-size:30px;color:var(--coral);margin-top:2px}
+.issues{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+.iss{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:16px;border:1.5px solid var(--line);background:#fff;font:500 15px/1.2 var(--display);text-align:left;transition:border-color .2s,background .2s,transform .2s var(--ease)}
+.iss:hover{border-color:var(--mint);transform:translateY(-1px)}
+.iss i{width:16px;height:16px;border-radius:6px;border:1.8px solid;flex:none}
+.iss[aria-pressed="true"]{border-color:var(--ink);background:var(--mint-50)}
+.tm-clear{margin-top:12px;font:600 14px var(--sans);color:var(--coral-ink);text-decoration:underline;text-underline-offset:3px}
+.sug{display:grid;gap:12px}
+.sug h3{font-size:19px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.sug h3 small{font:600 13px var(--sans);color:var(--muted)}
+.sug-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sug-item{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:14px 16px;border-radius:18px;background:var(--bg);animation:sIn .45s var(--ease) both}
+@keyframes sIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.sug-item b{font:600 15.5px/1.3 var(--display)}
+.sug-item .teeth{font-size:13.5px;color:var(--mint-700);font-weight:700}
+.sug-item p{grid-column:1/-1;font-size:14px;color:var(--muted);line-height:1.5}
+.sug-item .sprice{font:600 14.5px/1.3 var(--display);color:var(--ink);text-align:right;white-space:nowrap}
+.sug-item .sprice small{display:block;font:600 12px var(--sans);color:var(--muted)}
+.sug-total{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 14px;padding:16px 4px 0;border-top:1px dashed var(--line-2)}
+.sug-total span{font:500 15px var(--display);color:var(--ink-2)}
+.sug-total .tprice{font:600 clamp(18px,1.8vw,22px)/1.2 var(--display);color:var(--mint-700)}
+.note{display:flex;gap:10px;padding:14px 16px;border-radius:16px;background:var(--coral-50);color:#6E2A1F;font-size:14px;line-height:1.5}
+.note .ico{font-size:19px;color:var(--coral-ink);margin-top:1px}
+.sug .btn{justify-self:start}
+
+/* services bento */
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:minmax(220px,auto);gap:18px}
+.svc{position:relative;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:12px;overflow:hidden;transition:transform .4s var(--ease),border-color .3s}
+.svc:hover{transform:translateY(-4px);border-color:var(--mint-200)}
+.svc .si{width:56px;height:56px;border-radius:18px;background:var(--mint-50);display:grid;place-items:center;color:var(--mint-700)}
+.svc .si .ico{font-size:28px;stroke-width:1.5}
+.svc p{color:var(--ink-2);font-size:16px}
+.svc .meta{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding-top:10px}
+.svc .from{font:600 15px var(--display);color:var(--ink)}
+.svc .from small{font:600 13px var(--sans);color:var(--muted);margin-right:4px}
+.svc .more{display:inline-flex;align-items:center;gap:6px;font:600 14px var(--display);color:var(--mint-700);text-decoration:none}
+.svc .more .ico{transition:transform .3s var(--ease)}
+.svc:hover .more .ico{transform:translateX(4px)}
+.s1{grid-column:span 5;grid-row:span 2;background:var(--ink);border-color:var(--ink);color:#fff;padding:0}
+.s1 .ph{flex:1;min-height:240px;position:relative}
+.s1 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.s1 .bd{padding:26px 28px 28px;display:grid;gap:10px}
+.s1 h3,.s1 .from{color:#fff}
+.s1 p{color:#C9DDD7}
+.s1 .from small{color:#9DBDB4}
+.s1 .more{color:var(--mint-200)}
+.s1 .tag{position:absolute;left:18px;top:18px;padding:7px 13px;border-radius:999px;background:#fff;color:var(--ink);font:600 13px var(--display)}
+.s2{grid-column:span 4}.s3{grid-column:span 3}
+.s4{grid-column:span 7;flex-direction:row;padding:0}
+.s4 .bd{flex:1;padding:28px;display:flex;flex-direction:column;gap:12px}
+.s4 .ph{width:44%;flex:none;position:relative}
+.s4 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.s5{grid-column:span 6;background:var(--coral-50);border-color:var(--coral-100)}
+.s5 .si{background:#fff;color:var(--coral-ink)}
+.s6{grid-column:span 6;padding:0;flex-direction:row}
+.s6 .bd{flex:1;padding:28px;display:flex;flex-direction:column;gap:12px}
+.s6 .ph{width:42%;flex:none;position:relative}
+.s6 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+
+/* process */
+.proc{background:var(--ink);color:#E6F2EE;border-radius:var(--r-xl);margin:0 clamp(8px,1.4vw,20px);overflow:hidden}
+.proc h2{color:#fff}
+.proc .eyebrow{color:var(--mint-200)}
+.proc .lead{color:#BFD6CF}
+.proc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.proc-ph{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/4.4}
+.proc-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.proc-ph figcaption{position:absolute;left:16px;right:16px;bottom:16px;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.96);color:var(--ink);font-size:14.5px;line-height:1.45}
+.steps{list-style:none;margin:30px 0 0;padding:0;position:relative;display:grid;gap:8px}
+.steps svg.track{position:absolute;left:25px;top:28px;bottom:28px;width:4px;height:calc(100% - 56px);overflow:visible}
+.steps .track line{stroke:rgba(255,255,255,.14);stroke-width:2}
+.steps .track .go{stroke:var(--mint);stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s var(--ease)}
+.steps.in .track .go{stroke-dashoffset:0}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:14px 0;position:relative}
+.steps .n{width:52px;height:52px;border-radius:50%;background:#18423B;border:1.5px solid rgba(255,255,255,.18);display:grid;place-items:center;font:600 17px var(--display);color:var(--mint-200);position:relative;z-index:1;transition:background .4s,color .4s,border-color .4s}
+.steps.in li .n{background:var(--mint);color:var(--ink);border-color:var(--mint)}
+.steps.in li:nth-child(3) .n{transition-delay:.35s}.steps.in li:nth-child(4) .n{transition-delay:.8s}.steps.in li:nth-child(5) .n{transition-delay:1.25s}
+.steps h3{color:#fff;font-size:20px;margin-top:4px}
+.steps p{color:#BFD6CF;font-size:15.5px;margin-top:6px}
+
+/* price */
+.price-wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+.tabs-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 calc(var(--pad)*-1);padding:4px var(--pad)}
+.tabs-scroll::-webkit-scrollbar{display:none}
+.tabs{display:inline-flex;gap:4px;padding:5px;border-radius:999px;background:#fff;border:1px solid var(--line);position:relative}
+.tab{position:relative;z-index:1;padding:12px 20px;border-radius:999px;font:500 15px/1.2 var(--display);color:var(--ink-2);white-space:nowrap;transition:color .25s}
+.tab[aria-selected="true"]{color:#fff}
+.tabs .knob{position:absolute;top:5px;bottom:5px;left:0;border-radius:999px;background:var(--mint-700);transition:transform .4s var(--ease),width .4s var(--ease)}
+.ptable{background:#fff;border-radius:var(--r-xl);border:1px solid var(--line);padding:clamp(10px,2vw,22px) clamp(18px,3vw,40px);display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(20px,4vw,50px)}
+.ppanel{animation:fadeP .45s var(--ease) both}
+@keyframes fadeP{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.prow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 20px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.prow b{font:600 17px/1.35 var(--display)}
+.prow span{grid-column:1;font-size:14.5px;color:var(--muted)}
+.prow .price{grid-row:1/span 2;grid-column:2;font:600 17px/1.3 var(--display);color:var(--mint-700);text-align:right;white-space:nowrap}
+.prow .price small{display:block;font:600 12.5px var(--sans);color:var(--muted)}
+.paside{align-self:center;display:grid;gap:14px;padding:26px;border-radius:var(--r-lg);background:var(--mint-50)}
+.paside h3{font-size:19px}
+.paside ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px;color:var(--ink-2)}
+.paside li{display:flex;gap:10px}
+.paside li .ico{font-size:18px;color:var(--mint-700);margin-top:3px}
+
+/* doctors */
+.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.doc{border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease)}
+.doc:hover{transform:translateY(-4px)}
+.doc .ph{position:relative;aspect-ratio:4/4.3;background:var(--mint-100);overflow:hidden}
+.doc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.doc:hover .ph img{transform:scale(1.04)}
+.doc .badge{position:absolute;left:14px;top:14px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.96);font:600 12.5px var(--display);color:var(--coral-ink)}
+.doc .bd{padding:22px 24px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.doc .role{font:600 14px var(--display);color:var(--mint-700)}
+.doc p{font-size:15px;color:var(--ink-2)}
+.doc .cert{font-size:13px;color:var(--muted);padding-top:10px;border-top:1px dashed var(--line-2);margin-top:4px}
+.doc .days{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.doc .days span{padding:4px 9px;border-radius:8px;background:var(--bg);font:600 12.5px var(--display);color:var(--ink-2)}
+.doc .days span.off{color:#AFC1BC;text-decoration:line-through}
+.doc .btn{margin-top:auto;align-self:flex-start}
+.space{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:18px;margin-top:22px}
+.space figure{margin:0;position:relative;border-radius:var(--r-lg);overflow:hidden;height:clamp(190px,22vw,300px)}
+.space img{width:100%;height:100%;object-fit:cover}
+.space figcaption{position:absolute;left:14px;bottom:14px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.96);font:600 13.5px var(--display)}
+
+/* reviews */
+.revs{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.rev{border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px}
+.rev.big{grid-row:span 2;background:var(--mint-100);border-color:var(--mint-200)}
+.rev.big blockquote{font:500 clamp(22px,2.2vw,30px)/1.35 var(--display);letter-spacing:-.015em}
+.rev blockquote{margin:0;font-size:17px;color:var(--ink)}
+.rev .qm{width:40px;height:40px;color:var(--coral)}
+.rev .who{margin-top:auto;display:flex;align-items:center;gap:14px}
+.rev .av{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font:600 16px var(--display);background:var(--mint-50);color:var(--mint-700);flex:none}
+.rev.big .av{background:var(--mint-700);color:#fff}
+.rev .who b{display:block;font:600 16px var(--display)}
+.rev .who span{font-size:14px;color:var(--muted)}
+.stars{display:flex;gap:3px;color:var(--amber)}
+.stars .ico{font-size:17px;fill:currentColor;stroke:none}
+.sample{display:inline-flex;align-self:flex-start;padding:5px 11px;border-radius:999px;background:var(--coral-50);color:var(--coral-ink);font:600 12.5px var(--display);border:1px solid var(--coral-100)}
+.rev-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,6vw,80px);align-items:start}
+.faq-side{position:sticky;top:120px;display:grid;gap:18px}
+.faq{display:grid;gap:12px}
+.faq details{border-radius:var(--r);background:#fff;border:1px solid var(--line);transition:border-color .3s,background .3s}
+.faq details[open]{border-color:var(--mint-200)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;font:500 18px/1.35 var(--display)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:34px;height:34px;border-radius:50%;background:var(--mint-50);flex:none;position:relative;transition:background .3s,transform .4s var(--ease)}
+.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;border-radius:2px;background:var(--mint-700);transform:translate(-50%,-50%)}
+.faq summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s var(--ease)}
+.faq details[open] .pm{background:var(--coral);transform:rotate(180deg)}
+.faq details[open] .pm::before,.faq details[open] .pm::after{background:#2A0F0A}
+.faq details[open] .pm::after{transform:translate(-50%,-50%) rotate(0)}
+.faq .ans{padding:0 24px 22px;color:var(--ink-2);font-size:16px}
+
+/* booking */
+.book-sec{background:linear-gradient(180deg,var(--bg) 0,var(--mint-50) 100%)}
+.bk{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-lg);overflow:hidden}
+.bk-main{padding:clamp(22px,3.4vw,44px);display:grid;gap:30px;align-content:start}
+.bk-step h3{display:flex;align-items:center;gap:12px;font-size:19px;margin-bottom:14px}
+.bk-step h3 i{width:30px;height:30px;border-radius:50%;background:var(--mint-100);color:var(--mint-700);display:grid;place-items:center;font:600 14px var(--display);font-style:normal}
+.opts{display:grid;gap:10px}
+.opt{position:relative;display:block}
+.opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opt .box{display:flex;align-items:center;gap:12px;height:100%;padding:12px 14px;border-radius:16px;border:1.5px solid var(--line);background:#fff;transition:border-color .2s,background .2s,transform .2s var(--ease)}
+.opt:hover .box{border-color:var(--mint)}
+.opt input:checked+.box{border-color:var(--mint-700);background:var(--mint-50)}
+.opt input:focus-visible+.box{outline:3px solid var(--coral);outline-offset:2px}
+.opt input:disabled+.box{opacity:.42;background:var(--bg);text-decoration:line-through;cursor:not-allowed}
+.opt input:disabled{cursor:not-allowed}
+.o-doc{grid-template-columns:repeat(2,minmax(0,1fr))}
+.o-doc .box img,.o-doc .any{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.o-doc .any{display:grid;place-items:center;background:var(--coral-50);color:var(--coral-ink)}
+.o-doc .any .ico{font-size:22px}
+.o-doc b{display:block;font:600 15px/1.25 var(--display)}
+.o-doc small{display:block;font-size:13px;color:var(--muted);line-height:1.3}
+.o-date{grid-template-columns:repeat(7,minmax(0,1fr))}
+.o-date .box{flex-direction:column;gap:2px;padding:10px 4px;text-align:center;justify-content:center}
+.o-date .box span{font:600 12px var(--sans);color:var(--muted)}
+.o-date .box b{font:600 17px var(--display)}
+.o-date .box em{font:600 11px var(--sans);font-style:normal;color:var(--coral-ink)}
+.o-time{grid-template-columns:repeat(6,minmax(0,1fr))}
+.o-time .box{justify-content:center;padding:11px 4px;font:500 15px var(--display)}
+.slot-group{font:600 13px var(--sans);color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin:12px 0 8px}
+.slot-group:first-child{margin-top:0}
+.slot-msg{padding:14px 16px;border-radius:14px;background:var(--bg);color:var(--muted);font-size:15px}
+.bk-side{background:var(--ink);color:#DCEBE6;padding:clamp(22px,3vw,40px);display:flex;flex-direction:column;gap:18px}
+.bk-side h3{color:#fff;font-size:21px}
+.sum{display:grid;gap:0;border-radius:18px;background:#163E37;padding:4px 18px}
+.sum div{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px}
+.sum div:last-child{border-bottom:0}
+.sum dt{color:#9DBDB4}
+.sum dd{margin:0;font:600 15px/1.35 var(--display);color:#fff;text-align:right}
+.field{display:grid;gap:6px}
+.field label{font:600 14px var(--display);color:#fff}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;border-radius:14px;border:1.5px solid rgba(255,255,255,.14);background:#163E37;color:#fff;font-size:16px;transition:border-color .2s}
+.field textarea{min-height:84px;resize:vertical}
+.field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23AEE6D4' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:42px}
+.field select option{color:var(--ink);background:#fff}
+.field input::placeholder,.field textarea::placeholder{color:#8DB1A7}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--mint)}
+.field.bad input{border-color:var(--coral)}
+.err{font-size:13.5px;color:#FFB4A8;min-height:0}
+.err:empty{display:none}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14px;line-height:1.5;color:#C9DDD7;cursor:pointer}
+.consent input{width:20px;height:20px;margin:2px 0 0;flex:none;accent-color:var(--mint)}
+.bk-side .btn{width:100%}
+.bk-side .small{font-size:13px;color:#9DBDB4}
+.done{display:grid;gap:16px;justify-items:start;padding:clamp(26px,4vw,50px);grid-column:1/-1}
+.done .ok{width:68px;height:68px;border-radius:50%;background:var(--mint-100);display:grid;place-items:center;color:var(--mint-700)}
+.done .ok .ico{font-size:34px;stroke-width:2.2}
+.done h3{font-size:clamp(24px,2.6vw,32px)}
+.done p{color:var(--ink-2);max-width:60ch}
+.done .code{font:600 15px var(--display);padding:8px 14px;border-radius:12px;background:var(--mint-50);color:var(--mint-700)}
+
+/* footer */
+.ft{background:var(--ink);color:#BFD6CF;padding:clamp(60px,8vw,96px) 0 34px;margin-top:0}
+.ft-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:clamp(24px,4vw,60px)}
+.ft .logo b{color:#fff}
+.ft .logo small{color:#9DBDB4}
+.ft h4{font-size:15px;color:#fff;margin-bottom:14px;letter-spacing:0}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15px}
+.ft a{text-decoration:none}
+.ft a:hover{color:#fff}
+.ft li{display:flex;gap:10px}
+.ft li .ico{font-size:17px;color:var(--mint);margin-top:4px}
+.ft-hours div{display:flex;justify-content:space-between;gap:16px;font-size:15px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.ft-hours div.today{color:#fff;font-weight:700}
+.ft-hours div.today span:first-child{position:relative;padding-left:14px}
+.ft-hours div.today span:first-child::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--mint)}
+.ft-bot{margin-top:52px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:grid;gap:10px;font-size:13.5px;color:#93B3AA}
+.ft-bot .disc{color:#DCEBE6;font-size:14px}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(15,46,41,.96);border:1px solid rgba(174,230,212,.25);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.45);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#0A211D}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:var(--coral);flex:none;box-shadow:0 0 0 3px rgba(255,126,107,.28)}
+.kt-badge b{color:var(--mint-200);font-weight:700}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1180px){
+  .nav a{padding:10px 9px;font-size:14.5px}
+  .hdr-tel span{display:none}
+  .s1{grid-column:span 6}.s2{grid-column:span 6}.s3{grid-column:span 6}
+  .s4{grid-column:span 12}
+  .ptable{grid-template-columns:1fr}
+  .paside{align-self:stretch}
+  .o-time{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+@media (max-width:1024px){
+  .tm-panel{position:static}
+  .s6{flex-direction:column}
+  .s6 .ph{width:100%;aspect-ratio:16/10;order:-1}
+  .nav,.hdr-tel{display:none}
+  .menu-btn{display:inline-flex}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{justify-self:center;max-width:520px;margin-top:10px}
+  .worry .wrap,.faq-grid{grid-template-columns:1fr}
+  .worry-side,.faq-side{position:static}
+  .worry-ill{display:none}
+  .tm{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr}
+  .proc-ph{aspect-ratio:16/10}
+  .docs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .docs .doc:last-child{grid-column:span 2;flex-direction:row}
+  .docs .doc:last-child .ph{width:46%;aspect-ratio:auto;flex:none}
+  .revs{grid-template-columns:1fr}
+  .rev.big{grid-row:auto}
+  .bk{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .hdr .wrap{height:68px;gap:12px}
+  html{scroll-padding-top:72px}
+  .logo small{display:none}
+  .hdr .btn{min-height:42px;padding:0 16px;font-size:14.5px}
+  .hdr .btn .ico{display:none}
+  .hero{padding-top:104px}
+  .hero-art{aspect-ratio:5/5.2}
+  .float{padding:10px 14px 10px 10px;font-size:13px}
+  .float .fi{width:36px;height:36px}
+  .float b{font-size:14px}
+  .float-1{right:0;top:8%}
+  .float-2{right:0;bottom:20%}
+  .bento{grid-template-columns:1fr;grid-auto-rows:auto}
+  .s1,.s2,.s3,.s4,.s5,.s6{grid-column:auto;grid-row:auto}
+  .s4,.s6{flex-direction:column}
+  .s4 .ph,.s6 .ph{width:100%;aspect-ratio:16/10}
+  .s4 .ph{order:-1}.s6 .ph{order:-1}
+  .wcard{padding:22px 20px;gap:6px 16px}
+  .wcard:nth-child(even){margin-left:0}
+  .wcard .num{width:44px;height:44px;border-radius:14px;font-size:16px}
+  .wcard{grid-template-columns:auto 1fr;align-items:center}
+  .wcard .num{grid-row:auto}
+  .wcard p{grid-column:1/-1}
+  .docs{grid-template-columns:1fr}
+  .docs .doc:last-child{grid-column:auto;flex-direction:column}
+  .docs .doc:last-child .ph{width:100%;aspect-ratio:4/4.3}
+  .space{grid-template-columns:1fr 1fr}
+  .space figure:first-child{grid-column:span 2}
+  .o-date{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .o-time{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .o-doc{grid-template-columns:1fr}
+  .prow{grid-template-columns:1fr}
+  .prow .price{grid-row:auto;grid-column:1;text-align:left}
+  .prow .price small{display:inline;margin-left:6px}
+  .ft-top{grid-template-columns:1fr}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (max-width:420px){
+  .h1{font-size:40px}
+  .issues{grid-template-columns:1fr 1fr}
+  .iss{padding:11px 10px;font-size:14px}
+  .sug-item{grid-template-columns:1fr}
+  .sug-item .sprice{text-align:left}
+  .hero-facts{gap:14px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+  .h1 .hl path,.tooth-draw .td,.tooth-draw .td2{stroke-dashoffset:0}
+  .hint-ring{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M7.5 3C5 3 3.5 5 3.5 8c0 3.2 1.8 4.6 2.3 8.2.3 2.6 1.1 4.3 2.3 4.3 1.6 0 1.5-3.1 2.4-5.3.4-1 .8-1.4 1.5-1.4s1.1.4 1.5 1.4c.9 2.2.8 5.3 2.4 5.3 1.2 0 2-1.7 2.3-4.3.5-3.6 2.3-5 2.3-8.2 0-3-1.5-5-4-5-2.3 0-3.1 1.4-4.5 1.4S9.8 3 7.5 3z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3.5"/><path d="M8 3v4M16 3v4M3.5 10h17M8 14h2M14 14h2M8 17h2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.5 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.5v2.6a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></symbol>
+  <symbol id="i-mirror" viewBox="0 0 24 24"><circle cx="15.5" cy="7.5" r="4"/><path d="m12.6 10.4-8.1 8.1"/><path d="M14 6.2a2 2 0 0 1 2.4-.4"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M7.5 3C5 3 3.5 5 3.5 8c0 3.2 1.8 4.6 2.3 8.2.3 2.6 1.1 4.3 2.3 4.3 1.6 0 1.5-3.1 2.4-5.3.4-1 .8-1.4 1.5-1.4s1.1.4 1.5 1.4c.9 2.2.8 5.3 2.4 5.3 1.2 0 2-1.7 2.3-4.3.5-3.6 2.3-5 2.3-8.2 0-3-1.5-5-4-5-2.3 0-3.1 1.4-4.5 1.4S9.8 3 7.5 3z"/><path d="M7 8.5c1.3.6 2.7.6 4 0M13 8.5c1.3.6 2.7.6 4 0"/></symbol>
+  <symbol id="i-fill" viewBox="0 0 24 24"><path d="M7.5 3C5 3 3.5 5 3.5 8c0 3.2 1.8 4.6 2.3 8.2.3 2.6 1.1 4.3 2.3 4.3 1.6 0 1.5-3.1 2.4-5.3.4-1 .8-1.4 1.5-1.4s1.1.4 1.5 1.4c.9 2.2.8 5.3 2.4 5.3 1.2 0 2-1.7 2.3-4.3.5-3.6 2.3-5 2.3-8.2 0-3-1.5-5-4-5-2.3 0-3.1 1.4-4.5 1.4S9.8 3 7.5 3z"/><circle cx="14.5" cy="8" r="1.8"/></symbol>
+  <symbol id="i-aligner" viewBox="0 0 24 24"><path d="M3 9c0-2 1.5-3 3-3h12c1.5 0 3 1 3 3v2c0 4-4 7-9 7s-9-3-9-7z"/><path d="M7 6v4M11 6v5M15 6v4M7 14c1.6 1 3.3 1.4 5 1.4s3.4-.4 5-1.4"/></symbol>
+  <symbol id="i-implant" viewBox="0 0 24 24"><path d="M8 3.5h8c1.6 0 2.5 1.2 2.2 2.8l-.6 3.2H6.4l-.6-3.2C5.5 4.7 6.4 3.5 8 3.5z"/><path d="M9 9.5h6l-.5 2h-5zM9.5 13h5M10 15.5h4M10.5 18h3M12 11.5v9"/></symbol>
+  <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="11" r="7.5"/><path d="M9 13.5c1.8 1.6 4.2 1.6 6 0M9.5 9.5h.01M14.5 9.5h.01M12 3.5c-.5-1 0-2 1-2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8h.01"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11M12 10V4a1.5 1.5 0 0 1 3 0v6.5M15 10.5V6.5a1.5 1.5 0 0 1 3 0v7c0 4-2.5 7-6.5 7-2.7 0-4.2-1.3-5.6-3.4l-2.2-3.5a1.4 1.4 0 0 1 2.3-1.6L9 14"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2.5c.6 4.6 2.4 6.9 7 9.5-4.6 2.6-6.4 4.9-7 9.5-.6-4.6-2.4-6.9-7-9.5 4.6-2.6 6.4-4.9 7-9.5z"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 40 40"><path d="M8 28c0-8 3-13 9-16l1.5 2.5c-3.4 2-5 4.4-5.3 7.5H17V30H8zM22 28c0-8 3-13 9-16l1.5 2.5c-3.4 2-5 4.4-5.3 7.5H31V30h-9z" fill="currentColor" stroke="none"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Nha Khoa Bạc Hà, về đầu trang">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="14" fill="#D3F1E7"/><path d="M15 11c-3.6 0-5.6 2.8-5.6 7 0 4.6 2.6 6.6 3.3 11.8.4 3.6 1.6 6.2 3.3 6.2 2.3 0 2.2-4.4 3.5-7.6.6-1.4 1.1-2 2.5-2s1.9.6 2.5 2c1.3 3.2 1.2 7.6 3.5 7.6 1.7 0 2.9-2.6 3.3-6.2.7-5.2 3.3-7.2 3.3-11.8 0-4.2-2-7-5.6-7-3.3 0-4.5 2-7 2s-3.7-2-7-2z" fill="#fff" stroke="#0E6F58" stroke-width="2" stroke-linejoin="round"/><path d="M27 6.5c2.5 0 4.5 1.7 4.8 4.2-2.6.2-4.6-1.5-4.8-4.2z" fill="#5ACFAE"/><circle cx="35" cy="9" r="3.4" fill="#FF7E6B"/></svg>
+      <span><b>Nha&nbsp;Khoa Bạc&nbsp;Hà</b><small>Nha khoa gia đình · TP.HCM</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#so-do">Sơ đồ răng</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#bang-gia">Bảng giá</a>
+      <a href="#bac-si">Bác sĩ</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </nav>
+    <a class="hdr-tel" href="tel:0900000000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>0900&nbsp;000&nbsp;000</span></a>
+    <a class="btn btn-p btn-sm" href="#dat-lich">Đặt&nbsp;lịch <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mnav-top"><b>Nha&nbsp;Khoa Bạc&nbsp;Hà</b><button class="menu-btn" id="menuClose" style="display:inline-flex" aria-label="Đóng menu"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+  <nav aria-label="Menu di động">
+    <a href="#so-do">Sơ đồ răng <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#dich-vu">Dịch vụ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#bang-gia">Bảng giá <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#bac-si">Bác sĩ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#hoi-dap">Hỏi đáp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="#dat-lich">Đặt lịch khám <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </nav>
+  <div class="mnav-foot">
+    <p>Thứ 2 – Thứ 7: 08:00–20:00 · Chủ nhật: 08:00–12:00</p>
+    <a class="btn btn-c" href="tel:0900000000"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Gọi 0900&nbsp;000&nbsp;000</a>
+  </div>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="pill"><i><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></i>Phường Tân&nbsp;Định, TP.HCM · Nhận khám cả&nbsp;trẻ&nbsp;em</span>
+      <h1 class="h1">Răng khoẻ cho&nbsp;cả&nbsp;nhà, <span class="hl">giá&nbsp;rõ<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 14 C 50 4, 120 4, 197 12"/></svg></span> trước khi điều&nbsp;trị</h1>
+      <p class="lead">Khám tổng quát, cạo vôi, trám răng, niềng răng trong suốt, implant và nha khoa trẻ em trong một phòng khám. Bác sĩ chụp phim, giải thích bằng hình ảnh và báo chi phí trước; bạn đồng&nbsp;ý mới bắt&nbsp;đầu.</p>
+      <div class="hero-cta">
+        <a class="btn btn-p" href="#dat-lich">Đặt lịch khám <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-g" href="#so-do"><svg class="ico" aria-hidden="true"><use href="#i-hand"/></svg> Chỉ vào răng đang&nbsp;đau</a>
+      </div>
+      <div class="hero-facts">
+        <div><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span><b>08:00–20:00</b><span>Thứ 2 – Thứ 7, CN buổi sáng</span></span></div>
+        <div><svg class="ico" aria-hidden="true"><use href="#i-tooth"/></svg><span><b>6&nbsp;ghế nha</b><span>1 phòng riêng cho bé</span></span></div>
+        <div><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg><span><b>Mở từ năm&nbsp;2017</b><span>Số liệu mẫu</span></span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="arch-ring" aria-hidden="true"></div>
+      <div class="arch"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1600&q=80" alt="Bác sĩ nha khoa chỉ phim chụp răng trên màn hình cho bệnh nhân đang ngồi ghế nha" width="1100" height="1230" fetchpriority="high"></div>
+      <svg class="spark spark-1" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <svg class="spark spark-2" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <div class="tooth-draw" aria-hidden="true">
+        <svg viewBox="0 0 120 130"><path class="td" pathLength="1" d="M34 8C18 8 9 21 9 40c0 21 12 30 15 53 2 17 7 28 15 28 10 0 10-20 16-34 3-7 5-9 10-9s7 2 10 9c6 14 6 34 16 34 8 0 13-11 15-28 3-23 15-32 15-53 0-19-9-32-25-32-15 0-20 9-31 9S49 8 34 8z"/><path class="td2" pathLength="1" d="M28 34c4-9 12-13 20-12"/></svg>
+      </div>
+      <a class="float float-1" href="#dat-lich"><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg></span><span><b id="heroSlots">Còn giờ trống hôm nay</b>Bấm để chọn giờ</span></a>
+      <div class="float float-2"><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-doc"/></svg></span><span><b>Báo giá bằng văn&nbsp;bản</b>trước khi điều trị</span></div>
+    </div>
+  </div>
+  <div class="wrap rail-wrap">
+    <nav class="rail" aria-label="Dịch vụ">
+      <a href="#dv-kham"><i><svg class="ico" aria-hidden="true"><use href="#i-mirror"/></svg></i>Khám tổng quát</a>
+      <a href="#dv-cao"><i><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg></i>Cạo vôi răng</a>
+      <a href="#dv-tram"><i><svg class="ico" aria-hidden="true"><use href="#i-fill"/></svg></i>Trám răng</a>
+      <a href="#dv-nieng"><i><svg class="ico" aria-hidden="true"><use href="#i-aligner"/></svg></i>Niềng răng trong&nbsp;suốt</a>
+      <a href="#dv-implant"><i><svg class="ico" aria-hidden="true"><use href="#i-implant"/></svg></i>Implant</a>
+      <a href="#dv-be"><i><svg class="ico" aria-hidden="true"><use href="#i-child"/></svg></i>Nha khoa trẻ&nbsp;em</a>
+    </nav>
+  </div>
+</section>
+
+<!-- WORRIES -->
+<section class="sec worry" id="noi-lo">
+  <div class="wrap">
+    <div class="worry-side rv">
+      <span class="eyebrow">Nỗi lo thường gặp</span>
+      <h2>Ngại đi nha&nbsp;sĩ là chuyện rất&nbsp;thường</h2>
+      <p class="lead">Nhiều người để răng ê, răng sâu cả năm mới đi khám, vì sợ đau, sợ tốn, sợ chờ. Phòng khám được sắp xếp để bớt từng nỗi lo đó.</p>
+      <div class="worry-ill" aria-hidden="true">
+        <svg viewBox="0 0 320 200" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M108 40c-19 0-30 15-30 38 0 25 14 35 18 63 2 20 8 33 18 33 12 0 12-24 19-41 3-8 6-11 12-11s9 3 12 11c7 17 7 41 19 41 10 0 16-13 18-33 4-28 18-38 18-63 0-23-11-38-30-38-18 0-24 11-37 11s-19-11-37-11z" fill="#fff"/>
+          <path d="M126 92h.01M170 92h.01" stroke-width="5"/>
+          <path d="M132 112c9 8 23 8 32 0" stroke="#FF7E6B"/>
+          <path d="M228 40c10 4 16 12 18 22M240 22c16 6 26 20 28 36" stroke="#5ACFAE"/>
+          <path d="M60 60c-8 6-12 14-12 24M44 40c-14 10-20 26-20 42" stroke="#5ACFAE"/>
+        </svg>
+      </div>
+    </div>
+    <div class="worry-list">
+      <article class="wcard rv"><span class="num">01</span><q>Sợ đau, nghe tiếng máy là&nbsp;run.</q><p><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Bác sĩ nói trước từng bước sẽ làm, gây tê khi cần và dừng lại ngay khi bạn giơ tay. Cảm giác mỗi người khác nhau, bác sĩ sẽ hỏi lại suốt buổi.</span></p></article>
+      <article class="wcard rv d1"><span class="num">02</span><q>Không biết làm xong hết bao nhiêu&nbsp;tiền.</q><p><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Bảng giá tham khảo công khai ngay trên web. Sau khi khám, phòng khám đưa báo giá bằng văn bản; bạn đồng ý mới điều trị.</span></p></article>
+      <article class="wcard rv d2"><span class="num">03</span><q>Đi khám là mất nguyên buổi ngồi&nbsp;chờ.</q><p><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Đặt lịch theo khung giờ trống của từng bác sĩ, nhận tin nhắn nhắc lịch trước một ngày.</span></p></article>
+      <article class="wcard rv d3"><span class="num">04</span><q>Con nhỏ vừa thấy ghế nha đã&nbsp;khóc.</q><p><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Phòng khám riêng cho trẻ em. Buổi đầu bé được làm quen ghế, đèn, dụng cụ; chưa sẵn sàng thì hẹn lại, không ép.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- TOOTH MAP -->
+<section class="sec map-sec" id="so-do" aria-labelledby="tmTitle">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Kiểm tra nhanh trên web</span>
+      <h2 id="tmTitle">Chỉ vào chiếc răng đang làm bạn khó&nbsp;chịu</h2>
+      <p class="lead">Bấm vào từng răng trên sơ đồ, chọn vấn đề bạn gặp. Trang sẽ gợi ý dịch vụ thường dùng và khoảng giá tham khảo để bạn hình dung trước khi đến khám.</p>
+    </div>
+    <div class="tm">
+      <div class="tm-chart rv">
+        <div class="tm-top">
+          <div class="seg" id="modeSeg" role="group" aria-label="Chọn loại răng">
+            <span class="knob" aria-hidden="true"></span>
+            <button type="button" data-mode="adult" aria-pressed="true">Người lớn</button>
+            <button type="button" data-mode="kid" aria-pressed="false">Răng sữa (trẻ&nbsp;em)</button>
+          </div>
+          <span class="tm-count" aria-live="polite">Đã đánh dấu: <b id="tmCount">0</b> răng</span>
+        </div>
+        <svg class="jaw" id="jaw" viewBox="0 0 520 600" role="group" aria-label="Sơ đồ hàm răng. Dùng phím Tab để đi qua từng răng, Enter để chọn."></svg>
+        <div class="legend" id="legend"></div>
+      </div>
+
+      <div class="tm-panel">
+        <div class="card tm-sel rv d1" id="tmSel">
+          <div class="tm-empty" id="tmEmpty">
+            <svg class="ico" aria-hidden="true"><use href="#i-hand"/></svg>
+            <div><h3>Bấm vào một chiếc răng để&nbsp;bắt&nbsp;đầu</h3><p class="muted">Có thể đánh dấu nhiều răng, mỗi răng một vấn đề. Bấm lại vấn đề đã chọn để bỏ.</p></div>
+          </div>
+          <div id="tmPick" hidden>
+            <h3 id="tmName">Răng 11</h3>
+            <p class="muted" id="tmDesc">Răng cửa giữa, hàm trên bên phải</p>
+            <div class="issues" id="issues" role="group" aria-label="Chọn vấn đề của răng"></div>
+            <button type="button" class="tm-clear" id="tmClear" hidden>Bỏ đánh dấu răng này</button>
+          </div>
+        </div>
+
+        <div class="card sug rv d2" id="sug" aria-live="polite">
+          <h3>Gợi ý tham khảo <small id="sugMode">Người lớn</small></h3>
+          <p class="muted" id="sugEmpty" style="color:var(--muted);font-size:15px">Chưa có răng nào được đánh dấu. Gợi ý và khoảng giá sẽ hiện ở đây.</p>
+          <ul class="sug-list" id="sugList"></ul>
+          <div class="sug-total" id="sugTotal" hidden><span>Tổng tham khảo</span><b class="tprice" id="sugSum"></b></div>
+          <p class="note"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span><b>Thông tin chỉ để tham khảo, cần bác sĩ thăm&nbsp;khám.</b> Cùng một triệu chứng có thể do nhiều nguyên nhân; phương án và chi phí thật chỉ có sau khi bác sĩ khám, chụp phim. Giá trên là giá&nbsp;mẫu.</span></p>
+          <a class="btn btn-c" href="#dat-lich" id="sugBook" hidden>Mang gợi ý này đi đặt&nbsp;lịch <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="dich-vu" aria-labelledby="svTitle">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Dịch vụ</span>
+      <h2 id="svTitle">Sáu dịch vụ, một phòng khám quen cho cả&nbsp;nhà</h2>
+      <p class="lead">Từ lần cạo vôi định kỳ của bố mẹ đến chiếc răng sữa đầu tiên của bé, hồ sơ cả nhà nằm chung một chỗ, bác sĩ theo dõi lâu dài.</p>
+    </div>
+    <div class="bento">
+      <article class="svc s1 rv" id="dv-kham">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" alt="Phòng khám nha khoa sáng sủa với ghế nha và màn hình" width="900" height="700" loading="lazy"><span class="tag">Nên làm 6 tháng/lần</span></div>
+        <div class="bd">
+          <h3>Khám tổng quát, chụp&nbsp;phim</h3>
+          <p>Kiểm tra từng răng, nướu, khớp cắn; chụp phim khi cần. Bác sĩ chỉ trên phim và giải thích tình trạng bằng lời dễ hiểu.</p>
+          <div class="meta"><span class="from"><small>từ</small>150.000đ</span><a class="more" href="#bang-gia" data-tab="0">Xem giá <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </article>
+      <article class="svc s2 rv d1" id="dv-cao">
+        <span class="si"><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg></span>
+        <h3>Cạo vôi, đánh bóng&nbsp;răng</h3>
+        <p>Làm sạch mảng bám và vôi răng bằng máy siêu âm, giúp hạn chế viêm nướu, hôi miệng. Có thể hơi ê trong lúc làm.</p>
+        <div class="meta"><span class="from"><small>từ</small>300.000đ</span><a class="more" href="#bang-gia" data-tab="0">Xem giá <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="svc s3 rv d2" id="dv-tram">
+        <span class="si"><svg class="ico" aria-hidden="true"><use href="#i-fill"/></svg></span>
+        <h3>Trám răng thẩm&nbsp;mỹ</h3>
+        <p>Trám composite cùng màu răng cho răng sâu, mẻ, mòn cổ răng gây ê buốt.</p>
+        <div class="meta"><span class="from"><small>từ</small>300.000đ</span><a class="more" href="#bang-gia" data-tab="1">Xem giá <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="svc s4 rv" id="dv-nieng">
+        <div class="bd">
+          <span class="si"><svg class="ico" aria-hidden="true"><use href="#i-aligner"/></svg></span>
+          <h3>Niềng răng trong&nbsp;suốt</h3>
+          <p>Quét răng 3D thay cho lấy dấu, xem trước mô phỏng răng di chuyển. Khay tháo ra được khi ăn uống và đánh răng. Thời gian niềng tuỳ tình trạng, bác sĩ sẽ báo sau khi lên kế hoạch.</p>
+          <div class="meta"><span class="from"><small>từ</small>35.000.000đ</span><a class="more" href="#bang-gia" data-tab="2">Xem giá <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=80" alt="Người đang đeo khay niềng răng trong suốt" width="800" height="700" loading="lazy"></div>
+      </article>
+      <article class="svc s5 rv d1" id="dv-implant">
+        <span class="si"><svg class="ico" aria-hidden="true"><use href="#i-implant"/></svg></span>
+        <h3>Cấy ghép implant</h3>
+        <p>Thay chiếc răng đã mất bằng trụ implant và mão sứ. Bác sĩ chụp phim CT để xem xương hàm trước; nếu chưa phù hợp sẽ tư vấn cầu răng hoặc hàm tháo lắp.</p>
+        <div class="meta"><span class="from"><small>từ</small>16.000.000đ</span><a class="more" href="#bang-gia" data-tab="3">Xem giá <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="svc s6 rv d2" id="dv-be">
+        <div class="bd">
+          <span class="si"><svg class="ico" aria-hidden="true"><use href="#i-child"/></svg></span>
+          <h3>Nha khoa trẻ&nbsp;em</h3>
+          <p>Khám răng sữa, trám bít hố rãnh, bôi fluor, nhổ răng sữa lung lay. Bố mẹ ngồi cùng bé trong suốt buổi.</p>
+          <div class="meta"><span class="from"><small>từ</small>100.000đ</span><a class="more" href="#bang-gia" data-tab="4">Xem giá <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="ph"><img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1000&q=80" alt="Người bố cười vui cõng hai con nhỏ" width="800" height="700" loading="lazy"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec proc" id="quy-trinh" aria-labelledby="pcTitle">
+  <div class="wrap proc-grid">
+    <figure class="proc-ph rv" style="margin:0">
+      <img src="https://images.unsplash.com/photo-1667133295315-820bb6481730?auto=format&fit=crop&w=1200&q=80" alt="Bác sĩ khám răng cho bệnh nhân, màn hình bên cạnh hiển thị hình răng" width="900" height="990" loading="lazy">
+      <figcaption>Hình chụp trong miệng hiện ngay trên màn hình, bạn thấy cùng lúc với bác&nbsp;sĩ.</figcaption>
+    </figure>
+    <div>
+      <div class="sec-head rv" style="margin-bottom:0">
+        <span class="eyebrow">Một buổi khám</span>
+        <h2 id="pcTitle">Biết trước từng bước của buổi&nbsp;khám</h2>
+      </div>
+      <ol class="steps rv d1" id="steps">
+        <svg class="track" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 4 100"><line x1="2" y1="0" x2="2" y2="100" vector-effect="non-scaling-stroke"/><line class="go" x1="2" y1="0" x2="2" y2="100" pathLength="1" vector-effect="non-scaling-stroke"/></svg>
+        <li><span class="n">1</span><div><h3>Đặt lịch theo giờ&nbsp;trống</h3><p>Chọn bác sĩ, ngày, giờ trên web hoặc gọi điện. Phòng khám nhắn tin xác nhận và nhắc lịch.</p></div></li>
+        <li><span class="n">2</span><div><h3>Khám, chụp phim khi&nbsp;cần</h3><p>Bác sĩ kiểm tra cả hàm, chụp phim hoặc quét 3D nếu cần để thấy rõ phần chân răng.</p></div></li>
+        <li><span class="n">3</span><div><h3>Giải thích, báo giá bằng văn&nbsp;bản</h3><p>Các phương án được nói rõ ưu, nhược và chi phí. Bạn có thể về suy nghĩ, không cần quyết ngay.</p></div></li>
+        <li><span class="n">4</span><div><h3>Bạn đồng ý mới điều&nbsp;trị</h3><p>Điều trị theo lịch hẹn. Sau buổi làm, phòng khám gọi hỏi thăm và hẹn tái khám.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="sec" id="bang-gia" aria-labelledby="prTitle">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Bảng giá tham khảo</span>
+      <h2 id="prTitle">Xem giá trước khi đến&nbsp;khám</h2>
+      <p class="lead">Giá dưới đây là giá mẫu để minh hoạ giao diện. Chi phí thật phụ thuộc tình trạng răng; bác sĩ báo giá cụ thể sau khi khám.</p>
+    </div>
+    <div class="price-wrap rv d1">
+      <div class="tabs-scroll">
+        <div class="tabs" role="tablist" aria-label="Nhóm dịch vụ" id="tabs">
+          <span class="knob" aria-hidden="true"></span>
+          <button class="tab" role="tab" id="tab-0" aria-controls="pp-0" aria-selected="true">Tổng quát &amp;&nbsp;phòng&nbsp;ngừa</button>
+          <button class="tab" role="tab" id="tab-1" aria-controls="pp-1" aria-selected="false" tabindex="-1">Trám, điều trị</button>
+          <button class="tab" role="tab" id="tab-2" aria-controls="pp-2" aria-selected="false" tabindex="-1">Niềng trong suốt</button>
+          <button class="tab" role="tab" id="tab-3" aria-controls="pp-3" aria-selected="false" tabindex="-1">Implant, phục hình</button>
+          <button class="tab" role="tab" id="tab-4" aria-controls="pp-4" aria-selected="false" tabindex="-1">Trẻ em</button>
+        </div>
+      </div>
+      <div class="ptable">
+        <div>
+          <div class="ppanel" role="tabpanel" id="pp-0" aria-labelledby="tab-0" tabindex="0">
+            <div class="prow"><b>Khám tổng quát, tư vấn</b><span>Kiểm tra răng, nướu, khớp cắn</span><span class="price">150.000đ<small>/ lần</small></span></div>
+            <div class="prow"><b>Chụp phim toàn hàm (panorama)</b><span>Chỉ chụp khi bác sĩ thấy cần</span><span class="price">200.000đ<small>/ phim</small></span></div>
+            <div class="prow"><b>Cạo vôi, đánh bóng</b><span>Tuỳ lượng vôi răng</span><span class="price">300.000đ–500.000đ<small>/ 2 hàm</small></span></div>
+            <div class="prow"><b>Bôi fluor phòng sâu răng</b><span>Người lớn có men răng yếu</span><span class="price">250.000đ<small>/ lần</small></span></div>
+          </div>
+          <div class="ppanel" role="tabpanel" id="pp-1" aria-labelledby="tab-1" tabindex="0" hidden>
+            <div class="prow"><b>Trám răng composite</b><span>Răng sâu, mẻ; màu giống răng thật</span><span class="price">300.000đ–700.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Trám cổ răng</b><span>Mòn cổ răng gây ê buốt</span><span class="price">250.000đ–450.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Điều trị tuỷ răng cửa</b><span>Chưa gồm trám hoặc bọc sứ sau tuỷ</span><span class="price">1.200.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Điều trị tuỷ răng hàm</b><span>Tuỳ số ống tuỷ</span><span class="price">1.800.000đ–2.500.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Nhổ răng khôn</b><span>Tuỳ độ khó, có chụp phim trước</span><span class="price">1.500.000đ–3.500.000đ<small>/ răng</small></span></div>
+          </div>
+          <div class="ppanel" role="tabpanel" id="pp-2" aria-labelledby="tab-2" tabindex="0" hidden>
+            <div class="prow"><b>Khám, quét 3D, lên kế hoạch</b><span>Xem mô phỏng trước khi quyết định</span><span class="price">1.000.000đ<small>/ lần</small></span></div>
+            <div class="prow"><b>Gói lệch nhẹ</b><span>Răng thưa, chen chúc nhẹ</span><span class="price">35.000.000đ–50.000.000đ<small>/ liệu trình</small></span></div>
+            <div class="prow"><b>Gói tiêu chuẩn</b><span>Chen chúc, hô, móm mức độ vừa</span><span class="price">60.000.000đ–85.000.000đ<small>/ liệu trình</small></span></div>
+            <div class="prow"><b>Hàm duy trì sau niềng</b><span>Giữ răng ở vị trí mới</span><span class="price">1.500.000đ<small>/ hàm</small></span></div>
+          </div>
+          <div class="ppanel" role="tabpanel" id="pp-3" aria-labelledby="tab-3" tabindex="0" hidden>
+            <div class="prow"><b>Implant (trụ + mão sứ)</b><span>Tuỳ loại trụ; có chụp CT trước</span><span class="price">16.000.000đ–30.000.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Ghép xương</b><span>Chỉ làm khi xương hàm không đủ</span><span class="price">5.000.000đ–10.000.000đ<small>/ vị trí</small></span></div>
+            <div class="prow"><b>Mão sứ</b><span>Sứ kim loại hoặc toàn sứ</span><span class="price">2.000.000đ–6.500.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Cầu răng sứ 3 đơn vị</b><span>Phương án khác khi chưa làm implant</span><span class="price">4.500.000đ–9.000.000đ<small>/ cầu</small></span></div>
+          </div>
+          <div class="ppanel" role="tabpanel" id="pp-4" aria-labelledby="tab-4" tabindex="0" hidden>
+            <div class="prow"><b>Khám răng trẻ em</b><span>Bố mẹ ngồi cùng bé</span><span class="price">100.000đ<small>/ lần</small></span></div>
+            <div class="prow"><b>Trám răng sữa</b><span>Tuỳ kích thước lỗ sâu</span><span class="price">200.000đ–400.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Trám bít hố rãnh</b><span>Cho răng hàm vĩnh viễn mới mọc</span><span class="price">300.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Nhổ răng sữa</b><span>Bôi gel tê trước khi nhổ</span><span class="price">100.000đ–200.000đ<small>/ răng</small></span></div>
+            <div class="prow"><b>Bôi vecni fluor</b><span>Giúp men răng sữa chắc hơn</span><span class="price">250.000đ<small>/ lần</small></span></div>
+          </div>
+        </div>
+        <aside class="paside">
+          <h3>Cách phòng khám báo&nbsp;giá</h3>
+          <ul>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Báo giá bằng văn bản sau khi khám, ghi rõ từng hạng mục.</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Có thay đổi trong lúc làm, bác sĩ dừng lại hỏi bạn trước.</span></li>
+            <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Niềng răng, implant có thể chia thanh toán theo từng giai đoạn.</span></li>
+          </ul>
+          <a class="btn btn-p btn-sm" href="#dat-lich">Đặt lịch khám, nhận báo&nbsp;giá</a>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="sec" id="bac-si" aria-labelledby="dcTitle" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Bác sĩ</span>
+      <h2 id="dcTitle">Gặp bác sĩ trước khi ngồi lên&nbsp;ghế</h2>
+      <p class="lead">Mỗi bác sĩ phụ trách một nhóm điều trị, cả nhà có thể khám cùng buổi với các bác sĩ khác nhau. Tên, hình ảnh và chứng chỉ dưới đây là thông tin mẫu.</p>
+    </div>
+    <div class="docs" id="docs">
+      <article class="doc rv" data-id="khoa">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=900&h=968&q=80&crop=focalpoint&fp-x=.5&fp-y=.3&fp-z=1.8" alt="Bác sĩ nam mặc áo blouse trắng, khoanh tay mỉm cười" width="900" height="968" loading="lazy"><span class="badge">Bác sĩ mẫu</span></div>
+        <div class="bd">
+          <span class="role">Tổng quát · Implant</span>
+          <h3>BS. Trần Minh&nbsp;Khoa</h3>
+          <p>Khám tổng quát, điều trị tuỷ, cấy ghép implant và phục hình sứ.</p>
+          <div class="days" aria-label="Lịch làm việc"><span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span class="off">CN</span></div>
+          <p class="cert">Chứng chỉ hành nghề: 000000/HCM-CCHN (mẫu)</p>
+          <button type="button" class="btn btn-g btn-sm pick-doc">Đặt lịch với bác&nbsp;sĩ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+      <article class="doc rv d1" data-id="vy">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&h=968&q=80&crop=focalpoint&fp-x=.5&fp-y=.3&fp-z=1.3" alt="Bác sĩ nữ mặc đồng phục xanh ngọc, khoanh tay mỉm cười" width="900" height="968" loading="lazy"><span class="badge">Bác sĩ mẫu</span></div>
+        <div class="bd">
+          <span class="role">Chỉnh nha · Niềng trong suốt</span>
+          <h3>BS. Lê Thảo&nbsp;Vy</h3>
+          <p>Quét 3D, lên kế hoạch niềng răng trong suốt, theo dõi khay niềng định kỳ.</p>
+          <div class="days" aria-label="Lịch làm việc"><span class="off">T2</span><span>T3</span><span class="off">T4</span><span>T5</span><span class="off">T6</span><span>T7</span><span>CN</span></div>
+          <p class="cert">Chứng chỉ hành nghề, chứng chỉ chỉnh nha: (mẫu)</p>
+          <button type="button" class="btn btn-g btn-sm pick-doc">Đặt lịch với bác&nbsp;sĩ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+      <article class="doc rv d2" data-id="my">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=900&h=968&q=80&crop=focalpoint&fp-x=.42&fp-y=.4&fp-z=1.25" alt="Nữ nha sĩ đeo khẩu trang, mặc áo blouse trong phòng khám" width="900" height="968" loading="lazy"><span class="badge">Bác sĩ mẫu</span></div>
+        <div class="bd">
+          <span class="role">Nha khoa trẻ em</span>
+          <h3>BS. Nguyễn Hà&nbsp;My</h3>
+          <p>Khám và điều trị răng sữa, hướng dẫn bố mẹ chăm răng cho bé tại nhà.</p>
+          <div class="days" aria-label="Lịch làm việc"><span>T2</span><span class="off">T3</span><span>T4</span><span class="off">T5</span><span>T6</span><span>T7</span><span>CN</span></div>
+          <p class="cert">Chứng chỉ hành nghề: 000000/HCM-CCHN (mẫu)</p>
+          <button type="button" class="btn btn-g btn-sm pick-doc">Đặt lịch với bác&nbsp;sĩ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+    </div>
+    <div class="space">
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&w=1200&q=80" alt="Khu ghế nha sáng, sạch, nhiều ánh sáng tự nhiên" width="1200" height="825" loading="lazy"><figcaption>Khu điều trị</figcaption></figure>
+      <figure class="rv d1"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=80" alt="Ghế nha màu cam trong phòng khám" width="900" height="620" loading="lazy"><figcaption>Phòng riêng</figcaption></figure>
+      <figure class="rv d2"><img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=900&q=80" alt="Bàn chải tre đặt trong cốc thuỷ tinh" width="900" height="620" loading="lazy"><figcaption>Góc chăm răng tại nhà</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="danh-gia" aria-labelledby="rvTitle" style="background:#fff">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Khách nói gì</span>
+      <h2 id="rvTitle">Sau buổi khám, khách&nbsp;kể&nbsp;lại</h2>
+    </div>
+    <div class="revs">
+      <figure class="rev big rv" style="margin:0">
+        <div class="rev-top"><span class="sample">Đánh giá mẫu</span><span class="stars" role="img" aria-label="5 trên 5 sao"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span></div>
+        <svg class="qm" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote>Bé nhà mình lần đầu đi nha sĩ, buổi đầu chỉ ngồi chơi trên ghế và đếm răng. Tới lần thứ hai bé tự há miệng cho bác sĩ trám, về nhà còn kể cho ông bà nghe.</blockquote>
+        <figcaption class="who"><span class="av" aria-hidden="true">TH</span><span><b>Chị Thu Hà</b><span>Mẹ của bé 5 tuổi · Trám răng sữa</span></span></figcaption>
+      </figure>
+      <figure class="rev rv d1" style="margin:0">
+        <div class="rev-top"><span class="sample">Đánh giá mẫu</span><span class="stars" role="img" aria-label="5 trên 5 sao"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></span></div>
+        <blockquote>Mình được xem phim chụp ngay trên màn hình, bác sĩ chỉ rõ răng nào cần trám, răng nào chỉ theo dõi. Báo giá ghi từng dòng nên về nhà bàn với vợ cũng dễ.</blockquote>
+        <figcaption class="who"><span class="av" aria-hidden="true">QM</span><span><b>Anh Quang Minh</b><span>Khám tổng quát · Trám răng</span></span></figcaption>
+      </figure>
+      <figure class="rev rv d2" style="margin:0">
+        <div class="rev-top"><span class="sample">Đánh giá mẫu</span><span class="stars" role="img" aria-label="4 trên 5 sao"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico" style="opacity:.3"><use href="#i-star"/></svg></span></div>
+        <blockquote>Đặt lịch 18:30 sau giờ làm, tới nơi vào ghế luôn. Cạo vôi có ê một chút nhưng bác sĩ hỏi han suốt, xong còn chỉ cách dùng chỉ nha khoa.</blockquote>
+        <figcaption class="who"><span class="av" aria-hidden="true">NA</span><span><b>Chị Ngọc Anh</b><span>Cạo vôi răng</span></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="hoi-dap" aria-labelledby="fqTitle">
+  <div class="wrap faq-grid">
+    <div class="faq-side rv">
+      <span class="eyebrow">Hỏi đáp</span>
+      <h2 id="fqTitle">Câu hỏi thường&nbsp;gặp</h2>
+      <p class="lead">Chưa thấy câu bạn cần? Gọi <a href="tel:0900000000" class="nw" style="font-weight:700;color:var(--mint-700)">0900 000 000</a> hoặc ghi câu hỏi vào ô ghi chú khi đặt lịch.</p>
+    </div>
+    <div class="faq">
+      <details class="rv" open><summary>Cạo vôi răng có đau không?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Đa số người chỉ thấy ê nhẹ, thường ở những răng đã mòn cổ. Cảm giác mỗi người một khác; nếu bạn thấy khó chịu, bác sĩ có thể bôi thuốc tê hoặc chia làm hai buổi.</div></details>
+      <details class="rv"><summary>Niềng răng trong suốt mất bao lâu?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Tuỳ mức độ lệch và việc đeo khay đều đặn mỗi ngày. Sau khi quét 3D, bác sĩ sẽ cho bạn xem mô phỏng và thời gian dự kiến; con số chỉ là ước tính, có thể thay đổi trong quá trình theo dõi.</div></details>
+      <details class="rv"><summary>Ai cũng làm được implant phải không?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Không phải ai cũng phù hợp ngay. Bác sĩ cần chụp phim CT, hỏi bệnh sử (tiểu đường, tim mạch, thuốc đang dùng) rồi mới tư vấn. Nếu chưa phù hợp, có các phương án khác như cầu răng sứ.</div></details>
+      <details class="rv"><summary>Bé mấy tuổi nên đi khám răng lần&nbsp;đầu?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Nhiều nha sĩ khuyên đưa bé đi khám khi chiếc răng đầu tiên mọc hoặc khoảng 1 tuổi. Buổi đầu chủ yếu để bé làm quen và bố mẹ được hướng dẫn chải răng cho bé.</div></details>
+      <details class="rv"><summary>Phòng khám có làm cuối tuần không?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Có. Thứ 7 làm cả ngày 08:00–20:00, Chủ nhật làm buổi sáng 08:00–12:00. Lịch từng bác sĩ khác nhau, bạn xem giờ trống ở phần đặt lịch.</div></details>
+      <details class="rv"><summary>Có cần đặt cọc khi đặt lịch?<span class="pm" aria-hidden="true"></span></summary><div class="ans">Không cần. Bạn chỉ cần để lại tên và số điện thoại, phòng khám gọi xác nhận. Nếu bận, bạn nhắn đổi lịch trước vài giờ để nhường chỗ cho người khác.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec book-sec" id="dat-lich" aria-labelledby="bkTitle">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Đặt lịch</span>
+      <h2 id="bkTitle">Đặt lịch khám theo giờ&nbsp;trống</h2>
+      <p class="lead">Chọn bác sĩ, ngày và khung giờ còn trống. Phòng khám sẽ gọi lại xác nhận trong giờ làm việc.</p>
+    </div>
+    <form class="bk rv" id="bk" novalidate>
+      <div class="bk-main" id="bkMain">
+        <div class="bk-step">
+          <h3><i>1</i>Chọn bác sĩ</h3>
+          <div class="opts o-doc" id="optDoc"></div>
+        </div>
+        <div class="bk-step">
+          <h3><i>2</i>Chọn ngày</h3>
+          <div class="opts o-date" id="optDate"></div>
+        </div>
+        <div class="bk-step">
+          <h3><i>3</i>Chọn khung giờ trống</h3>
+          <div id="optTime"></div>
+        </div>
+      </div>
+      <div class="bk-side" id="bkSide">
+        <h3>Thông tin lịch hẹn</h3>
+        <dl class="sum">
+          <div><dt>Bác sĩ</dt><dd id="sDoc">Chưa chọn</dd></div>
+          <div><dt>Ngày</dt><dd id="sDate">Chưa chọn</dd></div>
+          <div><dt>Giờ</dt><dd id="sTime">Chưa chọn</dd></div>
+        </dl>
+        <p class="err" id="eSlot" role="alert"></p>
+        <div class="field"><label for="fName">Họ và tên</label><input id="fName" name="name" autocomplete="name" placeholder="Ví dụ: Nguyễn Văn An"><span class="err" id="eName"></span></div>
+        <div class="field"><label for="fPhone">Số điện thoại</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"><span class="err" id="ePhone"></span></div>
+        <div class="field"><label for="fSvc">Nhu cầu</label>
+          <select id="fSvc" name="svc">
+            <option value="chua-ro">Chưa rõ, để bác sĩ khám</option>
+            <option value="kham">Khám tổng quát</option>
+            <option value="cao-voi">Cạo vôi răng</option>
+            <option value="tram">Trám răng, ê buốt</option>
+            <option value="nieng">Niềng răng trong suốt</option>
+            <option value="implant">Implant, mất răng</option>
+            <option value="tre-em">Nha khoa trẻ em</option>
+          </select></div>
+        <div class="field"><label for="fNote">Ghi chú (không bắt buộc)</label><textarea id="fNote" name="note" placeholder="Ví dụ: răng hàm dưới bên trái ê khi uống nước lạnh"></textarea></div>
+        <label class="consent"><input type="checkbox" id="fOk"><span>Tôi đồng ý để Nha Khoa Bạc Hà xử lý dữ liệu cá nhân (họ tên, số điện thoại, ghi chú) để liên hệ xác nhận lịch hẹn.</span></label>
+        <span class="err" id="eOk"></span>
+        <button type="submit" class="btn btn-c">Gửi yêu cầu đặt&nbsp;lịch <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="small">Đây là mẫu giao diện: thông tin không được gửi đi đâu.</p>
+      </div>
+      <div class="done" id="bkDone" hidden tabindex="-1">
+        <span class="ok"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span>
+        <h3>Đã ghi nhận yêu cầu (minh&nbsp;hoạ)</h3>
+        <p id="doneText"></p>
+        <span class="code" id="doneCode"></span>
+        <p style="font-size:14px;color:var(--muted)">Đây là thông báo minh hoạ của mẫu giao diện, chưa có lịch hẹn thật nào được tạo.</p>
+        <button type="button" class="btn btn-g" id="bkAgain">Đặt lịch khác</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div style="display:grid;gap:16px;align-content:start">
+        <a class="logo" href="#top" aria-label="Nha Khoa Bạc Hà, về đầu trang">
+          <svg viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="14" fill="#16443C"/><path d="M15 11c-3.6 0-5.6 2.8-5.6 7 0 4.6 2.6 6.6 3.3 11.8.4 3.6 1.6 6.2 3.3 6.2 2.3 0 2.2-4.4 3.5-7.6.6-1.4 1.1-2 2.5-2s1.9.6 2.5 2c1.3 3.2 1.2 7.6 3.5 7.6 1.7 0 2.9-2.6 3.3-6.2.7-5.2 3.3-7.2 3.3-11.8 0-4.2-2-7-5.6-7-3.3 0-4.5 2-7 2s-3.7-2-7-2z" fill="#fff" stroke="#5ACFAE" stroke-width="2" stroke-linejoin="round"/><circle cx="35" cy="9" r="3.4" fill="#FF7E6B"/></svg>
+          <span><b>Nha&nbsp;Khoa Bạc&nbsp;Hà</b><small>Nha khoa gia đình · TP.HCM</small></span>
+        </a>
+        <p style="font-size:15px;max-width:34ch">Phòng khám nha khoa gia đình cho người lớn và trẻ em. Thông tin trên trang chỉ để tham khảo, cần bác sĩ thăm khám.</p>
+      </div>
+      <div>
+        <h4>Liên hệ</h4>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>88 Hai Bà Trưng, Phường Tân&nbsp;Định, TP.HCM (địa chỉ mẫu)</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dịch vụ</h4>
+        <ul>
+          <li><a href="#dv-kham">Khám tổng quát</a></li>
+          <li><a href="#dv-cao">Cạo vôi răng</a></li>
+          <li><a href="#dv-tram">Trám răng</a></li>
+          <li><a href="#dv-nieng">Niềng răng trong suốt</a></li>
+          <li><a href="#dv-implant">Implant</a></li>
+          <li><a href="#dv-be">Nha khoa trẻ em</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Giờ làm việc</h4>
+        <div class="ft-hours" id="ftHours">
+          <div data-d="1"><span>Thứ 2 – Thứ 6</span><span>08:00–20:00</span></div>
+          <div data-d="6"><span>Thứ 7</span><span>08:00–20:00</span></div>
+          <div data-d="0"><span>Chủ nhật</span><span>08:00–12:00</span></div>
+        </div>
+        <p style="font-size:13.5px;margin-top:10px">Nghỉ trưa 12:00–13:30 (thứ 2 – thứ 7)</p>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p class="disc">Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p>
+      <p>Thông tin chỉ để tham khảo, cần bác sĩ thăm khám. Kết quả điều trị khác nhau ở mỗi người.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var hasIO='IntersectionObserver' in window;
+var NS='http://www.w3.org/2000/svg';
+function vnd(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'đ'}
+function rng(lo,hi){return lo===hi?vnd(lo):'<span class="nw">'+vnd(lo)+'</span>–<span class="nw">'+vnd(hi)+'</span>'}
+function pad(n){return (n<10?'0':'')+n}
+function vnNow(){var d=new Date();return new Date(d.getTime()+d.getTimezoneOffset()*60000+7*3600000)}
+function hm(m){return pad(Math.floor(m/60))+':'+pad(m%60)}
+var DOW=['CN','T2','T3','T4','T5','T6','T7'];
+var DOWF=['Chủ nhật','Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
+
+/* header + badge */
+var hdr=$('#hdr'),badge=$('#ktBadge');
+function onScroll(){var y=window.pageYOffset;hdr.classList.toggle('scrolled',y>8);badge.classList.toggle('show',y>window.innerHeight*.85)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* mobile menu */
+var mnav=$('#mnav'),mb=$('#menuBtn');
+function lock(on){document.body.classList.toggle('lock',on);document.documentElement.style.overflow=on?'hidden':'';document.body.style.overflow=on?'hidden':''}
+function menu(open){mnav.classList.toggle('open',open);mb.setAttribute('aria-expanded',open);lock(open);if(open){$('#menuClose').focus()}else{mb.focus()}}
+mb.addEventListener('click',function(){menu(true)});
+$('#menuClose').addEventListener('click',function(){menu(false)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');mb.setAttribute('aria-expanded','false');lock(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('open'))menu(false)});
+
+/* reveal */
+if(hasIO&&!RM){
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  $$('.rv').forEach(function(el){ro.observe(el)});
+}else{$$('.rv').forEach(function(el){el.classList.add('in')})}
+
+/* pause hero floats & hint ring off-screen */
+if(hasIO){
+  new IntersectionObserver(function(es){es.forEach(function(e){$('#hero').classList.toggle('paused',!e.isIntersecting)})}).observe($('#hero'));
+  new IntersectionObserver(function(es){es.forEach(function(e){$('#so-do').classList.toggle('paused',!e.isIntersecting)})}).observe($('#so-do'));
+}
+
+/* segmented knob helper */
+function knob(group,btn){var k=$('.knob',group);if(!k||!btn)return;k.style.width=btn.offsetWidth+'px';k.style.transform='translateX('+btn.offsetLeft+'px)'}
+
+/* ===== TOOTH MAP ===== */
+var ISS={
+  adult:[{id:'ebuot',n:'Ê buốt',c:'#5BA8E0',f:'#DDEEFA'},{id:'sau',n:'Sâu răng',c:'#FF7E6B',f:'#FFDDD5'},{id:'mat',n:'Mất răng',c:'#8FA39E',f:'#fff'},{id:'lech',n:'Răng lệch',c:'#EFB13F',f:'#FCEBC7'}],
+  kid:[{id:'ebuot',n:'Ê buốt',c:'#5BA8E0',f:'#DDEEFA'},{id:'sau',n:'Sâu răng',c:'#FF7E6B',f:'#FFDDD5'},{id:'lung',n:'Lung lay',c:'#8C76D9',f:'#E9E3FA'},{id:'lech',n:'Mọc lệch',c:'#EFB13F',f:'#FCEBC7'}]
+};
+var NAMES={adult:['','răng cửa giữa','răng cửa bên','răng nanh','răng cối nhỏ','răng cối nhỏ','răng cối lớn','răng cối lớn'],kid:['','răng cửa giữa (sữa)','răng cửa bên (sữa)','răng nanh sữa','răng cối sữa','răng cối sữa']};
+var BASE={adult:{k:'kham',n:'Khám tổng quát, chụp phim',d:'Bước đầu tiên để bác sĩ xác định nguyên nhân.',lo:150000,hi:350000,u:'lần'},kid:{k:'kham-be',n:'Khám răng trẻ em',d:'Bác sĩ kiểm tra răng sữa và hướng mọc răng.',lo:100000,hi:150000,u:'lần'}};
+function suggest(mode,iss,pos){
+  if(mode==='adult'){
+    if(iss==='ebuot')return {k:'ebuot',n:'Điều trị ê buốt',d:'Bôi thuốc giảm ê; trám cổ răng nếu cổ răng bị mòn.',lo:150000,hi:450000,u:'răng',svc:'tram'};
+    if(iss==='sau')return pos<=3?{k:'tram-truoc',n:'Trám răng thẩm mỹ composite',d:'Làm sạch phần sâu, trám màu giống răng thật.',lo:300000,hi:600000,u:'răng',svc:'tram'}:{k:'tram-ham',n:'Trám composite răng hàm',d:'Nếu lỗ sâu lớn hoặc đã vào tuỷ, bác sĩ có thể đề nghị điều trị tuỷ (<span class="nw">1.800.000đ–2.500.000đ</span>) trước.',lo:350000,hi:700000,u:'răng',svc:'tram'};
+    if(iss==='mat')return {k:'implant',n:'Cấy ghép implant (trụ + mão sứ)',d:'Cần chụp phim CT xem xương hàm. Phương án khác: cầu răng sứ <span class="nw">4.500.000đ–9.000.000đ</span>.',lo:16000000,hi:30000000,u:'răng',svc:'implant',doc:'khoa'};
+    if(iss==='lech')return {k:'nieng',n:'Niềng răng trong suốt',d:'Tính theo cả liệu trình, không theo từng răng. Bác sĩ quét 3D để lên kế hoạch.',lo:35000000,hi:85000000,u:'liệu trình',once:true,svc:'nieng',doc:'vy'};
+  }else{
+    if(iss==='ebuot')return {k:'fluor',n:'Bôi vecni fluor',d:'Giúp men răng sữa chắc hơn, làm một lần cho cả hàm.',lo:200000,hi:300000,u:'lần',once:true,svc:'tre-em'};
+    if(iss==='sau')return {k:'tram-sua',n:'Trám răng sữa',d:'Răng sữa sâu vẫn nên trám để giữ chỗ cho răng vĩnh viễn.',lo:200000,hi:400000,u:'răng',svc:'tre-em'};
+    if(iss==='lung')return {k:'nho-sua',n:'Nhổ răng sữa',d:'Bôi gel tê trước khi nhổ; chỉ nhổ khi răng vĩnh viễn sắp mọc.',lo:100000,hi:200000,u:'răng',svc:'tre-em'};
+    if(iss==='lech')return {k:'chinh-som',n:'Khám chỉnh nha sớm',d:'Bác sĩ xem hướng mọc răng vĩnh viễn, hẹn theo dõi định kỳ.',lo:150000,hi:300000,u:'lần',once:true,svc:'tre-em'};
+  }
+}
+var CFG={
+  adult:{n:7,w:[8.6,6.6,7.6,7,6.8,10.4,9.8],d:[7.2,7,8.4,8.4,8.4,10,9.6],rx:200,ry:196,tm:84,cu:274,cl:322},
+  kid:{n:5,w:[6.6,5.4,6.4,8,9.4],d:[5.8,5.6,6.8,7.8,8.6],rx:160,ry:160,tm:80,cu:268,cl:328}
+};
+var mode='adult',marks={adult:{},kid:{}},selTooth=null,touched=false;
+var jaw=$('#jaw');
+function el(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e}
+function arcLen(rx,ry,tmax){var s=0,N=60,p=null;for(var i=0;i<=N;i++){var t=tmax*i/N*Math.PI/180,x=rx*Math.sin(t),y=ry*Math.cos(t);if(p)s+=Math.hypot(x-p[0],y-p[1]);p=[x,y]}return s}
+function angleAt(rx,ry,tmax,target){var s=0,N=400,p=null;for(var i=0;i<=N;i++){var t=tmax*i/N,r=t*Math.PI/180,x=rx*Math.sin(r),y=ry*Math.cos(r);if(p){s+=Math.hypot(x-p[0],y-p[1]);if(s>=target)return t}p=[x,y]}return tmax}
+function toothPath(pos,w,h,kid){
+  var r=Math.min(w,h)*.42;
+  // crown outline: rounded rect with slight waist for incisors
+  if(pos<=2)return 'M'+(-w/2)+','+(-h/2+r)+' Q'+(-w/2)+','+(-h/2)+' '+(-w/2+r)+','+(-h/2)+' L'+(w/2-r)+','+(-h/2)+' Q'+(w/2)+','+(-h/2)+' '+(w/2)+','+(-h/2+r)+' L'+(w/2*.86)+','+(h/2-r)+' Q'+(w/2*.8)+','+(h/2)+' '+(w/2*.8-r)+','+(h/2)+' L'+(-w/2*.8+r)+','+(h/2)+' Q'+(-w/2*.8)+','+(h/2)+' '+(-w/2*.86)+','+(h/2-r)+'Z';
+  if(pos===3)return 'M0,'+(-h/2)+' C'+(w*.55)+','+(-h/2)+' '+(w/2)+','+(h*.15)+' '+(w*.32)+','+(h/2)+' L'+(-w*.32)+','+(h/2)+' C'+(-w/2)+','+(h*.15)+' '+(-w*.55)+','+(-h/2)+' 0,'+(-h/2)+'Z';
+  var rr=Math.min(w,h)*.36;
+  return 'M'+(-w/2)+','+(-h/2+rr)+' Q'+(-w/2)+','+(-h/2)+' '+(-w/2+rr)+','+(-h/2)+' L'+(w/2-rr)+','+(-h/2)+' Q'+(w/2)+','+(-h/2)+' '+(w/2)+','+(-h/2+rr)+' L'+(w/2)+','+(h/2-rr)+' Q'+(w/2)+','+(h/2)+' '+(w/2-rr)+','+(h/2)+' L'+(-w/2+rr)+','+(h/2)+' Q'+(-w/2)+','+(h/2)+' '+(-w/2)+','+(h/2-rr)+'Z';
+}
+function fisPath(pos,w,h,kid){
+  var maxP=kid?3:3;
+  if(pos<=2)return 'M'+(-w*.22)+','+(-h*.12)+' L'+(w*.22)+','+(-h*.12);
+  if(pos===3)return 'M0,'+(-h*.2)+' L0,'+(h*.18);
+  if((!kid&&pos<=5)||(kid&&pos===4))return 'M'+(-w*.24)+',0 Q0,'+(-h*.14)+' '+(w*.24)+',0';
+  return 'M'+(-w*.28)+','+(-h*.05)+' Q0,'+(-h*.2)+' '+(w*.28)+','+(-h*.05)+' M0,'+(-h*.14)+' L0,'+(h*.26)+' M'+(-w*.24)+','+(h*.18)+' Q0,'+(h*.06)+' '+(w*.24)+','+(h*.18);
+}
+function buildJaw(){
+  var c=CFG[mode],kid=mode==='kid';
+  jaw.innerHTML='';
+  // labels
+  var g0=el('g',{'aria-hidden':'true'});
+  var tU=el('text',{x:260,y:c.cu-(kid?62:78),'text-anchor':'middle','class':'lbl'});tU.textContent='Hàm trên';g0.appendChild(tU);
+  var tL=el('text',{x:260,y:c.cl+(kid?70:86),'text-anchor':'middle','class':'lbl'});tL.textContent='Hàm dưới';g0.appendChild(tL);
+  var mid=(c.cu+c.cl)/2;
+  var sR=el('text',{x:20,y:mid+4,'class':'side'});sR.textContent='Phải';g0.appendChild(sR);
+  var sL=el('text',{x:500,y:mid+4,'text-anchor':'end','class':'side'});sL.textContent='Trái';g0.appendChild(sL);
+  g0.appendChild(el('line',{x1:70,y1:mid,x2:450,y2:mid,stroke:'#DCECE6','stroke-width':1.2,'stroke-dasharray':'3 6'}));
+  jaw.appendChild(g0);
+  var S=0;c.w.forEach(function(v){S+=v});
+  var L=arcLen(c.rx,c.ry,c.tm),k=L/S;
+  var jaws=[{q:[1,2],up:true,cy:c.cu},{q:[4,3],up:false,cy:c.cl}];
+  if(kid)jaws=[{q:[5,6],up:true,cy:c.cu},{q:[8,7],up:false,cy:c.cl}];
+  var hintDone=false;
+  jaws.forEach(function(J){
+    [-1,1].forEach(function(side,si){
+      var quad=J.q[si],cum=0;
+      for(var i=0;i<c.n;i++){
+        var pos=i+1,w=c.w[i]*k*.96,h=c.d[i]*k*1.22;
+        var t=angleAt(c.rx,c.ry,c.tm,(cum+c.w[i]/2)*k);cum+=c.w[i];
+        var a=side*t,r=a*Math.PI/180;
+        var x=260+c.rx*Math.sin(r),y=J.up?J.cy-c.ry*Math.cos(r):J.cy+c.ry*Math.cos(r);
+        var rot=J.up?a:-a;
+        var no=quad*10+pos,isU=J.up;
+        var g=el('g',{'class':'tooth',tabindex:0,role:'button','data-no':no,'data-pos':pos,'aria-pressed':'false',transform:'translate('+x.toFixed(1)+' '+y.toFixed(1)+') rotate('+rot.toFixed(1)+')'});
+        var lab='Răng '+no+', '+NAMES[mode][pos]+', hàm '+(isU?'trên':'dưới')+' bên '+(side<0?'phải':'trái');
+        g.setAttribute('aria-label',lab);g.dataset.desc=NAMES[mode][pos].charAt(0).toUpperCase()+NAMES[mode][pos].slice(1)+', hàm '+(isU?'trên':'dưới')+' bên '+(side<0?'phải':'trái');
+        var pop=el('g',{'class':'pop'});
+        pop.appendChild(el('path',{'class':'crown',d:toothPath(pos,w,h,kid)}));
+        pop.appendChild(el('path',{'class':'fis',d:fisPath(pos,w,h,kid)}));
+        g.appendChild(pop);
+        // number outside the arch
+        var off=h/2+13,nx=0,ny=isU?-off:off;
+        var tx=el('text',{'class':'no',x:nx,y:ny,transform:'rotate('+(-rot).toFixed(1)+' '+nx+' '+ny+')'});tx.textContent=no;g.appendChild(tx);
+        if(!touched&&!hintDone&&pos===1&&isU&&side<0){g.insertBefore(el('circle',{'class':'hint-ring',r:Math.max(w,h)*.62,cx:0,cy:0}),pop);hintDone=true}
+        jaw.appendChild(g);
+      }
+    });
+  });
+  var lg=$('#legend');lg.innerHTML=ISS[mode].map(function(s){return '<span><i style="background:'+s.f+';border-color:'+s.c+(s.id==='mat'?';border-style:dashed':'')+'"></i>'+s.n+'</span>'}).join('');
+  paint();
+}
+function paint(){
+  var m=marks[mode];
+  $$('.tooth',jaw).forEach(function(g){
+    var no=g.getAttribute('data-no'),is=m[no];
+    g.setAttribute('class','tooth'+(is?' is-'+is:'')+(String(selTooth)===no?' sel':''));
+    g.setAttribute('aria-pressed',String(selTooth)===no?'true':'false');
+  });
+  $('#tmCount').textContent=Object.keys(m).length;
+  renderPick();renderSug();
+}
+function renderPick(){
+  var g=selTooth&&$('.tooth[data-no="'+selTooth+'"]',jaw);
+  $('#tmEmpty').hidden=!!g;$('#tmPick').hidden=!g;
+  if(!g)return;
+  $('#tmName').textContent='Răng '+selTooth;
+  $('#tmDesc').textContent=g.dataset.desc;
+  var cur=marks[mode][selTooth];
+  $('#issues').innerHTML=ISS[mode].map(function(s){return '<button type="button" class="iss" data-iss="'+s.id+'" aria-pressed="'+(cur===s.id)+'"><i style="background:'+s.f+';border-color:'+s.c+(s.id==='mat'?';border-style:dashed':'')+'"></i>'+s.n+'</button>'}).join('');
+  $('#tmClear').hidden=!cur;
+}
+function renderSug(){
+  var m=marks[mode],keys=Object.keys(m),list=$('#sugList');
+  $('#sugMode').textContent=mode==='kid'?'Trẻ em':'Người lớn';
+  $('#sugEmpty').hidden=keys.length>0;$('#sugTotal').hidden=!keys.length;$('#sugBook').hidden=!keys.length;
+  if(!keys.length){list.innerHTML='';return}
+  var groups={},order=[];
+  keys.sort(function(a,b){return a-b}).forEach(function(no){
+    var g=$('.tooth[data-no="'+no+'"]',jaw),s=suggest(mode,m[no],+g.getAttribute('data-pos'));
+    if(!groups[s.k]){groups[s.k]={s:s,teeth:[]};order.push(s.k)}
+    groups[s.k].teeth.push(no);
+  });
+  var items=[{s:BASE[mode],teeth:[]}].concat(order.map(function(k){return groups[k]}));
+  var lo=0,hi=0;
+  list.innerHTML=items.map(function(it){
+    var s=it.s,q=s.once||!it.teeth.length?1:it.teeth.length;lo+=s.lo*q;hi+=s.hi*q;
+    var teeth=it.teeth.length?'Răng '+it.teeth.join(', '):'Làm một lần';
+    return '<li class="sug-item"><span><span class="teeth">'+teeth+'</span><br><b>'+s.n+'</b></span><span class="sprice">'+rng(s.lo,s.hi)+'<small>/ '+s.u+(q>1?' × '+q:'')+'</small></span><p>'+s.d+'</p></li>';
+  }).join('');
+  $('#sugSum').innerHTML=rng(lo,hi);
+}
+function selectTooth(no){selTooth=no;if(!touched){touched=true;var hr=$('.hint-ring',jaw);if(hr)hr.remove()}paint()}
+jaw.addEventListener('click',function(e){var g=e.target.closest&&e.target.closest('.tooth');if(g)selectTooth(g.getAttribute('data-no'))});
+jaw.addEventListener('keydown',function(e){var g=e.target.closest&&e.target.closest('.tooth');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();selectTooth(g.getAttribute('data-no'));setTimeout(function(){var b=$('#issues .iss');if(b)b.focus()},0)}});
+$('#issues').addEventListener('click',function(e){
+  var b=e.target.closest('.iss');if(!b||!selTooth)return;
+  var id=b.getAttribute('data-iss'),m=marks[mode];
+  if(m[selTooth]===id)delete m[selTooth];else m[selTooth]=id;
+  paint();var nb=$('#issues .iss[data-iss="'+id+'"]');if(nb&&document.activeElement===document.body)nb.focus();
+});
+$('#tmClear').addEventListener('click',function(){delete marks[mode][selTooth];paint()});
+var seg=$('#modeSeg');
+$$('button',seg).forEach(function(b){b.addEventListener('click',function(){
+  if(mode===b.dataset.mode)return;mode=b.dataset.mode;selTooth=null;
+  $$('button',seg).forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});knob(seg,b);buildJaw();
+})});
+buildJaw();
+
+/* ===== PRICE TABS ===== */
+var tabs=$$('#tabs .tab'),tabWrap=$('#tabs');
+function showTab(i,focus){
+  tabs.forEach(function(t,j){var on=i===j;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;$('#pp-'+j).hidden=!on});
+  knob(tabWrap,tabs[i]);if(focus)tabs[i].focus();
+  var sc=$('.tabs-scroll'),t=tabs[i];if(sc.scrollWidth>sc.clientWidth){sc.scrollTo({left:t.offsetLeft-24,behavior:RM?'auto':'smooth'})}
+}
+tabs.forEach(function(t,i){
+  t.addEventListener('click',function(){showTab(i)});
+  t.addEventListener('keydown',function(e){var n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:e.key==='Home'?0:e.key==='End'?tabs.length-1:null;if(n===null)return;e.preventDefault();showTab((n+tabs.length)%tabs.length,true)});
+});
+$$('.svc .more').forEach(function(a){a.addEventListener('click',function(){showTab(+a.dataset.tab)})});
+
+function syncKnobs(){knob(seg,$('button[aria-pressed="true"]',seg));knob(tabWrap,$('.tab[aria-selected="true"]',tabWrap))}
+syncKnobs();
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(syncKnobs);
+window.addEventListener('load',syncKnobs);
+var lastW=window.innerWidth,rt;
+window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){if(window.innerWidth!==lastW){lastW=window.innerWidth;syncKnobs()}},150)});
+
+/* process line */
+if(hasIO&&!RM){new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:.35}).observe($('#steps'))}
+else $('#steps').classList.add('in');
+
+/* footer hours */
+(function(){var d=vnNow().getDay(),k=d===0?'0':d===6?'6':'1',r=$('#ftHours [data-d="'+k+'"]');if(r)r.classList.add('today')})();
+
+/* ===== BOOKING ===== */
+var DOCS=[
+  {id:'khoa',n:'BS. Trần Minh Khoa',s:'Tổng quát, implant',days:[1,2,3,4,5,6],img:'photo-1622902046580-2b47f47f5471',fp:'&crop=focalpoint&fp-x=.5&fp-y=.26&fp-z=2.6'},
+  {id:'vy',n:'BS. Lê Thảo Vy',s:'Chỉnh nha, niềng trong suốt',days:[2,4,6,0],img:'photo-1594824476967-48c8b964273f',fp:'&crop=focalpoint&fp-x=.5&fp-y=.2&fp-z=2.2'},
+  {id:'my',n:'BS. Nguyễn Hà My',s:'Nha khoa trẻ em',days:[1,3,5,6,0],img:'photo-1527613426441-4da17471b66d',fp:'&crop=focalpoint&fp-x=.4&fp-y=.3&fp-z=2.4'},
+  {id:'any',n:'Bác sĩ trống trước',s:'Phòng khám xếp bác sĩ phù hợp',days:[0,1,2,3,4,5,6]}
+];
+function shifts(dow){return dow===0?[[480,720]]:[[480,720],[810,1200]]}
+var st={doc:null,date:null,time:null};
+var form=$('#bk');
+function find(a,id){for(var i=0;i<a.length;i++)if(a[i].id===id)return a[i];return null}
+$('#optDoc').innerHTML=DOCS.map(function(d){
+  var pic=d.img?'<img src="https://images.unsplash.com/'+d.img+'?auto=format&fit=crop&w=120&h=120&q=60'+d.fp+'" alt="" width="44" height="44" loading="lazy">':'<span class="any"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg></span>';
+  return '<label class="opt"><input type="radio" name="doc" value="'+d.id+'"><span class="box">'+pic+'<span><b>'+d.n+'</b><small>'+d.s+'</small></span></span></label>'}).join('');
+var DAYS=[];(function(){var n=vnNow();for(var i=0;i<14&&DAYS.length<7;i++){var d=new Date(n.getFullYear(),n.getMonth(),n.getDate()+i);DAYS.push({id:d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()),dow:d.getDay(),label:pad(d.getDate())+'/'+pad(d.getMonth()+1),full:pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear(),today:i===0})}})();
+function renderDates(){
+  var doc=st.doc&&find(DOCS,st.doc);
+  $('#optDate').innerHTML=DAYS.map(function(d){
+    var rest=doc&&doc.days.indexOf(d.dow)<0,full=!rest&&!freeSlots(st.doc||'any',d).some(function(x){return !x.dis}),off=rest||full,tag=rest?'Nghỉ':'Hết giờ';
+    if(off&&st.date===d.id){st.date=null;st.time=null}
+    return '<label class="opt"><input type="radio" name="date" value="'+d.id+'"'+(off?' disabled':'')+(st.date===d.id&&!off?' checked':'')+' aria-label="'+(d.today?'Hôm nay, ':'')+DOWF[d.dow]+' '+d.full+(off?', '+tag.toLowerCase():'')+'"><span class="box"><span>'+(d.today?'Hôm nay':DOW[d.dow])+'</span><b>'+d.label+'</b>'+(off?'<em>'+tag+'</em>':'')+'</span></label>'}).join('');
+}
+function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}h^=h>>>13;h=Math.imul(h,1540483477);return (h^(h>>>15))>>>0}
+function freeSlots(docId,day){
+  var n=vnNow(),nowM=n.getHours()*60+n.getMinutes(),out=[];
+  shifts(day.dow).forEach(function(sh,si){for(var t=sh[0];t+30<=sh[1];t+=30){
+    var busy=hash(day.id+docId+t)%(docId==='any'?6:3)===0,past=day.today&&t<=nowM+45;
+    out.push({t:t,dis:busy||past,sh:si})}});
+  return out;
+}
+function renderSlots(){
+  var box=$('#optTime');
+  if(!st.doc||!st.date){box.innerHTML='<p class="slot-msg">'+(!st.doc?'Chọn bác sĩ và ngày để xem giờ trống.':'Chọn ngày để xem giờ trống.')+'</p>';return}
+  var day=find(DAYS,st.date),sl=freeSlots(st.doc,day),free=sl.filter(function(x){return !x.dis}).length;
+  if(!free){box.innerHTML='<p class="slot-msg">Ngày này đã kín lịch. Bạn chọn ngày khác hoặc chọn “Bác sĩ trống trước”.</p>';st.time=null;return}
+  var html='',names=['Buổi sáng','Buổi chiều, tối'];
+  [0,1].forEach(function(si){var g=sl.filter(function(x){return x.sh===si});if(!g.length)return;
+    html+='<p class="slot-group">'+names[si]+'</p><div class="opts o-time">'+g.map(function(x){return '<label class="opt"><input type="radio" name="time" value="'+x.t+'"'+(x.dis?' disabled':'')+(String(x.t)===st.time&&!x.dis?' checked':'')+' aria-label="'+hm(x.t)+(x.dis?', đã kín':'')+'"><span class="box">'+hm(x.t)+'</span></label>'}).join('')+'</div>'});
+  box.innerHTML=html;
+  if(st.time&&!$('input[name="time"][value="'+st.time+'"]:not(:disabled)',box))st.time=null;
+}
+function summary(){
+  var d=st.doc&&find(DOCS,st.doc),day=st.date&&find(DAYS,st.date);
+  $('#sDoc').textContent=d?d.n:'Chưa chọn';
+  $('#sDate').textContent=day?(day.today?'Hôm nay, ':DOWF[day.dow]+', ')+day.full:'Chưa chọn';
+  $('#sTime').textContent=st.time?hm(+st.time)+' – '+hm(+st.time+30):'Chưa chọn';
+}
+function setDoc(id){st.doc=id;st.time=null;var i=$('input[name="doc"][value="'+id+'"]',form);if(i)i.checked=true;renderDates();
+  if(!st.date){var d=find(DOCS,id);for(var j=0;j<DAYS.length;j++){if(d.days.indexOf(DAYS[j].dow)>=0&&freeSlots(id,DAYS[j]).some(function(x){return !x.dis})){st.date=DAYS[j].id;break}}renderDates()}
+  renderSlots();summary()}
+form.addEventListener('change',function(e){
+  var t=e.target;
+  if(t.name==='doc'){setDoc(t.value);return}
+  if(t.name==='date'){st.date=t.value;st.time=null;renderSlots()}
+  else if(t.name==='time'){st.time=t.value;$('#eSlot').textContent=''}
+  else return;
+  summary();
+});
+setDoc('any');
+
+/* hero chip: free slots today (or next day) */
+(function(){var i=0,f=0;for(;i<DAYS.length;i++){f=freeSlots('any',DAYS[i]).filter(function(x){return !x.dis}).length;if(f)break}
+  var d=DAYS[i];$('#heroSlots').textContent=d?((d.today?'Hôm nay':(i===1?'Ngày mai':DOWF[d.dow]))+' còn '+f+' khung giờ trống'):'Xem giờ trống';})();
+
+function toBooking(){$('#dat-lich').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})}
+$$('#docs .doc').forEach(function(c){$('.pick-doc',c).addEventListener('click',function(){setDoc(c.dataset.id);toBooking()})});
+
+/* tooth map -> booking */
+$('#sugBook').addEventListener('click',function(e){
+  e.preventDefault();
+  var m=marks[mode],keys=Object.keys(m).sort(function(a,b){return a-b}),pri=['implant','nieng','tram','tre-em'],svc=mode==='kid'?'tre-em':'kham',doc=mode==='kid'?'my':'khoa',best=99;
+  var txt=keys.map(function(no){var iss=find(ISS[mode],m[no]),g=$('.tooth[data-no="'+no+'"]',jaw),s=suggest(mode,m[no],+g.getAttribute('data-pos'));
+    var p=pri.indexOf(s.svc);if(p>=0&&p<best){best=p;svc=s.svc;if(s.doc)doc=s.doc}return 'R'+no+' '+iss.n.toLowerCase()}).join('; ');
+  $('#fSvc').value=svc;$('#fNote').value='Sơ đồ răng'+(mode==='kid'?' (trẻ em)':'')+': '+txt+'.';
+  setDoc(doc);toBooking();
+});
+
+function err(id,msg,input){$(id).textContent=msg;if(input)input.parentNode.classList.toggle('bad',!!msg)}
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  var nm=$('#fName'),ph=$('#fPhone'),ok=$('#fOk'),good=true,first=null;
+  var name=nm.value.trim(),phone=ph.value.replace(/[\s.\-]/g,'');
+  if(!st.doc||!st.date||!st.time){$('#eSlot').textContent='Bạn chọn bác sĩ, ngày và khung giờ ở bên trái giúp phòng khám nhé.';good=false;first=first||$('#optDoc input')}else $('#eSlot').textContent='';
+  if(name.length<2){err('#eName','Bạn nhập họ tên giúp phòng khám nhé.',nm);good=false;first=first||nm}else err('#eName','',nm);
+  if(!/^(0|\+84)\d{9}$/.test(phone)){err('#ePhone','Số điện thoại chưa đúng, ví dụ 0900 000 000.',ph);good=false;first=first||ph}else err('#ePhone','',ph);
+  if(!ok.checked){err('#eOk','Bạn cần đồng ý để phòng khám liên hệ xác nhận lịch.');good=false;first=first||ok}else err('#eOk','');
+  if(!good){if(first===$('#optDoc input')&&st.doc)first=st.date?$('#optTime input:not(:disabled)'):$('#optDate input:not(:disabled)');if(first)first.focus();return}
+  var d=find(DOCS,st.doc),day=find(DAYS,st.date),sv=$('#fSvc');
+  $('#doneCode').textContent='Mã lịch hẹn (mẫu): BH-'+String(1000+Math.floor(Math.random()*9000));
+  $('#doneText').textContent=name+', yêu cầu khám “'+sv.options[sv.selectedIndex].text+'” với '+(st.doc==='any'?'bác sĩ trống trước':d.n)+' lúc '+hm(+st.time)+', '+(day.today?'hôm nay ':DOWF[day.dow].toLowerCase()+' ')+day.full+' đã được ghi nhận. Phòng khám sẽ gọi số '+ph.value.trim()+' để xác nhận.';
+  $('#bkMain').hidden=true;$('#bkSide').hidden=true;$('#bkDone').hidden=false;$('#bkDone').focus({preventScroll:true});
+  if(form.getBoundingClientRect().top<0)toBooking();
+});
+$('#bkAgain').addEventListener('click',function(){
+  form.reset();st={doc:null,date:null,time:null};
+  $$('.field',form).forEach(function(f){f.classList.remove('bad')});$$('.err',form).forEach(function(x){x.textContent=''});
+  $('#bkMain').hidden=false;$('#bkSide').hidden=false;$('#bkDone').hidden=true;
+  setDoc('any');
+});
+})();
+</script>
+</body>
+</html>

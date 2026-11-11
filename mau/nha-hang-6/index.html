@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Omakase Nhật Bản 12 ghế tại TP.HCM | Akari Omakase</title>
+<meta name="description" content="Akari là quầy omakase Nhật Bản 12 ghế ở Phường Sài Gòn, TP.HCM. Hai suất mỗi tối 18:00 và 20:30, 14 món theo mùa, tự chọn ghế trên sơ đồ quầy và giữ chỗ online.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0A0706">
+<link rel="icon" href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="%230A0706"/%3E%3Cpath d="M32 6v14" stroke="%23DCBF8E" stroke-width="2"/%3E%3Cpath d="M22 30l4-10h12l4 10z" fill="%23F2A65A"/%3E%3Cpath d="M18 58l10-26h8l10 26z" fill="%23FF8A3D" opacity=".22"/%3E%3Crect x="12" y="50" width="40" height="5" rx="1" fill="%23DCBF8E"/%3E%3C/svg%3E'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1615361200141-f45040f367be?auto=format&fit=crop&w=1600&q=80" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  /* màu: đen ấm, gỗ hinoki, đèn hổ phách */
+  --ink:#0A0706; --ink2:#0E0A08; --stone:#120D0B; --stone2:#1A1311; --stone3:#251B17;
+  --line:rgba(241,232,220,.10); --line2:rgba(241,232,220,.2);
+  --washi:#F1E8DC; --mute:#A99C94; --mute2:#8C7F77;
+  --hinoki:#DCBF8E; --hinoki2:#B08B5C; --lamp:#F2A65A; --ember:#FF8A3D; --seal:#C8412A; --err:#F09A80;
+  --serif:'Noto Serif Display','Hiragino Mincho ProN','Yu Mincho',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --jp:'Hiragino Mincho ProN','Yu Mincho','YuMincho','Noto Serif JP','MS Mincho',serif;
+  /* nhịp khoảng cách 4/8/12/16/24/32/48/64/96/128 */
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--s10:128px;
+  /* thang chữ */
+  --t-xs:12px; --t-sm:14px; --t-base:16px; --t-md:clamp(16px,1.25vw,18px); --t-lg:clamp(19px,1.6vw,23px);
+  --t-xl:clamp(24px,2.1vw,30px); --t-2xl:clamp(34px,4.3vw,62px); --t-hero:clamp(46px,6.1vw,96px);
+  --ease:cubic-bezier(.22,.8,.2,1); --ease-io:cubic-bezier(.65,0,.35,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{background:var(--ink);color:var(--washi);font:400 var(--t-base)/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;font-feature-settings:"kern"}
+body.lock{overflow:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.1;letter-spacing:-.012em;text-wrap:balance}
+p{text-wrap:pretty}
+::selection{background:var(--lamp);color:var(--ink)}
+:focus-visible{outline:1.5px solid var(--lamp);outline-offset:4px;border-radius:2px}
+.num,.tn{font-variant-numeric:tabular-nums lining-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.ico{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.jp{font-family:var(--jp);font-weight:400}
+.vt{writing-mode:vertical-rl;text-orientation:mixed;white-space:nowrap}
+.kick{display:flex;align-items:center;gap:var(--s3);font:500 var(--t-xs)/1.4 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--hinoki)}
+.kick::before{content:"";width:32px;height:1px;background:linear-gradient(90deg,var(--lamp),var(--hinoki2))}
+.h2{font-size:var(--t-2xl);line-height:1.08;margin:var(--s5) 0 var(--s5);max-width:15em}
+.h2 em{font-style:italic;color:var(--hinoki)}
+.lead{font-size:var(--t-md);line-height:1.75;color:var(--mute);max-width:34em;font-weight:300}
+.sec{padding:clamp(96px,11vw,160px) 0;position:relative}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:var(--s3);min-height:52px;padding:0 var(--s6);border-radius:1px;font:500 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease),transform .2s var(--ease)}
+.btn .ico{width:16px;height:16px;transition:transform .45s var(--ease)}
+.btn:hover .ico{transform:translateX(4px)}
+.btn:active{transform:scale(.975)}
+.btn-gold{background:var(--lamp);color:var(--ink)}
+.btn-gold:hover{background:#F8B977}
+.btn-line{border:1px solid var(--line2);color:var(--washi)}
+.btn-line:hover{border-color:var(--hinoki);color:var(--hinoki)}
+.sample{display:inline-block;padding:3px 10px;border:1px solid var(--line2);border-radius:99px;font:500 10.5px/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--hinoki)}
+
+/* ===== header ===== */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;transition:background .5s var(--ease),border-color .5s var(--ease);border-bottom:1px solid transparent}
+.hdr.scrolled{background:rgba(10,7,6,.97);border-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:80px;gap:var(--s5);transition:height .5s var(--ease)}
+.hdr.scrolled .wrap{height:68px}
+.logo{display:flex;align-items:center;gap:var(--s3)}
+.seal{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--hinoki2);color:var(--lamp);font-size:20px;line-height:1}
+.logo b{display:block;font:400 20px/1 var(--serif);letter-spacing:.34em}
+.logo small{display:block;margin-top:6px;font:500 10px/1 var(--sans);letter-spacing:.3em;color:var(--mute);text-transform:uppercase}
+.nav{display:flex;gap:var(--s1)}
+.nav a{position:relative;padding:12px 14px;font:500 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);transition:color .4s}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:1px;background:var(--lamp);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav a:hover{color:var(--washi)}
+.nav a:hover::after,.nav a.cur::after{transform:scaleX(1);transform-origin:left}
+.nav a.cur{color:var(--washi)}
+.hdr .btn{min-height:44px;padding:0 var(--s5);font-size:12px}
+.menu-btn{display:none;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid var(--line2)}
+.menu-btn .ico{width:20px;height:20px}
+.mnav{position:fixed;inset:0;z-index:80;background:var(--ink);display:flex;flex-direction:column;padding:18px 20px 36px;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility 0s .45s}
+.mnav.open{opacity:1;visibility:visible;transition:opacity .45s var(--ease)}
+.mnav-top{display:flex;justify-content:space-between;align-items:center}
+.mnav ul{list-style:none;margin:auto 0;display:grid}
+.mnav ul a{display:flex;align-items:baseline;gap:var(--s4);padding:14px 0;font:300 32px/1.15 var(--serif);border-bottom:1px solid var(--line)}
+.mnav ul a span{font:500 11px/1 var(--sans);letter-spacing:.2em;color:var(--hinoki2)}
+.mnav li{opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.mnav.open li{opacity:1;transform:none}
+.mnav.open li:nth-child(2){transition-delay:.05s}.mnav.open li:nth-child(3){transition-delay:.1s}.mnav.open li:nth-child(4){transition-delay:.15s}.mnav.open li:nth-child(5){transition-delay:.2s}
+.mnav .vt{position:absolute;right:22px;top:110px;font-size:15px;letter-spacing:.5em;color:var(--mute2)}
+.mnav .btn{margin-top:var(--s5)}
+
+/* ===== hero (bìa tạp chí) ===== */
+.hero{position:relative;min-height:clamp(640px,100svh,1000px);display:flex;flex-direction:column;overflow:hidden;background:var(--ink);padding:112px 0 var(--s6);isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(38% 55% at 71% 30%,rgba(255,138,61,.10),rgba(255,138,61,0) 70%),radial-gradient(60% 50% at 10% 100%,rgba(200,65,42,.06),rgba(200,65,42,0) 70%)}
+.hero-img{position:absolute;top:0;right:0;width:55%;height:100%;z-index:-1;overflow:hidden}
+.hero-img .par{position:absolute;inset:-5% 0;will-change:transform}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 46%;animation:imgIn 1.15s var(--ease) both}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(10,7,6,.72) 16%,rgba(10,7,6,0) 44%),linear-gradient(0deg,var(--ink) 0%,rgba(10,7,6,.55) 22%,rgba(10,7,6,0) 46%),linear-gradient(180deg,rgba(10,7,6,.6) 0%,rgba(10,7,6,0) 18%)}
+@keyframes imgIn{from{opacity:0;transform:scale(1.08)}to{opacity:1;transform:none}}
+.beam{position:absolute;left:45%;top:0;width:300px;height:58%;transform:translateX(-50%);pointer-events:none;z-index:1}
+.beam .cord{position:absolute;left:50%;top:0;width:1px;height:22%;background:linear-gradient(rgba(176,139,92,.2),var(--hinoki2));transform-origin:top;animation:cord .7s var(--ease) .05s both}
+.beam .shade{position:absolute;left:50%;top:22%;width:36px;height:15px;transform:translateX(-50%);background:linear-gradient(180deg,#FFB86E,var(--lamp));clip-path:polygon(22% 0,78% 0,100% 100%,0 100%);animation:fadeIn .5s var(--ease) .45s both}
+.beam .cone{position:absolute;left:0;right:0;top:calc(22% + 15px);bottom:0;background:linear-gradient(rgba(255,160,80,.30),rgba(255,138,61,.06) 70%,rgba(255,138,61,0));clip-path:polygon(44% 0,56% 0,100% 100%,0 100%);animation:coneIn .9s var(--ease) .5s both}
+.beam .cone i{position:absolute;inset:0;background:inherit;animation:breathe 7s ease-in-out 1.6s infinite}
+@keyframes cord{from{transform:scaleY(0)}to{transform:none}}
+@keyframes coneIn{from{opacity:0}to{opacity:.9}}
+@keyframes breathe{50%{opacity:.35}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes lineUp{from{opacity:0;transform:translateY(60%)}to{opacity:1;transform:none}}
+.hero .vt-jp{position:absolute;right:clamp(16px,2.6vw,40px);top:50%;transform:translateY(-50%);font-size:clamp(17px,1.4vw,20px);letter-spacing:.7em;color:rgba(241,232,220,.5);z-index:2;animation:fadeIn .8s var(--ease) .4s both}
+.issue{position:relative;z-index:2;display:flex;align-items:center;gap:var(--s4);font:500 11px/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--mute);animation:fadeIn .6s var(--ease) .1s both}
+.issue .rule{flex:1;height:1px;background:var(--line)}
+.issue b{color:var(--hinoki);font-weight:500}
+.issue .no{font:400 13px/1 var(--serif);letter-spacing:.1em;color:var(--washi)}
+.hero-in{position:relative;z-index:2;margin-top:auto;padding-top:var(--s8)}
+.hero .kick{animation:fadeUp .7s var(--ease) .12s both}
+.h1{font-size:var(--t-hero);line-height:1.02;letter-spacing:-.022em;margin:var(--s5) 0 var(--s6);max-width:12em}
+.h1 .ln{display:block;animation:lineUp .85s var(--ease) both}
+.h1 .ln:nth-child(2){animation-delay:.16s}.h1 .ln:nth-child(3){animation-delay:.25s}.h1 .ln:nth-child(4){animation-delay:.34s}
+.h1 .em{font-style:italic;color:var(--hinoki)}
+.h1 .em i{font-style:italic;color:var(--lamp)}
+.hero-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--s6) var(--s8)}
+.hero .lead{max-width:27em;animation:fadeUp .7s var(--ease) .45s both}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s3)}
+.hero .cta{animation:fadeUp .7s var(--ease) .5s both}
+.hero-foot{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) minmax(0,1.5fr);margin-top:clamp(40px,6vh,72px);border-top:1px solid var(--line);animation:fadeUp .65s var(--ease) .55s both}
+.hero-foot>div{padding:var(--s5) var(--s5) 0 0}
+.hero-foot>div+div{padding-left:var(--s5);border-left:1px solid var(--line)}
+.hero-foot b{display:block;font:300 clamp(24px,2.1vw,30px)/1.1 var(--serif);color:var(--washi);white-space:nowrap;font-variant-numeric:tabular-nums lining-nums}
+.hero-foot>div>span{display:block;margin-top:var(--s2);font-size:13px;color:var(--mute)}
+.tonight{display:grid;gap:var(--s2)}
+.tonight p{display:flex;justify-content:space-between;font:500 11px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--hinoki)}
+.tonight p em{font-style:normal;letter-spacing:.1em;color:var(--mute2);text-transform:none}
+.tonight button{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--s4);min-height:44px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--washi);text-align:left;transition:color .35s}
+.tonight button:hover{color:var(--lamp)}
+.tonight button em{font-style:normal;color:var(--mute);font-size:13px;font-variant-numeric:tabular-nums}
+.dots{display:flex;gap:4px;justify-content:flex-end}
+.dots i{flex:none;width:7px;height:7px;border-radius:50%;border:1px solid rgba(220,191,142,.55)}
+.dots i.t{border-color:transparent;background:rgba(241,232,220,.14)}
+
+/* ===== ledger ===== */
+.ledger-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,80px);align-items:start}
+.ledger-head .vt{font-size:clamp(40px,5vw,72px);line-height:1;color:transparent;letter-spacing:.1em;-webkit-text-stroke:1px rgba(220,191,142,.32)}
+.ledger{margin-top:clamp(48px,6vw,96px);border-top:1px solid var(--line)}
+.ledger-labels,.lrow{display:grid;grid-template-columns:96px 1fr 1fr;gap:clamp(20px,4vw,64px)}
+.ledger-labels{padding:var(--s4) 0;font:500 11px/1.3 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute2);border-bottom:1px solid var(--line)}
+.ledger-labels span:last-child{color:var(--hinoki)}
+.lrow{position:relative;padding:clamp(32px,4vw,48px) 0;border-bottom:1px solid var(--line);transition:background .6s var(--ease)}
+.lrow::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:linear-gradient(90deg,var(--lamp),var(--hinoki2) 60%,rgba(176,139,92,0));transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease) .3s}
+.lrow.in::after{transform:scaleX(1)}
+.lrow .num{font-size:44px;line-height:1;color:var(--hinoki2);transition:color .5s}
+.lrow:hover .num{color:var(--lamp)}
+.lrow .worry{color:var(--mute);font-weight:300;font-size:var(--t-md);max-width:30em}
+.lrow .worry s{text-decoration:none;color:var(--washi);font-weight:400}
+.lrow .fix h3{font-size:clamp(22px,2vw,28px);color:var(--washi);margin-bottom:var(--s3)}
+.lrow .fix p{color:var(--mute);font-weight:300;max-width:30em}
+
+/* ===== story ===== */
+.story{background:var(--stone);overflow:hidden}
+.story-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,7vw,120px);align-items:center}
+.story-grid>*,.eve-grid>*,.faq-grid>*,.menu-head>*,.ft-top>*{min-width:0}
+.lamp-art{position:relative;aspect-ratio:4/5;display:grid;place-items:center;padding-top:12%;border:1px solid var(--line);background:radial-gradient(55% 45% at 50% 34%,rgba(255,150,70,.16),rgba(255,138,61,0) 70%),var(--ink2);overflow:hidden}
+.art-lamp{position:absolute;left:50%;top:0;height:22%;width:1px;background:linear-gradient(rgba(176,139,92,.15),var(--hinoki2))}
+.art-lamp i{position:absolute;left:50%;bottom:-12px;width:30px;height:12px;transform:translateX(-50%);background:linear-gradient(#FFB86E,var(--lamp));clip-path:polygon(22% 0,78% 0,100% 100%,0 100%)}
+.art-lamp::after{content:"";position:absolute;left:50%;top:calc(100% + 12px);width:260px;height:240px;transform:translateX(-50%);background:linear-gradient(rgba(255,160,80,.16),rgba(255,138,61,0));clip-path:polygon(45% 0,55% 0,100% 100%,0 100%)}
+.lamp-art .kanji{font-size:clamp(170px,19vw,280px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(242,166,90,.55);will-change:transform}
+.lamp-art .kanji-fill{position:absolute;inset:12% 0 0;display:grid;place-items:center;font-size:clamp(170px,19vw,280px);line-height:1;color:rgba(242,166,90,.07)}
+.lamp-art figcaption{position:absolute;left:var(--s5);right:var(--s5);bottom:var(--s5);display:flex;justify-content:space-between;gap:var(--s3);font:500 10.5px/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute2)}
+.lamp-art .vt{position:absolute;top:var(--s5);right:var(--s5);font-size:15px;letter-spacing:.5em;color:var(--hinoki2)}
+.story-txt .lead+.lead{margin-top:var(--s4)}
+.quote{margin:var(--s7) 0 0;padding-left:var(--s5);border-left:1px solid var(--lamp);font:300 italic var(--t-lg)/1.5 var(--serif);color:var(--washi);max-width:28em}
+.quote small{display:block;margin-top:var(--s3);font:500 11px/1.4 var(--sans);font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:var(--mute2)}
+.chef{display:grid;grid-template-columns:132px 1fr;gap:var(--s5);margin-top:var(--s7);padding:var(--s5);background:var(--stone2);border:1px solid var(--line)}
+.chef figure{aspect-ratio:3/4;overflow:hidden;background:var(--stone3)}
+.chef img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.chef small{font:500 11px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--hinoki)}
+.chef h3{font-size:24px;margin:var(--s2) 0 var(--s2)}
+.chef p{font-size:15px;color:var(--mute);font-weight:300}
+.process{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,48px);margin-top:clamp(64px,8vw,112px);counter-reset:p}
+.process li{position:relative;padding-top:var(--s5)}
+.process li::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line2)}
+.process li::after{content:"";position:absolute;left:0;top:0;height:1px;width:100%;background:var(--lamp);transform:scaleX(0);transform-origin:left;transition:transform 1.2s var(--ease)}
+.process li.in::after{transform:scaleX(1)}
+.process li:nth-child(2)::after{transition-delay:.15s}.process li:nth-child(3)::after{transition-delay:.3s}.process li:nth-child(4)::after{transition-delay:.45s}
+.process .k{display:flex;justify-content:space-between;align-items:baseline;font:500 11px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--hinoki)}
+.process .k .jp{font-size:20px;letter-spacing:0;color:var(--hinoki2)}
+.process h3{font-size:22px;margin:var(--s4) 0 var(--s2)}
+.process p{font-size:15px;color:var(--mute);font-weight:300}
+
+/* ===== evening: cuộn có biên đạo ===== */
+.eve{background:var(--ink)}
+.eve-head{display:grid;grid-template-columns:1fr auto;gap:var(--s6);align-items:end;margin-bottom:clamp(40px,5vw,72px)}
+.eve-head .hint{display:flex;align-items:center;gap:var(--s3);font-size:13px;color:var(--mute2)}
+.eve-head .hint i{width:1px;height:36px;background:linear-gradient(var(--lamp),rgba(242,166,90,0));transform-origin:top;animation:hint 2.4s var(--ease-io) infinite}
+@keyframes hint{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.eve-grid{display:grid;grid-template-columns:6fr 5fr;gap:clamp(40px,6vw,104px)}
+.stage{position:sticky;top:96px;align-self:start;height:min(calc(100svh - 128px),760px);min-height:460px;z-index:2;background:var(--ink)}
+.frames{position:absolute;inset:0;overflow:hidden;background:var(--stone2)}
+.frames img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.07);transition:opacity 1.1s var(--ease),transform 2.4s var(--ease)}
+.frames img.on{opacity:1;transform:none}
+.frames::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,7,6,.92) 0%,rgba(10,7,6,.35) 34%,rgba(10,7,6,0) 58%),linear-gradient(180deg,rgba(10,7,6,.45),rgba(10,7,6,0) 22%)}
+.stage-top{position:absolute;left:var(--s5);right:var(--s5);top:var(--s5);display:flex;justify-content:space-between;font:500 11px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:rgba(241,232,220,.75)}
+.stage-cap{position:absolute;left:var(--s6);right:var(--s6);bottom:var(--s6);display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s5)}
+.clock{font:300 clamp(64px,7.4vw,112px)/.9 var(--serif);letter-spacing:-.02em;color:var(--washi);font-variant-numeric:tabular-nums lining-nums}
+.stage-cap p{max-width:15em;text-align:right;font:300 italic var(--t-lg)/1.35 var(--serif);color:var(--hinoki)}
+.stage-bar{position:absolute;left:var(--s6);right:var(--s6);bottom:12px;height:1px;background:rgba(241,232,220,.18)}
+.stage-bar i{position:absolute;inset:0;background:var(--lamp);transform:scaleX(0);transform-origin:left}
+.chapters{list-style:none;position:relative;padding-left:var(--s7)}
+.chapters::before{content:"";position:absolute;left:6px;top:0;bottom:0;width:1px;background:var(--line2)}
+.rail{position:absolute;left:6px;top:0;bottom:0;width:1px;background:var(--lamp);transform:scaleY(0);transform-origin:top}
+.chap{position:relative;min-height:68svh;display:flex;flex-direction:column;justify-content:center;padding:var(--s7) 0;opacity:.32;transition:opacity .7s var(--ease)}
+.chap:first-child{min-height:56svh;justify-content:flex-start;padding-top:var(--s2)}
+.chap:last-child{min-height:60svh}
+.chap.on{opacity:1}
+.chap::before{content:"";position:absolute;left:calc(var(--s7)*-1 + 1px);top:50%;width:11px;height:11px;border-radius:50%;background:var(--ink);border:1px solid var(--hinoki2);transition:background .5s,border-color .5s}
+.chap:first-child::before{top:18px}
+.chap.on::before{background:var(--lamp);border-color:var(--lamp)}
+.chap time{font:300 22px/1 var(--serif);color:var(--hinoki);font-variant-numeric:tabular-nums}
+.chap h3{font-size:clamp(26px,2.5vw,36px);margin:var(--s4) 0 var(--s4)}
+.chap p{color:var(--mute);font-weight:300;font-size:var(--t-md);max-width:28em}
+.chap .tags{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s5)}
+.chap .tags span{padding:6px 12px;border:1px solid var(--line2);border-radius:99px;font-size:12.5px;color:var(--mute)}
+.chap .m-img{display:none}
+
+/* ===== menu ===== */
+.menu-sec{background:var(--stone);overflow:hidden}
+.menu-head{display:grid;grid-template-columns:1fr auto;gap:var(--s6);align-items:end}
+.menu-sec .shun{position:absolute;right:clamp(12px,3vw,48px);top:clamp(24px,3vw,44px);font-size:clamp(70px,9vw,140px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(220,191,142,.25);pointer-events:none}
+.menu-ctrl{display:flex;align-items:center;gap:var(--s4)}
+.count{font:300 28px/1 var(--serif);color:var(--washi);min-width:96px;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.count span{color:var(--mute2)}
+.arrow{width:52px;height:52px;display:grid;place-items:center;border:1px solid var(--line2);border-radius:50%;transition:border-color .35s,color .35s,opacity .35s,background .35s,transform .2s}
+.arrow:hover:not(:disabled){border-color:var(--lamp);color:var(--ink);background:var(--lamp)}
+.arrow:active:not(:disabled){transform:scale(.94)}
+.arrow:disabled{opacity:.3;cursor:default}
+.track{display:flex;gap:clamp(18px,2.4vw,32px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:var(--s8);padding:6px calc((100% - min(1240px,100% - 40px))/2) var(--s5);scroll-padding-inline:calc((100% - min(1240px,100% - 40px))/2);overscroll-behavior-x:contain;cursor:grab}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}
+.track.drag *{pointer-events:none}
+.dish{flex:0 0 clamp(268px,25vw,340px);scroll-snap-align:start;list-style:none;transition:opacity .9s var(--ease)}
+.dish:not(.on){opacity:.5}
+.dish figure,.dish .ink{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--stone2);margin-bottom:var(--s5)}
+.dish img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.8s var(--ease)}
+.dish.on img,.dish:hover img{transform:none}
+.dish .ink{display:grid;place-items:center;border:1px solid var(--line);background:radial-gradient(120% 70% at 50% 0%,rgba(242,166,90,.16),rgba(242,166,90,0) 60%),var(--ink2)}
+.dish .ink b{font-size:clamp(90px,9vw,130px);font-weight:400;color:var(--hinoki);line-height:1}
+.dish .ink small{position:absolute;bottom:18px;left:0;right:0;text-align:center;font:500 10.5px/1 var(--sans);letter-spacing:.3em;color:var(--mute2);text-transform:uppercase}
+.dish .no{position:absolute;top:14px;left:14px;z-index:1;padding:5px 9px;background:rgba(10,7,6,.85);font:500 11px/1 var(--sans);letter-spacing:.18em;color:var(--hinoki);font-variant-numeric:tabular-nums}
+.dish .meta{display:flex;align-items:baseline;gap:var(--s3);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--hinoki2)}
+.dish .meta .jp{font-size:16px;letter-spacing:.1em;color:var(--hinoki)}
+.dish h3{font-size:24px;margin:var(--s2) 0 var(--s2)}
+.dish p{font-size:15px;color:var(--mute);font-weight:300}
+.ticks{display:flex;gap:6px;margin-top:var(--s2)}
+.ticks button{flex:1;height:24px;position:relative}
+.ticks button::after{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:var(--line2);transition:background .6s var(--ease)}
+.ticks button.on::after{background:var(--lamp)}
+.ticks button:hover::after{background:var(--hinoki)}
+.menu-note{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--s4) var(--s7);margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid var(--line);color:var(--mute);font-size:15px}
+.menu-note strong{font:300 26px/1.2 var(--serif);color:var(--washi);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ===== reviews ===== */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,64px);margin-top:var(--s8);align-items:start}
+.rev{padding-top:var(--s6);border-top:1px solid var(--line2)}
+.rev:nth-child(2){margin-top:var(--s8)}.rev:nth-child(3){margin-top:var(--s10)}
+.rev .q{display:block;width:28px;height:22px;color:var(--lamp);margin-bottom:var(--s4)}
+.rev blockquote{font:300 italic var(--t-lg)/1.5 var(--serif);color:var(--washi)}
+.rev footer{margin-top:var(--s5);display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s3);font-size:14px;color:var(--mute)}
+.rev footer b{color:var(--washi);font-weight:500}
+
+/* ===== faq ===== */
+.faq-sec{background:var(--stone)}
+.faq-grid{display:grid;grid-template-columns:4fr 7fr;gap:clamp(40px,7vw,112px)}
+.faq-grid .side{position:sticky;top:112px;align-self:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:var(--s5);min-height:76px;padding:var(--s5) 0;cursor:pointer;font:300 var(--t-lg)/1.35 var(--serif);transition:color .35s}
+.faq summary:hover{color:var(--hinoki)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:36px;height:36px;display:grid;place-items:center;border:1px solid var(--line2);border-radius:50%;color:var(--hinoki);transition:transform .5s var(--ease),background .4s,border-color .4s}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--lamp);border-color:var(--lamp);color:var(--ink)}
+.faq details p{padding:0 56px var(--s6) 0;color:var(--mute);font-weight:300;max-width:38em}
+.faq details[open] p{animation:fadeUp .5s var(--ease) both}
+
+/* ===== booking ===== */
+.book-sec{background:var(--ink)}
+.book-head{display:grid;grid-template-columns:1fr auto;gap:var(--s6);align-items:end}
+.stepwrap{position:relative;margin-top:var(--s8)}
+.stepper{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-bottom:0}
+.stepper li{display:flex;align-items:center;gap:var(--s3);padding:var(--s4) var(--s5);font:500 11.5px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--mute2);transition:color .5s}
+.stepper li+li{border-left:1px solid var(--line)}
+.stepper i{flex:none;display:grid;place-items:center;width:26px;height:26px;border:1px solid var(--line2);border-radius:50%;font-style:normal;letter-spacing:0;font-size:11px;transition:background .5s,border-color .5s,color .5s}
+.stepper i .ico{width:13px;height:13px;stroke-width:2;display:none}
+.stepper li.done{color:var(--washi)}
+.stepper li.done i{background:var(--hinoki);border-color:var(--hinoki);color:var(--ink)}
+.stepper li.done i .ico{display:block}.stepper li.done i b{display:none}
+.stepper li.cur{color:var(--lamp)}
+.stepper li.cur i{border-color:var(--lamp);color:var(--lamp)}
+.stepwrap .fill{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--lamp);transform-origin:left;transform:scaleX(.5);transition:transform .8s var(--ease)}
+.book{display:grid;grid-template-columns:7fr 5fr;border:1px solid var(--line)}
+.book>*{min-width:0}
+.book-l{padding:clamp(20px,3vw,40px);border-right:1px solid var(--line)}
+.book-r{padding:clamp(20px,3vw,40px);background:var(--stone)}
+.step-t{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s3);font:500 11.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--hinoki);margin-bottom:var(--s3)}
+.step-t em{font-style:normal;letter-spacing:.06em;text-transform:none;color:var(--mute2);font-size:12.5px}
+.dates{display:flex;gap:var(--s2);overflow-x:auto;scrollbar-width:none;padding:2px 2px 6px;margin:0 -2px var(--s6)}
+.dates::-webkit-scrollbar{display:none}
+.date{flex:none;min-width:72px;padding:10px 8px 9px;border:1px solid var(--line2);text-align:center;transition:background .45s var(--ease),color .45s,border-color .45s,transform .2s}
+.date:hover{border-color:var(--hinoki)}
+.date:active{transform:scale(.96)}
+.date small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.date b{display:block;font:400 20px/1.25 var(--serif);font-variant-numeric:tabular-nums}
+.date span{display:block;font-size:11px;color:var(--mute2);font-variant-numeric:tabular-nums}
+.date[aria-pressed=true]{background:var(--washi);color:var(--ink);border-color:var(--washi)}
+.date[aria-pressed=true] small,.date[aria-pressed=true] span{color:#5E544C}
+.sess{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3);margin-bottom:var(--s6)}
+.sess button{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:6px var(--s4);padding:var(--s4) var(--s5);border:1px solid var(--line2);text-align:left;transition:border-color .45s var(--ease),background .45s var(--ease),transform .2s}
+.sess button:hover{border-color:var(--hinoki)}
+.sess button:active{transform:scale(.98)}
+.sess b{grid-row:span 2;font:300 32px/1 var(--serif);font-variant-numeric:tabular-nums;transition:color .45s}
+.sess small{font-size:12.5px;color:var(--mute);text-align:right;white-space:nowrap}
+.sess .dots{justify-content:flex-end}
+.sess button[aria-pressed=true]{border-color:var(--lamp);background:rgba(242,166,90,.08)}
+.sess button[aria-pressed=true] b{color:var(--lamp)}
+.map{position:relative;aspect-ratio:10/7;border:1px solid var(--line);background:radial-gradient(70% 60% at 40% 62%,rgba(255,138,61,.07),rgba(255,138,61,0) 70%),var(--ink2);--s:clamp(36px,3.3vw,46px)}
+.map .bar{position:absolute;left:calc(var(--x1)*1%);top:calc(var(--y1)*1%);width:calc((var(--x2) - var(--x1))*1%);height:calc((var(--y2) - var(--y1))*1%);background:repeating-linear-gradient(90deg,#D6B583 0 3px,#CFAE79 3px 7px,#DCBF8E 7px 12px,#C9A671 12px 14px);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.map .bar.v{background:repeating-linear-gradient(0deg,#D6B583 0 3px,#CFAE79 3px 7px,#DCBF8E 7px 12px,#C9A671 12px 14px)}
+.map .zone{position:absolute;left:calc(var(--x1)*1%);top:calc(var(--y1)*1%);width:calc((var(--x2) - var(--x1))*1%);height:calc((var(--y2) - var(--y1))*1%);display:grid;place-items:center;text-align:center}
+.zone div{display:grid;gap:6px;justify-items:center}
+.zone .jp{font-size:24px;letter-spacing:.3em;color:rgba(220,191,142,.5)}
+.zone small{font:500 10.5px/1.3 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--mute2)}
+.zone .board{width:96px;height:30px;border:1px solid rgba(220,191,142,.35);background:rgba(220,191,142,.06)}
+.plate{position:absolute;left:calc(var(--x)*1% - 7px);top:calc(var(--y)*1% - 7px);width:14px;height:14px;border-radius:50%;background:#1F1712;border:1px solid rgba(0,0,0,.35);transition:background .6s var(--ease)}
+.plate.on{background:var(--lamp)}
+.seat{position:absolute;left:calc(var(--x)*1% - var(--s)/2);top:calc(var(--y)*1% - var(--s)/2);width:var(--s);height:var(--s);border-radius:50%;border:1px solid var(--hinoki);display:grid;place-items:center;font:500 14px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--washi);background:var(--ink);transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease);touch-action:manipulation}
+.seat span{display:block;pointer-events:none}
+.seat::before{content:"";position:absolute;inset:-70%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,138,61,.30),rgba(255,138,61,0));opacity:0;transition:opacity .7s var(--ease);pointer-events:none;z-index:-1}
+.seat:hover:not([aria-disabled=true]){background:rgba(242,166,90,.16)}
+.seat[aria-pressed=true]{background:var(--lamp);border-color:var(--lamp);color:var(--ink)}
+.seat[aria-pressed=true]::before{opacity:1}
+.seat[aria-disabled=true]{cursor:not-allowed;border-color:rgba(241,232,220,.16);color:var(--mute2);background:repeating-linear-gradient(45deg,#17110E 0 4px,#211814 4px 8px)}
+.tip{position:absolute;z-index:5;width:230px;padding:var(--s3) var(--s4);background:var(--washi);color:var(--ink);font-size:13px;line-height:1.45;pointer-events:none;opacity:0;transform:translateY(6px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.tip.show{opacity:1;transform:none}
+.tip b{display:flex;justify-content:space-between;font:600 11px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}
+.tip b em{font-style:normal;letter-spacing:.04em;text-transform:none;font-weight:500;color:#8A4B16}
+.legend{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s5);margin-top:var(--s4);font-size:13px;color:var(--mute)}
+.legend span{display:inline-flex;align-items:center;gap:var(--s2)}
+.legend i{width:14px;height:14px;border-radius:50%;border:1px solid var(--hinoki)}
+.legend .t{border-color:rgba(241,232,220,.16);background:repeating-linear-gradient(45deg,#17110E 0 3px,#2C211B 3px 6px)}
+.legend .c{background:var(--lamp);border-color:var(--lamp)}
+.seat-info{margin-top:var(--s4);min-height:50px;padding:var(--s3) var(--s4);border-left:2px solid var(--hinoki2);background:rgba(220,191,142,.05);font-size:14px;color:var(--mute)}
+.seat-info b{color:var(--washi);font-weight:500}
+.to-form{display:none;margin-top:var(--s3);width:100%}
+.sum{position:relative;padding:var(--s5);margin-bottom:var(--s5);background:var(--ink2);border:1px solid var(--line)}
+.sum::before,.sum::after{content:"";position:absolute;left:-1px;right:-1px;height:8px;background:radial-gradient(circle at 6px -2px,var(--stone) 5px,transparent 5.5px) 0 0/12px 8px repeat-x}
+.sum::before{top:-1px}
+.sum::after{bottom:-1px;transform:scaleY(-1)}
+.sum dl{display:grid;grid-template-columns:auto 1fr;gap:var(--s2) var(--s4);font-size:14px}
+.sum dt{color:var(--mute)}
+.sum dd{text-align:right;color:var(--washi);font-variant-numeric:tabular-nums}
+.sum .tot{margin-top:var(--s4);padding-top:var(--s4);border-top:1px dashed var(--line2);display:flex;justify-content:space-between;align-items:baseline;gap:var(--s3)}
+.sum .tot span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--hinoki)}
+.cost{font:300 32px/1.1 var(--serif);color:var(--lamp);white-space:nowrap;font-variant-numeric:tabular-nums lining-nums}
+.sum .rest{margin-top:6px;font-size:13px;color:var(--mute);text-align:right;font-variant-numeric:tabular-nums}
+.field{position:relative;display:grid;gap:7px;margin-bottom:var(--s4)}
+.field label,.flabel{font:500 11.5px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.field input,.field select,.field textarea{width:100%;min-height:50px;padding:12px 14px;background:var(--ink2);border:1px solid var(--line2);border-radius:0;font-size:16px;color:var(--washi);transition:border-color .35s,background .35s;-webkit-appearance:none;appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,var(--hinoki) 50%),linear-gradient(135deg,var(--hinoki) 50%,transparent 50%);background-position:calc(100% - 20px) 22px,calc(100% - 15px) 22px;background-size:5px 5px;background-repeat:no-repeat;padding-right:36px}
+.field textarea{min-height:80px;resize:vertical}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:rgba(241,232,220,.32)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--lamp);background:#120C0A}
+.field .ok{position:absolute;right:12px;top:37px;width:18px;height:18px;color:var(--lamp);opacity:0;transform:scale(.6);transition:opacity .3s,transform .3s var(--ease)}
+.field.good .ok{opacity:1;transform:none}
+.field .err{display:none;font-size:13px;color:var(--err)}
+.field.bad input{border-color:var(--err)}.field.bad .err{display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.chips{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.chips label{position:relative;text-transform:none;letter-spacing:0}
+.chips input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chips span{display:inline-flex;align-items:center;min-height:38px;padding:0 14px;font:400 13.5px/1.3 var(--sans);border:1px solid var(--line2);border-radius:99px;color:var(--mute);transition:background .35s var(--ease),color .35s,border-color .35s}
+.chips label:hover span{border-color:var(--hinoki)}
+.chips input:checked+span{border-color:var(--hinoki);color:var(--ink);background:var(--hinoki)}
+.chips input:focus-visible+span{outline:1.5px solid var(--lamp);outline-offset:3px}
+.check{display:flex;gap:var(--s3);align-items:flex-start;margin:var(--s3) 0;font-size:14px;color:var(--mute);cursor:pointer}
+.check input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--lamp)}
+.check.bad{color:var(--err)}
+.form-msg{min-height:22px;margin:6px 0 10px;font-size:14px;color:var(--err)}
+.book-r .btn{width:100%}
+.btn .spin{display:none;width:16px;height:16px;border:1.5px solid rgba(10,7,6,.3);border-top-color:var(--ink);border-radius:50%;animation:spin .8s linear infinite}
+.btn.busy .spin{display:block}
+.btn.busy{pointer-events:none;background:var(--hinoki)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.done{display:none}
+.done.show{display:block;animation:fadeUp .7s var(--ease) both}
+.done h3{font-size:30px;margin:var(--s4) 0 var(--s3)}
+.done p{color:var(--mute);font-weight:300;margin-bottom:var(--s3)}
+.done p b{color:var(--washi);font-weight:500}
+.hold{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);margin:var(--s4) 0;padding:var(--s4) var(--s5);border:1px solid var(--lamp);background:rgba(242,166,90,.06)}
+.hold span{font-size:13px;color:var(--mute)}
+.hold b{font:300 34px/1 var(--serif);color:var(--lamp);font-variant-numeric:tabular-nums}
+.code{display:inline-block;margin:var(--s1) 0 var(--s4);padding:8px 14px;border:1px dashed var(--hinoki2);font:500 14px/1 var(--sans);letter-spacing:.18em;color:var(--hinoki);font-variant-numeric:tabular-nums}
+.qr{display:flex;gap:var(--s4);align-items:center;margin:var(--s2) 0 var(--s5);padding:var(--s4);background:var(--ink2);border:1px solid var(--line)}
+.qr svg{width:96px;height:96px;flex:none;background:var(--washi);padding:6px}
+.qr p{font-size:13px;margin:0}
+
+/* ===== footer + ghé quầy ===== */
+.ft{position:relative;background:var(--ink2);border-top:1px solid var(--line);padding:clamp(80px,9vw,128px) 0 120px;overflow:hidden}
+.ft::before{content:"";position:absolute;left:50%;top:-1px;width:min(560px,80%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,rgba(242,166,90,0),var(--lamp),rgba(242,166,90,0))}
+.ft-top{display:grid;grid-template-columns:6fr 5fr;gap:clamp(40px,6vw,104px);align-items:start}
+.info{list-style:none;margin-top:var(--s6);border-top:1px solid var(--line)}
+.info li{display:grid;grid-template-columns:28px 1fr;gap:var(--s4);padding:var(--s4) 0;border-bottom:1px solid var(--line);color:var(--mute);font-size:15px}
+.info li .ico{color:var(--lamp);margin-top:4px}
+.info b{display:block;color:var(--washi);font-weight:500}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:2px var(--s5);margin-top:4px;font-variant-numeric:tabular-nums}
+.social{display:flex;gap:var(--s2);margin-top:var(--s6)}
+.social a{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line2);border-radius:50%;color:var(--hinoki);transition:background .35s,color .35s,border-color .35s}
+.social a:hover{background:var(--lamp);border-color:var(--lamp);color:var(--ink)}
+.mapart{position:relative;border:1px solid var(--line);background:var(--stone)}
+.mapart svg{display:block;width:100%;height:auto}
+.mapart figcaption span:first-child{white-space:nowrap;color:var(--hinoki2)}
+.mapart figcaption span:last-child{text-align:right}
+.mapart figcaption{display:flex;justify-content:space-between;gap:var(--s3);padding:var(--s3) var(--s4);border-top:1px solid var(--line);font-size:12.5px;color:var(--mute2)}
+.pin-pulse{transform-origin:258px 128px;animation:pulse 3s var(--ease) infinite}
+@keyframes pulse{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+.ft-bot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:var(--s7);margin-top:clamp(64px,7vw,96px);padding-top:var(--s7);border-top:1px solid var(--line)}
+.ft-bot p{color:var(--mute);font-size:14px;font-weight:300;max-width:30em;margin-top:var(--s4)}
+.ft h4{font:500 11.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--hinoki);margin-bottom:var(--s4)}
+.ft ul.links{list-style:none;display:grid;gap:var(--s2);font-size:14px;color:var(--mute)}
+.ft ul.links a{transition:color .3s}
+.ft ul.links a:hover{color:var(--washi)}
+.ft .note{margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid var(--line);font-size:13px;color:var(--mute2);max-width:none}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+.js .clip{clip-path:inset(10% 0 10% 0);transition:clip-path 1.4s var(--ease)}
+.js .clip.in{clip-path:inset(0 0 0 0)}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(14,10,8,.96);border:1px solid rgba(220,191,142,.24);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#000}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#FF8A3D;flex:none;box-shadow:0 0 0 3px rgba(255,138,61,.25)}
+.kt-badge b{color:var(--lamp);font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1100px){
+  .hero-foot{grid-template-columns:repeat(4,1fr)}
+  .hero-foot .tonight{grid-column:1/-1;padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:var(--s5);padding-top:var(--s4);grid-template-columns:auto 1fr 1fr;align-items:center;column-gap:var(--s6)}
+  .book{grid-template-columns:1fr}
+  .book-l{border-right:0;border-bottom:1px solid var(--line)}
+  .process{grid-template-columns:1fr 1fr;row-gap:var(--s7)}
+  .story-grid{grid-template-columns:1fr 1.3fr}
+}
+@media (max-width:980px){
+  .nav,.hdr .btn{display:none}
+  .menu-btn{display:inline-flex}
+  .hero{padding-top:0;min-height:0}
+  .hero-img{position:relative;width:100%;height:58svh;min-height:400px;max-height:600px;margin-bottom:-120px}
+  .hero-img img{object-position:56% 42%}
+  .hero-img::after{background:linear-gradient(0deg,var(--ink) 6%,rgba(10,7,6,0) 58%),linear-gradient(180deg,rgba(10,7,6,.7),rgba(10,7,6,0) 26%)}
+  .beam{left:46%;height:46%}
+  .hero .vt-jp{top:110px;transform:none}
+  .issue{display:none}
+  .hero-in{margin-top:0;padding-top:0}
+  .story-grid,.faq-grid,.ft-top{grid-template-columns:1fr}
+  .lamp-art{aspect-ratio:16/10}
+  .faq-grid .side{position:static}
+  .revs{grid-template-columns:1fr;gap:var(--s7)}
+  .rev:nth-child(n){margin-top:0}
+  .eve-head{grid-template-columns:1fr}
+  .eve-head .hint{display:none}
+  .eve-grid{display:block}
+  .stage{top:66px;height:40svh;min-height:240px;max-height:380px;margin:0 -20px;border-bottom:1px solid var(--line)}
+  .stage-cap{left:20px;right:20px;bottom:22px}
+  .stage-top{left:20px;right:20px;top:16px}
+  .stage-bar{left:20px;right:20px}
+  .clock{font-size:clamp(56px,15vw,84px)}
+  .stage-cap p{font-size:16px;max-width:11em}
+  .chapters{padding-left:var(--s6);margin-top:var(--s5)}
+  .chap::before{left:calc(var(--s6)*-1 + 1px)}
+  .chap{min-height:56svh;padding:var(--s6) 0}
+  .chap:first-child{min-height:46svh;padding-top:var(--s5)}
+  .chap:first-child::before{top:30px}
+  .chap:last-child{min-height:44svh}
+  .ft-bot{grid-template-columns:1fr 1fr}
+  .ft-bot>div:first-child{grid-column:1/-1}
+  .book-head{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .hdr .wrap,.hdr.scrolled .wrap{height:66px}
+  html{scroll-padding-top:66px}
+  .logo small{display:none}
+  .hero .vt-jp{display:none}
+  .h1{font-size:clamp(36px,10.2vw,56px);margin:var(--s4) 0 var(--s5)}
+  .hero-row{gap:var(--s5)}
+  .cta .btn{flex:1 1 100%}
+  .hero-foot{grid-template-columns:1fr 1fr;margin-top:var(--s7)}
+  .hero-foot>div{padding:var(--s4) 0 0}
+  .hero-foot>div+div{padding-left:0;border-left:0}
+  .hero-foot>div:nth-child(even){padding-left:var(--s4);border-left:1px solid var(--line)}
+  .hero-foot>div:nth-child(n+3){border-top:1px solid var(--line);margin-top:var(--s4)}
+  .hero-foot .tonight{grid-template-columns:1fr;row-gap:2px;padding-left:0!important;border-left:0!important}
+  .ledger-head{grid-template-columns:1fr}
+  .ledger-head .vt{display:none}
+  .ledger-labels{display:none}
+  .lrow{grid-template-columns:1fr;gap:var(--s3)}
+  .lrow .num{font-size:34px}
+  .lrow .worry::before{content:"Điều khách hay lo";display:block;margin-bottom:6px;font:500 10.5px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--mute2)}
+  .lrow .fix::before{content:"Ở Akari";display:block;margin-bottom:6px;font:500 10.5px/1.3 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--lamp)}
+  .lamp-art{aspect-ratio:4/3}
+  .chef{grid-template-columns:92px 1fr;padding:var(--s4);gap:var(--s4)}
+  .process{grid-template-columns:1fr;row-gap:var(--s6)}
+  .menu-head{grid-template-columns:1fr}
+  .menu-ctrl{justify-content:space-between}
+  .menu-sec .shun{display:none}
+  .dish{flex-basis:78vw}
+  .two{grid-template-columns:1fr}
+  .stepper li{flex-direction:column;align-items:flex-start;gap:6px;padding:var(--s3);font-size:10px;letter-spacing:.12em}
+  .book-l,.book-r{padding:var(--s5) var(--s4)}
+  .sess button{grid-template-columns:1fr;padding:var(--s3) var(--s4);row-gap:var(--s2)}
+  .sess b{grid-row:auto;font-size:28px}
+  .sess small{text-align:left}
+  .sess .dots{justify-content:flex-start}
+  .sess .dots i{width:5px;height:5px}
+  .sess .dots{gap:3px}
+  .faq details p{padding-right:0}
+  .faq summary{min-height:64px}
+  .ft-bot{grid-template-columns:1fr;gap:var(--s6)}
+  .hold b{font-size:28px}
+  /* sơ đồ ghế xoay dọc */
+  .map{aspect-ratio:1/2;--s:44px}
+  .map .bar,.map .zone{left:calc(var(--y1)*1%);top:calc(var(--x1)*1%);width:calc((var(--y2) - var(--y1))*1%);height:calc((var(--x2) - var(--x1))*1%)}
+  .map .bar.v{background:repeating-linear-gradient(90deg,#D6B583 0 3px,#CFAE79 3px 7px,#DCBF8E 7px 12px,#C9A671 12px 14px)}
+  .map .bar.h{background:repeating-linear-gradient(0deg,#D6B583 0 3px,#CFAE79 3px 7px,#DCBF8E 7px 12px,#C9A671 12px 14px)}
+  .seat{left:calc(var(--y)*1% - var(--s)/2);top:calc(var(--x)*1% - var(--s)/2)}
+  .plate{left:calc(var(--y)*1% - 7px);top:calc(var(--x)*1% - 7px)}
+  .zone .board{width:30px;height:80px}
+  .tip{display:none}
+  .to-form.show{display:inline-flex}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv,.js .clip{opacity:1;transform:none;clip-path:none}
+  .chap{opacity:1}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arr-r" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+  <symbol id="i-arr-l" viewBox="0 0 24 24"><path d="M20 12H4M10 6l-6 6 6 6"/></symbol>
+  <symbol id="i-arr-d" viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 28 22"><path d="M2 21V12C2 6 5 2.5 11 1.5M16 21V12c0-6 3-9.5 9-10.5M2 12h8v9H2zM16 12h8v9h-8z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 21v-7.5h2.6l.4-3H14V8.6c0-.9.3-1.6 1.6-1.6H17V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9v2.4H8.5v3H11V21"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3.5v11.2a3.3 3.3 0 1 1-3.3-3.3M14 3.5c.4 2.6 2.1 4.2 4.8 4.4"/></symbol>
+  <symbol id="i-zalo" viewBox="0 0 24 24"><path d="M12 3.5c4.7 0 8.5 3.3 8.5 7.4s-3.8 7.4-8.5 7.4c-.9 0-1.8-.1-2.6-.4L5 19.5l1.2-3.6C4.5 14.6 3.5 12.9 3.5 10.9c0-4.1 3.8-7.4 8.5-7.4z"/><path d="M8.5 8.8h4l-4 4.4h4M15 8.6v4.6"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Akari Omakase, về đầu trang">
+      <span class="seal jp" aria-hidden="true">灯</span>
+      <span><b>AKARI</b><small>Omakase · Sài&nbsp;Gòn</small></span>
+    </a>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#cau-chuyen">Câu chuyện</a>
+      <a href="#buoi-toi">Buổi tối</a>
+      <a href="#thuc-don">Thực đơn</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+      <a href="#lien-he">Ghé quầy</a>
+    </nav>
+    <a class="btn btn-gold" href="#giu-cho">Chọn&nbsp;ghế</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mnav-top">
+    <a class="logo" href="#top"><span class="seal jp" aria-hidden="true">灯</span><span><b>AKARI</b></span></a>
+    <button class="menu-btn" id="menuClose" aria-label="Đóng menu" style="display:inline-flex"><svg class="ico"><use href="#i-x"/></svg></button>
+  </div>
+  <p class="vt jp" aria-hidden="true">一期一会</p>
+  <ul>
+    <li><a href="#cau-chuyen"><span>01</span>Câu chuyện</a></li>
+    <li><a href="#buoi-toi"><span>02</span>Một buổi&nbsp;tối</a></li>
+    <li><a href="#thuc-don"><span>03</span>Thực đơn 14&nbsp;món</a></li>
+    <li><a href="#hoi-dap"><span>04</span>Hỏi đáp</a></li>
+    <li><a href="#lien-he"><span>05</span>Ghé quầy</a></li>
+  </ul>
+  <a class="btn btn-gold" href="#giu-cho">Chọn ghế tối&nbsp;nay</a>
+</div>
+
+<main>
+<!-- HERO: bìa tạp chí -->
+<section class="hero" id="top">
+  <div class="hero-img">
+    <div class="par" data-par=".12"><img src="https://images.unsplash.com/photo-1615361200141-f45040f367be?auto=format&fit=crop&w=1600&q=80" width="1600" height="2000" alt="Miếng nigiri cá hồi được gắp bằng đũa gỗ dưới ánh đèn hẹp trên nền tối" fetchpriority="high"></div>
+  </div>
+  <div class="beam" aria-hidden="true"><span class="cord"></span><span class="shade"></span><span class="cone"><i></i></span></div>
+  <p class="vt vt-jp jp" aria-hidden="true">おまかせ　灯</p>
+  <div class="wrap issue" aria-hidden="true"><span class="no">No.&nbsp;11</span><span>Mùa thu <b>2026</b></span><span class="rule"></span><span>Thực đơn 14&nbsp;món</span></div>
+  <div class="wrap hero-in">
+    <p class="kick">Omakase Nhật&nbsp;Bản · Phường&nbsp;Sài&nbsp;Gòn, TP.HCM</p>
+    <h1 class="h1"><span class="sr">Akari, nhà hàng omakase Nhật Bản tại TP.HCM: </span><span class="ln">Mười hai&nbsp;ghế.</span><span class="ln">Một quầy gỗ&nbsp;hinoki.</span><span class="ln em">Một ngọn <i>đèn</i>&nbsp;vàng.</span></h1>
+    <div class="hero-row">
+      <p class="lead">Hai suất mỗi tối, 18:00 và 20:30. Bạn chọn chiếc ghế mình ngồi. Mười bốn món còn lại, để bếp trưởng&nbsp;chọn.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#giu-cho">Chọn ghế của&nbsp;bạn <svg class="ico"><use href="#i-arr-r"/></svg></a>
+        <a class="btn btn-line" href="#buoi-toi">Xem một buổi&nbsp;tối</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap hero-foot">
+    <div><b>12&nbsp;ghế</b><span>quanh một quầy chữ&nbsp;L</span></div>
+    <div><b>2&nbsp;suất</b><span>18:00 và 20:30 mỗi&nbsp;tối</span></div>
+    <div><b>14&nbsp;món</b><span>đổi theo mùa, theo&nbsp;cá</span></div>
+    <div><b>2.800.000đ</b><span>trọn suất, một&nbsp;khách</span></div>
+    <div class="tonight" id="tonight" aria-live="polite">
+      <p><span id="tonightLabel">Ghế còn trống</span><em>Bấm để chọn</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -> SOLUTION -->
+<section class="sec" id="trai-nghiem" aria-labelledby="t-ledger">
+  <div class="wrap">
+    <div class="ledger-head">
+      <p class="vt jp" aria-hidden="true">其の一</p>
+      <div>
+        <p class="kick rv">Trước khi bạn đặt bàn</p>
+        <h2 class="h2 rv d1" id="t-ledger">Một tối đáng nhớ thường hỏng vì những chuyện <em>rất&nbsp;nhỏ</em></h2>
+        <p class="lead rv d2">Chúng tôi hỏi khách quen điều gì khiến họ ngại đi ăn omakase. Ba câu trả lời lặp lại nhiều lần. Akari được sắp xếp để không ai phải lo ba điều&nbsp;đó.</p>
+      </div>
+    </div>
+    <div class="ledger">
+      <div class="ledger-labels"><span></span><span>Điều khách hay lo</span><span>Ở Akari</span></div>
+      <div class="lrow rv">
+        <span class="num jp" aria-hidden="true">一</span>
+        <p class="worry">Nhắn tin đặt bàn, đến nơi lại bị xếp vào <s>góc khuất</s>, không thấy bếp trưởng làm&nbsp;món.</p>
+        <div class="fix"><h3>Bạn chọn ghế trên sơ đồ&nbsp;quầy</h3><p>Chọn ghế số mấy, tối đó bạn ngồi đúng ghế ấy. Cả 12 ghế đều nhìn thẳng vào thớt của bếp&nbsp;trưởng.</p></div>
+      </div>
+      <div class="lrow rv">
+        <span class="num jp" aria-hidden="true">二</span>
+        <p class="worry">Không biết tối đó ăn gì, <s>hoá đơn cuối cùng</s> bao nhiêu, có món mình dị ứng hay&nbsp;không.</p>
+        <div class="fix"><h3>Giá trọn suất báo trước, dị ứng ghi&nbsp;sẵn</h3><p>2.800.000đ một khách, chưa gồm đồ uống. Dị ứng ghi lúc giữ chỗ, bếp đổi món từ buổi&nbsp;chiều.</p></div>
+      </div>
+      <div class="lrow rv">
+        <span class="num jp" aria-hidden="true">三</span>
+        <p class="worry">Bàn bên ồn ào, món ra dồn dập, bữa tối kỷ niệm thành <s>một bữa ăn&nbsp;vội</s>.</p>
+        <div class="fix"><h3>Mỗi suất chỉ 12&nbsp;khách</h3><p>Cả quầy bắt đầu cùng lúc. Món ra theo nhịp tay bếp trưởng, không ai phải chờ, không ai bị&nbsp;giục.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="sec story" id="cau-chuyen" aria-labelledby="t-story">
+  <div class="wrap">
+    <div class="story-grid">
+      <figure class="lamp-art clip" aria-hidden="true">
+        <span class="art-lamp"><i></i></span>
+        <span class="kanji-fill jp">灯</span>
+        <span class="kanji jp" data-par="-.06">灯</span>
+        <span class="vt jp">あかり</span>
+        <figcaption><span>Akari</span><span>Ngọn đèn trên&nbsp;quầy</span></figcaption>
+      </figure>
+      <div class="story-txt">
+        <p class="kick rv">Câu chuyện của Akari</p>
+        <h2 class="h2 rv d1" id="t-story">Đèn bật lúc 17:45, tắt khi người khách cuối rời&nbsp;quầy</h2>
+        <p class="lead rv d2">Akari nghĩa là ngọn đèn. Ở những quầy sushi nhỏ tại Osaka, chiếc đèn treo trên quầy là cách bếp báo cho khách: hôm nay còn&nbsp;nhận.</p>
+        <p class="lead rv d2">Anh Hiếu mang thói quen ấy về Sài Gòn, cùng một quầy gỗ hinoki mười hai ghế. Không thực đơn in sẵn, không bàn phụ, không suất chen&nbsp;giữa.</p>
+        <blockquote class="quote rv d3">“Cá tốt thì không cần nói nhiều. Việc của tôi là đặt nó xuống đúng lúc.”<small>Bếp trưởng Lâm Quang Hiếu</small></blockquote>
+        <div class="chef rv">
+          <figure><img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=600&q=80" width="600" height="800" loading="lazy" alt="Cá và hải sản tươi xếp trên đá lạnh trước giờ sơ chế"></figure>
+          <div>
+            <small>Người đứng sau quầy</small>
+            <h3>Bếp trưởng Lâm&nbsp;Quang&nbsp;Hiếu</h3>
+            <p>Nhiều năm đứng quầy sushi ở Osaka trước khi về mở Akari. Anh nói ít, nhưng sẽ kể bạn nghe con cá hôm nay đến từ&nbsp;đâu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ol class="process" aria-label="Từ chuyến cá đến quầy">
+      <li class="rv"><p class="k"><span>01 · Thứ Ba, thứ&nbsp;Sáu</span><span class="jp" aria-hidden="true">魚</span></p><h3>Cá về hai chuyến mỗi&nbsp;tuần</h3><p>Chọn theo mùa và theo con cá tốt trong ngày, không theo một danh sách cố&nbsp;định.</p></li>
+      <li class="rv d1"><p class="k"><span>02 · Nghỉ&nbsp;cá</span><span class="jp" aria-hidden="true">寝</span></p><h3>Mỗi loại cá một thời gian&nbsp;nghỉ</h3><p>Từ vài giờ đến vài ngày, để thịt cá mềm lại và dậy&nbsp;vị.</p></li>
+      <li class="rv d2"><p class="k"><span>03 · Shari</span><span class="jp" aria-hidden="true">舎利</span></p><h3>Cơm giấm đỏ nấu theo từng&nbsp;suất</h3><p>Gạo Nhật trộn giấm akazu, giữ ấm gần nhiệt độ cơ thể đến miếng cuối&nbsp;cùng.</p></li>
+      <li class="rv d3"><p class="k"><span>04 · Tại&nbsp;quầy</span><span class="jp" aria-hidden="true">握</span></p><h3>Nắn và đặt thẳng trước mặt&nbsp;bạn</h3><p>Wasabi mài tươi cho từng suất. Miếng sushi ngon trong vài giây đầu&nbsp;tiên.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- EVENING: cuộn có biên đạo -->
+<section class="sec eve" id="buoi-toi" aria-labelledby="t-eve">
+  <div class="wrap">
+    <div class="eve-head">
+      <div>
+        <p class="kick rv">Một buổi tối ở quầy</p>
+        <h2 class="h2 rv d1" id="t-eve">Hai giờ chậm rãi, ngay trước mặt bếp&nbsp;trưởng</h2>
+        <p class="lead rv d2">Omakase nghĩa là “xin để bếp trưởng chọn”. Bạn không cần đọc thực đơn, chỉ cần đến đúng giờ và cho chúng tôi biết mình không ăn được&nbsp;gì.</p>
+      </div>
+      <p class="hint rv d3" aria-hidden="true"><i></i>Cuộn để đi qua buổi&nbsp;tối</p>
+    </div>
+    <div class="eve-grid" id="eve">
+      <div class="stage" aria-hidden="true">
+        <div class="frames">
+          <img class="on" src="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1400&q=80" width="1400" height="1120" loading="lazy" alt="">
+          <img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=1400&q=80" width="1400" height="1120" loading="lazy" alt="">
+          <img src="https://images.unsplash.com/photo-1581781870027-04212e231e96?auto=format&fit=crop&w=1400&q=80" width="1400" height="1120" loading="lazy" alt="">
+          <img src="https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=1400&q=80" width="1400" height="1120" loading="lazy" alt="">
+          <img src="https://images.unsplash.com/photo-1617196034738-26c5f7c977ce?auto=format&fit=crop&w=1400&q=80" width="1400" height="1120" loading="lazy" alt="">
+        </div>
+        <div class="stage-top"><span>Chương <b id="chNo">01</b> / 05</span><span class="jp">一期一会</span></div>
+        <div class="stage-cap"><span class="clock" id="clock">17:45</span><p id="chCap">Trà gạo rang, khăn&nbsp;ấm</p></div>
+        <div class="stage-bar"><i id="evBar"></i></div>
+      </div>
+      <ol class="chapters" id="chapters">
+        <li class="chap on" data-t="17:45" data-cap="Trà gạo rang, khăn&nbsp;ấm"><time>17:45</time><h3>Cửa gỗ mở, đèn trên quầy&nbsp;bật</h3><p>Nhân viên dẫn bạn đến đúng chiếc ghế đã chọn. Một chén trà gạo rang, khăn ấm, và mười lăm phút để gọi đồ uống trước khi bắt&nbsp;đầu.</p><p class="tags"><span>Trà gạo rang</span><span>Gọi sake trước</span></p></li>
+        <li class="chap" data-t="18:00" data-cap="Cá của tuần, sashimi"><time>18:00</time><h3>Cả quầy bắt đầu cùng một&nbsp;lúc</h3><p>Bếp trưởng giới thiệu khay cá của tuần. Khai vị, súp dashi trong, rồi sashimi ba loại, ra chậm và nhẹ&nbsp;tay.</p><p class="tags"><span>Sakizuke</span><span>Owan</span><span>Otsukuri</span></p></li>
+        <li class="chap" data-t="18:40" data-cap="Mười miếng nigiri"><time>18:40</time><h3>Mười miếng nigiri, từng miếng&nbsp;một</h3><p>Miếng sushi đặt thẳng lên đĩa trước mặt bạn. Ăn ngay khi cơm còn ấm, đó là lúc cá và cơm vừa vị với nhau. Bếp sẽ nhắc nhẹ nếu bạn&nbsp;quên.</p><p class="tags"><span>Cá tráp</span><span>Chutoro</span><span>Cá hồi khò</span></p></li>
+        <li class="chap" data-t="19:40" data-cap="Matcha đánh tại&nbsp;quầy"><time>19:40</time><h3>Tamago, súp miso đỏ, trà&nbsp;matcha</h3><p>Khép lại bằng món ngọt theo mùa. Không ai giục. Bạn có thể ngồi thêm trò chuyện với bếp&nbsp;trưởng.</p><p class="tags"><span>Tamago</span><span>Warabi mochi hạt&nbsp;dẻ</span></p></li>
+        <li class="chap" data-t="20:30" data-cap="Suất muộn, yên&nbsp;hơn"><time>20:30</time><h3>Quầy được lau lại cho suất&nbsp;sau</h3><p>Suất 20:30 diễn ra y như vậy, chỉ yên tĩnh hơn. Hợp cho những buổi hẹn muộn hoặc một ly sake cuối&nbsp;tuần.</p><p class="tags"><span>Suất 20:30–22:30</span></p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="sec menu-sec" id="thuc-don" aria-labelledby="t-menu">
+  <p class="shun jp" aria-hidden="true">旬</p>
+  <div class="wrap menu-head">
+    <div>
+      <p class="kick rv">Thực đơn mùa thu · 11/2026</p>
+      <h2 class="h2 rv d1" id="t-menu">Mười bốn món, đi từ thanh đến&nbsp;đậm</h2>
+      <p class="lead rv d2">Kéo ngang hoặc bấm mũi tên để xem từng món. Vài món có thể đổi tuỳ con cá về trong&nbsp;tuần.</p>
+    </div>
+    <div class="menu-ctrl rv d2">
+      <p class="count" aria-live="polite"><b id="cntNow">01</b> <span>/ 14</span></p>
+      <button class="arrow" id="prev" aria-label="Món trước"><svg class="ico"><use href="#i-arr-l"/></svg></button>
+      <button class="arrow" id="next" aria-label="Món tiếp theo"><svg class="ico"><use href="#i-arr-r"/></svg></button>
+    </div>
+  </div>
+  <ol class="track" id="track" tabindex="0" aria-label="Thực đơn 14 món, cuộn ngang">
+    <li class="dish on"><figure><span class="no">01</span><img src="https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Bát sashimi khai vị với rau mầm và lát cam trên nền tối"></figure>
+      <p class="meta"><span class="jp">先付</span>Sakizuke</p><h3>Khai vị mùa&nbsp;thu</h3><p>Cá cam ướp nhẹ với rau mầm và vỏ yuzu. Mở đầu thanh, hơi chua, để vị giác tỉnh&nbsp;lại.</p></li>
+    <li class="dish"><div class="ink"><span class="no">02</span><b class="jp" aria-hidden="true">椀</b><small>Owan</small></div>
+      <p class="meta"><span class="jp">椀</span>Owan</p><h3>Súp dashi&nbsp;trong</h3><p>Nước dashi nấu từ tảo kombu và cá ngừ bào, thả viên chả tôm và nấm hương&nbsp;tươi.</p></li>
+    <li class="dish"><figure><span class="no">03</span><img src="https://images.unsplash.com/photo-1638866381709-071747b518c8?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Đĩa sashimi nhiều loại cá, tôm và trứng cá xếp trên đá lạnh"></figure>
+      <p class="meta"><span class="jp">造り</span>Otsukuri</p><h3>Sashimi ba&nbsp;loại</h3><p>Cá tráp, bạch tuộc và tôm ngọt, ăn với wasabi mài tươi và nước tương nhà&nbsp;ủ.</p></li>
+    <li class="dish"><figure><span class="no">04</span><img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Hàng nigiri nhiều loại cá trên khay đá đen, cạnh đôi đũa và chén nước tương"></figure>
+      <p class="meta"><span class="jp">鯛</span>Madai</p><h3>Nigiri cá&nbsp;tráp</h3><p>Da cá khò sơ cho thơm, chấm chút muối biển và vài giọt chanh&nbsp;sudachi.</p></li>
+    <li class="dish"><figure><span class="no">05</span><img src="https://images.unsplash.com/photo-1534256958597-7fe685cbd745?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Những khối cá ngừ đỏ cùng các loại cá khác bày trên đá lạnh"></figure>
+      <p class="meta"><span class="jp">赤身</span>Akami</p><h3>Nigiri cá ngừ ngâm&nbsp;tương</h3><p>Thịt nạc cá ngừ ngâm nước tương zuke khoảng 20 phút, vị đậm mà vẫn&nbsp;sạch.</p></li>
+    <li class="dish"><div class="ink"><span class="no">06</span><b class="jp" aria-hidden="true">鮪</b><small>Chutoro</small></div>
+      <p class="meta"><span class="jp">中トロ</span>Chutoro</p><h3>Nigiri bụng cá&nbsp;ngừ</h3><p>Phần bụng giữa, béo vừa phải. Để cá về nhiệt độ phòng trước khi nắn cho mỡ tan&nbsp;đều.</p></li>
+    <li class="dish"><figure><span class="no">07</span><img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Nigiri cá hồi đặt trên đĩa đá đen cùng chén nước tương và đũa"></figure>
+      <p class="meta"><span class="jp">炙り</span>Aburi</p><h3>Nigiri cá hồi khò&nbsp;lửa</h3><p>Cá hồi khò sơ mặt trên, phết một lớp mỏng sốt miso trắng ngọt&nbsp;dịu.</p></li>
+    <li class="dish"><div class="ink"><span class="no">08</span><b class="jp" aria-hidden="true">帆立</b><small>Hotate</small></div>
+      <p class="meta"><span class="jp">帆立</span>Hotate</p><h3>Sò điệp nướng&nbsp;than</h3><p>Sò điệp nướng trên than binchotan đến khi vừa se mặt, rưới bơ&nbsp;shoyu.</p></li>
+    <li class="dish"><figure><span class="no">09</span><img src="https://images.unsplash.com/photo-1611599537845-1c7aca0091c0?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Miếng cá nướng vàng mặt trong bát gốm tối màu"></figure>
+      <p class="meta"><span class="jp">焼物</span>Yakimono</p><h3>Cá tuyết nướng&nbsp;miso</h3><p>Cá tuyết ướp miso Saikyo hai ngày rồi mới nướng, mặt cá caramel nhẹ, thịt mềm như&nbsp;bơ.</p></li>
+    <li class="dish"><figure><span class="no">10</span><img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Thịt bò nướng thái lát dày trên thớt gỗ"></figure>
+      <p class="meta"><span class="jp">和牛</span>Wagyu</p><h3>Bò wagyu áp&nbsp;than</h3><p>Vài lát wagyu áp than nhanh tay, ăn với muối hồng và wasabi. Món đậm vị trước khi quay lại&nbsp;cơm.</p></li>
+    <li class="dish"><figure><span class="no">11</span><img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Cơm cuộn phủ cá hồi và trứng cá hồi cạnh đôi đũa gỗ"></figure>
+      <p class="meta"><span class="jp">いくら</span>Ikura</p><h3>Cơm cuộn trứng cá&nbsp;hồi</h3><p>Trứng cá hồi ngâm dashi và rượu sake, nổ nhẹ trong miệng, đặt trên cơm cuộn rong&nbsp;biển.</p></li>
+    <li class="dish"><figure><span class="no">12</span><img src="https://images.unsplash.com/photo-1633478062482-790e3b5dd810?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Miếng sushi cuộn được gắp bằng đũa trên nền tối"></figure>
+      <p class="meta"><span class="jp">手巻</span>Temaki</p><h3>Cuộn tay cá ngừ&nbsp;băm</h3><p>Bếp trưởng đưa tận tay từng khách. Rong biển nướng giòn, cần ăn ngay trong vài&nbsp;giây.</p></li>
+    <li class="dish"><figure><span class="no">13</span><img src="https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Khay nigiri có trứng cuộn tamago và trứng cá"></figure>
+      <p class="meta"><span class="jp">玉子</span>Tamago</p><h3>Trứng cuộn, súp&nbsp;miso&nbsp;đỏ</h3><p>Tamago nướng như bánh, ngọt nhẹ, đi cùng chén súp miso đỏ nấu từ đầu&nbsp;cá.</p></li>
+    <li class="dish"><figure><span class="no">14</span><img src="https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=900&q=80" width="900" height="1125" loading="lazy" alt="Chén trà matcha, bột trà và chổi tre đánh trà trên mặt gỗ tối"></figure>
+      <p class="meta"><span class="jp">甘味</span>Kanmi</p><h3>Matcha, món ngọt theo&nbsp;mùa</h3><p>Trà matcha đánh tại quầy, đi cùng bánh warabi mochi hạt dẻ. Khép lại buổi tối thật&nbsp;chậm.</p></li>
+  </ol>
+  <div class="wrap">
+    <div class="ticks" id="ticks" aria-label="Chuyển nhanh đến món"></div>
+    <div class="menu-note rv">
+      <p>Trọn suất 14 món, chưa gồm đồ uống. Sake đi kèm 5&nbsp;ly: 1.200.000đ một&nbsp;khách.</p>
+      <strong>2.800.000đ / khách</strong>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" aria-labelledby="t-rev">
+  <div class="wrap">
+    <p class="kick rv">Khách đã ngồi quầy</p>
+    <h2 class="h2 rv d1" id="t-rev">Điều khách nhắc lại thường là những chi tiết&nbsp;nhỏ</h2>
+    <div class="revs">
+      <figure class="rev rv"><svg class="ico q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote>Ngồi ghế số 5, nhìn bếp trưởng nắn từng miếng cơm. Lần đầu ăn omakase mà không thấy ngợp, món nào anh cũng giải thích rất nhẹ nhàng.</blockquote>
+        <footer><b>Chị Minh&nbsp;Thư</b> kỷ niệm ngày cưới <span class="sample">Đánh giá mẫu</span></footer></figure>
+      <figure class="rev rv d1"><svg class="ico q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote>Mình dị ứng tôm, ghi chú lúc giữ chỗ. Tối đó bếp đổi sang món khác mà không ai phải hỏi lại câu nào.</blockquote>
+        <footer><b>Anh Quốc&nbsp;Bảo</b> suất 18:00 <span class="sample">Đánh giá mẫu</span></footer></figure>
+      <figure class="rev rv d2"><svg class="ico q" aria-hidden="true"><use href="#i-quote"/></svg>
+        <blockquote>Suất 20:30 yên hơn mình nghĩ. Đặt bốn ghế ở góc quầy, cả nhóm vẫn nói chuyện được mà vẫn xem bếp làm.</blockquote>
+        <footer><b>Chị Hạnh</b> nhóm 4&nbsp;người <span class="sample">Đánh giá mẫu</span></footer></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq-sec" id="hoi-dap" aria-labelledby="t-faq">
+  <div class="wrap faq-grid">
+    <div class="side">
+      <p class="kick rv">Hỏi đáp</p>
+      <h2 class="h2 rv d1" id="t-faq">Trước khi bạn giữ&nbsp;ghế</h2>
+      <p class="lead rv d2">Chưa thấy điều bạn cần? Gọi hoặc nhắn Zalo 0900&nbsp;000&nbsp;000, quầy trả lời từ 10:00 đến&nbsp;17:00.</p>
+    </div>
+    <div class="faq rv d1">
+      <details open><summary>Tôi có cần đặt trước không?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></summary><p>Nên đặt trước. Mỗi suất chỉ có 12 ghế, khách thường giữ chỗ trước 3–7 ngày. Nếu bạn ghé không hẹn trước mà quầy còn ghế, chúng tôi vẫn đón.</p></details>
+      <details><summary>Vì sao phải đặt cọc?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></summary><p>Bếp chuẩn bị cá cho đúng 12 khách từ buổi sáng. Khoản cọc 1.000.000đ một khách được trừ thẳng vào hoá đơn. Báo huỷ trước 48 giờ, Akari hoàn lại toàn bộ tiền cọc.</p></details>
+      <details><summary>Tôi dị ứng hoặc không ăn được cá sống thì sao?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></summary><p>Ghi rõ ở bước giữ chỗ, bếp sẽ đổi sang món tương đương. Khách ăn chay hoàn toàn vui lòng gọi trước để bếp trưởng trao đổi trực tiếp.</p></details>
+      <details><summary>Nếu tôi đến muộn?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></summary><p>Cả quầy bắt đầu cùng lúc. Nếu bạn đến muộn hơn 15 phút, bếp sẽ phục vụ tiếp từ món đang ra, các món đã qua không làm lại.</p></details>
+      <details><summary>Có nhận trẻ em không?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></summary><p>Akari nhận khách từ 10 tuổi. Giá như khách người lớn vì thực đơn giống nhau.</p></details>
+      <details><summary>Có thể bao trọn quầy không?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></summary><p>Được, cho nhóm từ 8 đến 12 khách. Gọi 0900&nbsp;000&nbsp;000 để chọn ngày và thống nhất thực đơn riêng.</p></details>
+      <details><summary>Có quy định về trang phục?<span class="pm"><svg class="ico"><use href="#i-plus"/></svg></span></summary><p>Lịch sự, thoải mái là được. Vui lòng hạn chế nước hoa quá đậm, vì quầy rất gần và mùi hương làm lấn vị cá.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sec book-sec" id="giu-cho" aria-labelledby="t-book">
+  <div class="wrap">
+    <div class="book-head">
+      <div>
+        <p class="kick rv">Quầy &amp; ghế</p>
+        <h2 class="h2 rv d1" id="t-book">Chọn đúng chiếc ghế bạn sẽ ngồi tối&nbsp;nay</h2>
+      </div>
+      <p class="lead rv d2" style="max-width:24em">Bốn bước, chừng hai phút. Ghế được giữ 30 phút để bạn chuyển cọc. Mọi bước ở đây chỉ để minh hoạ, không phát sinh giao dịch&nbsp;thật.</p>
+    </div>
+
+    <div class="rv">
+      <div class="stepwrap"><ol class="stepper" id="stepper" aria-label="Các bước giữ chỗ">
+        <li class="done"><i><b>1</b><svg class="ico"><use href="#i-check"/></svg></i>Ngày</li>
+        <li class="done"><i><b>2</b><svg class="ico"><use href="#i-check"/></svg></i>Suất</li>
+        <li class="cur"><i><b>3</b><svg class="ico"><use href="#i-check"/></svg></i>Ghế</li>
+        <li><i><b>4</b><svg class="ico"><use href="#i-check"/></svg></i>Đặt cọc</li>
+      </ol><span class="fill" id="stepFill" aria-hidden="true"></span></div>
+      <div class="book">
+        <div class="book-l">
+          <p class="step-t"><span>1 · Chọn ngày</span><em>Nghỉ thứ Hai</em></p>
+          <div class="dates" id="dates" role="group" aria-label="Chọn ngày"></div>
+          <p class="step-t"><span>2 · Chọn suất</span><em>Mỗi suất khoảng 2&nbsp;giờ</em></p>
+          <div class="sess" id="sess" role="group" aria-label="Chọn suất">
+            <button type="button" data-s="18:00" aria-pressed="true"><b>18:00</b><small data-left></small><span class="dots" data-dots></span></button>
+            <button type="button" data-s="20:30" aria-pressed="false"><b>20:30</b><small data-left></small><span class="dots" data-dots></span></button>
+          </div>
+          <p class="step-t"><span>3 · Chọn ghế quanh quầy</span><em>Tối đa 6 ghế</em></p>
+          <div class="map" id="map" role="group" aria-label="Sơ đồ 12 ghế quanh quầy. Dùng phím mũi tên để di chuyển giữa các ghế.">
+            <div class="bar h" style="--x1:4;--x2:80;--y1:19;--y2:29"></div>
+            <div class="bar v" style="--x1:72;--x2:80;--y1:19;--y2:95"></div>
+            <div class="zone" style="--x1:4;--x2:72;--y1:29;--y2:95"><div><span class="jp">板前</span><span class="board"></span><small>Bếp trưởng</small></div></div>
+            <div class="tip" id="tip" aria-hidden="true"><b><span id="tipN">Ghế 1</span><em id="tipS">Còn trống</em></b><span id="tipT"></span></div>
+          </div>
+          <div class="legend"><span><i></i>Còn trống</span><span><i class="t"></i>Đã có khách</span><span><i class="c"></i>Bạn chọn</span></div>
+          <p class="seat-info" id="seatInfo" aria-live="polite">Rê chuột hoặc chạm vào một ghế để xem vị trí ngồi.</p>
+          <a class="btn btn-line to-form" id="toForm" href="#bookForm">Tiếp tục: điền thông tin <svg class="ico"><use href="#i-arr-d"/></svg></a>
+        </div>
+
+        <div class="book-r">
+          <form id="bookForm" novalidate>
+            <p class="step-t"><span>4 · Thông tin &amp; đặt cọc</span><em>Cọc 1.000.000đ / khách</em></p>
+            <div class="sum">
+              <dl>
+                <dt>Ngày</dt><dd id="sDate">–</dd>
+                <dt>Suất</dt><dd id="sSess">18:00</dd>
+                <dt>Ghế</dt><dd id="sSeats">Chưa chọn</dd>
+                <dt>Trọn suất</dt><dd id="sMenu">0đ</dd>
+                <dt>Sake đi kèm</dt><dd id="sSake">Không</dd>
+              </dl>
+              <div class="tot"><span>Cọc giữ chỗ</span><b class="cost" id="sDep">0đ</b></div>
+              <p class="rest" id="sRest">Chọn ít nhất một ghế để tính cọc.</p>
+            </div>
+            <div class="two">
+              <div class="field" id="fName"><label for="name">Họ và tên</label><input id="name" name="name" autocomplete="name" required><svg class="ico ok" aria-hidden="true"><use href="#i-check"/></svg><span class="err">Vui lòng nhập họ tên.</span></div>
+              <div class="field" id="fPhone"><label for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000" required><svg class="ico ok" aria-hidden="true"><use href="#i-check"/></svg><span class="err">Số điện thoại chưa đúng.</span></div>
+            </div>
+            <div class="field"><span class="flabel">Dị ứng, không ăn được</span>
+              <div class="chips">
+                <label><input type="checkbox" name="al" value="Hải sản có vỏ"><span>Hải sản có&nbsp;vỏ</span></label>
+                <label><input type="checkbox" name="al" value="Cá sống"><span>Cá sống</span></label>
+                <label><input type="checkbox" name="al" value="Gluten"><span>Gluten</span></label>
+                <label><input type="checkbox" name="al" value="Thịt bò"><span>Thịt bò</span></label>
+              </div>
+            </div>
+            <div class="two">
+              <div class="field"><label for="occ">Dịp đặc biệt</label><select id="occ"><option>Không có</option><option>Sinh nhật</option><option>Kỷ niệm</option><option>Gặp đối tác</option></select></div>
+              <div class="field"><label for="pay">Hình thức cọc</label><select id="pay"><option>Chuyển khoản (QR)</option><option>Ví điện tử</option></select></div>
+            </div>
+            <label class="check"><input type="checkbox" id="sake"> Thêm sake đi kèm 5 ly, 1.200.000đ một khách (trả tại quán)</label>
+            <div class="field"><label for="note">Ghi chú cho bếp</label><textarea id="note" placeholder="Ví dụ: muốn ngồi cạnh nhau, ít wasabi…"></textarea></div>
+            <label class="check" id="cConsent"><input type="checkbox" id="consent" required> Tôi đồng ý để Akari xử lý dữ liệu cá nhân (họ tên, số điện thoại, ghi chú dị ứng) cho việc giữ chỗ này.</label>
+            <p class="form-msg" id="formMsg" role="alert"></p>
+            <button class="btn btn-gold" type="submit" id="submitBtn"><span class="spin" aria-hidden="true"></span><span id="submitTxt">Giữ&nbsp;ghế, nhận mã&nbsp;cọc</span></button>
+          </form>
+          <div class="done" id="done" aria-live="polite" tabindex="-1">
+            <span class="sample">Minh hoạ</span>
+            <h3>Ghế của bạn đang được&nbsp;giữ</h3>
+            <p id="doneText"></p>
+            <div class="hold"><span>Thời gian giữ ghế còn&nbsp;lại</span><b id="holdT">30:00</b></div>
+            <span class="code" id="doneCode"></span>
+            <div class="qr"><svg id="qr" viewBox="0 0 25 25" aria-hidden="true" shape-rendering="crispEdges"></svg><p>Mã QR minh hoạ, không dùng để chuyển tiền. Trên web thật, khách quét mã để chuyển cọc và nhận tin nhắn xác nhận.</p></div>
+            <button class="btn btn-line" type="button" id="again">Giữ thêm chỗ&nbsp;khác</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER: ghé quầy -->
+<footer class="ft" id="lien-he" aria-labelledby="t-visit">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <p class="kick rv">Ghé quầy</p>
+        <h2 class="h2 rv d1" id="t-visit">Một cánh cửa gỗ nhỏ trong hẻm, ánh đèn vàng bên&nbsp;trong</h2>
+        <ul class="info rv d2">
+          <li><svg class="ico"><use href="#i-pin"/></svg><div><b>Phường Sài Gòn, TP.HCM</b>Hẻm nhỏ gần trung tâm. Địa chỉ chính xác gửi kèm tin nhắn xác&nbsp;nhận.</div></li>
+          <li><svg class="ico"><use href="#i-clock"/></svg><div><b>Thứ Ba – Chủ nhật</b><span class="hours"><span>Suất sớm</span><span>18:00–20:00</span><span>Suất muộn</span><span>20:30–22:30</span><span>Thứ Hai</span><span>Nghỉ</span></span></div></li>
+          <li><svg class="ico"><use href="#i-phone"/></svg><div><b><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></b>Gọi hoặc Zalo, 10:00–17:00</div></li>
+        </ul>
+        <div class="social rv d3">
+          <a href="#" aria-label="Instagram (minh hoạ)"><svg class="ico"><use href="#i-ig"/></svg></a>
+          <a href="#" aria-label="Facebook (minh hoạ)"><svg class="ico"><use href="#i-fb"/></svg></a>
+          <a href="#" aria-label="TikTok (minh hoạ)"><svg class="ico"><use href="#i-tt"/></svg></a>
+          <a href="#" aria-label="Zalo (minh hoạ)"><svg class="ico"><use href="#i-zalo"/></svg></a>
+        </div>
+      </div>
+      <figure class="mapart rv d1">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Bản đồ minh hoạ vị trí Akari trong hẻm, gần trung tâm Phường Sài Gòn">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FF8A3D" stop-opacity=".45"/><stop offset="1" stop-color="#FF8A3D" stop-opacity="0"/></radialGradient>
+            <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" stroke="#DCBF8E" stroke-opacity=".12" stroke-width="1"/></pattern>
+          </defs>
+          <rect width="400" height="300" fill="#120D0B"/>
+          <path d="M330 0c-14 60 10 110 30 160s4 100-20 140h60V0z" fill="url(#hatch)"/>
+          <path d="M330 0c-14 60 10 110 30 160s4 100-20 140" fill="none" stroke="#DCBF8E" stroke-opacity=".3"/>
+          <g fill="none" stroke="#F1E8DC" stroke-opacity=".12" stroke-width="14" stroke-linecap="round">
+            <path d="M-10 70h330"/><path d="M-10 210h360"/><path d="M90 -10v320"/><path d="M220 -10v320"/>
+          </g>
+          <g fill="none" stroke="#F1E8DC" stroke-opacity=".08" stroke-width="5" stroke-linecap="round">
+            <path d="M20 140h70"/><path d="M150 0v70"/><path d="M150 210v90"/><path d="M220 140h80"/><path d="M290 70v140"/>
+          </g>
+          <path d="M220 128h38" fill="none" stroke="#F2A65A" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"/>
+          <circle class="pin-pulse" cx="258" cy="128" r="22" fill="url(#glow)"/>
+          <circle cx="258" cy="128" r="7" fill="#F2A65A"/>
+          <circle cx="258" cy="128" r="12" fill="none" stroke="#F2A65A" stroke-opacity=".5"/>
+          <g font-family="Inter,system-ui,sans-serif" font-size="10" letter-spacing="2" fill="#A99C94">
+            <text x="268" y="113" fill="#F1E8DC" font-size="12" letter-spacing="3">AKARI</text>
+            <text x="166" y="122">HẺM</text>
+            <text x="356" y="250" transform="rotate(-80 356 250)">SÔNG SÀI GÒN</text>
+            <text x="12" y="62">TRỤC CHÍNH</text>
+          </g>
+        </svg>
+        <figcaption><span>Bản đồ minh hoạ</span><span>Gửi xe ở đầu hẻm, đi bộ chừng 1&nbsp;phút</span></figcaption>
+      </figure>
+    </div>
+    <div class="ft-bot">
+      <div>
+        <a class="logo" href="#top"><span class="seal jp" aria-hidden="true">灯</span><span><b>AKARI</b><small>Omakase · Sài&nbsp;Gòn</small></span></a>
+        <p>Quầy omakase Nhật Bản 12 ghế. Hai suất mỗi tối, 14 món theo mùa, bếp trưởng chọn&nbsp;món.</p>
+      </div>
+      <div><h4>Trang</h4><ul class="links"><li><a href="#cau-chuyen">Câu chuyện</a></li><li><a href="#buoi-toi">Một buổi tối</a></li><li><a href="#thuc-don">Thực đơn</a></li><li><a href="#giu-cho">Chọn ghế</a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul class="links"><li>Phường Sài Gòn, TP.HCM</li><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li>Thứ Ba – Chủ nhật</li></ul></div>
+    </div>
+    <p class="note">Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var d=document,w=window,$=function(s,c){return (c||d).querySelector(s)},$$=function(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))};
+d.documentElement.classList.add('js');
+var RM=w.matchMedia&&w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var PRICE=2800000,DEP=1000000,SAKE=1200000,MAX=6;
+function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'đ'}
+function pad(n){return (n<10?'0':'')+n}
+function tween(el,to,f,dur){var from=el._v==null?to:el._v;el._v=to;if(el._r)cancelAnimationFrame(el._r);if(RM||from===to){el.textContent=f(to);return}var t0=performance.now();dur=dur||650;(function tick(t){var k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);el.textContent=f(from+(to-from)*e);if(k<1)el._r=requestAnimationFrame(tick)})(t0)}
+var money=function(v){return fmt(Math.round(v/1000)*1000)};
+
+/* header, badge, mục đang xem */
+var hdr=$('#hdr'),badge=$('#ktBadge');
+function onScroll(){var y=w.pageYOffset;hdr.classList.toggle('scrolled',y>8);badge.classList.toggle('show',y>w.innerHeight*.85)}
+w.addEventListener('scroll',onScroll,{passive:true});onScroll();
+var navLinks=$$('.nav a');
+if('IntersectionObserver' in w){var nio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){navLinks.forEach(function(a){a.classList.toggle('cur',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+  navLinks.forEach(function(a){var s=$(a.getAttribute('href'));if(s)nio.observe(s)})}
+
+/* menu mobile */
+var mnav=$('#mnav'),mBtn=$('#menuBtn'),mClose=$('#menuClose');
+function setMenu(open){mnav.classList.toggle('open',open);d.body.classList.toggle('lock',open);mBtn.setAttribute('aria-expanded',open?'true':'false');if(open){mClose.focus()}else{mBtn.focus({preventScroll:true})}}
+mBtn.addEventListener('click',function(){setMenu(true)});
+mClose.addEventListener('click',function(){setMenu(false)});
+$$('a',mnav).forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');d.body.classList.remove('lock');mBtn.setAttribute('aria-expanded','false')})});
+d.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('open'))setMenu(false)});
+
+/* hiện dần */
+var rvs=$$('.rv,.clip');
+if('IntersectionObserver' in w){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.06});
+  rvs.forEach(function(el){io.observe(el)});
+}else{rvs.forEach(function(el){el.classList.add('in')})}
+
+/* parallax nhẹ (transform), chỉ chạy khi phần tử trong màn hình */
+var pars=$$('[data-par]');
+if(!RM&&pars.length&&'IntersectionObserver' in w){
+  var vis=[],pt=0;
+  var pio=new IntersectionObserver(function(es){es.forEach(function(e){var i=vis.indexOf(e.target);if(e.isIntersecting&&i<0)vis.push(e.target);if(!e.isIntersecting&&i>=0)vis.splice(i,1)})});
+  pars.forEach(function(p){pio.observe(p)});
+  function par(){pt=0;var vh=w.innerHeight;vis.forEach(function(el){var r=el.parentNode.getBoundingClientRect(),c=(r.top+r.height/2-vh/2);el.style.transform='translate3d(0,'+(c*-parseFloat(el.getAttribute('data-par'))).toFixed(1)+'px,0)'})}
+  w.addEventListener('scroll',function(){if(!pt&&vis.length)pt=requestAnimationFrame(par)},{passive:true});
+}
+
+/* ===== một buổi tối: cuộn có biên đạo ===== */
+var eve=$('#eve'),chaps=$$('.chap'),frames=$$('.frames img'),clock=$('#clock'),chNo=$('#chNo'),chCap=$('#chCap'),evBar=$('#evBar'),chList=$('#chapters'),rail=d.createElement('span');
+rail.className='rail';rail.setAttribute('aria-hidden','true');chList.appendChild(rail);
+var curCh=0,eveOn=false,et=0;clock._v=17*60+45;
+function hm(v){v=Math.round(v);return pad(Math.floor(v/60))+':'+pad(v%60)}
+function setCh(i){if(i===curCh)return;curCh=i;
+  chaps.forEach(function(c,k){c.classList.toggle('on',k===i)});
+  frames.forEach(function(f,k){f.classList.toggle('on',k===i)});
+  var t=chaps[i].getAttribute('data-t').split(':');tween(clock,+t[0]*60+ +t[1],hm,900);
+  chNo.textContent=pad(i+1);chCap.innerHTML=chaps[i].getAttribute('data-cap')}
+function eveTick(){et=0;var vh=w.innerHeight,line=vh*(w.innerWidth<=980?.72:.55),r=chList.getBoundingClientRect(),p=Math.max(0,Math.min(1,(line-r.top)/r.height)),i=0;
+  chaps.forEach(function(c,k){if(c.getBoundingClientRect().top<line)i=k});
+  rail.style.transform='scaleY('+p.toFixed(4)+')';evBar.style.transform='scaleX('+p.toFixed(4)+')';setCh(i)}
+if('IntersectionObserver' in w){
+  new IntersectionObserver(function(es){eveOn=es[0].isIntersecting;if(eveOn)eveTick()}).observe(eve);
+  w.addEventListener('scroll',function(){if(eveOn&&!et)et=requestAnimationFrame(eveTick)},{passive:true});
+}else{chaps.forEach(function(c){c.classList.add('on')})}
+
+/* ===== thực đơn cuộn ngang ===== */
+var track=$('#track'),dishes=$$('.dish',track),cnt=$('#cntNow'),prev=$('#prev'),next=$('#next'),ticks=$('#ticks'),cur=-1;
+dishes.forEach(function(_,i){var b=d.createElement('button');b.type='button';b.setAttribute('aria-label','Món '+(i+1));b.addEventListener('click',function(){go(i)});ticks.appendChild(b)});
+var tickBtns=$$('button',ticks);
+function step(){return dishes.length>1?dishes[1].offsetLeft-dishes[0].offsetLeft:track.clientWidth}
+function go(i){i=Math.max(0,Math.min(dishes.length-1,i));track.scrollTo({left:dishes[i].offsetLeft-dishes[0].offsetLeft,behavior:RM?'auto':'smooth'})}
+function sync(){var max=track.scrollWidth-track.clientWidth,i=Math.round(track.scrollLeft/step());if(track.scrollLeft>=max-4)i=dishes.length-1;i=Math.max(0,Math.min(dishes.length-1,i));
+  if(i!==cur){cur=i;dishes.forEach(function(el,k){el.classList.toggle('on',k===i)});tickBtns.forEach(function(b,k){b.classList.toggle('on',k<=i)});cnt.textContent=pad(i+1)}
+  prev.disabled=track.scrollLeft<4;next.disabled=track.scrollLeft>=max-4}
+var raf=0;track.addEventListener('scroll',function(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;sync()})},{passive:true});
+prev.addEventListener('click',function(){go(cur-1)});next.addEventListener('click',function(){go(cur+1)});
+track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}else if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
+var dragging=false,sx=0,sl=0;
+track.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;dragging=true;sx=e.clientX;sl=track.scrollLeft});
+w.addEventListener('pointermove',function(e){if(!dragging)return;var dx=e.clientX-sx;if(Math.abs(dx)>4)track.classList.add('drag');track.scrollLeft=sl-dx});
+w.addEventListener('pointerup',function(){if(!dragging)return;dragging=false;if(track.classList.contains('drag')){track.classList.remove('drag');go(Math.round(track.scrollLeft/step()))}});
+sync();
+var lastW=w.innerWidth;w.addEventListener('resize',function(){if(w.innerWidth===lastW)return;lastW=w.innerWidth;sync();if(eveOn)eveTick()});
+
+/* ===== giữ chỗ ===== */
+var SEATS=[];
+for(var i=0;i<8;i++)SEATS.push({n:i+1,x:+(9+i*8.15).toFixed(2),y:9,px:+(9+i*8.15).toFixed(2),py:24});
+[38,54,70,86].forEach(function(y,k){SEATS.push({n:9+k,x:89,y:y,px:76,py:y})});
+var INFO={1:'Đầu quầy, gần lối vào, yên tĩnh',2:'Đầu quầy, nhìn chéo vào thớt',3:'Giữa quầy, đối diện thớt của bếp trưởng',4:'Chính giữa quầy, đối diện thớt',5:'Chính giữa quầy, đối diện thớt',6:'Giữa quầy, gần khu nướng than',7:'Gần góc quầy, thấy rõ khu nướng than',8:'Ngay góc quầy, nhìn được cả hai phía',9:'Cạnh góc quầy, hợp nhóm ngồi quay vào nhau',10:'Cạnh góc quầy, hợp nhóm 2–4 người',11:'Cạnh góc quầy, hợp nhóm 2–4 người',12:'Cuối quầy, riêng tư, hợp buổi hẹn'};
+var map=$('#map'),tip=$('#tip'),seatInfo=$('#seatInfo');
+SEATS.forEach(function(s){
+  var p=d.createElement('span');p.className='plate';p.style.cssText='--x:'+s.px+';--y:'+s.py;map.appendChild(p);s.plate=p;
+  var b=d.createElement('button');b.type='button';b.className='seat';b.innerHTML='<span>'+s.n+'</span>';b.style.cssText='--x:'+s.x+';--y:'+s.y;b.setAttribute('aria-pressed','false');
+  b.addEventListener('click',function(){toggleSeat(s)});
+  b.addEventListener('mouseenter',function(){showInfo(s,true)});b.addEventListener('focus',function(){showInfo(s,true)});
+  b.addEventListener('mouseleave',hideTip);b.addEventListener('blur',hideTip);
+  map.appendChild(b);s.el=b});
+map.addEventListener('keydown',function(e){var k=e.key,idx=SEATS.findIndex(function(s){return s.el===d.activeElement});if(idx<0)return;
+  var to=k==='ArrowRight'||k==='ArrowDown'?idx+1:k==='ArrowLeft'||k==='ArrowUp'?idx-1:k==='Home'?0:k==='End'?SEATS.length-1:null;if(to==null)return;e.preventDefault();SEATS[(to+SEATS.length)%SEATS.length].el.focus()});
+function rng(str){var h=1779033703^str.length;for(var i=0;i<str.length;i++){h=Math.imul(h^str.charCodeAt(i),3432918353);h=h<<13|h>>>19}return function(){h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
+var mine={};
+function taken(key,sess){var r=rng(key+'|'+sess),n=3+Math.floor(r()*6),arr=[1,2,3,4,5,6,7,8,9,10,11,12];for(var i=arr.length-1;i>0;i--){var j=Math.floor(r()*(i+1)),t=arr[i];arr[i]=arr[j];arr[j]=t}var set={};arr.slice(0,n).forEach(function(x){set[x]=1});(mine[key+'|'+sess]||[]).forEach(function(x){set[x]=1});return set}
+function leftCount(key,sess){return 12-Object.keys(taken(key,sess)).length}
+function dotsHTML(tk){var h='';for(var i=1;i<=12;i++)h+='<i'+(tk[i]?' class="t"':'')+'></i>';return h}
+var WD=['CN','T2','T3','T4','T5','T6','T7'],WDL=['Chủ nhật','Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+var days=[],t0=new Date();t0.setHours(12,0,0,0);
+for(var k=0;days.length<10&&k<14;k++){var dt=new Date(t0.getTime()+k*864e5);if(dt.getDay()===1)continue;days.push(dt)}
+function key(dt){return dt.getFullYear()+'-'+pad(dt.getMonth()+1)+'-'+pad(dt.getDate())}
+function dLong(dt){return WDL[dt.getDay()]+', '+pad(dt.getDate())+'/'+pad(dt.getMonth()+1)+'/'+dt.getFullYear()}
+var state={day:0,sess:'18:00',sel:[]};
+var datesEl=$('#dates');
+days.forEach(function(dt,i){var b=d.createElement('button');b.type='button';b.className='date';b.setAttribute('aria-pressed',i===0?'true':'false');b.innerHTML='<small>'+(key(dt)===key(t0)?'Hôm nay':WD[dt.getDay()])+'</small><b>'+pad(dt.getDate())+'/'+pad(dt.getMonth()+1)+'</b><span></span>';b.addEventListener('click',function(){state.day=i;state.sel=[];render()});datesEl.appendChild(b)});
+$$('#sess button').forEach(function(b){b.addEventListener('click',function(){state.sess=b.getAttribute('data-s');state.sel=[];render();hideTip()})});
+function pop(el){if(RM||!el.animate)return;el.animate([{transform:'scale(.82)'},{transform:'scale(1.08)'},{transform:'scale(1)'}],{duration:420,easing:'cubic-bezier(.22,.8,.2,1)'})}
+function shake(el){if(RM||!el.animate)return;el.animate([{transform:'translateX(0)'},{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'translateX(-2px)'},{transform:'translateX(0)'}],{duration:360})}
+function toggleSeat(s){var n=s.n,tk=taken(key(days[state.day]),state.sess);
+  if(tk[n]){shake(s.el.firstChild);showInfo(s,true);return}
+  var i=state.sel.indexOf(n);if(i>=0)state.sel.splice(i,1);else{if(state.sel.length>=MAX){seatInfo.innerHTML='Mỗi lần giữ tối đa '+MAX+' ghế. Nhóm đông hơn vui lòng gọi 0900&nbsp;000&nbsp;000.';shake(s.el.firstChild);return}state.sel.push(n)}
+  state.sel.sort(function(a,b){return a-b});render();pop(s.el.firstChild);showInfo(s,true)}
+function seatStatus(s){var tk=taken(key(days[state.day]),state.sess)[s.n];return tk?'Đã có khách':state.sel.indexOf(s.n)>=0?'Bạn đang chọn':'Còn trống'}
+function showInfo(s,withTip){var st=seatStatus(s);seatInfo.innerHTML='<b>Ghế '+s.n+'</b>: '+INFO[s.n].toLowerCase()+'. '+st+'.';
+  if(!withTip||w.innerWidth<=720)return;
+  $('#tipN').textContent='Ghế '+s.n;$('#tipS').textContent=st;$('#tipT').textContent=INFO[s.n];
+  var mr=map.getBoundingClientRect(),br=s.el.getBoundingClientRect(),tw=tip.offsetWidth,th=tip.offsetHeight,cx=br.left-mr.left+br.width/2,top;
+  var left=Math.max(8,Math.min(mr.width-tw-8,cx-tw/2));
+  top=s.y<30?br.bottom-mr.top+10:br.top-mr.top-th-10;
+  tip.style.left=left+'px';tip.style.top=top+'px';tip.classList.add('show')}
+function hideTip(){tip.classList.remove('show')}
+var sakeEl=$('#sake');sakeEl.addEventListener('change',render);
+var stepLis=$$('#stepper li'),stepFill=$('#stepFill'),toForm=$('#toForm');
+function render(){
+  var dt=days[state.day],kk=key(dt),tk=taken(kk,state.sess);
+  $$('.date',datesEl).forEach(function(b,i){var dk=key(days[i]),l=leftCount(dk,'18:00')+leftCount(dk,'20:30');b.setAttribute('aria-pressed',i===state.day?'true':'false');b.querySelector('span').textContent=l?'còn '+l:'hết';b.setAttribute('aria-label',dLong(days[i])+', còn '+l+' ghế')});
+  $$('#sess button').forEach(function(b){var s=b.getAttribute('data-s'),t=taken(kk,s),l=12-Object.keys(t).length;b.setAttribute('aria-pressed',s===state.sess?'true':'false');b.querySelector('[data-left]').textContent=l?'còn '+l+' ghế':'hết ghế';b.querySelector('[data-dots]').innerHTML=dotsHTML(t);b.setAttribute('aria-label','Suất '+s+', còn '+l+' ghế')});
+  SEATS.forEach(function(s){var t=!!tk[s.n],on=state.sel.indexOf(s.n)>=0;s.el.setAttribute('aria-disabled',t?'true':'false');s.el.setAttribute('aria-pressed',on?'true':'false');s.el.setAttribute('aria-label','Ghế '+s.n+', '+INFO[s.n].toLowerCase()+(t?', đã có khách':on?', bạn đang chọn':', còn trống'));s.plate.classList.toggle('on',on)});
+  var n=state.sel.length;
+  $('#sDate').textContent=dLong(dt);$('#sSess').textContent=state.sess+(state.sess==='18:00'?'–20:00':'–22:30');
+  $('#sSeats').textContent=n?state.sel.join(', ')+' ('+n+' khách)':'Chưa chọn';
+  $('#sMenu').textContent=n?n+' × '+fmt(PRICE):'0đ';
+  $('#sSake').textContent=sakeEl.checked&&n?n+' × '+fmt(SAKE):'Không';
+  tween($('#sDep'),n*DEP,money);
+  var total=n*PRICE+(sakeEl.checked?n*SAKE:0);
+  $('#sRest').textContent=n?'Tạm tính '+fmt(total)+', còn lại '+fmt(total-n*DEP)+' thanh toán tại quán.':'Chọn ít nhất một ghế để tính cọc.';
+  stepLis[2].className=n?'done':'cur';stepLis[3].className=n?'cur':'';
+  stepFill.style.transform='scaleX('+(n?.875:.625)+')';
+  toForm.classList.toggle('show',n>0);
+  renderTonight();
+}
+function renderTonight(){var box=$('#tonight'),dt=days[0],kk=key(dt);$('#tonightLabel').textContent=(kk===key(t0)?'Tối nay':dLong(dt).split(',')[0])+', '+pad(dt.getDate())+'/'+pad(dt.getMonth()+1);
+  $$('button',box).forEach(function(b){b.remove()});
+  ['18:00','20:30'].forEach(function(s){var t=taken(kk,s),l=12-Object.keys(t).length,b=d.createElement('button');b.type='button';b.setAttribute('aria-label','Suất '+s+' tối nay, còn '+l+' ghế. Chọn ghế');b.innerHTML='<span>Suất '+s+'</span><span class="dots" aria-hidden="true">'+dotsHTML(t)+'</span><em>'+(l?'còn '+l:'hết')+'</em>';b.addEventListener('click',function(){state.day=0;state.sess=s;state.sel=[];render();$('#giu-cho').scrollIntoView({behavior:RM?'auto':'smooth'})});box.appendChild(b)})}
+render();
+
+/* form */
+var form=$('#bookForm'),done=$('#done'),msg=$('#formMsg'),nameEl=$('#name'),phoneEl=$('#phone'),btn=$('#submitBtn'),holdTimer=0;
+function phoneOk(v){return /^(0|\+84)\d{9,10}$/.test(v.replace(/[\s.]/g,''))}
+phoneEl.addEventListener('input',function(){var v=phoneEl.value;if(/^\+/.test(v))return;var dg=v.replace(/\D/g,'').slice(0,11),o=dg.slice(0,4)+(dg.length>4?' '+dg.slice(4,7):'')+(dg.length>7?' '+dg.slice(7):'');if(o!==v)phoneEl.value=o;liveCheck()});
+nameEl.addEventListener('input',liveCheck);
+function liveCheck(){var nm=nameEl.value.trim().length>1,ph=phoneOk(phoneEl.value);$('#fName').classList.toggle('good',nm);$('#fPhone').classList.toggle('good',ph);if(nm)$('#fName').classList.remove('bad');if(ph)$('#fPhone').classList.remove('bad')}
+nameEl.addEventListener('blur',function(){if(nameEl.value&&!nameEl.value.trim())$('#fName').classList.add('bad')});
+phoneEl.addEventListener('blur',function(){if(phoneEl.value&&!phoneOk(phoneEl.value))$('#fPhone').classList.add('bad')});
+form.addEventListener('submit',function(e){
+  e.preventDefault();var ok=true;msg.textContent='';
+  var nm=nameEl.value.trim(),ph=phoneEl.value.trim();
+  $('#fName').classList.toggle('bad',!nm);if(!nm)ok=false;
+  $('#fPhone').classList.toggle('bad',!phoneOk(ph));if(!phoneOk(ph))ok=false;
+  var c=$('#consent').checked;$('#cConsent').classList.toggle('bad',!c);
+  if(!state.sel.length){msg.textContent='Bạn chưa chọn ghế nào trên sơ đồ quầy.';ok=false}
+  else if(!ok){msg.textContent='Vui lòng kiểm tra lại họ tên và số điện thoại.'}
+  else if(!c){msg.textContent='Vui lòng đồng ý xử lý dữ liệu cá nhân để giữ chỗ.';ok=false}
+  if(!ok){shake(btn);return}
+  btn.classList.add('busy');$('#submitTxt').textContent='Đang giữ ghế…';
+  setTimeout(function(){
+    btn.classList.remove('busy');$('#submitTxt').innerHTML='Giữ&nbsp;ghế, nhận mã&nbsp;cọc';
+    var dt=days[state.day],kk=key(dt)+'|'+state.sess,n=state.sel.length;mine[kk]=(mine[kk]||[]).concat(state.sel);
+    $('#doneText').innerHTML='Cảm ơn '+nm.replace(/[<>&"]/g,'')+'. Akari đang giữ ghế <b>'+state.sel.join(', ')+'</b>, suất '+state.sess+', '+dLong(dt)+'. Vui lòng chuyển cọc <b>'+fmt(n*DEP)+'</b> để hoàn tất.';
+    $('#doneCode').textContent='AK-'+pad(dt.getDate())+pad(dt.getMonth()+1)+'-'+state.sess.replace(':','')+'-'+state.sel.join('');
+    drawQR($('#doneCode').textContent);
+    hideTip();form.style.display='none';done.classList.add('show');done.focus({preventScroll:true});
+    stepLis[3].className='done';stepFill.style.transform='scaleX(1)';
+    var left=1800,hT=$('#holdT');clearInterval(holdTimer);hT.textContent='30:00';
+    holdTimer=setInterval(function(){left--;if(left<0){clearInterval(holdTimer);return}hT.textContent=pad(Math.floor(left/60))+':'+pad(left%60)},1000);
+    state.sel=[];var keep=stepLis[3].className;render();stepLis[2].className='done';stepLis[3].className=keep;stepFill.style.transform='scaleX(1)';
+  },RM?0:900);
+});
+$('#consent').addEventListener('change',function(){if(this.checked){$('#cConsent').classList.remove('bad');if(/đồng ý/.test(msg.textContent))msg.textContent=''}});
+$('#again').addEventListener('click',function(){clearInterval(holdTimer);done.classList.remove('show');form.reset();$('#fName').classList.remove('good');$('#fPhone').classList.remove('good');form.style.display='';render();map.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'})});
+function drawQR(s){var r=rng(s),svg=$('#qr'),h='<rect width="25" height="25" fill="#F1E8DC"/>';
+  function finder(x,y){h+='<rect x="'+x+'" y="'+y+'" width="7" height="7" fill="#0A0706"/><rect x="'+(x+1)+'" y="'+(y+1)+'" width="5" height="5" fill="#F1E8DC"/><rect x="'+(x+2)+'" y="'+(y+2)+'" width="3" height="3" fill="#0A0706"/>'}
+  finder(0,0);finder(18,0);finder(0,18);
+  for(var y=0;y<25;y++)for(var x=0;x<25;x++){if((x<8&&y<8)||(x>16&&y<8)||(x<8&&y>16))continue;if(r()>.55)h+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="#0A0706"/>'}
+  svg.innerHTML=h}
+})();
+</script>
+</body>
+</html>

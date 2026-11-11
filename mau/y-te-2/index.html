@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phòng khám Nhi ngoài giờ Hà Nội – Khám tối, cuối tuần | Nhi Mộc</title>
+<meta name="description" content="Phòng khám Nhi ngoài giờ ở Hà Nội: khám bệnh thường gặp, tiêm chủng, dinh dưỡng, tư vấn phát triển. Mở 17:30–21:30 ngày thường, 08:00–21:00 cuối tuần. Lấy số trực tuyến.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#FFF6E6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='34' width='24' height='24' rx='5' fill='%23C2582F'/%3E%3Crect x='34' y='34' width='24' height='24' rx='5' fill='%238CCBEA'/%3E%3Crect x='20' y='8' width='24' height='24' rx='5' fill='%23F7C948'/%3E%3Cpath d='M32 15v10M27 20h10' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF6E6;--cream-2:#FBEACB;--paper:#FFFCF5;
+  --butter:#F7C948;--butter-2:#FFE08A;--butter-edge:#D9A521;
+  --sky:#BFE3F5;--sky-2:#8CCBEA;--sky-edge:#5FA9CF;--sky-ink:#1F5E80;
+  --clay:#B4532C;--clay-2:#C2582F;--clay-edge:#8A3C1D;--clay-soft:#F3C9AE;
+  --wood:#E6BC86;--wood-edge:#C39256;
+  --ink:#3B2A1E;--ink-2:#6A5242;--line:#EBD9BA;
+  --red:#B3261E;
+  --sans:'Be Vietnam Pro',system-ui,sans-serif;--disp:'Nunito','Be Vietnam Pro',sans-serif;
+  --r:22px;--ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:900;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+:focus-visible{outline:3px solid var(--sky-ink);outline-offset:3px;border-radius:8px}
+.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+section[id]{scroll-margin-top:86px}
+.sec{padding:clamp(72px,9vw,124px) 0;position:relative}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 10px;border-radius:12px;background:var(--butter-2);box-shadow:0 3px 0 var(--butter-edge);font:800 13px/1.2 var(--disp);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.tag i{width:12px;height:12px;border-radius:3px;background:var(--clay-2);transform:rotate(12deg)}
+.tag.sky{background:var(--sky);box-shadow:0 3px 0 var(--sky-edge)}
+.tag.sky i{background:var(--sky-ink)}
+.h2{font-size:clamp(34px,5vw,62px);margin:18px 0 16px}
+.lead{font-size:clamp(17px,1.5vw,19px);color:var(--ink-2);max-width:600px}
+.mark{background:linear-gradient(transparent 58%,var(--butter-2) 58%,var(--butter-2) 92%,transparent 92%);padding:0 .08em}
+.sample{display:inline-block;padding:3px 10px;border-radius:8px;background:var(--ink);color:var(--butter-2);font:700 11.5px/1.4 var(--sans);letter-spacing:.04em;text-transform:uppercase}
+.note{font-size:14px;color:var(--ink-2)}
+
+/* buttons: wooden block */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:16px;font:800 17px/1.1 var(--disp);text-decoration:none;white-space:nowrap;transition:transform .15s var(--ease),box-shadow .15s var(--ease);position:relative;top:0}
+.btn .ico{width:20px;height:20px}
+.btn-clay{background:var(--clay);color:#fff;box-shadow:0 6px 0 var(--clay-edge)}
+.btn-butter{background:var(--butter);color:var(--ink);box-shadow:0 6px 0 var(--butter-edge)}
+.btn-ghost{background:var(--paper);color:var(--ink);box-shadow:0 6px 0 var(--line),inset 0 0 0 2px var(--line)}
+.btn:hover{transform:translateY(-2px)}
+.btn-clay:hover{box-shadow:0 8px 0 var(--clay-edge)}
+.btn-butter:hover{box-shadow:0 8px 0 var(--butter-edge)}
+.btn:active{transform:translateY(5px);box-shadow:0 1px 0 var(--clay-edge)}
+.btn-butter:active{box-shadow:0 1px 0 var(--butter-edge)}
+.btn-ghost:active{box-shadow:0 1px 0 var(--line),inset 0 0 0 2px var(--line)}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;transition:background .25s,box-shadow .25s}
+.hdr.scrolled{background:rgba(255,246,230,.97);box-shadow:0 2px 0 var(--line)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:78px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:44px;height:44px}
+.logo b{display:block;font:900 23px/1 var(--disp)}
+.logo small{display:block;font:600 11.5px/1.3 var(--sans);color:var(--ink-2);letter-spacing:.04em}
+.nav{display:flex;align-items:center;gap:4px}
+.nav a{padding:9px 12px;border-radius:10px;font:700 15px/1 var(--disp);text-decoration:none;color:var(--ink)}
+.nav a:hover{background:var(--cream-2)}
+.hdr .btn{min-height:46px;font-size:15px;padding:0 18px;box-shadow:0 4px 0 var(--clay-edge)}
+.burger{display:none;width:48px;height:48px;border-radius:14px;background:var(--butter);box-shadow:0 4px 0 var(--butter-edge);align-items:center;justify-content:center}
+.mnav{position:fixed;inset:0;z-index:70;background:var(--cream);padding:96px 24px 32px;display:flex;flex-direction:column;gap:8px;transform:translateY(-102%);transition:transform .35s var(--ease);visibility:hidden;overflow:auto}
+.mnav.open{transform:none;visibility:visible}
+.mnav a{font:900 28px/1.2 var(--disp);text-decoration:none;padding:10px 0;border-bottom:2px dashed var(--line)}
+.mnav .btn{margin-top:18px;font-size:18px;border-bottom:0;padding:0 24px}
+.mnav-close{position:absolute;top:15px;right:16px;width:48px;height:48px;border-radius:14px;background:var(--sky);box-shadow:0 4px 0 var(--sky-edge);display:flex;align-items:center;justify-content:center}
+body.lock{overflow:hidden}
+
+/* hero */
+.hero{padding:118px 0 70px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-12vw;top:-8vw;width:58vw;height:58vw;max-width:860px;max-height:860px;border-radius:38% 62% 55% 45%/48% 40% 60% 52%;background:var(--sky);opacity:.55;z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hours-chip{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 8px;border-radius:999px;background:var(--paper);box-shadow:0 3px 0 var(--line);font:700 14px/1.3 var(--sans)}
+.hours-chip .moon{width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--butter);display:flex;align-items:center;justify-content:center}
+.hours-chip .moon .ico{width:17px;height:17px}
+.hero h1{font-size:clamp(42px,6.2vw,84px);margin:22px 0 20px;line-height:1.02}
+.hero h1 .c{color:var(--clay)}
+.hero .lead{font-size:clamp(17px,1.6vw,20px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 28px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.hero-facts li{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:12px;background:var(--cream-2);font:600 14.5px/1.3 var(--sans)}
+.hero-facts .ico{width:18px;height:18px;color:var(--clay)}
+.hero-art{position:relative;aspect-ratio:1/1.02;max-width:560px;justify-self:end;width:100%}
+.ph-main{position:absolute;right:0;top:0;width:78%;height:76%;border-radius:200px 200px 28px 28px;overflow:hidden;box-shadow:0 10px 0 var(--wood-edge);background:var(--wood)}
+.ph-main img,.ph-sub img{width:100%;height:100%;object-fit:cover}
+.ph-sub{position:absolute;left:0;bottom:4%;width:42%;aspect-ratio:1;border-radius:26px;overflow:hidden;box-shadow:0 8px 0 var(--sky-edge);border:6px solid var(--sky)}
+.bear{position:absolute;right:-2%;bottom:-2%;width:46%;z-index:2}
+.ticket{position:absolute;left:4%;top:12%;z-index:3;background:var(--paper);border-radius:20px;padding:14px 18px;box-shadow:0 6px 0 var(--butter-edge),0 0 0 3px var(--butter) inset;min-width:180px}
+.ticket small{display:block;font:700 12px/1.3 var(--sans);color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em}
+.ticket b{display:block;font:900 46px/1 var(--disp);color:var(--clay)}
+.ticket span{font:600 13.5px/1.3 var(--sans);color:var(--ink-2)}
+.ticket .live{display:inline-block;width:9px;height:9px;border-radius:50%;background:#2E9D5B;margin-right:6px;vertical-align:1px}
+.float{animation:bob 5s ease-in-out infinite}
+.float.d2{animation-delay:-2.2s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.in-anim{animation:pop .9s var(--ease) both}
+.in-anim.d1{animation-delay:.1s}.in-anim.d2{animation-delay:.2s}.in-anim.d3{animation-delay:.3s}.in-anim.d4{animation-delay:.45s}
+@keyframes pop{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* block strip */
+.strip{padding:6px 0 0}
+.strip-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.blk{border-radius:20px;padding:20px 22px;position:relative}
+.blk b{display:block;font:900 26px/1.1 var(--disp)}
+.blk span{font:500 15px/1.45 var(--sans)}
+.blk.b1{background:var(--butter);box-shadow:0 7px 0 var(--butter-edge)}
+.blk.b2{background:var(--sky);box-shadow:0 7px 0 var(--sky-edge)}
+.blk.b3{background:var(--clay-soft);box-shadow:0 7px 0 #D79A78}
+.blk.b4{background:var(--wood);box-shadow:0 7px 0 var(--wood-edge)}
+.blk .dot{position:absolute;right:16px;top:16px;width:14px;height:14px;border-radius:50%;background:rgba(59,42,30,.18)}
+
+/* pain: evening timeline */
+.pain-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:46px}
+.eve{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.eve::before{content:"";position:absolute;left:4%;right:4%;top:34px;height:4px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--wood-edge) 0 14px,transparent 14px 24px)}
+.eve-card{position:relative;padding-top:70px}
+.eve-time{position:absolute;top:0;left:0;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:14px;background:var(--ink);color:var(--butter-2);font:900 22px/1 var(--disp);box-shadow:0 5px 0 #1f160f}
+.eve-body{background:var(--paper);border-radius:22px;padding:22px 22px 24px;box-shadow:0 7px 0 var(--line);height:100%}
+.eve-card:nth-child(2) .eve-body{transform:rotate(-1.2deg)}
+.eve-card:nth-child(4) .eve-body{transform:rotate(1deg)}
+.eve-body h3{font-size:21px;margin-bottom:8px}
+.eve-body p{font-size:15.5px;color:var(--ink-2)}
+.eve-photo{margin-top:46px;display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center;background:var(--ink);color:var(--cream);border-radius:32px;padding:18px;overflow:hidden}
+.eve-photo .ph{border-radius:22px;overflow:hidden;aspect-ratio:4/3}
+.eve-photo img{width:100%;height:100%;object-fit:cover}
+.eve-photo blockquote{font:800 clamp(24px,2.8vw,36px)/1.25 var(--disp);padding:10px 22px 10px 6px}
+.eve-photo blockquote span{color:var(--butter)}
+.eve-photo p{font:500 15px/1.6 var(--sans);color:#E9D9C3;margin-top:14px}
+
+/* solution: stacking blocks */
+.sol{background:var(--paper)}
+.sol-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.tower{display:flex;flex-direction:column;gap:14px}
+.tw{display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:center;border-radius:24px;padding:20px 24px;transform-origin:50% 100%}
+.tw .n{width:76px;height:76px;border-radius:18px;background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;font:900 38px/1 var(--disp)}
+.tw h3{font-size:clamp(21px,2vw,25px);margin-bottom:4px}
+.tw p{font-size:15.5px;color:var(--ink-2)}
+.tw.t1{background:var(--butter);box-shadow:0 8px 0 var(--butter-edge);margin-right:12%}
+.tw.t2{background:var(--sky);box-shadow:0 8px 0 var(--sky-edge);margin-left:8%;margin-right:4%}
+.tw.t3{background:var(--clay-soft);box-shadow:0 8px 0 #D79A78;margin-left:16%}
+.js .tower .tw{opacity:0;transform:translateY(-60px) rotate(-3deg)}
+.js .tower.in .tw{opacity:1;transform:none;transition:transform .7s cubic-bezier(.3,1.5,.5,1),opacity .4s}
+.js .tower.in .tw.t2{transition-delay:.18s}.js .tower.in .tw.t3{transition-delay:.36s}
+
+/* services */
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.svc{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.card{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 7px 0 var(--line);display:flex;flex-direction:column}
+.card .ph{aspect-ratio:16/10;overflow:hidden;background:var(--wood)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.card:hover .ph img{transform:scale(1.04)}
+.card .bd{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:24px}
+.card p{font-size:15.5px;color:var(--ink-2)}
+.card ul{list-style:none;display:grid;gap:6px;font-size:15px}
+.card li{display:flex;gap:8px;align-items:flex-start}
+.card li .ico{width:18px;height:18px;margin-top:3px;color:var(--clay)}
+.card .price{margin-top:auto;padding-top:12px;border-top:2px dashed var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:8px;font:900 22px/1.2 var(--disp)}
+.card .price small{font:600 13px/1.3 var(--sans);color:var(--ink-2)}
+.c1{grid-column:span 7}.c2{grid-column:span 5}.c3{grid-column:span 5}.c4{grid-column:span 7}
+.c1 .ph,.c4 .ph{aspect-ratio:16/8.4}
+.c2{background:var(--sky)}.c2 .card,.c2.card{box-shadow:0 7px 0 var(--sky-edge)}
+.c3.card{background:var(--butter-2);box-shadow:0 7px 0 var(--butter-edge)}
+.c2 p,.c3 p,.c2 .price small,.c3 .price small{color:#4f3c2f}
+.c2 .price,.c3 .price{border-color:rgba(59,42,30,.25)}
+
+/* queue */
+.queue{background:var(--sky);position:relative;overflow:hidden}
+.queue::after{content:"";position:absolute;left:-80px;bottom:-80px;width:260px;height:260px;border-radius:40px;background:var(--sky-2);opacity:.5;transform:rotate(18deg)}
+.q-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start;position:relative;z-index:1}
+.board{background:var(--ink);color:var(--cream);border-radius:28px;padding:26px;box-shadow:0 9px 0 #1f160f}
+.board-top{display:flex;justify-content:space-between;align-items:center;gap:10px;font:700 13px/1.3 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:#E5D3BB}
+.board-top .live{display:inline-flex;align-items:center;gap:8px}
+.board-top .live i{width:10px;height:10px;border-radius:50%;background:#4CC37A}
+.now{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.now div{background:#4A3628;border-radius:18px;padding:16px}
+.now small{display:block;font:600 13px/1.3 var(--sans);color:#E5D3BB}
+.now b{display:block;font:900 64px/1 var(--disp);color:var(--butter)}
+.now div+div b{color:var(--sky)}
+.now b.flip{animation:flip .5s var(--ease)}
+@keyframes flip{0%{transform:translateY(-30%);opacity:0}100%{transform:none;opacity:1}}
+.board-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;font:600 14.5px/1.45 var(--sans);color:#F2E4CF}
+.board-stats b{display:block;font:900 22px/1.2 var(--disp);color:#fff}
+.board .note{color:#D9C4A8;margin-top:16px;font-size:13px}
+.qpanel{background:var(--paper);border-radius:28px;padding:26px;box-shadow:0 9px 0 var(--sky-edge)}
+.days{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.day{padding:10px 16px;border-radius:14px;background:var(--cream-2);box-shadow:0 4px 0 var(--line);font:800 15px/1.2 var(--disp);text-align:left}
+.day small{display:block;font:600 12.5px/1.3 var(--sans);color:var(--ink-2)}
+.day[aria-selected=true]{background:var(--butter);box-shadow:0 4px 0 var(--butter-edge)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
+.slot{padding:12px 12px 10px;border-radius:14px;background:var(--cream);box-shadow:0 4px 0 var(--line),inset 0 0 0 2px var(--line);text-align:left;transition:transform .15s}
+.slot b{display:block;font:900 19px/1.1 var(--disp)}
+.slot .bar{display:flex;gap:3px;margin:8px 0 5px}
+.slot .bar i{flex:1;height:7px;border-radius:3px;background:#E3D2B4}
+.slot .bar i.f{background:var(--clay-2)}
+.slot small{font:600 12.5px/1.2 var(--sans);color:var(--ink-2)}
+.slot:hover:not(:disabled){transform:translateY(-2px)}
+.slot[aria-pressed=true]{background:var(--sky);box-shadow:0 4px 0 var(--sky-edge),inset 0 0 0 2px var(--sky-ink)}
+.slot:disabled{opacity:.5;cursor:not-allowed}
+.qsum{margin:18px 0;padding:16px 18px;border-radius:16px;background:var(--cream-2);display:flex;gap:16px;align-items:center}
+.qsum .num{flex:none;width:72px;height:72px;border-radius:18px;background:var(--clay);color:#fff;display:flex;align-items:center;justify-content:center;font:900 32px/1 var(--disp);box-shadow:0 5px 0 var(--clay-edge)}
+.qsum p{font-size:15.5px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .full{grid-column:1/-1}
+.fld label{display:block;font:700 14px/1.3 var(--sans);margin-bottom:6px}
+.fld input,.fld select,.fld textarea{width:100%;min-height:50px;padding:12px 14px;border-radius:14px;border:2px solid var(--line);background:#fff;font-size:16px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--sky-ink);box-shadow:0 0 0 3px var(--sky)}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.5}
+.consent input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--clay)}
+.ferr{color:var(--red);font:600 14px/1.4 var(--sans);min-height:1px}
+.ok{display:none;padding:18px 20px;border-radius:18px;background:#E3F3E8;color:#1E5A35;font:600 15.5px/1.55 var(--sans);box-shadow:0 5px 0 #B5DCC2}
+.ok.show{display:block}
+.ok b{font-family:var(--disp);font-size:19px;display:block;margin-bottom:4px}
+
+/* vaccine */
+.vac-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+.vac-box{background:var(--butter);border-radius:28px;padding:28px;box-shadow:0 9px 0 var(--butter-edge);position:sticky;top:100px}
+.vac-box h3{font-size:26px;margin-bottom:8px}
+.vac-box .fld{margin:18px 0 12px}
+.vac-box .fld input{border-color:var(--butter-edge);font:800 22px/1 var(--disp);letter-spacing:.06em}
+.vac-row{display:flex;gap:10px;flex-wrap:wrap}
+.age{margin-top:16px;padding:14px 16px;border-radius:16px;background:var(--paper);font:600 15.5px/1.5 var(--sans);display:none}
+.age.show{display:block}
+.age b{font-family:var(--disp);font-size:22px;color:var(--clay)}
+.disc{margin-top:16px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.55);font:600 14px/1.5 var(--sans)}
+.tl{list-style:none;position:relative;display:grid;gap:14px}
+.tl::before{content:"";position:absolute;left:31px;top:12px;bottom:12px;width:4px;border-radius:4px;background:repeating-linear-gradient(var(--wood-edge) 0 10px,transparent 10px 18px)}
+.tl>li{display:grid;grid-template-columns:66px 1fr;gap:16px;align-items:start;position:relative}
+.tl .m{width:66px;height:66px;border-radius:16px;background:var(--paper);box-shadow:0 5px 0 var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;font:900 22px/1 var(--disp);z-index:1}
+.tl .m small{font:700 11px/1.2 var(--sans);color:var(--ink-2);margin-top:3px}
+.tl .c{background:var(--paper);border-radius:20px;padding:16px 18px;box-shadow:0 5px 0 var(--line)}
+.tl .c h4{font-size:19px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.tl .c ul{margin:8px 0 0 18px;font-size:15px;color:var(--ink-2)}
+.st{display:none;padding:4px 10px;border-radius:8px;font:700 12px/1.3 var(--sans)}
+.tl>li.past .st.s-past{display:inline-block;background:#E8E0D3;color:#5A4738}
+.tl>li.next .st.s-next{display:inline-block;background:var(--clay);color:#fff}
+.tl>li.future .st.s-fut{display:inline-block;background:var(--sky);color:var(--sky-ink)}
+.tl>li.past .m{background:#EFE6D6;color:#7C6756}
+.tl>li.next .m{background:var(--clay);color:#fff;box-shadow:0 5px 0 var(--clay-edge)}
+.tl>li.next .m small{color:#FBE4D6}
+.tl>li.next .c{box-shadow:0 5px 0 var(--clay-edge),inset 0 0 0 3px var(--clay)}
+.tl .when{font:600 13.5px/1.3 var(--sans);color:var(--sky-ink);margin-top:6px;display:none}
+.tl.on .when{display:block}
+
+/* emergency */
+.er{background:var(--ink);color:var(--cream)}
+.er .h2{color:#fff}
+.er .lead{color:#E7D6BF}
+.er .tag{background:#F6C2B4;box-shadow:0 3px 0 #C77A63}
+.er .tag i{background:var(--red)}
+.er-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;margin-top:40px;align-items:start}
+.signs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sign{display:flex;gap:12px;align-items:flex-start;padding:16px 16px;border-radius:18px;background:#4A3628;cursor:pointer;transition:background .2s,transform .15s;box-shadow:0 5px 0 #2A1D14}
+.sign:hover{transform:translateY(-2px)}
+.sign input{position:absolute;opacity:0;width:1px;height:1px}
+.sign .bx{flex:none;width:26px;height:26px;border-radius:8px;background:#6A5242;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.sign .bx .ico{width:16px;height:16px;color:#fff;opacity:0}
+.sign b{display:block;font:800 17px/1.3 var(--disp);color:#fff}
+.sign span{font:500 14px/1.45 var(--sans);color:#E3D0B6}
+.sign.on{background:#7A2A20;box-shadow:0 5px 0 #4F1610}
+.sign input:checked+.bx{background:#fff}
+.sign input:checked+.bx .ico{opacity:1;color:var(--red)}
+.sign input:focus-visible+.bx{outline:3px solid var(--butter);outline-offset:2px}
+.er-panel{position:sticky;top:100px;border-radius:26px;padding:26px;background:var(--paper);color:var(--ink);box-shadow:0 9px 0 #1f160f}
+.er-panel h3{font-size:24px;margin-bottom:10px}
+.er-panel p{font-size:15.5px;color:var(--ink-2)}
+.er-panel.alert{background:#FFE9E4;box-shadow:0 9px 0 var(--red)}
+.er-panel.alert h3{color:var(--red)}
+.er-panel .btn{margin-top:18px;width:100%}
+.er-panel .alert-only{display:none}
+.er-panel.alert .alert-only{display:flex}
+.er-panel.alert .calm-only{display:none}
+.er-ref{margin-top:24px;font-size:14px;color:#D9C4A8;max-width:820px}
+
+/* doctors */
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.doc{border-radius:26px;padding:24px;background:var(--paper);box-shadow:0 7px 0 var(--line);text-align:left}
+.doc .av{width:100%;aspect-ratio:5/4;border-radius:20px;margin-bottom:18px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.doc:nth-child(1) .av{background:var(--sky)}.doc:nth-child(2) .av{background:var(--butter-2)}.doc:nth-child(3) .av{background:var(--clay-soft)}
+.doc .av svg{width:70%;height:auto}
+.doc h3{font-size:22px}
+.doc .role{font:700 14px/1.4 var(--sans);color:var(--clay);margin:4px 0 10px}
+.doc p{font-size:15px;color:var(--ink-2)}
+.doc .shift{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.doc .shift span{padding:5px 10px;border-radius:8px;background:var(--cream-2);font:600 13px/1.3 var(--sans)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1.2fr .8fr 1fr;grid-template-rows:240px 240px;gap:18px;margin-top:40px}
+.gal figure{border-radius:24px;overflow:hidden;position:relative;background:var(--wood)}
+.gal figure:nth-child(1){grid-row:span 2}
+.gal figure:nth-child(4){grid-column:span 1}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:12px;bottom:12px;padding:6px 12px;border-radius:10px;background:var(--paper);font:700 13.5px/1.3 var(--sans)}
+
+/* reviews */
+.rev{background:var(--cream-2)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.rv-card{background:var(--paper);border-radius:24px;padding:26px;box-shadow:0 7px 0 var(--line);display:flex;flex-direction:column;gap:14px}
+.rv-card .sample{align-self:flex-start}
+.rv-card .q{font:700 18px/1.5 var(--disp)}
+.rv-card .who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.rv-card .who i{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font:900 19px/1 var(--disp);font-style:normal}
+.rv-card:nth-child(1) .who i{background:var(--butter)}.rv-card:nth-child(2) .who i{background:var(--sky)}.rv-card:nth-child(3) .who i{background:var(--clay-soft)}
+.rv-card .who b{display:block;font:800 16px/1.3 var(--disp)}
+.rv-card .who small{font:500 13.5px/1.3 var(--sans);color:var(--ink-2)}
+.stars{display:flex;gap:3px;color:var(--butter-edge)}
+.stars .ico{width:18px;height:18px;fill:currentColor;stroke:none}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.faq details{background:var(--paper);border-radius:20px;box-shadow:0 5px 0 var(--line);margin-bottom:14px}
+.faq summary{list-style:none;cursor:pointer;padding:20px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center;font:800 18.5px/1.35 var(--disp)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:34px;height:34px;border-radius:10px;background:var(--butter);display:flex;align-items:center;justify-content:center;transition:transform .25s}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--sky)}
+.faq details p{padding:0 22px 20px;color:var(--ink-2);font-size:16px}
+
+/* contact */
+.ct{background:var(--paper)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ct-info{display:grid;gap:14px;margin-top:26px}
+.ct-row{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:var(--cream)}
+.ct-row .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--butter);display:flex;align-items:center;justify-content:center}
+.ct-row b{display:block;font:800 17px/1.3 var(--disp)}
+.ct-row span{font-size:15px;color:var(--ink-2)}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin-top:6px}
+.hours td{padding:4px 0}
+.hours td+td{text-align:right;font-weight:700;white-space:nowrap}
+.mapblk{margin-top:18px;border-radius:24px;overflow:hidden;background:var(--sky);aspect-ratio:16/8;position:relative}
+.mapblk svg{width:100%;height:100%;display:block}
+.ct-form{background:var(--cream);border-radius:28px;padding:28px;box-shadow:0 9px 0 var(--line)}
+.ct-form h3{font-size:28px;margin-bottom:6px}
+
+/* footer */
+.ft{background:var(--ink);color:#E9D9C3;padding:56px 0 110px;font-size:15px}
+.ft-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+.ft .logo b{color:#fff}.ft .logo small{color:#CDB89C}
+.ft h4{color:#fff;font-size:17px;margin-bottom:10px}
+.ft a{text-decoration:none}.ft a:hover{text-decoration:underline}
+.ft ul{list-style:none;display:grid;gap:6px}
+.ft-note{margin-top:34px;padding-top:20px;border-top:1px solid #5A4433;font-size:13.5px;color:#CDB89C}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}.js .rv.d3{transition-delay:.3s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(59,42,30,.96);border:1px solid rgba(247,201,72,.3);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#2A1D14}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#F7C948;flex:none;box-shadow:0 0 0 3px rgba(247,201,72,.28)}
+.kt-badge b{color:var(--butter-2);font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1100px){
+  .nav{display:none}
+  .burger{display:flex}
+  .hdr-in>.btn{display:none}
+  .hero-grid,.sol-grid,.q-grid,.vac-grid,.faq-grid,.ct-grid,.pain-head{grid-template-columns:1fr}
+  .hero-art{justify-self:center;max-width:520px}
+  .eve{grid-template-columns:1fr 1fr;row-gap:30px}
+  .eve::before{display:none}
+  .strip-row{grid-template-columns:1fr 1fr}
+  .vac-box,.er-panel{position:static}
+  .er-grid{grid-template-columns:1fr}
+  .c1,.c2,.c3,.c4{grid-column:span 6}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .hero{padding-top:104px}
+  .eve,.signs,.docs,.revs,.form{grid-template-columns:1fr}
+  .eve-photo{grid-template-columns:1fr}
+  .pain-head{gap:6px;margin-bottom:34px}
+  .c1,.c2,.c3,.c4{grid-column:1/-1}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+  .gal figure:nth-child(1){grid-column:span 2;grid-row:auto}
+  .ft-grid{grid-template-columns:1fr}
+  .tw{grid-template-columns:58px 1fr;padding:16px 18px}
+  .tw .n{width:58px;height:58px;font-size:30px}
+  .tw.t1,.tw.t2,.tw.t3{margin-left:0;margin-right:0}
+  .now b{font-size:50px}
+  .ticket{min-width:0;padding:10px 14px}
+  .ticket b{font-size:34px}
+}
+@media (max-width:440px){
+  .hero-cta .btn{width:100%}
+  .strip-row{grid-template-columns:1fr}
+  .blk b{font-size:23px}
+  .qpanel,.board,.vac-box,.ct-form,.er-panel{padding:20px}
+  .slots{grid-template-columns:1fr 1fr}
+  .days .day{flex:1 1 40%}
+  .logo small{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv,.js .tower .tw{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 0 0 4v0a2 2 0 0 1 0 4v2h18v-2a2 2 0 0 1 0-4 2 2 0 0 0 0-4V6H3Z"/><path d="M14 6v12" stroke-dasharray="2 2.5"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17.5v.01"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.2.9-4.5 4.4 1.1 6.2L12 17.4l-5.6 2.9 1.1-6.2L3 9.7l6.2-.9Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-8-4.6-8-10.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.4 12 20 12 20Z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16V11l2-5h12l2 5v5H4Z"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="Phòng khám Nhi Mộc, về đầu trang">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="34" width="24" height="24" rx="5" fill="#C2582F"/><rect x="34" y="34" width="24" height="24" rx="5" fill="#8CCBEA"/><rect x="20" y="8" width="24" height="24" rx="5" fill="#F7C948"/><path d="M32 15v10M27 20h10" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="18" cy="46" r="4" fill="#FFF6E6"/><path d="M42 46h8" stroke="#1F5E80" stroke-width="4" stroke-linecap="round"/></svg>
+      <span><b>Nhi&nbsp;Mộc</b><small>Phòng khám Nhi ngoài giờ · Hà&nbsp;Nội</small></span>
+    </a>
+    <nav class="nav" aria-label="Menu chính">
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#hang-cho">Lấy số</a>
+      <a href="#lich-tiem">Lịch tiêm</a>
+      <a href="#cap-cuu">Dấu hiệu cấp cứu</a>
+      <a href="#bac-si">Bác sĩ</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </nav>
+    <a class="btn btn-clay" href="#hang-cho"><svg class="ico"><use href="#i-ticket"/></svg>Lấy&nbsp;số&nbsp;khám</a>
+    <button class="burger" id="burger" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+<div class="mnav" id="mnav" aria-hidden="true">
+  <button class="mnav-close" id="mclose" aria-label="Đóng menu"><svg class="ico"><use href="#i-close"/></svg></button>
+  <a href="#dich-vu">Dịch vụ</a>
+  <a href="#hang-cho">Lấy số trực tuyến</a>
+  <a href="#lich-tiem">Lịch tiêm theo tháng&nbsp;tuổi</a>
+  <a href="#cap-cuu">Dấu hiệu cần cấp&nbsp;cứu</a>
+  <a href="#bac-si">Bác sĩ</a>
+  <a href="#hoi-dap">Hỏi đáp</a>
+  <a href="#lien-he">Liên hệ</a>
+  <a class="btn btn-clay" href="tel:0900000000"><svg class="ico"><use href="#i-phone"/></svg>Gọi 0900&nbsp;000&nbsp;000</a>
+</div>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hours-chip in-anim"><span class="moon"><svg class="ico"><use href="#i-moon"/></svg></span><span id="todayHrs">Tối nay mở cửa 17:30–21:30</span></span>
+      <h1 class="in-anim d1">Con ốm sau giờ tan&nbsp;làm? <span class="c">Nhi&nbsp;Mộc vẫn sáng&nbsp;đèn.</span></h1>
+      <p class="lead in-anim d2">Phòng khám Nhi ngoài giờ ở Cầu Giấy, Hà Nội. Khám bệnh thường gặp, tiêm chủng, dinh dưỡng và tư vấn phát triển cho trẻ từ sơ sinh đến 15&nbsp;tuổi, mở buổi tối và cả cuối&nbsp;tuần.</p>
+      <div class="hero-cta in-anim d3">
+        <a class="btn btn-clay" href="#hang-cho"><svg class="ico"><use href="#i-ticket"/></svg>Lấy&nbsp;số trực&nbsp;tuyến</a>
+        <a class="btn btn-ghost" href="#lich-tiem"><svg class="ico"><use href="#i-cal"/></svg>Xem lịch&nbsp;tiêm của&nbsp;bé</a>
+      </div>
+      <ul class="hero-facts in-anim d4">
+        <li><svg class="ico"><use href="#i-clock"/></svg>Thứ 2–Thứ 6: 17:30–21:30</li>
+        <li><svg class="ico"><use href="#i-clock"/></svg>Thứ 7, CN: 08:00–21:00</li>
+      </ul>
+    </div>
+    <div class="hero-art in-anim d2">
+      <div class="ph-main"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1200&q=80" alt="Bé gái cầm máy ảnh đồ chơi trong phòng chơi nhiều màu sắc" width="900" height="900" fetchpriority="high"></div>
+      <div class="ph-sub float d2"><img src="https://images.unsplash.com/photo-1632053002928-1919605ee6f7?auto=format&fit=crop&w=600&q=80" alt="Mẹ bế con trò chuyện với bác sĩ nhi trong phòng khám" width="400" height="400"></div>
+      <div class="ticket float" aria-live="off">
+        <small><span class="live"></span>Đang khám</small>
+        <b id="heroNum">Số 14</b>
+        <span>Còn 5 bé đang chờ</span>
+      </div>
+      <svg class="bear" viewBox="0 0 220 230" role="img" aria-label="Minh hoạ gấu bông ngồi trên các khối gỗ">
+        <rect x="18" y="168" width="70" height="58" rx="10" fill="#E6BC86"/><rect x="18" y="214" width="70" height="12" rx="6" fill="#C39256"/>
+        <text x="53" y="208" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="900" font-size="34" fill="#B4532C">A</text>
+        <rect x="96" y="168" width="70" height="58" rx="10" fill="#8CCBEA"/><rect x="96" y="214" width="70" height="12" rx="6" fill="#5FA9CF"/>
+        <path d="M131 182v26M118 195h26" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+        <rect x="150" y="120" width="54" height="48" rx="9" fill="#F7C948" transform="rotate(8 177 144)"/>
+        <path d="M168 135a12 12 0 1 0 16 16 10 10 0 0 1-16-16Z" fill="#3B2A1E" transform="rotate(8 177 144)"/>
+        <g>
+          <circle cx="62" cy="62" r="17" fill="#B9773F"/><circle cx="128" cy="62" r="17" fill="#B9773F"/>
+          <circle cx="62" cy="62" r="8" fill="#E6BC86"/><circle cx="128" cy="62" r="8" fill="#E6BC86"/>
+          <ellipse cx="95" cy="135" rx="46" ry="38" fill="#C98848"/>
+          <ellipse cx="95" cy="142" rx="26" ry="22" fill="#EED2AA"/>
+          <circle cx="95" cy="88" r="38" fill="#C98848"/>
+          <ellipse cx="95" cy="100" rx="17" ry="13" fill="#EED2AA"/>
+          <circle cx="81" cy="83" r="4.5" fill="#3B2A1E"/><circle cx="109" cy="83" r="4.5" fill="#3B2A1E"/>
+          <ellipse cx="95" cy="95" rx="6" ry="4.5" fill="#3B2A1E"/>
+          <path d="M89 104q6 5 12 0" stroke="#3B2A1E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="72" cy="96" r="5" fill="#F3A98D" opacity=".7"/><circle cx="118" cy="96" r="5" fill="#F3A98D" opacity=".7"/>
+          <ellipse cx="60" cy="160" rx="15" ry="11" fill="#B9773F"/><ellipse cx="130" cy="160" rx="15" ry="11" fill="#B9773F"/>
+          <path d="M70 128q-10 18 2 30M120 128q10 18-2 30" stroke="#5FA9CF" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="95" cy="150" r="7" fill="#5FA9CF"/><circle cx="95" cy="150" r="3" fill="#fff"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<section class="strip" aria-label="Thông tin nhanh">
+  <div class="wrap strip-row">
+    <div class="blk b1 rv"><i class="dot"></i><b>Sau 17:30</b><span>Bố mẹ tan làm vẫn kịp đưa con đi&nbsp;khám</span></div>
+    <div class="blk b2 rv d1"><i class="dot"></i><b>Lấy số online</b><span>Xem số đang khám, đến đúng&nbsp;lượt</span></div>
+    <div class="blk b3 rv d2"><i class="dot"></i><b>0–15 tuổi</b><span>Từ khám sơ sinh đến tuổi đi&nbsp;học</span></div>
+    <div class="blk b4 rv d3"><i class="dot"></i><b>Mở năm 2026</b><span>Phòng chờ có góc đồ chơi gỗ cho&nbsp;bé</span></div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="sec" id="noi-lo">
+  <div class="wrap">
+    <div class="pain-head">
+      <div class="rv">
+        <span class="tag"><i></i>Một buổi tối quen thuộc</span>
+        <h2 class="h2">Con hay ốm đúng lúc phòng khám đóng&nbsp;cửa</h2>
+      </div>
+      <p class="lead rv d1">Nhiều bố mẹ ở Hà Nội đi làm đến chiều muộn. Đón con về mới thấy con nóng người, ho hay biếng ăn. Lúc ấy, lựa chọn thường chỉ còn chờ đến sáng hoặc vào viện lớn ngồi chờ rất&nbsp;lâu.</p>
+    </div>
+    <div class="eve">
+      <div class="eve-card rv"><span class="eve-time"><svg class="ico"><use href="#i-clock"/></svg>17:45</span><div class="eve-body"><h3>Cô giáo báo con hơi&nbsp;sốt</h3><p>Bố mẹ vẫn đang kẹt xe trên đường Phạm Văn Đồng, chưa biết đưa con đi khám ở&nbsp;đâu.</p></div></div>
+      <div class="eve-card rv d1"><span class="eve-time"><svg class="ico"><use href="#i-clock"/></svg>18:30</span><div class="eve-body"><h3>Phòng khám gần nhà đã&nbsp;nghỉ</h3><p>Gọi vài nơi, chỗ thì hết giờ, chỗ thì hẹn sáng mai, trong khi con quấy và khó&nbsp;ngủ.</p></div></div>
+      <div class="eve-card rv d2"><span class="eve-time"><svg class="ico"><use href="#i-clock"/></svg>19:15</span><div class="eve-body"><h3>Ngồi chờ không biết đến&nbsp;lượt</h3><p>Phòng chờ đông, con mệt, bố mẹ không biết còn bao nhiêu người trước&nbsp;mình.</p></div></div>
+      <div class="eve-card rv d3"><span class="eve-time"><svg class="ico"><use href="#i-clock"/></svg>21:00</span><div class="eve-body"><h3>Lại lỡ một mũi&nbsp;tiêm</h3><p>Lịch tiêm chỉ có giờ hành chính, bố mẹ phải xin nghỉ hoặc dời sang tuần&nbsp;sau.</p></div></div>
+    </div>
+    <div class="eve-photo rv">
+      <div class="ph"><img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&fit=crop&w=1200&q=80" alt="Em bé ngủ say trên chăn trắng" width="800" height="600" loading="lazy"></div>
+      <div>
+        <blockquote>Nhi Mộc mở cửa <span>đúng những giờ bố&nbsp;mẹ rảnh tay</span>, để việc đưa con đi khám bớt vội và bớt&nbsp;lo.</blockquote>
+        <p>Buổi tối ngày thường và trọn ngày cuối tuần, có bác sĩ chuyên khoa Nhi trực khám, khu tiêm chủng riêng và góc chơi cho bé trong lúc&nbsp;chờ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="sec sol" id="giai-phap">
+  <div class="wrap sol-grid">
+    <div class="rv">
+      <span class="tag sky"><i></i>Cách Nhi Mộc làm</span>
+      <h2 class="h2">Ba khối gỗ nhỏ cho một buổi khám nhẹ&nbsp;nhàng</h2>
+      <p class="lead">Chúng tôi xếp lại buổi khám theo nhịp sống của gia đình đi làm: giờ mở cửa hợp lý, hàng chờ rõ ràng và một bác sĩ theo dõi con lâu&nbsp;dài.</p>
+      <div class="hero-cta"><a class="btn btn-butter" href="#dich-vu">Xem dịch&nbsp;vụ &amp;&nbsp;giá<svg class="ico"><use href="#i-arrow"/></svg></a></div>
+    </div>
+    <div class="tower" id="tower">
+      <div class="tw t1"><span class="n">1</span><div><h3>Mở cửa buổi tối, cuối&nbsp;tuần</h3><p>17:30–21:30 từ thứ 2 đến thứ 6, 08:00–21:00 thứ 7 và chủ nhật. Không cần xin nghỉ làm để đưa con đi&nbsp;khám.</p></div></div>
+      <div class="tw t2"><span class="n">2</span><div><h3>Lấy số, xem lượt từ&nbsp;nhà</h3><p>Chọn khung giờ trên web, theo dõi số đang khám và đến khi gần tới lượt. Con đỡ phải ngồi chờ&nbsp;lâu.</p></div></div>
+      <div class="tw t3"><span class="n">3</span><div><h3>Một hồ sơ, một bác sĩ quen</h3><p>Lịch sử khám, sổ tiêm và biểu đồ tăng trưởng được lưu lại để bác sĩ theo dõi con qua từng&nbsp;năm.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="dich-vu">
+  <div class="wrap">
+    <div class="svc-head">
+      <div class="rv"><span class="tag"><i></i>Dịch vụ &amp; giá mẫu</span><h2 class="h2">Khám, tiêm, ăn ngủ và lớn&nbsp;lên</h2></div>
+      <p class="lead rv d1">Giá dưới đây là giá mẫu để minh hoạ giao diện. Bác sĩ khám rồi mới tư vấn xét nghiệm hay hướng xử trí phù hợp với từng&nbsp;bé.</p>
+    </div>
+    <div class="svc">
+      <article class="card c1 rv">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1632053002928-1919605ee6f7?auto=format&fit=crop&w=1400&q=80" alt="Bác sĩ nhi trò chuyện với mẹ và em bé trong buổi khám" width="1400" height="735" loading="lazy"></div>
+        <div class="bd">
+          <h3>Khám Bệnh Thường Gặp</h3>
+          <p>Sốt, ho, sổ mũi, viêm họng, tiêu chảy, nổi mẩn, biếng ăn. Bác sĩ khám kỹ, giải thích cách theo dõi tại nhà và khi nào cần tái&nbsp;khám.</p>
+          <ul><li><svg class="ico"><use href="#i-check"/></svg>Đo nhiệt độ, cân nặng, chiều cao mỗi lần&nbsp;khám</li><li><svg class="ico"><use href="#i-check"/></svg>Có phòng khám riêng cho trẻ đang sốt hoặc nghi lây&nbsp;nhiễm</li></ul>
+          <div class="price">250.000đ <small>/ lượt khám (giá mẫu)</small></div>
+        </div>
+      </article>
+      <article class="card c2 rv d1">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&w=1000&q=80" alt="Nhân viên y tế tiêm vắc xin vào bắp tay cho một bạn nhỏ" width="1000" height="625" loading="lazy"></div>
+        <div class="bd">
+          <h3>Tiêm Chủng</h3>
+          <p>Khám sàng lọc trước tiêm, theo dõi 30 phút sau tiêm tại phòng chờ. Nhắc lịch mũi tiếp theo qua tin&nbsp;nhắn.</p>
+          <div class="price">100.000đ <small>khám sàng lọc, vắc xin tính&nbsp;riêng</small></div>
+        </div>
+      </article>
+      <article class="card c3 rv">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1000&q=80" alt="Rau củ tươi nhiều màu bày trên quầy" width="1000" height="625" loading="lazy"></div>
+        <div class="bd">
+          <h3>Tư Vấn Dinh Dưỡng</h3>
+          <p>Đánh giá tăng trưởng theo biểu đồ, cùng bố mẹ lên thực đơn ăn dặm, xử lý tình trạng biếng ăn, thừa cân hay chậm tăng&nbsp;cân.</p>
+          <div class="price">300.000đ <small>/ buổi 40 phút (giá mẫu)</small></div>
+        </div>
+      </article>
+      <article class="card c4 rv d1">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=1400&q=80" alt="Bộ tàu hoả và nhà đồ chơi bằng gỗ trên thảm" width="1400" height="735" loading="lazy"></div>
+        <div class="bd">
+          <h3>Tư Vấn Phát Triển</h3>
+          <p>Theo dõi các mốc vận động, ngôn ngữ, giấc ngủ và cảm xúc qua trò chơi. Khi cần, bác sĩ giới thiệu bố mẹ đến chuyên khoa phù&nbsp;hợp.</p>
+          <ul><li><svg class="ico"><use href="#i-check"/></svg>Phòng tư vấn có thảm và đồ chơi gỗ, bé chơi trong lúc bố mẹ trao&nbsp;đổi</li></ul>
+          <div class="price">400.000đ <small>/ buổi 60 phút (giá mẫu)</small></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- QUEUE -->
+<section class="sec queue" id="hang-cho">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px;margin-bottom:38px">
+      <span class="tag"><i></i>Hàng chờ trực tuyến</span>
+      <h2 class="h2">Chọn giờ, giữ số, đến khi gần tới&nbsp;lượt</h2>
+      <p class="lead" style="color:#2F4B5C">Bảng số dưới đây là minh hoạ. Khi phòng khám hoạt động thật, số đang khám cập nhật theo lượt khám tại quầy.</p>
+    </div>
+    <div class="q-grid">
+      <div class="board rv">
+        <div class="board-top"><span class="live"><i></i>Bảng số · minh hoạ</span><span id="boardDay">Tối nay</span></div>
+        <div class="now">
+          <div><small>Đang khám</small><b id="nowNum">14</b></div>
+          <div><small>Số tiếp theo</small><b id="nextNum">15</b></div>
+        </div>
+        <div class="board-stats">
+          <div><b id="waitCount">5 bé</b>đang chờ tại phòng khám</div>
+          <div><b id="waitTime">~25 phút</b>thời gian chờ ước tính</div>
+        </div>
+        <p class="note">Thời gian chờ chỉ để tham khảo. Trẻ có dấu hiệu nặng được ưu tiên khám trước, nên thứ tự có thể thay&nbsp;đổi.</p>
+      </div>
+      <div class="qpanel rv d1">
+        <div class="days" role="tablist" aria-label="Chọn ngày khám" id="days"></div>
+        <div class="slots" id="slots" aria-label="Chọn khung giờ"></div>
+        <div class="qsum" id="qsum"><span class="num" id="myNum">--</span><p id="qtext">Chọn một khung giờ để xem số thứ tự dự kiến của&nbsp;bé.</p></div>
+        <form class="form" id="qform" novalidate>
+          <div class="fld"><label for="qName">Tên bố/mẹ</label><input id="qName" name="name" autocomplete="name" required placeholder="Nguyễn Thu Hà"></div>
+          <div class="fld"><label for="qPhone">Số điện thoại</label><input id="qPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="0900 000 000"></div>
+          <div class="fld"><label for="qAge">Tuổi của bé</label><select id="qAge" name="age" required><option value="">Chọn độ tuổi</option><option>Dưới 6 tháng</option><option>6–12 tháng</option><option>1–3 tuổi</option><option>4–6 tuổi</option><option>Trên 6 tuổi</option></select></div>
+          <div class="fld"><label for="qWhy">Lý do khám</label><select id="qWhy" name="why" required><option value="">Chọn lý do</option><option>Khám bệnh (sốt, ho, tiêu hoá...)</option><option>Tiêm chủng</option><option>Dinh dưỡng</option><option>Tư vấn phát triển</option></select></div>
+          <label class="consent full"><input type="checkbox" id="qOk" required><span>Tôi đồng ý để Nhi Mộc xử lý dữ liệu cá nhân (tên, số điện thoại, thông tin của bé) để giữ số và liên hệ về lịch&nbsp;khám.</span></label>
+          <p class="ferr full" id="qErr" role="alert"></p>
+          <div class="full"><button class="btn btn-clay" type="submit"><svg class="ico"><use href="#i-ticket"/></svg>Giữ&nbsp;số cho&nbsp;bé</button></div>
+        </form>
+        <div class="ok" id="qOkMsg" role="status" tabindex="-1"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VACCINE -->
+<section class="sec" id="lich-tiem">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px;margin-bottom:38px">
+      <span class="tag sky"><i></i>Lịch tiêm theo tháng tuổi</span>
+      <h2 class="h2">Bé nhà mình sắp đến mốc tiêm&nbsp;nào?</h2>
+      <p class="lead">Nhập ngày sinh của bé, trang sẽ đánh dấu các mốc đã qua và mốc sắp tới theo lịch tham khảo. Bác sĩ sẽ xem sổ tiêm và tư vấn cụ thể cho&nbsp;bé.</p>
+    </div>
+    <div class="vac-grid">
+      <div class="vac-box rv">
+        <h3>Ngày sinh của&nbsp;bé</h3>
+        <p class="note" style="color:#4f3c2f">Định dạng dd/mm/yyyy, ví dụ 15/03/2026.</p>
+        <div class="fld"><label for="dob" class="sr" style="position:absolute;left:-9999px">Ngày sinh của bé</label><input id="dob" inputmode="numeric" autocomplete="off" placeholder="dd/mm/yyyy" maxlength="10" aria-describedby="dobErr"></div>
+        <div class="vac-row">
+          <button class="btn btn-clay" id="dobGo" type="button">Xem mốc&nbsp;tiêm</button>
+          <button class="btn btn-ghost" id="dobDemo" type="button">Thử bé 5&nbsp;tháng</button>
+        </div>
+        <p class="ferr" id="dobErr" role="alert" style="margin-top:10px"></p>
+        <div class="age" id="ageBox" role="status"></div>
+        <p class="disc"><b>Theo lịch tham khảo, bác sĩ tư vấn cụ thể.</b> Mốc tiêm có thể khác tuỳ loại vắc xin, tình trạng sức khoẻ và các mũi bé đã tiêm. Nhớ mang sổ tiêm khi đến&nbsp;khám.</p>
+      </div>
+      <ol class="tl rv d1" id="tl"></ol>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY -->
+<section class="sec er" id="cap-cuu">
+  <div class="wrap">
+    <div style="max-width:800px" class="rv">
+      <span class="tag"><i></i>Thông tin tham khảo</span>
+      <h2 class="h2">Khi nào cần đưa con đi cấp cứu&nbsp;ngay?</h2>
+      <p class="lead">Phòng khám ngoài giờ phù hợp với bệnh thông thường. Nếu con có một trong các dấu hiệu dưới đây, hãy đến khoa cấp cứu gần nhà hoặc gọi 115, không chờ lấy&nbsp;số.</p>
+    </div>
+    <div class="er-grid">
+      <div class="signs" id="signs">
+        <label class="sign rv"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Khó thở, thở rít</b><span>Thở nhanh, rút lõm lồng ngực, cánh mũi phập phồng, môi hoặc mặt tím&nbsp;tái.</span></span></label>
+        <label class="sign rv d1"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Co giật</b><span>Co giật, gồng cứng người hoặc mất ý thức dù chỉ trong thời gian&nbsp;ngắn.</span></span></label>
+        <label class="sign rv"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Li bì, khó đánh thức</b><span>Lả đi, không phản ứng khi gọi, khóc yếu hoặc quấy khóc không dỗ&nbsp;được.</span></span></label>
+        <label class="sign rv d1"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Trẻ dưới 3 tháng bị sốt</b><span>Nhiệt độ từ 38°C trở lên ở trẻ dưới 3 tháng&nbsp;tuổi.</span></span></label>
+        <label class="sign rv"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Không bú, nôn tất cả</b><span>Bỏ bú, không uống được hoặc ăn uống gì cũng nôn&nbsp;ra.</span></span></label>
+        <label class="sign rv d1"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Dấu hiệu mất nước</b><span>Không đi tiểu khoảng 8 giờ, khóc không có nước mắt, mắt trũng, môi&nbsp;khô.</span></span></label>
+        <label class="sign rv"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Ban xuất huyết, chảy máu</b><span>Chấm đỏ tím không mất khi ấn, chảy máu mũi, chân răng, nôn hoặc đi ngoài ra&nbsp;máu.</span></span></label>
+        <label class="sign rv d1"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Cổ cứng, thóp phồng</b><span>Kèm sốt cao, đau đầu dữ dội hoặc nôn&nbsp;vọt.</span></span></label>
+        <label class="sign rv"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Nuốt dị vật, hoá chất</b><span>Nghi nuốt pin, nam châm, thuốc của người lớn, chất tẩy&nbsp;rửa.</span></span></label>
+        <label class="sign rv d1"><input type="checkbox"><span class="bx"><svg class="ico"><use href="#i-check"/></svg></span><span><b>Chấn thương, đau bụng dữ dội</b><span>Ngã đập đầu rồi nôn, lơ mơ; hoặc đau bụng dữ dội, bụng&nbsp;chướng.</span></span></label>
+      </div>
+      <aside class="er-panel rv d1" id="erPanel" aria-live="polite">
+        <h3 class="calm-only">Đánh dấu nếu con có dấu&nbsp;hiệu</h3>
+        <p class="calm-only">Chọn những dấu hiệu bố mẹ đang thấy ở con. Nếu không có dấu hiệu nào trong danh sách, bố mẹ có thể lấy số để bác sĩ khám tối&nbsp;nay.</p>
+        <a class="btn btn-butter calm-only" href="#hang-cho">Lấy&nbsp;số khám tối&nbsp;nay</a>
+        <h3 class="alert-only" style="gap:10px;align-items:center"><svg class="ico" style="width:28px;height:28px"><use href="#i-alert"/></svg>Đưa con đi cấp cứu&nbsp;ngay</h3>
+        <p class="alert-only">Đến khoa cấp cứu của bệnh viện gần nhà hoặc gọi 115. Giữ bình tĩnh, mang theo sổ khám và các thuốc con đã dùng (nếu&nbsp;có).</p>
+        <a class="btn btn-clay alert-only" href="tel:115" style="background:var(--red);box-shadow:0 6px 0 #7A1A14"><svg class="ico"><use href="#i-phone"/></svg>Gọi&nbsp;115</a>
+      </aside>
+    </div>
+    <p class="er-ref">Danh sách chỉ là thông tin tham khảo, không thay thế chẩn đoán của bác sĩ. Khi bố mẹ thấy lo hoặc không chắc, hãy đưa con đến cơ sở y tế gần&nbsp;nhà.</p>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="sec" id="bac-si">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="tag"><i></i>Bác sĩ trực · nhân sự mẫu</span>
+      <h2 class="h2">Những người ở lại sau giờ tan&nbsp;tầm</h2>
+      <p class="lead">Tên và thông tin bác sĩ dưới đây là mẫu minh hoạ. Khi làm web thật, phòng khám cung cấp hồ sơ và chứng chỉ hành nghề của từng bác&nbsp;sĩ.</p>
+    </div>
+    <div class="docs">
+      <article class="doc rv">
+        <div class="av"><svg viewBox="0 0 200 170" aria-hidden="true"><rect x="40" y="110" width="120" height="70" rx="30" fill="#FFFCF5"/><path d="M100 112v40" stroke="#8CCBEA" stroke-width="6"/><circle cx="100" cy="72" r="38" fill="#F2C9A5"/><path d="M62 70q0-42 38-42t38 42q-10-18-38-20-28 2-38 20Z" fill="#3B2A1E"/><path d="M62 70q-4 30 6 44M138 70q4 30-6 44" stroke="#3B2A1E" stroke-width="10" stroke-linecap="round" fill="none"/><circle cx="87" cy="76" r="3.5" fill="#3B2A1E"/><circle cx="113" cy="76" r="3.5" fill="#3B2A1E"/><path d="M92 90q8 6 16 0" stroke="#3B2A1E" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M70 120q0 30 22 30" stroke="#1F5E80" stroke-width="4" fill="none"/><circle cx="92" cy="150" r="6" fill="#1F5E80"/></svg></div>
+        <h3>BS. Nguyễn Minh&nbsp;Anh</h3>
+        <p class="role">Bác sĩ chuyên khoa Nhi (mẫu)</p>
+        <p>Phụ trách khám bệnh thường gặp và tiêm chủng. Thích giải thích bằng tranh vẽ để bé đỡ&nbsp;sợ.</p>
+        <div class="shift"><span>Thứ 2, 4, 6 tối</span><span>Thứ 7</span></div>
+      </article>
+      <article class="doc rv d1">
+        <div class="av"><svg viewBox="0 0 200 170" aria-hidden="true"><rect x="40" y="110" width="120" height="70" rx="30" fill="#FFFCF5"/><path d="M100 112v40" stroke="#F7C948" stroke-width="6"/><circle cx="100" cy="72" r="38" fill="#E9B98F"/><path d="M64 64q2-36 36-36t36 36q-14-10-36-10t-36 10Z" fill="#2A1D14"/><rect x="78" y="68" width="18" height="14" rx="5" fill="none" stroke="#3B2A1E" stroke-width="3"/><rect x="104" y="68" width="18" height="14" rx="5" fill="none" stroke="#3B2A1E" stroke-width="3"/><path d="M96 74h8" stroke="#3B2A1E" stroke-width="3"/><path d="M92 92q8 6 16 0" stroke="#3B2A1E" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M130 120q0 30-22 30" stroke="#B4532C" stroke-width="4" fill="none"/><circle cx="108" cy="150" r="6" fill="#B4532C"/></svg></div>
+        <h3>BS. Trần Quốc&nbsp;Bảo</h3>
+        <p class="role">Bác sĩ Nhi, tư vấn dinh dưỡng (mẫu)</p>
+        <p>Theo dõi tăng trưởng, ăn dặm và biếng ăn. Thường cùng bố mẹ lên thực đơn theo bữa cơm gia&nbsp;đình.</p>
+        <div class="shift"><span>Thứ 3, 5 tối</span><span>Chủ nhật</span></div>
+      </article>
+      <article class="doc rv d2">
+        <div class="av"><svg viewBox="0 0 200 170" aria-hidden="true"><rect x="40" y="110" width="120" height="70" rx="30" fill="#FFFCF5"/><path d="M100 112v40" stroke="#C2582F" stroke-width="6"/><circle cx="100" cy="72" r="38" fill="#F4D0AE"/><path d="M62 74q-2-46 38-46t38 46q-6-24-38-26-32 2-38 26Z" fill="#5A3A26"/><circle cx="138" cy="44" r="14" fill="#5A3A26"/><circle cx="87" cy="76" r="3.5" fill="#3B2A1E"/><circle cx="113" cy="76" r="3.5" fill="#3B2A1E"/><path d="M92 90q8 6 16 0" stroke="#3B2A1E" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="78" cy="86" r="5" fill="#F3A98D" opacity=".6"/><circle cx="122" cy="86" r="5" fill="#F3A98D" opacity=".6"/></svg></div>
+        <h3>ThS.BS. Lê Thu&nbsp;Hằng</h3>
+        <p class="role">Bác sĩ Nhi, tư vấn phát triển (mẫu)</p>
+        <p>Theo dõi mốc vận động, ngôn ngữ và giấc ngủ. Buổi tư vấn thường bắt đầu bằng một trò chơi xếp&nbsp;khối.</p>
+        <div class="shift"><span>Thứ 7</span><span>Chủ nhật</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" style="padding-top:0" aria-labelledby="galH">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="tag sky"><i></i>Không gian</span>
+      <h2 class="h2" id="galH">Phòng chờ giống một góc chơi hơn là bệnh&nbsp;viện</h2>
+    </div>
+    <div class="gal">
+      <figure class="rv"><img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?auto=format&fit=crop&w=1200&q=80" alt="Nhóm trẻ nhỏ ngồi chơi cùng nhau trong phòng sinh hoạt" width="900" height="1000" loading="lazy"><figcaption>Góc chơi chung</figcaption></figure>
+      <figure class="rv d1"><img src="https://images.unsplash.com/photo-1560859251-d563a49c5e4a?auto=format&fit=crop&w=900&q=80" alt="Những chiếc xe đồ chơi bằng gỗ xếp hàng trên bàn" width="700" height="480" loading="lazy"><figcaption>Đồ chơi gỗ</figcaption></figure>
+      <figure class="rv d2"><img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=900&q=80" alt="Em bé mặc áo liền mũ hình gấu ngồi trên giường" width="700" height="480" loading="lazy"><figcaption>Phòng khám sơ sinh</figcaption></figure>
+      <figure class="rv d1"><img src="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?auto=format&fit=crop&w=900&q=80" alt="Các khối hình vuông nhiều màu xếp chồng lên nhau" width="700" height="480" loading="lazy"><figcaption>Khối xếp tư vấn phát triển</figcaption></figure>
+      <figure class="rv d2"><img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=900&q=80" alt="Đồ chơi nhiều màu và búp bê vải bày trên nền trắng" width="700" height="480" loading="lazy"><figcaption>Quà nhỏ sau mũi tiêm</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec rev" id="danh-gia">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="tag"><i></i>Bố mẹ nói gì</span>
+      <h2 class="h2">Những buổi tối bớt&nbsp;vội</h2>
+    </div>
+    <div class="revs">
+      <figure class="rv-card rv">
+        <span class="sample">Đánh giá mẫu</span>
+        <div class="stars" aria-label="5 trên 5 sao"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div>
+        <blockquote class="q">Mình lấy số lúc 18:00 trên đường về, xem bảng thấy còn 4 bé mới đi. Đến nơi chờ khoảng 10 phút là tới lượt, con không bị quấy.</blockquote>
+        <figcaption class="who"><i>H</i><span><b>Chị Thu Hà</b><small>Mẹ bé Bin, 3 tuổi</small></span></figcaption>
+      </figure>
+      <figure class="rv-card rv d1">
+        <span class="sample">Đánh giá mẫu</span>
+        <div class="stars" aria-label="5 trên 5 sao"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div>
+        <blockquote class="q">Hai vợ chồng đi làm cả tuần, giờ đưa con đi tiêm vào sáng chủ nhật. Bác sĩ dặn kỹ cách theo dõi sau tiêm, có tin nhắn nhắc mũi sau.</blockquote>
+        <figcaption class="who"><i>T</i><span><b>Anh Minh Tuấn</b><small>Bố bé Na, 7 tháng</small></span></figcaption>
+      </figure>
+      <figure class="rv-card rv d2">
+        <span class="sample">Đánh giá mẫu</span>
+        <div class="stars" aria-label="5 trên 5 sao"><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg><svg class="ico"><use href="#i-star"/></svg></div>
+        <blockquote class="q">Con mình hơi chậm nói nên đi tư vấn phát triển. Bác sĩ chơi xếp khối với bé rồi mới hỏi chuyện, gợi ý cho cả nhà cách nói chuyện với con mỗi tối.</blockquote>
+        <figcaption class="who"><i>L</i><span><b>Chị Phương Linh</b><small>Mẹ bé Sóc, 2 tuổi</small></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="hoi-dap">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <span class="tag sky"><i></i>Hỏi đáp</span>
+      <h2 class="h2">Bố mẹ thường hỏi trước buổi&nbsp;khám</h2>
+      <p class="lead">Chưa thấy câu trả lời? Gọi lễ tân theo số 0900&nbsp;000&nbsp;000 trong giờ mở&nbsp;cửa.</p>
+    </div>
+    <div class="faq rv d1">
+      <details open><summary>Có bắt buộc lấy số trước không?<span class="pm"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg></span></summary><p>Không bắt buộc. Bố mẹ vẫn có thể đến thẳng và lấy số tại quầy. Lấy số trên web giúp biết trước thứ tự để đỡ phải ngồi chờ&nbsp;lâu.</p></details>
+      <details><summary>Giá khám buổi tối có khác ban ngày?<span class="pm"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg></span></summary><p>Trong mẫu này, giá khám giống nhau ở mọi khung giờ. Bảng giá thực tế sẽ do phòng khám cung cấp và niêm yết tại quầy.</p></details>
+      <details><summary>Bé đang sốt nhẹ có tiêm được không?<span class="pm"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg></span></summary><p>Trước mỗi mũi tiêm, bác sĩ khám sàng lọc rồi mới quyết định tiêm hay hẹn lại. Bố mẹ cứ đưa bé đến và báo cho bác sĩ tình trạng của&nbsp;bé.</p></details>
+      <details><summary>Phòng khám có kê thuốc không?<span class="pm"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg></span></summary><p>Bác sĩ chỉ kê đơn khi cần, sau khi đã khám. Bố mẹ không nên tự cho con dùng lại đơn cũ hoặc đơn của bé khác, kể cả khi triệu chứng giống&nbsp;nhau.</p></details>
+      <details><summary>Cần mang gì khi đưa bé đi khám?<span class="pm"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg></span></summary><p>Sổ tiêm chủng, sổ khám hoặc kết quả xét nghiệm cũ (nếu có), một bộ quần áo thay, bỉm và bình nước. Đồ chơi quen thuộc giúp bé bớt lạ&nbsp;chỗ.</p></details>
+      <details><summary>Phòng khám có chỗ gửi xe không?<span class="pm"><svg class="ico" style="width:18px;height:18px"><use href="#i-plus"/></svg></span></summary><p>Có chỗ gửi xe máy ngay tầng trệt. Ô tô có thể gửi ở bãi gần đó, lễ tân sẽ chỉ đường khi bố mẹ gọi&nbsp;điện.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec ct" id="lien-he">
+  <div class="wrap ct-grid">
+    <div class="rv">
+      <span class="tag"><i></i>Liên hệ</span>
+      <h2 class="h2">Ghé Nhi Mộc sau giờ&nbsp;làm</h2>
+      <div class="ct-info">
+        <div class="ct-row"><span class="ic"><svg class="ico"><use href="#i-pin"/></svg></span><span><b>Địa chỉ (mẫu)</b><span>Phố mẫu, Phường Cầu Giấy, Hà&nbsp;Nội</span></span></div>
+        <div class="ct-row"><span class="ic"><svg class="ico"><use href="#i-phone"/></svg></span><span><b><a href="tel:0900000000" style="text-decoration:none">0900&nbsp;000&nbsp;000</a></b><span>Lễ tân nghe máy trong giờ mở&nbsp;cửa</span></span></div>
+        <div class="ct-row"><span class="ic"><svg class="ico"><use href="#i-clock"/></svg></span><span style="flex:1"><b>Giờ mở cửa</b>
+          <table class="hours"><tr><td>Thứ 2 – Thứ 6</td><td>17:30–21:30</td></tr><tr><td>Thứ 7, Chủ nhật</td><td>08:00–21:00</td></tr><tr><td>Lễ, Tết</td><td>Thông báo trên trang</td></tr></table></span></div>
+      </div>
+      <div class="mapblk" aria-hidden="true">
+        <svg viewBox="0 0 640 320" preserveAspectRatio="xMidYMid slice"><rect width="640" height="320" fill="#BFE3F5"/><path d="M0 220 640 140M120 0l80 320M380 0l-40 320M0 70h640" stroke="#FFFCF5" stroke-width="22"/><path d="M0 220 640 140M120 0l80 320M380 0l-40 320M0 70h640" stroke="#E6BC86" stroke-width="2" stroke-dasharray="10 10"/><rect x="420" y="190" width="80" height="60" rx="12" fill="#F7C948"/><rect x="230" y="95" width="70" height="50" rx="12" fill="#FBEACB"/><rect x="30" y="100" width="70" height="80" rx="12" fill="#FBEACB"/><circle cx="430" cy="120" r="40" fill="#A7D6A0"/><g transform="translate(262 140)"><path d="M0 0c-22-24-30-38-30-52a30 30 0 0 1 60 0c0 14-8 28-30 52Z" fill="#B4532C"/><circle cy="-52" r="11" fill="#FFF6E6"/></g></svg>
+      </div>
+    </div>
+    <div class="ct-form rv d1">
+      <h3>Nhờ lễ tân gọi&nbsp;lại</h3>
+      <p class="note" style="margin-bottom:18px">Để lại số điện thoại, lễ tân gọi lại trong giờ mở cửa để tư vấn lịch khám hoặc lịch&nbsp;tiêm.</p>
+      <form class="form" id="cform" novalidate>
+        <div class="fld"><label for="cName">Tên bố/mẹ</label><input id="cName" autocomplete="name" required></div>
+        <div class="fld"><label for="cPhone">Số điện thoại</label><input id="cPhone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="0900 000 000"></div>
+        <div class="fld full"><label for="cMsg">Bố mẹ cần hỏi gì?</label><textarea id="cMsg" rows="3" placeholder="Ví dụ: bé 6 tháng, muốn hỏi lịch tiêm cúm vào cuối tuần"></textarea></div>
+        <label class="consent full"><input type="checkbox" id="cOk" required><span>Tôi đồng ý để Nhi Mộc xử lý dữ liệu cá nhân đã cung cấp để liên hệ tư vấn.</span></label>
+        <p class="ferr full" id="cErr" role="alert"></p>
+        <div class="full"><button class="btn btn-clay" type="submit">Gửi yêu&nbsp;cầu gọi&nbsp;lại</button></div>
+      </form>
+      <div class="ok" id="cOkMsg" role="status" tabindex="-1"><b>Đã nhận yêu cầu (minh hoạ)</b>Đây là trang mẫu nên thông tin không được gửi đi đâu. Trên web thật, lễ tân sẽ gọi lại cho bố&nbsp;mẹ.</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <a class="logo" href="#top" aria-label="Nhi Mộc, về đầu trang"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="6" y="34" width="24" height="24" rx="5" fill="#C2582F"/><rect x="34" y="34" width="24" height="24" rx="5" fill="#8CCBEA"/><rect x="20" y="8" width="24" height="24" rx="5" fill="#F7C948"/><path d="M32 15v10M27 20h10" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg><span><b>Nhi&nbsp;Mộc</b><small>Phòng khám Nhi ngoài giờ</small></span></a>
+        <p style="margin-top:14px;max-width:360px">Khám bệnh thường gặp, tiêm chủng, dinh dưỡng và tư vấn phát triển cho trẻ, buổi tối và cuối tuần ở Hà&nbsp;Nội.</p>
+      </div>
+      <div><h4>Dịch vụ</h4><ul><li><a href="#dich-vu">Khám Bệnh Thường Gặp</a></li><li><a href="#dich-vu">Tiêm Chủng</a></li><li><a href="#dich-vu">Tư Vấn Dinh Dưỡng</a></li><li><a href="#dich-vu">Tư Vấn Phát Triển</a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul><li>Phường Cầu Giấy, Hà Nội</li><li><a href="tel:0900000000">0900 000 000</a></li><li>T2–T6: 17:30–21:30</li><li>T7, CN: 08:00–21:00</li><li>Cấp cứu: gọi <a href="tel:115">115</a></li></ul></div>
+    </div>
+    <p class="ft-note">Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash. Lịch tiêm và dấu hiệu cấp cứu là thông tin tham khảo, không thay thế tư vấn của bác sĩ.</p>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+var d=document,root=d.documentElement;root.classList.add('js');
+function $(s,c){return (c||d).querySelector(s)}
+function $$(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))}
+function pad(n){return (n<10?'0':'')+n}
+function fmt(dt){return pad(dt.getDate())+'/'+pad(dt.getMonth()+1)+'/'+dt.getFullYear()}
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* header + badge */
+var hdr=$('#hdr'),badge=$('#ktBadge');
+function onScroll(){var y=window.pageYOffset;hdr.classList.toggle('scrolled',y>8);badge.classList.toggle('show',y>window.innerHeight*.85)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* mobile menu */
+var burger=$('#burger'),mnav=$('#mnav'),mclose=$('#mclose');
+function setMenu(open){mnav.classList.toggle('open',open);mnav.setAttribute('aria-hidden',open?'false':'true');burger.setAttribute('aria-expanded',open?'true':'false');d.body.classList.toggle('lock',open);if(open){mclose.focus()}else{burger.focus({preventScroll:true})}}
+burger.addEventListener('click',function(){setMenu(true)});
+mclose.addEventListener('click',function(){setMenu(false)});
+$$('a',mnav).forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');mnav.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');d.body.classList.remove('lock')})});
+d.addEventListener('keydown',function(e){if(e.key==='Escape'&&mnav.classList.contains('open'))setMenu(false)});
+
+/* reveal */
+var rvs=$$('.rv'),tower=$('#tower');
+function showAll(){rvs.forEach(function(el){el.classList.add('in')});tower.classList.add('in')}
+if(!('IntersectionObserver' in window)||reduce){showAll()}else{
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  rvs.concat([tower]).forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)el.classList.add('in');else io.observe(el)});
+}
+
+/* ---------- QUEUE ---------- */
+var DN=['Chủ nhật','Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
+function sessionOf(dt){var w=dt.getDay();return (w===0||w===6)?{o:8*60,c:21*60}:{o:17*60+30,c:21*60+30}}
+function seed(n){var x=Math.sin(n*99.13)*10000;return x-Math.floor(x)}
+var now=new Date(),nowMin=now.getHours()*60+now.getMinutes();
+var days=[],start=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+if(nowMin>=sessionOf(start).c-30)start.setDate(start.getDate()+1);
+for(var i=0;i<4;i++){var dt=new Date(start);dt.setDate(start.getDate()+i);days.push(dt)}
+var CAP=6,curDay=0,curSlot=null;
+var daysEl=$('#days'),slotsEl=$('#slots'),myNum=$('#myNum'),qtext=$('#qtext');
+function isToday(dt){return dt.toDateString()===now.toDateString()}
+function hm(m){return pad(Math.floor(m/60))+':'+pad(m%60)}
+var tmr=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1);
+function dayLabel(dt){if(isToday(dt))return sessionOf(dt).o>=17*60?'Tối nay':'Hôm nay';if(dt.toDateString()===tmr.toDateString())return 'Ngày mai';return DN[dt.getDay()]}
+days.forEach(function(dt,i){var b=d.createElement('button');b.type='button';b.className='day';b.setAttribute('role','tab');b.setAttribute('aria-selected',i===0?'true':'false');var lb=dayLabel(dt);b.innerHTML=lb+'<small>'+(lb===DN[dt.getDay()]?'Ngày ':DN[dt.getDay()]+', ')+pad(dt.getDate())+'/'+pad(dt.getMonth()+1)+'</small>';b.addEventListener('click',function(){curDay=i;curSlot=null;$$('.day',daysEl).forEach(function(x,j){x.setAttribute('aria-selected',j===i?'true':'false')});renderSlots();updateSum()});daysEl.appendChild(b)});
+function slotsFor(dt){var s=sessionOf(dt),arr=[],k=0,base=dt.getDate()*31+dt.getMonth();for(var m=s.o;m<s.c;m+=30){var f=Math.floor(seed(base+k)*(CAP+1));if(k===0&&f<CAP)f=Math.min(CAP,f+2);var past=isToday(dt)&&m+30<=nowMin;arr.push({m:m,f:past?CAP:f,past:past,idx:k});k++}return arr}
+function renderSlots(){var dt=days[curDay],arr=slotsFor(dt);slotsEl.innerHTML='';arr.forEach(function(s){var b=d.createElement('button');b.type='button';b.className='slot';var full=s.f>=CAP;b.disabled=full;b.setAttribute('aria-pressed','false');var bars='';for(var j=0;j<CAP;j++)bars+='<i'+(j<s.f?' class="f"':'')+'></i>';b.innerHTML='<b>'+hm(s.m)+'</b><span class="bar">'+bars+'</span><small>'+(s.past?'Đã qua':full?'Đã đủ':'Còn '+(CAP-s.f)+' chỗ')+'</small>';b.setAttribute('aria-label','Khung '+hm(s.m)+', '+(s.past?'đã qua':full?'đã đủ':'còn '+(CAP-s.f)+' chỗ'));b.addEventListener('click',function(){curSlot=s;$$('.slot',slotsEl).forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');updateSum()});slotsEl.appendChild(b)});
+}
+$('#boardDay').textContent='Hôm nay · '+fmt(now);
+function updateSum(){if(!curSlot){myNum.textContent='--';qtext.innerHTML='Chọn một khung giờ để xem số thứ tự dự kiến của&nbsp;bé.';return}
+  var n=curSlot.idx*CAP+curSlot.f+1,dt=days[curDay],eta=curSlot.m+Math.round(curSlot.f*5);
+  myNum.textContent=n;qtext.innerHTML='<b>Số dự kiến '+n+'</b>, khám khoảng '+hm(eta)+' ngày '+fmt(dt)+'. Bố mẹ nên đến trước 10 phút để đo nhiệt độ, cân nặng cho&nbsp;bé.'}
+renderSlots();
+var tw0=now.getDay();if(tw0===0||tw0===6)$('#todayHrs').textContent='Hôm nay mở cửa 08:00–21:00';
+
+/* live board demo */
+var nowNum=$('#nowNum'),nextNum=$('#nextNum'),heroNum=$('#heroNum'),waitCount=$('#waitCount'),waitTime=$('#waitTime'),cur=14,wait=5;
+function setBoard(){nowNum.textContent=cur;nextNum.textContent=cur+1;heroNum.textContent='Số '+cur;waitCount.textContent=wait+' bé';waitTime.textContent='~'+(wait*5)+' phút';if(!reduce){nowNum.classList.remove('flip');void nowNum.offsetWidth;nowNum.classList.add('flip')}}
+setBoard();
+var boardVisible=true;
+if('IntersectionObserver' in window){new IntersectionObserver(function(es){boardVisible=es.some(function(e){return e.isIntersecting})}).observe($('.board'))}
+setInterval(function(){if(d.hidden)return;cur++;wait=3+Math.floor(seed(cur)*5);if(cur>40)cur=12;setBoard()},9000);
+
+/* forms */
+function phoneOk(v){return /^0\d{9}$/.test(v.replace(/[\s.]/g,''))}
+var qform=$('#qform'),qErr=$('#qErr'),qOkMsg=$('#qOkMsg');
+qform.addEventListener('submit',function(e){e.preventDefault();var name=$('#qName').value.trim(),ph=$('#qPhone').value.trim();
+  if(!curSlot){qErr.textContent='Bố mẹ chọn giúp một khung giờ ở phía trên nhé.';return}
+  if(!name){qErr.textContent='Vui lòng nhập tên bố/mẹ.';$('#qName').focus();return}
+  if(!phoneOk(ph)){qErr.textContent='Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.';$('#qPhone').focus();return}
+  if(!$('#qAge').value||!$('#qWhy').value){qErr.textContent='Vui lòng chọn tuổi của bé và lý do khám.';return}
+  if(!$('#qOk').checked){qErr.textContent='Vui lòng tick ô đồng ý xử lý dữ liệu cá nhân để giữ số.';$('#qOk').focus();return}
+  qErr.textContent='';var n=myNum.textContent;qOkMsg.innerHTML='<b>Đã giữ số '+n+' cho bé (minh hoạ)</b>Khung '+hm(curSlot.m)+' ngày '+fmt(days[curDay])+'. Đây là trang mẫu nên thông tin không được gửi đi đâu. Trên web thật, phòng khám sẽ nhắn tin xác nhận và báo khi gần tới lượt.';qOkMsg.classList.add('show');qform.style.display='none';qOkMsg.focus()});
+var cform=$('#cform'),cErr=$('#cErr');
+cform.addEventListener('submit',function(e){e.preventDefault();
+  if(!$('#cName').value.trim()){cErr.textContent='Vui lòng nhập tên bố/mẹ.';$('#cName').focus();return}
+  if(!phoneOk($('#cPhone').value.trim())){cErr.textContent='Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.';$('#cPhone').focus();return}
+  if(!$('#cOk').checked){cErr.textContent='Vui lòng tick ô đồng ý xử lý dữ liệu cá nhân.';$('#cOk').focus();return}
+  cErr.textContent='';cform.style.display='none';var m=$('#cOkMsg');m.classList.add('show');m.focus()});
+
+/* ---------- VACCINE ---------- */
+var VAC=[
+ {m:0,t:'0',k:'sơ sinh',v:['Viêm gan B mũi sơ sinh (trong 24 giờ đầu)','Lao (BCG), trong tháng đầu']},
+ {m:2,t:'2',k:'tháng',v:['Vắc xin phối hợp mũi 1 (bạch hầu, ho gà, uốn ván, bại liệt, Hib, viêm gan B)','Phế cầu mũi 1','Rota (đường uống) liều 1']},
+ {m:3,t:'3',k:'tháng',v:['Vắc xin phối hợp mũi 2','Phế cầu mũi 2','Rota (đường uống) liều 2']},
+ {m:4,t:'4',k:'tháng',v:['Vắc xin phối hợp mũi 3','Phế cầu mũi 3']},
+ {m:6,t:'6',k:'tháng',v:['Cúm mũi 1 (lần đầu thường tiêm 2 mũi cách nhau 1 tháng)','Não mô cầu (tuỳ loại vắc xin)']},
+ {m:9,t:'9',k:'tháng',v:['Sởi mũi 1','Viêm não Nhật Bản (tuỳ loại vắc xin)']},
+ {m:12,t:'12',k:'tháng',v:['Thuỷ đậu','Sởi – quai bị – rubella','Viêm gan A','Phế cầu mũi nhắc']},
+ {m:18,t:'18',k:'tháng',v:['Vắc xin phối hợp mũi nhắc','Sởi – rubella (tiêm chủng mở rộng)']},
+ {m:24,t:'2',k:'tuổi',v:['Thương hàn','Nhắc cúm hằng năm']},
+ {m:48,t:'4–6',k:'tuổi',v:['Nhắc bạch hầu – ho gà – uốn ván – bại liệt','Sởi – quai bị – rubella mũi 2','Thuỷ đậu mũi 2']}
+];
+var tl=$('#tl'),dob=$('#dob'),dobErr=$('#dobErr'),ageBox=$('#ageBox');
+VAC.forEach(function(x,i){var li=d.createElement('li');li.innerHTML='<span class="m">'+x.t+'<small>'+x.k+'</small>'+'</span><div class="c"><h4>'+(x.m===0?'Sơ sinh':'Mốc '+x.t+' '+x.k)+'<span class="st s-past">Đã qua mốc · kiểm tra sổ tiêm</span><span class="st s-next">Mốc sắp tới</span><span class="st s-fut">Sau này</span></h4><ul>'+x.v.map(function(v){return '<li>'+v+'</li>'}).join('')+'</ul><p class="when" id="w'+i+'"></p></div>';tl.appendChild(li)});
+function addMonths(dt,m){var r=new Date(dt.getFullYear(),dt.getMonth()+m,dt.getDate());if(r.getDate()!==dt.getDate())r.setDate(0);return r}
+function parseDob(s){var m=/^(\d{2})\/(\d{2})\/(\d{4})$/.exec(s);if(!m)return null;var dt=new Date(+m[3],+m[2]-1,+m[1]);if(dt.getDate()!==+m[1]||dt.getMonth()!==+m[2]-1)return null;return dt}
+function calc(){var dt=parseDob(dob.value.trim()),today=new Date();today.setHours(0,0,0,0);
+  if(!dt){dobErr.textContent='Ngày sinh chưa đúng dạng dd/mm/yyyy, ví dụ 15/03/2026.';return}
+  if(dt>today){dobErr.textContent='Ngày sinh không được sau hôm nay.';return}
+  var months=(today.getFullYear()-dt.getFullYear())*12+today.getMonth()-dt.getMonth();if(today.getDate()<dt.getDate())months--;
+  if(months>=84){dobErr.textContent='Lịch tham khảo này dành cho trẻ dưới 7 tuổi. Với bé lớn hơn, bố mẹ gọi lễ tân để được tư vấn nhé.';return}
+  dobErr.textContent='';
+  var days=Math.round((today-addMonths(dt,months))/864e5),y=Math.floor(months/12),mm=months%12;
+  var ageTxt=y>0?(y+' tuổi'+(mm?' '+mm+' tháng':'')):(months+' tháng'+(days?' '+days+' ngày':''));
+  var nextI=-1;
+  var items=Array.prototype.slice.call(tl.children);
+  items.forEach(function(li,i){var x=VAC[i],due=addMonths(dt,x.m);li.classList.remove('past','next','future');
+    var st;if(x.m===48){st=months>=72?'past':(months>=42?'next':'future')}else{st=(addMonths(dt,x.m+1)<=today)?'past':'future'}
+    if(st==='future'&&nextI<0){st='next';nextI=i}else if(st==='next'){nextI=i}
+    li.classList.add(st);$('#w'+i).textContent=(x.m===48?'Khoảng '+fmt(due)+' – '+fmt(addMonths(dt,72)):'Gợi ý từ ngày '+fmt(due))});
+  tl.classList.add('on');
+  var nx=nextI>=0?VAC[nextI]:null;
+  ageBox.innerHTML='Bé được <b>'+ageTxt+'</b>.<br>'+(nx?'Mốc tiếp theo: <b style="font-size:18px">'+(nx.m===0?'Sơ sinh':'mốc '+nx.t+' '+nx.k)+'</b>, gợi ý từ '+fmt(addMonths(dt,nx.m))+'.':'Bé đã qua các mốc trong lịch tham khảo.')+' <a href="#hang-cho">Lấy số tiêm</a>';
+  ageBox.classList.add('show');
+}
+dob.addEventListener('input',function(){var v=dob.value.replace(/\D/g,'').slice(0,8),o=v;if(v.length>4)o=v.slice(0,2)+'/'+v.slice(2,4)+'/'+v.slice(4);else if(v.length>2)o=v.slice(0,2)+'/'+v.slice(2);dob.value=o;if(v.length===8)calc()});
+dob.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();calc()}});
+$('#dobGo').addEventListener('click',calc);
+$('#dobDemo').addEventListener('click',function(){var t=new Date();var dt=new Date(t.getFullYear(),t.getMonth()-5,t.getDate()-10);dob.value=fmt(dt);calc()});
+
+/* ---------- EMERGENCY ---------- */
+var erPanel=$('#erPanel');
+$$('#signs input').forEach(function(c){c.addEventListener('change',function(){c.closest('.sign').classList.toggle('on',c.checked);var was=erPanel.classList.contains('alert'),on=$$('#signs input:checked').length>0;erPanel.classList.toggle('alert',on);
+  if(on&&!was){var r=erPanel.getBoundingClientRect();if(r.top>innerHeight||r.bottom<0)erPanel.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'})}})});
+})();
+</script>
+</body>
+</html>
