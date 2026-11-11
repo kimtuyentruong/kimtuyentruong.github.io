@@ -204,7 +204,11 @@
   var panel = document.createElement('div'); panel.className = 'mnav'; panel.id = 'mnav';
   panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', en ? 'Menu' : 'Menu trang');
   var ol = document.createElement('ol');
-  links.forEach(function (a) { var li = document.createElement('li'), c = a.cloneNode(true); c.removeAttribute('style'); li.appendChild(c); ol.appendChild(li); });
+  links.forEach(function (a, i) {
+    var li = document.createElement('li'), c = a.cloneNode(true); c.removeAttribute('style'); c.removeAttribute('class');
+    if (a.className) { li.className = a.className; var nx = links[i + 1]; if (!nx || !nx.classList.contains('s')) li.classList.add('s-last'); }
+    li.appendChild(c); ol.appendChild(li);
+  });
   panel.appendChild(ol);
   var zalo = '<svg class="zl" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" stroke="none" d="M7.5 3h9a6 6 0 016 6v2.5a6 6 0 01-6 6H9.2l-4.1 3.1c-.5.4-1.2 0-1.1-.6l.5-3A6 6 0 011.5 11.5V9a6 6 0 016-6z"/><text x="12" y="12.9" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="7" fill="#E4471B" stroke="none" letter-spacing="-.2">Zalo</text></svg>';
   var tele = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6L2.9 10.7c-.9.4-.9 1.6.1 1.9l4.6 1.5 1.8 5.5c.3.9 1.4 1.1 2 .4l2.6-2.7 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.9c.2-1-.7-1.8-1.6-1.5z"/></svg>';
@@ -291,4 +295,12 @@
   var msg = mau ? 'Tôi thích mẫu "' + mau + '", muốn làm website theo mẫu này.' : dv ? 'Tôi quan tâm dịch vụ ' + dv + '.' : '';
   if (msg && f.nd && !f.nd.value) f.nd.value = msg;
   if (mau || ng || goi || dv) { var h = f.querySelector('h2'); if (h) h.textContent = mau ? 'Nhận báo giá theo mẫu ' + mau : 'Gửi yêu cầu báo giá'; }
+  if (mau) {
+    if (f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf('Website Theo Mẫu') === 0) f.goi.value = o.value || o.text; });
+    var box = document.createElement('div'); box.className = 'lh-pick';
+    var b = document.createElement('b'); b.textContent = 'Mẫu bạn chọn: ' + mau; box.appendChild(b);
+    box.insertAdjacentHTML('beforeend', '<span>Website Theo Mẫu <strong>5.000.000đ</strong> · xong trong 2–3 ngày khi có đủ thông tin. Đã gồm hosting, tên miền năm đầu, SEO, AIO.</span>' +
+      '<span class="lk"><a href="/mau-website/">Xem mẫu khác</a><a href="/dich-vu/thiet-ke-website/#bang-gia">So sánh 6 gói</a></span>');
+    var h2 = f.querySelector('h2'); if (h2) h2.insertAdjacentElement('afterend', box);
+  }
 })();
