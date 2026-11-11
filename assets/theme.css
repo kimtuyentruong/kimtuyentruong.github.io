@@ -421,14 +421,14 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 @media (max-width:600px){.cstack{height:122px;padding-left:6px}.cs{height:92px;margin-left:-30px}.cs:first-child{margin-left:0}}
 @media (prefers-reduced-motion:reduce){.cs{transition:none}}
 
-/* ---------- large screens 27–32" (v13): wider frame + stepped page zoom so the layout fills the screen ---------- */
-@media (min-width:1600px){.wrap{max-width:1280px}}
-@media (min-width:1800px){html{zoom:1.12;--z:1.12}}
-@media (min-width:2100px){html{zoom:1.28;--z:1.28}}
-@media (min-width:2400px){html{zoom:1.42;--z:1.42}}
-@media (min-width:3000px){html{zoom:1.75;--z:1.75}}
-@media (min-width:3600px){html{zoom:2.1;--z:2.1}}
-@media (min-width:1800px){.pf-rows{margin-inline:calc(50% - 50vw / var(--z))}}
+/* ---------- large screens 24–32" (v17): wider frame + stepped page zoom so the layout fills the screen ---------- */
+@media (min-width:1600px){.wrap{max-width:1280px}html{zoom:1.1;--z:1.1}}
+@media (min-width:1800px){html{zoom:1.2;--z:1.2}}
+@media (min-width:2100px){html{zoom:1.36;--z:1.36}}
+@media (min-width:2400px){html{zoom:1.5;--z:1.5}}
+@media (min-width:3000px){html{zoom:1.85;--z:1.85}}
+@media (min-width:3600px){html{zoom:2.2;--z:2.2}}
+@media (min-width:1600px){.pf-rows{margin-inline:calc(50% - 50vw / var(--z))}}
 /* experience moved to /kinh-nghiem/ (v16): homepage teaser */
 .exp-teaser{display:flex;align-items:flex-end;justify-content:space-between;gap:24px 40px;flex-wrap:wrap;padding:40px 44px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(150deg,rgba(255,74,28,.14),rgba(20,16,16,.75) 60%);color:var(--ink);text-decoration:none;transition:border-color .3s}
 .exp-teaser:hover{border-color:var(--line-2)}
