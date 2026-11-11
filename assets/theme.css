@@ -309,15 +309,15 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 #grid .tile .img{position:relative}
 .tile .kind{position:absolute;z-index:2;top:10px;left:10px;font-size:11.5px;font-weight:700;letter-spacing:.02em;padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
 /* nhãn ô theo ngành, mỗi ngành một màu */
-.tile .k-health{background:rgba(8,40,40,.92);color:#7FE0D6;border:1px solid #7FE0D673}
-.tile .k-beauty{background:rgba(50,12,30,.92);color:#FFB3D1;border:1px solid #FFB3D173}
-.tile .k-food{background:rgba(46,22,4,.92);color:#FFB870;border:1px solid #FFB87073}
-.tile .k-stay{background:rgba(8,24,48,.92);color:#9CCBFF;border:1px solid #9CCBFF73}
-.tile .k-retail{background:rgba(42,34,6,.92);color:#F5D77A;border:1px solid #F5D77A73}
-.tile .k-build{background:rgba(30,34,40,.92);color:#E3E8EF;border:1px solid #E3E8EF73}
-.tile .k-realestate{background:rgba(28,14,54,.92);color:#C9B2FF;border:1px solid #C9B2FF73}
-.tile .k-service{background:rgba(10,40,22,.92);color:#9BE7B4;border:1px solid #9BE7B473}
-.tile .k-edu{background:rgba(52,12,12,.92);color:#FF9B95;border:1px solid #FF9B9573}
+.tile .k-health{background:rgba(8,40,40,.7);color:#7FE0D6;border:1px solid #7FE0D673}
+.tile .k-beauty{background:rgba(50,12,30,.7);color:#FFB3D1;border:1px solid #FFB3D173}
+.tile .k-food{background:rgba(46,22,4,.7);color:#FFB870;border:1px solid #FFB87073}
+.tile .k-stay{background:rgba(8,24,48,.7);color:#9CCBFF;border:1px solid #9CCBFF73}
+.tile .k-retail{background:rgba(42,34,6,.7);color:#F5D77A;border:1px solid #F5D77A73}
+.tile .k-build{background:rgba(30,34,40,.7);color:#E3E8EF;border:1px solid #E3E8EF73}
+.tile .k-realestate{background:rgba(28,14,54,.7);color:#C9B2FF;border:1px solid #C9B2FF73}
+.tile .k-service{background:rgba(10,40,22,.7);color:#9BE7B4;border:1px solid #9BE7B473}
+.tile .k-edu{background:rgba(52,12,12,.7);color:#FF9B95;border:1px solid #FF9B9573}
 .pf-ind button[data-i]:not([data-i="all"])::before{content:"";display:inline-block;width:8px;height:8px;margin-right:7px;border-radius:50%;flex:none;vertical-align:1px;background:var(--dot)}
 .pf-ind button[data-i="health"]{--dot:#7FE0D6}
 .pf-ind button[data-i="beauty"]{--dot:#FFB3D1}
