@@ -30,6 +30,9 @@
 - LinkedIn: https://www.linkedin.com/in/tbkimt/
 
 ## Kiến thức (bài viết)
+- [Mẫu website theo ngành](https://kimtuyentruong.github.io/mau-website/): mẫu thiết kế và web khách hàng, mỗi ngành một trang
+- [Dịch vụ](https://kimtuyentruong.github.io/dich-vu/): thiết kế website, SEO & Google Maps, AIO
+- [Dự án](https://kimtuyentruong.github.io/du-an/): dự án đã làm và kết quả
 - [Bảng giá](https://kimtuyentruong.github.io/bang-gia/): 3 gói, thanh toán 50% – 30% – 20%, quy trình 8 bước
 - [Kinh nghiệm](https://kimtuyentruong.github.io/kinh-nghiem/): hành trình từ 2019, chứng chỉ
 - [Kiến thức thiết kế website, SEO & AIO](https://kimtuyentruong.github.io/kien-thuc/): 50 bài viết

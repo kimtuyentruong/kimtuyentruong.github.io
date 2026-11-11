@@ -246,3 +246,38 @@
     scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
   });
 })();
+
+/* homepage package quiz (v16) */
+(function () {
+  var qz = document.getElementById('quiz'); if (!qz) return;
+  var box = document.getElementById('qrIn'), Z = 'https://zalo.me/0901432113';
+  var P = {
+    lp: ['Landing Page', '3.500.000đ', 'Một trang tập trung vào một sản phẩm hoặc dịch vụ, có form và nút gọi, Zalo, gắn sẵn mã quảng cáo. Làm trong 7–10 ngày.'],
+    cb: ['Website Cơ Bản', '9.500.000đ', 'Đủ các trang Trang chủ, Giới thiệu, Dịch vụ, Liên hệ, có trang quản trị để bạn tự sửa nội dung và giá. Làm trong 2–4 tuần.'],
+    dn: ['Website Doanh Nghiệp', 'từ 15.000.000đ', 'Nhiều trang dịch vụ, sản phẩm, khu vực, giỏ hàng và thanh toán online, blog, song ngữ nếu cần. Làm trong 5–8 tuần.'],
+    seo: ['SEO & Google Maps', 'Báo giá theo website', 'Website đã có thì tôi xem trước, rồi đề xuất phần cần sửa để lên Google và Google Maps, kèm báo giá riêng.']
+  };
+  var val = function (n) { var c = qz.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : ''; };
+  var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  qz.addEventListener('change', function () {
+    var a = val('q1'), b = val('q2'), c = val('q3'); if (!a && !b) return;
+    var k = b === 'seo' ? 'seo' : (a || 'cb');
+    if (k === 'lp' && c === 'yes') k = 'cb';
+    var p = P[k], note = c === 'yes' && k !== 'lp' && k !== 'seo' ? ' Gói này có trang quản trị để bạn tự cập nhật.' : '';
+    var link = k === 'seo' ? '/dich-vu/seo-google-maps/' : '/bang-gia/#goi';
+    box.innerHTML = '<div class="rec"><small>Gợi ý cho bạn</small><h3>' + esc(p[0]) + '</h3><div class="price">' + esc(p[1]) + '</div><p>' + esc(p[2] + note) + '</p>' +
+      '<p class="cta"><a class="btn" href="/lien-he/?goi=' + encodeURIComponent(p[0]) + '">Nhận báo giá gói này</a><a class="btn ghost" href="' + link + '">Xem chi tiết</a></p></div>';
+  });
+})();
+
+/* contact form prefill from ?mau= ?nganh= ?goi= ?dv= (v16) */
+(function () {
+  var f = document.getElementById('lhForm'); if (!f || !window.URLSearchParams) return;
+  var q = new URLSearchParams(location.search), mau = q.get('mau'), ng = q.get('nganh'), goi = q.get('goi'), dv = q.get('dv');
+  if (ng && f.nganh) f.nganh.value = ng;
+  if (goi && f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf(goi) === 0) f.goi.value = o.value || o.text; });
+  if (dv && f.goi && /SEO|Google/.test(dv)) f.goi.selectedIndex = f.goi.options.length - 1;
+  var msg = mau ? 'Tôi thích mẫu "' + mau + '", muốn làm website theo mẫu này.' : dv ? 'Tôi quan tâm dịch vụ ' + dv + '.' : '';
+  if (msg && f.nd && !f.nd.value) f.nd.value = msg;
+  if (mau || ng || goi || dv) { var h = f.querySelector('h2'); if (h) h.textContent = mau ? 'Nhận báo giá theo mẫu ' + mau : 'Gửi yêu cầu báo giá'; }
+})();

@@ -490,3 +490,18 @@ svg.zl{stroke:none !important;fill:none}
 @media (prefers-reduced-motion:reduce){.dock .totop{transition:none}}
 @media (max-width:900px){.nav .me{white-space:nowrap;min-width:0}}
 @media (max-width:400px){.nav .me{font-size:15.5px;gap:8px}.nav .me .mark{width:28px;height:28px}.nav .lang a{padding-inline:9px}.mnav-btn{width:44px;height:44px}}
+
+/* mobile: bottom contact bar instead of round dock (v21) */
+@media (max-width:600px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .dock{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));flex-direction:row;align-items:center;gap:8px}
+  .dock a{width:auto;height:52px;border-radius:999px;flex:0 0 52px}
+  .dock a::after{display:none}
+  .dock a span{position:static;opacity:1;transform:none;background:none;border:0;padding:0;color:#fff;font-size:15.5px;font-weight:700}
+  .dock a:nth-of-type(1){flex:1 1 auto;justify-content:center;display:flex;gap:10px;padding:0 18px}
+  .dock a:nth-of-type(1) span::before{content:"Nhận báo giá qua "}
+  html[lang="en"] .dock a:nth-of-type(1) span::before{content:"Chat on "}
+  .dock a:nth-of-type(2) span{display:none}
+  .dock a:nth-of-type(2){display:grid}
+  .dock .totop{order:3;flex:0 0 52px;height:52px;width:52px}
+}
