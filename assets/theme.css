@@ -474,3 +474,19 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 }
 @media (max-width:900px) and (prefers-reduced-motion:reduce){.mnav,html.mnav-open .mnav{transition:none;transform:none}}
 @media (max-width:600px){.role{display:block;text-align:center;line-height:1.5}.role .dot{display:inline-block;vertical-align:1px;margin-right:8px}}
+
+/* Zalo mark + scroll-to-top (v20) */
+svg.zl{stroke:none !important;fill:none}
+.dock a svg.zl{width:34px;height:34px}
+.reach .ic svg.zl{width:34px;height:34px}
+.dock .totop{position:relative;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;background:#1C1513;border:1px solid var(--line-2);color:var(--ink);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility 0s linear .3s}
+.dock .totop.on{opacity:1;visibility:visible;transform:none;transition:opacity .3s,transform .3s,visibility 0s}
+.dock .totop svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dock .totop span{position:absolute;right:62px;top:50%;transform:translateY(-50%);white-space:nowrap;background:#1C1513;color:var(--ink);border:1px solid var(--line-2);font-size:13px;padding:6px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s}
+.dock .totop:hover span,.dock .totop:focus-visible span{opacity:1}
+.dock .totop:hover{border-color:var(--flame)}
+@media (max-width:600px){.dock .totop{width:48px;height:48px}.dock a svg.zl{width:32px;height:32px}}
+@media (prefers-reduced-motion:reduce){.dock .totop{transition:none}}
+@media (max-width:900px){.nav .me{white-space:nowrap;min-width:0}}
+@media (max-width:400px){.nav .me{font-size:15.5px;gap:8px}.nav .me .mark{width:28px;height:28px}.nav .lang a{padding-inline:9px}.mnav-btn{width:44px;height:44px}}

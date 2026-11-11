@@ -206,7 +206,7 @@
   var ol = document.createElement('ol');
   links.forEach(function (a) { var li = document.createElement('li'), c = a.cloneNode(true); c.removeAttribute('style'); li.appendChild(c); ol.appendChild(li); });
   panel.appendChild(ol);
-  var zalo = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1.5 1.5 0 011.5 1.5v9A1.5 1.5 0 0120 17h-8.5L7 20.5V17H4a1.5 1.5 0 01-1.5-1.5v-9A1.5 1.5 0 014 5z"/></svg>';
+  var zalo = '<svg class="zl" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" stroke="none" d="M7.5 3h9a6 6 0 016 6v2.5a6 6 0 01-6 6H9.2l-4.1 3.1c-.5.4-1.2 0-1.1-.6l.5-3A6 6 0 011.5 11.5V9a6 6 0 016-6z"/><text x="12" y="12.9" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="7" fill="#E4471B" stroke="none" letter-spacing="-.2">Zalo</text></svg>';
   var tele = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6L2.9 10.7c-.9.4-.9 1.6.1 1.9l4.6 1.5 1.8 5.5c.3.9 1.4 1.1 2 .4l2.6-2.7 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.9c.2-1-.7-1.8-1.6-1.5z"/></svg>';
   var mail = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>';
   var cta = document.createElement('div'); cta.className = 'cta';
@@ -228,4 +228,21 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
   var lw = innerWidth; addEventListener('resize', function () { if (innerWidth !== lw) { lw = innerWidth; if (innerWidth > 900) set(false); } });
   addEventListener('pageshow', function () { set(false); });
+})();
+
+/* scroll-to-top button (v15): sits on top of the floating contact dock, shows after the first screen */
+(function () {
+  var dock = document.querySelector('.dock'); if (!dock) return;
+  var en = document.documentElement.lang === 'en';
+  var b = document.createElement('button');
+  b.type = 'button'; b.className = 'totop'; b.setAttribute('aria-label', en ? 'Back to top' : 'Lên đầu trang');
+  b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg><span>' + (en ? 'Top' : 'Lên đầu trang') + '</span>';
+  dock.insertBefore(b, dock.firstChild);
+  var on = false, tk = 0;
+  var upd = function () { tk = 0; var v = pageYOffset > innerHeight * 0.9; if (v !== on) { on = v; b.classList.toggle('on', v); } };
+  addEventListener('scroll', function () { if (!tk) tk = requestAnimationFrame(upd); }, { passive: true }); upd();
+  b.addEventListener('click', function () {
+    var smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+  });
 })();
