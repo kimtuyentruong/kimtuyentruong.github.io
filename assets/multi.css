@@ -182,3 +182,14 @@
   .tgrid.feat .tcard .ta a{min-height:34px;padding:6px 10px;font-size:12.5px;white-space:nowrap}
   .tgrid.feat .tcard .kind{font-size:10.5px;padding:4px 8px}
 }
+
+/* v8 service page header: the illustration fills its column (base.css loads after this file on sub pages, so these need the extra class to win) */
+.how.svc-mock{display:block;max-width:540px;margin-left:auto;width:100%}
+.how.svc-mock .step{display:block;padding:0;border:0;background:none}
+.how.svc-mock .mock{font-size:15.5px;padding:22px;gap:14px;border-radius:18px;min-height:0;box-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 70px -30px rgba(255,74,28,.35)}
+.how.svc-mock .mock .lab{font-size:13px}
+.how.svc-mock .mock .q,.how.svc-mock .mock .a{font-size:15px;padding:11px 14px;line-height:1.5}
+.how.svc-mock .mock .t{font-size:18px}
+.how.svc-mock .mock .u{font-size:13.5px}
+.how.svc-mock .mock .okrow{padding-bottom:9px}
+@media (max-width:900px){.how.svc-mock{max-width:none;margin-left:0}}
