@@ -712,5 +712,6 @@ if(RM||!('IntersectionObserver' in window)){rv.forEach(function(el){el.classList
 else{var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});rv.forEach(function(el){io.observe(el)})}
 })();
 </script>
+<script src="/assets/kt-demo.js?v=1" data-mau="Nhà Gọn Living"></script>
 </body>
 </html>

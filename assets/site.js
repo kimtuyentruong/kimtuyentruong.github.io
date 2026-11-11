@@ -204,7 +204,11 @@
   var panel = document.createElement('div'); panel.className = 'mnav'; panel.id = 'mnav';
   panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', en ? 'Menu' : 'Menu trang');
   var ol = document.createElement('ol');
-  links.forEach(function (a) { var li = document.createElement('li'), c = a.cloneNode(true); c.removeAttribute('style'); li.appendChild(c); ol.appendChild(li); });
+  links.forEach(function (a, i) {
+    var li = document.createElement('li'), c = a.cloneNode(true); c.removeAttribute('style'); c.removeAttribute('class');
+    if (a.className) { li.className = a.className; var nx = links[i + 1]; if (!nx || !nx.classList.contains('s')) li.classList.add('s-last'); }
+    li.appendChild(c); ol.appendChild(li);
+  });
   panel.appendChild(ol);
   var zalo = '<svg class="zl" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" stroke="none" d="M7.5 3h9a6 6 0 016 6v2.5a6 6 0 01-6 6H9.2l-4.1 3.1c-.5.4-1.2 0-1.1-.6l.5-3A6 6 0 011.5 11.5V9a6 6 0 016-6z"/><text x="12" y="12.9" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="7" fill="#E4471B" stroke="none" letter-spacing="-.2">Zalo</text></svg>';
   var tele = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6L2.9 10.7c-.9.4-.9 1.6.1 1.9l4.6 1.5 1.8 5.5c.3.9 1.4 1.1 2 .4l2.6-2.7 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.9c.2-1-.7-1.8-1.6-1.5z"/></svg>';
@@ -253,22 +257,31 @@
   var box = document.getElementById('qrIn'), Z = 'https://zalo.me/0901432113';
   var P = {
     lp: ['Landing Page', '3.500.000đ', 'Một trang tập trung vào một sản phẩm hoặc dịch vụ, có form và nút gọi, Zalo, gắn sẵn mã quảng cáo. Làm trong 7–10 ngày.'],
-    mau: ['Website Theo Mẫu', '5.000.000đ', 'Chọn một mẫu có sẵn theo ngành, tôi đổi màu, logo, nội dung và hình ảnh theo thương hiệu của bạn.'],
+    mau: ['Website Theo Mẫu', '5.000.000đ', 'Chọn một mẫu có sẵn theo ngành, tôi đổi màu, logo, nội dung và hình ảnh theo thương hiệu của bạn. Làm trong 2–3 ngày sau khi nhận đủ thông tin.'],
     cb: ['Website Cơ Bản', '9.500.000đ', 'Tối đa 7 trang: Trang chủ, Giới thiệu, Dịch vụ, Liên hệ…, có trang quản trị để bạn tự sửa nội dung và giá. Làm trong 2–4 tuần.'],
     dn: ['Website Doanh Nghiệp', '18.500.000đ', 'Website chuyên nghiệp, đầy đủ chức năng, tối đa 20 trang, tặng 5 bài blog chuẩn SEO, AIO. Làm trong 5–8 tuần.'],
-    bh: ['Website Bán Hàng', '22.500.000đ', 'Cửa hàng online có danh mục, giỏ hàng, đặt hàng, thanh toán và quản lý đơn hàng trong trang quản trị.'],
-    seo: ['SEO & Google Maps', 'Báo giá theo website', 'Website đã có thì tôi xem trước, rồi đề xuất phần cần sửa để lên Google và Google Maps, kèm báo giá riêng.']
+    bh: ['Website Bán Hàng', '22.500.000đ', 'Cửa hàng online có danh mục, giỏ hàng, đặt hàng, thanh toán và quản lý đơn hàng trong trang quản trị. Làm trong 6–9 tuần.']
   };
   var val = function (n) { var c = qz.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : ''; };
   var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var S1 = ['SEO & AIO Khởi Đầu', '10.500.000đ/tháng', 'Mỗi tháng khoảng 2–4 bài viết chuẩn SEO, AIO, sửa lỗi kỹ thuật, tối ưu Google Maps và báo cáo dễ hiểu. Tối thiểu 3 tháng.'];
+  var S2 = ['SEO & AIO Tăng Trưởng', '25.000.000đ/tháng', 'Mỗi tháng khoảng 5–8 bài viết, thêm trang dịch vụ, khu vực khi cần, xây dựng liên kết, kiểm tra cách ChatGPT, Gemini nhắc đến bạn. Tối thiểu 3 tháng.'];
   qz.addEventListener('change', function () {
-    var a = val('q1'), b = val('q2'), c = val('q3'); if (!a && !b) return;
-    var k = b === 'seo' ? 'seo' : (a || 'cb');
-    if ((k === 'lp' || k === 'mau') && c === 'yes') k = 'cb';
-    var p = P[k], note = c === 'yes' && k !== 'lp' && k !== 'seo' && k !== 'mau' ? ' Gói này có trang quản trị để bạn tự cập nhật.' : '';
-    var link = k === 'seo' ? '/dich-vu/seo-google-maps/' : k === 'mau' ? '/mau-website/' : '/dich-vu/thiet-ke-website/#bang-gia';
-    box.innerHTML = '<div class="rec"><small>Gợi ý cho bạn</small><h3>' + esc(p[0]) + '</h3><div class="price">' + esc(p[1]) + '</div><p>' + esc(p[2] + note) + '</p>' +
-      '<p class="cta"><a class="btn" href="/lien-he/?goi=' + encodeURIComponent(p[0]) + '">Nhận báo giá gói này</a><a class="btn ghost" href="' + link + '">Xem chi tiết</a></p></div>';
+    var a = val('q1'), b = val('q2'), c = val('q3'); if (!a && !b && !c) return;
+    var main, add = null, big = a === 'dn' || a === 'bh';
+    if (b === 'seo') main = big || c === 'high' ? S2 : S1;
+    else {
+      var k = a || 'cb';
+      if (c === 'high') { k = a === 'bh' ? 'bh' : 'dn'; add = big ? S2 : S1; }
+      else if (c === 'mid' && (k === 'lp' || k === 'mau')) k = 'cb';
+      main = P[k];
+    }
+    var isSeo = main === S1 || main === S2;
+    var link = isSeo ? '/dich-vu/seo-aio/#bang-gia-seo' : main[0] === 'Website Theo Mẫu' ? '/mau-website/' : '/dich-vu/thiet-ke-website/#bang-gia';
+    var html = '<div class="rec"><small>Gợi ý cho bạn</small><h3>' + esc(main[0]) + '</h3><div class="price">' + esc(main[1]) + '</div><p>' + esc(main[2]) + '</p>';
+    if (add) html += '<div class="addon"><b>Nên làm kèm: ' + esc(add[0]) + '</b><span>' + esc(add[1]) + '</span><p>' + esc(add[2]) + '</p><a href="/dich-vu/seo-aio/#bang-gia-seo">Xem gói SEO &amp; AIO&nbsp;&#x2192;&#xFE0E;</a></div>';
+    html += '<p class="cta"><a class="btn" href="/lien-he/?goi=' + encodeURIComponent(main[0]) + '">Nhận báo giá gói này</a><a class="btn ghost" href="' + link + '">Xem chi tiết</a></p></div>';
+    box.innerHTML = html;
   });
 })();
 
@@ -278,8 +291,16 @@
   var q = new URLSearchParams(location.search), mau = q.get('mau'), ng = q.get('nganh'), goi = q.get('goi'), dv = q.get('dv');
   if (ng && f.nganh) f.nganh.value = ng;
   if (goi && f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf(goi) === 0) f.goi.value = o.value || o.text; });
-  if (dv && f.goi && /SEO|Google/.test(dv)) f.goi.selectedIndex = f.goi.options.length - 1;
+  if (dv && f.goi && /SEO|Google|AIO|ChatGPT/.test(dv)) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf('SEO & AIO Khởi Đầu') === 0) f.goi.value = o.value || o.text; });
   var msg = mau ? 'Tôi thích mẫu "' + mau + '", muốn làm website theo mẫu này.' : dv ? 'Tôi quan tâm dịch vụ ' + dv + '.' : '';
   if (msg && f.nd && !f.nd.value) f.nd.value = msg;
   if (mau || ng || goi || dv) { var h = f.querySelector('h2'); if (h) h.textContent = mau ? 'Nhận báo giá theo mẫu ' + mau : 'Gửi yêu cầu báo giá'; }
+  if (mau) {
+    if (f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf('Website Theo Mẫu') === 0) f.goi.value = o.value || o.text; });
+    var box = document.createElement('div'); box.className = 'lh-pick';
+    var b = document.createElement('b'); b.textContent = 'Mẫu bạn chọn: ' + mau; box.appendChild(b);
+    box.insertAdjacentHTML('beforeend', '<span>Website Theo Mẫu <strong>5.000.000đ</strong> · xong trong 2–3 ngày khi có đủ thông tin. Đã gồm hosting, tên miền năm đầu, SEO, AIO.</span>' +
+      '<span class="lk"><a href="/mau-website/">Xem mẫu khác</a><a href="/dich-vu/thiet-ke-website/#bang-gia">So sánh 6 gói</a></span>');
+    var h2 = f.querySelector('h2'); if (h2) h2.insertAdjacentElement('afterend', box);
+  }
 })();

@@ -422,7 +422,7 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 @media (prefers-reduced-motion:reduce){.cs{transition:none}}
 
 /* ---------- large screens 24–32" (v17): wider frame + stepped page zoom so the layout fills the screen ---------- */
-@media (min-width:1600px){.wrap{max-width:1280px}html{zoom:1.1;--z:1.1}}
+@media (min-width:1600px){.wrap{max-width:1440px;padding-inline:32px}html{zoom:1.1;--z:1.1}}
 @media (min-width:1800px){html{zoom:1.2;--z:1.2}}
 @media (min-width:2100px){html{zoom:1.36;--z:1.36}}
 @media (min-width:2400px){html{zoom:1.5;--z:1.5}}
@@ -505,3 +505,57 @@ svg.zl{stroke:none !important;fill:none}
   .dock a:nth-of-type(2){display:grid}
   .dock .totop{order:3;flex:0 0 52px;height:52px;width:52px}
 }
+
+/* desktop: fixed top menu (v22), content aligned with .wrap */
+@media (min-width:901px){
+  html{scroll-padding-top:92px}
+  body{padding-top:72px}
+  .nav,.sub .subhdr .nav{position:fixed;left:0;right:0;top:0;z-index:70;height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:0 max(18px,calc(50% - 600px + 18px));background:rgba(10,7,6,.95);border-bottom:1px solid var(--line);box-shadow:0 10px 30px -20px rgba(0,0,0,.9)}
+  .hero .wrap{padding-top:18px}
+  .sub .subhdr{padding:0}
+  .case .stage{top:100px}
+  :root{--stk:96px}
+}
+@media (min-width:1600px){.nav,.sub .subhdr .nav{padding-inline:max(32px,calc(50% - 720px + 32px))}}
+
+/* menu v23: Dịch vụ dropdown (desktop) + nested items in the mobile menu */
+.nav .dd{position:relative;display:inline-flex;align-items:center}
+.nav .dd>a{display:inline-flex;align-items:center;gap:6px}
+.nav .dd>a::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:translateY(-2px) rotate(45deg);opacity:.7}
+.nav .ddm{position:absolute;top:calc(100% + 14px);left:-14px;z-index:80;min-width:250px;display:flex;flex-direction:column;gap:2px;padding:10px;background:#140E0C;border:1px solid var(--line-2);border-radius:14px;box-shadow:0 24px 48px -20px rgba(0,0,0,.9);
+  opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .2s,transform .2s,visibility 0s linear .2s}
+.nav .ddm::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.nav .dd:hover .ddm,.nav .dd:focus-within .ddm{opacity:1;visibility:visible;transform:none;transition:opacity .2s,transform .2s,visibility 0s}
+.nav nav .ddm a{display:block;padding:10px 12px;border-radius:9px;color:var(--muted);white-space:nowrap;box-shadow:none !important;text-decoration:none}
+.nav nav .ddm a:hover,.nav nav .ddm a[aria-current="page"]{background:rgba(255,255,255,.05);color:var(--ink)}
+.nav nav .ddm a.s2{padding-left:30px;font-size:.93em;position:relative}
+.nav nav .ddm a.s2::before{content:"";position:absolute;left:16px;top:50%;width:8px;height:1.5px;background:var(--flame)}
+.mnav li.s{counter-increment:none;border-bottom:0}
+.mnav li.s a{min-height:46px;padding-left:44px;font:600 17px/1.2 var(--body);color:var(--muted)}
+.mnav li.s a::before{content:"";width:8px;height:1.5px;background:var(--flame)}
+.mnav li.s2 a{padding-left:64px;font-size:16px}
+.mnav li.s-last{border-bottom:1px solid var(--line);padding-bottom:6px}
+/* v23: keep the ghost button outlined even where blog.css loads after theme.css */
+.btn.btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border:1px solid var(--line-2);box-shadow:none}
+.btn.btn-ghost:hover{border-color:var(--flame);background:rgba(255,74,28,.1)}
+
+/* v24 wide screens: split hero (text left, Google preview right) so the hero fills the width instead of one narrow centred column */
+@media (min-width:1200px){
+  .hero-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);justify-items:stretch;align-items:center;text-align:left;gap:64px;margin-top:40px}
+  .hero-grid > div:first-child{align-items:flex-start;max-width:none}
+  .hero h1{font-size:clamp(52px,4.5vw,66px)}
+  html[lang="en"] .hero h1{font-size:clamp(42px,3.55vw,47px)}
+  .hero .lead{max-width:50ch;margin-inline:0}
+  .hero-cta,.stats{justify-content:flex-start}
+  .hero .pick{width:100%}
+  .hero .pick .chips{max-width:none;margin:0;justify-content:flex-start}
+  .hero .pick p{text-align:left}
+  .hero .stats{margin-top:32px}
+  .editor{width:100%;grid-template-columns:minmax(0,1fr);transform:perspective(1800px) rotateY(-5deg);transform-origin:100% 50%}
+  .editor .shot{aspect-ratio:16/10;border-right:0;border-bottom:1px solid var(--line)}
+}
+
+/* v24 wide screens (≥1600): wider frame, one-line section titles, so one screen shows more without crowding */
+@media (min-width:1200px){.hero .stats{flex-wrap:nowrap;gap:16px 36px}}
+@media (min-width:1600px){.sec-h h2{max-width:30ch}.sec-h{margin-bottom:36px}.sec{padding-block:64px 8px}}
