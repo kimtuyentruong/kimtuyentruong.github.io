@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tham vấn tâm lý TP.HCM – Cá nhân, cặp đôi, trẻ vị thành niên | Hiên Nhà</title>
+<meta name="description" content="Mẫu giao diện website phòng tham vấn tâm lý ở TP.HCM: tham vấn cá nhân, cặp đôi, trẻ vị thành niên, gặp trực tiếp hoặc online. Có bài thở 4-7-8, tìm chuyên viên phù hợp, nút thoát nhanh và đặt lịch buổi đầu.">
+<meta name="theme-color" content="#F7F0E5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23F7F0E5'/%3E%3Cpath d='M17 54V30c0-9 7-17 15-17s15 8 15 17v24' fill='%23DDE6D4' stroke='%233F2D22' stroke-width='3.5' stroke-linecap='round'/%3E%3Cpath d='M11 55h42' stroke='%233F2D22' stroke-width='3.5' stroke-linecap='round'/%3E%3Ccircle cx='39' cy='40' r='2.6' fill='%23A9654F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Nunito:wght@400..800&display=swap&subset=vietnamese" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Hiên Nhà – Phòng tham vấn tâm lý (dữ liệu mẫu)","description":"Dữ liệu mẫu cho mẫu giao diện website phòng tham vấn tâm lý. Tên, địa chỉ, chuyên viên, giá và giờ làm việc chỉ để minh hoạ.","telephone":"+84900000000","priceRange":"600.000đ – 900.000đ","address":{"@type":"PostalAddress","addressLocality":"TP.HCM","addressCountry":"VN"},"openingHours":["Mo-Sa 08:00-21:00","Su 08:00-12:00"]}
+</script>
+<style>
+:root{
+  --bg:#F7F0E5;--bg2:#F0E5D4;--paper:#FCF8F1;
+  --sage:#9DB295;--sage-l:#DFE7D6;--sage-d:#4E6A4B;--sage-dd:#34492F;
+  --rose:#EBC9BA;--rose-l:#F6E3D9;--clay:#9A5741;
+  --brown:#3F2D22;--brown2:#6A5243;--line:rgba(63,45,34,.14);--line2:rgba(63,45,34,.24);
+  --serif:'Fraunces',Georgia,serif;--sans:'Nunito',system-ui,-apple-system,sans-serif;
+  --pad:clamp(18px,4.2vw,56px);--max:1240px;--ease:cubic-bezier(.25,.6,.2,1);
+  --r:28px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--brown);font:400 18px/1.7 var(--sans);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--clay);outline-offset:3px;border-radius:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.ico{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.nw{white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--brown);color:var(--paper);padding:10px 16px;border-radius:12px}
+.skip:focus{left:12px}
+.serif,h1,h2,h3{font-family:var(--serif);font-variation-settings:"SOFT" 100;font-weight:400;letter-spacing:-.01em}
+h1,h2,h3{text-wrap:balance;margin:0}
+h2{font-size:clamp(34px,4.3vw,58px);line-height:1.08}
+h2 em,h1 em{font-style:italic;color:var(--clay);font-weight:350}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 14px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage-d);margin:0 0 18px}
+.eyebrow::before{content:"";width:28px;height:2px;border-radius:2px;background:currentColor}
+.lead{font-size:clamp(18px,1.6vw,20.5px);color:var(--brown2);max-width:60ch}
+.sec{padding:clamp(80px,10vw,140px) 0;position:relative}
+.sec-head{max-width:760px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head p{margin:20px 0 0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;border:1.5px solid transparent;font:700 17px/1 var(--sans);text-decoration:none;white-space:nowrap;transition:background .5s var(--ease),color .5s,border-color .5s,transform .5s var(--ease)}
+.btn-p{background:var(--sage-d);color:#FCF8F1}
+.btn-p:hover{background:var(--sage-dd);transform:translateY(-2px)}
+.btn-o{border-color:var(--line2);color:var(--brown);background:transparent}
+.btn-o:hover{border-color:var(--brown);background:var(--paper)}
+.btn .ico{width:20px;height:20px}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:80;background:rgba(247,240,229,.98);border-bottom:1px solid transparent;transition:border-color .6s,box-shadow .6s}
+.hdr.scrolled{border-color:var(--line);box-shadow:0 10px 30px -24px rgba(63,45,34,.5)}
+.hdr .wrap{display:flex;align-items:center;gap:20px;height:80px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.logo svg{width:42px;height:42px}
+.logo b{display:block;font:500 27px/1 var(--serif);font-variation-settings:"SOFT" 100;letter-spacing:-.01em}
+.logo small{display:block;white-space:nowrap;font:700 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brown2);margin-top:5px}
+.nav{display:flex;gap:4px}
+.nav a{white-space:nowrap;padding:10px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px;color:var(--brown2);transition:background .4s,color .4s}
+.nav a:hover{background:var(--bg2);color:var(--brown)}
+.hdr .btn{min-height:46px;padding:0 20px;font-size:15.5px}
+.exit{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 16px 0 13px;border-radius:999px;background:var(--rose-l);border:1.5px solid #D9A894;color:var(--brown);font:800 15px/1 var(--sans);white-space:nowrap;transition:background .3s}
+.exit:hover{background:var(--rose)}
+.exit .ico{width:19px;height:19px}
+.menu-btn{display:none;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--line2);background:transparent;align-items:center;justify-content:center}
+.mnav{position:fixed;inset:0;z-index:120;background:var(--bg);padding:22px var(--pad) 40px;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;overflow-y:auto}
+.mnav.open{opacity:1;visibility:visible}
+.mnav .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.mnav .xbtn{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line2);background:var(--paper);display:inline-flex;align-items:center;justify-content:center}
+.mnav nav a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font:400 30px/1.2 var(--serif);font-variation-settings:"SOFT" 100;text-decoration:none}
+.mnav .btn{margin-top:28px}
+.mnav .mnote{margin-top:22px;font-size:15px;color:var(--brown2)}
+
+/* hero */
+.hero{padding:clamp(124px,13vw,168px) 0 clamp(70px,8vw,110px);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(30px,5vw,80px);align-items:center}
+.hero h1{font-size:clamp(44px,6vw,88px);line-height:1.02;letter-spacing:-.02em;font-weight:380}
+.hero .lead{margin:28px 0 36px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:12px 26px;margin:40px 0 0;padding:0;list-style:none;font-weight:700;font-size:16px;color:var(--brown2)}
+.hero-facts li{display:flex;align-items:center;gap:9px}
+.hero-facts .ico{color:var(--sage-d)}
+.blob{position:absolute;pointer-events:none;z-index:0}
+.hero .b1{width:min(760px,70vw);right:-14vw;top:40px;color:var(--sage-l)}
+.hero .b2{width:300px;left:-120px;bottom:-60px;color:var(--rose-l)}
+.hero .wrap>*{position:relative;z-index:1}
+.art{position:relative;max-width:520px;justify-self:end;width:100%}
+.arch{position:relative;border-radius:999px 999px 34px 34px;overflow:hidden;aspect-ratio:4/5;background:var(--sage-l);border:10px solid var(--paper);box-shadow:0 40px 70px -40px rgba(63,45,34,.45)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.art .plant{position:absolute;left:-74px;bottom:-26px;width:170px;z-index:2}
+.art .sun{position:absolute;right:-24px;top:-16px;width:120px;z-index:2}
+.note{position:absolute;right:-18px;bottom:44px;z-index:3;background:var(--paper);border-radius:22px;padding:16px 20px 16px 18px;max-width:250px;box-shadow:0 22px 40px -26px rgba(63,45,34,.55);border:1px solid var(--line)}
+.note b{display:block;font:500 19px/1.25 var(--serif);font-variation-settings:"SOFT" 100}
+.note span{display:block;font-size:14.5px;line-height:1.45;color:var(--brown2);margin-top:6px}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 9s ease-in-out infinite}
+.sway.s2{animation-duration:11s;animation-delay:-3s}
+.sway.s3{animation-duration:13s;animation-delay:-6s}
+@keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.4deg)}}
+.paused .sway{animation-play-state:paused}
+
+/* safety */
+.safety{position:relative;z-index:3;margin-top:-34px}
+.safety .box{display:grid;grid-template-columns:auto 1fr auto;gap:22px 28px;align-items:center;background:var(--paper);border:2px solid #D3957F;border-radius:var(--r);padding:26px 30px;box-shadow:0 26px 50px -36px rgba(63,45,34,.5)}
+.safety .ic{width:62px;height:62px;border-radius:50%;background:var(--rose-l);display:flex;align-items:center;justify-content:center;color:var(--clay)}
+.safety .ic .ico{width:30px;height:30px}
+.safety p{margin:0}
+.safety .big{font:500 clamp(20px,2vw,25px)/1.35 var(--serif);font-variation-settings:"SOFT" 100;color:var(--brown)}
+.safety .big strong{font-weight:600;color:var(--clay)}
+.safety .sm{font-size:15.5px;color:var(--brown2);margin-top:8px!important}
+.safety .acts{display:flex;flex-direction:column;gap:10px}
+.btn-sos{background:var(--clay);color:#fff}
+.btn-sos:hover{background:#7F4532}
+
+/* pain */
+.pain{padding-top:clamp(90px,10vw,140px)}
+.pain .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,6vw,90px);align-items:start}
+.pain .side{position:sticky;top:120px}
+.pain .side p{margin:22px 0 0}
+.pain .side .win{width:190px;margin-top:34px}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:20px;list-style:none;margin:0;padding:0}
+.notes li{background:var(--paper);border-radius:24px;padding:26px 26px 24px;border:1px solid var(--line);font:400 22px/1.4 var(--serif);font-variation-settings:"SOFT" 100;position:relative}
+.notes li:nth-child(4n+1){background:var(--rose-l);transform:rotate(-1.2deg)}
+.notes li:nth-child(4n+2){margin-top:40px;transform:rotate(1deg)}
+.notes li:nth-child(4n+3){background:var(--sage-l);transform:rotate(.6deg)}
+.notes li:nth-child(4n){margin-top:40px;transform:rotate(-.8deg)}
+.notes li small{display:block;font:700 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--brown2);margin-top:16px}
+.notes li svg.ul{display:block;width:90px;height:10px;margin-top:12px;color:var(--clay)}
+.reassure{margin-top:46px;display:flex;gap:18px;align-items:flex-start;background:transparent;border-left:3px solid var(--sage);padding:4px 0 4px 22px;font-size:19px;color:var(--brown2);max-width:640px}
+
+/* approach */
+.approach{background:var(--sage-l);margin-top:40px}
+.approach .wave{position:absolute;left:0;right:0;height:60px;width:100%;color:var(--sage-l)}
+.approach .wave.t{top:-59px}
+.approach .wave.b{bottom:-59px;transform:scaleY(-1)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative;counter-reset:s}
+.stepsw{position:relative}
+.stepsw .path{position:absolute;left:4%;right:4%;top:6px;height:70px;width:92%;color:var(--sage-d);opacity:.55}
+.steps li{position:relative;padding-top:96px}
+.steps li:nth-child(even){padding-top:130px}
+.steps .num{position:absolute;top:10px;left:0;width:64px;height:64px;border-radius:50%;background:var(--paper);border:1.5px solid var(--sage-d);display:flex;align-items:center;justify-content:center;font:400 28px/1 var(--serif);font-variation-settings:"SOFT" 100;color:var(--sage-dd)}
+.steps li:nth-child(even) .num{top:44px}
+.steps h3{font-size:26px;line-height:1.2;margin-bottom:10px}
+.steps p{margin:0;color:var(--brown2);font-size:17px}
+.approach .aside{margin-top:56px;display:flex;gap:16px;align-items:flex-start;background:var(--paper);border-radius:22px;padding:22px 26px;max-width:820px;font-size:17px}
+.approach .aside .ico{color:var(--sage-d);margin-top:3px}
+
+/* services */
+.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;align-items:start}
+.door{background:var(--paper);border-radius:220px 220px 30px 30px;border:1px solid var(--line);padding:34px 30px 32px;display:flex;flex-direction:column;position:relative;transition:transform .9s var(--ease)}
+.door:nth-child(2){margin-top:56px}
+.door:hover{transform:translateY(-6px)}
+.door .ill{height:150px;display:flex;align-items:flex-end;justify-content:center;margin:18px 0 18px;border-bottom:1.5px dashed var(--line2);padding-bottom:6px}
+.door .ill svg{height:130px;width:auto;max-width:100%}
+.door h3{font-size:30px;line-height:1.15;text-align:center}
+.door .for{text-align:center;color:var(--brown2);font-size:16px;margin:8px 0 18px}
+.door .meta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:16px;gap:10px}
+.door .price{font:500 30px/1 var(--serif);font-variation-settings:"SOFT" 100;color:var(--sage-dd);white-space:nowrap}
+.door .dur{font-weight:700;font-size:15.5px;color:var(--brown2);white-space:nowrap}
+.door ul{list-style:none;padding:0;margin:0 0 22px;font-size:16.5px;flex:1}
+.door li{display:flex;gap:10px;padding:5px 0}
+.door li .ico{width:18px;height:18px;color:var(--sage-d);margin-top:5px}
+.door .btn{width:100%;white-space:normal;text-align:center;line-height:1.25;padding:10px 20px}
+.tags{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--bg2);font:700 13px/1 var(--sans);color:var(--brown2)}
+.tag .ico{width:15px;height:15px}
+.svc-note{margin-top:40px;text-align:center;color:var(--brown2);font-size:16px}
+
+/* room */
+.room{background:var(--bg2)}
+.room .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px);align-items:center}
+.collage{position:relative;padding-bottom:70px}
+.collage .p1{border-radius:30px;overflow:hidden;aspect-ratio:5/4;width:86%}
+.collage .p2{position:absolute;right:0;bottom:0;width:52%;aspect-ratio:1;border-radius:50% 50% 26px 26px;overflow:hidden;border:8px solid var(--bg2)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.modes{display:grid;gap:18px;margin-top:34px}
+.mode{display:grid;grid-template-columns:56px 1fr;gap:18px;background:var(--paper);border-radius:22px;padding:22px 24px;border:1px solid var(--line)}
+.mode .ic{width:56px;height:56px;border-radius:18px;background:var(--sage-l);display:flex;align-items:center;justify-content:center;color:var(--sage-dd)}
+.mode:nth-child(2) .ic{background:var(--rose-l);color:var(--clay)}
+.mode h3{font-size:24px;margin-bottom:6px}
+.mode p{margin:0;font-size:16.5px;color:var(--brown2)}
+
+/* breath */
+.breath{background:var(--sage-dd);color:#F4EEE3;overflow:hidden}
+.breath .eyebrow{color:#C9D8C0}
+.breath h2 em{color:#F0C9B6}
+.breath .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px);align-items:center;position:relative;z-index:1}
+.breath .lead{color:#DCE4D4}
+.breath ol{margin:28px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.breath ol li{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:center;font-size:17.5px}
+.breath ol b{display:flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;border:1.5px solid rgba(244,238,227,.4);font:400 26px/1 var(--serif);font-variation-settings:"SOFT" 100}
+.breath .warn{margin-top:28px;font-size:15.5px;color:#C9D8C0;max-width:52ch}
+.breath .b3{width:520px;right:-140px;top:-120px;color:#3D5538}
+.bx{display:flex;flex-direction:column;align-items:center}
+.ring{position:relative;width:min(420px,82vw);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.ring .guide{position:absolute;inset:0;width:100%;height:100%;color:rgba(244,238,227,.35)}
+.ring .ball{position:absolute;inset:9%;border-radius:50%;background:#DFE7D6;transform:scale(.62);transition-property:transform,background-color;transition-timing-function:cubic-bezier(.45,.05,.55,.95);transition-duration:1.2s}
+.ring .ball.hold{background:#F2D8CC}
+.ring .ball.out{background:#C9D8C0}
+.ring .in{position:relative;text-align:center;color:var(--brown)}
+.ring .ph{display:block;font:500 clamp(22px,2.6vw,28px)/1.1 var(--serif);font-variation-settings:"SOFT" 100}
+.ring .ct{display:block;font:350 clamp(56px,7vw,84px)/1 var(--serif);font-variation-settings:"SOFT" 100;margin-top:4px;font-variant-numeric:tabular-nums}
+.ring .sub{display:block;font:700 14px/1 var(--sans);margin-top:8px;color:var(--brown2)}
+.rounds{display:flex;gap:10px;margin:26px 0 20px}
+.rounds i{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(244,238,227,.6);transition:background .6s}
+.rounds i.on{background:#F4EEE3}
+.bctl{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.btn-l{background:#F4EEE3;color:var(--sage-dd)}
+.btn-l:hover{background:#fff}
+.btn-g{border-color:rgba(244,238,227,.45);color:#F4EEE3;background:transparent}
+.btn-g:hover{border-color:#F4EEE3}
+.breath .done-msg{margin:18px 0 0;text-align:center;font-size:16px;color:#DCE4D4;min-height:1.7em}
+
+/* matcher */
+.match .grid{display:grid;grid-template-columns:330px 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.panel{position:sticky;top:110px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px 26px}
+.panel fieldset{border:0;padding:0;margin:0 0 22px}
+.panel legend{font:700 14px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--brown2);margin-bottom:12px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line2);font-weight:700;font-size:15.5px;transition:background .4s,border-color .4s,color .4s;white-space:nowrap}
+.chip input:checked+span{background:var(--sage-d);border-color:var(--sage-d);color:#FCF8F1}
+.chip input:focus-visible+span{outline:3px solid var(--clay);outline-offset:2px}
+.chip input:disabled+span{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.panel .hint{font-size:14.5px;color:var(--brown2);margin:4px 0 0;line-height:1.55}
+.result{font:400 22px/1.4 var(--serif);font-variation-settings:"SOFT" 100;margin:0 0 22px;min-height:2.8em}
+.result b{font-weight:500;color:var(--sage-dd)}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.person{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:opacity .9s var(--ease),transform .9s var(--ease),border-color .6s}
+.person.dim{opacity:.72}
+.person.fit{border-color:var(--sage-d);box-shadow:0 0 0 1.5px var(--sage-d)}
+.person .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sage-l)}
+.person .ph img{width:100%;height:100%;object-fit:cover}
+.person .badge{position:absolute;left:14px;top:14px;background:var(--sage-d);color:#FCF8F1;font:800 13px/1 var(--sans);padding:8px 12px;border-radius:999px;opacity:0;transform:translateY(-6px);transition:opacity .6s,transform .6s}
+.person.fit .badge{opacity:1;transform:none}
+.person .smp{position:absolute;right:12px;bottom:12px;background:rgba(252,248,241,.94);font:700 12px/1 var(--sans);padding:6px 10px;border-radius:999px;color:var(--brown2)}
+.person .bd{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.person h3{font-size:25px;line-height:1.2}
+.person .cred{font-size:15px;color:var(--brown2);margin:6px 0 14px;line-height:1.5}
+.person .foc{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.person .foc span{font:700 13px/1 var(--sans);padding:7px 10px;border-radius:999px;background:var(--bg2);color:var(--brown2)}
+.person .foc span.hit{background:var(--sage-l);color:var(--sage-dd)}
+.person .why{font-size:15px;color:var(--sage-dd);margin:0 0 14px;min-height:0}
+.person .row{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px;color:var(--brown2);margin-bottom:18px}
+.person .row span{display:inline-flex;align-items:center;gap:6px}
+.person .row .ico{width:17px;height:17px}
+.person .btn{margin-top:auto;min-height:48px;font-size:15.5px}
+
+/* privacy */
+.privacy .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,90px);align-items:start}
+.privacy .door-ill{width:min(300px,70%);margin-top:34px}
+.plist{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.plist li{display:grid;grid-template-columns:46px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.plist li:first-child{padding-top:0}
+.plist .ic{width:46px;height:46px;border-radius:50%;background:var(--sage-l);display:flex;align-items:center;justify-content:center;color:var(--sage-dd)}
+.plist h3{font-size:23px;line-height:1.25;margin-bottom:6px}
+.plist p{margin:0;font-size:16.5px;color:var(--brown2)}
+.exit-help{margin-top:30px;background:var(--rose-l);border-radius:22px;padding:22px 24px;font-size:16px;display:flex;gap:16px;align-items:flex-start}
+.exit-help .ico{color:var(--clay);margin-top:3px}
+.exit-help p{margin:0}
+kbd{font:700 13px/1 var(--sans);padding:3px 7px;border-radius:6px;border:1px solid var(--line2);background:var(--paper)}
+
+/* reviews */
+.reviews{background:var(--bg2)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.rev{margin:0;background:var(--paper);border-radius:var(--r);padding:30px 28px 26px;border:1px solid var(--line);display:flex;flex-direction:column}
+.rev:nth-child(2){margin-top:46px;background:var(--sage-l)}
+.rev .q{width:38px;height:38px;color:var(--clay);fill:currentColor;stroke:none}
+.rev blockquote{margin:14px 0 22px;font:400 21px/1.5 var(--serif);font-variation-settings:"SOFT" 100}
+.rev footer{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;font-size:15px;color:var(--brown2);border-top:1px solid var(--line);padding-top:16px;margin-top:auto}
+.rev footer b{display:block;color:var(--brown);font-size:16.5px}
+.sample{flex:none;font:800 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:999px;border:1.5px dashed var(--clay);color:var(--clay)}
+
+/* faq */
+.faq .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,90px);align-items:start}
+.faq .side{position:sticky;top:120px}
+.faq .side .chair{width:220px;margin-top:30px}
+.qa{border-bottom:1px solid var(--line2)}
+.qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;cursor:pointer;font:400 clamp(21px,2vw,25px)/1.3 var(--serif);font-variation-settings:"SOFT" 100}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line2);display:flex;align-items:center;justify-content:center;flex:none;transition:transform .6s var(--ease),background .4s}
+.qa[open] summary .pm{transform:rotate(45deg);background:var(--sage-l)}
+.qa .ans{padding:0 60px 26px 0;color:var(--brown2);font-size:17px}
+.qa .ans p{margin:0 0 10px}
+
+/* booking */
+.book{background:var(--sage-l)}
+.book .grid{display:grid;grid-template-columns:1.45fr 1fr;gap:clamp(24px,3vw,40px);align-items:start}
+.form{background:var(--paper);border-radius:var(--r);padding:clamp(24px,3.4vw,44px);border:1px solid var(--line)}
+.fs{border:0;padding:0;margin:0 0 26px}
+.fs legend,.lbl{display:block;font:800 14px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--brown2);margin-bottom:12px;padding:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:20px}
+.inp{width:100%;min-height:54px;padding:12px 16px;border-radius:16px;border:1.5px solid var(--line2);background:#fff;font-size:17px;transition:border-color .3s}
+.inp:focus{outline:none;border-color:var(--sage-d);box-shadow:0 0 0 3px rgba(78,106,75,.18)}
+textarea.inp{min-height:110px;resize:vertical}
+select.inp{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233F2D22' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center/20px;padding-right:44px}
+.help{display:block;font-size:14.5px;color:var(--brown2);margin-top:7px;line-height:1.5}
+.err{display:block;color:#A23B2A;font-size:14.5px;margin-top:6px;font-weight:700}
+.err:empty{display:none}
+.days{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.day{flex:none}
+.day span{flex-direction:column;justify-content:center;gap:3px;min-width:70px;min-height:68px;padding:8px 10px;border-radius:18px;text-align:center;line-height:1.1}
+.day small{font-size:12.5px;font-weight:700;opacity:.8}
+.times{display:flex;flex-wrap:wrap;gap:8px}
+.teen-note{background:var(--rose-l);border-radius:16px;padding:14px 16px;font-size:15.5px;margin:-8px 0 22px}
+.consent{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;margin:6px 0 22px;cursor:pointer}
+.consent input{width:22px;height:22px;margin:2px 0 0;accent-color:var(--sage-d);flex:none}
+.chk{display:flex;gap:10px;align-items:center;font-size:15.5px;margin-top:12px;cursor:pointer}
+.chk input{width:20px;height:20px;accent-color:var(--sage-d);margin:0}
+.form .btn-p{width:100%;min-height:58px;font-size:18px}
+.sum{position:sticky;top:110px;display:grid;gap:18px}
+.card{background:var(--paper);border-radius:var(--r);padding:28px 26px;border:1px solid var(--line)}
+.card h3{font-size:25px;margin-bottom:14px}
+.sum dl{margin:0;display:grid;gap:0}
+.sum dl div{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line2);font-size:16px}
+.sum dt{color:var(--brown2)}
+.sum dd{margin:0;font-weight:700;text-align:right}
+.sum .tot dd{font:500 24px/1 var(--serif);font-variation-settings:"SOFT" 100;color:var(--sage-dd)}
+.sum .free{font-size:15px;color:var(--brown2);margin:14px 0 0}
+.card.sos{background:var(--rose-l);border-color:#E3B8A6}
+.card.sos p{margin:0;font-size:16px}
+.card.sos a{font-weight:800;color:var(--clay)}
+.done{text-align:center;padding:20px 0}
+.done svg.ok{width:86px;height:86px;color:var(--sage-d);margin:0 auto 14px;display:block}
+.done h3{font-size:32px;margin-bottom:10px}
+.done p{color:var(--brown2);margin:0 auto 10px;max-width:46ch}
+.done .code{display:inline-block;margin:10px 0 16px;font:700 20px/1 var(--sans);letter-spacing:.14em;padding:12px 18px;border-radius:14px;border:1.5px dashed var(--sage-d);color:var(--sage-dd)}
+
+/* footer */
+.ft{background:var(--brown);color:#EADFD0;padding:80px 0 120px}
+.ft a{color:#F6EBDC;text-decoration:none}
+.ft a:hover{text-decoration:underline}
+.ft-sos{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between;border:1.5px solid rgba(240,201,182,.45);border-radius:22px;padding:20px 24px;margin-bottom:56px;font-size:17px}
+.ft-sos b{color:#F0C9B6}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.ft .logo b{color:#F6EBDC}
+.ft .logo small{color:#CDBBA8}
+.ft h4{font:700 13.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#CDBBA8;margin:6px 0 16px}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:16px}
+.ft p{font-size:16px;color:#D9CBBB;max-width:36ch}
+.ft-note{margin-top:56px;padding-top:24px;border-top:1px solid rgba(234,223,208,.18);font-size:14.5px;color:#CDBBA8;display:grid;gap:10px}
+.ft-note .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* reveal: very slow */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity 1.6s var(--ease),transform 1.6s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.2s}.js .rv.d2{transition-delay:.4s}.js .rv.d3{transition-delay:.6s}
+
+/* kt badge */
+.kt-badge{position:fixed;left:12px;bottom:12px;z-index:90;display:inline-flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);padding:9px 15px 9px 12px;border-radius:999px;background:rgba(63,45,34,.96);border:1px solid rgba(235,201,186,.25);color:#fff;font:500 12.5px/1.3 var(--sans);text-decoration:none;box-shadow:0 8px 24px -8px rgba(0,0,0,.45);transition:transform .25s,background .2s,opacity .3s}
+.kt-badge:hover{transform:translateY(-2px);background:#2B1E16}
+.kt-badge i{width:8px;height:8px;border-radius:50%;background:#9DB295;flex:none;box-shadow:0 0 0 3px rgba(157,178,149,.3)}
+.kt-badge b{color:#F0C9B6;font-weight:600}
+body.lock .kt-badge{opacity:0;pointer-events:none}
+
+@media (max-width:1180px){
+  .hdr .wrap{gap:14px}
+  .match .grid{grid-template-columns:290px 1fr}
+}
+@media (max-width:1200px){
+  .nav,.hdr .btn-p{display:none}
+  .menu-btn{display:inline-flex}
+}
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr}
+  .art{justify-self:center;max-width:440px;margin-top:20px}
+  .art .plant{left:-30px;width:130px}
+  .note{right:-8px}
+  .safety .box{grid-template-columns:auto 1fr}
+  .safety .acts{grid-column:1/-1;flex-direction:row;flex-wrap:wrap}
+  .pain .grid,.room .grid,.breath .grid,.privacy .grid,.faq .grid{grid-template-columns:1fr}
+  .pain .side,.faq .side{position:static}
+  .pain .side .win,.faq .side .chair{display:none}
+  .steps{grid-template-columns:1fr 1fr;gap:34px 28px}
+  .stepsw .path{display:none}
+  .steps li,.steps li:nth-child(even){padding-top:84px}
+  .steps li:nth-child(even) .num{top:0}
+  .steps .num{top:0}
+  .doors{grid-template-columns:1fr;max-width:640px;margin:0 auto}
+  .door{border-radius:var(--r);display:grid;grid-template-columns:200px 1fr;column-gap:28px;padding:28px}
+  .door:nth-child(2){margin-top:0}
+  .door .ill{grid-row:1/span 6;border:0;margin:0;height:auto;align-items:center;background:var(--bg2);border-radius:200px 200px 22px 22px;padding:30px 14px}
+  .door h3,.door .for{text-align:left}
+  .door .tags{justify-content:flex-start}
+  .match .grid{grid-template-columns:1fr}
+  .panel{position:static}
+  .revs{grid-template-columns:1fr;max-width:640px}
+  .rev:nth-child(2){margin-top:0}
+  .book .grid{grid-template-columns:1fr}
+  .sum{position:static}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  body{font-size:17px}
+  .hdr .wrap{height:68px;gap:10px}
+  html{scroll-padding-top:72px}
+  .logo svg{width:36px;height:36px}
+  .logo b{font-size:23px}
+  .logo small{display:none}
+  .exit{min-height:44px;padding:0 13px 0 11px;font-size:14.5px}
+  .hero{padding-top:104px}
+  .hero-cta .btn{flex:1 1 220px}
+  .safety .box{grid-template-columns:1fr;padding:22px 20px}
+  .safety .ic{width:52px;height:52px}
+  .safety .acts .btn{flex:1 1 200px}
+  .notes{grid-template-columns:1fr}
+  .notes li:nth-child(n){margin-top:0}
+  .steps{grid-template-columns:1fr}
+  .steps li,.steps li:nth-child(even){padding:0 0 0 84px;min-height:64px}
+  .door{grid-template-columns:1fr;padding:26px 22px}
+  .door .ill{grid-row:auto;height:170px;margin-bottom:18px}
+  .door h3,.door .for{text-align:center}
+  .door .tags{justify-content:center}
+  .collage{padding-bottom:50px}
+  .people{grid-template-columns:1fr}
+  .privacy .door-ill{width:170px;margin-top:24px}
+  .mode{grid-template-columns:1fr;gap:12px;padding:20px}
+  .mode .ic{width:48px;height:48px}
+  .breath .bx{margin-top:10px}
+  .two{grid-template-columns:1fr;gap:0}
+  .qa .ans{padding-right:0}
+  .ft-grid{grid-template-columns:1fr}
+  .kt-badge{opacity:0;transform:translateY(12px);pointer-events:none}
+  .kt-badge.show{opacity:1;transform:none;pointer-events:auto}
+}
+@media (max-width:420px){
+  .hero h1{font-size:41px}
+  .exit{padding:0 12px 0 10px;font-size:14px;gap:6px}
+  .hdr .wrap{gap:8px}
+  .note{position:relative;right:auto;bottom:auto;margin:-40px 16px 0 auto;max-width:240px}
+  .art .plant{left:-14px;bottom:60px;width:110px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua, đến nội dung chính</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 48 48"><path d="M12 42V22c0-7 5.4-13 12-13s12 6 12 13v20" fill="#DFE7D6" stroke="#3F2D22" stroke-width="2.4" stroke-linecap="round"/><path d="M24 9.5v32.3" stroke="#3F2D22" stroke-width="1.6" stroke-linecap="round" opacity=".45"/><path d="M7 42.6c11-.8 23-.6 34 .2" fill="none" stroke="#3F2D22" stroke-width="2.4" stroke-linecap="round"/><circle cx="29.5" cy="29" r="1.9" fill="#A9654F"/><path d="M36.5 41c1-4 3.8-6.2 6-6.4-.3 3.3-2.6 5.6-6 6.4z" fill="#9DB295"/></symbol>
+  <symbol id="i-exit" viewBox="0 0 24 24"><path d="M14 4h4.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H14"/><path d="M10 16.5 14.5 12 10 7.5M14.2 12H4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h11"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.4 4-2 1.4a12 12 0 0 0 6.5 6.5l1.4-2 4 1.4v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.4-7.5-10A4.2 4.2 0 0 1 12 7.6 4.2 4.2 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10z"/><path d="M8.5 11.5h2l1-2 1.6 4 1-2h1.4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4.5 20 11M6.5 9.5V20h11V9.5"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6.5" width="12.5" height="11" rx="2.5"/><path d="m15.5 10.5 5-3v9l-5-3"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19c3-4 6-7 10-9"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 18.5V7a2.5 2.5 0 0 1 2.5-2.5h9A2.5 2.5 0 0 1 19 7v6.5a2.5 2.5 0 0 1-2.5 2.5H9z"/><path d="M9 9.5h6M9 12.5h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20z"/><path d="M14 3.5v4h4M10 12.5h5M10 16h5"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.6-3.3 2.8-5 5.5-5s4.9 1.7 5.5 5"/><circle cx="16.8" cy="9.5" r="2.6"/><path d="M15.5 14.6c2.5-.3 4.4 1.2 5 4.4"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4.5 7 7.5 6 7.5-6"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.2 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.2-3.5-8.5S9.6 5.9 12 3.5z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8.5 5.5v13M15.5 5.5v13"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M5 12a7 7 0 1 0 2.1-5"/><path d="M5 4.5V9h4.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 32 32"><path d="M13 8c-5 1.4-8 5.4-8 10.4V24h7.5v-7.4H9c.2-3 2-5.1 4.6-6zM26 8c-5 1.4-8 5.4-8 10.4V24h7.5v-7.4H22c.2-3 2-5.1 4.6-6z"/></symbol>
+  <symbol id="i-squiggle" viewBox="0 0 90 10"><path d="M2 6c8-5 14 3 22-1s14-4 22 0 14 3 22-1 12-3 20 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <!-- hand-drawn armchair -->
+  <symbol id="d-chair" viewBox="0 0 220 180"><path d="M52 104c-4-38 8-70 58-72 50 1 63 33 59 72" fill="#EBC9BA" stroke="#3F2D22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M56 100c-2-30 10-58 54-60" fill="none" stroke="#3F2D22" stroke-width="1.6" stroke-linecap="round" opacity=".35"/><path d="M38 106c-3-12 8-18 20-14l3 2h98l3-2c12-4 23 2 20 14l-5 24c-1 8-8 12-16 11H60c-8 1-15-3-16-11z" fill="#F6E3D9" stroke="#3F2D22" stroke-width="3" stroke-linejoin="round"/><path d="M62 110c30 3 66 3 96-1" fill="none" stroke="#3F2D22" stroke-width="1.8" stroke-linecap="round" opacity=".5"/><path d="M64 141l-7 26M156 141l7 26" stroke="#3F2D22" stroke-width="3" stroke-linecap="round"/><path d="M84 66c6-4 14-5 22-3" fill="none" stroke="#9A5741" stroke-width="2" stroke-linecap="round" opacity=".6"/></symbol>
+  <symbol id="d-pouf" viewBox="0 0 120 90"><path d="M14 52c-2-18 18-28 46-28s48 10 46 28c-1 16-20 26-46 26S15 68 14 52z" fill="#DFE7D6" stroke="#3F2D22" stroke-width="3"/><path d="M24 46c20 8 52 8 72 0" fill="none" stroke="#3F2D22" stroke-width="1.8" stroke-linecap="round" opacity=".45"/></symbol>
+  <symbol id="d-sprig" viewBox="0 0 60 120"><path d="M30 118C28 86 30 52 36 10" fill="none" stroke="#3F2D22" stroke-width="2.4" stroke-linecap="round"/><path d="M31 84c-12-2-20-10-22-22 12 0 21 8 22 22zM32 60c10-3 17-11 18-22-11 1-18 9-18 22zM34 36c-8-2-14-9-15-18 9 0 15 7 15 18z" fill="#9DB295" stroke="#3F2D22" stroke-width="2"/></symbol>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Hiên Nhà, về đầu trang"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><b>Hiên&nbsp;Nhà</b><small>Phòng tham vấn tâm lý</small></span></a>
+    <nav class="nav" aria-label="Menu chính">
+      <a href="#cach-lam-viec">Cách làm việc</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#chuyen-vien">Chuyên viên</a>
+      <a href="#bai-tho">Bài thở</a>
+      <a href="#bao-mat">Bảo mật</a>
+    </nav>
+    <a class="btn btn-p" href="#dat-lich">Đặt buổi&nbsp;đầu</a>
+    <button class="exit" type="button" data-exit aria-label="Thoát nhanh: rời trang này ngay"><svg class="ico" aria-hidden="true"><use href="#i-exit"/></svg><span>Thoát&nbsp;nhanh</span></button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="top">
+    <a class="logo" href="#top"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><b>Hiên&nbsp;Nhà</b></span></a>
+    <button class="xbtn" id="menuClose" type="button" aria-label="Đóng menu"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <nav aria-label="Menu di động">
+    <a href="#cach-lam-viec">Cách làm việc</a>
+    <a href="#dich-vu">Dịch vụ &amp; chi&nbsp;phí</a>
+    <a href="#chuyen-vien">Tìm chuyên viên</a>
+    <a href="#bai-tho">Bài thở <span class="nw">4-7-8</span></a>
+    <a href="#bao-mat">Bảo mật thông&nbsp;tin</a>
+    <a href="#hoi-dap">Hỏi đáp</a>
+  </nav>
+  <a class="btn btn-p" href="#dat-lich">Đặt buổi&nbsp;đầu</a>
+  <p class="mnote">Cần rời trang ngay? Bấm nút <b>Thoát nhanh</b> ở góc trên hoặc nhấn <kbd>Esc</kbd> hai lần.</p>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <svg class="blob b1" viewBox="0 0 600 560" aria-hidden="true"><path fill="currentColor" d="M318 20c94-8 196 40 240 128 40 82 20 186-38 262-60 78-160 138-262 126C160 524 70 452 32 360-6 266 14 154 84 92 146 38 230 28 318 20z"/></svg>
+  <svg class="blob b2" viewBox="0 0 300 300" aria-hidden="true"><path fill="currentColor" d="M154 14c64 4 126 52 132 118 6 70-48 140-118 152S28 252 16 182C4 108 82 10 154 14z"/></svg>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rv">Phòng tham vấn tâm lý · TP.HCM</p>
+      <h1 class="rv d1">Một hiên nhà yên&nbsp;tĩnh để&nbsp;nói&nbsp;ra <em>điều khó&nbsp;nói</em></h1>
+      <p class="lead rv d2">Hiên Nhà lắng nghe bạn mà không phán xét, rồi cùng bạn tìm cách đi qua những ngày nặng lòng. Tham vấn cá nhân, cặp đôi và trẻ vị thành niên, gặp trực tiếp tại phòng hoặc&nbsp;online.</p>
+      <div class="hero-cta rv d2">
+        <a class="btn btn-p" href="#dat-lich">Đặt buổi đầu 50&nbsp;phút</a>
+        <a class="btn btn-o" href="#chuyen-vien">Tìm chuyên viên phù&nbsp;hợp</a>
+      </div>
+      <ul class="hero-facts rv d3">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg>Trực tiếp hoặc online</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg>Có lịch tối &amp; cuối&nbsp;tuần</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg>Giữ kín thông tin</li>
+      </ul>
+    </div>
+    <div class="art rv d1">
+      <svg class="sun" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="30" fill="#EBC9BA"/><path d="M60 14v10M60 96v10M14 60h10M96 60h10M27 27l7 7M86 86l7 7M27 93l7-7M86 34l7-7" stroke="#9A5741" stroke-width="2.6" stroke-linecap="round" opacity=".7"/><path d="M38 62c2-14 12-24 26-24" fill="none" stroke="#3F2D22" stroke-width="2" stroke-linecap="round" opacity=".35"/></svg>
+      <div class="arch"><img src="https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&w=1600&q=80" alt="Một người ngồi trên ghế cạnh khung cửa sổ sáng, căn phòng yên tĩnh" width="1000" height="1250" fetchpriority="high"></div>
+      <svg class="plant" viewBox="0 0 170 230" aria-hidden="true">
+        <g class="sway"><path d="M84 150C80 118 70 92 50 70" fill="none" stroke="#3F2D22" stroke-width="2.6" stroke-linecap="round"/><path d="M50 70C30 66 14 50 12 28c22 2 38 18 38 42z" fill="#9DB295" stroke="#3F2D22" stroke-width="2.4" stroke-linejoin="round"/><path d="M48 66C38 56 28 44 16 32" fill="none" stroke="#3F2D22" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></g>
+        <g class="sway s2"><path d="M86 150c2-36 8-66 26-96" fill="none" stroke="#3F2D22" stroke-width="2.6" stroke-linecap="round"/><path d="M112 54c-2-24 12-42 36-48 4 26-12 44-36 48z" fill="#B8C9AE" stroke="#3F2D22" stroke-width="2.4" stroke-linejoin="round"/><path d="M114 50c8-14 18-28 32-40" fill="none" stroke="#3F2D22" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></g>
+        <g class="sway s3"><path d="M84 150c-2-24-6-44-2-70" fill="none" stroke="#3F2D22" stroke-width="2.6" stroke-linecap="round"/><path d="M82 80c-12-14-12-36 2-54 14 16 12 40-2 54z" fill="#9DB295" stroke="#3F2D22" stroke-width="2.4" stroke-linejoin="round"/><path d="M84 112c14-10 30-12 46-6-10 14-28 16-46 6z" fill="#B8C9AE" stroke="#3F2D22" stroke-width="2.2" stroke-linejoin="round"/></g>
+        <path d="M46 152c-1-4 2-6 6-6h66c4 0 7 2 6 6l-10 62c-1 6-5 9-11 9H67c-6 0-10-3-11-9z" fill="#EBC9BA" stroke="#3F2D22" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M54 170c20 4 44 4 62 0" fill="none" stroke="#9A5741" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+        <path d="M30 224c40-3 80-3 112 1" fill="none" stroke="#3F2D22" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+      <div class="note"><b>Buổi đầu chỉ cần bạn đến như bạn&nbsp;là</b><span>Không cần chuẩn bị, không cần kể hết. Bạn nói tới đâu, mình nghe tới đó.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="safety" aria-labelledby="sos-t">
+  <div class="wrap">
+    <div class="box rv">
+      <span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+      <div>
+        <p class="big" id="sos-t">Nếu bạn đang có ý nghĩ làm hại bản thân, hãy gọi cấp cứu <strong>115</strong> hoặc đến cơ sở y tế gần nhà&nbsp;ngay.</p>
+        <p class="sm">Đường dây hỗ trợ tâm lý: <b>1800 0000</b> (số mẫu, cần xác minh). Hiên Nhà không phải dịch vụ cấp cứu; tin nhắn gửi qua web có thể chưa được đọc&nbsp;ngay.</p>
+      </div>
+      <div class="acts">
+        <a class="btn btn-sos" href="tel:115"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Gọi cấp cứu&nbsp;115</a>
+        <a class="btn btn-o" href="tel:18000000">Gọi đường dây hỗ&nbsp;trợ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pain" aria-labelledby="pain-t">
+  <div class="wrap grid">
+    <div class="side">
+      <p class="eyebrow rv">Nhiều người cũng từng như vậy</p>
+      <h2 id="pain-t" class="rv d1">Có thể bạn đang mang theo <em>những điều&nbsp;này</em></h2>
+      <p class="lead rv d2">Không cần đợi tới lúc “hết chịu nổi” mới tìm người trò chuyện. Nói ra với người được đào tạo để lắng nghe là một cách chăm sóc bản thân, giống như đi khám khi cơ thể mệt.</p>
+      <svg class="win rv d2" viewBox="0 0 200 230" aria-hidden="true"><path d="M32 214V96c0-48 32-80 68-80s68 32 68 80v118z" fill="#DFE7D6" stroke="#3F2D22" stroke-width="3" stroke-linejoin="round"/><path d="M36 210V98c0-44 30-76 64-77" fill="none" stroke="#3F2D22" stroke-width="1.5" opacity=".35"/><circle cx="128" cy="76" r="16" fill="#EBC9BA"/><path d="M100 18v196M34 118h132" stroke="#3F2D22" stroke-width="2.6" stroke-linecap="round"/><path d="M48 168c14-12 30-12 42 0M110 180c12-10 26-10 40 0" fill="none" stroke="#4E6A4B" stroke-width="2" stroke-linecap="round" opacity=".6"/><path d="M14 216c56-4 118-4 172 1" fill="none" stroke="#3F2D22" stroke-width="3" stroke-linecap="round"/></svg>
+    </div>
+    <div>
+      <ul class="notes">
+        <li class="rv">“Đêm nào cũng nằm nghĩ tới 2&nbsp;giờ sáng, sáng dậy vẫn thấy mệt.”<small>Mất ngủ</small></li>
+        <li class="rv d1">“Tim đập nhanh trước mỗi buổi họp, dù mình đã chuẩn bị&nbsp;kỹ.”<small>Lo âu</small></li>
+        <li class="rv">“Đi làm về chỉ muốn tắt điện thoại, không muốn nói chuyện với&nbsp;ai.”<small>Áp lực công việc</small></li>
+        <li class="rv d1">“Hai vợ chồng nói ba câu là lại cãi, rồi im lặng cả&nbsp;tuần.”<small>Mối quan hệ</small></li>
+        <li class="rv">“Con 15 tuổi đóng cửa phòng cả ngày, hỏi gì cũng ‘không&nbsp;sao’.”<small>Cha mẹ &amp; con</small></li>
+        <li class="rv d1">“Ai cũng bảo cố lên, nhưng mình thấy mệt mà không biết vì&nbsp;sao.”<small>Chưa gọi được tên</small></li>
+      </ul>
+      <p class="reassure rv">Những cảm giác này phổ biến hơn bạn nghĩ. Bạn không cần biết mình “bị gì” mới được đến; chỉ cần thấy mình muốn có người cùng&nbsp;ngồi&nbsp;nghe.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec approach" id="cach-lam-viec" aria-labelledby="ap-t">
+  <svg class="wave t" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60V34c160-30 320-36 480-18s320 30 480 14 320-34 480-14v44z"/></svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Cách Hiên Nhà làm việc</p>
+      <h2 id="ap-t" class="rv d1">Mọi thứ đi chậm, theo nhịp của&nbsp;<em>bạn</em></h2>
+      <p class="lead rv d2">Tham vấn tâm lý là những buổi trò chuyện có mục tiêu, với người được đào tạo chuyên môn. Bạn quyết định mình muốn nói gì, nói tới đâu, và có thể dừng bất cứ&nbsp;lúc&nbsp;nào.</p>
+    </div>
+    <div class="stepsw"><svg class="path" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true"><path d="M20 26C120 26 160 62 260 62S400 24 500 26s160 36 260 36 160-38 230-36" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/></svg>
+    <ol class="steps">
+      <li class="rv"><span class="num">1</span><h3>Gọi làm quen 15&nbsp;phút</h3><p>Không tính phí. Bạn hỏi mọi điều muốn hỏi, Hiên Nhà gợi ý chuyên viên phù hợp. Chưa cần kể chuyện riêng.</p></li>
+      <li class="rv d1"><span class="num">2</span><h3>Buổi đầu 50&nbsp;phút</h3><p>Chuyên viên lắng nghe, hỏi về điều bạn đang gặp và điều bạn mong thay đổi. Bạn thấy hợp mới hẹn tiếp.</p></li>
+      <li class="rv d2"><span class="num">3</span><h3>Cùng lên kế&nbsp;hoạch</h3><p>Thống nhất mục tiêu nhỏ, tần suất gặp (thường mỗi tuần hoặc hai tuần một lần) và cách theo dõi.</p></li>
+      <li class="rv d3"><span class="num">4</span><h3>Nhìn lại, điều&nbsp;chỉnh</h3><p>Sau vài buổi, cả hai cùng nhìn lại điều gì đang ổn hơn, điều gì cần đổi cách. Có thể đổi chuyên viên nếu bạn muốn.</p></li>
+    </ol></div>
+    <div class="aside rv"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg><p style="margin:0">Tham vấn tâm lý không thay thế việc khám và điều trị của bác sĩ chuyên khoa tâm thần. Khi thấy cần, chuyên viên sẽ trao đổi với bạn và gợi ý nơi khám phù hợp.</p></div>
+  </div>
+  <svg class="wave b" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 60V34c160-30 320-36 480-18s320 30 480 14 320-34 480-14v44z"/></svg>
+</section>
+
+<section class="sec" id="dich-vu" aria-labelledby="sv-t" style="padding-top:clamp(120px,13vw,180px)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Dịch vụ &amp; chi phí</p>
+      <h2 id="sv-t" class="rv d1">Ba cánh cửa để <em>bắt&nbsp;đầu</em></h2>
+      <p class="lead rv d2">Giá niêm yết rõ, như nhau cho gặp trực tiếp và online. Bạn thanh toán sau mỗi buổi, không cần mua gói trước.</p>
+    </div>
+    <div class="doors">
+      <article class="door rv">
+        <div class="ill"><svg viewBox="0 0 280 180" aria-hidden="true"><use href="#d-chair" x="20" y="0" width="220" height="180"/><use href="#d-sprig" x="222" y="58" width="56" height="112"/></svg></div>
+        <h3>Tham Vấn Cá&nbsp;Nhân</h3>
+        <p class="for">Cho người trưởng thành đang gặp lo âu, mất ngủ, áp lực công việc, mất mát hay khủng hoảng trong cuộc&nbsp;sống.</p>
+        <div class="meta"><span class="price">600.000đ</span><span class="dur">50&nbsp;phút / buổi</span></div>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Gặp một chuyên viên cố định</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Có lịch tối đến 21:00</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Bài tập nhỏ giữa các buổi, nếu bạn muốn</li>
+        </ul>
+        <div class="tags"><span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg>Trực tiếp</span><span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg>Online</span></div>
+        <button class="btn btn-p" type="button" data-svc="ca-nhan" style="margin-top:14px">Chọn tham vấn cá&nbsp;nhân</button>
+      </article>
+      <article class="door rv d1">
+        <div class="ill"><svg viewBox="0 0 330 180" aria-hidden="true"><g transform="translate(0 20) scale(.8)"><use href="#d-chair" width="220" height="180"/></g><g transform="translate(330 20) scale(-.8 .8)"><use href="#d-chair" width="220" height="180"/></g><path d="M150 60c6-6 14-6 15 2 1-8 9-8 15-2 5 7-5 15-15 21-10-6-20-14-15-21z" fill="#EBC9BA" stroke="#3F2D22" stroke-width="2"/></svg></div>
+        <h3>Tham Vấn Cặp&nbsp;Đôi</h3>
+        <p class="for">Cho các cặp đang yêu, vợ chồng muốn hiểu nhau hơn, bớt cãi vã, hoặc đang cân nhắc một quyết định&nbsp;lớn.</p>
+        <div class="meta"><span class="price">900.000đ</span><span class="dur">80&nbsp;phút / buổi</span></div>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Chuyên viên giữ vai trò trung lập</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Có thể xen buổi gặp riêng từng người</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Học cách nói và nghe khi căng thẳng</li>
+        </ul>
+        <div class="tags"><span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg>Trực tiếp</span><span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg>Online</span></div>
+        <button class="btn btn-p" type="button" data-svc="cap-doi" style="margin-top:14px">Chọn tham vấn cặp&nbsp;đôi</button>
+      </article>
+      <article class="door rv d2">
+        <div class="ill"><svg viewBox="0 0 300 180" aria-hidden="true"><use href="#d-chair" x="0" y="0" width="200" height="164"/><use href="#d-pouf" x="186" y="96" width="110" height="82"/><path d="M226 92c-2-14 4-28 16-34" fill="none" stroke="#3F2D22" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
+        <h3>Trẻ Vị&nbsp;Thành&nbsp;Niên <span class="nw">12–17</span></h3>
+        <p class="for">Cho tuổi teen đang áp lực học tập, khó kết bạn, buồn bã kéo dài, và cho cha mẹ muốn hiểu&nbsp;con&nbsp;hơn.</p>
+        <div class="meta"><span class="price">650.000đ</span><span class="dur">50&nbsp;phút / buổi</span></div>
+        <ul>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Buổi đầu có cha mẹ cùng đến</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Con có không gian riêng để nói</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Buổi trao đổi với phụ huynh định kỳ</li>
+        </ul>
+        <div class="tags"><span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg>Trực tiếp</span><span class="tag"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg>Online</span></div>
+        <button class="btn btn-p" type="button" data-svc="vi-thanh-nien" style="margin-top:14px">Chọn cho&nbsp;trẻ vị thành&nbsp;niên</button>
+      </article>
+    </div>
+    <p class="svc-note rv">Giá mẫu, chỉ để minh hoạ. Đổi lịch miễn phí nếu báo trước 24&nbsp;giờ.</p>
+  </div>
+</section>
+
+<section class="sec room" aria-labelledby="rm-t">
+  <div class="wrap grid">
+    <div class="collage rv">
+      <div class="p1"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80" alt="Góc phòng tham vấn với ghế bành vàng, đèn đứng và cây xanh" width="1200" height="960" loading="lazy"></div>
+      <div class="p2"><img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=900&q=80" alt="Chuyên viên tham vấn đang trò chuyện cùng một người bên bàn tròn" width="700" height="700" loading="lazy"></div>
+    </div>
+    <div>
+      <p class="eyebrow rv">Gặp ở đâu cũng được</p>
+      <h2 id="rm-t" class="rv d1">Phòng riêng ấm áp, hoặc&nbsp;ngay nơi bạn thấy an&nbsp;toàn</h2>
+      <div class="modes">
+        <div class="mode rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg></span><div><h3>Gặp trực&nbsp;tiếp tại&nbsp;phòng</h3><p>Ba phòng nhỏ có cách âm, ánh sáng tự nhiên, ghế ngồi êm. Khu chờ tách biệt; lịch hẹn giãn cách để bạn ít gặp người lạ khi ra vào.</p></div></div>
+        <div class="mode rv d1"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg></span><div><h3>Gặp online qua&nbsp;video</h3><p>Phù hợp khi bạn ở xa, bận con nhỏ hoặc ngại đi lại. Bạn chỉ cần một góc riêng tư và tai nghe; đường link được gửi riêng trước buổi hẹn.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec breath" id="bai-tho" aria-labelledby="br-t">
+  <svg class="blob b3" viewBox="0 0 300 300" aria-hidden="true"><path fill="currentColor" d="M154 14c64 4 126 52 132 118 6 70-48 140-118 152S28 252 16 182C4 108 82 10 154 14z"/></svg>
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Thử ngay bây giờ</p>
+      <h2 id="br-t" class="rv d1">Bài thở <span class="nw">4-7-8</span>, <em>một phút cho&nbsp;mình</em></h2>
+      <p class="lead rv d2">Khi lo lắng dâng lên, nhịp thở thường nhanh và nông. Thở chậm theo nhịp đếm giúp cơ thể dịu lại một chút. Ngồi thoải mái, thả lỏng vai, rồi bấm bắt đầu.</p>
+      <ol class="rv d2">
+        <li><b>4</b><span>Hít vào nhẹ bằng mũi, đếm&nbsp;4&nbsp;nhịp</span></li>
+        <li><b>7</b><span>Giữ hơi, đếm&nbsp;7&nbsp;nhịp</span></li>
+        <li><b>8</b><span>Thở ra chậm bằng miệng, đếm&nbsp;8&nbsp;nhịp</span></li>
+      </ol>
+      <p class="warn rv">Nếu thấy chóng mặt hay khó chịu, hãy dừng và thở bình thường. Bài thở giúp bạn bình tĩnh hơn trong lúc này, không thay thế tham vấn hay điều trị.</p>
+    </div>
+    <div class="bx rv d1">
+      <div class="ring" id="ring">
+        <svg class="guide" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="98" fill="none" stroke="currentColor" stroke-width=".8" stroke-dasharray="1.5 5"/><circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="100" cy="100" r="52" fill="none" stroke="currentColor" stroke-width=".6" stroke-dasharray="1.5 5"/></svg>
+        <div class="ball" id="ball"></div>
+        <div class="in"><span class="ph" id="bPh" aria-live="polite">Sẵn sàng</span><span class="ct" id="bCt" aria-hidden="true">4</span><span class="sub" id="bSub">4 vòng · 1&nbsp;phút</span></div>
+      </div>
+      <div class="rounds" id="bRounds" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="bctl">
+        <button class="btn btn-l" type="button" id="bGo"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg><span>Bắt đầu thở</span></button>
+        <button class="btn btn-g" type="button" id="bReset" aria-label="Làm lại từ đầu"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg>Làm&nbsp;lại</button>
+      </div>
+      <p class="done-msg" id="bMsg" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec match" id="chuyen-vien" aria-labelledby="mt-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Tìm chuyên viên phù hợp</p>
+      <h2 id="mt-t" class="rv d1">Chọn điều bạn đang gặp, Hiên Nhà gợi ý người <em>đồng&nbsp;hành</em></h2>
+      <p class="lead rv d2">Ba câu hỏi ngắn. Kết quả chỉ để tham khảo; trong cuộc gọi làm quen, bạn vẫn có thể đổi người phù hợp hơn.</p>
+    </div>
+    <div class="grid">
+      <form class="panel rv" id="mForm" aria-label="Bộ lọc tìm chuyên viên" onsubmit="return false">
+        <fieldset><legend>1. Điều bạn muốn nói trước</legend><div class="chips">
+          <label class="chip"><input type="radio" name="issue" value="lo-au" checked><span>Lo âu</span></label>
+          <label class="chip"><input type="radio" name="issue" value="mat-ngu"><span>Mất ngủ</span></label>
+          <label class="chip"><input type="radio" name="issue" value="ap-luc"><span>Áp lực công việc</span></label>
+          <label class="chip"><input type="radio" name="issue" value="quan-he"><span>Mối quan hệ</span></label>
+          <label class="chip"><input type="radio" name="issue" value="cha-me-con"><span>Cha mẹ &amp; con</span></label>
+        </div></fieldset>
+        <fieldset><legend>2. Hình thức gặp</legend><div class="chips">
+          <label class="chip"><input type="radio" name="fm" value="truc-tiep" checked><span>Trực tiếp</span></label>
+          <label class="chip"><input type="radio" name="fm" value="online"><span>Online</span></label>
+          <label class="chip"><input type="radio" name="fm" value="any"><span>Sao cũng được</span></label>
+        </div></fieldset>
+        <fieldset style="margin-bottom:12px"><legend>3. Ngôn ngữ</legend><div class="chips">
+          <label class="chip"><input type="radio" name="lang" value="vi" checked><span>Tiếng Việt</span></label>
+          <label class="chip"><input type="radio" name="lang" value="en"><span>English</span></label>
+        </div></fieldset>
+        <p class="hint">Chuyên viên, bằng cấp và lịch làm việc dưới đây là thông tin mẫu.</p>
+      </form>
+      <div>
+        <p class="result" id="mResult" aria-live="polite"></p>
+        <div class="people" id="people">
+          <article class="person" data-id="an">
+            <div class="ph"><img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=900&q=80" alt="Chân dung chuyên viên Nguyễn Minh An đang cười" width="900" height="675" loading="lazy"><span class="badge">Gợi ý cho bạn</span><span class="smp">Chuyên viên mẫu</span></div>
+            <div class="bd"><h3>Nguyễn&nbsp;Minh&nbsp;An</h3><p class="cred">Thạc sĩ Tâm lý học lâm sàng · 8 năm làm tham vấn (mẫu)</p><div class="foc"></div><p class="why"></p><div class="row"></div><button class="btn btn-p" type="button" data-pick="an">Đặt lịch với&nbsp;chị&nbsp;An</button></div>
+          </article>
+          <article class="person" data-id="ha">
+            <div class="ph"><img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?auto=format&fit=crop&w=900&q=80" alt="Chân dung chuyên viên Trần Thu Hà ngồi bên bàn gỗ" width="900" height="675" loading="lazy"><span class="badge">Gợi ý cho bạn</span><span class="smp">Chuyên viên mẫu</span></div>
+            <div class="bd"><h3>Trần&nbsp;Thu&nbsp;Hà</h3><p class="cred">Thạc sĩ Tâm lý học, chứng chỉ trị liệu gia đình · 10 năm (mẫu)</p><div class="foc"></div><p class="why"></p><div class="row"></div><button class="btn btn-p" type="button" data-pick="ha">Đặt lịch với&nbsp;chị&nbsp;Hà</button></div>
+          </article>
+          <article class="person" data-id="huy">
+            <div class="ph"><img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=900&q=80" alt="Chân dung chuyên viên Lê Quang Huy mỉm cười ngoài trời" width="900" height="675" loading="lazy"><span class="badge">Gợi ý cho bạn</span><span class="smp">Chuyên viên mẫu</span></div>
+            <div class="bd"><h3>Lê&nbsp;Quang&nbsp;Huy</h3><p class="cred">Thạc sĩ Tâm lý học đường · 6 năm làm với tuổi teen (mẫu)</p><div class="foc"></div><p class="why"></p><div class="row"></div><button class="btn btn-p" type="button" data-pick="huy">Đặt lịch với&nbsp;anh&nbsp;Huy</button></div>
+          </article>
+          <article class="person" data-id="linh">
+            <div class="ph"><img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=900&q=80" alt="Chân dung chuyên viên Phạm Ngọc Linh trên nền sáng" width="900" height="675" loading="lazy"><span class="badge">Gợi ý cho bạn</span><span class="smp">Chuyên viên mẫu</span></div>
+            <div class="bd"><h3>Phạm&nbsp;Ngọc&nbsp;Linh</h3><p class="cred">Thạc sĩ Tham vấn tâm lý · 7 năm, làm online (mẫu)</p><div class="foc"></div><p class="why"></p><div class="row"></div><button class="btn btn-p" type="button" data-pick="linh">Đặt lịch với&nbsp;chị&nbsp;Linh</button></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec privacy" id="bao-mat" aria-labelledby="pv-t" style="padding-top:0">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Bảo mật thông tin</p>
+      <h2 id="pv-t" class="rv d1">Điều bạn kể ở đây, <em>ở lại&nbsp;đây</em></h2>
+      <p class="lead rv d2">Sự riêng tư là điều kiện đầu tiên để bạn dám nói thật. Đây là những gì Hiên Nhà làm với thông tin của&nbsp;bạn.</p>
+      <svg class="door-ill rv d2" viewBox="0 0 240 260" aria-hidden="true"><path d="M50 244V100c0-50 32-84 70-84s70 34 70 84v144" fill="#F6E3D9" stroke="#3F2D22" stroke-width="3" stroke-linejoin="round"/><path d="M72 244V108c0-36 22-62 48-62s48 26 48 62v136z" fill="#DFE7D6" stroke="#3F2D22" stroke-width="2.6" stroke-linejoin="round"/><circle cx="150" cy="160" r="5" fill="#9A5741"/><path d="M120 120c-12 0-20 8-20 20v8h40v-8c0-12-8-20-20-20z" fill="none" stroke="#3F2D22" stroke-width="2.4"/><rect x="94" y="146" width="52" height="40" rx="8" fill="#FCF8F1" stroke="#3F2D22" stroke-width="2.4"/><path d="M120 160v12" stroke="#3F2D22" stroke-width="2.6" stroke-linecap="round"/><path d="M20 246c66-4 136-4 200 1" fill="none" stroke="#3F2D22" stroke-width="3" stroke-linecap="round"/><g transform="translate(184 170)"><use href="#d-sprig" width="40" height="80"/></g></svg>
+    </div>
+    <div>
+      <ul class="plist">
+        <li class="rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg></span><div><h3>Nội dung buổi tham vấn được giữ&nbsp;kín</h3><p>Chuyên viên không kể lại với gia đình, công ty hay bất kỳ ai khi chưa có sự đồng ý bằng văn bản của bạn. Chỉ có ngoại lệ khi có nguy cơ nghiêm trọng đến tính mạng của bạn hoặc người khác, hoặc khi cơ quan có thẩm quyền yêu cầu theo quy định pháp luật; khi đó chuyên viên sẽ báo trước với bạn nếu có thể.</p></div></li>
+        <li class="rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></span><div><h3>Hồ sơ lưu riêng, ít người được&nbsp;xem</h3><p>Ghi chép buổi tham vấn chỉ chuyên viên phụ trách được đọc. Lễ tân chỉ thấy tên gọi, số điện thoại và giờ hẹn.</p></div></li>
+        <li class="rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span><div><h3>Tin nhắn nhắc lịch không ghi lý&nbsp;do</h3><p>Tin nhắn chỉ ghi “Hiên Nhà – lịch hẹn 19:00 thứ Năm”, không nhắc đến tâm lý hay vấn đề của bạn. Bạn có thể đăng ký bằng tên gọi khác.</p></div></li>
+        <li class="rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></span><div><h3>Với trẻ vị thành&nbsp;niên</h3><p>Cha mẹ được biết tình hình chung và hướng đồng hành, nhưng không được nghe lại chi tiết lời con kể, trừ khi liên quan đến an toàn của con. Điều này được nói rõ với cả nhà ngay buổi đầu.</p></div></li>
+        <li class="rv"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span><div><h3>Quyền của&nbsp;bạn với&nbsp;dữ liệu cá&nbsp;nhân</h3><p>Bạn có thể yêu cầu xem, sửa hoặc xoá thông tin đã cung cấp, theo quy định về bảo vệ dữ liệu cá nhân hiện hành.</p></div></li>
+      </ul>
+      <div class="exit-help rv"><svg class="ico" aria-hidden="true"><use href="#i-exit"/></svg><p><b>Nút Thoát nhanh</b> ở góc trên đưa bạn sang trang thời tiết ngay (hoặc nhấn <kbd>Esc</kbd> hai lần). Trang này sẽ không còn khi bấm “Quay lại”, nhưng vẫn nằm trong lịch sử trình duyệt; nếu dùng máy chung, hãy mở web bằng chế độ ẩn danh.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec reviews" aria-labelledby="rv-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Người từng ngồi ở hiên</p>
+      <h2 id="rv-t" class="rv d1">Vài lời chia sẻ, giữ kín tên <em>người&nbsp;viết</em></h2>
+    </div>
+    <div class="revs">
+      <figure class="rev rv"><svg class="q" aria-hidden="true"><use href="#i-quote"/></svg><blockquote>Mình đến vì mất ngủ kéo dài. Buổi đầu mình chỉ ngồi khóc, chị chuyên viên không hối thúc gì. Giờ mình có vài cách để những đêm khó ngủ bớt đáng sợ hơn.</blockquote><footer><span><b>Chị T., 29 tuổi</b>Tham vấn cá nhân</span><span class="sample">Đánh giá mẫu</span></footer></figure>
+      <figure class="rev rv d1"><svg class="q" aria-hidden="true"><use href="#i-quote"/></svg><blockquote>Hai vợ chồng tưởng đi tham vấn là để phân xử ai đúng ai sai. Hoá ra là học cách nghe nhau nói hết câu.</blockquote><footer><span><b>Anh chị M. &amp; K.</b>Tham vấn cặp đôi, online</span><span class="sample">Đánh giá mẫu</span></footer></figure>
+      <figure class="rev rv d2"><svg class="q" aria-hidden="true"><use href="#i-quote"/></svg><blockquote>Con gái tôi 15 tuổi, lúc đầu không chịu đi. Anh chuyên viên nói chuyện riêng với con trước rồi mới gặp bố mẹ. Lần sau con tự nhắc lịch.</blockquote><footer><span><b>Cô P.</b>Phụ huynh</span><span class="sample">Đánh giá mẫu</span></footer></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq" id="hoi-dap" aria-labelledby="fq-t">
+  <div class="wrap grid">
+    <div class="side">
+      <p class="eyebrow rv">Hỏi đáp</p>
+      <h2 id="fq-t" class="rv d1">Những điều bạn có thể đang băn&nbsp;khoăn</h2>
+      <p class="lead rv d2" style="margin-top:20px">Chưa thấy câu hỏi của mình? Gọi <a href="tel:0900000000" class="nw">0900 000 000</a> hoặc nhắn Zalo, lễ tân trả lời trong giờ làm việc.</p>
+      <svg class="chair rv d2" viewBox="0 0 220 180" aria-hidden="true"><use href="#d-chair" width="220" height="180"/></svg>
+    </div>
+    <div class="rv">
+      <details class="qa" open><summary>Tham vấn tâm lý khác gì khám tâm thần?<span class="pm"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Chuyên viên tham vấn trò chuyện, lắng nghe và cùng bạn tìm cách ứng phó; không chẩn đoán bệnh và không kê thuốc. Việc chẩn đoán, kê đơn thuộc về bác sĩ chuyên khoa tâm thần. Nếu thấy bạn cần khám, chuyên viên sẽ nói rõ và gợi ý nơi khám.</p></div></details>
+      <details class="qa"><summary>Buổi đầu cần chuẩn bị gì?<span class="pm"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Không cần chuẩn bị gì. Nếu muốn, bạn có thể ghi ra vài điều đang làm mình bận lòng. Bạn không phải kể hết ngay buổi đầu.</p></div></details>
+      <details class="qa"><summary>Cần bao nhiêu buổi thì đủ?<span class="pm"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Tuỳ từng người và từng vấn đề, không có con số chung. Sau buổi đầu, chuyên viên sẽ cùng bạn đặt mục tiêu và nhìn lại sau vài buổi. Bạn có thể dừng bất cứ lúc nào.</p></div></details>
+      <details class="qa"><summary>Online có khác gặp trực tiếp không?<span class="pm"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Cách làm việc giống nhau, giá như nhau. Online tiện khi bạn ở xa hoặc bận; gặp trực tiếp hợp hơn nếu ở nhà khó có góc riêng. Bạn có thể chuyển qua lại giữa hai hình thức.</p></div></details>
+      <details class="qa"><summary>Con tôi 14 tuổi, con có cần đồng ý không?<span class="pm"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Có. Tham vấn hiệu quả hơn khi con muốn đến. Buổi đầu cha mẹ đi cùng và ký đồng ý; chuyên viên sẽ giải thích với cả nhà điều gì được giữ kín, điều gì cha mẹ được biết.</p></div></details>
+      <details class="qa"><summary>Muốn đổi hoặc huỷ lịch thì sao?<span class="pm"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans"><p>Báo trước 24 giờ qua điện thoại hoặc Zalo thì không mất phí. Báo trễ hơn sẽ tính 50% phí buổi (giá mẫu).</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec book" id="dat-lich" aria-labelledby="bk-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv">Đặt lịch buổi đầu</p>
+      <h2 id="bk-t" class="rv d1">Bạn chỉ cần mang theo <em>chính&nbsp;mình</em></h2>
+      <p class="lead rv d2">Chọn khung giờ, để lại tên gọi và số điện thoại. Lễ tân gọi lại xác nhận trong giờ làm việc; bạn không cần kể chuyện riêng trong form này.</p>
+    </div>
+    <div class="grid">
+      <div class="form rv">
+        <form id="bkForm" novalidate>
+          <fieldset class="fs"><legend>Dịch vụ</legend><div class="chips">
+            <label class="chip"><input type="radio" name="svc" value="ca-nhan" checked><span>Cá nhân</span></label>
+            <label class="chip"><input type="radio" name="svc" value="cap-doi"><span>Cặp đôi</span></label>
+            <label class="chip"><input type="radio" name="svc" value="vi-thanh-nien"><span>Trẻ vị thành niên</span></label>
+          </div></fieldset>
+          <p class="teen-note" id="teenNote" hidden>Với bạn dưới 18 tuổi, buổi đầu cần có cha mẹ hoặc người giám hộ cùng tham gia và đồng ý.</p>
+          <div class="two">
+            <fieldset class="fs"><legend>Hình thức</legend><div class="chips">
+              <label class="chip"><input type="radio" name="bfm" value="truc-tiep" checked><span>Trực tiếp</span></label>
+              <label class="chip"><input type="radio" name="bfm" value="online"><span>Online</span></label>
+            </div></fieldset>
+            <div class="field"><label class="lbl" for="bkWho">Chuyên viên</label><select class="inp" id="bkWho" name="who"><option value="">Để Hiên Nhà sắp xếp</option><option value="an">Nguyễn Minh An</option><option value="ha">Trần Thu Hà</option><option value="huy">Lê Quang Huy</option><option value="linh">Phạm Ngọc Linh</option></select><span class="err" id="eWho"></span></div>
+          </div>
+          <fieldset class="fs"><legend>Ngày</legend><div class="days chips" id="days"></div></fieldset>
+          <fieldset class="fs"><legend>Giờ</legend><div class="times chips" id="times"></div><span class="err" id="eTime"></span></fieldset>
+          <div class="two">
+            <div class="field"><label class="lbl" for="bkName">Tên gọi</label><input class="inp" id="bkName" name="name" autocomplete="name" placeholder="Có thể dùng tên gọi khác"><span class="err" id="eName"></span></div>
+            <div class="field"><label class="lbl" for="bkPhone">Số điện thoại</label><input class="inp" id="bkPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"><span class="err" id="ePhone"></span></div>
+          </div>
+          <fieldset class="fs"><legend>Liên hệ với bạn qua</legend><div class="chips">
+            <label class="chip"><input type="radio" name="via" value="Gọi điện" checked><span>Gọi điện</span></label>
+            <label class="chip"><input type="radio" name="via" value="Zalo"><span>Zalo</span></label>
+            <label class="chip"><input type="radio" name="via" value="Tin nhắn"><span>Tin nhắn SMS</span></label>
+          </div>
+          <label class="chk"><input type="checkbox" name="vm" id="bkVm">Không để lại tin nhắn thoại, không gọi giờ hành chính</label></fieldset>
+          <div class="field"><label class="lbl" for="bkNote">Ghi chú (không bắt buộc)</label><textarea class="inp" id="bkNote" name="note" placeholder="Ví dụ: muốn chuyên viên nữ, chỉ rảnh sau 19:00..."></textarea><span class="help">Bạn không cần kể chi tiết ở đây. Những điều riêng tư, hãy để dành cho buổi gặp.</span></div>
+          <label class="consent"><input type="checkbox" id="bkOk" name="ok"><span>Tôi đồng ý để Hiên Nhà dùng tên gọi và số điện thoại trong form này để liên hệ xác nhận lịch hẹn, theo chính sách bảo mật ở trên.</span></label>
+          <span class="err" id="eOk" style="margin:-14px 0 16px"></span>
+          <button class="btn btn-p" type="submit">Gửi yêu cầu đặt&nbsp;lịch</button>
+        </form>
+        <div class="done" id="bkDone" hidden tabindex="-1">
+          <svg class="ok" viewBox="0 0 86 86" aria-hidden="true"><circle cx="43" cy="43" r="40" fill="#DFE7D6" stroke="currentColor" stroke-width="2.4"/><path d="m27 44 11 11 22-23" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Hiên Nhà đã nhận yêu cầu của&nbsp;bạn</h3>
+          <p id="doneTxt"></p>
+          <span class="code" id="doneCode"></span>
+          <p style="font-size:15px">Đây là mẫu giao diện: thông tin không được gửi đi đâu.</p>
+          <button class="btn btn-o" type="button" id="bkAgain" style="margin-top:10px">Đặt lịch&nbsp;khác</button>
+        </div>
+      </div>
+      <aside class="sum">
+        <div class="card rv d1">
+          <h3>Lịch hẹn của&nbsp;bạn</h3>
+          <dl>
+            <div><dt>Dịch vụ</dt><dd id="sSvc">Tham vấn cá nhân</dd></div>
+            <div><dt>Hình thức</dt><dd id="sFm">Trực tiếp</dd></div>
+            <div><dt>Chuyên viên</dt><dd id="sWho">Hiên Nhà sắp xếp</dd></div>
+            <div><dt>Thời gian</dt><dd id="sTime">Chưa chọn</dd></div>
+            <div class="tot"><dt>Phí buổi đầu</dt><dd id="sFee">600.000đ</dd></div>
+          </dl>
+          <p class="free">Thanh toán sau buổi gặp. Muốn hỏi trước? Gọi làm quen 15 phút, không tính phí.</p>
+        </div>
+        <div class="card sos rv d2"><p>Nếu bạn đang có ý nghĩ làm hại bản thân, đừng chờ lịch hẹn: gọi cấp cứu <a href="tel:115">115</a> hoặc đến cơ sở y tế gần nhà ngay.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-sos"><span>Nếu bạn đang có ý nghĩ làm hại bản thân, hãy gọi cấp cứu <b>115</b> hoặc đến cơ sở y tế gần nhà ngay.</span><span>Đường dây hỗ trợ: <b>1800 0000</b> (số mẫu, cần xác minh)</span></div>
+    <div class="ft-grid">
+      <div>
+        <a class="logo" href="#top"><svg aria-hidden="true"><use href="#i-logo"/></svg><span><b>Hiên&nbsp;Nhà</b><small>Phòng tham vấn tâm lý</small></span></a>
+        <p>Tham vấn cá nhân, cặp đôi và trẻ vị thành niên ở TP.HCM, gặp trực tiếp hoặc online.</p>
+      </div>
+      <div><h4>Dịch vụ</h4><ul><li><a href="#dich-vu">Tham Vấn Cá Nhân</a></li><li><a href="#dich-vu">Tham Vấn Cặp Đôi</a></li><li><a href="#dich-vu">Trẻ Vị Thành Niên</a></li><li><a href="#bai-tho">Bài thở <span class="nw">4-7-8</span></a></li></ul></div>
+      <div><h4>Liên hệ</h4><ul><li>Phường Xuân Hòa, TP.HCM</li><li><a href="tel:0900000000">0900 000 000</a></li><li><a href="https://zalo.me/0900000000" target="_blank" rel="noopener">Zalo</a></li><li><a href="mailto:lienhe@example.com">lienhe@example.com</a></li></ul></div>
+      <div><h4>Giờ làm việc</h4><ul><li>Thứ 2 – Thứ 7: <span class="nw">08:00–21:00</span></li><li>Chủ nhật: <span class="nw">08:00–12:00</span></li><li>Ngày lễ: nghỉ</li></ul></div>
+    </div>
+    <div class="ft-note">
+      <span>Dữ liệu cá nhân: tên gọi và số điện thoại khách để lại khi đặt lịch chỉ dùng để xác nhận lịch hẹn, không chia sẻ cho bên thứ ba. Khách có thể yêu cầu xem, sửa hoặc xoá thông tin qua hotline. Hiên Nhà cung cấp dịch vụ tham vấn tâm lý, không phải cơ sở khám chữa bệnh và không cung cấp dịch vụ cấp cứu.</span>
+      <div class="row"><span>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span><span>© 2026 · Mẫu giao diện</span></div>
+    </div>
+  </div>
+</footer>
+
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var hasIO='IntersectionObserver' in window;
+
+/* quick exit */
+var NEUTRAL='https://www.google.com/search?q=th%E1%BB%9Di+ti%E1%BA%BFt+h%C3%B4m+nay';
+function quickExit(){document.body.style.visibility='hidden';try{document.title='Thời tiết'}catch(e){}window.location.replace(NEUTRAL)}
+$$('[data-exit]').forEach(function(b){b.addEventListener('click',quickExit)});
+var lastEsc=0;
+
+/* header + badge */
+var hdr=$('#hdr'),badge=$('#ktBadge');
+function onScroll(){var y=window.pageYOffset;hdr.classList.toggle('scrolled',y>8);badge.classList.toggle('show',y>window.innerHeight*.85)}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* mobile menu */
+var mnav=$('#mnav'),mb=$('#menuBtn');
+function lock(on){document.body.classList.toggle('lock',on);document.documentElement.style.overflow=on?'hidden':'';document.body.style.overflow=on?'hidden':''}
+function menu(open){mnav.classList.toggle('open',open);mb.setAttribute('aria-expanded',open);lock(open);if(open){$('#menuClose').focus()}else{mb.focus()}}
+mb.addEventListener('click',function(){menu(true)});
+$('#menuClose').addEventListener('click',function(){menu(false)});
+$$('#mnav a').forEach(function(a){a.addEventListener('click',function(){mnav.classList.remove('open');mb.setAttribute('aria-expanded','false');lock(false)})});
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Escape')return;
+  if(mnav.classList.contains('open')){menu(false);lastEsc=0;return}
+  var t=Date.now();if(t-lastEsc<900){quickExit()}lastEsc=t;
+});
+
+/* reveal */
+var rvs=$$('.rv');
+if(hasIO&&!RM){
+  var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  rvs.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0){el.classList.add('in')}else{ro.observe(el)}});
+}else{rvs.forEach(function(el){el.classList.add('in')})}
+if(hasIO){new IntersectionObserver(function(es){es.forEach(function(e){$('#top').classList.toggle('paused',!e.isIntersecting)})}).observe($('#top'))}
+
+/* ---------- breathing 4-7-8 ---------- */
+var PH=[{t:'Hít vào',n:4,s:1,c:''},{t:'Giữ hơi',n:7,s:1,c:'hold'},{t:'Thở ra',n:8,s:.62,c:'out'}];
+var ball=$('#ball'),bPh=$('#bPh'),bCt=$('#bCt'),bSub=$('#bSub'),bGo=$('#bGo'),bMsg=$('#bMsg'),dots=$$('#bRounds i');
+var ROUNDS=4,br={run:false,round:0,ph:0,cnt:0,timer:null,fresh:true};
+function setBall(scale,dur,cls){ball.className='ball'+(cls?' '+cls:'');ball.style.transitionDuration=(RM?0:dur)+'s';ball.style.transform='scale('+(RM?.8:scale)+')'}
+function goLabel(running){bGo.querySelector('span').textContent=running?'Tạm dừng':(br.fresh?'Bắt đầu thở':'Tiếp tục');bGo.querySelector('use').setAttribute('href',running?'#i-pause':'#i-play')}
+function showDots(){dots.forEach(function(d,i){d.classList.toggle('on',i<br.round)})}
+function enterPhase(){var p=PH[br.ph];br.cnt=1;bPh.textContent=p.t;bCt.textContent=br.cnt;bSub.textContent='Vòng '+br.round+'/'+ROUNDS;setBall(p.s,p.n,p.c);schedule()}
+function schedule(){clearTimeout(br.timer);br.timer=setTimeout(tick,1000)}
+function tick(){if(!br.run)return;var p=PH[br.ph];br.cnt++;if(br.cnt<=p.n){bCt.textContent=br.cnt;schedule();return}
+  br.ph++;if(br.ph>=PH.length){br.ph=0;if(br.round>=ROUNDS){finish();return}br.round++;showDots()}enterPhase()}
+function finish(){br.run=false;br.fresh=true;clearTimeout(br.timer);bPh.textContent='Xong 4 vòng';bCt.textContent='';bSub.textContent='Thở bình thường';setBall(.62,2,'');goLabel(false);bMsg.textContent='Hãy ngồi yên thêm một chút, để ý xem cơ thể đang thấy thế nào.'}
+function start(){if(br.fresh){br.fresh=false;br.round=1;br.ph=0;showDots();bMsg.textContent='';br.run=true;goLabel(true);enterPhase();return}
+  br.run=true;goLabel(true);var p=PH[br.ph];var left=p.n-br.cnt+1;bPh.textContent=p.t;setBall(p.s,left,p.c);schedule()}
+function pause(){br.run=false;clearTimeout(br.timer);var tf=getComputedStyle(ball).transform;ball.style.transitionDuration='0s';ball.style.transform=tf;goLabel(false);bPh.textContent='Tạm dừng'}
+function resetB(){br.run=false;br.fresh=true;br.round=0;br.ph=0;clearTimeout(br.timer);showDots();setBall(.62,1.2,'');bPh.textContent='Sẵn sàng';bCt.textContent='4';bSub.textContent='4 vòng · 1 phút';bMsg.textContent='';goLabel(false)}
+bGo.addEventListener('click',function(){br.run?pause():start()});
+$('#bReset').addEventListener('click',resetB);
+if(hasIO){new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting&&br.run)pause()})},{threshold:0}).observe($('#ring'))}
+document.addEventListener('visibilitychange',function(){if(document.hidden&&br.run)pause()});
+
+/* ---------- matcher ---------- */
+var ISS={'lo-au':'Lo âu','mat-ngu':'Mất ngủ','ap-luc':'Áp lực công việc','quan-he':'Mối quan hệ','cha-me-con':'Cha mẹ & con'};
+var CS={
+  an:{name:'chị An',iss:['lo-au','mat-ngu','ap-luc'],fm:['truc-tiep','online'],lang:['vi','en'],when:'Tối thứ 2 – thứ 6'},
+  ha:{name:'chị Hà',iss:['quan-he','cha-me-con','ap-luc'],fm:['truc-tiep'],lang:['vi'],when:'Thứ 3 – thứ 7'},
+  huy:{name:'anh Huy',iss:['cha-me-con','lo-au','ap-luc'],fm:['truc-tiep','online'],lang:['vi'],when:'Chiều tối, thứ 7'},
+  linh:{name:'chị Linh',iss:['mat-ngu','quan-he','lo-au'],fm:['online'],lang:['vi','en'],when:'Sáng sớm, tối muộn'}
+};
+var people=$$('#people .person'),mForm=$('#mForm'),mResult=$('#mResult');
+function ic(id){return '<svg class="ico" aria-hidden="true"><use href="#'+id+'"/></svg>'}
+people.forEach(function(el){var c=CS[el.dataset.id];
+  $('.foc',el).innerHTML=c.iss.map(function(k){return '<span data-k="'+k+'">'+ISS[k].replace('&','&amp;')+'</span>'}).join('');
+  $('.row',el).innerHTML='<span>'+ic(c.fm.length>1?'i-video':(c.fm[0]==='online'?'i-video':'i-home'))+(c.fm.length>1?'Trực tiếp, online':(c.fm[0]==='online'?'Chỉ online':'Chỉ trực tiếp'))+'</span><span>'+ic('i-lang')+(c.lang.length>1?'Việt, English':'Tiếng Việt')+'</span><span>'+ic('i-clock')+c.when+'</span>';
+});
+function val(n){var r=mForm.querySelector('input[name="'+n+'"]:checked');return r?r.value:''}
+function runMatch(){
+  var is=val('issue'),fm=val('fm'),lg=val('lang');var list=[];
+  people.forEach(function(el){var c=CS[el.dataset.id],s=0,why=[];
+    var hi=c.iss.indexOf(is);if(hi>=0){s+=6-hi;why.push('thường đồng hành với '+ISS[is].toLowerCase().replace('&','&amp;'))}
+    var okF=fm==='any'||c.fm.indexOf(fm)>=0;if(okF){s+=3;if(fm!=='any')why.push(fm==='online'?'có buổi online':'gặp trực tiếp tại phòng')}
+    var okL=c.lang.indexOf(lg)>=0;if(okL){s+=3;if(lg==='en')why.push('nói được tiếng Anh')}else{s-=5}
+    if(!okF)s-=2;
+    list.push({el:el,s:s,full:hi>=0&&okF&&okL,why:why,c:c});
+    $$('.foc span',el).forEach(function(t){t.classList.toggle('hit',t.dataset.k===is)});
+  });
+  list.sort(function(a,b){return b.s-a.s});
+  var fits=list.filter(function(x){return x.full}).slice(0,2);
+  list.forEach(function(x,i){x.el.style.order=i;var isFit=fits.indexOf(x)>=0;x.el.classList.toggle('fit',isFit);x.el.classList.toggle('dim',!isFit&&i>=2);
+    $('.why',x.el).innerHTML=isFit?'Phù hợp vì: '+x.why.join(', ')+'.':'';});
+  if(fits.length){mResult.innerHTML='Gợi ý cho bạn: <b>'+fits.map(function(x){return x.c.name}).join('</b> và <b>')+'</b>.'}
+  else{mResult.innerHTML='Chưa có chuyên viên khớp đủ cả ba lựa chọn. <b>'+list[0].c.name.charAt(0).toUpperCase()+list[0].c.name.slice(1)+'</b> gần với lựa chọn của bạn; lễ tân sẽ tư vấn thêm.'}
+}
+mForm.addEventListener('change',runMatch);runMatch();
+
+/* ---------- booking ---------- */
+var bk=$('#bkForm'),SVC={'ca-nhan':['Tham vấn cá nhân',600000,'50 phút'],'cap-doi':['Tham vấn cặp đôi',900000,'80 phút'],'vi-thanh-nien':['Trẻ vị thành niên',650000,'50 phút']};
+var NAMES={an:'Nguyễn Minh An',ha:'Trần Thu Hà',huy:'Lê Quang Huy',linh:'Phạm Ngọc Linh'};
+var DN=['CN','T2','T3','T4','T5','T6','T7'];
+function money(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'đ'}
+function pad(n){return (n<10?'0':'')+n}
+var daysEl=$('#days'),timesEl=$('#times'),dayList=[];
+(function(){var d=new Date();d.setHours(0,0,0,0);var html='';for(var i=1;i<=12;i++){var x=new Date(d.getTime()+i*864e5);dayList.push(x);
+  html+='<label class="chip day"><input type="radio" name="day" value="'+i+'"'+(i===1?' checked':'')+'><span><small>'+(i===1?'Mai':DN[x.getDay()])+'</small>'+pad(x.getDate())+'/'+pad(x.getMonth()+1)+'</span></label>'}daysEl.innerHTML=html})();
+var SLOTS=['08:00','09:30','11:00','14:00','15:30','17:00','18:30','20:00'];
+function renderTimes(){var i=+val2('day'),x=dayList[i-1],sun=x.getDay()===0,prev=val2('time');var html='';
+  SLOTS.forEach(function(t,k){var off=(sun&&k>2)||((x.getDate()*3+k*7)%5===0);html+='<label class="chip"><input type="radio" name="time" value="'+t+'"'+(off?' disabled':'')+(prev===t&&!off?' checked':'')+'><span>'+t+'</span></label>'});
+  timesEl.innerHTML=html;$$('#times input').forEach(function(r){r.setAttribute('aria-label',r.value+(r.disabled?' (đã kín)':''))})}
+function val2(n){var r=bk.querySelector('input[name="'+n+'"]:checked');return r?r.value:''}
+function sync(){var s=SVC[val2('svc')];$('#sSvc').textContent=s[0];$('#sFee').textContent=money(s[1]);
+  $('#sFm').textContent=val2('bfm')==='online'?'Online':'Trực tiếp';
+  var w=$('#bkWho').value;$('#sWho').textContent=w?NAMES[w]:'Hiên Nhà sắp xếp';
+  var t=val2('time'),i=+val2('day'),x=dayList[i-1];$('#sTime').textContent=t?(t+' · '+DN[x.getDay()]+' '+pad(x.getDate())+'/'+pad(x.getMonth()+1)+'/'+x.getFullYear()):'Chưa chọn';
+  $('#teenNote').hidden=val2('svc')!=='vi-thanh-nien';
+  var only=w&&CS[w].fm.length===1?CS[w].fm[0]:'';
+  $('#eWho').textContent=only&&only!==val2('bfm')?(NAMES[w]+' chỉ nhận '+(only==='online'?'buổi online':'gặp trực tiếp')+'. Hãy đổi hình thức hoặc chuyên viên.'):'';
+}
+renderTimes();sync();
+bk.addEventListener('change',function(e){if(e.target.name==='day')renderTimes();if(e.target.name==='time')$('#eTime').textContent='';if(e.target.id==='bkOk')$('#eOk').textContent='';sync()});
+function pickSvc(v){var r=bk.querySelector('input[name="svc"][value="'+v+'"]');if(r){r.checked=true;sync()}}
+function toBook(){$('#dat-lich').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})}
+$$('[data-svc]').forEach(function(b){b.addEventListener('click',function(){pickSvc(b.dataset.svc);toBook()})});
+$$('[data-pick]').forEach(function(b){b.addEventListener('click',function(){var id=b.dataset.pick;$('#bkWho').value=id;
+  var f=val('fm');if(f!=='any'&&CS[id].fm.indexOf(f)>=0){bk.querySelector('input[name="bfm"][value="'+f+'"]').checked=true}
+  else if(CS[id].fm.length===1){bk.querySelector('input[name="bfm"][value="'+CS[id].fm[0]+'"]').checked=true}
+  if(val('issue')==='cha-me-con'&&id==='huy')pickSvc('vi-thanh-nien');
+  sync();toBook()})});
+bk.addEventListener('submit',function(e){e.preventDefault();var ok=true,first=null;
+  function bad(id,el,msg){$(id).textContent=msg;if(msg){ok=false;if(!first)first=el}}
+  var nm=$('#bkName'),ph=$('#bkPhone'),dig=ph.value.replace(/\D/g,'');
+  bad('#eName',nm,nm.value.trim().length<2?'Vui lòng cho biết tên gọi (có thể là tên khác).':'');
+  bad('#ePhone',ph,/^0\d{9}$/.test(dig)?'':'Số điện thoại gồm 10 số, bắt đầu bằng 0.');
+  bad('#eTime',$('#times input:not(:disabled)')||daysEl,val2('time')?'':'Vui lòng chọn một khung giờ còn trống.');
+  bad('#eOk',$('#bkOk'),$('#bkOk').checked?'':'Vui lòng đồng ý để Hiên Nhà liên hệ xác nhận lịch.');
+  if($('#eWho').textContent){ok=false;first=first||$('#bkWho')}
+  if(!ok){first.focus&&first.focus();return}
+  var via=val2('via');
+  $('#doneTxt').textContent='Lịch dự kiến: '+$('#sSvc').textContent.toLowerCase()+', '+$('#sFm').textContent.toLowerCase()+', '+$('#sTime').textContent+'. Lễ tân sẽ liên hệ qua '+via.toLowerCase()+' để xác nhận'+($('#bkVm').checked?', ngoài giờ hành chính và không để lại tin nhắn thoại.':'.');
+  $('#doneCode').textContent='HN-'+pad(new Date().getDate())+(1000+Math.floor(Math.random()*9000));
+  bk.hidden=true;$('#bkDone').hidden=false;$('#bkDone').focus();
+});
+$('#bkAgain').addEventListener('click',function(){bk.reset();renderTimes();sync();bk.hidden=false;$('#bkDone').hidden=true;$('#bkName').focus()});
+})();
+</script>
+</body>
+</html>
