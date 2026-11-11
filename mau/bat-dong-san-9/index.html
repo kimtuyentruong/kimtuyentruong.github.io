@@ -276,7 +276,7 @@ body.lock{overflow:hidden}
 .bar.hot em,.bar:hover em{opacity:1;transform:translate(-50%,0)}
 .bar.pk em{opacity:1;transform:translate(-50%,0);color:var(--amber)}
 .bar.pk::before{content:"Cao điểm";position:absolute;bottom:calc(var(--h,0%) + 26px);transition:bottom .8s var(--out);left:50%;transform:translateX(-50%);font:500 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--amber);white-space:nowrap}
-.hours{display:grid;grid-template-columns:repeat(17,1fr);gap:8px;margin-top:10px;margin-left:40px}
+.hours{display:grid;grid-template-columns:repeat(17,minmax(0,1fr));gap:8px;margin-top:10px;margin-left:40px}
 .hours span{font:500 12px/1 var(--cond);color:var(--tx2);text-align:center;font-variant-numeric:tabular-nums}
 .flow-ft{display:grid;grid-template-columns:auto auto 1fr;gap:16px 40px;align-items:end;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
 .flow-ft .k{font-size:12.5px;color:var(--tx2)}
@@ -581,6 +581,7 @@ body.lock .kt-badge{opacity:0;pointer-events:none}
   .gl{left:30px}
   .bars{gap:3px;height:190px}
   .hours{gap:3px;margin-left:30px}
+  .hours span{font-size:11px;white-space:nowrap}
   .hours span:nth-child(even){visibility:hidden}
   .bar em{display:none}
   .bar.pk::before{display:none}
