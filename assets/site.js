@@ -260,8 +260,8 @@
   };
   var val = function (n) { var c = qz.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : ''; };
   var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var S1 = ['SEO & AIO Khởi Đầu', '10.500.000đ/tháng', 'Mỗi tháng 4 bài viết chuẩn SEO, AIO, sửa lỗi kỹ thuật, tối ưu Google Maps và báo cáo dễ hiểu. Tối thiểu 3 tháng.'];
-  var S2 = ['SEO & AIO Tăng Trưởng', '25.000.000đ/tháng', 'Mỗi tháng 8 bài viết, thêm trang dịch vụ và khu vực, xây dựng liên kết, theo dõi hiển thị trong ChatGPT, Gemini. Tối thiểu 3 tháng.'];
+  var S1 = ['SEO & AIO Khởi Đầu', '10.500.000đ/tháng', 'Mỗi tháng khoảng 2–4 bài viết chuẩn SEO, AIO, sửa lỗi kỹ thuật, tối ưu Google Maps và báo cáo dễ hiểu. Tối thiểu 3 tháng.'];
+  var S2 = ['SEO & AIO Tăng Trưởng', '25.000.000đ/tháng', 'Mỗi tháng khoảng 5–8 bài viết, thêm trang dịch vụ, khu vực khi cần, xây dựng liên kết, kiểm tra cách ChatGPT, Gemini nhắc đến bạn. Tối thiểu 3 tháng.'];
   qz.addEventListener('change', function () {
     var a = val('q1'), b = val('q2'), c = val('q3'); if (!a && !b && !c) return;
     var main, add = null, big = a === 'dn' || a === 'bh';
