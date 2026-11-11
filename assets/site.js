@@ -188,3 +188,44 @@
   lb.querySelector('.lb-x').addEventListener('click', function () { lb.close(); });
   lb.addEventListener('click', function (e) { if (e.target === lb) lb.close(); });
 })();
+
+/* mobile header (v18): fixed bar + full-screen menu built from the page's own nav links */
+(function () {
+  var nav = document.querySelector('.nav'); if (!nav) return;
+  var links = nav.querySelectorAll('nav a'); if (!links.length) return;
+  var en = document.documentElement.lang === 'en';
+  var right = nav.querySelector('.right') || nav;
+  var btn = document.createElement('button');
+  btn.type = 'button'; btn.className = 'mnav-btn'; btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-controls', 'mnav');
+  btn.setAttribute('aria-label', en ? 'Open menu' : 'Mở menu');
+  btn.innerHTML = '<svg class="b" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>' +
+    '<svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  right.appendChild(btn);
+  var panel = document.createElement('div'); panel.className = 'mnav'; panel.id = 'mnav';
+  panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', en ? 'Menu' : 'Menu trang');
+  var ol = document.createElement('ol');
+  links.forEach(function (a) { var li = document.createElement('li'), c = a.cloneNode(true); c.removeAttribute('style'); li.appendChild(c); ol.appendChild(li); });
+  panel.appendChild(ol);
+  var zalo = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a1.5 1.5 0 011.5 1.5v9A1.5 1.5 0 0120 17h-8.5L7 20.5V17H4a1.5 1.5 0 01-1.5-1.5v-9A1.5 1.5 0 014 5z"/></svg>';
+  var tele = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6L2.9 10.7c-.9.4-.9 1.6.1 1.9l4.6 1.5 1.8 5.5c.3.9 1.4 1.1 2 .4l2.6-2.7 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.9c.2-1-.7-1.8-1.6-1.5z"/></svg>';
+  var mail = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>';
+  var cta = document.createElement('div'); cta.className = 'cta';
+  cta.innerHTML = en
+    ? '<a class="p" href="mailto:kimtuyentb97@gmail.com">' + mail + 'Email me</a><a class="g" href="https://t.me/kimtuyen21297" target="_blank" rel="noopener">' + tele + 'Telegram</a>'
+    : '<a class="p" href="https://zalo.me/0901432113" target="_blank" rel="noopener">' + zalo + 'Nhắn Zalo 0901 432 113</a><a class="g" href="https://t.me/kimtuyen21297" target="_blank" rel="noopener">' + tele + 'Telegram</a>';
+  panel.appendChild(cta);
+  var note = document.createElement('p'); note.className = 'note'; note.textContent = en ? 'Kim Tuyen Truong · Web design, SEO & AI search' : 'Kim Tuyen Truong · Thiết kế website, SEO & AIO';
+  panel.appendChild(note);
+  document.body.appendChild(panel);
+  var root = document.documentElement;
+  function set(open) {
+    root.classList.toggle('mnav-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? (en ? 'Close menu' : 'Đóng menu') : (en ? 'Open menu' : 'Mở menu'));
+  }
+  btn.addEventListener('click', function () { set(!root.classList.contains('mnav-open')); });
+  panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  var lw = innerWidth; addEventListener('resize', function () { if (innerWidth !== lw) { lw = innerWidth; if (innerWidth > 900) set(false); } });
+  addEventListener('pageshow', function () { set(false); });
+})();

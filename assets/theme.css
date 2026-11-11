@@ -436,3 +436,41 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 .exp-teaser p{color:var(--muted);margin:14px 0 0;max-width:60ch}
 .exp-teaser .go{flex:none;font-weight:600;color:var(--flame);white-space:nowrap}
 @media (max-width:600px){.exp-teaser{padding:26px 22px}.exp-teaser .go{white-space:normal}}
+
+/* ---------- mobile header (v18): fixed slim bar + full-screen menu, ≤900px ---------- */
+.mnav-btn,.mnav{display:none}
+@media (max-width:900px){
+  html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+  body{padding-top:calc(64px + env(safe-area-inset-top,0px))}
+  .nav,.sub .subhdr .nav{position:fixed;left:0;right:0;top:0;z-index:70;height:calc(64px + env(safe-area-inset-top,0px));display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:12px;
+    padding:env(safe-area-inset-top,0px) max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));background:rgba(10,7,6,.97);border-bottom:1px solid var(--line);box-shadow:0 10px 30px -18px rgba(0,0,0,.9)}
+  .nav .right{display:flex;align-items:center;gap:10px}
+  .nav .right nav{display:none !important}
+  .nav .me{font-size:17px}
+  .mnav-btn{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);cursor:pointer;padding:0}
+  .mnav-btn svg{width:22px;height:22px}
+  .mnav-btn .x{display:none}
+  html.mnav-open .mnav-btn .b{display:none}html.mnav-open .mnav-btn .x{display:block}
+  .hero .wrap{padding-top:10px}
+  .sub .subhdr{padding:0}
+  .mnav{display:flex;flex-direction:column;position:fixed;left:0;right:0;bottom:0;top:calc(64px + env(safe-area-inset-top,0px));z-index:69;background:#0B0807;
+    padding:18px max(18px,env(safe-area-inset-left,0px)) calc(24px + env(safe-area-inset-bottom,0px));overflow-y:auto;overscroll-behavior:contain;
+    opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .25s ease,transform .3s cubic-bezier(.2,.7,.2,1),visibility 0s linear .3s}
+  html.mnav-open .mnav{opacity:1;visibility:visible;transform:none;transition:opacity .25s ease,transform .3s cubic-bezier(.2,.7,.2,1),visibility 0s}
+  html.mnav-open{overflow:hidden}
+  html.mnav-open .dock{display:none}
+  .mnav ol{list-style:none;margin:0;padding:0;counter-reset:m}
+  .mnav li{counter-increment:m;border-bottom:1px solid var(--line)}
+  .mnav li a{display:flex;align-items:center;gap:16px;min-height:62px;padding:8px 4px;color:var(--ink);text-decoration:none;font:700 22px/1.2 var(--display);letter-spacing:-.01em}
+  .mnav li a::before{content:counter(m,decimal-leading-zero);font:600 13px var(--body);color:var(--flame);width:24px;flex:none}
+  .mnav li a::after{content:"";margin-left:auto;width:10px;height:10px;border-right:2px solid var(--flame);border-top:2px solid var(--flame);transform:rotate(45deg);flex:none}
+  .mnav li a[aria-current="page"]{color:var(--flame)}
+  .mnav .cta{display:grid;gap:10px;margin-top:26px}
+  .mnav .cta a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:999px;font:600 16px var(--body);text-decoration:none}
+  .mnav .cta a.p{background:var(--grad);color:#fff}
+  .mnav .cta a.g{border:1px solid var(--line-2);color:var(--ink)}
+  .mnav .cta svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}
+  .mnav .note{margin:18px 0 0;font-size:13.5px;color:var(--faint);text-align:center}
+}
+@media (max-width:900px) and (prefers-reduced-motion:reduce){.mnav,html.mnav-open .mnav{transition:none;transform:none}}
+@media (max-width:600px){.role{display:block;text-align:center;line-height:1.5}.role .dot{display:inline-block;vertical-align:1px;margin-right:8px}}
