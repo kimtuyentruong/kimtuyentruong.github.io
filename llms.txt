@@ -37,7 +37,7 @@
 ## Kiến thức (bài viết)
 - [Mẫu website theo ngành](https://kimtuyentruong.github.io/mau-website/): mẫu thiết kế và web khách hàng, mỗi ngành một trang
 - [Dịch vụ](https://kimtuyentruong.github.io/dich-vu/): thiết kế website, SEO & Google Maps, AIO
-- [Dự án](https://kimtuyentruong.github.io/du-an/): dự án đã làm và kết quả
+- [Về mình, dự án đã làm](https://kimtuyentruong.github.io/kinh-nghiem/): thuê theo tháng, dự án đã làm và kết quả, kinh nghiệm từ 2019
 - [Thiết kế website nhà hàng & ẩm thực](https://kimtuyentruong.github.io/mau-website/nha-hang/): Thực đơn rõ ràng, ảnh món ăn ngon mắt, đặt bàn hoặc gọi món ngay trên điện thoại, kèm bản đồ chỉ đường. Theo mẫu từ 5.000.000đ, thiết kế riêng từ 9.500.000đ.
 - [Thiết kế website làm đẹp & spa](https://kimtuyentruong.github.io/mau-website/lam-dep-spa/): Bảng giá dịch vụ, bộ sưu tập kiểu, đặt lịch theo giờ và chuyên viên, để khách chọn xong là đặt luôn. Theo mẫu từ 5.000.000đ, thiết kế riêng từ 9.500.000đ.
 - [Thiết kế website tóc & barber](https://kimtuyentruong.github.io/mau-website/toc-barber/): Phong cách thương hiệu rõ nét, bảng giá cắt, nhuộm, uốn và đặt lịch với thợ quen chỉ trong vài lần chạm. Theo mẫu từ 5.000.000đ, thiết kế riêng từ 9.500.000đ.

@@ -251,22 +251,25 @@
   });
 })();
 
-/* homepage package finder (v23): 3 steps, the active step is highlighted; the result shows the package and what it includes, the price is one click away in the pricing table */
+/* homepage package finder (v27): a wizard. One step is on screen; answering it shows the next step in the same place; after step 3 the answers and the result are shown */
 (function () {
   var qz = document.getElementById('quiz'), D = window.QZ; if (!qz || !D) return;
-  var box = document.getElementById('qrIn'), wait = box.innerHTML;
-  var steps = qz.querySelectorAll('fieldset'), prog = qz.querySelectorAll('.qz-prog li');
+  var box = document.getElementById('qrIn'), wait = box.innerHTML, wrap = qz.querySelector('.qz');
+  var steps = [].slice.call(qz.querySelectorAll('fieldset')), prog = qz.querySelectorAll('.qz-prog li'), view = 0;
+  var sum = document.createElement('div'); sum.className = 'qz-sum'; wrap.appendChild(sum); qz.classList.add('js');
   var val = function (n) { var c = qz.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : ''; };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var list = function (p) { return '<ul class="inc">' + p.b.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + (p.t ? '<li>Thời gian làm: ' + esc(p.t) + '</li>' : '') + '</ul>'; };
-  function render(fromUser) {
-    var ans = [val('q1'), val('q2'), val('q3')], cur = ans[0] ? ans[1] ? ans[2] ? 3 : 2 : 1 : 0;
-    [].forEach.call(steps, function (f, i) {
-      f.classList.toggle('on', i === cur); f.classList.toggle('done', !!ans[i] && i !== cur); f.classList.toggle('wait', !ans[i] && i !== cur);
-      [].forEach.call(f.querySelectorAll('label'), function (l) { l.classList.toggle('pick', l.querySelector('input').checked); });
-    });
-    [].forEach.call(prog, function (li, i) { li.classList.toggle('on', i === cur); li.classList.toggle('done', !!ans[i]); });
-    if (cur < 3) {
+  function render(toResult) {
+    var ans = [val('q1'), val('q2'), val('q3')], all = ans[0] && ans[1] && ans[2];
+    steps.forEach(function (f, i) { f.classList.toggle('on', i === view); f.classList.remove('wait'); f.classList.toggle('done', !!ans[i] && i !== view); });
+    [].forEach.call(prog, function (li, i) { li.classList.toggle('on', i === view); li.classList.toggle('done', !!ans[i] && i !== view); });
+    sum.classList.toggle('on', view === 3);
+    if (view === 3) sum.innerHTML = '<b>Câu trả lời của bạn</b><ol>' + steps.map(function (f, i) {
+      var c = f.querySelector('input:checked'), l = f.querySelector('legend');
+      return '<li><span>' + esc(l.textContent.replace(/^\d+/, '').trim()) + '</span><em>' + esc(c ? c.parentNode.textContent.trim() : '') + '</em><button type="button" data-go="' + i + '">Đổi</button></li>';
+    }).join('') + '</ol>';
+    if (!all) {
       box.innerHTML = wait;
       var left = 3 - ans.filter(Boolean).length, b = box.querySelector('.qr-wait b');
       if (b && left < 3) b.textContent = 'Còn ' + left + ' bước nữa';
@@ -285,16 +288,21 @@
     html += '<p class="cta"><a class="btn" href="' + main.u + '">Xem giá gói này</a><a class="btn ghost" href="/lien-he/?goi=' + encodeURIComponent(main.n) + '">Nhận tư vấn</a></p>' +
       '<button type="button" class="again">Chọn lại từ đầu</button></div>';
     box.innerHTML = html;
-    if (fromUser && innerWidth <= 900) { var r = document.getElementById('qr'); if (r && r.scrollIntoView) r.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); }
+    if (toResult && innerWidth <= 900) { var r = document.getElementById('qr'); if (r && r.scrollIntoView) r.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); }
   }
-  qz.addEventListener('change', function () { render(true); });
-  qz.addEventListener('click', function (e) {
-    if (!e.target.closest || !e.target.closest('.again')) return;
-    [].forEach.call(qz.querySelectorAll('input:checked'), function (i) { i.checked = false; });
-    render(false);
-    if (innerWidth <= 900 && qz.scrollIntoView) qz.scrollIntoView({ block: 'start' });
+  function go(i) { view = i; render(false); }
+  qz.addEventListener('change', function (e) {
+    var f = e.target.closest('fieldset'), i = steps.indexOf(f), ans = [val('q1'), val('q2'), val('q3')], n = -1;
+    for (var k = 1; k <= 3; k++) { var j = (i + k) % 3; if (!ans[j]) { n = j; break; } }
+    setTimeout(function () { view = n < 0 ? 3 : n; render(n < 0); }, 220);
   });
-  addEventListener('pageshow', function () { render(false); });
+  qz.addEventListener('click', function (e) {
+    var t = e.target; if (!t.closest) return;
+    var g = t.closest('[data-go]'); if (g) return go(+g.getAttribute('data-go'));
+    var li = t.closest('.qz-prog li'); if (li) return go([].indexOf.call(prog, li));
+    if (t.closest('.again')) { [].forEach.call(qz.querySelectorAll('input:checked'), function (x) { x.checked = false; }); go(0); if (innerWidth <= 900 && qz.scrollIntoView) qz.scrollIntoView({ block: 'start' }); }
+  });
+  addEventListener('pageshow', function () { var ans = [val('q1'), val('q2'), val('q3')]; view = ans[0] ? ans[1] ? ans[2] ? 3 : 2 : 1 : 0; render(false); });
   render(false);
 })();
 
@@ -341,4 +349,24 @@
     if (i > -1 && window.URLSearchParams) { var q = new URLSearchParams(h.slice(i + 1)); if (q.get('subject')) u += '&su=' + encodeURIComponent(q.get('subject')); if (q.get('body')) u += '&body=' + encodeURIComponent(q.get('body')); }
     e.preventDefault(); window.open(u, '_blank', 'noopener');
   });
+})();
+
+/* projects slider on the hire page (v26): native scroll-snap strip that advances by itself; pauses on hover, touch, focus and while off screen */
+(function () {
+  var t = document.getElementById('pjTrack'); if (!t) return;
+  var wrap = t.parentNode, paused = false, seen = false, timer = 0, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function step(d) {
+    var c = t.querySelector('li'); if (!c) return;
+    var w = c.offsetWidth + parseFloat(getComputedStyle(t).columnGap || 18), max = t.scrollWidth - t.clientWidth, x = t.scrollLeft + d * w;
+    if (x > max + 8) x = 0; if (x < -8) x = max;
+    t.scrollTo({ left: x, behavior: reduce ? 'auto' : 'smooth' });
+  }
+  wrap.querySelector('.prev').addEventListener('click', function () { step(-1); });
+  wrap.querySelector('.next').addEventListener('click', function () { step(1); });
+  if (reduce) return;
+  ['pointerenter', 'focusin', 'touchstart'].forEach(function (e) { wrap.addEventListener(e, function () { paused = true; }, { passive: true }); });
+  ['pointerleave', 'focusout'].forEach(function (e) { wrap.addEventListener(e, function () { paused = false; }); });
+  wrap.addEventListener('touchend', function () { setTimeout(function () { paused = false; }, 6000); }, { passive: true });
+  if (window.IntersectionObserver) new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }, { threshold: .3 }).observe(wrap); else seen = true;
+  timer = setInterval(function () { if (seen && !paused && !document.hidden) step(1); }, 3200);
 })();
