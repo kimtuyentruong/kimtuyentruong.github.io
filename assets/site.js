@@ -18,14 +18,14 @@
         (function step() {
           if (t < s.title.length) { t += 2; $('edT').textContent = s.title.slice(0, t); $('edTc').textContent = Math.min(t, s.title.length); }
           else if (d < s.desc.length) { d += 4; $('edD').textContent = s.desc.slice(0, d); $('edDc').textContent = Math.min(d, s.desc.length); }
-          else { setTimeout(next, 3200); return; }
-          setTimeout(step, 28);
+          else { setTimeout(next, 7500); return; }
+          setTimeout(step, 45);
         })();
       };
       var edOn = true, ed = $('edT').closest('.editor') || $('edT');
       if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { edOn = es[0].isIntersecting; }).observe(ed);
       var next = function () { if (!edOn || document.hidden) { setTimeout(next, 800); return; } i = (i + 1) % SN.length; type(SN[i]); };
-      setTimeout(next, 3600);
+      setTimeout(next, 6500);
     }
   }
 
@@ -255,19 +255,19 @@
 (function () {
   var qz = document.getElementById('quiz'), D = window.QZ; if (!qz || !D) return;
   var box = document.getElementById('qrIn'), wait = box.innerHTML, wrap = qz.querySelector('.qz');
-  var steps = [].slice.call(qz.querySelectorAll('fieldset')), prog = qz.querySelectorAll('.qz-prog li'), view = 0;
+  var steps = [].slice.call(qz.querySelectorAll('.qstep')), prog = qz.querySelectorAll('.qz-prog li'), view = 0;
   var sum = document.createElement('div'); sum.className = 'qz-sum'; wrap.appendChild(sum); qz.classList.add('js');
   var val = function (n) { var c = qz.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : ''; };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var list = function (p) { return '<ul class="inc">' + p.b.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + (p.t ? '<li>Thời gian làm: ' + esc(p.t) + '</li>' : '') + '</ul>'; };
   function render(toResult) {
     var ans = [val('q1'), val('q2'), val('q3')], all = ans[0] && ans[1] && ans[2];
-    steps.forEach(function (f, i) { f.classList.toggle('on', i === view); f.classList.remove('wait'); f.classList.toggle('done', !!ans[i] && i !== view); });
+    steps.forEach(function (f, i) { f.classList.toggle('on', i === view); f.classList.toggle('done', !!ans[i] && i !== view); });
     [].forEach.call(prog, function (li, i) { li.classList.toggle('on', i === view); li.classList.toggle('done', !!ans[i] && i !== view); });
     sum.classList.toggle('on', view === 3);
     if (view === 3) sum.innerHTML = '<b>Câu trả lời của bạn</b><ol>' + steps.map(function (f, i) {
-      var c = f.querySelector('input:checked'), l = f.querySelector('legend');
-      return '<li><span>' + esc(l.textContent.replace(/^\d+/, '').trim()) + '</span><em>' + esc(c ? c.parentNode.textContent.trim() : '') + '</em><button type="button" data-go="' + i + '">Đổi</button></li>';
+      var c = f.querySelector('input:checked'), l = f.querySelector('h3');
+      return '<li><span>' + esc(l.textContent.trim()) + '</span><em>' + esc(c ? c.parentNode.textContent.trim() : '') + '</em><button type="button" data-go="' + i + '">Đổi</button></li>';
     }).join('') + '</ol>';
     if (!all) {
       box.innerHTML = wait;
@@ -292,7 +292,7 @@
   }
   function go(i) { view = i; render(false); }
   qz.addEventListener('change', function (e) {
-    var f = e.target.closest('fieldset'), i = steps.indexOf(f), ans = [val('q1'), val('q2'), val('q3')], n = -1;
+    var f = e.target.closest('.qstep'), i = steps.indexOf(f), ans = [val('q1'), val('q2'), val('q3')], n = -1;
     for (var k = 1; k <= 3; k++) { var j = (i + k) % 3; if (!ans[j]) { n = j; break; } }
     setTimeout(function () { view = n < 0 ? 3 : n; render(n < 0); }, 220);
   });
