@@ -591,3 +591,9 @@ svg.zl{stroke:none !important;fill:none}
   .dock .totop{flex:0 0 42px;height:42px;width:42px}
   .dock .totop svg{width:18px;height:18px}
 }
+
+/* v26 phone: contact dock = three round buttons on the right (no label) */
+@media (max-width:600px){
+  .dock a:nth-of-type(1){flex:0 0 42px;padding:0;gap:0;display:grid;place-items:center}
+  .dock a:nth-of-type(1) span{display:none}
+}
