@@ -308,3 +308,38 @@ html[lang="vi"] .kt-hd h1{line-height:1.12}
 /* v9: hire page does not publish the monthly fee */
 .role-price.ask{font-size:clamp(22px,2.2vw,28px);white-space:normal}
 .role-price.ask small{display:block;margin:6px 0 0;font-size:14.5px}
+
+/* v10: hire page opens as a CV sheet (drawing-paper grid, two columns) */
+.cv{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);margin:34px 0 70px;border:1px solid var(--line-2);border-radius:24px;overflow:hidden;background-color:#0F0B0A;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:28px 28px}
+.cv-side{padding:34px 28px;border-right:1px solid var(--line-2);background:linear-gradient(180deg,rgba(255,74,28,.12),rgba(20,16,16,.55) 45%)}
+.cv-main{padding:38px 40px 36px;min-width:0}
+.cv-ava{display:grid;place-items:center;width:72px;height:72px;border-radius:20px;background:var(--grad);color:#fff;font:800 26px var(--display);box-shadow:0 14px 34px -12px rgba(255,74,28,.9)}
+.cv h1{margin:18px 0 6px;font-size:clamp(26px,2.6vw,32px);line-height:1.15;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.cv-role{margin:0;color:#FFB070;font-weight:600;font-size:15.5px;line-height:1.5}
+.cv-side h2,.cv-main h2{margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line-2);font:700 13px var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--flame)}
+.cv-contact{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
+.cv-contact li{font-size:15px;line-height:1.45;color:var(--ink);overflow-wrap:anywhere}
+.cv-contact span{display:block;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+.cv-contact a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(255,138,61,.5);text-underline-offset:3px}
+.cv-sk{margin-top:14px}
+.cv-sk b{display:block;margin-bottom:8px;font-size:14.5px;color:var(--ink)}
+.cv .chips{display:flex;flex-wrap:wrap;gap:6px}
+.cv .chips span{padding:4px 10px;border:1px solid var(--line-2);border-radius:999px;font-size:12.5px;line-height:1.4;color:var(--muted);background:rgba(10,7,6,.5)}
+.cv-line{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.cv-line b{display:block;color:var(--ink)}
+.cv-list{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--muted)}
+.cv-lead{margin:12px 0 0 !important;padding:0 !important;border:0 !important;font:800 clamp(28px,3.4vw,44px)/1.1 var(--display) !important;letter-spacing:-.03em !important;text-transform:none !important;color:var(--ink) !important}
+.cv-sum{margin:16px 0 0;max-width:68ch;font-size:16.5px;line-height:1.7;color:var(--muted)}
+.cv-stats{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cv-stats li{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(10,7,6,.55)}
+.cv-stats b{display:block;font:800 26px/1 var(--display);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cv-stats span{display:block;margin-top:6px;font-size:13px;line-height:1.4;color:var(--muted)}
+.cv-exp{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.cv-exp li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 20px}
+.cv-exp .when{font:600 13.5px var(--body);color:#FFB070;padding-top:3px;white-space:nowrap}
+.cv-exp h3{margin:0;font-size:18px;line-height:1.3;color:var(--ink)}
+.cv-exp .org{margin:3px 0 8px;font-size:14px;color:var(--faint)}
+.cv-exp p{margin:0 0 10px;font-size:15px;line-height:1.6;color:var(--muted)}
+.cv-main .cta{margin-top:28px}
+@media (max-width:900px){.cv{grid-template-columns:minmax(0,1fr)}.cv-side{border-right:0;border-bottom:1px solid var(--line-2)}.cv-main{padding:28px 22px}.cv-side{padding:28px 22px}.cv-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cv-exp li{grid-template-columns:minmax(0,1fr);gap:4px}}
