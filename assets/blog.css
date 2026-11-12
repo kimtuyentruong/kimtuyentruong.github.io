@@ -343,3 +343,16 @@ html[lang="vi"] .kt-hd h1{line-height:1.12}
 .cv-exp p{margin:0 0 10px;font-size:15px;line-height:1.6;color:var(--muted)}
 .cv-main .cta{margin-top:28px}
 @media (max-width:900px){.cv{grid-template-columns:minmax(0,1fr)}.cv-side{border-right:0;border-bottom:1px solid var(--line-2)}.cv-main{padding:28px 22px}.cv-side{padding:28px 22px}.cv-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.cv-exp li{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+/* v11: hire page skills (replaces the comparison table) */
+.skl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.skl article{padding:30px 30px 26px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+.skl h3{font-size:clamp(24px,2.4vw,32px);line-height:1.15;color:var(--ink)}
+.skl .for{margin:8px 0 18px;color:var(--muted);font-size:15.5px;line-height:1.6}
+.skl ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.skl li{position:relative;padding-left:26px;font-size:15px;line-height:1.55;color:var(--muted)}
+.skl li::before{content:"";position:absolute;left:2px;top:.5em;width:11px;height:6px;border-left:2px solid var(--flame);border-bottom:2px solid var(--flame);transform:rotate(-45deg)}
+.skl li b{display:block;color:var(--ink);font-size:15.5px}
+.skl .proof{margin:20px 0 0;padding:14px 16px;border-radius:12px;border:1px dashed var(--line-2);font-size:14.5px;line-height:1.55;color:#FFB070}
+.skl-more{margin:18px 0 0;font-size:14.5px;color:var(--muted);max-width:90ch}
+@media (max-width:800px){.skl{grid-template-columns:minmax(0,1fr)}.skl article{padding:24px 20px}}
