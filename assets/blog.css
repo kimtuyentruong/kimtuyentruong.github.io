@@ -304,3 +304,7 @@ html[lang="vi"] .kt-hd h1{line-height:1.12}
 .pj-res-h{margin:44px 0 18px;font-size:clamp(20px,2vw,26px);color:var(--ink)}
 @media (max-width:1000px){.pj-track li{flex-basis:calc((100% - 18px)/2)}}
 @media (max-width:600px){.pj-track{margin-inline:-16px;padding-inline:16px;gap:14px}.pj-track li{flex-basis:82%}.pj-nav{display:none}}
+
+/* v9: hire page does not publish the monthly fee */
+.role-price.ask{font-size:clamp(22px,2.2vw,28px);white-space:normal}
+.role-price.ask small{display:block;margin:6px 0 0;font-size:14.5px}
