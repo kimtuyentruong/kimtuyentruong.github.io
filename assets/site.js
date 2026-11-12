@@ -251,38 +251,64 @@
   });
 })();
 
-/* homepage package quiz (v16) */
+/* homepage package finder (v23): 3 steps, the active step is highlighted; the result shows the package and what it includes, the price is one click away in the pricing table */
 (function () {
-  var qz = document.getElementById('quiz'); if (!qz) return;
-  var box = document.getElementById('qrIn'), Z = 'https://zalo.me/0901432113';
-  var P = {
-    lp: ['Landing Page', '3.500.000đ', 'Một trang tập trung vào một sản phẩm hoặc dịch vụ, có form và nút gọi, Zalo, gắn sẵn mã quảng cáo. Làm trong 7–10 ngày.'],
-    mau: ['Website Theo Mẫu', '5.000.000đ', 'Chọn một mẫu có sẵn theo ngành, tôi đổi màu, logo, nội dung và hình ảnh theo thương hiệu của bạn. Làm trong 2–3 ngày sau khi nhận đủ thông tin.'],
-    cb: ['Website Cơ Bản', '9.500.000đ', 'Tối đa 7 trang: Trang chủ, Giới thiệu, Dịch vụ, Liên hệ…, có trang quản trị để bạn tự sửa nội dung và giá. Làm trong 2–4 tuần.'],
-    dn: ['Website Doanh Nghiệp', '18.500.000đ', 'Website chuyên nghiệp, đầy đủ chức năng, tối đa 20 trang, tặng 5 bài blog chuẩn SEO, AIO. Làm trong 5–8 tuần.'],
-    bh: ['Website Bán Hàng', '22.500.000đ', 'Cửa hàng online có danh mục, giỏ hàng, đặt hàng, thanh toán và quản lý đơn hàng trong trang quản trị. Làm trong 6–9 tuần.']
-  };
+  var qz = document.getElementById('quiz'), D = window.QZ; if (!qz || !D) return;
+  var box = document.getElementById('qrIn'), wait = box.innerHTML;
+  var steps = qz.querySelectorAll('fieldset'), prog = qz.querySelectorAll('.qz-prog li');
   var val = function (n) { var c = qz.querySelector('input[name="' + n + '"]:checked'); return c ? c.value : ''; };
-  var esc = function (s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
-  var S1 = ['SEO & AIO Khởi Đầu', '10.500.000đ/tháng', 'Mỗi tháng khoảng 2–4 bài viết chuẩn SEO, AIO, sửa lỗi kỹ thuật, tối ưu Google Maps và báo cáo dễ hiểu. Tối thiểu 3 tháng.'];
-  var S2 = ['SEO & AIO Tăng Trưởng', '25.000.000đ/tháng', 'Mỗi tháng khoảng 5–8 bài viết, thêm trang dịch vụ, khu vực khi cần, xây dựng liên kết, kiểm tra cách ChatGPT, Gemini nhắc đến bạn. Tối thiểu 3 tháng.'];
-  qz.addEventListener('change', function () {
-    var a = val('q1'), b = val('q2'), c = val('q3'); if (!a && !b && !c) return;
-    var main, add = null, big = a === 'dn' || a === 'bh';
-    if (b === 'seo') main = big || c === 'high' ? S2 : S1;
-    else {
-      var k = a || 'cb';
-      if (c === 'high') { k = a === 'bh' ? 'bh' : 'dn'; add = big ? S2 : S1; }
-      else if (c === 'mid' && (k === 'lp' || k === 'mau')) k = 'cb';
-      main = P[k];
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var list = function (p) { return '<ul class="inc">' + p.b.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + (p.t ? '<li>Thời gian làm: ' + esc(p.t) + '</li>' : '') + '</ul>'; };
+  function render(fromUser) {
+    var ans = [val('q1'), val('q2'), val('q3')], cur = ans[0] ? ans[1] ? ans[2] ? 3 : 2 : 1 : 0;
+    [].forEach.call(steps, function (f, i) {
+      f.classList.toggle('on', i === cur); f.classList.toggle('done', !!ans[i] && i !== cur); f.classList.toggle('wait', !ans[i] && i !== cur);
+      [].forEach.call(f.querySelectorAll('label'), function (l) { l.classList.toggle('pick', l.querySelector('input').checked); });
+    });
+    [].forEach.call(prog, function (li, i) { li.classList.toggle('on', i === cur); li.classList.toggle('done', !!ans[i]); });
+    if (cur < 3) {
+      box.innerHTML = wait;
+      var left = 3 - ans.filter(Boolean).length, b = box.querySelector('.qr-wait b');
+      if (b && left < 3) b.textContent = 'Còn ' + left + ' bước nữa';
+      return;
     }
-    var isSeo = main === S1 || main === S2;
-    var link = isSeo ? '/dich-vu/seo-aio/#bang-gia-seo' : main[0] === 'Website Theo Mẫu' ? '/mau-website/' : '/dich-vu/thiet-ke-website/#bang-gia';
-    var html = '<div class="rec"><small>Gợi ý cho bạn</small><h3>' + esc(main[0]) + '</h3><div class="price">' + esc(main[1]) + '</div><p>' + esc(main[2]) + '</p>';
-    if (add) html += '<div class="addon"><b>Nên làm kèm: ' + esc(add[0]) + '</b><span>' + esc(add[1]) + '</span><p>' + esc(add[2]) + '</p><a href="/dich-vu/seo-aio/#bang-gia-seo">Xem gói SEO &amp; AIO&nbsp;&#x2192;&#xFE0E;</a></div>';
-    html += '<p class="cta"><a class="btn" href="/lien-he/?goi=' + encodeURIComponent(main[0]) + '">Nhận báo giá gói này</a><a class="btn ghost" href="' + link + '">Xem chi tiết</a></p></div>';
+    var a = ans[0], main, add = null, big = a === 'dn' || a === 'bh';
+    if (ans[1] === 'seo') main = D[big || ans[2] === 'high' ? 's2' : 's1'];
+    else {
+      var k = a;
+      if (ans[2] === 'high') { k = a === 'bh' ? 'bh' : 'dn'; add = D[big ? 's2' : 's1']; }
+      else if (ans[2] === 'mid' && (k === 'lp' || k === 'mau')) k = 'cb';
+      main = D[k];
+    }
+    var html = '<div class="rec"><small>Gói hợp với bạn</small><h3>' + esc(main.n) + '</h3><p class="for">' + esc(main.f) + '</p><b class="inc-h">Gói này gồm</b>' + list(main);
+    if (add) html += '<div class="addon"><b>Nên làm kèm: ' + esc(add.n) + '</b><p>' + esc(add.f) + '</p><a href="' + add.u + '">Xem giá gói SEO &amp; AIO&nbsp;&#x2192;&#xFE0E;</a></div>';
+    html += '<p class="cta"><a class="btn" href="' + main.u + '">Xem giá gói này</a><a class="btn ghost" href="/lien-he/?goi=' + encodeURIComponent(main.n) + '">Nhận tư vấn</a></p>' +
+      '<button type="button" class="again">Chọn lại từ đầu</button></div>';
     box.innerHTML = html;
+    if (fromUser && innerWidth <= 900) { var r = document.getElementById('qr'); if (r && r.scrollIntoView) r.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' }); }
+  }
+  qz.addEventListener('change', function () { render(true); });
+  qz.addEventListener('click', function (e) {
+    if (!e.target.closest || !e.target.closest('.again')) return;
+    [].forEach.call(qz.querySelectorAll('input:checked'), function (i) { i.checked = false; });
+    render(false);
+    if (innerWidth <= 900 && qz.scrollIntoView) qz.scrollIntoView({ block: 'start' });
   });
+  addEventListener('pageshow', function () { render(false); });
+  render(false);
+})();
+
+/* pricing table: a package opened by its own link (#goi-…) is highlighted */
+(function () {
+  function mark() {
+    var id = location.hash.slice(1); if (id.indexOf('goi-') !== 0) return;
+    var el = document.getElementById(id); if (!el) return;
+    [].forEach.call(document.querySelectorAll('.plan.target'), function (p) { p.classList.remove('target'); });
+    el.classList.add('target');
+    var go = function () { var r = el.getBoundingClientRect(); if (r.top < 0 || r.top > innerHeight * .6) el.scrollIntoView({ block: 'start' }); };
+    setTimeout(go, 80); addEventListener('load', function () { setTimeout(go, 60); });
+  }
+  addEventListener('hashchange', mark); mark();
 })();
 
 /* contact form prefill from ?mau= ?nganh= ?goi= ?dv= (v16) */
@@ -292,7 +318,7 @@
   if (ng && f.nganh) f.nganh.value = ng;
   if (goi && f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf(goi) === 0) f.goi.value = o.value || o.text; });
   if (dv && f.goi && /SEO|Google|AIO|ChatGPT/.test(dv)) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf('SEO & AIO Khởi Đầu') === 0) f.goi.value = o.value || o.text; });
-  var msg = mau ? 'Tôi thích mẫu "' + mau + '", muốn làm website theo mẫu này.' : dv ? 'Tôi quan tâm dịch vụ ' + dv + '.' : '';
+  var msg = mau ? 'Mình thích mẫu "' + mau + '", muốn làm website theo mẫu này.' : dv ? 'Mình quan tâm dịch vụ ' + dv + '.' : '';
   if (msg && f.nd && !f.nd.value) f.nd.value = msg;
   if (mau || ng || goi || dv) { var h = f.querySelector('h2'); if (h) h.textContent = mau ? 'Nhận báo giá theo mẫu ' + mau : 'Gửi yêu cầu báo giá'; }
   if (mau) {
@@ -303,4 +329,16 @@
       '<span class="lk"><a href="/mau-website/">Xem mẫu khác</a><a href="/dich-vu/thiet-ke-website/#bang-gia">So sánh 6 gói</a></span>');
     var h2 = f.querySelector('h2'); if (h2) h2.insertAdjacentElement('afterend', box);
   }
+})();
+
+/* email links (v25): on a computer open Gmail's compose window in a new tab; phones keep mailto so the mail app opens */
+(function () {
+  if (!window.matchMedia || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="mailto:"]'); if (!a) return;
+    var h = a.getAttribute('href').slice(7), i = h.indexOf('?'), to = i < 0 ? h : h.slice(0, i); if (!to) return;
+    var u = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(decodeURIComponent(to));
+    if (i > -1 && window.URLSearchParams) { var q = new URLSearchParams(h.slice(i + 1)); if (q.get('subject')) u += '&su=' + encodeURIComponent(q.get('subject')); if (q.get('body')) u += '&body=' + encodeURIComponent(q.get('body')); }
+    e.preventDefault(); window.open(u, '_blank', 'noopener');
+  });
 })();

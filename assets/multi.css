@@ -193,3 +193,54 @@
 .how.svc-mock .mock .u{font-size:13.5px}
 .how.svc-mock .mock .okrow{padding-bottom:9px}
 @media (max-width:900px){.how.svc-mock{max-width:none;margin-left:0}}
+
+/* v9 package finder: step by step, the active step is highlighted in orange; result lists what the package includes */
+.qz-prog{list-style:none;margin:0 0 4px;padding:0;display:flex;gap:8px}
+.qz-prog li{flex:1;min-width:0;display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);color:var(--faint);font-size:13.5px;font-weight:600;line-height:1.25;transition:border-color .3s,color .3s,background .3s}
+.qz-prog li span{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.06);font-size:12.5px;font-weight:700}
+.qz-prog li.on{border-color:var(--flame);color:var(--ink);background:rgba(255,74,28,.12)}
+.qz-prog li.on span{background:var(--grad);color:#fff}
+.qz-prog li.done{color:var(--muted)}
+.qz-prog li.done span{background:rgba(255,138,61,.25);color:#FFB070}
+.quiz .qz fieldset{min-width:0;transition:border-color .3s,opacity .3s,box-shadow .3s,background .3s}
+.quiz .qz fieldset.on{border-color:var(--flame);background:rgba(255,74,28,.07);box-shadow:0 0 0 1px rgba(255,74,28,.35),0 24px 60px -40px rgba(255,74,28,.8)}
+.quiz .qz fieldset.wait{opacity:.5}
+.quiz .qz fieldset.wait:hover,.quiz .qz fieldset.wait:focus-within{opacity:.9}
+.quiz .qz legend .n{display:inline-grid;place-items:center;width:26px;height:26px;margin-right:10px;border-radius:50%;background:rgba(255,255,255,.08);font:700 13px var(--body);vertical-align:middle}
+.quiz .qz fieldset.on legend .n{background:var(--grad);color:#fff}
+.quiz .qz fieldset.done legend .n{background:rgba(255,138,61,.25);color:#FFB070}
+.quiz .qz fieldset.on legend{color:#FFB070}
+.qr .qr-wait{display:grid;gap:10px;justify-items:start}
+.qr .qr-ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:rgba(255,74,28,.16);color:var(--flame)}
+.qr .qr-wait b{font-family:var(--display);font-size:22px;color:var(--ink)}
+.qr .qr-wait p{margin:0;color:var(--muted);line-height:1.6}
+.qr .qr-wait .cta{margin-top:8px}
+.qr .rec .for{margin:6px 0 16px}
+.qr .rec .inc-h{display:block;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.qr .rec .inc{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:9px}
+.qr .rec .inc li{position:relative;padding-left:26px;font-size:15px;line-height:1.5;color:var(--ink)}
+.qr .rec .inc li::before{content:"";position:absolute;left:3px;top:.45em;width:11px;height:6px;border-left:2px solid var(--flame);border-bottom:2px solid var(--flame);transform:rotate(-45deg)}
+.qr .rec .again{margin-top:14px;padding:0;border:0;background:none;color:var(--muted);font:600 14px var(--body);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.qr .rec .again:hover{color:var(--ink)}
+.qr .addon p{color:var(--muted);line-height:1.55}
+@media (max-width:600px){.qz-prog li{flex-direction:column;align-items:flex-start;gap:6px;padding:10px;font-size:12.5px}}
+@media (prefers-reduced-motion:reduce){.qz-prog li,.quiz .qz fieldset{transition:none}}
+
+/* pricing cards opened by their own link (#goi-…) */
+.plans .plan[id]{scroll-margin-top:28px}
+.plans .plan.target,.plans .plan:target{border-color:var(--flame);box-shadow:0 0 0 2px rgba(255,74,28,.55),0 30px 70px -40px rgba(255,74,28,.9)}
+
+/* industry pages: short answer block + quick facts (SEO/AIO), detailed plan cards */
+.ind .ind-ans{margin:34px 0 0;padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(160deg,rgba(255,74,28,.10),rgba(20,16,16,.5) 55%)}
+.ind .ind-ans h2{font-size:clamp(24px,2.4vw,32px);margin-bottom:12px}
+.ind .ind-ans > p{margin:0;max-width:86ch;color:var(--ink);font-size:16.5px;line-height:1.7}
+.ind .ind-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:20px 0 0}
+.ind .ind-facts div{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(10,7,6,.5)}
+.ind .ind-facts dt{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--flame)}
+.ind .ind-facts dd{margin:6px 0 0;font-size:15px;line-height:1.5;color:var(--ink)}
+.ind .ind-ans > p.ind-kw{margin-top:16px;font-size:13.5px;color:var(--faint)}
+.ind .ind-feat{margin-top:22px}
+.ind-plans .plans .plan .alt{display:block;margin-top:-4px;text-align:center;font-size:14px;font-weight:600;color:var(--flame);text-decoration:none}
+.ind-plans .plans .plan .alt:hover{text-decoration:underline}
+@media (max-width:1100px){.ind .ind-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.ind .ind-ans{padding:22px 18px}.ind .ind-facts{grid-template-columns:minmax(0,1fr)}}

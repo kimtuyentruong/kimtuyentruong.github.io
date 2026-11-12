@@ -279,3 +279,8 @@ html[lang="vi"] .kt-hd h1{line-height:1.12}
 /* v6: buttons inside article text keep button colours (.prose a used to win: orange underlined text on the orange button) */
 .prose a.btn,.prose a.btn:hover{color:#fff;text-decoration:none}
 .prose a.btn.ghost,.prose a.btn.ghost:hover{color:var(--ink)}
+
+/* v7: article -> industry page link box */
+.prose .ind-link{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin:40px 0 0;padding:22px 24px;border:1px solid rgba(255,138,61,.45);border-radius:20px;background:linear-gradient(150deg,rgba(255,74,28,.14),rgba(20,16,16,.7) 60%)}
+.prose .ind-link b{display:block;font-family:var(--display);font-size:20px;color:var(--ink)}
+.prose .ind-link span{display:block;margin-top:4px;font-size:15px;color:var(--muted)}
