@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bảng giá xây nhà và công cụ dự toán | Khải Nguyên</title>
+<meta name="description" content="Dự toán chi phí xây nhà theo diện tích đất, số tầng, móng, tầng hầm, mái và mức hoàn thiện. Xem diện tích quy đổi, chi phí từng hạng mục và 7 đợt thanh toán.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#14243B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%2314243B'/%3E%3Cpath d='M9 29V18l11-8 11 8v11' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linejoin='round'/%3E%3Crect x='17' y='21' width='6' height='8' fill='%23F4B400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@500;600;700;800&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>(function(d){var c=d.className+' js';if(/HeadlessChrome/.test(navigator.userAgent))c+=' static';d.className=c})(document.documentElement)</script>
+</head>
+<body data-page="bang-gia" data-root="../">
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+<header class="hdr" id="hdr"><noscript><div class="wrap hdr-in"><a href="../">Khải Nguyên</a> · <a href="../dich-vu/">Dịch vụ</a> · <a href="../bang-gia/">Bảng giá</a> · <a href="../du-an/">Dự án</a> · <a href="../lien-he/">Liên hệ</a></div></noscript></header>
+<main id="main">
+<section class="ph ph-sm grid-bg white">
+  <span class="dimline" aria-hidden="true">BẢN VẼ SỐ 03 · DỰ TOÁN</span>
+  <div class="wrap">
+    <nav class="bc" aria-label="Đường dẫn"><a href="../">Trang chủ</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Bảng giá và dự toán</span></nav>
+    <div class="intro">
+      <span class="eyebrow">Bảng giá <span class="code">Cập nhật 01/11/2026 · đơn giá mẫu</span></span>
+      <h1>Tự dự toán chi phí xây nhà, chi&nbsp;tiết đến từng&nbsp;hạng&nbsp;mục.</h1>
+      <p class="lead">Nhập kích thước khu đất, số tầng, loại móng và mức hoàn thiện. Công cụ tính diện tích quy đổi theo cách các nhà thầu ở TP.HCM đang dùng, chia chi phí theo hạng mục và theo 7 đợt thanh toán.</p>
+    </div>
+    <div class="price-strip intro">
+      <div><span>Xây thô</span><b>3.600.000đ</b><small>/m² quy đổi</small></div>
+      <div><span>Trọn gói Cơ bản</span><b>5.600.000đ</b><small>/m² quy đổi</small></div>
+      <div><span>Trọn gói Tiêu chuẩn</span><b>6.500.000đ</b><small>/m² quy đổi</small></div>
+      <div><span>Trọn gói Cao cấp</span><b>7.900.000đ</b><small>/m² quy đổi</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec stone" style="padding-top:clamp(40px,5vw,64px)">
+  <div class="wrap">
+    <div class="note" id="estRestored" hidden style="margin-bottom:20px"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><p>Đã mở lại lựa chọn lần trước của bạn trên máy này. <button type="button" id="estReset" class="link-arrow" style="background:none;border:0;border-bottom:1.5px solid var(--brick);cursor:pointer;padding:0 0 2px">Làm lại từ đầu</button></p></div>
+    <div class="est">
+      <form class="est-form" id="est" onsubmit="return false" aria-label="Công cụ dự toán chi phí xây nhà">
+        <fieldset class="est-g"><legend><span class="n">1</span>Loại công trình</legend>
+          <div class="opt-cards">
+            <label class="chip"><input type="radio" name="type" value="nha-pho" checked><span><b>Nhà phố</b><small>Hệ số 1,00</small></span></label>
+            <label class="chip"><input type="radio" name="type" value="biet-thu"><span><b>Biệt thự</b><small>Hệ số 1,10</small></span></label>
+            <label class="chip"><input type="radio" name="type" value="cap-4"><span><b>Nhà 1 tầng</b><small>Hệ số 0,94</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="est-g"><legend><span class="n">2</span>Khu đất</legend>
+          <div class="row2">
+            <div class="field"><label for="w">Chiều ngang</label><div class="unit"><input class="inp num" type="number" id="w" min="3" max="40" step="0.1" value="5" inputmode="decimal"><span>m</span></div></div>
+            <div class="field"><label for="l">Chiều dài</label><div class="unit"><input class="inp num" type="number" id="l" min="5" max="60" step="0.1" value="18" inputmode="decimal"><span>m</span></div></div>
+          </div>
+          <div class="field" style="margin:0"><label for="dens" style="display:flex;justify-content:space-between">Phần đất xây nhà (mật độ) <output id="densV" class="num" style="color:var(--brick-t)">90%</output></label><input type="range" id="dens" min="40" max="100" step="5" value="90"><span class="small muted">Diện tích đất <b id="rS" class="num">90 m²</b> · Sàn tầng trệt <b id="rF" class="num">81 m²</b></span></div>
+        </fieldset>
+        <fieldset class="est-g"><legend><span class="n">3</span>Số tầng và kết cấu</legend>
+          <div class="row2" style="align-items:end;margin-bottom:16px">
+            <div><span class="flabel" id="flL" style="display:block;margin-bottom:6px">Số tầng (gồm trệt)</span><div class="stepper" role="group" aria-labelledby="flL"><button type="button" data-step="-1" aria-label="Bớt một tầng"><svg class="ic" aria-hidden="true"><use href="#i-minus"/></svg></button><output id="flV" aria-live="polite">4</output><button type="button" data-step="1" aria-label="Thêm một tầng"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></button><input type="hidden" id="fl" value="4"></div></div>
+            <div class="field" style="margin:0"><label for="ham">Tầng hầm</label><select class="inp" id="ham"><option value="0">Không có hầm</option><option value="1.5">Hầm sâu 1,0–1,3 m (150%)</option><option value="1.7">Hầm sâu 1,3–1,7 m (170%)</option><option value="2">Hầm sâu trên 1,7 m (200%)</option></select></div>
+          </div>
+          <div style="display:grid;gap:12px;margin-bottom:18px"><label class="check"><input type="checkbox" id="lung"><span>Có tầng lửng (tính khoảng 60% sàn trệt)</span></label><label class="check"><input type="checkbox" id="tum" checked><span>Có tum thang và sân thượng</span></label></div>
+          <span class="flabel" style="display:block;margin-bottom:8px">Loại móng</span>
+          <div class="opt-cards" role="radiogroup" aria-label="Loại móng" style="margin-bottom:18px">
+            <label class="chip"><input type="radio" name="mong" value="don"><span><b>Móng đơn</b><small>20% sàn trệt</small></span></label>
+            <label class="chip"><input type="radio" name="mong" value="bang" checked><span><b>Móng băng</b><small>50% sàn trệt</small></span></label>
+            <label class="chip"><input type="radio" name="mong" value="coc"><span><b>Móng cọc</b><small>40% + ép cọc</small></span></label>
+          </div>
+          <span class="flabel" style="display:block;margin-bottom:8px">Loại mái</span>
+          <div class="opt-cards" role="radiogroup" aria-label="Loại mái">
+            <label class="chip"><input type="radio" name="mai" value="ton"><span><b>Mái tôn</b><small>30%</small></span></label>
+            <label class="chip"><input type="radio" name="mai" value="btct" checked><span><b>Mái bê tông</b><small>50%</small></span></label>
+            <label class="chip"><input type="radio" name="mai" value="ngoi"><span><b>Mái ngói</b><small>70%</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="est-g"><legend><span class="n">4</span>Mức hoàn thiện</legend>
+          <div class="opt-cards">
+            <label class="chip"><input type="radio" name="pkg" value="tho"><span><b>Xây thô</b><small>3,6 triệu/m²</small></span></label>
+            <label class="chip"><input type="radio" name="pkg" value="co"><span><b>Cơ bản</b><small>5,6 triệu/m²</small></span></label>
+            <label class="chip"><input type="radio" name="pkg" value="tc" checked><span><b>Tiêu chuẩn</b><small>6,5 triệu/m²</small></span></label>
+            <label class="chip"><input type="radio" name="pkg" value="cc"><span><b>Cao cấp</b><small>7,9 triệu/m²</small></span></label>
+          </div>
+          <div style="display:grid;gap:12px;margin-top:18px">
+            <label class="check" id="designRow" hidden><input type="checkbox" id="design" checked><span>Thuê Khải Nguyên thiết kế (180.000đ/m² sàn)</span></label>
+            <label class="check"><input type="checkbox" id="hem"><span>Hẻm dưới 3 m, xe tải không vào được (+4% vận chuyển)</span></label>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="est-res" aria-label="Kết quả dự toán">
+        <div class="res-main" aria-live="polite">
+          <span class="lbl">Tổng chi phí ước tính</span>
+          <b class="tot" id="rTotal">0đ</b>
+          <span class="pk" id="rPkg">—</span>
+          <div class="res-kpi"><div><span>Diện tích quy đổi</span><b id="rA">—</b></div><div><span>Thi công</span><b id="rM">—</b></div><div><span>Bình quân</span><b id="rPer">—</b></div></div>
+          <div class="res-act"><a class="btn btn-y" href="../lien-he/"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><span>Gửi dự toán, hẹn khảo&nbsp;sát</span></a><button class="btn btn-line" type="button" id="estPrint"><svg class="ic" aria-hidden="true"><use href="#i-print"/></svg><span>In / lưu PDF</span></button></div>
+        </div>
+        <div class="res-card"><h3>Chi phí theo hạng mục <span class="small muted" style="font-weight:400">ước tính</span></h3><ul class="items" id="itemsList"></ul></div>
+        <div class="note"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p><b>Đây là ước tính theo đơn giá mẫu</b>, chưa phải báo giá. Chi phí thật phụ thuộc địa chất, hẻm, nhà liền kề và thiết kế cụ thể; kỹ sư sẽ chốt sau khảo sát.</p></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap est-detail">
+    <div class="rv">
+      <span class="eyebrow">Diện tích quy đổi <span class="code">Bảng tính</span></span>
+      <h2 style="font-size:clamp(24px,2.6vw,34px);margin-bottom:20px">Vì sao báo giá tính nhiều mét vuông hơn diện&nbsp;tích&nbsp;sàn</h2>
+      <div class="tbl-wrap"><table class="tbl" style="min-width:480px"><thead><tr><th>Phần</th><th class="r">Diện tích</th><th class="r">Hệ số</th><th class="r">Quy đổi</th></tr></thead><tbody id="rowsBody"></tbody></table></div>
+    </div>
+    <div class="rv d1">
+      <span class="eyebrow">Tiến độ thanh toán <span class="code">7 đợt</span></span>
+      <h2 style="font-size:clamp(24px,2.6vw,34px);margin-bottom:20px">Trả tiền theo mốc nghiệm thu, không trả&nbsp;trước</h2>
+      <div class="res-card"><div class="pay-bar" id="payBar" aria-hidden="true"></div><ol class="pay" id="payBody"></ol></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec grid-bg">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="eyebrow">Hệ số tham khảo</span><h2>Bảng hệ số dùng trong công&nbsp;cụ</h2></div><p class="muted">Cách tính theo thói quen phổ biến của các nhà thầu nhà ở tại TP.HCM. Mỗi đơn vị có thể khác đôi chút; Khải Nguyên ghi rõ hệ số trong hợp đồng.</p></div>
+    <div class="coef">
+      <div class="rv"><h3>Móng và hầm</h3><dl><div><dt>Móng đơn</dt><dd>20%</dd></div><div><dt>Móng cọc (chưa gồm ép cọc)</dt><dd>40%</dd></div><div><dt>Móng băng</dt><dd>50%</dd></div><div><dt>Hầm sâu 1,0–1,3 m</dt><dd>150%</dd></div><div><dt>Hầm sâu 1,3–1,7 m</dt><dd>170%</dd></div><div><dt>Hầm sâu trên 1,7 m</dt><dd>200%</dd></div></dl></div>
+      <div class="rv d1"><h3>Sàn và sân</h3><dl><div><dt>Tầng trệt, các lầu</dt><dd>100%</dd></div><div><dt>Tầng lửng</dt><dd>100%</dd></div><div><dt>Tum thang</dt><dd>100%</dd></div><div><dt>Sân thượng không mái</dt><dd>50%</dd></div><div><dt>Sân trước, sân sau</dt><dd>50%</dd></div></dl></div>
+      <div class="rv d2"><h3>Mái</h3><dl><div><dt>Mái tôn</dt><dd>30%</dd></div><div><dt>Mái bê tông cốt thép</dt><dd>50%</dd></div><div><dt>Mái ngói kèo thép</dt><dd>70%</dd></div><div><dt>Mái ngói đổ bê tông</dt><dd>100%</dd></div></dl></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta-grid navy">
+  <div class="wrap cta-in">
+    <div class="rv"><span class="eyebrow">Bước tiếp theo</span><h2>Có con số rồi, để kỹ sư xem đất và chốt giá&nbsp;thật</h2><p class="lead">Dự toán bạn vừa làm được lưu trên máy này và tự điền vào form đặt lịch khảo sát.</p></div>
+    <div class="cta-act rv d1"><a class="btn btn-y" href="../lien-he/">Đặt lịch khảo sát</a><a class="btn btn-line" href="../vat-tu/">Xem vật tư từng gói</a></div>
+  </div>
+</section>
+
+</main>
+<footer class="ft" id="ft"><noscript><p class="wrap">Nội dung mẫu: tên thương hiệu, giá, nhân sự, dự án, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></footer>
+<script src="../assets/site.js?v=1" defer></script>
+<script src="../assets/tools.js?v=1" defer></script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=1" data-mau="Khải Nguyên Design &amp; Build"></script>
+</body>
+</html>

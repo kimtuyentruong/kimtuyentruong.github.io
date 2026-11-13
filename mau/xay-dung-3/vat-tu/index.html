@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bảng vật tư xây nhà theo từng gói | Khải Nguyên</title>
+<meta name="description" content="Bảng vật tư xây nhà theo gói Cơ bản, Tiêu chuẩn, Cao cấp: thép, bê tông, gạch, sơn, cửa, thiết bị vệ sinh. So sánh hai gói cạnh nhau, thấy ngay điểm khác.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#14243B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%2314243B'/%3E%3Cpath d='M9 29V18l11-8 11 8v11' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linejoin='round'/%3E%3Crect x='17' y='21' width='6' height='8' fill='%23F4B400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@500;600;700;800&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>(function(d){var c=d.className+' js';if(/HeadlessChrome/.test(navigator.userAgent))c+=' static';d.className=c})(document.documentElement)</script>
+</head>
+<body data-page="vat-tu" data-root="../">
+<a class="skip" href="#main">Bỏ qua, tới nội dung chính</a>
+<header class="hdr" id="hdr"><noscript><div class="wrap hdr-in"><a href="../">Khải Nguyên</a> · <a href="../dich-vu/">Dịch vụ</a> · <a href="../bang-gia/">Bảng giá</a> · <a href="../du-an/">Dự án</a> · <a href="../lien-he/">Liên hệ</a></div></noscript></header>
+<main id="main">
+<section class="ph grid-bg white">
+  <span class="dimline" aria-hidden="true">BẢN VẼ SỐ 06 · VẬT TƯ</span>
+  <div class="wrap vt-head">
+    <div class="intro">
+      <nav class="bc" aria-label="Đường dẫn"><a href="../">Trang chủ</a><svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg><span aria-current="page">Vật tư</span></nav>
+      <span class="eyebrow">Vật tư <span class="code">16 hạng mục · 3 gói</span></span>
+      <h1>Viết rõ tên hãng, để bạn đối chiếu tận&nbsp;công&nbsp;trình.</h1>
+      <p class="lead">Chữ “vật tư loại tốt” trong hợp đồng không giúp gì khi nghiệm thu. Bảng dưới đây ghi hãng, quy cách và đơn giá trần cho từng gói; chọn một gói để xem, hoặc bật chế độ so sánh.</p>
+    </div>
+    <div class="vt-pics intro">
+      <div class="ph-img"><img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=80" alt="Công nhân buộc thép sàn bê tông" width="800" height="1000" fetchpriority="high"></div>
+      <div class="ph-img"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&amp;fit=crop&amp;w=600&amp;h=450&amp;q=80" alt="Phòng tắm ốp gạch xám với bồn tắm trắng" width="600" height="450"></div>
+      <div class="ph-img"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&amp;fit=crop&amp;w=600&amp;h=450&amp;q=80" alt="Bếp mặt đá sáng và tủ trắng" width="600" height="450"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec stone" id="matTool">
+  <div class="wrap">
+    <div class="mat-bar">
+      <div class="seg" id="matPkg" role="group" aria-label="Chọn gói vật tư"><button type="button" data-p="co" aria-pressed="false">Cơ bản</button><button type="button" data-p="tc" aria-pressed="true">Tiêu chuẩn</button><button type="button" data-p="cc" aria-pressed="false">Cao cấp</button></div>
+      <label class="switch"><input type="checkbox" id="matMode"><span>So sánh với gói khác</span></label>
+      <div class="mat-b" id="matB" hidden><label for="matBsel">So với</label><select class="inp" id="matBsel"><option value="co">Gói Cơ bản</option><option value="tc">Gói Tiêu chuẩn</option><option value="cc" selected>Gói Cao cấp</option></select></div>
+    </div>
+    <div class="chips mat-cat" id="matCat" role="radiogroup" aria-label="Nhóm vật tư">
+      <label class="chip"><input type="radio" name="mc" value="all" checked><span>Tất cả</span></label>
+      <label class="chip"><input type="radio" name="mc" value="ket-cau"><span>Kết cấu</span></label>
+      <label class="chip"><input type="radio" name="mc" value="dien-nuoc"><span>Điện nước</span></label>
+      <label class="chip"><input type="radio" name="mc" value="hoan-thien"><span>Hoàn thiện</span></label>
+      <label class="chip"><input type="radio" name="mc" value="thiet-bi"><span>Thiết bị</span></label>
+    </div>
+    <div id="matOut" aria-live="polite"></div>
+    <div class="mat-foot"><p class="small muted" style="margin:0">Danh mục mẫu. Tên hãng chỉ để minh hoạ cách ghi phụ lục, Khải Nguyên không đại diện cho hãng nào.</p><a class="btn btn-pri" href="../bang-gia/" id="matPick">Dự toán với gói Tiêu chuẩn</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="eyebrow">Kiểm soát vật tư</span><h2>Bốn lớp kiểm tra trước khi vật tư vào&nbsp;tường</h2></div></div>
+    <div class="qc">
+      <div class="rv"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><h3>Phụ lục hợp đồng</h3><p>Hãng, mã sản phẩm, quy cách và đơn giá trần cho từng hạng mục.</p></div>
+      <div class="rv d1"><svg class="ic" aria-hidden="true"><use href="#i-camera"/></svg><h3>Ảnh khi giao hàng</h3><p>Mỗi chuyến vật tư có ảnh nhãn mác và phiếu giao gửi vào nhóm Zalo.</p></div>
+      <div class="rv d2"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg><h3>Duyệt mẫu thật</h3><p>Gạch, sơn, đá được dán mẫu tại công trình để bạn duyệt trước khi làm.</p></div>
+      <div class="rv d3"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg><h3>Đơn giá trần</h3><p>Muốn loại đắt hơn: bù phần chênh. Chọn rẻ hơn: được trừ lại vào hợp đồng.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-sm grid-bg">
+  <div class="wrap g2" style="align-items:center">
+    <div class="rv"><span class="eyebrow">Ví dụ đơn giá trần</span><h2 style="font-size:clamp(24px,2.6vw,34px)">Đổi gạch nền 80 × 80 sang 60 × 120: bù bao&nbsp;nhiêu?</h2></div>
+    <div class="res-card rv d1">
+      <table class="tbl" style="min-width:0"><tbody>
+        <tr><td>Đơn giá trần gói Tiêu chuẩn</td><td class="r num">350.000đ/m²</td></tr>
+        <tr><td>Gạch bạn chọn</td><td class="r num">520.000đ/m²</td></tr>
+        <tr><td>Diện tích lát nền (ví dụ)</td><td class="r num">180&nbsp;m²</td></tr>
+        <tr class="sum"><td><b>Phần bù thêm</b></td><td class="r num"><b>30.600.000đ</b></td></tr>
+      </tbody></table>
+      <p class="small muted" style="margin:12px 0 0">Ví dụ minh hoạ cách tính. Phần chênh được ký phụ lục trước khi đặt hàng.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta-grid navy">
+  <div class="wrap cta-in">
+    <div class="rv"><span class="eyebrow">Xem tận tay</span><h2>Ghé kho mẫu vật tư trước khi chọn&nbsp;gói</h2><p class="lead">Kho mẫu ở Phường Thủ Dầu Một trưng bày gạch, sơn, cửa của cả 3 gói. Hẹn trước để có kỹ sư hướng dẫn.</p></div>
+    <div class="cta-act rv d1"><a class="btn btn-y" href="../lien-he/">Hẹn xem kho mẫu</a><a class="btn btn-line" href="../dich-vu/#so-sanh">So sánh dịch vụ</a></div>
+  </div>
+</section>
+
+</main>
+<footer class="ft" id="ft"><noscript><p class="wrap">Nội dung mẫu: tên thương hiệu, giá, nhân sự, dự án, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></footer>
+<script src="../assets/site.js?v=1" defer></script>
+<script src="../assets/tools.js?v=1" defer></script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=1" data-mau="Khải Nguyên Design &amp; Build"></script>
+</body>
+</html>
