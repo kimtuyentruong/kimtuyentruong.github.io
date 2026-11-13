@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=12">
 <link rel="stylesheet" href="/assets/theme.css?v=28">
-<link rel="stylesheet" href="/assets/blog.css?v=22">
+<link rel="stylesheet" href="/assets/blog.css?v=25">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ContactPage", "@id": "https://kimtuyentruong.github.io/lien-he/", "name": "Liên hệ Kim Tuyen Truong", "inLanguage": "vi", "url": "https://kimtuyentruong.github.io/lien-he/", "about": {"@id": "https://kimtuyentruong.github.io/#person"}}, {"@type": "Person", "@id": "https://kimtuyentruong.github.io/#person", "name": "Kim Tuyen Truong", "email": "mailto:kimtuyentb97@gmail.com", "telephone": "+84901432113", "contactPoint": [{"@type": "ContactPoint", "contactType": "customer service", "telephone": "+84901432113", "email": "kimtuyentb97@gmail.com", "availableLanguage": ["vi", "en"], "areaServed": ["VN", "US"]}], "sameAs": ["https://www.linkedin.com/in/tbkimt/", "https://zalo.me/0901432113", "https://t.me/kimtuyen21297"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Tư vấn có mất phí không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Bạn nhắn cho mình ngành nghề, khu vực và website bạn muốn, mình tư vấn gói phù hợp và gửi báo giá miễn phí."}}, {"@type": "Question", "name": "Mình ở tỉnh khác thì làm việc thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Mọi việc trao đổi online qua Zalo, Telegram, email hoặc Google Meet. Mình gửi link xem trước để bạn góp ý trước khi ra mắt."}}, {"@type": "Question", "name": "Làm một website mất bao lâu?", "acceptedAnswer": {"@type": "Answer", "text": "Website Theo Mẫu khoảng 2–3 ngày, Landing Page khoảng 7–10 ngày, Website Cơ Bản khoảng 1–2 tuần, Website Doanh Nghiệp khoảng 2–4 tuần, Website Bán Hàng khoảng 2–4 tuần, tính từ khi nhận đủ thông tin, nội dung, logo và hình ảnh."}}, {"@type": "Question", "name": "Thanh toán như thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Thanh toán 3 đợt: 50% trước khi bắt đầu làm, 30% khi website làm xong và bạn duyệt, 20% còn lại khi bàn giao toàn bộ website, tài khoản và hướng dẫn."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://kimtuyentruong.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Liên hệ"}]}]}</script>
 </head>
 <body class="sub">
@@ -54,7 +54,7 @@
   </div>
   <form class="lh-form" id="lhForm" novalidate>
     <h2>Gửi yêu cầu báo giá</h2>
-    <p class="hint">Điền nhanh vài thông tin, bấm gửi để mở email đã soạn sẵn (hoặc sao chép nội dung để nhắn&nbsp;Zalo).</p>
+    <p class="hint">Điền nhanh vài thông tin, bấm Gửi form là xong. Bạn cũng có thể nhắn qua Zalo hoặc gửi&nbsp;email.</p>
     <label>Tên của bạn<input name="ten" required autocomplete="name"></label>
     <label>Số điện thoại / Zalo<input name="sdt" required inputmode="tel" autocomplete="tel"></label>
     <label>Ngành nghề<input name="nganh" placeholder="Vd: tiệm nail, nhà hàng, bất động sản"></label>
@@ -62,8 +62,11 @@
     <label>Bạn cần website làm được gì?<textarea name="nd" rows="4"></textarea></label>
     <label class="ck"><input type="checkbox" name="ok" required> Mình đồng ý cho Kim Tuyen Truong dùng thông tin trên để liên hệ tư vấn. Thông tin không chia sẻ cho bên thứ ba, bạn có thể yêu cầu xoá bất cứ lúc&nbsp;nào.</label>
     <p class="err" id="lhErr" hidden>Bạn điền tên, số điện thoại và tích ô đồng ý giúp mình nhé.</p>
-    <div class="row"><button class="btn" type="submit">Gửi qua email</button><button class="btn ghost" type="button" id="lhZalo">Sao chép &amp; mở Zalo</button></div>
+    <label class="hp" aria-hidden="true">Website<input name="web" tabindex="-1" autocomplete="off"></label>
+    <p class="err" id="lhFail" hidden>Chưa gửi được form. Bạn bấm Gửi lại, hoặc nhắn Zalo / gửi email giúp mình nhé.</p>
+    <div class="row"><button class="btn" type="submit" id="lhSend">Gửi form</button><button class="btn ghost" type="button" id="lhZalo">Nhắn qua Zalo</button><button class="btn ghost" type="button" id="lhMail">Gửi qua email</button></div>
     <p class="ok" id="lhOk" hidden>Đã sao chép nội dung. Bạn dán vào khung chat Zalo vừa mở là xong.</p>
+    <div class="lh-done" id="lhDone" hidden tabindex="-1"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Cảm ơn bạn đã gửi yêu&nbsp;cầu</h3><p>Tuyền đã nhận được thông tin và sẽ sớm liên hệ với bạn qua số điện thoại / Zalo bạn để&nbsp;lại.</p></div>
   </form>
 </div>
 <section class="post-faq lh-faq"><h2>Câu hỏi thường gặp</h2><div class="faq"><details class="qa"><summary><h3>Tư vấn có mất phí không?</h3><span class="pm" aria-hidden="true"></span></summary><p>Không. Bạn nhắn cho mình ngành nghề, khu vực và website bạn muốn, mình tư vấn gói phù hợp và gửi báo giá miễn phí.</p></details><details class="qa"><summary><h3>Mình ở tỉnh khác thì làm việc thế nào?</h3><span class="pm" aria-hidden="true"></span></summary><p>Mọi việc trao đổi online qua Zalo, Telegram, email hoặc Google Meet. Mình gửi link xem trước để bạn góp ý trước khi ra mắt.</p></details><details class="qa"><summary><h3>Làm một website mất bao lâu?</h3><span class="pm" aria-hidden="true"></span></summary><p>Website Theo Mẫu khoảng 2–3 ngày, Landing Page khoảng 7–10 ngày, Website Cơ Bản khoảng 1–2 tuần, Website Doanh Nghiệp khoảng 2–4 tuần, Website Bán Hàng khoảng 2–4 tuần, tính từ khi nhận đủ thông tin, nội dung, logo và hình ảnh.</p></details><details class="qa"><summary><h3>Thanh toán như thế nào?</h3><span class="pm" aria-hidden="true"></span></summary><p>Thanh toán 3 đợt: 50% trước khi bắt đầu làm, 30% khi website làm xong và bạn duyệt, 20% còn lại khi bàn giao toàn bộ website, tài khoản và hướng dẫn.</p></details></div></section>
@@ -73,7 +76,14 @@
 (function(){var f=document.getElementById('lhForm'),er=document.getElementById('lhErr'),ok=document.getElementById('lhOk');
 var msg=function(){var d=new FormData(f);return 'Chào Tuyền, mình là '+d.get('ten')+' ('+d.get('sdt')+').\nNgành: '+(d.get('nganh')||'-')+'\nGói quan tâm: '+d.get('goi')+'\nNội dung: '+(d.get('nd')||'-')};
 var valid=function(){var v=f.ten.value.trim()&&f.sdt.value.trim()&&f.ok.checked;er.hidden=!!v;return v};
-f.addEventListener('submit',function(e){e.preventDefault();if(!valid())return;var su=encodeURIComponent('Yêu cầu báo giá website – '+f.ten.value.trim()),bd=encodeURIComponent(msg());if(window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches)window.open('https://mail.google.com/mail/?view=cm&fs=1&to=kimtuyentb97@gmail.com&su='+su+'&body='+bd,'_blank','noopener');else location.href='mailto:kimtuyentb97@gmail.com?subject='+su+'&body='+bd});
+var mail=function(){if(!valid())return;var su=encodeURIComponent('Yêu cầu báo giá website – '+f.ten.value.trim()),bd=encodeURIComponent(msg());if(window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches)window.open('https://mail.google.com/mail/?view=cm&fs=1&to=kimtuyentb97@gmail.com&su='+su+'&body='+bd,'_blank','noopener');else location.href='mailto:kimtuyentb97@gmail.com?subject='+su+'&body='+bd};
+document.getElementById('lhMail').addEventListener('click',mail);
+var bt=document.getElementById('lhSend'),fail=document.getElementById('lhFail'),done=document.getElementById('lhDone'),busy=false;
+f.addEventListener('submit',function(e){e.preventDefault();if(busy||!valid())return;if(!window.fetch||!window.URLSearchParams){mail();return}
+busy=true;fail.hidden=true;ok.hidden=true;bt.disabled=true;bt.textContent='Đang gửi…';
+var d=new FormData(f),b=new URLSearchParams();['ten','sdt','nganh','goi','nd','web'].forEach(function(k){b.append(k,d.get(k)||'')});b.append('trang',location.pathname);
+var bad=function(){busy=false;bt.disabled=false;bt.textContent='Gửi lại';fail.hidden=false};
+fetch('https://script.google.com/macros/s/AKfycbw91B0KXb8Fd0Lm8k8WZiXAsA-ci-aMvqo1N4WXmSFgav3PoRFFsO6IRA1FoRgwuFC0/exec',{method:'POST',body:b}).then(function(r){return r.json()}).then(function(j){if(!j||!j.ok){bad();return}f.classList.add('sent');done.hidden=false;done.focus();if(done.scrollIntoView)done.scrollIntoView({block:'center'})}).catch(bad)});
 document.getElementById('lhZalo').addEventListener('click',function(){if(!valid())return;var t=msg(),go=function(){ok.hidden=false;window.open('https://zalo.me/0901432113','_blank','noopener')};if(navigator.clipboard)navigator.clipboard.writeText(t).then(go,go);else go()});
 })();
 </script>
