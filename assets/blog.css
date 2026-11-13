@@ -476,3 +476,11 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 .dp-grid.orbit .dp ul{gap:4px}
 .dp-grid.orbit .dp li{line-height:1.4}
 .dp-grid.orbit{height:1080px}
+
+/* v22: hire hero: what comes with hiring (team, tools, AI) */
+.hm-have{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:900px}
+.hm-have li{padding:14px 16px;border:1px solid var(--line-2);border-left:3px solid var(--flame);border-radius:0 14px 14px 0;background:rgba(255,74,28,.07)}
+.hm-have b{display:block;font-family:var(--display);font-size:17px;color:var(--ink)}
+.hm-have span{display:block;margin-top:4px;font-size:14px;line-height:1.45;color:var(--muted)}
+.dp-grid.orbit .dp-core > span{max-width:22ch}
+@media (max-width:700px){.hm-have{grid-template-columns:minmax(0,1fr)}}
