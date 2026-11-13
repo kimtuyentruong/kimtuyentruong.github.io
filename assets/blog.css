@@ -447,3 +447,32 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 .hrole.t2 .btn{background:linear-gradient(100deg,#FFD58A,#FFB040 55%,#F08A1D);color:#2A1706;box-shadow:0 14px 30px -14px rgba(255,176,64,.9)}
 .hrole.t2 .role-mode{border-color:rgba(255,190,92,.35)}
 .hrole.t1 .role-mode{border-color:rgba(255,106,58,.35)}
+
+/* v18: round portrait hub; animated lines run from the hub out to every skill card */
+.dp-grid.orbit .dp-core{width:300px;height:300px;border-radius:50%;padding:22px 26px;gap:6px}
+.dp-grid.orbit .dp-core .cv-photo{width:104px;height:104px}
+.dp-grid.orbit .dp-core b{font-size:24px}
+.dp-grid.orbit .dp-core > span{max-width:20ch;font-size:13.5px;line-height:1.4}
+.dp-grid.orbit .dp-core em{margin-top:2px;padding:5px 11px;font-size:12.5px}
+.dp-grid.orbit .dp-core::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(255,138,61,.35);animation:dppulse 3.2s ease-out infinite;pointer-events:none}
+.dp-lines{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;overflow:visible}
+.dp-lines line{stroke:rgba(255,138,61,.5);stroke-width:1.5;stroke-linecap:round;stroke-dasharray:5 11;animation:dpflow 1.4s linear infinite}
+.dp-lines line.hot{stroke:#FFB070;stroke-width:2.6;stroke-dasharray:8 8}
+.dp-grid.orbit::before{display:none}
+@keyframes dpflow{to{stroke-dashoffset:-32}}
+@keyframes dppulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.22);opacity:0}}
+@media (prefers-reduced-motion:reduce){.dp-lines line,.dp-grid.orbit .dp-core::after{animation:none}}
+
+.dp-grid.orbit{height:1010px}
+.dp-grid.orbit .dp-core{width:330px;height:330px;padding:26px 34px}
+.dp-grid.orbit .dp-core .cv-photo{width:100px;height:100px}
+.dp-grid.orbit .dp{width:232px;margin:-96px 0 0 -116px;padding:15px 16px}
+.dp-grid.orbit .dp li{font-size:13px}
+.dp-grid.orbit{height:1050px}
+.dp-grid.orbit .dp{padding:13px 15px}
+.dp-grid.orbit .dp .ic{width:32px;height:32px;border-radius:10px}
+.dp-grid.orbit .dp .ic svg{width:19px;height:19px}
+.dp-grid.orbit .dp h3{margin:8px 0 6px;font-size:17px}
+.dp-grid.orbit .dp ul{gap:4px}
+.dp-grid.orbit .dp li{line-height:1.4}
+.dp-grid.orbit{height:1080px}

@@ -377,11 +377,19 @@
   var cards = [].slice.call(g.querySelectorAll('.dp')); if (cards.length < 4) return;
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, on = false, seen = true, hot = null, ang = -Math.PI / 2, last = 0, raf = 0;
   var PERIOD = 150000; // ms for one full turn
+  var NS = 'http://www.w3.org/2000/svg', svgl = null, lines = [];
+  function wires() {
+    if (svgl) return;
+    svgl = document.createElementNS(NS, 'svg'); svgl.setAttribute('class', 'dp-lines'); svgl.setAttribute('aria-hidden', 'true');
+    cards.forEach(function () { var l = document.createElementNS(NS, 'line'); svgl.appendChild(l); lines.push(l); });
+    g.insertBefore(svgl, g.firstChild);
+  }
   function place() {
-    var w = g.clientWidth, rx = Math.min(470, w / 2 - 130), ry = 345, n = cards.length;
+    var w = g.clientWidth, h = g.clientHeight, rx = Math.min(470, w / 2 - 130), ry = 405, n = cards.length, cx = w / 2, cy = h / 2;
     cards.forEach(function (c, i) {
-      var a = ang + i * 2 * Math.PI / n, s = c === hot ? 1.14 : 1;
-      c.style.transform = 'translate3d(' + (Math.cos(a) * rx).toFixed(1) + 'px,' + (Math.sin(a) * ry).toFixed(1) + 'px,0) scale(' + s + ')';
+      var a = ang + i * 2 * Math.PI / n, s = c === hot ? 1.14 : 1, x = Math.cos(a) * rx, y = Math.sin(a) * ry;
+      c.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0) scale(' + s + ')';
+      var l = lines[i]; if (l) { l.setAttribute('x1', cx); l.setAttribute('y1', cy); l.setAttribute('x2', (cx + x).toFixed(1)); l.setAttribute('y2', (cy + y).toFixed(1)); l.setAttribute('class', c === hot ? 'hot' : ''); }
     });
   }
   function tick(t) {
@@ -391,7 +399,7 @@
   }
   function setOn(v) {
     if (v === on) return; on = v; g.classList.toggle('orbit', v);
-    if (v) { last = 0; place(); if (!reduce && !raf) raf = requestAnimationFrame(tick); }
+    if (v) { last = 0; wires(); place(); if (!reduce && !raf) raf = requestAnimationFrame(tick); }
     else cards.forEach(function (c) { c.style.transform = ''; c.classList.remove('hot'); });
   }
   function check() { setOn(innerWidth >= 1100); }
