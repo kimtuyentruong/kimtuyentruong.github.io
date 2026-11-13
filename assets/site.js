@@ -370,3 +370,37 @@
   if (window.IntersectionObserver) new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }, { threshold: .3 }).observe(wrap); else seen = true;
   timer = setInterval(function () { if (seen && !paused && !document.hidden) step(1); }, 3200);
 })();
+
+/* hire page (v30): skill cards orbit slowly around the portrait on desktop; hovering or focusing a card pauses the orbit and enlarges that card */
+(function () {
+  var g = document.querySelector('.dp-grid'); if (!g) return;
+  var cards = [].slice.call(g.querySelectorAll('.dp')); if (cards.length < 4) return;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, on = false, seen = true, hot = null, ang = -Math.PI / 2, last = 0, raf = 0;
+  var PERIOD = 150000; // ms for one full turn
+  function place() {
+    var w = g.clientWidth, rx = Math.min(470, w / 2 - 130), ry = 345, n = cards.length;
+    cards.forEach(function (c, i) {
+      var a = ang + i * 2 * Math.PI / n, s = c === hot ? 1.14 : 1;
+      c.style.transform = 'translate3d(' + (Math.cos(a) * rx).toFixed(1) + 'px,' + (Math.sin(a) * ry).toFixed(1) + 'px,0) scale(' + s + ')';
+    });
+  }
+  function tick(t) {
+    raf = 0; if (!on) return;
+    if (last && !hot && seen && !document.hidden) ang += (t - last) / PERIOD * 2 * Math.PI;
+    last = t; place(); raf = requestAnimationFrame(tick);
+  }
+  function setOn(v) {
+    if (v === on) return; on = v; g.classList.toggle('orbit', v);
+    if (v) { last = 0; place(); if (!reduce && !raf) raf = requestAnimationFrame(tick); }
+    else cards.forEach(function (c) { c.style.transform = ''; c.classList.remove('hot'); });
+  }
+  function check() { setOn(innerWidth >= 1100); }
+  cards.forEach(function (c) {
+    c.tabIndex = 0;
+    var en = function () { hot = c; c.classList.add('hot'); if (on) place(); }, lv = function () { if (hot === c) hot = null; c.classList.remove('hot'); if (on) place(); };
+    c.addEventListener('pointerenter', en); c.addEventListener('pointerleave', lv); c.addEventListener('focus', en); c.addEventListener('blur', lv);
+  });
+  if (window.IntersectionObserver) new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(g);
+  var lw = innerWidth; addEventListener('resize', function () { if (innerWidth !== lw) { lw = innerWidth; check(); if (on) place(); } });
+  check();
+})();

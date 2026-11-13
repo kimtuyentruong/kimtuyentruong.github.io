@@ -418,3 +418,32 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 .cv-exp ul li{display:block;grid-template-columns:none}
 .cv-exp > li{grid-template-columns:150px minmax(0,1fr)}
 @media (max-width:900px){.cv-exp > li{grid-template-columns:minmax(0,1fr)}}
+
+.author .mark{border-radius:50%;background:url(logo-kt.png?v=2) center/cover no-repeat;color:transparent;font-size:0}
+
+/* v15: the 8 skill cards orbit slowly around the portrait (desktop only; JS adds .orbit). Hover pauses the orbit and enlarges that card */
+.dp-grid.orbit{position:relative;display:block;height:930px;margin-top:10px}
+.dp-grid.orbit .dp-core{position:absolute;left:50%;top:50%;width:270px;padding:20px 16px;transform:translate(-50%,-50%);z-index:2}
+.dp-grid.orbit .dp{position:absolute;left:50%;top:50%;width:252px;margin:-92px 0 0 -126px;padding:16px 18px;z-index:1;will-change:transform;transition:border-color .3s,box-shadow .3s;background:#14100F}
+.dp-grid.orbit .dp:hover{transform:none}
+.dp-grid.orbit .dp.hot{z-index:5;border-color:var(--flame);box-shadow:0 30px 70px -30px rgba(255,74,28,.9)}
+.dp-grid.orbit .dp .ic{width:38px;height:38px;border-radius:12px}
+.dp-grid.orbit .dp h3{margin:10px 0 8px;font-size:18px}
+.dp-grid.orbit .dp li{font-size:13.5px;line-height:1.45}
+.dp-grid.orbit::before{content:"";position:absolute;left:50%;top:50%;width:940px;height:690px;transform:translate(-50%,-50%);border:1px dashed rgba(255,138,61,.25);border-radius:50%;pointer-events:none}
+
+.aiw-steps span{margin-top:12px}
+.aiw-steps i{display:block;margin-bottom:3px;font-style:normal;font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+.aiw-steps span:last-child{padding-top:12px;border-top:1px dashed var(--line-2);color:var(--ink)}
+.aiw-steps span:last-child i{color:var(--flame)}
+.aiw-sum{margin:20px 0 0;padding:16px 20px;border-left:3px solid var(--flame);border-radius:0 14px 14px 0;background:rgba(255,74,28,.07);color:var(--ink);font-size:16px;line-height:1.6;max-width:none}
+
+/* v17: the two roles are equally important: both cards stand out, each in its own tone (orange / amber-gold) */
+.hrole.t1{border-color:rgba(255,106,58,.65);background:linear-gradient(160deg,rgba(255,74,28,.22),rgba(20,16,16,.75) 58%);box-shadow:0 30px 70px -42px rgba(255,74,28,.85)}
+.hrole.t2{border-color:rgba(255,190,92,.65);background:linear-gradient(160deg,rgba(255,176,64,.20),rgba(20,16,16,.75) 58%);box-shadow:0 30px 70px -42px rgba(255,176,64,.8)}
+.hrole.t2 .badge{background:linear-gradient(100deg,#FFD58A,#FFB040 55%,#F08A1D);color:#2A1706}
+.hrole.t2 .role-no,.hrole.t2 .role-price small{color:#FFC56B}
+.hrole.t2 li::before{border-color:#FFB040}
+.hrole.t2 .btn{background:linear-gradient(100deg,#FFD58A,#FFB040 55%,#F08A1D);color:#2A1706;box-shadow:0 14px 30px -14px rgba(255,176,64,.9)}
+.hrole.t2 .role-mode{border-color:rgba(255,190,92,.35)}
+.hrole.t1 .role-mode{border-color:rgba(255,106,58,.35)}

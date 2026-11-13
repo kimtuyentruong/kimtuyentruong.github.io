@@ -600,3 +600,7 @@ svg.zl{stroke:none !important;fill:none}
 
 /* v27 phone: no hover label behind the round buttons */
 @media (max-width:600px){.dock .totop span,.dock a span{display:none !important}}
+
+/* v28: logo = portrait in an orange ring (replaces the "KT" square) */
+.nav .me .mark{width:36px;height:36px;border-radius:50%;background:url(logo-kt.png?v=2) center/cover no-repeat;color:transparent;font-size:0;box-shadow:0 6px 18px -8px rgba(255,74,28,.8)}
+@media (max-width:400px){.nav .me .mark{width:32px;height:32px}}
