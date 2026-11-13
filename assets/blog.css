@@ -514,3 +514,13 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 @keyframes hmblink{0%,100%{opacity:1}50%{opacity:.55}}
 @keyframes hmdraw{0%{stroke-dashoffset:1}45%,100%{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:reduce){.hm-wire,.hm-ring,.hm-node,.hm-pulse,.hm-line,.hm-tip{animation:none}.hm-line{stroke-dashoffset:0}}
+
+/* v25: contact form sends by itself (Gửi form), thank-you panel replaces the fields */
+.lh-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lh-form .row .btn[disabled]{opacity:.6;cursor:default}
+.lh-form.sent > :not(.lh-done){display:none}
+.lh-done{text-align:center;padding:34px 8px;outline:0}
+.lh-done .tick{display:inline-grid;place-items:center;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#FFA25A,#FF5A24 55%,#D9281A);color:#fff;margin-bottom:16px}
+.lh-done h3{font-size:24px;margin-bottom:8px}
+.lh-done p{color:var(--muted);max-width:44ch;margin:0 auto;line-height:1.65}
+@media (max-width:600px){.lh-form .row #lhSend{flex:1 1 100%}.lh-form .row .ghost{flex:1 1 0;padding-left:12px;padding-right:12px;white-space:nowrap}}
