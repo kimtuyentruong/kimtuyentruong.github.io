@@ -126,7 +126,25 @@
     if (rowsBox) new IntersectionObserver(function (es) { var off = !es[0].isIntersecting; rowsBox.classList.toggle('off', off); pfM.forEach(function (m) { m.off(off); }); }).observe(rowsBox);
     if (rib) new IntersectionObserver(function (es) { if (ribM) ribM.off(!es[0].isIntersecting); }).observe(rib.parentNode);
   }
-  var rt, lastW = innerWidth; addEventListener('resize', function () { if (Math.abs(innerWidth - lastW) < 40) return; lastW = innerWidth; clearTimeout(rt); rt = setTimeout(function () { build(); ribBuild(); }, 300); });
+  /* homepage industry chips on phones (v37): two slow rows moving in opposite directions; wider screens keep the wrapped chips */
+  var chipBox = document.querySelector('.pick .chips'), chipM = [];
+  var chipsBuild = function () {
+    if (!chipBox) return;
+    if (!chipBox._src) chipBox._src = [].slice.call(chipBox.children);
+    chipM.forEach(function (m) { m.kill(); }); chipM = [];
+    var on = innerWidth <= 600 && !reduce && canAnim, src = chipBox._src;
+    chipBox.innerHTML = ''; chipBox.classList.toggle('mqc', on);
+    if (!on) { src.forEach(function (n) { chipBox.appendChild(n); }); return; }
+    var half = Math.ceil(src.length / 2);
+    [src.slice(0, half), src.slice(half)].forEach(function (part, r) {
+      var row = document.createElement('div'); row.className = 'chips-row'; chipBox.appendChild(row);
+      chipM.push(marquee(row, part.map(function (n) { return n.cloneNode(true); }), 20, r === 1));
+    });
+  };
+  chipsBuild();
+  if (document.fonts && document.fonts.status !== 'loaded') document.fonts.ready.then(chipsBuild);
+  if (chipBox && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { chipM.forEach(function (m) { m.off(!es[0].isIntersecting); }); }).observe(chipBox);
+  var rt, lastW = innerWidth; addEventListener('resize', function () { if (Math.abs(innerWidth - lastW) < 40) return; lastW = innerWidth; clearTimeout(rt); rt = setTimeout(function () { build(); ribBuild(); chipsBuild(); }, 300); });
 
   /* copy email */
   var copy = $('copy');
