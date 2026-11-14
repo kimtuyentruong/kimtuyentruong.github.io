@@ -526,3 +526,8 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 @media (max-width:600px){.lh-form .row #lhSend{flex:1 1 100%}.lh-form .row .ghost{flex:1 1 0;padding-left:12px;padding-right:12px;white-space:nowrap}}
 /* v26: a related-articles grid with a single article keeps a readable card width instead of one squeezed column */
 .kgrid:has(> :only-child){grid-template-columns:minmax(0,560px)}
+/* v27: FAQ section heading had body line-height (1.6), too loose when it wraps on phones */
+.lh-faq h2,.post-faq h2{line-height:1.22;margin-bottom:18px}
+.ind-ans h2,.ind-steps h2,.mw-cta h2,.mw .more h2{line-height:1.25}
+/* any h1/h2 without its own line-height falls back to a heading value instead of the body 1.6 (zero specificity: explicit rules still win) */
+:where(h1,h2){line-height:1.25}
