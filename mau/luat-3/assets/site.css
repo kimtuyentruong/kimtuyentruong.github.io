@@ -344,7 +344,7 @@ body.lock{overflow:hidden}
 .tbl th{text-align:left;font:600 .76rem/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);background:var(--paper2);padding:14px 16px;border-bottom:1px solid var(--line)}
 .tbl td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
 .tbl tr:last-child td{border-bottom:0}
-.tbl td:first-child{width:76px}
+#niceTbl td:first-child{width:76px}
 .tbl .cl{display:inline-grid;place-items:center;min-width:42px;height:32px;border-radius:9px;background:var(--paper);font:700 .92rem/1 var(--disp);font-variant-numeric:tabular-nums}
 .tbl tr{transition:background .3s,opacity .3s}
 .tbl tr.hit{background:var(--soft)}
