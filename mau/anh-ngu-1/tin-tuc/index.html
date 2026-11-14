@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tin tức, sự kiện và góc học tập | Sunward English</title>
+<meta name="description" content="Tin trung tâm, sự kiện cho học viên và phụ huynh tại TP.HCM, Hà Nội, cùng các bài góc học tập: luyện nghe cho bé, IELTS Speaking, viết email công việc.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0E5E66">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%230E5E66'/%3E%3Cpath d='M8 27a12 12 0 0 1 24 0' fill='%23F2B33D'/%3E%3Cpath d='M6 31h28' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap&subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="tin-tuc">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Trang chủ</a> · <a href="../khoa-hoc/">Khoá học</a> · <a href="../kiem-tra-trinh-do/">Kiểm tra trình độ</a> · <a href="../lich-khai-giang/">Lịch khai giảng</a> · <a href="../giao-vien/">Giáo viên</a> · <a href="../co-so/">Cơ sở</a> · <a href="../phu-huynh/">Phụ huynh</a> · <a href="../tin-tuc/">Tin tức</a> · <a href="../dang-ky-hoc-thu/">Đăng ký học thử</a></nav></noscript></div>
+<main id="main">
+<section class="phero" style="padding-bottom:28px">
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Trang chủ</a></li><li aria-current="page">Tin tức &amp; sự kiện</li></ol>
+  <div class="sec-head" style="margin-bottom:36px"><div class="intro"><span class="eyebrow">Cập nhật mỗi tuần</span><h1>Tin tức, sự kiện và góc học&nbsp;tập</h1></div><p class="lead" style="margin:0">Hoạt động ở các cơ sở, sự kiện mở cho cả học viên ngoài trung tâm, và những bài viết ngắn giúp con học tiếng Anh ở nhà.</p></div>
+  <a class="feat-post rv" href="../bai-viet/">
+   <div class="ph"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1100&h=760&q=80" alt="Chồng sách, quả táo và khối chữ ABC trên bàn học" width="1100" height="760" fetchpriority="high"></div>
+   <div class="bd"><span class="tag sun" style="align-self:flex-start">Góc phụ huynh · Bài nổi bật</span><h2>Con nên bắt đầu học tiếng Anh lúc mấy tuổi? Gợi ý theo từng giai&nbsp;đoạn</h2><p>Không có “tuổi vàng” chung cho mọi bé. Bài viết tóm tắt điều trẻ làm được ở từng độ tuổi và cách chọn lớp vừa sức.</p><span class="muted" style="color:#9DBDB9;font-size:.88rem">10/11/2026 · 8 phút đọc</span><span class="link">Đọc bài viết <svg class="ico s" aria-hidden="true"><use href="#i-ar"/></svg></span></div>
+  </a>
+ </div>
+</section>
+
+<section class="sec-s">
+ <div class="wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;margin-bottom:28px"><h2 style="font-size:clamp(1.4rem,1.2rem + .8vw,1.9rem)">Bài mới</h2><div class="chips" id="cats" role="group" aria-label="Lọc chuyên mục"></div></div>
+  <div class="plist" id="posts"></div>
+ </div>
+</section>
+
+<section class="sec paper" id="su-kien">
+ <div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Sự kiện sắp tới</span><h2 class="rv">Mở cửa cho cả học viên ngoài&nbsp;trung&nbsp;tâm</h2></div><p class="rv d1">Đăng ký giữ chỗ trước, sự kiện miễn phí. Đồng hồ đếm ngược theo giờ Việt Nam.</p></div>
+  <div class="events" id="evs"></div>
+ </div>
+</section>
+
+<section class="sec">
+ <div class="wrap pain-grid" style="align-items:center">
+  <div><span class="eyebrow">Bản tin cho phụ huynh</span><h2 class="rv">Một email mỗi tháng, toàn mẹo học cùng&nbsp;con</h2><p class="lead rv d1" style="margin-top:18px">Lịch sự kiện, bài đọc theo độ tuổi và một hoạt động 15 phút làm cùng con cuối tuần. Huỷ đăng ký bất cứ lúc nào.</p></div>
+  <form class="fcard rv" id="nl" novalidate>
+   <div class="fgrid" style="margin-top:0">
+    <div class="field full"><label for="nlE">Email của bạn</label><input class="inp" id="nlE" type="email" autocomplete="email" placeholder="ten@email.com" required><span class="err">Vui lòng nhập email hợp lệ.</span></div>
+    <div class="field full"><label for="nlA">Tuổi của con</label><select class="inp" id="nlA"><option>4–6 tuổi</option><option selected>6–11 tuổi</option><option>11–17 tuổi</option><option>Tôi đăng ký cho bản thân</option></select></div>
+    <div class="field full"><label class="check"><input type="checkbox" id="nlC"> Tôi đồng ý để Sunward xử lý email này nhằm gửi bản tin, theo chính sách bảo vệ dữ liệu cá nhân.</label><span class="err">Vui lòng đồng ý để nhận bản tin.</span></div>
+   </div>
+   <button class="btn btn-p" type="submit" style="margin-top:22px">Nhận bản tin</button>
+   <p id="nlOk" role="status" style="margin:16px 0 0;color:#0B6B3A;font-weight:500"></p>
+  </form>
+ </div>
+</section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Nội dung mẫu: tên thương hiệu, học phí, giáo viên, lịch học, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></div>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){var S=window.SW,$=S.$,$$=S.$$,D=S.D,esc=S.esc;
+var SUM={'long-bien':'Cơ sở Long Biên mở lớp Kids, Teens và IELTS Foundation từ tháng 11/2026. Học viên đang học ở cơ sở khác có thể chuyển về với học phí giữ nguyên. Tuần đầu có buổi tham quan cho phụ huynh vào sáng thứ Bảy.',
+ '15-phut':'Mở lại bài hát cũ khi đi xe; nhờ con kể lại truyện bằng 3 bức tranh; chơi đoán từ với đồ vật trong nhà; xem 1 tập hoạt hình ngắn không phụ đề rồi hỏi con 2 câu; đọc to cùng con trước khi ngủ. Mỗi việc chỉ 15 phút, quan trọng là đều đặn.',
+ 'speaking-p2':'Chia giấy nháp thành 4 ô: ai/cái gì, khi nào và ở đâu, chuyện gì xảy ra, vì sao đáng nhớ. Mỗi ô ghi 3–4 từ khoá. Khi nói, đi lần lượt từng ô và kết bằng cảm nghĩ của bạn; như vậy dễ nói đủ 2 phút mà không lặp ý.',
+ 'trai-he':'Trại hè 2027 kéo dài 2 tuần, dành cho học viên 7–14 tuổi. Mỗi nhóm làm một dự án bằng tiếng Anh: phim ngắn, báo tường hoặc gian hàng chợ phiên. Đăng ký sớm trước 31/01/2027 được giữ chỗ ở cơ sở mong muốn.',
+ 'cong-so':'Thay vì “I am writing to…”, hãy vào thẳng việc: “Following up on our call…”, “Quick question about…”, “As promised, here is…”. Câu mở đầu ngắn giúp người đọc nắm ý ngay và email trông chuyên nghiệp hơn.'};
+var cat='',cats=['Tin tức','Góc học tập','Góc phụ huynh'];
+$('#cats').innerHTML='<button class="chip" type="button" data-c="" aria-pressed="true">Tất cả</button>'+cats.map(function(c){return '<button class="chip" type="button" data-c="'+c+'" aria-pressed="false">'+c+'</button>'}).join('');
+function posts(){var r=D.posts.filter(function(p){return cat?p.cat===cat:p.id!=='bai-viet'});
+ $('#posts').innerHTML=r.map(function(p){var full=p.id==='bai-viet';return '<article class="post" id="tin-'+p.id+'"><div class="ph"><img src="'+S.img(p.ph,720,450)+'" alt="'+esc(p.t)+'" loading="lazy" width="720" height="450"></div><div class="meta"><span class="tag'+(p.cat==='Tin tức'?' ink':p.cat==='Góc học tập'?'':' sun')+'">'+p.cat+'</span><span>'+p.date+' · '+p.min+' phút đọc</span></div><h3>'+esc(p.t)+'</h3><p>'+esc(p.d)+'</p>'+
+ (full?'<a class="link" href="../bai-viet/">Đọc bài đầy đủ '+S.ic('ar','s')+'</a>':'<details class="acc" style="border:0"><summary style="padding:8px 0;font-size:.95rem;color:var(--teal)">Đọc tóm tắt<span class="pm" aria-hidden="true"></span></summary><div class="a" style="padding:0 0 8px">'+esc(SUM[p.id]||'')+'</div></details>')+'</article>'}).join('');
+ $$('#cats .chip').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-c')===cat)})}
+$('#cats').addEventListener('click',function(e){var b=e.target.closest('.chip');if(b){cat=b.getAttribute('data-c');posts()}});posts();
+if(location.hash.indexOf('#tin-')===0){var t=$(location.hash);if(t){var d=$('details',t);if(d)d.open=true;setTimeout(function(){t.scrollIntoView({block:'center'})},150)}}
+var reg=S.store.get('events',[]);
+function evs(){var now=Date.now();$('#evs').innerHTML=D.events.map(function(e,i){var t=new Date(e.date+':00+07:00').getTime(),ms=Math.max(0,t-now),d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4),dd=e.when.split(' · ')[0].split('/'),on=reg.indexOf(i)>-1;
+ return '<article class="ev"><div class="d"><b>'+dd[0]+'</b><small>THÁNG '+(+dd[1])+'</small></div><div><h3>'+esc(e.t)+'</h3><p>'+e.when+' · '+S.campus(e.c).n+'</p><p>'+esc(e.d)+'</p></div><div style="display:grid;gap:10px;justify-items:end"><div class="cd" aria-label="Còn '+d+' ngày '+h+' giờ"><span>'+d+'<small>ngày</small></span><span>'+h+'<small>giờ</small></span><span>'+m+'<small>phút</small></span></div><button class="btn '+(on?'btn-p':'btn-o')+' btn-s" type="button" data-ev="'+i+'" aria-pressed="'+on+'">'+(on?'Đã đăng ký':'Đăng ký tham dự')+'</button></div></article>'}).join('')}
+evs();setInterval(evs,60000);
+$('#evs').addEventListener('click',function(e){var b=e.target.closest('[data-ev]');if(!b)return;var i=+b.getAttribute('data-ev'),k=reg.indexOf(i);if(k>-1)reg.splice(k,1);else reg.push(i);S.store.set('events',reg);evs();S.toast(k>-1?'Đã huỷ đăng ký.':'Đã giữ chỗ sự kiện (minh hoạ). Nhắc lịch sẽ hiện trong ứng dụng.')});
+$('#nl').addEventListener('submit',function(e){e.preventDefault();var em=$('#nlE'),c=$('#nlC'),ok1=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim()),ok2=c.checked;
+ em.closest('.field').classList.toggle('bad',!ok1);em.setAttribute('aria-invalid',!ok1);c.closest('.field').classList.toggle('bad',!ok2);
+ if(!ok1){em.focus();return}if(!ok2){c.focus();return}$('#nlOk').textContent='Cảm ơn bạn! Đây là mẫu giao diện nên email chưa được gửi đi đâu.';this.reset()});
+})();
+</script>
+
+<script src="/assets/kt-demo.js?v=1" data-mau="Sunward English"></script>
+</body>
+</html>

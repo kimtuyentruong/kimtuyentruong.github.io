@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lịch khai giảng tiếng Anh tháng 11, 12/2026 | Sunward</title>
+<meta name="description" content="Lịch khai giảng lớp Kids, Teens, IELTS, giao tiếp tại 6 cơ sở TP.HCM, Hà Nội và trực tuyến. Lọc theo cơ sở, khoá, buổi học; xem số chỗ còn lại và giữ chỗ.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0E5E66">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%230E5E66'/%3E%3Cpath d='M8 27a12 12 0 0 1 24 0' fill='%23F2B33D'/%3E%3Cpath d='M6 31h28' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap&subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="lich">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Trang chủ</a> · <a href="../khoa-hoc/">Khoá học</a> · <a href="../kiem-tra-trinh-do/">Kiểm tra trình độ</a> · <a href="../lich-khai-giang/">Lịch khai giảng</a> · <a href="../giao-vien/">Giáo viên</a> · <a href="../co-so/">Cơ sở</a> · <a href="../phu-huynh/">Phụ huynh</a> · <a href="../tin-tuc/">Tin tức</a> · <a href="../dang-ky-hoc-thu/">Đăng ký học thử</a></nav></noscript></div>
+<main id="main">
+<section class="phero">
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Trang chủ</a></li><li aria-current="page">Lịch khai giảng</li></ol>
+  <div class="dhero-grid" style="align-items:center">
+   <div class="intro">
+    <span class="eyebrow">Cập nhật 14/11/2026</span>
+    <h1>Lịch khai giảng: chọn lớp, xem chỗ trống, giữ chỗ&nbsp;trước</h1>
+    <p class="lead">Mỗi lớp có số chỗ giới hạn để giáo viên theo sát từng học viên. Giữ chỗ miễn phí trong 48 giờ, lớp đã giữ được điền sẵn khi đăng ký học thử.</p>
+   </div>
+   <div class="card rv" style="padding:24px">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px"><button class="icon-btn" type="button" id="mPrev" aria-label="Tháng trước"><svg class="ico s" aria-hidden="true"><use href="#i-al"/></svg></button><b id="mT" style="font:600 1.1rem var(--head)">Tháng 11/2026</b><button class="icon-btn" type="button" id="mNext" aria-label="Tháng sau"><svg class="ico s" aria-hidden="true"><use href="#i-ar"/></svg></button></div>
+    <div class="mcal" id="mcal"></div>
+    <p class="muted" style="font-size:.84rem;margin:12px 0 0"><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--teal);margin-right:6px"></span>Ngày có lớp khai giảng · bấm để lọc</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="wrap" style="padding-bottom:clamp(56px,7vw,100px)">
+ <div class="sch">
+  <div>
+   <form class="sch-f" id="sf" onsubmit="return false">
+    <div class="field"><label for="fC">Cơ sở</label><select class="inp" id="fC"><option value="">Tất cả cơ sở</option></select></div>
+    <div class="field"><label for="fK">Khoá học</label><select class="inp" id="fK"><option value="">Tất cả khoá</option><option value="ielts">Tất cả lớp IELTS</option></select></div>
+    <div class="field"><label for="fS">Buổi học</label><select class="inp" id="fS"><option value="">Mọi buổi</option></select></div>
+    <button class="btn btn-o btn-s" type="button" id="fR" style="min-height:50px">Bỏ lọc</button>
+   </form>
+   <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-bottom:14px"><p style="margin:0" aria-live="polite" id="sInfo"></p><label class="check" style="font-size:.9rem"><input type="checkbox" id="fAvail"> Chỉ lớp còn từ 4 chỗ</label></div>
+   <div class="sch-list" id="sl"></div>
+  </div>
+  <aside class="hold" aria-labelledby="hT">
+   <h3 id="hT">Lớp bạn đang giữ chỗ</h3>
+   <p style="margin:0;font-size:.88rem">Giữ chỗ chỉ để minh hoạ, lưu trên trình duyệt này.</p>
+   <ul id="hl"></ul>
+   <a class="btn btn-sun" href="../dang-ky-hoc-thu/" id="hGo">Đăng ký học thử lớp đã chọn</a>
+  </aside>
+ </div>
+</section>
+
+<section class="sec paper">
+ <div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Cách giữ chỗ hoạt động</span><h2 class="rv">Giữ chỗ trước, quyết định sau buổi học&nbsp;thử</h2></div><p class="rv d1">Không cần đóng phí để giữ chỗ. Nếu lớp hết chỗ, tư vấn viên gợi ý lớp cùng cấp ở cơ sở gần nhất.</p></div>
+  <div class="fac">
+   <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-heart"/></svg><b>Giữ tối đa 3 lớp</b><p>So sánh lịch giữa các cơ sở trước khi chọn một lớp.</p></div>
+   <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-clock"/></svg><b>Hiệu lực 48 giờ</b><p>Sau 48 giờ chưa xác nhận, chỗ được mở lại cho học viên khác.</p></div>
+   <div class="rv d2"><svg class="ico l" aria-hidden="true"><use href="#i-bell"/></svg><b>Báo khi có chỗ</b><p>Lớp gần kín? Để lại số điện thoại để được báo khi có học viên đổi lớp.</p></div>
+   <div class="rv d3"><svg class="ico l" aria-hidden="true"><use href="#i-shield"/></svg><b>Đổi lớp trong 2 tuần đầu</b><p>Lịch không hợp, học viên được chuyển lớp cùng cấp miễn phí.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec-s">
+ <div class="wrap">
+  <div class="cta-band rv"><span class="sunarc" aria-hidden="true"></span><div><h2>Chưa biết nên vào lớp&nbsp;nào?</h2><p>Làm bài kiểm tra 10 phút để biết cấp độ, sau đó lọc đúng lớp phù hợp.</p></div><div class="acts"><a class="btn btn-sun" href="../kiem-tra-trinh-do/">Kiểm tra trình độ</a><a class="btn btn-o" href="../co-so/">Xem các cơ sở</a></div></div>
+ </div>
+</section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Nội dung mẫu: tên thương hiệu, học phí, giáo viên, lịch học, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></div>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){var S=window.SW,$=S.$,$$=S.$$,D=S.D,esc=S.esc;
+var fC=$('#fC'),fK=$('#fK'),fS=$('#fS'),fA=$('#fAvail'),day='',holds=S.store.get('holds',[]);
+fC.innerHTML+=D.campus.map(function(c){return '<option value="'+c.id+'">'+c.n+'</option>'}).join('');
+fK.innerHTML+=D.courses.filter(function(c){return c.id!=='kem-1-1'}).map(function(c){return '<option value="'+c.id+'">'+c.n+'</option>'}).join('');
+fS.innerHTML+=D.sessions.map(function(s){return '<option value="'+s[0]+'">'+s[1]+'</option>'}).join('');
+var q=new URLSearchParams(location.search),sv=S.store.get('schF',{});
+fC.value=q.get('coso')||sv.c||'';fK.value=q.get('khoa')||sv.k||'';fS.value=sv.s||'';if(!fK.value)fK.value='';
+var SES={};D.sessions.forEach(function(s){SES[s[0]]=s[1]});
+function list(){
+ var r=D.classes.filter(function(c){return (!fC.value||c.c===fC.value)&&(!fK.value||(fK.value==='ielts'?c.co.indexOf('ielts')===0:c.co===fK.value))&&(!fS.value||c.ses===fS.value)&&(!fA.checked||c.tot-c.taken>=4)&&(!day||c.date===day)});
+ $('#sInfo').innerHTML='<b class="num" style="font-family:var(--head);color:var(--teal)">'+r.length+'</b> lớp phù hợp'+(day?' · ngày '+day+' <button class="link" type="button" id="clrDay" style="border:0;background:none;padding:0;min-height:44px">bỏ chọn ngày</button>':'');
+ $('#sl').innerHTML=r.length?r.map(function(c){var co=S.course(c.co),cp=S.campus(c.c),left=c.tot-c.taken,h=holds.indexOf(c.id)>-1,d=c.date.split('/');
+ return '<article class="cls'+(h?' held':'')+'"><div class="date"><b>'+d[0]+'</b><small>Th&nbsp;'+(+d[1])+'/'+d[2].slice(2)+'</small></div><div><h3>'+co.n+' <span class="muted" style="font:400 .85rem var(--sans)">· '+co.ages+'</span></h3><div class="meta"><span>'+S.ic('pin','s')+cp.n+'</span><span>'+S.ic('clock','s')+c.days+' · '+c.time+'</span><span>'+S.ic('cal','s')+SES[c.ses]+'</span></div></div>'+
+ '<div class="seats'+(left<=3?' low':'')+'"><small><span>'+(left<=3?'Sắp kín':'Còn chỗ')+'</span><b>'+left+'/'+c.tot+'</b></small><div class="bar"><i style="width:'+(c.taken/c.tot*100)+'%"></i></div></div>'+
+ '<div class="btn-wrap"><button class="btn '+(h?'btn-p':'btn-o')+' btn-s" type="button" data-hold="'+c.id+'" aria-pressed="'+h+'">'+(h?S.ic('check','s')+' Đã giữ':'Giữ chỗ')+'</button></div></article>'}).join(''):'<div class="nores"><b style="font:600 1.1rem var(--head)">Chưa có lớp khớp bộ lọc.</b><p style="margin:8px auto 0">Thử chọn cơ sở khác hoặc lớp trực tuyến.</p></div>';
+ S.store.set('schF',{c:fC.value,k:fK.value,s:fS.value});hold();cal()}
+function hold(){$('#hl').innerHTML=holds.length?holds.map(function(id){var c=D.classes.filter(function(x){return x.id===id})[0];if(!c)return '';var co=S.course(c.co);return '<li><span><b>'+co.n+'</b>'+S.campus(c.c).n+' · '+c.date+'<br>'+c.days+' · '+c.time+'</span><button type="button" data-un="'+id+'" aria-label="Bỏ giữ chỗ '+esc(co.n)+'">'+S.ic('trash','s')+'</button></li>'}).join(''):'<li class="empty" style="background:none;padding:0">Chưa giữ lớp nào. Bấm “Giữ chỗ” ở lớp bạn quan tâm.</li>';
+ $('#hGo').setAttribute('aria-disabled',holds.length?'false':'true');if(holds.length)$('#hGo').href='../dang-ky-hoc-thu/?lop='+holds[0]}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-hold],[data-un]');if(b){var id=b.getAttribute('data-hold')||b.getAttribute('data-un'),i=holds.indexOf(id);
+ if(i>-1){holds.splice(i,1);S.toast('Đã bỏ giữ chỗ.')}else if(holds.length>=3){S.toast('Bạn chỉ giữ được tối đa 3 lớp cùng lúc.');return}else{holds.push(id);S.toast('Đã giữ chỗ lớp '+id+' trong 48 giờ (minh hoạ).')}
+ S.store.set('holds',holds);list()}
+ if(e.target.closest('#clrDay')){day='';list()}});
+[fC,fK,fS,fA].forEach(function(el){el.addEventListener('change',function(){day='';list()})});
+$('#fR').addEventListener('click',function(){fC.value=fK.value=fS.value='';fA.checked=false;day='';list()});
+/* lịch tháng */
+var mY=2026,mM=10;
+function cal(){var first=new Date(mY,mM,1),start=(first.getDay()+6)%7,n=new Date(mY,mM+1,0).getDate(),h=['T2','T3','T4','T5','T6','T7','CN'].map(function(d){return '<span class="h">'+d+'</span>'}).join('');
+ for(var i=0;i<start;i++)h+='<span></span>';
+ for(var d=1;d<=n;d++){var ds=('0'+d).slice(-2)+'/'+('0'+(mM+1)).slice(-2)+'/'+mY,ev=D.classes.some(function(c){return c.date===ds}),td=ds==='14/11/2026';
+  h+=ev?'<button type="button" class="evd'+(td?' td':'')+'" data-day="'+ds+'" style="border:0;font:inherit;padding:8px 0;border-radius:8px;background:'+(day===ds?'var(--sun)':'var(--teal)')+';color:'+(day===ds?'var(--teal-900)':'#fff')+';font-weight:600;cursor:pointer" aria-label="Lọc lớp khai giảng ngày '+ds+'">'+d+'</button>':'<span class="'+(td?'td':'')+'">'+d+'</span>'}
+ $('#mcal').innerHTML=h;$('#mT').textContent='Tháng '+(mM+1)+'/'+mY;$('#mPrev').disabled=mY===2026&&mM===10;$('#mNext').disabled=mY===2027&&mM===0}
+$('#mcal').addEventListener('click',function(e){var b=e.target.closest('[data-day]');if(!b)return;var d=b.getAttribute('data-day');day=day===d?'':d;fC.value=fK.value=fS.value='';fA.checked=false;list();$('#sl').scrollIntoView({behavior:'smooth',block:'start'})});
+$('#mPrev').addEventListener('click',function(){mM--;if(mM<0){mM=11;mY--}cal()});
+$('#mNext').addEventListener('click',function(){mM++;if(mM>11){mM=0;mY++}cal()});
+list();
+})();
+</script>
+
+<script src="/assets/kt-demo.js?v=1" data-mau="Sunward English"></script>
+</body>
+</html>
