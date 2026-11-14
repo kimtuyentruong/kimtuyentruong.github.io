@@ -300,3 +300,38 @@
 .quiz .qr .addon{align-self:stretch;border-radius:12px;border:1px solid var(--line);background:rgba(10,7,6,.4)}
 @media (max-width:900px){.quiz{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:600px){.quiz .qz,.quiz .qr{padding:16px}.qz-hd p{font-size:16px}}
+
+/* v14: industry picker is a dropdown with search (replaces the chip slider); homepage chips become one swipe row on phones */
+.indsel{position:relative;display:inline-block;margin:0 0 22px;max-width:100%}
+.indsel summary{list-style:none;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:8px 14px 8px 16px;border-radius:14px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink);font-size:15px;font-weight:600;cursor:pointer;user-select:none;-webkit-user-select:none}
+.indsel summary::-webkit-details-marker{display:none}
+.indsel summary:hover,.indsel[open] summary{border-color:var(--flame)}
+.indsel .ilb{color:var(--muted);font-weight:500}
+.indsel .cur{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.indsel .cur::before,.indsel li a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dot,var(--flame));flex:none}
+.indsel .n{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.indsel .chev{flex:none;width:18px;height:18px;color:var(--muted);fill:none;stroke:currentColor;transition:transform .2s}
+.indsel[open] .chev{transform:rotate(180deg)}
+.indsel .pop{position:absolute;z-index:40;left:0;top:calc(100% + 8px);width:340px;max-width:calc(100vw - 32px);padding:10px;border-radius:16px;border:1px solid var(--line-2);background:#161210;box-shadow:0 18px 44px rgba(0,0,0,.55)}
+.indsel input{width:100%;min-height:44px;padding:9px 12px;border-radius:10px;border:1px solid var(--line-2);background:var(--bg);color:var(--ink);font:500 16px var(--body)}
+.indsel input:focus{outline:2px solid var(--flame);outline-offset:1px}
+.indsel ul{list-style:none;margin:8px 0 0;padding:0;max-height:min(52vh,420px);overflow-y:auto;overscroll-behavior:contain}
+.indsel li a{display:flex;align-items:center;gap:10px;min-height:44px;padding:8px 10px;border-radius:10px;color:var(--ink);font-size:15px;font-weight:600;text-decoration:none}
+.indsel li a span:first-of-type{flex:1;min-width:0}
+.indsel li a:hover{background:rgba(255,255,255,.06)}
+.indsel li a[aria-current="page"]{background:var(--grad);color:#fff}
+.indsel li a[aria-current="page"]::before{background:#fff}
+.indsel li a[aria-current="page"] .n{color:#fff}
+.indsel .none{margin:10px 4px 4px;font-size:14px;color:var(--muted)}
+.indsel .none a{color:var(--flame)}
+@media (max-width:600px){
+  .indsel{display:block}
+  .indsel summary{display:flex;width:100%}
+  .indsel .cur{flex:1;min-width:0}
+  .indsel .pop{width:100%;max-width:none}
+  .pick,.hero .pick{width:100%;max-width:100%;min-width:0}
+  .pick .chips,.hero .pick .chips{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;width:100%;max-width:100%;margin:0;padding:0 0 4px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .pick .chips::-webkit-scrollbar{display:none}
+  .pick .chips a{flex:none;scroll-snap-align:start}
+}
+@media (max-width:600px){.hero .hero-grid > div:first-child{min-width:0;max-width:100%;width:100%}}
