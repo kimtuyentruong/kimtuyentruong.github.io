@@ -524,3 +524,5 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 .lh-done h3{font-size:24px;margin-bottom:8px}
 .lh-done p{color:var(--muted);max-width:44ch;margin:0 auto;line-height:1.65}
 @media (max-width:600px){.lh-form .row #lhSend{flex:1 1 100%}.lh-form .row .ghost{flex:1 1 0;padding-left:12px;padding-right:12px;white-space:nowrap}}
+/* v26: a related-articles grid with a single article keeps a readable card width instead of one squeezed column */
+.kgrid:has(> :only-child){grid-template-columns:minmax(0,560px)}

@@ -317,6 +317,7 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 .tile .k-build{background:rgba(30,34,40,.7);color:#E3E8EF;border:1px solid #E3E8EF73}
 .tile .k-realestate{background:rgba(28,14,54,.7);color:#C9B2FF;border:1px solid #C9B2FF73}
 .tile .k-service{background:rgba(10,40,22,.7);color:#9BE7B4;border:1px solid #9BE7B473}
+.tile .k-law{background:rgba(44,32,14,.7);color:#E2BC8C;border:1px solid #E2BC8C73}
 .tile .k-edu{background:rgba(52,12,12,.7);color:#FF9B95;border:1px solid #FF9B9573}
 .tile .k-hair{background:rgba(30,40,6,.7);color:#C6F05C;border:1px solid #C6F05C73}
 .pf-ind button[data-i]:not([data-i="all"])::before{content:"";display:inline-block;width:8px;height:8px;margin-right:7px;border-radius:50%;flex:none;vertical-align:1px;background:var(--dot)}
@@ -328,6 +329,7 @@ html[lang="en"] .tile.tpl .img::after{content:"View template \2197\FE0E"}
 .pf-ind button[data-i="build"]{--dot:#E3E8EF}
 .pf-ind button[data-i="realestate"]{--dot:#C9B2FF}
 .pf-ind button[data-i="service"]{--dot:#9BE7B4}
+.pf-ind button[data-i="law"]{--dot:#E2BC8C}
 .pf-ind button[data-i="edu"]{--dot:#FF9B95}
 .pf-ind button[data-i="hair"]{--dot:#C6F05C}
 .pf-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;flex-wrap:wrap}

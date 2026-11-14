@@ -106,7 +106,7 @@
   });
   build(); ribBuild();
   /* deep link to an industry filter, e.g. /#bat-dong-san */
-  var pfSlug = { 'bat-dong-san': 'realestate', 'real-estate': 'realestate', 'y-te': 'health', 'healthcare': 'health', 'lam-dep': 'beauty', 'beauty': 'beauty', 'nha-hang': 'food', 'food': 'food', 'khach-san': 'stay', 'hospitality': 'stay', 'ban-le': 'retail', 'retail': 'retail', 'xay-dung': 'build', 'construction': 'build', 'dich-vu': 'service', 'services': 'service', 'giao-duc': 'edu', 'education': 'edu', 'toc-barber': 'hair', 'barber': 'hair', 'hair': 'hair' };
+  var pfSlug = { 'bat-dong-san': 'realestate', 'real-estate': 'realestate', 'y-te': 'health', 'healthcare': 'health', 'lam-dep': 'beauty', 'beauty': 'beauty', 'nha-hang': 'food', 'food': 'food', 'khach-san': 'stay', 'hospitality': 'stay', 'ban-le': 'retail', 'retail': 'retail', 'xay-dung': 'build', 'construction': 'build', 'luat': 'law', 'law': 'law', 'dich-vu': 'service', 'services': 'service', 'giao-duc': 'edu', 'education': 'edu', 'toc-barber': 'hair', 'barber': 'hair', 'hair': 'hair' };
   var pfHash = function (e) {
     var k = pfSlug[decodeURIComponent(location.hash.slice(1)).toLowerCase()];
     var b = k && document.querySelector('.pf-ind button[data-i="' + k + '"]');

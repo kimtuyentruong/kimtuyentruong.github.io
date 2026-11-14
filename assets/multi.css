@@ -1,5 +1,5 @@
 /* Multi-page blocks (11/11/2026): template gallery, industry pages, services, projects, homepage hub */
-:root{--c-health:#7FE0D6;--c-beauty:#FFB3D1;--c-hair:#C6F05C;--c-food:#FFB870;--c-stay:#9CCBFF;--c-retail:#F5D77A;--c-build:#E3E8EF;--c-realestate:#C9B2FF;--c-service:#9BE7B4;--c-edu:#FF9B95}
+:root{--c-health:#7FE0D6;--c-beauty:#FFB3D1;--c-hair:#C6F05C;--c-food:#FFB870;--c-stay:#9CCBFF;--c-retail:#F5D77A;--c-build:#E3E8EF;--c-realestate:#C9B2FF;--c-service:#9BE7B4;--c-edu:#FF9B95;--c-law:#E2BC8C}
 
 /* industry chips (gallery nav + homepage hero picker) */
 .indnav,.pick .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -31,7 +31,7 @@
 .tcard .kind{position:absolute;z-index:2;top:10px;left:10px;font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:999px;background:rgba(10,7,6,.78);color:var(--dot,#fff);border:1px solid currentColor}
 .tcard[data-i="health"] .kind{color:var(--c-health)}.tcard[data-i="beauty"] .kind{color:var(--c-beauty)}.tcard[data-i="hair"] .kind{color:var(--c-hair)}
 .tcard[data-i="food"] .kind{color:var(--c-food)}.tcard[data-i="stay"] .kind{color:var(--c-stay)}.tcard[data-i="retail"] .kind{color:var(--c-retail)}
-.tcard[data-i="build"] .kind{color:var(--c-build)}.tcard[data-i="realestate"] .kind{color:var(--c-realestate)}.tcard[data-i="service"] .kind{color:var(--c-service)}.tcard[data-i="edu"] .kind{color:var(--c-edu)}
+.tcard[data-i="build"] .kind{color:var(--c-build)}.tcard[data-i="realestate"] .kind{color:var(--c-realestate)}.tcard[data-i="service"] .kind{color:var(--c-service)}.tcard[data-i="law"] .kind{color:var(--c-law)}.tcard[data-i="edu"] .kind{color:var(--c-edu)}
 .tcard .peek{position:absolute;right:10px;bottom:10px;font-size:12.5px;font-weight:600;color:#fff;background:rgba(10,7,6,.8);border-radius:999px;padding:6px 11px;opacity:0;transition:opacity .25s}
 @media (hover:hover){.tcard:hover .peek{opacity:1}}
 .tcard .tb{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;flex:1}
