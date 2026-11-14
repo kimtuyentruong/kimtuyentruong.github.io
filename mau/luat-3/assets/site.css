@@ -704,7 +704,7 @@ body.lock .kt-badge{opacity:0;pointer-events:none}
   .price-bar{flex-direction:column;align-items:flex-start}
   .tbl{font-size:.88rem}
   .tbl th,.tbl td{padding:12px}
-  .tbl td:first-child{width:60px}
+  #niceTbl td:first-child{width:60px}
   .tbl-scroll{overflow-x:auto}
   .cta-b .btn{width:100%}
   .art-cover{aspect-ratio:4/3}
