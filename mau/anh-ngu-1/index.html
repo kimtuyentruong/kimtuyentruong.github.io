@@ -189,7 +189,7 @@ function pick(a){for(var i=0;i<MAP.length;i++)if(a>=MAP[i][0]&&a<=MAP[i][1])retu
 function upd(){var a=+r.value;n.textContent=a>=40?'40+':a;u.textContent='tuổi';r.style.setProperty('--p',((a-4)/36*100)+'%');
  var c=pick(a);S.store.set('age',a);if(c.id===last)return;last=c.id;
  var href=c.detail?'chuong-trinh-ielts/':'khoa-hoc/?tuoi='+encodeURIComponent(c.age[c.age.length-1]);
- box.innerHTML='<div class="ph swap"><img src="'+S.img(c.ph,300,380)+'" alt="" width="300" height="380"></div><div class="swap"><span class="tag sun">'+c.ages+' · '+c.lv+'</span><h3>'+c.n+'</h3><p>'+c.d+'</p><a class="link" href="'+href+'">Xem khoá '+c.n+' '+S.ic('ar','s')+'</a></div>'}
+ box.innerHTML='<div class="ph swap"><img src="'+S.img(c.ph,300,380)+'" alt="" width="300" height="380"></div><div class="swap"><span class="tag sun">'+c.ages+' · '+c.lv+'</span><h3>'+c.n+'</h3><p>'+c.d+'</p><'+'a class="link" href="'+href+'">Xem khoá '+c.n+' '+S.ic('ar','s')+'</a></div>'}
 var saved=S.store.get('age');if(saved)r.value=saved;
 r.addEventListener('input',upd);upd();
 var t=S.store.get('test');if(t)$('#tourTest').textContent='Kết quả gần nhất của bạn: '+t.lv+' ('+t.score+'/12 câu). Làm lại để cập nhật.';
@@ -198,5 +198,6 @@ var nx=D.classes[0],co=S.course(nx.co);$('#tourCls').textContent='Lớp gần nh
 })();
 </script>
 
+<script src="/assets/kt-demo.js?v=1" data-mau="Sunward English"></script>
 </body>
 </html>

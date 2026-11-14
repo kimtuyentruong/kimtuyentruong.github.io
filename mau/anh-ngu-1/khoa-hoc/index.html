@@ -106,7 +106,7 @@ function card(c){var fav=favs.indexOf(c.id)>-1;var href=c.detail?'../chuong-trin
  '<div class="bd"><div class="tags"><span class="tag">'+c.ages+'</span>'+c.mode.map(function(m){return '<span class="tag '+(m==='online'?'sun':'')+'">'+MODE[m]+'</span>'}).join('')+'</div>'+
  '<h3>'+esc(c.n)+' <span class="muted" style="font-weight:400;font-size:.9rem">· '+esc(c.sub)+'</span></h3><p>'+esc(c.d)+'</p>'+
  '<dl><dt>Cấp độ</dt><dd>'+c.lv+'</dd><dt>Lịch</dt><dd>'+c.ses+'</dd><dt>Sĩ số</dt><dd>'+c.size+'</dd></dl>'+
- '<div class="ft"><span class="price">'+S.money(c.fee)+(c.unit||'')+'<small>Học phí mẫu'+(c.unit?'':' / cấp')+'</small></span><a class="btn btn-o btn-s" href="'+href+'">'+(c.detail?'Xem lộ&nbsp;trình':'Lịch khai&nbsp;giảng')+'</a></div></div></article>'}
+ '<div class="ft"><span class="price">'+S.money(c.fee)+(c.unit||'')+'<small>Học phí mẫu'+(c.unit?'':' / cấp')+'</small></span><'+'a class="btn btn-o btn-s" href="'+href+'">'+(c.detail?'Xem lộ&nbsp;trình':'Lịch khai&nbsp;giảng')+'</a></div></div></article>'}
 function render(){
  [['#fAge','age'],['#fGoal','goal'],['#fMode','mode']].forEach(function(p){$$('.chip',$(p[0])).forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-v')===st[p[1]])})});
  var r=D.courses.filter(function(c){return (!st.age||c.age.indexOf(st.age)>-1)&&(!st.goal||c.goal.indexOf(st.goal)>-1)&&(!st.mode||c.mode.indexOf(st.mode)>-1)&&(!favOnly||favs.indexOf(c.id)>-1)});

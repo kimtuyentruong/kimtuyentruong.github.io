@@ -99,7 +99,7 @@ var bar=$('#rbar'),art=$('.prose'),links=$$('#toc a'),hs=links.map(function(a){r
 function upd(){var r=art.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight*.6)));bar.style.transform='scaleX('+p+')';var on=-1;hs.forEach(function(h,i){if(h.getBoundingClientRect().top<140)on=i});links.forEach(function(a,i){a.classList.toggle('on',i===on)})}
 addEventListener('scroll',upd,{passive:true});upd();
 $('#copy').addEventListener('click',function(){var u=location.href;if(navigator.clipboard)navigator.clipboard.writeText(u).then(function(){S.toast('Đã sao chép liên kết bài viết.')},function(){S.toast(u)});else S.toast(u)});
-$('#rel').innerHTML=D.posts.filter(function(p){return p.id!=='bai-viet'}).slice(1,4).map(function(p){return '<a class="post" href="../'+p.href+'"><div class="ph"><img src="'+S.img(p.ph,720,450)+'" alt="'+esc(p.t)+'" loading="lazy" width="720" height="450"></div><div class="meta"><span class="tag">'+p.cat+'</span><span>'+p.date+'</span></div><h3>'+esc(p.t)+'</h3><p>'+esc(p.d)+'</p></a>'}).join('');
+$('#rel').innerHTML=D.posts.filter(function(p){return p.id!=='bai-viet'}).slice(1,4).map(function(p){return '<'+'a class="post" href="../'+p.href+'"><div class="ph"><img src="'+S.img(p.ph,720,450)+'" alt="'+esc(p.t)+'" loading="lazy" width="720" height="450"></div><div class="meta"><span class="tag">'+p.cat+'</span><span>'+p.date+'</span></div><h3>'+esc(p.t)+'</h3><p>'+esc(p.d)+'</p></a>'}).join('');
 })();
 </script>
 
