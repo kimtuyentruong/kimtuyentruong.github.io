@@ -606,3 +606,15 @@ svg.zl{stroke:none !important;fill:none}
 /* v28: logo = portrait in an orange ring (replaces the "KT" square) */
 .nav .me .mark{width:36px;height:36px;border-radius:50%;background:url(logo-kt.png?v=2) center/cover no-repeat;color:transparent;font-size:0;box-shadow:0 6px 18px -8px rgba(255,74,28,.8)}
 @media (max-width:400px){.nav .me .mark{width:32px;height:32px}}
+
+/* v30: phone menu, the "Dịch vụ" children read as one nested group (the pattern most site menus use): a thin guide line on the left, white medium-weight labels, quiet chevrons; no dashes, boxes or orange text */
+.mnav li:has(+ li.s){border-bottom:0}
+.mnav li.s{margin-left:42px;border-left:1.5px solid rgba(255,138,61,.5);border-top:0;border-bottom:0;padding:0}
+.mnav li.s a{min-height:44px;padding:6px 4px 6px 18px;gap:0;font:600 17px/1.25 var(--body);color:var(--ink)}
+.mnav li.s a::before{display:none}
+.mnav li.s a::after{width:7px;height:7px;border-width:1.5px;border-color:var(--muted);opacity:.7}
+.mnav li.s a b{font-weight:600;color:inherit}
+.mnav li.s2 a{min-height:38px;padding-left:34px;font-size:15px;font-weight:500;color:var(--muted)}
+.mnav li.s a[aria-current="page"],.mnav li.s a[aria-current="page"] b{color:var(--flame)}
+.mnav li.s-last{margin-bottom:14px;padding-bottom:0}
+.mnav li.s-last + li{border-top:1px solid var(--line)}

@@ -335,3 +335,17 @@
   .pick .chips a{flex:none;scroll-snap-align:start}
 }
 @media (max-width:600px){.hero .hero-grid > div:first-child{min-width:0;max-width:100%;width:100%}}
+/* v15: homepage chips on phones run as two slow rows in opposite directions (site.js v37); without JS or with reduced motion they stay one swipe row */
+@media (max-width:600px){
+  .pick .chips.mqc,.hero .pick .chips.mqc{display:block;overflow:hidden;padding:0;scroll-snap-type:none}
+  .pick .chips.mqc .chips-row{position:relative;overflow:hidden}
+  .pick .chips.mqc .chips-row + .chips-row{margin-top:8px}
+  .pick .chips.mqc .mq-in{gap:8px}
+}
+/* v15: industry picker sits right above the template grid and stands out (Tuyền: too faint on desktop) */
+.indsel summary{min-height:56px;padding:10px 14px 10px 18px;font-size:16px;border:1.5px solid rgba(255,138,61,.7);background:linear-gradient(135deg,rgba(255,138,61,.2),rgba(255,74,28,.07)),var(--surface);box-shadow:0 10px 28px rgba(255,90,36,.16)}
+.indsel summary:hover,.indsel[open] summary{border-color:#FFA25A;box-shadow:0 12px 32px rgba(255,90,36,.26)}
+.indsel .ilb{color:#FFB98A;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.indsel summary .n{color:var(--ink);background:rgba(255,255,255,.1);border-radius:999px;padding:2px 9px}
+.indsel .chev{width:30px;height:30px;padding:6px;border-radius:50%;background:var(--grad);color:#fff}
+.ind-grid .indsel,.mw .indsel{margin:0 0 26px}
