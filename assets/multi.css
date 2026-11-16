@@ -349,3 +349,35 @@
 .indsel summary .n{color:var(--ink);background:rgba(255,255,255,.1);border-radius:999px;padding:2px 9px}
 .indsel .chev{width:30px;height:30px;padding:6px;border-radius:50%;background:var(--grad);color:#fff}
 .ind-grid .indsel,.mw .indsel{margin:0 0 26px}
+/* v16: SEO & AIO service page, fuller content (pain, 90-day roadmap, monthly deliverables, timing, promises, FAQ) */
+.seox-pain,.seox-road,.seox-get,.seox-when,.seox-prom{margin-top:76px}
+.seox-pain h2,.seox-road h2,.seox-get h2,.seox-when h2,.seox-prom h2{font-size:clamp(26px,2.6vw,36px);line-height:1.2;margin:8px 0 22px;max-width:24ch}
+.seox-pain ul,.seox-get ul,.seox-prom ul{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.seox-pain ul{grid-template-columns:repeat(3,minmax(0,1fr))}
+.seox-get ul,.seox-prom ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+.seox-pain li,.seox-get li,.seox-prom li{padding:22px 22px 24px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}
+.seox-pain li{border-top:3px solid rgba(255,138,61,.7)}
+.seox-pain b,.seox-get b,.seox-prom b,.seox-road b{display:block;font-family:var(--display);font-size:18px;line-height:1.3;color:var(--ink);margin-bottom:8px}
+.seox-pain span,.seox-get span,.seox-prom span,.seox-road span{display:block;font-size:15px;line-height:1.6;color:var(--muted)}
+.seox-prom li{position:relative;padding-left:58px}
+.seox-prom li::before{content:"";position:absolute;left:22px;top:24px;width:22px;height:22px;border-radius:50%;background:var(--grad) center/12px no-repeat;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E"),var(--grad)}
+.seox-road ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;counter-reset:r}
+.seox-road li{position:relative;padding:22px 20px 24px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(255,138,61,.08),transparent 60%),var(--surface)}
+.seox-road em,.seox-when em{display:inline-block;font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#FFB070;margin-bottom:10px}
+.seox-when ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--surface)}
+.seox-when li{padding:22px 22px 24px;border-left:1px solid var(--line)}
+.seox-when li:first-child{border-left:0}
+.seox-when li span{display:block;font-size:16px;line-height:1.55;color:var(--ink)}
+.seox-when .note{margin:18px 0 12px;font-size:14px;color:var(--muted)}
+.seox-res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.seox-res a{display:block;padding:18px 20px;border-left:3px solid var(--flame);background:rgba(255,255,255,.03);border-radius:0 14px 14px 0;text-decoration:none}
+.seox-res b{display:block;font-family:var(--display);font-size:24px;color:var(--ink);margin-bottom:4px}
+.seox-res span{display:block;font-size:14px;line-height:1.5;color:var(--muted)}
+.seox-faq{margin-top:76px}
+@media (max-width:1023px){.seox-road ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .seox-pain ul,.seox-get ul,.seox-prom ul,.seox-res,.seox-when ol,.seox-road ol{grid-template-columns:minmax(0,1fr)}
+  .seox-when li{border-left:0;border-top:1px solid var(--line)}
+  .seox-when li:first-child{border-top:0}
+  .seox-pain,.seox-road,.seox-get,.seox-when,.seox-prom,.seox-faq{margin-top:56px}
+}
