@@ -589,3 +589,19 @@
 .tgrid:not(.feat)>.tcard:only-child h3{font-size:26px}.tgrid:not(.feat)>.tcard:only-child p{font-size:16px}
 .tgrid:not(.feat)>.tcard:only-child .ta{margin-top:18px}}
 @media (min-width:600px) and (max-width:899px){.tgrid:not(.feat)>.tcard:only-child{max-width:560px;width:100%;margin:0 auto}}
+/* v24: price picker beside the industry picker (Tuyền 16/11/2026) */
+.tsel{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px;margin:0 0 22px}
+.tsel .indsel{margin:0}
+.tcard.pf-off{display:none}
+.prsel .pop{width:300px}
+.prsel .gl{margin:6px 8px 6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#FFB98A}
+.prsel .pop ul{list-style:none;margin:0 0 6px;padding:0;max-height:none}
+.prsel .pr-s{border-top:1px solid var(--line);padding-top:6px!important}
+.prsel li button{display:flex;align-items:center;gap:10px;width:100%;min-height:44px;padding:8px 10px;border:0;border-radius:10px;background:none;color:var(--ink);font:600 15px var(--body);text-align:left;cursor:pointer}
+.prsel li button span:first-child{flex:1}
+.prsel li button:hover{background:rgba(255,255,255,.06)}
+.prsel li button[aria-pressed="true"]{background:var(--grad);color:#fff}
+.prsel li button[aria-pressed="true"] .n{color:#fff}
+.prsel summary .cur::before{display:none}
+.prsel.on summary .cur{color:#FFB070}
+@media (max-width:600px){.tsel{flex-direction:column;align-items:stretch;gap:10px}.tsel .indsel{width:100%}}
