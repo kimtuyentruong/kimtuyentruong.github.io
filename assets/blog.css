@@ -531,3 +531,22 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 .ind-ans h2,.ind-steps h2,.mw-cta h2,.mw .more h2{line-height:1.25}
 /* any h1/h2 without its own line-height falls back to a heading value instead of the body 1.6 (zero specificity: explicit rules still win) */
 :where(h1,h2){line-height:1.25}
+
+/* v28: contact form, order box for a chosen template (price, options, delivery, total) */
+.lh-order{margin:0 0 16px;padding:16px 16px 14px;border:1px solid rgba(255,138,61,.45);border-radius:16px;background:rgba(255,138,61,.07)}
+.lh-order legend{padding:0 6px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#FFB070}
+.lh-order .pick{margin:0 0 12px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px}
+.lh-order .pick b{font-size:17px;color:var(--ink)}.lh-order .pick span{font-weight:700;color:#FFB070}
+.lh-order .ck{margin-bottom:10px}.lh-order .ck em{font-style:normal;font-weight:700;color:#FFB070;margin-left:4px;white-space:nowrap}
+.lh-order .via{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:4px 0 10px;font-size:14px;color:var(--muted)}
+.lh-order .via label{display:inline-flex;align-items:center;gap:6px;margin:0;font-weight:600;color:var(--ink)}
+.lh-order .via input{accent-color:var(--ember);width:18px;height:18px}
+.lh-order .note{margin:0 0 10px;font-size:13.5px;color:var(--muted)}
+.lh-order .total{margin:0;padding-top:10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;font-size:14px;color:var(--muted)}
+.lh-order .total b{font-family:var(--display);font-size:22px;color:var(--ink)}
+/* article images never wider than the text column (16/11: plain markdown images showed at 760px on phones) */
+.prose img,.art-fig img{max-width:100%;height:auto}
+.lh-order .em[hidden]{display:none}
+.lh-order .via{column-gap:20px}
+.lh-order .via>span{flex-basis:100%;margin-bottom:-2px}
+.lh-order .via label{min-height:32px}
