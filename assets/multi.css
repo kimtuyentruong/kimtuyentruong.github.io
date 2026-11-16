@@ -463,3 +463,44 @@
   .seox-road ol::after,.seox-road li::before,.ill-search .res,.ill-search .you,.ill-search .chat,.ill-report .kpi,.ill-report .tip,.ill-report .line,.ill-grow .line{transition:none !important;animation:none !important}
   .seox-road ol::after{transform:none}.seox-road li::before{transform:none}.ill-search .res{transform:none}.ill-search .you,.ill-search .chat,.ill-report .kpi,.ill-report .tip{opacity:1;transform:none}.ill-report .line,.ill-grow .line{stroke-dashoffset:0}
 }
+/* v18: SEO page "Mình làm gì cho bạn" as a comparison table with tick / cross (SVG, never emoji glyphs) */
+.seox-cmp{margin-top:96px}
+.seox-cmp h2{font-size:clamp(28px,3vw,42px);line-height:1.15;margin:10px 0 12px}
+.seox-cmp .lead{max-width:62ch;color:var(--muted);font-size:16.5px;line-height:1.65;margin:0 0 28px}
+.sxcmp{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed}
+.sxcmp col,.sxcmp th,.sxcmp td{box-sizing:border-box}
+.sxcmp thead th{padding:0 12px 16px;font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-align:center;vertical-align:bottom}
+.sxcmp thead th:first-child{width:56%;text-align:left}
+.sxcmp thead th.me{color:#FFB070}
+.sxcmp tbody th{text-align:left;padding:18px 18px 18px 0;border-top:1px solid var(--line);font-weight:400}
+.sxcmp tbody th b{display:block;font-family:var(--display);font-size:18px;line-height:1.3;color:var(--ink);margin-bottom:4px}
+.sxcmp tbody th small{display:block;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.sxcmp td{text-align:center;vertical-align:middle;border-top:1px solid var(--line);padding:14px 8px}
+.sxcmp .me{background:rgba(255,138,61,.07);border-left:1px solid rgba(255,138,61,.3);border-right:1px solid rgba(255,138,61,.3)}
+.sxcmp thead th.me{border-top:1px solid rgba(255,138,61,.3);border-radius:18px 18px 0 0;padding-top:16px}
+.sxcmp tbody tr:last-child td.me{border-bottom:1px solid rgba(255,138,61,.3);border-radius:0 0 18px 18px}
+.sxcmp .ck{display:inline-block;vertical-align:middle}
+.sxcmp .ck.yes circle{fill:#FF6A2B}
+.sxcmp .ck.yes path{fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.sxcmp .ck.no circle{fill:none;stroke:var(--line-2);stroke-width:1.5}
+.sxcmp .ck.no path{fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;opacity:.8}
+.sxcmp .sr,.sxcmp .sm{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sxcmp .sm{position:static;width:auto;height:auto;clip:auto;display:none}
+.sxcmp tbody tr{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.seox-cmp.in .sxcmp tbody tr{opacity:1;transform:none}
+.seox-cmp.in .sxcmp tbody tr:nth-child(2){transition-delay:.08s}.seox-cmp.in .sxcmp tbody tr:nth-child(3){transition-delay:.16s}.seox-cmp.in .sxcmp tbody tr:nth-child(4){transition-delay:.24s}
+.seox-cmp.in .sxcmp tbody tr:nth-child(5){transition-delay:.32s}.seox-cmp.in .sxcmp tbody tr:nth-child(6){transition-delay:.4s}.seox-cmp.in .sxcmp tbody tr:nth-child(7){transition-delay:.48s}
+.sxcmp td.me .ck{transform:scale(.4);opacity:0;transition:transform .45s cubic-bezier(.3,1.6,.5,1),opacity .3s}
+.seox-cmp.in .sxcmp td.me .ck{transform:none;opacity:1;transition-delay:.5s}
+@media (max-width:760px){
+  .seox-cmp{margin-top:64px}
+  .sxcmp thead th:first-child{width:auto}
+  .sxcmp thead th{width:72px;padding:0 4px 12px;font-size:11px;letter-spacing:.02em;line-height:1.25;white-space:normal}
+  .sxcmp thead th.me{padding-top:12px}
+  .sxcmp .lg{display:none}.sxcmp .sm{display:inline}
+  .sxcmp tbody th{padding:16px 10px 16px 0}
+  .sxcmp tbody th b{font-size:16px}
+  .sxcmp tbody th small{font-size:13.5px}
+  .sxcmp td{padding:12px 4px}
+}
+@media (prefers-reduced-motion:reduce){.sxcmp tbody tr,.sxcmp td.me .ck{opacity:1;transform:none;transition:none}}
