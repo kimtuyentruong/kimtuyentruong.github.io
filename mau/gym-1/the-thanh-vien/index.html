@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bảng giá thẻ tập gym, lớp nhóm, hồ bơi | IRONVERT</title>
+<meta name="description" content="So sánh ba gói thẻ Base, Core, Elite; tính giá theo kỳ hạn 1, 3, 6, 12 tháng kèm dịch vụ thêm. Chính sách bảo lưu, chuyển nhượng và câu hỏi thường gặp.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="the-thanh-vien">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Trang chủ</a> · <a href="../bo-mon/">Bộ môn</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../lich-lop/">Lịch lớp</a> · <a href="../the-thanh-vien/">Thẻ thành viên</a> · <a href="../huan-luyen-vien/">Huấn luyện viên</a> · <a href="../cong-cu/">Công cụ</a> · <a href="../co-so/">Cơ sở</a> · <a href="../tin-tuc/">Tin tức</a> · <a href="../tap-thu/">Đăng ký tập thử</a></nav></noscript></div>
+<main id="main">
+<section class="phero">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">Base Core Elite</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Trang chủ</a></li><li aria-current="page">Thẻ thành viên</li></ol>
+  <div class="intro" style="max-width:860px">
+   <span class="eyebrow">Thẻ thành viên</span>
+   <h1>Trả cho đúng thứ bạn sẽ&nbsp;dùng</h1>
+   <p class="lead">Ba gói, giá ghi rõ từng tháng. Chọn kỳ hạn để xem giá sau ưu đãi; muốn thêm PT hay tủ đồ riêng thì cộng ở bảng tính bên dưới. Toàn bộ giá trên trang là giá&nbsp;mẫu.</p>
+  </div>
+  <div class="terms" id="terms" role="group" aria-label="Chọn kỳ hạn" style="margin-top:32px;animation:up .7s .3s var(--ease) both"></div>
+ </div>
+</section>
+
+<section class="sec tight" aria-labelledby="h-plans">
+ <div class="wrap">
+  <h2 class="vh" id="h-plans">Các gói thẻ</h2>
+  <div class="plans" id="plans"></div>
+  <p class="note" style="margin-top:16px">Giá mẫu, đã gồm VAT. Phí kích hoạt thẻ 0đ trong mẫu này. Ưu đãi kỳ hạn tính trên giá tháng của từng gói.</p>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-calc" id="tinh-gia">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Bảng tính</span><h2 class="h-l" id="h-calc">Ghép gói của riêng&nbsp;bạn</h2></div><p>Lựa chọn được lưu lại để dùng khi đăng ký tập thử. Không gửi đi đâu.</p></div>
+  <div class="calc rv">
+   <div class="calc-l">
+    <div class="field"><label for="cPlan">Gói thẻ</label><select class="inp" id="cPlan"></select></div>
+    <div class="field"><label for="cTerm">Kỳ hạn</label><select class="inp" id="cTerm"></select></div>
+    <div class="field" style="margin-bottom:8px"><span class="flabel">Dịch vụ thêm</span></div>
+    <div id="cAdd"></div>
+    <div class="field" style="margin-top:16px"><label for="cPeople">Số người đăng ký cùng lúc</label><select class="inp" id="cPeople"><option value="1">1 người</option><option value="2">2 người (giảm thêm 5% mỗi thẻ)</option><option value="3">3 người trở lên (giảm thêm 8% mỗi thẻ)</option></select></div>
+   </div>
+   <div class="calc-r" aria-live="polite">
+    <span class="eyebrow" style="margin:0">Tạm tính</span>
+    <div id="sumLines"></div>
+    <div class="sum-total"><span>Tổng thanh toán</span><b id="sumTotal">0đ</b></div>
+    <p class="muted small" id="sumMonth" style="margin:0"></p>
+    <span class="save" id="sumSave" hidden></span>
+    <a class="btn btn-lime" href="../tap-thu/" id="cGo" style="margin-top:auto">Tập thử trước khi mua <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a>
+    <p class="note" style="margin:0">Số tiền minh hoạ cách tính. Giá thực tế do câu lạc bộ công bố tại thời điểm đăng ký.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-cmp">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">So sánh</span><h2 class="h-l" id="h-cmp">Từng quyền lợi, đặt cạnh&nbsp;nhau</h2></div></div>
+  <div class="tbl-wrap rv"><table class="tbl cmp"><thead><tr><th scope="col">Quyền lợi</th><th scope="col" style="text-align:center">Base</th><th scope="col" style="text-align:center">Core</th><th scope="col" style="text-align:center">Elite</th></tr></thead><tbody id="cmp"></tbody></table></div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-pol" id="chinh-sach">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Chính sách thẻ</span><h2 class="h-l" id="h-pol">Viết rõ trước, đỡ khó xử&nbsp;sau</h2></div><p>Chính sách mẫu để minh hoạ cách trình bày. Bản thật cần câu lạc bộ và luật sư soát lại.</p></div>
+  <div class="policy">
+   <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-shield"/></svg><h3>Bảo lưu thẻ</h3><p>Thẻ từ 6 tháng được bảo lưu tối đa 60 ngày mỗi năm khi ốm, công tác hoặc mang thai, kèm giấy tờ liên quan. Báo trước tối thiểu 1 ngày.</p></div>
+   <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-users"/></svg><h3>Chuyển nhượng</h3><p>Được chuyển thẻ cho người khác một lần, phí 300.000đ (mẫu). Người nhận cần làm buổi định hướng trước khi tập.</p></div>
+   <div class="rv d2"><svg class="ico l" aria-hidden="true"><use href="#i-card"/></svg><h3>Hoàn phí</h3><p>Huỷ trong 7 ngày đầu và chưa dùng quá 2 buổi: hoàn 100% sau khi trừ buổi đã tập theo giá vé lẻ. Sau 7 ngày: áp dụng bảo lưu hoặc chuyển nhượng.</p></div>
+   <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-clock"/></svg><h3>Giờ sử dụng</h3><p>Thẻ dùng trong toàn bộ giờ mở cửa. Không có thẻ giờ thấp điểm trong mẫu này.</p></div>
+   <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-heart"/></svg><h3>Sức khoẻ</h3><p>Hội viên tự khai tình trạng sức khoẻ khi đăng ký. Người có bệnh lý nên có ý kiến bác sĩ trước khi tập cường độ mạnh.</p></div>
+   <div class="rv d2"><svg class="ico l" aria-hidden="true"><use href="#i-lock"/></svg><h3>Dữ liệu cá nhân</h3><p>Thông tin đăng ký chỉ dùng để quản lý thẻ và liên hệ lịch tập. Hội viên có thể yêu cầu xem, sửa hoặc xoá.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-faq">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Hỏi đáp</span><h2 class="h-l" id="h-faq">Câu hỏi thường gặp về&nbsp;thẻ</h2><p class="lead" style="margin-top:20px">Chưa chắc chọn gói nào? Tập thử một buổi, huấn luyện viên sẽ gợi ý theo lịch và mục tiêu của bạn.</p></div>
+  <div class="faq">
+   <details><summary>Có trả góp được không?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Thẻ 6 và 12 tháng có thể trả góp qua thẻ tín dụng của một số ngân hàng (mẫu). Kỳ hạn và phí do ngân hàng quy định.</div></details>
+   <details><summary>Đổi từ gói Base lên Core giữa chừng thế nào?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Trả phần chênh lệch theo số ngày còn lại của thẻ. Không phải mua thẻ mới.</div></details>
+   <details><summary>Gói Elite có dẫn bạn đi cùng được không?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Mỗi tháng 1 lượt khách đi cùng, đăng ký trước ở quầy. Khách cần khai thông tin sức khoẻ như hội viên.</div></details>
+   <details><summary>Buổi PT trong gói Elite có cộng dồn?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Buổi PT dùng trong tháng, không cộng dồn sang tháng sau. Có thể đổi sang 2 buổi Reformer nhóm nhỏ.</div></details>
+   <details><summary>Học sinh, sinh viên có ưu đãi không?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Trong mẫu này, sinh viên có thẻ còn hạn được giảm 10% gói Base và Core. Không cộng với ưu đãi đăng ký nhóm.</div></details>
+  </div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-rel">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Xem tiếp</span><h2 class="h-m" id="h-rel">Liên quan</h2></div></div>
+  <div class="rel">
+   <a class="hov" href="../co-so/"><div class="ph"><img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=800&h=500&q=80" alt="Hồ bơi trong nhà nhiều làn" loading="lazy"></div><div class="tx"><b>Cơ sở &amp; tiện ích</b><span>Hồ bơi, xông hơi, tủ đồ ở từng cơ sở.</span></div></a>
+   <a class="hov" href="../huan-luyen-vien/"><div class="ph"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&h=500&q=80" alt="Huấn luyện viên kèm học viên" loading="lazy"></div><div class="tx"><b>Chọn PT</b><span>Hồ sơ và lịch dạy của 10 huấn luyện viên.</span></div></a>
+   <a class="hov" href="../cong-cu/"><div class="ph"><img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=800&h=500&q=80" alt="Học viên tập tạ đòn" loading="lazy"></div><div class="tx"><b>Công cụ</b><span>BMI, năng lượng mỗi ngày và quiz chọn bộ môn.</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Tập thử rồi hãy&nbsp;chọn</h2><p>Một buổi lớp nhóm và 20 phút đo chỉ số. Không cần mua thẻ trước.</p></div><div class="btns"><a class="btn" href="../tap-thu/">Đăng ký tập thử <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a></div></div></section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Nội dung mẫu: tên thương hiệu, giá, nhân sự, chứng chỉ, lịch lớp, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></div>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+var sv=V.store.get('plan',{})||{};
+var st={plan:sv.plan||'core',term:sv.term!=null?sv.term:1,add:sv.add||[],people:sv.people||1};
+$('#terms').innerHTML=D.terms.map(function(t,i){return '<button type="button" data-i="'+i+'" aria-pressed="'+(i===st.term)+'">'+t.l+(t.off?'<small>−'+Math.round(t.off*100)+'%</small>':'')+'</button>'}).join('');
+$('#cPlan').innerHTML=D.plans.map(function(p){return '<option value="'+p.id+'">Gói '+p.n+' · '+V.money(p.m)+'/tháng</option>'}).join('');
+$('#cTerm').innerHTML=D.terms.map(function(t,i){return '<option value="'+i+'">'+t.l+(t.off?' (giảm '+Math.round(t.off*100)+'%)':'')+'</option>'}).join('');
+$('#cAdd').innerHTML=D.addons.map(function(a){return '<label class="addon check"><input type="checkbox" value="'+a.id+'"><span><b>'+a.n+'</b><span>'+a.d+'</span></span><span class="p">'+V.money(a.p)+(a.once?'':'/th')+'</span></label>'}).join('');
+var allF=['Khu tạ, máy tập, cardio','Số cơ sở dùng được','Lớp nhóm (võ, yoga, cycling, HIIT…)','Pilates Reformer nhóm nhỏ','Hồ bơi, xông hơi, bể ngâm lạnh','Buổi PT 1 kèm 1 mỗi tháng','Giữ chỗ lớp trước','Đo InBody','Tủ đồ riêng, khăn tắm','Khách đi cùng'];
+var M=[['y','y','y'],['1','3','3'],['n','y','y'],['Mua thêm','Mua thêm','4 buổi/tháng'],['n','n','y'],['n','n','4 buổi'],['Tại quầy','7 ngày','14 ngày'],['1 lần','2 lần/quý','Mỗi tháng'],['n','n','y'],['n','n','1 lượt/tháng']];
+function cell(v){return v==='y'?'<svg class="ico" role="img" aria-label="Có"><use href="#i-check"/></svg>':(v==='n'?'<span class="no" aria-label="Không">–</span>':v)}
+$('#cmp').innerHTML=allF.map(function(f,i){return '<tr><th scope="row">'+f+'</th>'+M[i].map(function(v){return '<td>'+cell(v)+'</td>'}).join('')+'</tr>'}).join('')+'<tr><th scope="row"><b style="color:var(--ink)">Giá mỗi tháng (mẫu)</b></th>'+D.plans.map(function(p){return '<td class="num" style="color:var(--lime);font-weight:600">'+V.money(p.m)+'</td>'}).join('')+'</tr>';
+function anim(el,to){var from=+(el.getAttribute('data-v')||0);el.setAttribute('data-v',to);if(matchMedia('(prefers-reduced-motion:reduce)').matches||from===to){el.textContent=V.money(to);return}var t0=null;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/600),e=1-Math.pow(1-p,3);el.textContent=V.money(Math.round((from+(to-from)*e)/1000)*1000);if(p<1)requestAnimationFrame(f);else el.textContent=V.money(to)}requestAnimationFrame(f)}
+function renderPlans(){var t=D.terms[st.term];
+ $('#plans').innerHTML=D.plans.map(function(p){var mm=Math.round(p.m*(1-t.off)/1000)*1000,tot=mm*t.m;
+  return '<article class="plan'+(p.hot?' hot':'')+(p.id===st.plan?' sel':'')+'" id="goi-'+p.id+'"><h3>'+p.n+'</h3><p class="for">'+p.for+'</p><div class="pr"><b data-v="'+mm+'">'+V.money(mm)+'</b><span>/tháng</span></div><p class="was">'+(t.off?'<s>'+V.money(p.m)+'</s> · trả một lần '+V.money(tot)+' cho '+t.l:'Trả theo tháng, không ràng buộc')+'</p><ul>'+p.f.map(function(f){return '<li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>'+V.esc(f)+'</li>'}).join('')+p.x.map(function(f){return '<li class="x"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>'+V.esc(f)+'</li>'}).join('')+'</ul><button type="button" class="btn '+(p.id===st.plan?'btn-lime':'btn-ghost')+'" data-p="'+p.id+'" aria-pressed="'+(p.id===st.plan)+'">'+(p.id===st.plan?'Đang chọn gói '+p.n:'Chọn gói '+p.n)+'</button></article>'}).join('');V.glue($('#plans'))}
+function calc(){var p=D.plans.filter(function(x){return x.id===st.plan})[0],t=D.terms[st.term];
+ var base=p.m*t.m,offT=Math.round(p.m*t.off)*t.m,ppl=st.people,offP=ppl===2?.05:(ppl>=3?.08:0);
+ var one=base-offT,grp=Math.round(one*offP);var lines=[['Gói '+p.n+' × '+t.l,V.money(base)]];
+ if(offT)lines.push(['Ưu đãi kỳ hạn −'+Math.round(t.off*100)+'%','−'+V.money(offT)]);
+ if(grp)lines.push(['Đăng ký nhóm −'+Math.round(offP*100)+'%','−'+V.money(grp)]);
+ var add=0;st.add.forEach(function(id){var a=D.addons.filter(function(x){return x.id===id})[0];if(!a)return;var v=a.once?a.p:a.p*t.m;add+=v;lines.push([a.n+(a.once?'':' × '+t.m+' tháng'),V.money(v)])});
+ var per=one-grp+add,total=per*ppl;
+ if(ppl>1)lines.push(['Số thẻ','× '+ppl]);
+ $('#sumLines').innerHTML=lines.map(function(l){return '<div class="sum-line"><span>'+l[0]+'</span><b>'+l[1]+'</b></div>'}).join('');
+ anim($('#sumTotal'),total);
+ $('#sumMonth').textContent='Tương đương '+V.money(Math.round(per/t.m/1000)*1000)+' mỗi người mỗi tháng.';
+ var save=(offT+grp)*ppl;$('#sumSave').hidden=!save;$('#sumSave').textContent='Tiết kiệm '+V.money(save)+' so với trả theo tháng';
+ $('#cGo').href='../tap-thu/?goi='+p.id;
+ V.store.set('plan',{plan:st.plan,term:st.term,add:st.add,people:st.people})}
+function sync(){$('#cPlan').value=st.plan;$('#cTerm').value=st.term;$$('#cAdd input').forEach(function(i){i.checked=st.add.indexOf(i.value)>-1});$('#cPeople').value=String(Math.min(3,st.people));$$('#terms button').forEach(function(b){b.setAttribute('aria-pressed',+b.getAttribute('data-i')===st.term)});renderPlans();calc()}
+$('#terms').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;st.term=+b.getAttribute('data-i');sync()});
+$('#plans').addEventListener('click',function(e){var b=e.target.closest('button[data-p]');if(!b)return;st.plan=b.getAttribute('data-p');sync();V.toast('Đã chọn gói '+st.plan.charAt(0).toUpperCase()+st.plan.slice(1)+'. Xem bảng tính bên dưới.')});
+$('#cPlan').addEventListener('change',function(){st.plan=this.value;sync()});
+$('#cTerm').addEventListener('change',function(){st.term=+this.value;sync()});
+$('#cPeople').addEventListener('change',function(){st.people=+this.value;calc()});
+$('#cAdd').addEventListener('change',function(){st.add=$$('#cAdd input').filter(function(i){return i.checked}).map(function(i){return i.value});calc()});
+sync();
+if(location.hash.indexOf('#goi-')===0){var t=document.getElementById(location.hash.slice(1));if(t){st.plan=location.hash.slice(5);sync();setTimeout(function(){document.getElementById(location.hash.slice(1)).scrollIntoView({block:'center'})},250)}}
+V.reveal();
+})();
+</script>
+<script src="/assets/kt-demo.js?v=2" data-mau="IRONVERT Athletic Club" data-gia="6000000" data-loai="multi"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>11 bộ môn: Gym, Võ, Yoga, Pilates, Bơi | IRONVERT</title>
+<meta name="description" content="Gym, Kickboxing, Muay Thái, Boxing, Yoga, Pilates, HIIT, Cycling, Functional, bơi và PT 1 kèm 1. Lọc bộ môn theo nhóm, cường độ và cơ sở có lớp.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="bo-mon">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Trang chủ</a> · <a href="../bo-mon/">Bộ môn</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../lich-lop/">Lịch lớp</a> · <a href="../the-thanh-vien/">Thẻ thành viên</a> · <a href="../huan-luyen-vien/">Huấn luyện viên</a> · <a href="../cong-cu/">Công cụ</a> · <a href="../co-so/">Cơ sở</a> · <a href="../tin-tuc/">Tin tức</a> · <a href="../tap-thu/">Đăng ký tập thử</a></nav></noscript></div>
+<main id="main">
+<section class="phero">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">11 môn</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Trang chủ</a></li><li aria-current="page">Bộ môn</li></ol>
+  <div class="phero-row">
+   <div class="intro">
+    <span class="eyebrow">Bộ môn</span>
+    <h1>Từ khu tạ đến sàn đài, chọn nhịp tập của&nbsp;bạn</h1>
+    <p class="lead">Mười một bộ môn chia thành sáu nhóm. Mỗi bộ môn có lớp cho người mới, ghi rõ cường độ và thời lượng để bạn biết mình đang bước vào&nbsp;đâu.</p>
+   </div>
+   <div class="statrow intro">
+    <div><b data-count="11">11</b><span>bộ môn</span></div>
+    <div><b data-count="6">6</b><span>nhóm tập</span></div>
+    <div><b id="nSess">80</b><span>lớp mỗi tuần</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec tight" aria-labelledby="h-loc">
+ <div class="wrap">
+  <h2 class="vh" id="h-loc">Lọc bộ môn</h2>
+  <div class="fbar" role="search">
+   <div class="fg"><span class="lbl" id="lg">Nhóm</span><div class="chips" id="fGroup" role="group" aria-labelledby="lg"></div></div>
+   <div class="fg"><span class="lbl" id="li">Cường độ</span><div class="chips" id="fInt" role="group" aria-labelledby="li"><button class="chip" type="button" data-v="" aria-pressed="true">Tất cả</button><button class="chip" type="button" data-v="nhe" aria-pressed="false">Nhẹ</button><button class="chip" type="button" data-v="vua" aria-pressed="false">Vừa</button><button class="chip" type="button" data-v="manh" aria-pressed="false">Mạnh</button></div></div>
+   <div class="fg" style="min-width:200px"><label class="lbl" for="fLoc">Cơ sở</label><select class="inp" id="fLoc"><option value="">Cả 3 cơ sở</option></select></div>
+   <div class="fg" style="flex:1;min-width:200px"><label class="lbl" for="fQ">Tìm bộ môn</label><input class="inp" id="fQ" type="search" placeholder="Ví dụ: võ, giãn cơ, bơi"></div>
+  </div>
+  <p class="count" aria-live="polite" style="margin:0 0 20px"><b id="nRes">11</b> bộ môn phù hợp <button type="button" class="lnk" id="reset" style="background:none;border:0;cursor:pointer;margin-left:12px">Xoá lọc</button></p>
+  <div class="disc-grid" id="grid"></div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-mx">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Bảng tra nhanh</span><h2 class="h-l" id="h-mx">Bộ môn nào có ở cơ sở&nbsp;nào</h2></div><p>Cầu Giấy chưa có hồ bơi. Muay Thái chỉ mở ở Bến Thành và Cầu Giấy, nơi có sàn đài và phòng võ&nbsp;rộng.</p></div>
+  <div class="tbl-wrap rv"><table class="tbl matrix"><thead><tr><th scope="col">Bộ môn</th><th scope="col" style="text-align:center">Bến Thành</th><th scope="col" style="text-align:center">An Khánh</th><th scope="col" style="text-align:center">Cầu Giấy</th><th scope="col" style="text-align:center">Lớp/tuần</th></tr></thead><tbody id="mx"></tbody></table></div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-path">
+ <div class="wrap split">
+  <div class="ph rv" style="aspect-ratio:4/3;border-radius:var(--r2)"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1200&q=80" alt="Huấn luyện viên chỉnh tư thế chống đẩy cho học viên" loading="lazy" width="1200" height="900"></div>
+  <div class="rv d1">
+   <span class="eyebrow">Gợi ý cho người mới</span>
+   <h2 class="h-l" id="h-path">Bốn tuần đầu nên tập&nbsp;gì</h2>
+   <ol class="pain-list" style="margin-top:16px">
+    <li><div><h3>Tuần 1–2: nền tảng</h3><p>Hai buổi Gym có giáo án người mới, một buổi Yoga hoặc Pilates để giãn cơ.</p></div></li>
+    <li><div><h3>Tuần 3–4: thêm một môn&nbsp;nhóm</h3><p>Chọn Kickboxing cấp 1, Cycling hoặc Functional. Giữ tổng 3–4 buổi mỗi tuần.</p></div></li>
+   </ol>
+   <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px"><a class="btn btn-lime" href="../cong-cu/#quiz">Làm quiz chọn môn <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a><a class="btn btn-ghost" href="../huan-luyen-vien/">Hỏi huấn luyện viên</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-faq">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Hỏi đáp</span><h2 class="h-l" id="h-faq">Chọn bộ môn thế nào cho&nbsp;hợp</h2><div class="health" style="margin-top:24px"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><span>Cường độ trên trang chỉ để tham khảo. Nếu có bệnh lý hoặc chấn thương cũ, hãy hỏi bác sĩ trước khi chọn bộ môn cường độ&nbsp;mạnh.</span></div></div>
+  <div class="faq">
+   <details><summary>Một tuần nên tập mấy bộ môn?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Người mới nên giữ 2 bộ môn trong tháng đầu: một môn sức mạnh hoặc võ, một môn giãn cơ như Yoga, Pilates. Sau đó thêm dần theo sức.</div></details>
+   <details><summary>Cường độ "Mạnh" nghĩa là gì?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Nhịp tim lên cao trong phần lớn buổi tập, nghỉ ngắn giữa hiệp. Huấn luyện viên vẫn đưa phương án nhẹ hơn cho từng động tác.</div></details>
+   <details><summary>Lớp Reformer có tính thêm phí?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Pilates thảm nằm trong gói Core. Reformer nhóm nhỏ dùng gói buổi riêng; gói Elite đã có 4 buổi mỗi tháng (giá mẫu, xem trang Thẻ thành viên).</div></details>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-rel">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Xem tiếp</span><h2 class="h-m" id="h-rel">Liên quan</h2></div></div>
+  <div class="rel">
+   <a class="hov" href="../kickboxing/"><div class="ph"><img src="https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=800&h=500&q=80" alt="Lớp Kickboxing tập với đích đỡ" loading="lazy"></div><div class="tx"><b>Kickboxing</b><span>Lộ trình 3 cấp và một buổi tập 60 phút diễn ra thế nào.</span></div></a>
+   <a class="hov" href="../lich-lop/"><div class="ph"><img src="https://images.unsplash.com/photo-1520877880798-5ee004e3f11e?auto=format&fit=crop&w=800&h=500&q=80" alt="Lớp đạp xe trong nhà" loading="lazy"></div><div class="tx"><b>Lịch lớp tuần</b><span>Lọc theo bộ môn, cơ sở, khung giờ và giữ chỗ.</span></div></a>
+   <a class="hov" href="../huan-luyen-vien/"><div class="ph"><img src="https://images.unsplash.com/photo-1571388208497-71bedc66e932?auto=format&fit=crop&w=800&h=500&q=80" alt="Huấn luyện viên ngồi nghỉ ở khu máy tập" loading="lazy"></div><div class="tx"><b>Huấn luyện viên</b><span>Ai dạy bộ môn nào, ở cơ sở nào.</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Thử một môn mới tuần&nbsp;này</h2><p>Buổi tập thử gồm một lớp nhóm tuỳ chọn và 20 phút đo chỉ số cơ thể.</p></div><div class="btns"><a class="btn" href="../tap-thu/">Đăng ký tập thử <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a></div></div></section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Nội dung mẫu: tên thương hiệu, giá, nhân sự, chứng chỉ, lịch lớp, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></div>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+var st={g:'',i:'',l:'',q:''};
+var ig={nhe:[1,2],vua:[3],manh:[4,5]};
+$('#fGroup').innerHTML='<button class="chip" type="button" data-v="" aria-pressed="true">Tất cả</button>'+Object.keys(D.groups).map(function(k){return '<button class="chip" type="button" data-v="'+k+'" aria-pressed="false">'+D.groups[k]+'</button>'}).join('');
+$('#fLoc').innerHTML+=D.locs.map(function(l){return '<option value="'+l.id+'">'+l.s+'</option>'}).join('');
+$('#nSess').textContent=D.sessions.length;
+function cnt(id){return D.sessions.filter(function(s){return s.disc===id}).length}
+function intBar(n){var h='<span class="int" aria-label="Cường độ '+n+' trên 5">';for(var i=1;i<=5;i++)h+='<i'+(i<=n?' class="on"':'')+'></i>';return h+'</span>'}
+function card(d,big){var href=d.id==='kickboxing'?'../kickboxing/':'../lich-lop/?mon='+d.id;
+ return '<article class="dcard hov'+(big?' big':'')+'" id="'+d.id+'"><div class="ph"><img src="'+V.img(d.ph,big?1200:800,big?900:600)+'" alt="'+V.esc(d.n)+' tại IRONVERT" loading="lazy" style="object-position:'+d.pos+'"><span class="tag solid g">'+D.groups[d.g]+'</span></div><div class="tx"><h3>'+V.esc(d.n)+'</h3><p>'+V.esc(d.d)+'</p>'+
+ '<div class="meta"><span>'+intBar(d.int)+'</span><span><svg class="ico s" aria-hidden="true"><use href="#i-clock"/></svg>'+d.dur+'</span><span><svg class="ico s" aria-hidden="true"><use href="#i-pin"/></svg>'+d.locs.length+' cơ sở</span>'+(cnt(d.id)?'<span><svg class="ico s" aria-hidden="true"><use href="#i-cal"/></svg>'+cnt(d.id)+' lớp/tuần</span>':'')+'</div>'+
+ '<div style="display:flex;flex-wrap:wrap;gap:8px"><'+'a class="btn btn-s '+(d.id==='kickboxing'?'btn-lime':'btn-ghost')+'" href="'+href+'">'+(d.id==='kickboxing'?'Xem chi tiết bộ môn':(cnt(d.id)?'Xem lịch '+V.esc(d.n):'Đặt lịch với HLV'))+'</a></div></div></article>'}
+function render(){var q=V.fold(st.q.trim());
+ var r=D.disc.filter(function(d){return (!st.g||d.g===st.g)&&(!st.i||ig[st.i].indexOf(d.int)>-1)&&(!st.l||d.locs.indexOf(st.l)>-1)&&(!q||V.fold(d.n+' '+d.d+' '+d.k).indexOf(q)>-1)});
+ var none=!st.g&&!st.i&&!st.l&&!q;
+ $('#nRes').textContent=r.length;
+ $('#grid').innerHTML=r.length?r.map(function(d,i){return card(d,none&&i===1)}).join(''):'<div class="empty" style="grid-column:1/-1">Chưa có bộ môn khớp bộ lọc. <button class="lnk" type="button" onclick="document.getElementById(\'reset\').click()" style="background:none;border:0;cursor:pointer">Xoá lọc</button></div>';
+ V.glue($('#grid'))}
+function bindChips(box,key){box.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;st[key]=b.getAttribute('data-v');$$('.chip',box).forEach(function(x){x.setAttribute('aria-pressed',x===b)});render()})}
+bindChips($('#fGroup'),'g');bindChips($('#fInt'),'i');
+$('#fLoc').addEventListener('change',function(){st.l=this.value;render()});
+$('#fQ').addEventListener('input',function(){st.q=this.value;render()});
+$('#reset').addEventListener('click',function(){st={g:'',i:'',l:'',q:''};$('#fLoc').value='';$('#fQ').value='';$$('.chips').forEach(function(c){$$('.chip',c).forEach(function(x,i){x.setAttribute('aria-pressed',i===0)})});render()});
+render();
+$('#mx').innerHTML=D.disc.map(function(d){return '<tr><th scope="row"><a href="#'+d.id+'" style="color:var(--ink);text-decoration:none">'+V.esc(d.n)+'</a></th>'+D.locs.map(function(l){return '<td>'+(d.locs.indexOf(l.id)>-1?'<span class="dot" role="img" aria-label="Có"></span>':'<span class="no" aria-label="Không có">–</span>')+'</td>'}).join('')+'<td class="num">'+(cnt(d.id)||'Theo hẹn')+'</td></tr>'}).join('');
+if(location.hash){var t=document.getElementById(location.hash.slice(1));if(t){setTimeout(function(){t.scrollIntoView({block:'center'});t.style.borderColor='#B8F23A'},250)}}
+V.reveal();
+})();
+</script>
+<script src="/assets/kt-demo.js?v=2" data-mau="IRONVERT Athletic Club" data-gia="6000000" data-loai="multi"></script>
+</body>
+</html>
