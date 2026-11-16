@@ -349,11 +349,31 @@
   if (mau || ng || goi || dv) { var h = f.querySelector('h2'); if (h) h.textContent = mau ? 'Nhận báo giá theo mẫu ' + mau : 'Gửi yêu cầu báo giá'; }
   if (mau) {
     if (f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf('Website Theo Mẫu') === 0) f.goi.value = o.value || o.text; });
-    var box = document.createElement('div'); box.className = 'lh-pick';
-    var b = document.createElement('b'); b.textContent = 'Mẫu bạn chọn: ' + mau; box.appendChild(b);
-    box.insertAdjacentHTML('beforeend', '<span>Website Theo Mẫu <strong>5.000.000đ</strong> · xong trong 2–3 ngày khi có đủ thông tin. Đã gồm hosting, tên miền năm đầu, SEO, AIO.</span>' +
-      '<span class="lk"><a href="/mau-website/">Xem mẫu khác</a><a href="/dich-vu/thiet-ke-website/#bang-gia">So sánh 6 gói</a></span>');
-    var h2 = f.querySelector('h2'); if (h2) h2.insertAdjacentElement('afterend', box);
+    var gia = parseInt(q.get('gia'), 10) || 0, multi = q.get('loai') === 'multi', o = document.getElementById('lhOrder');
+    var fmt = function (n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + 'đ'; };
+    if (o && gia) {
+      /* template order (v39, Tuyền 16/11/2026): price + options (content entry, install on hosting) + delivery channel, live total */
+      var ndp = multi ? 1500000 : 800000, em = o.querySelector('.em');
+      o.hidden = false; document.getElementById('oName').textContent = mau; document.getElementById('oBase').textContent = fmt(gia) + (multi ? ' · mẫu nhiều trang' : ' · mẫu one-page');
+      document.getElementById('oNd').textContent = '+' + fmt(ndp);
+      var upd = function () {
+        var nd = f.opt_nd.checked ? ndp : 0, host = f.opt_host.checked ? 300000 : 0, via = (f.querySelector('input[name="via"]:checked') || {}).value || 'Zalo';
+        em.hidden = via !== 'Email'; f.email.required = via === 'Email';
+        document.getElementById('oTotal').textContent = fmt(gia + nd + host);
+        f.don.value = mau + ' (' + fmt(gia) + ')' + (nd ? ' + nhập nội dung ' + fmt(nd) : '') + (host ? ' + cài hosting, tên miền 300.000đ' : '') +
+          ' = ' + fmt(gia + nd + host) + '; nhận source code qua ' + via + (via === 'Email' && f.email.value ? ' (' + f.email.value.trim() + ')' : '');
+      };
+      o.addEventListener('change', upd); o.addEventListener('input', upd); upd();
+      f.addEventListener('submit', function (e) { if (f.email.required && !f.email.value.trim()) { e.preventDefault(); e.stopImmediatePropagation(); f.email.focus(); } }, true);
+      var h0 = f.querySelector('h2'); if (h0) h0.textContent = 'Chọn mẫu ' + mau;
+      if (f.nd && f.nd.value.indexOf('Mình thích mẫu') === 0) f.nd.value = '';
+    } else {
+      var box = document.createElement('div'); box.className = 'lh-pick';
+      var b = document.createElement('b'); b.textContent = 'Mẫu bạn chọn: ' + mau; box.appendChild(b);
+      box.insertAdjacentHTML('beforeend', '<span>Website Theo Mẫu <strong>chỉ từ 2.000.000đ</strong>: nhận source code và hướng dẫn cài, có thể thêm nhập nội dung hoặc cài lên hosting.</span>' +
+        '<span class="lk"><a href="/mau-website/">Xem mẫu khác</a><a href="/dich-vu/thiet-ke-website/#bang-gia">So sánh các gói</a></span>');
+      var h2 = f.querySelector('h2'); if (h2) h2.insertAdjacentElement('afterend', box);
+    }
   }
 })();
 

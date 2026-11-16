@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=12">
 <link rel="stylesheet" href="/assets/theme.css?v=30">
-<link rel="stylesheet" href="/assets/blog.css?v=27">
+<link rel="stylesheet" href="/assets/blog.css?v=28">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ContactPage", "@id": "https://kimtuyentruong.github.io/lien-he/", "name": "Liên hệ Kim Tuyen Truong", "inLanguage": "vi", "url": "https://kimtuyentruong.github.io/lien-he/", "about": {"@id": "https://kimtuyentruong.github.io/#person"}}, {"@type": "Person", "@id": "https://kimtuyentruong.github.io/#person", "name": "Kim Tuyen Truong", "email": "mailto:kimtuyentb97@gmail.com", "telephone": "+84901432113", "contactPoint": [{"@type": "ContactPoint", "contactType": "customer service", "telephone": "+84901432113", "email": "kimtuyentb97@gmail.com", "availableLanguage": ["vi", "en"], "areaServed": ["VN", "US"]}], "sameAs": ["https://www.linkedin.com/in/tbkimt/", "https://zalo.me/0901432113", "https://t.me/kimtuyen21297"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Tư vấn có mất phí không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Bạn nhắn cho mình ngành nghề, khu vực và website bạn muốn, mình tư vấn gói phù hợp và gửi báo giá miễn phí."}}, {"@type": "Question", "name": "Mình ở tỉnh khác thì làm việc thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Mọi việc trao đổi online qua Zalo, Telegram, email hoặc Google Meet. Mình gửi link xem trước để bạn góp ý trước khi ra mắt."}}, {"@type": "Question", "name": "Làm một website mất bao lâu?", "acceptedAnswer": {"@type": "Answer", "text": "Website Theo Mẫu khoảng 2–3 ngày, Landing Page khoảng 7–10 ngày, Website Cơ Bản khoảng 1–2 tuần, Website Doanh Nghiệp khoảng 2–4 tuần, Website Bán Hàng khoảng 2–4 tuần, tính từ khi nhận đủ thông tin, nội dung, logo và hình ảnh."}}, {"@type": "Question", "name": "Thanh toán như thế nào?", "acceptedAnswer": {"@type": "Answer", "text": "Thanh toán 3 đợt: 50% trước khi bắt đầu làm, 30% khi website làm xong và bạn duyệt, 20% còn lại khi bàn giao toàn bộ website, tài khoản và hướng dẫn."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://kimtuyentruong.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Liên hệ"}]}]}</script>
 </head>
 <body class="sub">
@@ -58,7 +58,17 @@
     <label>Tên của bạn<input name="ten" required autocomplete="name"></label>
     <label>Số điện thoại / Zalo<input name="sdt" required inputmode="tel" autocomplete="tel"></label>
     <label>Ngành nghề<input name="nganh" placeholder="Vd: tiệm nail, nhà hàng, bất động sản"></label>
-    <label>Gói quan tâm<select name="goi"><option>Chưa chắc, cần tư vấn</option><option>Landing Page (3.500.000đ)</option><option>Website Theo Mẫu (5.000.000đ)</option><option>Website Cơ Bản (9.500.000đ)</option><option>Website Doanh Nghiệp (18.500.000đ)</option><option>Website Bán Hàng (22.500.000đ)</option><option>Dự Án Đặc Thù (liên hệ)</option><option>SEO &amp; AIO Khởi Đầu (10.500.000đ/tháng)</option><option>SEO &amp; AIO Tăng Trưởng (25.000.000đ/tháng)</option><option>SEO &amp; AIO Doanh Nghiệp Lớn (45.000.000đ/tháng)</option><option>Thuê vị trí Website &amp; SEO</option><option>Thuê vị trí Digital Marketing Trọn Gói</option></select></label>
+    <label>Gói quan tâm<select name="goi"><option>Chưa chắc, cần tư vấn</option><option>Landing Page (3.500.000đ)</option><option>Website Theo Mẫu (từ 2.000.000đ)</option><option>Website Cơ Bản (9.500.000đ)</option><option>Website Doanh Nghiệp (18.500.000đ)</option><option>Website Bán Hàng (22.500.000đ)</option><option>Dự Án Đặc Thù (liên hệ)</option><option>SEO &amp; AIO Khởi Đầu (10.500.000đ/tháng)</option><option>SEO &amp; AIO Tăng Trưởng (25.000.000đ/tháng)</option><option>SEO &amp; AIO Doanh Nghiệp Lớn (45.000.000đ/tháng)</option><option>Thuê vị trí Website &amp; SEO</option><option>Thuê vị trí Digital Marketing Trọn Gói</option></select></label>
+    <fieldset class="lh-order" id="lhOrder" hidden><legend>Mẫu bạn chọn</legend>
+      <p class="pick"><b id="oName"></b><span id="oBase"></span></p>
+      <label class="ck"><input type="checkbox" name="opt_nd"> Cần hỗ trợ nhập nội dung <em id="oNd"></em></label>
+      <label class="ck"><input type="checkbox" name="opt_host"> Cài lên hosting và tên miền của bạn <em>+300.000đ</em></label>
+      <p class="via"><span>Nhận source code qua</span><label><input type="radio" name="via" value="Zalo" checked> Zalo</label><label><input type="radio" name="via" value="Email"> Email</label></p>
+      <label class="em" hidden>Email nhận source code<input name="email" type="email" autocomplete="email"></label>
+      <p class="note">Không chọn thêm: mình gửi source code và hướng dẫn cài qua kênh bạn chọn.</p>
+      <p class="total">Tổng tạm tính <b id="oTotal"></b></p>
+      <input type="hidden" name="don">
+    </fieldset>
     <label>Bạn cần website làm được gì?<textarea name="nd" rows="4"></textarea></label>
     <label class="ck"><input type="checkbox" name="ok" required> Mình đồng ý cho Kim Tuyen Truong dùng thông tin trên để liên hệ tư vấn. Thông tin không chia sẻ cho bên thứ ba, bạn có thể yêu cầu xoá bất cứ lúc&nbsp;nào.</label>
     <p class="err" id="lhErr" hidden>Bạn điền tên, số điện thoại và tích ô đồng ý giúp mình nhé.</p>
@@ -74,14 +84,14 @@
 </main>
 <script>
 (function(){var f=document.getElementById('lhForm'),er=document.getElementById('lhErr'),ok=document.getElementById('lhOk');
-var msg=function(){var d=new FormData(f);return 'Chào Tuyền, mình là '+d.get('ten')+' ('+d.get('sdt')+').\nNgành: '+(d.get('nganh')||'-')+'\nGói quan tâm: '+d.get('goi')+'\nNội dung: '+(d.get('nd')||'-')};
+var msg=function(){var d=new FormData(f);return 'Chào Tuyền, mình là '+d.get('ten')+' ('+d.get('sdt')+').\nNgành: '+(d.get('nganh')||'-')+'\nGói quan tâm: '+d.get('goi')+'\nNội dung: '+(d.get('nd')||'-')+(d.get('don')?'\nĐơn mẫu: '+d.get('don'):'')};
 var valid=function(){var v=f.ten.value.trim()&&f.sdt.value.trim()&&f.ok.checked;er.hidden=!!v;return v};
 var mail=function(){if(!valid())return;var su=encodeURIComponent('Yêu cầu báo giá website – '+f.ten.value.trim()),bd=encodeURIComponent(msg());if(window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches)window.open('https://mail.google.com/mail/?view=cm&fs=1&to=kimtuyentb97@gmail.com&su='+su+'&body='+bd,'_blank','noopener');else location.href='mailto:kimtuyentb97@gmail.com?subject='+su+'&body='+bd};
 document.getElementById('lhMail').addEventListener('click',mail);
 var bt=document.getElementById('lhSend'),fail=document.getElementById('lhFail'),done=document.getElementById('lhDone'),busy=false;
 f.addEventListener('submit',function(e){e.preventDefault();if(busy||!valid())return;if(!window.fetch||!window.URLSearchParams){mail();return}
 busy=true;fail.hidden=true;ok.hidden=true;bt.disabled=true;bt.textContent='Đang gửi…';
-var d=new FormData(f),b=new URLSearchParams();['ten','sdt','nganh','goi','nd','web'].forEach(function(k){b.append(k,d.get(k)||'')});b.append('trang',location.pathname);
+var d=new FormData(f),b=new URLSearchParams();['ten','sdt','nganh','goi','nd','web'].forEach(function(k){b.append(k,d.get(k)||'')});b.set('nd',(d.get('nd')||'')+(d.get('don')?'\n\nĐơn mẫu: '+d.get('don'):''));b.append('trang',location.pathname);
 var bad=function(){busy=false;bt.disabled=false;bt.textContent='Gửi lại';fail.hidden=false};
 fetch('https://script.google.com/macros/s/AKfycbw91B0KXb8Fd0Lm8k8WZiXAsA-ci-aMvqo1N4WXmSFgav3PoRFFsO6IRA1FoRgwuFC0/exec',{method:'POST',body:b}).then(function(r){return r.json()}).then(function(j){if(!j||!j.ok){bad();return}f.classList.add('sent');done.hidden=false;done.focus();if(done.scrollIntoView)done.scrollIntoView({block:'center'})}).catch(bad)});
 document.getElementById('lhZalo').addEventListener('click',function(){if(!valid())return;var t=msg(),go=function(){ok.hidden=false;window.open('https://zalo.me/0901432113','_blank','noopener')};if(navigator.clipboard)navigator.clipboard.writeText(t).then(go,go);else go()});
@@ -94,6 +104,6 @@ document.getElementById('lhZalo').addEventListener('click',function(){if(!valid(
   </div>
 </footer>
 <div class="dock"><a href="https://zalo.me/0901432113" target="_blank" rel="noopener" aria-label="Zalo"><svg class="zl" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" stroke="none" d="M7.5 3h9a6 6 0 016 6v2.5a6 6 0 01-6 6H9.2l-4.1 3.1c-.5.4-1.2 0-1.1-.6l.5-3A6 6 0 011.5 11.5V9a6 6 0 016-6z"/><text x="12" y="12.9" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="7" fill="#E4471B" stroke="none" letter-spacing="-.2">Zalo</text></svg><span>Zalo</span></a><a href="https://t.me/kimtuyen21297" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.2 3.6L2.9 10.7c-.9.4-.9 1.6.1 1.9l4.6 1.5 1.8 5.5c.3.9 1.4 1.1 2 .4l2.6-2.7 4.7 3.5c.7.5 1.7.1 1.9-.8l3-14.9c.2-1-.7-1.8-1.6-1.5z"/><path d="M7.6 14.1L18.6 6.8l-8.3 9.3"/></svg><span>Telegram</span></a></div>
-<script src="/assets/site.js?v=38"></script>
+<script src="/assets/site.js?v=39"></script>
 </body>
 </html>

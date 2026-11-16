@@ -571,3 +571,7 @@
   .sxh-chip{display:none}
   .sxh-radar{inset:10% 0 30% 0}
 }
+
+/* v21: template price badge on cards (top-right, the industry tag stays top-left) */
+.tcard .shot .gia{position:absolute;z-index:2;top:12px;right:12px;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:800;color:#fff;background:linear-gradient(135deg,#FF8A3D,#E8441E);box-shadow:0 6px 18px -6px rgba(232,68,30,.7);white-space:nowrap}
+.tcard .ta .use{font-weight:700}
