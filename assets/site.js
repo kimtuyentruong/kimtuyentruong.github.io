@@ -349,14 +349,15 @@
   if (mau || ng || goi || dv) { var h = f.querySelector('h2'); if (h) h.textContent = mau ? 'Nhận báo giá theo mẫu ' + mau : 'Gửi yêu cầu báo giá'; }
   if (mau) {
     if (f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf('Website Theo Mẫu') === 0) f.goi.value = o.value || o.text; });
-    var gia = parseInt(q.get('gia'), 10) || 0, multi = q.get('loai') === 'multi', o = document.getElementById('lhOrder');
+    var gia = parseInt(q.get('gia'), 10) || 0, loai = q.get('loai') || 'one', multi = loai !== 'one', o = document.getElementById('lhOrder');
     var fmt = function (n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + 'đ'; };
     if (o && gia) {
       /* template order (v39, Tuyền 16/11/2026): price + options (content entry, install on hosting) + delivery channel, live total */
-      var ndp = multi ? 1500000 : 800000, em = o.querySelector('.em');
+      /* content entry by template size (Tuyền 16/11/2026): one-page 700.000đ, multi-page 1.500.000đ, 10+ pages 2.000.000đ */
+      var ndp = loai === 'big' ? 2000000 : multi ? 1500000 : 700000, em = o.querySelector('.em');
       o.hidden = false; document.getElementById('oName').textContent = mau;
       /* arriving from "Chọn mẫu này": jump to the top of the form (v41, Tuyền 16/11/2026: on phones the form was far below) */
-      setTimeout(function () { var y = f.getBoundingClientRect().top + window.pageYOffset - 84; window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' }); }, 250); document.getElementById('oBase').textContent = fmt(gia) + (multi ? ' · mẫu nhiều trang' : ' · mẫu one-page');
+      setTimeout(function () { var y = f.getBoundingClientRect().top + window.pageYOffset - 84; window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' }); }, 250); document.getElementById('oBase').textContent = fmt(gia) + (loai === 'big' ? ' · mẫu từ 10 trang' : multi ? ' · mẫu nhiều trang' : ' · mẫu one-page');
       document.getElementById('oNd').textContent = '+' + fmt(ndp);
       var upd = function () {
         var nd = f.opt_nd.checked ? ndp : 0, host = f.opt_host.checked ? 300000 : 0, via = (f.querySelector('input[name="via"]:checked') || {}).value || 'Zalo';
