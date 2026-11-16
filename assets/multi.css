@@ -504,3 +504,5 @@
   .sxcmp td{padding:12px 4px}
 }
 @media (prefers-reduced-motion:reduce){.sxcmp tbody tr,.sxcmp td.me .ck{opacity:1;transform:none;transition:none}}
+.sxcmp .sm{white-space:normal}
+@media (max-width:760px){.sxcmp thead th{padding-left:6px;padding-right:6px}}
