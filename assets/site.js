@@ -450,3 +450,41 @@
   var lw = innerWidth; addEventListener('resize', function () { if (innerWidth !== lw) { lw = innerWidth; check(); if (on) place(); } });
   check();
 })();
+
+/* v40: template price filter + sort next to the industry picker (Tuyền 16/11/2026). Cards carry data-gia; client sites have none
+   (hidden while a price range is on, kept last when sorting). Uses its own class so it never fights the type filter's [hidden]. */
+(function () {
+  var d = document.getElementById('prSel'), g = document.getElementById('tgrid');
+  if (!d || !g) return;
+  var cards = Array.prototype.slice.call(g.querySelectorAll('.tcard')), cur = d.querySelector('.cur'), cnt = document.getElementById('tcount');
+  cards.forEach(function (c, i) { c.setAttribute('data-o', i); });
+  var R = 'all', S = 0;
+  function apply() {
+    var lo = 0, hi = Infinity, n = 0;
+    if (R !== 'all') { var p = R.split('-'); lo = +p[0]; hi = +p[1]; }
+    cards.forEach(function (c) {
+      var v = +c.getAttribute('data-gia') || 0, off = R !== 'all' && !(v && v >= lo && v <= hi);
+      c.classList.toggle('pf-off', off); if (!off && !c.hidden) n++;
+    });
+    var arr = cards.slice().sort(function (a, b) {
+      if (!S) return a.getAttribute('data-o') - b.getAttribute('data-o');
+      var x = +a.getAttribute('data-gia') || 0, y = +b.getAttribute('data-gia') || 0;
+      if (!x !== !y) return x ? -1 : 1;
+      return (x - y) * S || a.getAttribute('data-o') - b.getAttribute('data-o');
+    });
+    arr.forEach(function (c) { g.appendChild(c); });
+    if (cnt) cnt.textContent = n;
+    var rb = d.querySelector('.pr-r [aria-pressed="true"] span'), sb = d.querySelector('.pr-s [aria-pressed="true"] span');
+    cur.textContent = (R === 'all' ? cur.getAttribute('data-all') : rb.textContent) + (S ? ' · ' + (S > 0 ? 'thấp đến cao' : 'cao đến thấp') : '');
+    d.classList.toggle('on', R !== 'all' || !!S);
+  }
+  d.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var grp = b.closest('ul');
+    grp.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+    if (b.hasAttribute('data-r')) R = b.getAttribute('data-r'); else S = +b.getAttribute('data-s');
+    apply(); d.open = false;
+  });
+  document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
+})();
