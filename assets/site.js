@@ -354,7 +354,9 @@
     if (o && gia) {
       /* template order (v39, Tuyền 16/11/2026): price + options (content entry, install on hosting) + delivery channel, live total */
       var ndp = multi ? 1500000 : 800000, em = o.querySelector('.em');
-      o.hidden = false; document.getElementById('oName').textContent = mau; document.getElementById('oBase').textContent = fmt(gia) + (multi ? ' · mẫu nhiều trang' : ' · mẫu one-page');
+      o.hidden = false; document.getElementById('oName').textContent = mau;
+      /* arriving from "Chọn mẫu này": jump to the top of the form (v41, Tuyền 16/11/2026: on phones the form was far below) */
+      setTimeout(function () { var y = f.getBoundingClientRect().top + window.pageYOffset - 84; window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' }); }, 250); document.getElementById('oBase').textContent = fmt(gia) + (multi ? ' · mẫu nhiều trang' : ' · mẫu one-page');
       document.getElementById('oNd').textContent = '+' + fmt(ndp);
       var upd = function () {
         var nd = f.opt_nd.checked ? ndp : 0, host = f.opt_host.checked ? 300000 : 0, via = (f.querySelector('input[name="via"]:checked') || {}).value || 'Zalo';
