@@ -581,3 +581,11 @@
 .tcard .ta a.use{flex:1;justify-content:center}
 @media (max-width:767px){.tgrid.feat .tcard .ta{flex-wrap:wrap}.tgrid.feat .tcard .tprice{padding:7px 11px}.tgrid.feat .tcard .tprice b{font-size:16px}}
 .tcard .ta .use{font-weight:700}
+/* v23: a group with only one template (e.g. Gym & Pilates at launch): one wide horizontal card instead of a lone card in a 3-column grid (16/11/2026, live_audit squeezed) */
+.tgrid:not(.feat):has(>.tcard:only-child){grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.tgrid:not(.feat)>.tcard:only-child{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.tgrid:not(.feat)>.tcard:only-child .shot{aspect-ratio:16/11;height:100%}
+.tgrid:not(.feat)>.tcard:only-child .tb{padding:32px 34px;justify-content:center;gap:10px}
+.tgrid:not(.feat)>.tcard:only-child h3{font-size:26px}.tgrid:not(.feat)>.tcard:only-child p{font-size:16px}
+.tgrid:not(.feat)>.tcard:only-child .ta{margin-top:18px}}
+@media (min-width:600px) and (max-width:899px){.tgrid:not(.feat)>.tcard:only-child{max-width:560px;width:100%;margin:0 auto}}
