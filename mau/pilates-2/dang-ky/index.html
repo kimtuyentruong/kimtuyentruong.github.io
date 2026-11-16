@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Đăng ký buổi tập đầu: pilates, yoga bầu, sau sinh | Gieo</title>
+<meta name="description" content="Đăng ký buổi đầu ở Gieo trong 4 bước: chọn lớp, điền thông tin, khai sức khoẻ, xác nhận. Mẹ bầu và sau sinh cần bác sĩ đồng ý trước khi tập.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#FBF6EC">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='14' fill='%23FBF6EC'/%3E%3Cpath d='M20 33V19' stroke='%233B6447' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M20 21c-1-6-5-9-11-9 0 6 4 9 11 9z' fill='%23C3D9AE'/%3E%3Cpath d='M20 18c1-6 5-9 11-9 0 6-4 9-11 9z' fill='%23F5B793'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&amp;family=Nunito:wght@400;600;700&amp;display=swap&amp;subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+.rg{display:grid;grid-template-columns:1.35fr .65fr;gap:var(--s6);align-items:start}
+.fcard{background:var(--paper);border:1px solid var(--line);border-radius:36px;padding:var(--s7);box-shadow:0 30px 60px -46px rgba(36,53,42,.45)}
+.stp{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;list-style:none;margin:0 0 var(--s6);padding:0;counter-reset:st}
+.stp li{counter-increment:st;display:grid;gap:8px;font:500 13.5px/1.25 var(--head);color:var(--muted)}
+.stp li::before{content:"";height:6px;border-radius:99px;background:var(--leaf-l);transition:background .4s}
+.stp li span::before{content:counter(st) ". "}
+.stp li.done::before{background:var(--leaf-2)}
+.stp li.cur::before{background:var(--moss)}
+.stp li.cur{color:var(--ink)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{font:500 clamp(22px,2.2vw,28px)/1.2 var(--head);letter-spacing:-.02em;margin-bottom:6px;padding:0}
+.sub{color:var(--muted);font-size:15px;margin-bottom:var(--s5)}
+.fs{display:grid;gap:var(--s5)}
+.fs[hidden]{display:none}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+.rcards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rc{position:relative;display:block;cursor:pointer}
+.rc input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.rc span{display:grid;gap:4px;padding:14px 16px;border-radius:16px;border:1.5px solid var(--line-2);background:#fff;min-height:64px;transition:border-color .2s,background .2s}
+.rc b{font:500 15.5px/1.3 var(--head)}
+.rc small{font-size:13px;color:var(--muted)}
+.rc input:checked+span{border-color:var(--moss);background:var(--leaf-l)}
+.rc input:focus-visible+span{outline:2.5px solid var(--peach-d);outline-offset:2px}
+.rcards.three{grid-template-columns:repeat(3,1fr)}
+.cond{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cond .chkrow{padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:#fff}
+.branch{display:grid;gap:var(--s4);padding:var(--s5);border-radius:var(--r);background:var(--peach-l);border:1px solid #F3CDB5}
+.branch[hidden]{display:none}
+.branch.g{background:var(--leaf-l);border-color:var(--leaf-2)}
+.warn{display:none}
+.warn.on{display:flex}
+.fnav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:var(--s6);padding-top:var(--s5);border-top:1px solid var(--line)}
+.fnav .qz-back{display:inline-flex;align-items:center;gap:8px;min-height:44px;border:0;background:none;font:500 15px/1 var(--head);color:var(--ink-2);cursor:pointer;padding:0 4px}
+.fnav .qz-back[hidden]{visibility:hidden;display:inline-flex}
+.sum{position:sticky;top:112px;display:grid;gap:var(--s4)}
+.sumc{background:var(--leaf-l);border:1px solid var(--leaf-2);border-radius:28px;padding:var(--s6)}
+.sumc h2{font-size:20px;margin-bottom:var(--s4)}
+.sumc dl{margin:0;display:grid;gap:12px}
+.sumc dt{font:500 12px/1 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sumc dd{margin:4px 0 0;font:500 15.5px/1.35 var(--head);color:var(--ink)}
+.sumc dd.e{color:var(--muted);font-weight:400}
+.sumc .tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:var(--s4);padding-top:var(--s4);border-top:1px dashed var(--line-2)}
+.sumc .tot b{font:500 24px/1 var(--head);color:var(--moss-d);font-variant-numeric:tabular-nums}
+.review{display:grid;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.review div{display:grid;grid-template-columns:160px 1fr auto;gap:12px;align-items:start;padding:14px 18px;border-bottom:1px solid var(--line);font-size:15px}
+.review div:last-child{border-bottom:0}
+.review dt{color:var(--muted)}
+.review dd{margin:0;font-weight:600}
+.review button{border:0;background:none;color:var(--moss);font:500 14px/1 var(--head);cursor:pointer;text-decoration:underline;text-underline-offset:3px;min-height:32px}
+.ok{display:grid;gap:var(--s4);justify-items:start;animation:up .6s var(--ease) both}
+.ok .seal{width:84px;height:84px;border-radius:var(--blob);display:grid;place-items:center;background:var(--leaf)}
+.ok .seal .ico{width:40px;height:40px;color:var(--moss-d);stroke-width:2}
+.code{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:16px 22px;border-radius:18px;background:var(--ivory);border:1.5px dashed var(--peach-d)}
+.code b{white-space:nowrap;font:500 clamp(24px,3vw,32px)/1 var(--head);letter-spacing:.06em;color:var(--peach-d);font-variant-numeric:tabular-nums}
+.code button{min-height:40px;padding:0 14px;border-radius:99px;border:1px solid var(--line-2);background:#fff;cursor:pointer;font:500 13.5px/1 var(--head)}
+.ok ol{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--ink-2)}
+.prep{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4)}
+.prep div{display:grid;gap:10px;align-content:start;padding:var(--s5);border-radius:var(--r);background:var(--paper);border:1px solid var(--line)}
+.prep .ico{width:26px;height:26px;color:var(--moss)}
+.prep p{font-size:15px;color:var(--ink-2)}
+.priv{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--s7);align-items:center}
+.priv .bimg{aspect-ratio:5/4}
+.priv ul{list-style:none;margin:var(--s5) 0 0;padding:0;display:grid;gap:12px}
+.priv li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2)}
+.priv li .ico{color:var(--moss);margin-top:3px}
+@media (max-width:1024px){.rg,.priv{grid-template-columns:1fr}.sum{position:static}.prep{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.fcard{padding:var(--s5);border-radius:26px}.rcards,.rcards.three,.row2,.cond,.prep{grid-template-columns:1fr}.stp li{font-size:0}.stp li.cur{font-size:13px}.review div{grid-template-columns:1fr auto}.review dt{grid-column:1/-1}.sumc{padding:var(--s5)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua, tới nội dung</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></symbol>
+<symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 13C11 8 8 6 4 6c0 4 3 7 8 7z"/><path d="M12 11c1-4 4-6 8-6 0 4-3 6-8 6z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c2 .6 3.2 2.3 3.5 5.2"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.2v.3"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+<symbol id="i-bump" viewBox="0 0 24 24"><circle cx="10" cy="4.5" r="2"/><path d="M9 21v-6l-1.5-1.5L9 8.5h2c3.5 0 5.5 2.5 5.5 5S15 17 12 17v4"/></symbol>
+<symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 10.5v.3M15 10.5v.3M9.5 14.5c1.5 1.3 3.5 1.3 5 0"/><path d="M12 3.5c-1.5 1.5-1 3 .5 3"/></symbol>
+<symbol id="i-desk" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="11" rx="2"/><path d="M8 20h8M12 15v5"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 14h15a3 3 0 1 1-3 3"/><path d="M3 19h6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.5l2 5-2.5 1.5a11 11 0 0 0 6 6l1.5-2.5 5 2V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8.5 5.5v13M15.5 5.5v13"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4.5V11h-6.5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+<symbol id="i-steth" viewBox="0 0 24 24"><path d="M6 3.5v5a4.5 4.5 0 0 0 9 0v-5"/><path d="M10.5 13v2.5a4.5 4.5 0 0 0 9 0V13"/><circle cx="19.5" cy="11" r="2"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14.5 8.5H16V5.2h-2.2c-2.6 0-3.8 1.6-3.8 4v1.6H8v3.2h2V21h3.3v-7H16l.4-3.2h-3.1V9.6c0-.7.4-1.1 1.2-1.1z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7v.1"/></symbol>
+<symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z"/></symbol>
+</defs></svg>
+<header class="hd" id="hd">
+<div class="wrap hd-in">
+<a class="logo" href="../" aria-label="Gieo Pilates và Yoga, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DCE9CC"/><path d="M20 32V19" stroke="#3B6447" stroke-width="2.4" stroke-linecap="round"/><path d="M20 21c-1-6-4.6-8.6-10.4-8.6 0 5.8 3.8 8.6 10.4 8.6z" fill="#3B6447"/><path d="M20 18.4c1-5.6 4.6-8.4 10.4-8.4 0 5.8-3.8 8.4-10.4 8.4z" fill="#F5B793"/></svg><span><b>gieo</b><small>Pilates &amp; Yoga · mẹ và dân văn phòng</small></span></a>
+<nav class="nav" aria-label="Menu chính"><a href="../">Trang chủ</a><a href="../chuong-trinh/">Chương trình</a><a href="../chon-lop/">Chọn lớp</a><a href="../lich-lop/">Lịch &amp; gói</a><a href="../giao-vien/">Giáo viên</a></nav>
+<a class="btn btn-pri btn-sm" href="../dang-ky/" aria-current="page">Đăng&nbsp;ký buổi&nbsp;đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Mở menu"><span></span></button>
+</div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu điện thoại" aria-hidden="true" inert>
+<a href="../">Trang chủ<small>01</small></a><a href="../chuong-trinh/">Chương trình<small>02</small></a><a href="../chon-lop/">Chọn lớp<small>03</small></a><a href="../lich-lop/">Lịch &amp; gói<small>04</small></a><a href="../giao-vien/">Giáo viên<small>05</small></a>
+<a class="btn btn-pri" href="../dang-ky/" aria-current="page">Đăng&nbsp;ký buổi&nbsp;đầu</a>
+<div class="mnav-foot">Phường Xuân Hoà, TP.HCM · 0900&nbsp;000&nbsp;000<br>Thứ 2–Thứ 6 06:00–21:00 · Thứ 7, Chủ nhật 07:00–18:00</div>
+</nav>
+<main id="main">
+<section class="phead" style="padding-bottom:var(--s9)">
+<div class="phead-blob" style="width:480px;height:420px;right:-160px;top:-140px" aria-hidden="true"></div>
+<div class="wrap">
+<ol class="crumb"><li><a href="../">Trang chủ</a></li><li aria-current="page">Đăng ký buổi đầu</li></ol>
+<div class="intro" style="max-width:780px;margin-bottom:40px"><p class="eyebrow"><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg> 4 bước · khoảng 3&nbsp;phút</p><h1 style="margin-top:18px">Đăng ký buổi đầu, có giáo viên gọi lại xác&nbsp;nhận</h1><p class="lead">Buổi đầu 150.000đ, gồm 15 phút trò chuyện trước khi vào lớp. Thông tin sức khoẻ chỉ giáo viên phụ trách lớp được xem.</p></div>
+<div class="rg">
+<form class="fcard" id="fm" novalidate>
+<ol class="stp" id="stp"><li class="cur"><span>Chọn lớp</span></li><li><span>Thông tin</span></li><li><span>Sức khoẻ</span></li><li><span>Xác nhận</span></li></ol>
+
+<fieldset class="fs" data-s="0">
+<legend tabindex="-1">Bạn muốn thử lớp nào?</legend>
+<p class="sub" id="pickHint">Chọn một lớp. Chưa chắc? <a href="../chon-lop/">Làm quiz 2 phút</a>.</p>
+<div class="rcards" role="radiogroup" aria-label="Lớp" id="lops"></div>
+<div class="field" id="fBuoi"><label for="buoi">Buổi mong muốn</label><select id="buoi" name="buoi"></select><span class="err">Vui lòng chọn buổi.</span></div>
+<div class="field"><label for="gv">Muốn tập với giáo viên (không bắt buộc)</label><select id="gv" name="gv"><option value="">Giáo viên nào cũng được</option><option>Cô Ngọc Hân</option><option>Cô Thảo Vy</option><option>Cô Mai Anh</option><option>Cô Bảo Trân</option></select></div>
+</fieldset>
+
+<fieldset class="fs" data-s="1" hidden>
+<legend tabindex="-1">Thông tin liên hệ</legend>
+<p class="sub">Giáo viên gọi lại trong giờ làm việc để xác nhận buổi.</p>
+<div class="field" id="fName"><label for="name">Họ và tên</label><input id="name" name="name" autocomplete="name" placeholder="Nguyễn Thị Lan"><span class="err">Vui lòng nhập họ tên.</span></div>
+<div class="row2">
+<div class="field" id="fPhone"><label for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"><span class="err">Số điện thoại gồm 10 chữ số, bắt đầu bằng 0.</span></div>
+<div class="field" id="fMail"><label for="mail">Email (không bắt buộc)</label><input id="mail" name="mail" type="email" autocomplete="email" placeholder="ban@example.com"><span class="err">Email chưa đúng định dạng.</span></div>
+</div>
+<div class="field"><label for="call">Giờ tiện nghe máy</label><select id="call" name="call"><option>08:00–11:00</option><option>11:00–14:00</option><option>14:00–18:00</option><option>Sau 18:00</option></select></div>
+</fieldset>
+
+<fieldset class="fs" data-s="2" hidden>
+<legend tabindex="-1">Khai sức khoẻ</legend>
+<p class="sub">Giúp giáo viên chuẩn bị phương án phù hợp. Khai đúng tình trạng, không có câu trả lời sai.</p>
+<div><span class="flabel" id="stLbl">Hiện tại bạn</span>
+<div class="rcards three" role="radiogroup" aria-labelledby="stLbl" style="margin-top:10px" id="fStage">
+<label class="rc"><input type="radio" name="stage" value="bau"><span><b>Đang mang thai</b></span></label>
+<label class="rc"><input type="radio" name="stage" value="sau"><span><b>Đã sinh trong 12 tháng</b></span></label>
+<label class="rc"><input type="radio" name="stage" value="khong"><span><b>Không thuộc hai trường hợp trên</b></span></label>
+</div><span class="err" id="eStage" style="margin-top:8px">Vui lòng chọn một mục.</span></div>
+<div class="branch" id="brBau" hidden>
+<div class="row2"><div class="field" id="fWeek"><label for="week">Tuần thai hiện tại</label><input id="week" name="week" type="number" min="4" max="42" inputmode="numeric" placeholder="Ví dụ 20"><span class="err">Nhập tuần thai từ 4 đến 42.</span></div>
+<div class="field"><label for="preg">Đây là lần mang thai</label><select id="preg" name="preg"><option>Đầu tiên</option><option>Thứ hai trở lên</option><option>Song thai</option></select></div></div>
+<p class="note" id="t1note" hidden><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg> <span>Dưới 13 tuần: Gieo xếp bạn vào buổi <b>Thở &amp; thư giãn bầu</b>, chưa vào lớp vận động nhóm.</span></p>
+<label class="chkrow" id="cDocB"><input type="checkbox" id="docB"><span>Bác sĩ sản khoa đã đồng ý cho tôi tập yoga, pilates nhẹ trong thai kỳ này. <span class="err">Cần có sự đồng ý của bác sĩ trước khi đăng ký lớp bầu.</span></span></label>
+</div>
+<div class="branch g" id="brSau" hidden>
+<div class="row2"><div class="field" id="fPost"><label for="post">Sinh được bao nhiêu tuần</label><input id="post" name="post" type="number" min="1" max="60" inputmode="numeric" placeholder="Ví dụ 10"><span class="err">Nhập số tuần từ 1 đến 60.</span></div>
+<div class="field"><label for="birth">Cách sinh</label><select id="birth" name="birth"><option>Sinh thường</option><option>Sinh mổ</option></select></div></div>
+<label class="chkrow" id="cDocS"><input type="checkbox" id="docS"><span>Bác sĩ đã cho phép tôi vận động lại sau lần tái khám hậu sản. <span class="err">Cần bác sĩ cho phép trước khi vào lớp sau sinh.</span></span></label>
+</div>
+<div><span class="flabel">Bạn có đang gặp tình trạng nào sau đây không?</span>
+<div class="cond" style="margin-top:10px" id="conds">
+<label class="chkrow"><input type="checkbox" value="Huyết áp cao hoặc thấp" data-w="1"><span>Huyết áp cao hoặc thấp</span></label>
+<label class="chkrow"><input type="checkbox" value="Bệnh tim mạch, hô hấp" data-w="1"><span>Bệnh tim mạch, hô hấp</span></label>
+<label class="chkrow"><input type="checkbox" value="Đau lưng, cột sống"><span>Đau lưng, cột sống</span></label>
+<label class="chkrow"><input type="checkbox" value="Chấn thương, phẫu thuật gần đây" data-w="1"><span>Chấn thương, phẫu thuật gần đây</span></label>
+<label class="chkrow"><input type="checkbox" value="Tách cơ bụng, sàn chậu yếu"><span>Tách cơ bụng, sàn chậu yếu</span></label>
+<label class="chkrow"><input type="checkbox" value="Bác sĩ dặn hạn chế vận động" data-w="1"><span>Bác sĩ dặn hạn chế vận động</span></label>
+</div></div>
+<p class="note warn" id="warn"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg> <span>Với tình trạng bạn vừa chọn, <b>hãy hỏi ý kiến bác sĩ trước buổi đầu</b>. Giáo viên sẽ gọi để trao đổi thêm và có thể gợi ý buổi 1 kèm 1.</span></p>
+<div class="field"><label for="note">Ghi chú thêm, điều bác sĩ dặn (không bắt buộc)</label><textarea id="note" name="note" placeholder="Ví dụ: bác sĩ dặn tránh nằm ngửa lâu"></textarea></div>
+</fieldset>
+
+<fieldset class="fs" data-s="3" hidden>
+<legend tabindex="-1">Kiểm tra lại và xác nhận</legend>
+<p class="sub">Bấm “Sửa” để quay lại bước tương ứng.</p>
+<dl class="review" id="review"></dl>
+<label class="chkrow" id="cAgree"><input type="checkbox" id="agree"><span>Tôi đồng ý để Gieo lưu và xử lý thông tin liên hệ, thông tin sức khoẻ ở trên để xếp lớp, theo quy định về bảo vệ dữ liệu cá nhân. <span class="err">Vui lòng tick đồng ý để gửi đăng ký.</span></span></label>
+<label class="chkrow" id="cAware"><input type="checkbox" id="aware"><span>Tôi hiểu lớp tập không thay thế tư vấn, khám chữa bệnh của bác sĩ và sẽ dừng tập khi thấy bất thường. <span class="err">Vui lòng tick xác nhận.</span></span></label>
+</fieldset>
+
+<div class="fs" data-s="4" hidden>
+<div class="ok" id="ok"></div>
+</div>
+
+<div class="fnav" id="fnav"><button class="qz-back" type="button" id="bk" hidden><svg class="ico" aria-hidden="true"><use href="#i-back"/></svg> Quay lại</button><button class="btn btn-pri" type="submit" id="nx">Tiếp tục <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+</form>
+
+<aside class="sum" aria-label="Tóm tắt đăng ký">
+<div class="sumc">
+<h2>Tóm tắt</h2>
+<dl><div><dt>Lớp</dt><dd id="sLop" class="e">Chưa chọn</dd></div><div><dt>Buổi</dt><dd id="sBuoi" class="e">Chưa chọn</dd></div><div><dt>Người tập</dt><dd id="sName" class="e">Chưa nhập</dd></div><div><dt>Giai đoạn</dt><dd id="sStage" class="e">Chưa khai</dd></div></dl>
+<div class="tot"><span>Buổi đầu</span><b>150.000đ</b></div>
+</div>
+<p class="note g"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> <span>Form mẫu: thông tin không được gửi đi đâu. Gieo không lưu thông tin sức khoẻ trên trình duyệt.</span></p>
+</aside>
+</div>
+</div>
+</section>
+
+<section class="sec-sm alt">
+<div class="wrap">
+<div class="sec-head"><p class="eyebrow rv"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> Trước buổi đầu</p><h2 class="rv d1" style="margin-top:16px">Mang theo bốn thứ, phần còn lại có&nbsp;sẵn</h2></div>
+<div class="prep">
+<div class="rv"><svg class="ico" aria-hidden="true"><use href="#i-steth"/></svg><h4>Giấy khám gần nhất</h4><p>Sổ khám thai, giấy tái khám hậu sản hoặc ghi chú bác sĩ dặn.</p></div>
+<div class="rv d1"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg><h4>Đồ tập thoải mái</h4><p>Quần áo co giãn, tất chống trượt nếu bạn quen dùng. Thảm có sẵn.</p></div>
+<div class="rv d2"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg><h4>Ăn nhẹ trước 1 tiếng</h4><p>Không nên đến lớp khi đói, nhất là mẹ bầu. Studio có nước ấm.</p></div>
+<div class="rv d3"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><h4>Đến sớm 15 phút</h4><p>Để trò chuyện với giáo viên, thay đồ và làm quen phòng tập.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec-sm">
+<div class="wrap priv">
+<div class="bimg b2 rv"><img src="https://images.unsplash.com/photo-1770012905139-713758ded6ec?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Giáo viên hỗ trợ học viên kéo giãn chân bên thanh gióng" width="900" height="720" loading="lazy"></div>
+<div>
+<p class="eyebrow rv"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> Thông tin của bạn</p>
+<h2 class="rv d1" style="margin-top:16px">Thông tin sức khoẻ được giữ kín, chỉ dùng để xếp&nbsp;lớp</h2>
+<ul>
+<li class="rv"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Chỉ giáo viên phụ trách lớp và quản lý studio được xem phần khai sức khoẻ.</span></li>
+<li class="rv d1"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Không dùng cho quảng cáo, không chia sẻ cho bên thứ ba.</span></li>
+<li class="rv d2"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Bạn có thể yêu cầu xem, sửa hoặc xoá thông tin bất cứ lúc nào qua 0900&nbsp;000&nbsp;000.</span></li>
+<li class="rv d3"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Thực hiện theo quy định về bảo vệ dữ liệu cá nhân hiện hành.</span></li>
+</ul>
+<p class="rv" style="margin-top:24px"><a class="tlink" href="../chuong-trinh/">Xem lại chương trình theo giai&nbsp;đoạn <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+</div>
+</div>
+</section>
+</main>
+<footer class="ft">
+<div class="wrap">
+<div class="ft-top">
+<div>
+<a class="logo" href="../" aria-label="Gieo Pilates và Yoga, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DCE9CC"/><path d="M20 32V19" stroke="#3B6447" stroke-width="2.4" stroke-linecap="round"/><path d="M20 21c-1-6-4.6-8.6-10.4-8.6 0 5.8 3.8 8.6 10.4 8.6z" fill="#3B6447"/><path d="M20 18.4c1-5.6 4.6-8.4 10.4-8.4 0 5.8-3.8 8.4-10.4 8.4z" fill="#F5B793"/></svg><span><b>gieo</b><small>Pilates &amp; Yoga</small></span></a>
+<p style="margin-top:20px;max-width:34ch">Lớp nhỏ cho mẹ bầu, mẹ sau sinh và người ngồi nhiều. Tập chậm, thở đều, đi từng bước theo cơ thể của bạn.</p>
+<div class="soc"><a href="#" aria-label="Facebook (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a><a href="#" aria-label="Instagram (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a><a href="#" aria-label="YouTube (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-yt"/></svg></a></div>
+</div>
+<div><h3>Các trang</h3><ul><li><a href="../">Trang chủ</a></li><li><a href="../chuong-trinh/">Chương trình theo giai đoạn</a></li><li><a href="../chon-lop/">Chọn lớp phù hợp</a></li><li><a href="../lich-lop/">Lịch lớp và gói tập</a></li><li><a href="../giao-vien/">Giáo viên</a></li><li><a href="../dang-ky/">Đăng ký buổi đầu</a></li></ul></div>
+<div><h3>Giờ mở cửa</h3><ul><li>Thứ 2–Thứ 6: 06:00–21:00</li><li>Thứ 7, Chủ nhật: 07:00–18:00</li><li>Góc trông bé: 08:00–11:00</li></ul>
+<h3 style="margin-top:28px">Liên hệ</h3><ul><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:xinchao@gieo.example">xinchao@gieo.example</a></li></ul></div>
+<div><h3>Ghé studio</h3><p>Tầng 2, số 00 đường mẫu, Phường Xuân Hoà, TP.HCM. Có thang máy và chỗ để xe đẩy.</p>
+<div class="minimap" aria-label="Bản đồ minh hoạ vị trí studio" role="img"><svg viewBox="0 0 320 150" aria-hidden="true"><rect width="320" height="150" fill="#36573F"/><path d="M-10 108C60 96 110 120 170 98S280 60 330 70" stroke="#4E7559" stroke-width="16" fill="none"/><path d="M40 -10 70 160M210 -10 190 160M-10 40h340" stroke="#456A50" stroke-width="7"/><path d="M110 20h50v34h-50zM230 90h46v30h-46zM20 60h34v26H20z" fill="#3F6249"/><circle cx="196" cy="52" r="22" fill="#F5B793" opacity=".22"/><path d="M196 66s-11-9.4-11-17.3a11 11 0 0 1 22 0C207 56.6 196 66 196 66z" fill="#F5B793"/><circle cx="196" cy="48.5" r="4" fill="#2C4B35"/></svg></div></div>
+</div>
+<div class="ft-bot"><p>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p><p>Thông tin trên web chỉ để tham khảo, không thay thế tư vấn của bác sĩ. © <span id="year">2026</span> Gieo (mẫu)</p></div>
+</div>
+</footer>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){
+var G=window.GIEO,$=G.$,$$=G.$$,fm=$('#fm');
+function I(n){return '<svg class="ico" aria-hidden="true"><use href="#i-'+n+'"/></svg>'}
+var L={'yoga-bau':['Yoga bầu','Tuần 13 trở đi',['Thứ 3 · 09:30','Thứ 3 · 18:30','Thứ 5 · 09:30','Thứ 5 · 18:30','Thứ 7 · 09:30','Chủ nhật · 10:00'],'bau'],
+'pilates-bau':['Pilates bầu với bóng','Tam cá nguyệt 2',['Thứ 2 · 18:00','Thứ 4 · 18:00'],'bau'],
+'tho-bau':['Thở & thư giãn bầu','Tam cá nguyệt 1',['Thứ 7 · 08:00'],'bau'],
+'sau-sinh':['Pilates sau sinh','Khi bác sĩ cho phép',['Thứ 2 · 09:00','Thứ 4 · 09:00','Thứ 6 · 09:00','Thứ 6 · 19:00'],'sau'],
+'van-phong':['Pilates văn phòng','Trưa 45 phút',['Thứ 2 · 12:15','Thứ 3 · 12:15','Thứ 4 · 12:15','Thứ 5 · 12:15','Thứ 6 · 12:15','Thứ 6 · 18:00'],'vp'],
+'mo-nguc':['Yoga mở ngực','Vai, lưng trên',['Thứ 3 · 18:30','Thứ 5 · 18:30'],'vp'],
+'nen-tang':['Pilates mat nền tảng','Người mới',['Thứ 2 · 18:30','Thứ 4 · 18:30','Thứ 7 · 10:00'],'chung'],
+'phuc-hoi':['Yoga phục hồi','Chậm, nhiều gối kê',['Chủ nhật · 08:30'],'chung']};
+var lops=$('#lops'),buoi=$('#buoi');
+lops.innerHTML=Object.keys(L).map(function(k){return '<label class="rc"><input type="radio" name="lop" value="'+k+'"><span><b>'+L[k][0]+'</b><small>'+L[k][1]+'</small></span></label>'}).join('');
+function fillBuoi(k,pre){buoi.innerHTML='<option value="">Chọn buổi</option>'+(k?L[k][2].map(function(s){return '<option'+(s===pre?' selected':'')+'>'+s+'</option>'}).join(''):'');}
+var qs={};location.search.slice(1).split('&').forEach(function(p){var a=p.split('=');if(a[0])qs[a[0]]=decodeURIComponent(a[1]||'')});
+var pick=G.get('pick',null),pre=qs.lop||(pick&&pick.tag)||'';
+var D=['Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7','Chủ nhật'],preB='';
+if(qs.buoi){var b=qs.buoi.split('-');if(b.length===2)preB=D[+b[0]]+' · '+b[1].slice(0,2)+':'+b[1].slice(2)}
+if(qs.gv&&$('#gv').options[+qs.gv+1])$('#gv').selectedIndex=+qs.gv+1;
+if(L[pre]){var r=lops.querySelector('[value="'+pre+'"]');r.checked=true;fillBuoi(pre,preB);$('#pickHint').innerHTML='Đã chọn sẵn theo '+(qs.lop?'lựa chọn của bạn':'kết quả quiz')+'. Bạn vẫn có thể đổi lớp.'}else{fillBuoi('')}
+if(qs.goi){$('#pickHint').innerHTML='Bạn đang xem gói '+(qs.goi.indexOf('rieng')===0?'1 kèm 1':'lớp nhóm')+'. Buổi đầu giúp bạn chọn gói chắc hơn.'}
+lops.addEventListener('change',function(e){fillBuoi(e.target.value);sum()});
+var step=0,stps=$$('#stp li'),fss=$$('.fs',fm),bk=$('#bk'),nx=$('#nx');
+function show(s){step=s;fss.forEach(function(f){f.hidden=+f.getAttribute('data-s')!==s});stps.forEach(function(l,i){l.className=i<s?'done':i===s?'cur':''});bk.hidden=s===0;nx.innerHTML=s===3?'Gửi đăng ký '+I('check'):'Tiếp tục '+I('arrow');if(s===3)review();var lg=fss[s].querySelector('legend');if(lg)lg.focus({preventScroll:true});var top=fm.getBoundingClientRect().top+window.pageYOffset-100;if(window.pageYOffset>top)window.scrollTo({top:top,behavior:G.reduce?'auto':'smooth'})}
+function bad(el,on){el.classList.toggle('bad',on);var i=el.querySelector('input,select,textarea');if(i)i.setAttribute('aria-invalid',on)}
+function stageV(){var r=fm.querySelector('[name=stage]:checked');return r?r.value:''}
+function valid(s){var ok=true,first=null;function chk(el,cond){bad(el,!cond);if(!cond){ok=false;first=first||el}}
+ if(s===0){var r=fm.querySelector('[name=lop]:checked');lops.classList.toggle('bad',!r);if(!r){ok=false;first=lops;$('#pickHint').innerHTML='<b style="color:#9B2F15">Vui lòng chọn một lớp.</b>'}chk($('#fBuoi'),!!buoi.value)}
+ if(s===1){chk($('#fName'),$('#name').value.trim().length>1);chk($('#fPhone'),/^0\d{9}$/.test($('#phone').value.replace(/[\s.]/g,'')));var m=$('#mail').value.trim();chk($('#fMail'),!m||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m))}
+ if(s===2){var st=stageV();$('#eStage').style.display=st?'none':'block';if(!st){ok=false;first=first||$('#fStage')}
+  if(st==='bau'){var w=+$('#week').value;chk($('#fWeek'),w>=4&&w<=42);chk($('#cDocB'),$('#docB').checked)}
+  if(st==='sau'){var p=+$('#post').value;chk($('#fPost'),p>=1&&p<=60);chk($('#cDocS'),$('#docS').checked)}}
+ if(s===3){chk($('#cAgree'),$('#agree').checked);chk($('#cAware'),$('#aware').checked)}
+ if(first){var f=first.querySelector('input,select,textarea')||first;f.focus&&f.focus()}
+ return ok}
+fm.addEventListener('change',function(e){var t=e.target;if(t.name==='stage'){$('#eStage').style.display='none';$('#brBau').hidden=t.value!=='bau';$('#brSau').hidden=t.value!=='sau'}
+ if(t.closest('#conds'))$('#warn').classList.toggle('on',$$('#conds input[data-w]:checked').length>0);
+ var fl=t.closest('.field,.chkrow');if(fl&&fl.classList.contains('bad'))bad(fl,false);sum()});
+$('#week').addEventListener('input',function(){var w=+this.value;$('#t1note').hidden=!(w>=4&&w<13)});
+['name','phone'].forEach(function(id){$('#'+id).addEventListener('input',sum)});
+function lopName(){var r=fm.querySelector('[name=lop]:checked');return r?L[r.value][0]:''}
+function stageTxt(){var s=stageV();if(s==='bau')return 'Mang thai'+($('#week').value?', tuần '+$('#week').value:'');if(s==='sau')return 'Sau sinh'+($('#post').value?', '+$('#post').value+' tuần':'');if(s==='khong')return 'Không mang thai, không sau sinh';return ''}
+function setD(id,v,e){var d=$(id);d.textContent=v||e;d.classList.toggle('e',!v)}
+function sum(){setD('#sLop',lopName(),'Chưa chọn');setD('#sBuoi',buoi.value,'Chưa chọn');setD('#sName',$('#name').value.trim(),'Chưa nhập');setD('#sStage',stageTxt(),'Chưa khai')}
+buoi.addEventListener('change',sum);sum();
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function review(){var c=$$('#conds input:checked').map(function(i){return i.value});var rows=[['Lớp',lopName(),0],['Buổi',buoi.value+($('#gv').value?' · '+$('#gv').value:''),0],['Họ tên',$('#name').value.trim(),1],['Điện thoại',$('#phone').value.trim()+($('#mail').value.trim()?' · '+$('#mail').value.trim():''),1],['Giai đoạn',stageTxt(),2],['Tình trạng',c.length?c.join(', '):'Không có',2],['Ghi chú',$('#note').value.trim()||'Không có',2]];
+ $('#review').innerHTML=rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+esc(r[1])+'</dd><button type="button" data-go="'+r[2]+'">Sửa</button></div>'}).join('')}
+$('#review').addEventListener('click',function(e){var b=e.target.closest('[data-go]');if(b)show(+b.getAttribute('data-go'))});
+bk.addEventListener('click',function(){if(step>0)show(step-1)});
+fm.addEventListener('submit',function(e){e.preventDefault();if(!valid(step))return;if(step<3){show(step+1);return}done()});
+function done(){var ch='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',code='GIEO-';for(var i=0;i<5;i++)code+=ch[Math.floor(Math.random()*ch.length)];
+ var name=$('#name').value.trim().split(' ').pop();
+ $('#ok').innerHTML='<span class="seal">'+I('check')+'</span><h2 tabindex="-1" id="okH">Cảm ơn '+esc(name)+', Gieo đã nhận đăng ký</h2><p class="lead">Đây là màn hình minh hoạ: thông tin không được gửi đi đâu.</p><div class="code"><span>Mã xác nhận</span><b id="cd">'+code+'</b><button type="button" id="cp">Sao chép</button></div><ol><li>Giáo viên gọi số '+esc($('#phone').value.trim())+' trong khung '+esc($('#call').value)+' để xác nhận.</li><li>Đến studio sớm 15 phút trước buổi '+esc(buoi.value)+', đọc mã ở quầy lễ tân.</li><li>'+(stageV()==='khong'?'Mang đồ tập thoải mái và chai nước.':'Mang theo giấy khám hoặc ghi chú của bác sĩ.')+'</li></ol><div style="display:flex;flex-wrap:wrap;gap:12px"><'+'a class="btn btn-pri" href="../">Về trang chủ</a><'+'a class="btn btn-ghost" href="../chuong-trinh/">Xem bài chuẩn bị</a></div>';
+ show(4);$('#fnav').style.display='none';$('#stp').style.display='none';G.set('pick',null);$('#okH').focus();
+ $('#cp').addEventListener('click',function(){var b=this;try{navigator.clipboard.writeText(code).then(function(){b.textContent='Đã chép'},function(){b.textContent='Chép tay giúp nhé'})}catch(x){b.textContent='Chép tay giúp nhé'}});
+}
+})();
+</script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=2" data-mau="Gieo Pilates &amp; Yoga" data-gia="3000000" data-loai="multi"></script>
+</body>
+</html>
