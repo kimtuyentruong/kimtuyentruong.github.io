@@ -141,26 +141,26 @@ function ico(k,c){return '<svg class="ico'+(c?' '+c:'')+'" aria-hidden="true"><u
 var LOGO='<svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#B8F23A"/><path d="M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z" fill="#0A0D06"/></svg>';
 var navActive=PAGE==='kickboxing'?'bo-mon':PAGE;
 var holds=store.get('holds',[]);
-var navHtml=D.pages.filter(function(p){return p.nav}).map(function(p){return '<a href="'+ROOT+p.u+'"'+(p.id===navActive?' aria-current="page"':'')+'>'+nb(p.n)+'</a>'}).join('');
+var navHtml=D.pages.filter(function(p){return p.nav}).map(function(p){return '<'+'a href="'+ROOT+p.u+'"'+(p.id===navActive?' aria-current="page"':'')+'>'+nb(p.n)+'</a>'}).join('');
 var hdr=document.getElementById('site-header');
 if(hdr){hdr.outerHTML='<header class="hdr" id="hdr"><div class="wrap">'+
- '<a class="logo" href="'+ROOT+'" aria-label="IRONVERT Athletic Club, về trang chủ">'+LOGO+'<span><b>Ironvert</b><small>Athletic Club</small></span></a>'+
+ '<'+'a class="logo" href="'+ROOT+'" aria-label="IRONVERT Athletic Club, về trang chủ">'+LOGO+'<span><b>Ironvert</b><small>Athletic Club</small></span></a>'+
  '<nav class="nav" aria-label="Menu chính">'+navHtml+'</nav>'+
  '<div class="hdr-tools"><button class="ibtn" type="button" id="openSearch" aria-label="Tìm trong trang (phím /)">'+ico('search')+'</button>'+
- '<a class="ibtn" href="'+ROOT+'lich-lop/#giu-cho" aria-label="Lớp đã giữ chỗ">'+ico('cal')+'<span class="cnt" id="holdCnt"'+(holds.length?'':' hidden')+'>'+holds.length+'</span></a>'+
- '<a class="btn btn-lime btn-s hdr-cta" href="'+ROOT+'tap-thu/"'+(PAGE==='tap-thu'?' aria-current="page"':'')+'>Tập&nbsp;thử 1&nbsp;buổi</a>'+
+ '<'+'a class="ibtn" href="'+ROOT+'lich-lop/#giu-cho" aria-label="Lớp đã giữ chỗ">'+ico('cal')+'<span class="cnt" id="holdCnt"'+(holds.length?'':' hidden')+'>'+holds.length+'</span></a>'+
+ '<'+'a class="btn btn-lime btn-s hdr-cta" href="'+ROOT+'tap-thu/"'+(PAGE==='tap-thu'?' aria-current="page"':'')+'>Tập&nbsp;thử 1&nbsp;buổi</a>'+
  '<button class="ibtn burger" type="button" id="burger" aria-label="Mở menu" aria-expanded="false" aria-controls="mnav">'+ico('menu')+'</button></div></div></header>'+
  '<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu"><ol>'+
- D.pages.filter(function(p){return p.nav}).map(function(p){return '<li><a href="'+ROOT+p.u+'"'+(p.id===navActive?' aria-current="page"':'')+'>'+p.n+'</a></li>'}).join('')+
- '</ol><a class="btn btn-lime" href="'+ROOT+'tap-thu/">Đăng ký tập&nbsp;thử '+ico('go','go')+'</a><p class="note" style="margin-top:20px">Hotline mẫu 0900&nbsp;000&nbsp;000 · Mở cửa 05:00–22:00</p></div>';}
+ D.pages.filter(function(p){return p.nav}).map(function(p){return '<li><'+'a href="'+ROOT+p.u+'"'+(p.id===navActive?' aria-current="page"':'')+'>'+p.n+'</a></li>'}).join('')+
+ '</ol><'+'a class="btn btn-lime" href="'+ROOT+'tap-thu/">Đăng ký tập&nbsp;thử '+ico('go','go')+'</a><p class="note" style="margin-top:20px">Hotline mẫu 0900&nbsp;000&nbsp;000 · Mở cửa 05:00–22:00</p></div>';}
 var ftr=document.getElementById('site-footer');
 if(ftr){ftr.outerHTML='<footer class="ftr"><div class="wrap"><div class="ftr-top">'+
- '<div><a class="logo" href="'+ROOT+'">'+LOGO+'<span><b>Ironvert</b><small>Athletic Club</small></span></a><p style="margin:18px 0 0;max-width:34ch">Câu lạc bộ thể hình đủ bộ môn: gym, võ, yoga, pilates, cycling, bơi. Một thẻ tập ở cả ba cơ&nbsp;sở.</p>'+
+ '<div><'+'a class="logo" href="'+ROOT+'">'+LOGO+'<span><b>Ironvert</b><small>Athletic Club</small></span></a><p style="margin:18px 0 0;max-width:34ch">Câu lạc bộ thể hình đủ bộ môn: gym, võ, yoga, pilates, cycling, bơi. Một thẻ tập ở cả ba cơ&nbsp;sở.</p>'+
  '<div class="soc"><a href="#" aria-label="Facebook (mẫu)">'+ico('fb')+'</a><a href="#" aria-label="Instagram (mẫu)">'+ico('ig')+'</a><a href="#" aria-label="YouTube (mẫu)">'+ico('yt')+'</a><a href="#" aria-label="TikTok (mẫu)">'+ico('tt')+'</a></div></div>'+
- '<div><h3>Sơ đồ trang</h3><ul>'+D.pages.map(function(p){return '<li><a href="'+ROOT+p.u+'">'+p.n+'</a></li>'}).join('')+'</ul></div>'+
+ '<div><h3>Sơ đồ trang</h3><ul>'+D.pages.map(function(p){return '<li><'+'a href="'+ROOT+p.u+'">'+p.n+'</a></li>'}).join('')+'</ul></div>'+
  '<div><h3>Giờ mở cửa</h3><dl class="hours"><dt>T2–T6</dt><dd>05:00–22:00</dd><dt>T7</dt><dd>06:00–21:00</dd><dt>CN, lễ</dt><dd>06:00–20:00</dd></dl>'+
  '<h3 style="margin-top:28px">Liên hệ</h3><ul><li><a href="tel:0900000000">'+ico('phone','s')+' 0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:hello@ironvert-mau.vn">'+ico('mail','s')+' hello@ironvert-mau.vn</a></li></ul></div>'+
- '<div><h3>Cơ sở</h3><ul>'+D.locs.map(function(l){return '<li><a href="'+ROOT+'co-so/#'+l.id+'"><b style="color:var(--ink);font-weight:600">'+l.s+'</b><br><span class="muted small">'+l.ward+'</span></a></li>'}).join('')+'</ul>'+
+ '<div><h3>Cơ sở</h3><ul>'+D.locs.map(function(l){return '<li><'+'a href="'+ROOT+'co-so/#'+l.id+'"><b style="color:var(--ink);font-weight:600">'+l.s+'</b><br><span class="muted small">'+l.ward+'</span></a></li>'}).join('')+'</ul>'+
  '<div class="fmap" aria-hidden="true"><svg viewBox="0 0 320 180"><rect width="320" height="180" fill="#0D100D"/><path d="M0 120C60 100 90 140 150 118S250 70 320 92" stroke="#1B3A26" stroke-width="14" fill="none"/><path d="M40 0v180M120 0v180M200 0v180M280 0v180M0 40h320M0 90h320M0 140h320" stroke="#1B201B"/><circle cx="110" cy="96" r="6" fill="#B8F23A"/><circle cx="190" cy="70" r="6" fill="#B8F23A"/><text x="122" y="100" fill="#9AA597" font-size="11" font-family="Inter">Bến Thành</text><text x="202" y="74" fill="#9AA597" font-size="11" font-family="Inter">An Khánh</text></svg></div></div>'+
  '</div><div class="big" aria-hidden="true">Ironvert</div>'+
  '<div class="ftr-bot"><span>Nội dung mẫu: tên thương hiệu, giá, nhân sự, chứng chỉ, lịch lớp, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span><span>Người có bệnh lý tim mạch, huyết áp, cơ xương khớp hoặc đang mang thai nên hỏi ý kiến bác sĩ trước khi tập.</span></div></div></footer>';}
@@ -213,7 +213,7 @@ var srch=$('#srch'),sq=$('#sq'),sqr=$('#sqr');
 function doSearch(){var q=fold(sq.value.trim());if(!q){sqr.innerHTML='';$('#sqn').textContent='Gợi ý tìm nhanh:';return}
  var terms=q.split(/\s+/),r=IDX.map(function(it){var h=fold(it.t+' '+it.s+' '+(it.x||'')),ht=fold(it.t),sc=0;terms.forEach(function(w){if(ht.indexOf(w)>-1)sc+=3;else if(h.indexOf(w)>-1)sc+=1;else sc-=99});return {it:it,sc:sc}}).filter(function(x){return x.sc>0}).sort(function(a,b){return b.sc-a.sc}).slice(0,12);
  $('#sqn').textContent=r.length?r.length+' kết quả':'Không thấy kết quả. Thử từ khác, ví dụ "yoga" hoặc "bơi".';
- sqr.innerHTML=r.map(function(x){return '<li><a href="'+x.it.u+'"><span class="k">'+esc(x.it.k)+'</span><span><b>'+esc(x.it.t)+'</b><span>'+esc(x.it.s)+'</span></span>'+ico('go')+'</a></li>'}).join('')}
+ sqr.innerHTML=r.map(function(x){return '<li><'+'a href="'+x.it.u+'"><span class="k">'+esc(x.it.k)+'</span><span><b>'+esc(x.it.t)+'</b><span>'+esc(x.it.s)+'</span></span>'+ico('go')+'</a></li>'}).join('')}
 sq.addEventListener('input',doSearch);
 var lastFocus;
 function openSearch(){lastFocus=document.activeElement;srch.classList.add('open');body.classList.add('lock');setTimeout(function(){sq.focus()},30)}

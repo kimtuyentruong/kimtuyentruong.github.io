@@ -162,7 +162,7 @@
 <script>
 (function(){var V=window.IV,D=V.D,$=V.$,R=V.ROOT;
 /* dải bộ môn */
-$('#strip').innerHTML=D.disc.map(function(d,i){return '<a href="'+d.url+'"><small>'+('0'+(i+1)).slice(-2)+'</small>'+V.nb(d.n)+'</a>'}).join('');
+$('#strip').innerHTML=D.disc.map(function(d,i){return '<'+'a href="'+d.url+'"><small>'+('0'+(i+1)).slice(-2)+'</small>'+V.nb(d.n)+'</a>'}).join('');
 /* lớp sắp bắt đầu */
 var now=new Date(),hm=('0'+now.getHours()).slice(-2)+':'+('0'+now.getMinutes()).slice(-2),day=D.today;
 var list=D.sessions.filter(function(s){return s.day===day&&s.time>=hm});
@@ -174,7 +174,7 @@ $('#clsCount').setAttribute('data-count',D.sessions.length);$('#clsCount').textC
 /* accordion */
 var feat=['kickboxing','gym','yoga','pilates','cycling','boi','muay-thai'];
 var acc=$('#acc');
-acc.innerHTML=feat.map(function(id,i){var d=D.d(id);return '<a href="'+d.url+'"'+(i===0?' class="on"':'')+'><img src="'+V.img(d.ph,1200,900)+'" alt="'+V.esc(d.n)+'" loading="lazy" style="object-position:'+d.pos+'"><span class="n">0'+(i+1)+'</span><span class="v">'+V.esc(d.n)+'</span><span class="tx"><span class="tag lime">'+D.groups[d.g]+' · '+d.dur+'</span><h3>'+V.esc(d.n)+'</h3><p>'+V.esc(d.d)+'</p><span class="lnk">Xem bộ môn <svg class="ico" aria-hidden="true"><use href="#i-go"/></svg></span></span></a>'}).join('');
+acc.innerHTML=feat.map(function(id,i){var d=D.d(id);return '<'+'a href="'+d.url+'"'+(i===0?' class="on"':'')+'><img src="'+V.img(d.ph,1200,900)+'" alt="'+V.esc(d.n)+'" loading="lazy" style="object-position:'+d.pos+'"><span class="n">0'+(i+1)+'</span><span class="v">'+V.esc(d.n)+'</span><span class="tx"><span class="tag lime">'+D.groups[d.g]+' · '+d.dur+'</span><h3>'+V.esc(d.n)+'</h3><p>'+V.esc(d.d)+'</p><span class="lnk">Xem bộ môn <svg class="ico" aria-hidden="true"><use href="#i-go"/></svg></span></span></a>'}).join('');
 var items=V.$$('a',acc);
 function act(a){items.forEach(function(x){x.classList.toggle('on',x===a)})}
 items.forEach(function(a){a.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover)').matches)act(a)});a.addEventListener('focus',function(){act(a)});a.addEventListener('click',function(e){if(!a.classList.contains('on')){e.preventDefault();act(a)}})});
@@ -187,5 +187,6 @@ $('#locsHome').innerHTML=D.locs.map(function(l,i){return '<a class="loc-card hov
 V.reveal();V.glue();
 })();
 </script>
+<script src="/assets/kt-demo.js?v=1" data-mau="IRONVERT Athletic Club"></script>
 </body>
 </html>

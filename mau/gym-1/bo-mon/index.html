@@ -114,7 +114,7 @@ function intBar(n){var h='<span class="int" aria-label="Cường độ '+n+' tr�
 function card(d,big){var href=d.id==='kickboxing'?'../kickboxing/':'../lich-lop/?mon='+d.id;
  return '<article class="dcard hov'+(big?' big':'')+'" id="'+d.id+'"><div class="ph"><img src="'+V.img(d.ph,big?1200:800,big?900:600)+'" alt="'+V.esc(d.n)+' tại IRONVERT" loading="lazy" style="object-position:'+d.pos+'"><span class="tag solid g">'+D.groups[d.g]+'</span></div><div class="tx"><h3>'+V.esc(d.n)+'</h3><p>'+V.esc(d.d)+'</p>'+
  '<div class="meta"><span>'+intBar(d.int)+'</span><span><svg class="ico s" aria-hidden="true"><use href="#i-clock"/></svg>'+d.dur+'</span><span><svg class="ico s" aria-hidden="true"><use href="#i-pin"/></svg>'+d.locs.length+' cơ sở</span>'+(cnt(d.id)?'<span><svg class="ico s" aria-hidden="true"><use href="#i-cal"/></svg>'+cnt(d.id)+' lớp/tuần</span>':'')+'</div>'+
- '<div style="display:flex;flex-wrap:wrap;gap:8px"><a class="btn btn-s '+(d.id==='kickboxing'?'btn-lime':'btn-ghost')+'" href="'+href+'">'+(d.id==='kickboxing'?'Xem chi tiết bộ môn':(cnt(d.id)?'Xem lịch '+V.esc(d.n):'Đặt lịch với HLV'))+'</a></div></div></article>'}
+ '<div style="display:flex;flex-wrap:wrap;gap:8px"><'+'a class="btn btn-s '+(d.id==='kickboxing'?'btn-lime':'btn-ghost')+'" href="'+href+'">'+(d.id==='kickboxing'?'Xem chi tiết bộ môn':(cnt(d.id)?'Xem lịch '+V.esc(d.n):'Đặt lịch với HLV'))+'</a></div></div></article>'}
 function render(){var q=V.fold(st.q.trim());
  var r=D.disc.filter(function(d){return (!st.g||d.g===st.g)&&(!st.i||ig[st.i].indexOf(d.int)>-1)&&(!st.l||d.locs.indexOf(st.l)>-1)&&(!q||V.fold(d.n+' '+d.d+' '+d.k).indexOf(q)>-1)});
  var none=!st.g&&!st.i&&!st.l&&!q;
