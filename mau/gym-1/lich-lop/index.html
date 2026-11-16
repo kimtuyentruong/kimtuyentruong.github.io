@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lịch lớp tuần: Kickboxing, Yoga, Cycling | IRONVERT</title>
+<meta name="description" content="Lịch lớp nhóm cả tuần tại 3 cơ sở IRONVERT. Lọc theo bộ môn, cơ sở và khung giờ sáng, trưa, tối; giữ chỗ trước và xem số chỗ còn lại của từng lớp.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="lich-lop">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Trang chủ</a> · <a href="../bo-mon/">Bộ môn</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../lich-lop/">Lịch lớp</a> · <a href="../the-thanh-vien/">Thẻ thành viên</a> · <a href="../huan-luyen-vien/">Huấn luyện viên</a> · <a href="../cong-cu/">Công cụ</a> · <a href="../co-so/">Cơ sở</a> · <a href="../tin-tuc/">Tin tức</a> · <a href="../tap-thu/">Đăng ký tập thử</a></nav></noscript></div>
+<main id="main">
+<section class="phero">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">05:00</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Trang chủ</a></li><li aria-current="page">Lịch lớp</li></ol>
+  <div class="phero-row">
+   <div class="intro">
+    <span class="eyebrow">Lịch lớp tuần</span>
+    <h1>Chọn giờ trước, lý do bỏ tập sẽ ít&nbsp;đi</h1>
+    <p class="lead">Lớp bắt đầu từ 06:00 đến 19:30, ở cả ba cơ sở. Giữ chỗ trước để chắc có xe đạp, có thảm, có cặp đích&nbsp;đỡ.</p>
+   </div>
+   <div class="statrow intro">
+    <div><b id="sTot">80</b><span>lớp mỗi tuần</span></div>
+    <div><b id="sToday">12</b><span>lớp hôm nay</span></div>
+    <div><b id="sHeld">0</b><span>lớp bạn đã giữ</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec tight">
+ <div class="wrap">
+  <h2 class="vh">Bộ lọc và danh sách lớp</h2>
+  <div class="days" id="days" role="group" aria-label="Chọn ngày"></div>
+  <div class="fbar">
+   <div class="fg" style="min-width:220px"><label class="lbl" for="fDisc">Bộ môn</label><select class="inp" id="fDisc"><option value="">Tất cả bộ môn</option></select></div>
+   <div class="fg"><span class="lbl" id="ll">Cơ sở</span><div class="chips" id="fLoc" role="group" aria-labelledby="ll"></div></div>
+   <div class="fg"><span class="lbl" id="lt">Khung giờ</span><div class="chips" id="fTime" role="group" aria-labelledby="lt"><button class="chip" type="button" data-v="" aria-pressed="true">Cả ngày</button><button class="chip" type="button" data-v="s" aria-pressed="false">Sáng</button><button class="chip" type="button" data-v="t" aria-pressed="false">Trưa, chiều</button><button class="chip" type="button" data-v="c" aria-pressed="false">Tối</button></div></div>
+  </div>
+  <div class="sched-layout">
+   <div>
+    <p class="count" aria-live="polite" style="margin:0 0 14px"><span id="dayLbl">Thứ Hai</span>: <b id="nRes">0</b> lớp</p>
+    <div id="list"></div>
+   </div>
+   <aside class="side-box" id="giu-cho" aria-labelledby="h-held">
+    <h2 id="h-held">Lớp đã giữ chỗ</h2>
+    <ul class="held-list" id="heldList"></ul>
+    <a class="btn btn-lime" id="heldGo" href="../tap-thu/" style="width:100%">Dùng cho buổi tập thử</a>
+    <p class="note" style="margin:14px 0 0">Giữ chỗ được lưu trên trình duyệt này để minh hoạ, không gửi đi đâu. Huỷ trước 2 giờ không mất lượt.</p>
+   </aside>
+  </div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-wk">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Toàn cảnh</span><h2 class="h-l" id="h-wk">Cả tuần trên một&nbsp;bảng</h2></div><p>Bảng theo cơ sở đang chọn ở bộ lọc. Kéo ngang trên điện thoại để xem đủ bảy&nbsp;ngày.</p></div>
+  <div class="tbl-wrap rv"><table class="wk" id="wk"></table></div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-rule">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Quy định</span><h2 class="h-l" id="h-rule">Giữ chỗ công bằng cho mọi&nbsp;người</h2></div></div>
+  <div class="policy">
+   <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-cal"/></svg><h3>Mở trước 7 ngày</h3><p>Gói Core giữ chỗ trước 7 ngày, gói Elite trước 14 ngày. Gói Base mua vé lẻ tại quầy.</p></div>
+   <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-clock"/></svg><h3>Huỷ trước 2 giờ</h3><p>Huỷ muộn hoặc vắng không báo 3 lần trong tháng sẽ tạm khoá giữ chỗ 7 ngày.</p></div>
+   <div class="rv d2"><svg class="ico l" aria-hidden="true"><use href="#i-users"/></svg><h3>Danh sách chờ</h3><p>Lớp hết chỗ có danh sách chờ. Có người huỷ, hệ thống nhắn tin cho người đầu danh sách (mẫu).</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Đã chọn được&nbsp;lớp?</h2><p>Dùng lớp đã giữ chỗ để đăng ký buổi tập thử, khỏi chọn lại.</p></div><div class="btns"><a class="btn" href="../tap-thu/">Đăng ký tập thử <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a><a class="btn btn-ghost" href="../the-thanh-vien/">Xem thẻ thành viên</a></div></div></section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Nội dung mẫu: tên thương hiệu, giá, nhân sự, chứng chỉ, lịch lớp, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></div>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+var qs=new URLSearchParams(location.search);
+var st={day:D.today,disc:qs.get('mon')||'',loc:'',tm:''};
+var focusId=location.hash.slice(1);var fs=D.sess(focusId);if(fs){st.day=fs.day}
+function slot(t){return t<'12:00'?'s':(t<'17:00'?'t':'c')}
+var now=new Date();
+function dateOf(d){var x=new Date(now);x.setDate(now.getDate()+((d-D.today+7)%7));return ('0'+x.getDate()).slice(-2)+'/'+('0'+(x.getMonth()+1)).slice(-2)}
+$('#fDisc').innerHTML+=D.disc.filter(function(d){return D.sessions.some(function(s){return s.disc===d.id})}).map(function(d){return '<option value="'+d.id+'">'+d.n+'</option>'}).join('');
+$('#fDisc').value=st.disc;
+$('#fLoc').innerHTML='<button class="chip" type="button" data-v="" aria-pressed="true">Cả 3</button>'+D.locs.map(function(l){return '<button class="chip" type="button" data-v="'+l.id+'" aria-pressed="false">'+l.s+'</button>'}).join('');
+$('#sTot').textContent=D.sessions.length;$('#sToday').textContent=D.sessions.filter(function(s){return s.day===D.today}).length;
+function match(s){return (!st.disc||s.disc===st.disc)&&(!st.loc||s.loc===st.loc)&&(!st.tm||slot(s.time)===st.tm)}
+function renderDays(){$('#days').innerHTML=D.days.map(function(n,i){var c=D.sessions.filter(function(s){return s.day===i&&match(s)}).length;return '<button type="button" data-d="'+i+'" aria-pressed="'+(i===st.day)+'"><b>'+D.dshort[i]+'</b><span>'+(i===D.today?'Hôm nay':dateOf(i))+'</span><i>'+c+' lớp</i></button>'}).join('')}
+function renderList(){var h=V.holds();var r=D.sessions.filter(function(s){return s.day===st.day&&match(s)});
+ $('#dayLbl').textContent=D.days[st.day]+' '+dateOf(st.day);$('#nRes').textContent=r.length;
+ $('#list').innerHTML=r.length?r.map(function(s){var d=D.d(s.disc),c=D.coach(s.coach),l=D.loc(s.loc),left=s.cap-s.bk,held=h.indexOf(s.id)>-1,pct=Math.round((s.bk+(held?1:0))/s.cap*100);
+  return '<article class="cls'+(held?' held':'')+'" id="'+s.id+'"><div class="t"><time>'+s.time+'</time><span>'+d.dur.replace('Tự do hoặc ','')+'</span></div><div><h3>'+(d.id==='kickboxing'?'<a href="../kickboxing/" style="color:inherit;text-decoration:none">'+V.esc(d.n)+'</a>':V.esc(d.n))+'</h3><div class="sub"><span><svg class="ico s" aria-hidden="true"><use href="#i-pin"/></svg>'+l.s+' · '+s.room+'</span><span><svg class="ico s" aria-hidden="true"><use href="#i-user"/></svg><a href="../huan-luyen-vien/#'+c.id+'" style="color:inherit">'+V.esc(c.n)+'</a></span></div></div>'+
+  '<div class="cap'+(left<=2?' full':'')+'"><span>'+(left?'Còn '+(left-(held?1:0)<0?0:left-(held?1:0))+'/'+s.cap+' chỗ':'Hết chỗ')+'</span><span class="bar"><i style="width:'+Math.min(100,pct)+'%"></i></span></div>'+
+  '<div class="act"><button class="btn btn-s '+(held?'btn-lime':(left?'btn-ghost':''))+'" type="button" style="width:100%" data-id="'+s.id+'" aria-pressed="'+held+'">'+(held?'Đã giữ chỗ':(left?'Giữ chỗ':'Vào danh sách chờ'))+'</button></div></article>'}).join(''):'<div class="empty">Ngày này chưa có lớp khớp bộ lọc. Thử bỏ bớt điều kiện hoặc chọn ngày khác.</div>';
+ V.glue($('#list'))}
+function renderHeld(){var h=V.holds().filter(function(id){return D.sess(id)});$('#sHeld').textContent=h.length;
+ $('#heldList').innerHTML=h.length?h.map(function(id){var s=D.sess(id),d=D.d(s.disc);return '<li><span><b>'+V.esc(d.n)+'</b>'+D.dshort[s.day]+' '+dateOf(s.day)+' · '+s.time+' · '+D.loc(s.loc).s+'</span><button type="button" data-rm="'+id+'" aria-label="Huỷ giữ chỗ '+V.esc(d.n)+' '+s.time+'"><svg class="ico s" aria-hidden="true"><use href="#i-trash"/></svg></button></li>'}).join(''):'<li style="display:block;color:var(--mute)">Chưa giữ lớp nào. Bấm "Giữ chỗ" ở lớp bạn muốn.</li>';
+ $('#heldGo').href='../tap-thu/'+(h.length?'?lop='+h[0]:'');}
+function renderWk(){var rows=[['s','Sáng'],['t','Trưa, chiều'],['c','Tối']];
+ $('#wk').innerHTML='<caption class="vh">Lịch lớp cả tuần</caption><thead><tr><th scope="col">Khung giờ</th>'+D.days.map(function(n,i){return '<th scope="col"'+(i===D.today?' style="color:var(--lime)"':'')+'>'+n+'</th>'}).join('')+'</tr></thead><tbody>'+rows.map(function(r){return '<tr><th scope="row">'+r[1]+'</th>'+D.days.map(function(n,i){return '<td>'+D.sessions.filter(function(s){return s.day===i&&slot(s.time)===r[0]&&(!st.loc||s.loc===st.loc)&&(!st.disc||s.disc===st.disc)}).map(function(s){return '<span class="pill"><b>'+s.time+' '+V.esc(D.d(s.disc).n)+'</b><span>'+D.loc(s.loc).s+'</span></span>'}).join('')+'</td>'}).join('')+'</tr>'}).join('')+'</tbody>'}
+function all(){renderDays();renderList();renderHeld();renderWk()}
+$('#days').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;st.day=+b.getAttribute('data-d');renderDays();renderList()});
+$('#fDisc').addEventListener('change',function(){st.disc=this.value;all()});
+function chips(box,key){box.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;st[key]=b.getAttribute('data-v');$$('.chip',box).forEach(function(x){x.setAttribute('aria-pressed',x===b)});all()})}
+chips($('#fLoc'),'loc');chips($('#fTime'),'tm');
+$('#list').addEventListener('click',function(e){var b=e.target.closest('button[data-id]');if(!b)return;var id=b.getAttribute('data-id'),h=V.holds(),i=h.indexOf(id),s=D.sess(id);
+ if(i>-1){h.splice(i,1);V.toast('Đã huỷ giữ chỗ lớp '+D.d(s.disc).n+'.')}else if(s.cap-s.bk<=0){V.toast('Đã thêm bạn vào danh sách chờ (minh hoạ).');return}else{h.push(id);V.toast('Đã giữ chỗ '+D.d(s.disc).n+' '+s.time+'.')}
+ V.setHolds(h);renderList();renderHeld()});
+$('#heldList').addEventListener('click',function(e){var b=e.target.closest('button[data-rm]');if(!b)return;var h=V.holds();h.splice(h.indexOf(b.getAttribute('data-rm')),1);V.setHolds(h);renderList();renderHeld();V.toast('Đã huỷ giữ chỗ.')});
+all();
+if(fs){setTimeout(function(){var t=document.getElementById(focusId);if(t){t.scrollIntoView({block:'center'});t.style.borderColor='#B8F23A'}},300)}
+else if(location.hash==='#giu-cho'){setTimeout(function(){$('#giu-cho').scrollIntoView({block:'start'})},200)}
+V.reveal();
+})();
+</script>
+<script src="/assets/kt-demo.js?v=1" data-mau="IRONVERT Athletic Club"></script>
+</body>
+</html>

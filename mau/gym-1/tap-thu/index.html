@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Đăng ký tập thử 1 buổi gym, võ, yoga | IRONVERT</title>
+<meta name="description" content="Đăng ký tập thử tại IRONVERT trong 4 bước: chọn bộ môn và cơ sở, chọn ngày giờ, điền thông tin, xem lại rồi nhận mã xác nhận. Kèm 20 phút đo chỉ số cơ thể.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="tap-thu">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Trang chủ</a> · <a href="../bo-mon/">Bộ môn</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../lich-lop/">Lịch lớp</a> · <a href="../the-thanh-vien/">Thẻ thành viên</a> · <a href="../huan-luyen-vien/">Huấn luyện viên</a> · <a href="../cong-cu/">Công cụ</a> · <a href="../co-so/">Cơ sở</a> · <a href="../tin-tuc/">Tin tức</a> · <a href="../tap-thu/">Đăng ký tập thử</a></nav></noscript></div>
+<main id="main">
+<section class="phero" style="padding-bottom:clamp(32px,4vw,56px)">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">Day 01</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Trang chủ</a></li><li aria-current="page">Đăng ký tập thử</li></ol>
+  <div class="intro" style="max-width:880px">
+   <span class="eyebrow">Tập thử 1 buổi</span>
+   <h1>Bốn bước, rồi gặp nhau ở phòng&nbsp;tập</h1>
+   <p class="lead">Buổi tập thử gồm một lớp nhóm hoặc một giờ tập có huấn luyện viên đón, cộng 20 phút đo InBody. Bạn chỉ cần mang quần áo tập và bình&nbsp;nước.</p>
+  </div>
+ </div>
+</section>
+
+<section class="sec tight" aria-label="Phiếu đăng ký tập thử">
+ <div class="wrap wiz">
+  <div>
+   <ol class="wsteps" id="wsteps"><li class="on"><b>1. Bộ môn</b><span>và cơ sở</span></li><li><b>2. Thời gian</b><span>ngày, giờ</span></li><li><b>3. Thông tin</b><span>liên hệ, sức khoẻ</span></li><li><b>4. Xác nhận</b><span>xem lại, gửi</span></li></ol>
+   <form class="wpanel" id="wf" novalidate>
+    <div data-step="0">
+     <h2 tabindex="-1">Bạn muốn thử bộ môn&nbsp;nào?</h2>
+     <p class="muted" id="quizHint" style="margin:0"></p>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Chọn bộ môn</legend><div class="pick" id="pDisc"></div></fieldset>
+     <p class="err" id="eDisc"></p>
+     <h3 class="h-s" style="margin-top:24px">Cơ sở</h3>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Chọn cơ sở</legend><div class="pick" id="pLoc"></div></fieldset>
+     <p class="err" id="eLoc"></p>
+     <div class="field" style="margin-top:16px"><label for="coach">Huấn luyện viên mong muốn (không bắt buộc)</label><select class="inp" id="coach"><option value="">Để câu lạc bộ sắp xếp</option></select></div>
+    </div>
+    <div data-step="1" hidden>
+     <h2 tabindex="-1">Chọn ngày và&nbsp;giờ</h2>
+     <p class="muted" id="timeHint" style="margin:0"></p>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Chọn ngày</legend><div class="pick p7" id="pDay"></div></fieldset>
+     <p class="err" id="eDay"></p>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Chọn giờ</legend><div class="pick p4" id="pTime"></div></fieldset>
+     <p class="err" id="eTime"></p>
+    </div>
+    <div data-step="2" hidden>
+     <h2 tabindex="-1">Thông tin để lễ tân đón&nbsp;bạn</h2>
+     <div class="f2" style="margin-top:16px">
+      <div class="field"><label for="name">Họ và tên <span class="req">*</span></label><input class="inp" id="name" autocomplete="name" aria-describedby="eName"><p class="err" id="eName"></p></div>
+      <div class="field"><label for="phone">Số điện thoại <span class="req">*</span></label><input class="inp" id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000" aria-describedby="ePhone"><p class="err" id="ePhone"></p></div>
+      <div class="field"><label for="email">Email (không bắt buộc)</label><input class="inp" id="email" type="email" autocomplete="email" aria-describedby="eEmail"><p class="err" id="eEmail"></p></div>
+      <div class="field"><label for="goal">Mục tiêu chính</label><select class="inp" id="goal"><option>Khoẻ hơn, bớt mệt</option><option>Giảm mỡ</option><option>Tăng cơ</option><option>Giải toả căng thẳng</option><option>Học một môn võ</option></select></div>
+     </div>
+     <div class="field"><label for="health">Tình trạng sức khoẻ <span class="req">*</span></label><select class="inp" id="health" aria-describedby="eHealth"><option value="">Chọn một mục</option><option>Không có vấn đề sức khoẻ đáng chú ý</option><option>Có bệnh lý, đã hoặc sẽ hỏi ý kiến bác sĩ</option><option>Có chấn thương cũ (ghi rõ bên dưới)</option><option>Đang mang thai hoặc sau sinh</option></select><p class="err" id="eHealth"></p></div>
+     <div class="field"><label for="note">Ghi chú cho huấn luyện viên</label><textarea class="inp" id="note" placeholder="Ví dụ: hay đau gối phải khi chạy"></textarea></div>
+     <label class="check"><input type="checkbox" id="agree" aria-describedby="eAgree"><span>Tôi đồng ý để IRONVERT dùng thông tin trên để liên hệ xếp lịch tập thử, theo chính sách dữ liệu cá nhân. <span class="req">*</span></span></label>
+     <p class="err" id="eAgree" style="margin-top:6px"></p>
+    </div>
+    <div data-step="3" hidden>
+     <h2 tabindex="-1">Xem lại trước khi&nbsp;gửi</h2>
+     <p class="muted" style="margin:0 0 20px">Bấm "Sửa" để quay lại bước tương ứng.</p>
+     <dl class="recap" id="recap"></dl>
+    </div>
+    <div class="wnav" id="wnav"><button class="btn btn-ghost" type="button" id="back" hidden><svg class="ico" aria-hidden="true" style="transform:scaleX(-1)"><use href="#i-go"/></svg>Quay lại</button><button class="btn btn-lime" type="submit" id="next" style="margin-left:auto">Tiếp tục <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
+   </form>
+   <div class="wpanel done-box" id="done" hidden tabindex="-1"></div>
+  </div>
+  <aside class="side-box" aria-labelledby="h-sum">
+   <h2 id="h-sum">Buổi tập của bạn</h2>
+   <dl class="recap" id="live" style="font-size:.9rem"></dl>
+   <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:18px">
+    <b class="flabel" style="display:block;margin-bottom:10px">Mang theo</b>
+    <ul class="pm-card" style="padding:0;border:0;background:none"><li style="display:flex;gap:8px"><svg class="ico s" aria-hidden="true" style="color:var(--lime);margin-top:4px"><use href="#i-check"/></svg>Quần áo, giày tập</li><li style="display:flex;gap:8px"><svg class="ico s" aria-hidden="true" style="color:var(--lime);margin-top:4px"><use href="#i-check"/></svg>Bình nước, khăn nhỏ</li><li style="display:flex;gap:8px"><svg class="ico s" aria-hidden="true" style="color:var(--lime);margin-top:4px"><use href="#i-check"/></svg>CCCD để làm thẻ khách</li></ul>
+   </div>
+   <p class="note" style="margin:16px 0 0">Mẫu giao diện: thông tin không được gửi đi đâu.</p>
+  </aside>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-next">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Sau khi đăng ký</span><h2 class="h-l" id="h-next">Điều gì sẽ diễn&nbsp;ra</h2></div></div>
+  <div class="steps-coach">
+   <div class="rv"><b>01</b><h3>Gọi xác nhận</h3><p>Lễ tân gọi trong 2 giờ làm việc để xác nhận lịch và hỏi thêm về sức khoẻ.</p></div>
+   <div class="rv d1"><b>02</b><h3>Đến sớm 15 phút</h3><p>Đọc mã xác nhận ở quầy, nhận tủ đồ, khăn và găng nếu tập võ.</p></div>
+   <div class="rv d2"><b>03</b><h3>Đo và tập</h3><p>20 phút đo InBody với huấn luyện viên, rồi vào lớp đã chọn.</p></div>
+   <div class="rv d3"><b>04</b><h3>Không ép mua</h3><p>Sau buổi tập, bạn nhận bảng gợi ý gói. Có mua hay không là quyền của bạn.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-faq">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">Hỏi đáp</span><h2 class="h-l" id="h-faq">Về buổi tập&nbsp;thử</h2><div class="health" style="margin-top:24px"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><span>Nếu có bệnh lý tim mạch, huyết áp, cơ xương khớp hoặc đang mang thai, hãy hỏi ý kiến bác sĩ trước buổi tập và báo với huấn luyện viên.</span></div></div>
+  <div class="faq">
+   <details><summary>Đổi lịch tập thử được không?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Được. Gọi hotline hoặc trả lời tin nhắn xác nhận, đọc mã đăng ký để đổi sang ngày khác.</div></details>
+   <details><summary>Đi cùng bạn bè có được không?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Mỗi người đăng ký một phiếu riêng để huấn luyện viên chuẩn bị đủ chỗ và dụng cụ.</div></details>
+   <details><summary>Tập thử bơi có cần biết bơi?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Không cần. Buổi thử bơi dành cho người lớn chưa biết bơi, tập ở làn cạn với huấn luyện viên.</div></details>
+  </div>
+ </div>
+</section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Nội dung mẫu: tên thương hiệu, giá, nhân sự, chứng chỉ, lịch lớp, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></div>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+var qs=new URLSearchParams(location.search),quiz=V.store.get('quiz',[]),plan=V.store.get('plan',null);
+var S={disc:'',loc:'',coach:'',day:null,time:'',sess:''},step=0;
+var lop=D.sess(qs.get('lop')||'');
+if(lop){S.disc=lop.disc;S.loc=lop.loc;S.day=lop.day;S.time=lop.time;S.coach=lop.coach}
+if(qs.get('mon')&&D.d(qs.get('mon')))S.disc=qs.get('mon');
+if(qs.get('coso')&&D.loc(qs.get('coso')))S.loc=qs.get('coso');
+var hc=D.coach(qs.get('hlv')||'');if(hc){S.coach=hc.id;S.loc=hc.loc;if(!S.disc)S.disc=hc.sp[0]}
+if(!S.disc&&quiz.length)S.disc=quiz[0];
+$('#quizHint').textContent=quiz.length?'Gợi ý từ quiz của bạn: '+quiz.map(function(i){return D.d(i).n}).join(', ')+'.':'Chưa biết chọn gì? Làm quiz 5 câu ở trang Công cụ.';
+var now=new Date();
+function dOf(off){var x=new Date(now);x.setDate(now.getDate()+off);return x}
+function fmtD(x){return ('0'+x.getDate()).slice(-2)+'/'+('0'+(x.getMonth()+1)).slice(-2)+'/'+x.getFullYear()}
+function wd(x){return (x.getDay()+6)%7}
+$('#pDisc').innerHTML=D.disc.map(function(d){var q=quiz.indexOf(d.id)>-1;return '<label><input type="radio" name="disc" value="'+d.id+'"><b>'+d.n+'</b><span>'+d.dur+(q?' · gợi ý từ quiz':'')+'</span></label>'}).join('');
+function renderLoc(){var d=D.d(S.disc);$('#pLoc').innerHTML=D.locs.map(function(l){var ok=!d||d.locs.indexOf(l.id)>-1;return '<label'+(ok?'':' aria-disabled="true"')+'><input type="radio" name="loc" value="'+l.id+'"'+(ok?'':' disabled')+(S.loc===l.id&&ok?' checked':'')+'><b>'+l.s+'</b><span>'+(ok?l.ward:'Chưa có bộ môn này')+'</span></label>'}).join('');if(d&&S.loc&&d.locs.indexOf(S.loc)<0)S.loc=''}
+function renderCoach(){var r=D.coaches.filter(function(c){return (!S.disc||c.sp.indexOf(S.disc)>-1||S.disc==='pt')&&(!S.loc||c.loc===S.loc)});if(S.coach&&!r.some(function(c){return c.id===S.coach}))S.coach='';
+ $('#coach').innerHTML='<option value="">Để câu lạc bộ sắp xếp</option>'+r.map(function(c){return '<option value="'+c.id+'"'+(c.id===S.coach?' selected':'')+'>'+c.n+' · '+c.role+'</option>'}).join('')}
+function slots(dayIdx){return D.sessions.filter(function(s){return s.disc===S.disc&&s.loc===S.loc&&s.day===dayIdx})}
+var FREE=['06:00','07:00','09:00','12:00','16:00','17:30','18:30','19:30'];
+function hasCls(){return D.sessions.some(function(s){return s.disc===S.disc&&s.loc===S.loc})}
+function renderDays(){var h='';for(var i=1;i<=7;i++){var x=dOf(i),w=wd(x),ok=!hasCls()||slots(w).length>0,v=fmtD(x);h+='<label'+(ok?'':' aria-disabled="true"')+'><input type="radio" name="day" value="'+v+'" data-w="'+w+'"'+(ok?'':' disabled')+(S.dayStr===v&&ok?' checked':'')+'><b>'+D.dshort[w]+'</b><span>'+v.slice(0,5)+'</span></label>'}
+ $('#pDay').innerHTML=h;$('#timeHint').textContent=hasCls()?'Ngày mờ là ngày không có lớp '+D.d(S.disc).n+' ở '+D.loc(S.loc).s+'.':'Bộ môn này tập theo khung giờ tự do, huấn luyện viên sẽ đón bạn.';renderTimes()}
+function renderTimes(){if(S.dayW==null){$('#pTime').innerHTML='<p class="muted" style="grid-column:1/-1;margin:0">Chọn ngày trước để xem giờ.</p>';return}
+ var ts=hasCls()?slots(S.dayW).map(function(s){return {t:s.time,id:s.id,left:s.cap-s.bk}}):FREE.map(function(t){return {t:t,id:'',left:5}});
+ $('#pTime').innerHTML=ts.map(function(t){return '<label'+(t.left?'':' aria-disabled="true"')+'><input type="radio" name="time" value="'+t.t+'" data-id="'+t.id+'"'+(t.left?'':' disabled')+(S.time===t.t?' checked':'')+'><b>'+t.t+'</b>'+(t.id?'<span>còn '+t.left+' chỗ</span>':'')+'</label>'}).join('')}
+/* chọn sẵn từ lớp đã giữ */
+if(lop){for(var i=1;i<=7;i++){var x=dOf(i);if(wd(x)===lop.day){S.dayStr=fmtD(x);S.dayW=lop.day;break}}}
+function setRadio(name,v){var r=$('input[name="'+name+'"][value="'+v+'"]');if(r)r.checked=true}
+setRadio('disc',S.disc);renderLoc();renderCoach();
+function live(){var d=D.d(S.disc),l=D.loc(S.loc),c=D.coach(S.coach);
+ var rows=[['Bộ môn',d?d.n:'Chưa chọn'],['Cơ sở',l?l.s:'Chưa chọn'],['HLV',c?c.n:'Câu lạc bộ sắp xếp'],['Ngày',S.dayStr?D.days[S.dayW]+', '+S.dayStr:'Chưa chọn'],['Giờ',S.time||'Chưa chọn']];
+ if(plan&&plan.plan)rows.push(['Gói quan tâm','Gói '+plan.plan.charAt(0).toUpperCase()+plan.plan.slice(1)]);
+ $('#live').innerHTML=rows.map(function(r){return '<dt>'+r[0]+'</dt><dd>'+V.esc(r[1])+'</dd>'}).join('')}
+live();
+$('#pDisc').addEventListener('change',function(e){S.disc=e.target.value;S.dayStr=null;S.dayW=null;S.time='';renderLoc();renderCoach();err('eDisc','');live()});
+$('#pLoc').addEventListener('change',function(e){S.loc=e.target.value;S.dayStr=null;S.dayW=null;S.time='';renderCoach();err('eLoc','');live()});
+$('#coach').addEventListener('change',function(){S.coach=this.value;live()});
+$('#pDay').addEventListener('change',function(e){S.dayStr=e.target.value;S.dayW=+e.target.getAttribute('data-w');S.time='';renderTimes();err('eDay','');live()});
+$('#pTime').addEventListener('change',function(e){S.time=e.target.value;S.sess=e.target.getAttribute('data-id');err('eTime','');live()});
+function err(id,m,inp){$('#'+id).textContent=m;if(inp)inp.setAttribute('aria-invalid',m?'true':'false')}
+function validate(){var bad=null;
+ if(step===0){if(!S.disc){err('eDisc','Hãy chọn một bộ môn.');bad=bad||$('#pDisc input')}if(!S.loc){err('eLoc','Hãy chọn cơ sở.');bad=bad||$('#pLoc input:not([disabled])')}}
+ if(step===1){if(!S.dayStr){err('eDay','Hãy chọn ngày tập thử.');bad=bad||$('#pDay input:not([disabled])')}else if(!S.time){err('eTime','Hãy chọn giờ.');bad=bad||$('#pTime input:not([disabled])')}}
+ if(step===2){var n=$('#name'),p=$('#phone'),em=$('#email'),hl=$('#health'),ag=$('#agree');
+  var nv=n.value.trim();err('eName',nv.split(/\s+/).length<2||nv.length<4?'Nhập đầy đủ cả họ và tên.':'',n);
+  var pv=p.value.replace(/[\s.-]/g,'');err('ePhone',/^0\d{9}$/.test(pv)?'':'Số điện thoại gồm 10 số, bắt đầu bằng 0.',p);
+  var ev=em.value.trim();err('eEmail',ev&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ev)?'Email chưa đúng định dạng.':'',em);
+  err('eHealth',hl.value?'':'Hãy chọn tình trạng sức khoẻ để huấn luyện viên chuẩn bị.',hl);
+  err('eAgree',ag.checked?'':'Cần đồng ý để chúng tôi liên hệ xếp lịch.',ag);
+  bad=[n,p,em,hl,ag].filter(function(x){return x.getAttribute('aria-invalid')==='true'})[0]||null}
+ if(bad){bad.focus();return false}return true}
+['name','phone','email','health','agree'].forEach(function(id){$('#'+id).addEventListener('change',function(){if(step===2&&this.getAttribute('aria-invalid')==='true')validate()})});
+function go(n,init){step=n;$$('[data-step]').forEach(function(s){s.hidden=+s.getAttribute('data-step')!==n});
+ $$('#wsteps li').forEach(function(li,i){li.className=i<n?'done':(i===n?'on':'')});
+ $('#back').hidden=n===0;$('#next').innerHTML=n===3?'Gửi đăng ký <svg class="ico go" aria-hidden="true"><use href="#i-check"/></svg>':'Tiếp tục <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg>';
+ if(n===1)renderDays();
+ if(n===3){var d=D.d(S.disc),l=D.loc(S.loc),c=D.coach(S.coach);
+  var R=[['Bộ môn',d.n,0],['Cơ sở',l.n+', '+l.ward,0],['Huấn luyện viên',c?c.n:'Câu lạc bộ sắp xếp',0],['Thời gian',D.days[S.dayW]+', '+S.dayStr+' lúc '+S.time,1],['Họ tên',$('#name').value.trim(),2],['Điện thoại',$('#phone').value.trim(),2],['Email',$('#email').value.trim()||'Không có',2],['Mục tiêu',$('#goal').value,2],['Sức khoẻ',$('#health').value,2],['Ghi chú',$('#note').value.trim()||'Không có',2]];
+  $('#recap').innerHTML=R.map(function(r){return '<dt>'+r[0]+'</dt><dd style="display:flex;justify-content:space-between;gap:12px"><span>'+V.esc(r[1])+'</span><button type="button" class="lnk" data-go="'+r[2]+'" style="background:none;border:0;cursor:pointer;padding:0;min-height:0">Sửa</button></dd>'}).join('')}
+ var h=$('[data-step="'+n+'"] h2');V.glue($('#wf'));if(init)return;h&&h.focus({preventScroll:true});
+ var top=$('#wsteps').getBoundingClientRect().top;if(top<70||top>innerHeight)window.scrollTo({top:pageYOffset+top-90})}
+$('#recap').addEventListener('click',function(e){var b=e.target.closest('[data-go]');if(b)go(+b.getAttribute('data-go'))});
+$('#back').addEventListener('click',function(){go(step-1)});
+$('#wf').addEventListener('submit',function(e){e.preventDefault();if(!validate())return;if(step<3){go(step+1);return}
+ var A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',code='IV-';for(var i=0;i<6;i++){code+=A[Math.floor(Math.random()*A.length)];if(i===3)code+='-'}
+ var d=D.d(S.disc),l=D.loc(S.loc);V.store.set('trial',{code:code,disc:S.disc,loc:S.loc,day:S.dayStr,time:S.time});
+ if(S.sess){var h=V.holds();if(h.indexOf(S.sess)<0){h.push(S.sess);V.setHolds(h)}}
+ $('#wf').hidden=true;$$('#wsteps li').forEach(function(li){li.className='done'});
+ var dn=$('#done');dn.hidden=false;dn.innerHTML='<div class="check-anim"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div><h2 class="h-m">Đã nhận đăng ký</h2><p class="muted" style="margin:10px 0 0">Mã xác nhận (minh hoạ) của bạn</p><div class="codeb">'+code+'</div><p style="max-width:52ch;margin:0 auto 20px;color:var(--ink2)">'+V.esc(d.n)+' tại '+V.esc(l.s)+', '+D.days[S.dayW].toLowerCase()+' '+S.dayStr+' lúc '+S.time+'. Lễ tân sẽ gọi số '+V.esc($('#phone').value.trim())+' để xác nhận. Đây là mẫu giao diện, thông tin không được gửi đi.</p><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center"><button class="btn btn-lime" type="button" id="cal">Thêm vào lịch</button><a class="btn btn-ghost" href="../lich-lop/#giu-cho">Xem lớp đã giữ</a><a class="btn btn-ghost" href="../">Về trang chủ</a></div>';
+ V.glue(dn);dn.focus();window.scrollTo({top:pageYOffset+dn.getBoundingClientRect().top-100});
+ $('#cal').addEventListener('click',function(){V.toast('Mẫu giao diện: bản thật sẽ tải tệp lịch .ics.')})});
+go(0,true);
+if(qs.get('lop')||qs.get('hlv')||qs.get('mon')||qs.get('coso'))V.toast('Đã điền sẵn lựa chọn của bạn.');
+V.reveal();
+})();
+</script>
+<script src="/assets/kt-demo.js?v=1" data-mau="IRONVERT Athletic Club"></script>
+</body>
+</html>
