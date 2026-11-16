@@ -573,5 +573,19 @@
 }
 
 /* v21: template price badge on cards (top-right, the industry tag stays top-left) */
-.tcard .shot .gia{position:absolute;z-index:2;top:12px;right:12px;padding:5px 11px;border-radius:999px;font-size:13px;font-weight:800;color:#fff;background:linear-gradient(135deg,#FF8A3D,#E8441E);box-shadow:0 6px 18px -6px rgba(232,68,30,.7);white-space:nowrap}
+/* v22: template price moved from the image corner to the action row, full number (Tuyền 16/11/2026) */
+.tcard .tprice{flex:1 0 100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;margin-bottom:4px;border-radius:14px;background:rgba(255,138,61,.08);border:1px dashed rgba(255,138,61,.38)}
+.tcard .tprice span{font-size:13px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:7px}
+.tcard .tprice span::before{content:"";width:7px;height:7px;border-radius:50%;background:#FF8A3D;box-shadow:0 0 0 3px rgba(255,138,61,.18)}
+.tcard .tprice b{font-size:19px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;background:linear-gradient(100deg,#FFB070,#FF6A2B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tcard .ta a.use{flex:1;justify-content:center}
+@media (max-width:767px){.tgrid.feat .tcard .ta{flex-wrap:wrap}.tgrid.feat .tcard .tprice{padding:7px 11px}.tgrid.feat .tcard .tprice b{font-size:16px}}
 .tcard .ta .use{font-weight:700}
+/* v23: a group with only one template (e.g. Gym & Pilates at launch): one wide horizontal card instead of a lone card in a 3-column grid (16/11/2026, live_audit squeezed) */
+.tgrid:not(.feat):has(>.tcard:only-child){grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.tgrid:not(.feat)>.tcard:only-child{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+.tgrid:not(.feat)>.tcard:only-child .shot{aspect-ratio:16/11;height:100%}
+.tgrid:not(.feat)>.tcard:only-child .tb{padding:32px 34px;justify-content:center;gap:10px}
+.tgrid:not(.feat)>.tcard:only-child h3{font-size:26px}.tgrid:not(.feat)>.tcard:only-child p{font-size:16px}
+.tgrid:not(.feat)>.tcard:only-child .ta{margin-top:18px}}
+@media (min-width:600px) and (max-width:899px){.tgrid:not(.feat)>.tcard:only-child{max-width:560px;width:100%;margin:0 auto}}
