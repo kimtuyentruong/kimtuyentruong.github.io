@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lớp pilates reformer, mat, tower, 1 kèm 1 | Lụa Pilates</title>
+<meta name="description" content="Mười lớp pilates tại Lụa: reformer, mat, tower và 1 kèm 1. Lọc theo cấp độ Nền tảng, Trung cấp, Nâng cao; xem thời lượng, số chỗ và lớp hợp với ai.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#F6F0E8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23F6F0E8'/%3E%3Cpath d='M10 33V20a10 10 0 0 1 20 0v13' fill='none' stroke='%239A5440' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='22' r='3.2' fill='%23A3B09A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&amp;family=Inter:wght@400;500;600&amp;display=swap&amp;subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+.phead .arch{height:clamp(320px,34vw,480px)}
+.types{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ty{display:grid;gap:12px;align-content:start;padding:28px 24px 30px;text-align:left;background:transparent;border:0;border-right:1px solid var(--line);cursor:pointer;transition:background .3s var(--ease)}
+.ty:last-child{border-right:0}
+.ty:hover,.ty.on{background:var(--paper)}
+.ty .k{font:300 italic 15px/1 var(--serif);color:var(--clay)}
+.ty b{font:400 var(--h3)/1.1 var(--serif);color:var(--ink)}
+.ty span{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.ty em{font-style:normal;font-size:13px;color:var(--sage-d);font-weight:600}
+.fbar{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;margin-bottom:32px;padding:20px 0;border-bottom:1px solid var(--line)}
+.fgrp{display:grid;gap:10px}
+.fgrp>span{font:600 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.count{font:400 italic 20px/1 var(--serif);color:var(--ink-2)}
+.count b{font-style:normal;color:var(--clay);font-variant-numeric:tabular-nums}
+.cls{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cl{display:grid;grid-template-rows:auto 1fr;background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.cl[hidden]{display:none}
+.cl.pop{animation:pop .45s var(--ease)}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cl-ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.cl-ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.cl:hover .cl-ph img{transform:scale(1.04)}
+.cl-ph .tag{position:absolute;left:14px;top:14px}
+.cl-tx{padding:22px 24px 26px;display:grid;gap:12px;align-content:start}
+.cl-meta{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:13px;color:var(--muted)}
+.cl-tx h3{font-size:var(--h4)}
+.cl-tx p{font-size:15px;color:var(--ink-2)}
+.cl-tx .link{background:none;border:0;border-bottom:1px solid currentColor;padding:0 0 2px;justify-self:start;cursor:pointer;min-height:32px}
+.empty{display:none;padding:48px;text-align:center;border:1px dashed var(--sand-2);border-radius:22px;color:var(--muted)}
+.empty.show{display:block}
+.empty button{margin-top:16px}
+dialog.dlg{width:min(680px,calc(100vw - 32px));max-height:calc(100dvh - 48px);padding:0;border:0;border-radius:24px;background:var(--paper);color:var(--ink);box-shadow:0 40px 80px -30px rgba(45,37,32,.45);overflow:auto}
+dialog.dlg::backdrop{background:rgba(45,37,32,.5)}
+dialog.dlg[open]{animation:pop .4s var(--ease)}
+.dlg-ph{aspect-ratio:16/8;overflow:hidden}
+.dlg-ph img{width:100%;height:100%;object-fit:cover}
+.dlg-b{padding:28px clamp(20px,4vw,40px) 32px;display:grid;gap:16px}
+.dlg-b dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;margin:0;font-size:15px}
+.dlg-b dt{font-weight:600;color:var(--sage-d)}
+.dlg-b dd{margin:0;color:var(--ink-2)}
+.dlg-x{position:absolute;right:14px;top:14px;width:44px;height:44px;border-radius:50%;border:0;background:var(--paper);display:grid;place-items:center;cursor:pointer}
+.dlg-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.lvls{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.lvl{padding:32px;border-radius:22px;background:var(--paper);display:grid;gap:14px;align-content:start}
+.lvl .lv i{width:10px;height:10px}
+.lvl h3{font-size:var(--h3)}
+.lvl p{font-size:15px;color:var(--ink-2)}
+.lvl ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:14.5px}
+.lvl li{display:flex;gap:10px}
+.lvl li .ico{width:18px;height:18px;color:var(--sage-d);margin-top:3px}
+.bring{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.bring div{display:grid;gap:10px;align-content:start;padding-top:20px;border-top:1px solid var(--line)}
+.bring .ico{width:28px;height:28px;color:var(--clay)}
+.bring b{font:400 var(--h4)/1.25 var(--serif)}
+.bring p{font-size:14.5px;color:var(--ink-2)}
+@media (min-width:1025px){
+  .cl[data-t=private]{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .cl[data-t=private] .cl-ph{aspect-ratio:auto;min-height:280px}
+  .cl[data-t=private] .cl-tx{align-content:center;padding:40px}
+}
+@media (max-width:1024px){
+  .types{grid-template-columns:1fr 1fr}
+  .ty:nth-child(2){border-right:0}
+  .ty:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .cls{grid-template-columns:1fr 1fr}
+  .lvls{grid-template-columns:1fr}
+  .bring{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .types{grid-template-columns:1fr}
+  .ty{border-right:0;border-bottom:1px solid var(--line);padding:22px 4px}
+  .ty:last-child{border-bottom:0}
+  .cls{grid-template-columns:1fr}
+  .bring{grid-template-columns:1fr}
+  .fbar{gap:20px}
+}
+</style>
+</head>
+<body data-page="cac-lop">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c1.2-3.5 3.6-5.2 6.5-5.2s5.3 1.7 6.5 5.2"/><path d="M15.5 4.8a3.5 3.5 0 0 1 0 6.4M18 14.6c1.8.7 3 2.4 3.6 5.4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19l8-8"/></symbol>
+<symbol id="i-breath" viewBox="0 0 24 24"><path d="M3 9h11a3 3 0 1 0-3-3M3 15h15a3 3 0 1 1-3 3M3 12h8"/></symbol>
+<symbol id="i-spine" viewBox="0 0 24 24"><path d="M12 2v20"/><rect x="8.5" y="4" width="7" height="3" rx="1.5"/><rect x="8" y="9" width="8" height="3" rx="1.5"/><rect x="8.5" y="14" width="7" height="3" rx="1.5"/><rect x="9.5" y="19" width="5" height="2.5" rx="1.25"/></symbol>
+<symbol id="i-sock" viewBox="0 0 24 24"><path d="M9 3h6v8l3.5 4.5a3 3 0 0 1-4.7 3.8L9 13.5z"/><path d="M9 6.5h6"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+<symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.8 2.3 4.6 5 5"/></symbol>
+<symbol id="i-zalo" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v9a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 4v-4A2.5 2.5 0 0 1 4 14.5z"/><path d="M8.5 8h4l-4 5h4M15 8v5"/></symbol>
+</defs></svg>
+<header class="hd" id="hd">
+<div class="wrap hd-in">
+<a class="logo" href="../" aria-label="Lụa Pilates Atelier, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 34V20a11 11 0 0 1 22 0v14" fill="none" stroke="#9A5440" stroke-width="2.2" stroke-linecap="round"/><path d="M14 34V21a6 6 0 0 1 12 0v13" fill="none" stroke="#A3B09A" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="27" r="2.4" fill="#9A5440"/></svg><span><b>Lụa</b><small>Pilates Atelier</small></span></a>
+<nav class="nav" aria-label="Menu chính"><a href="../">Trang chủ</a><a href="../cac-lop/" aria-current="page">Các lớp</a><a href="../goi-buoi/">Gói buổi</a><a href="../lich-lop/">Lịch lớp</a><a href="../giao-vien/">Giáo viên</a></nav>
+<a class="btn btn-pri" href="../dat-lop/">Đặt&nbsp;buổi&nbsp;đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Mở menu"><span></span></button>
+</div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu điện thoại" aria-hidden="true" inert>
+<a href="../">Trang chủ<small>01</small></a><a href="../cac-lop/" aria-current="page">Các lớp<small>02</small></a><a href="../goi-buoi/">Gói buổi<small>03</small></a><a href="../lich-lop/">Lịch lớp<small>04</small></a><a href="../giao-vien/">Giáo viên<small>05</small></a>
+<a class="btn btn-pri" href="../dat-lop/">Đặt&nbsp;buổi&nbsp;đầu</a>
+<div class="mnav-foot">Phường An Khánh, TP.HCM · 0900&nbsp;000&nbsp;000<br>Mở cửa 06:00–21:00 mỗi ngày</div>
+</nav>
+<main id="main">
+
+<section class="phead">
+<div class="wrap phead-grid">
+<div><ol class="crumb"><li><a href="../">Trang chủ</a></li><li aria-current="page">Các lớp</li></ol><p class="eyebrow rv">10 lớp · 4 loại hình</p><h1 class="rv d1" style="margin-top:18px">Chọn lớp theo <em>cơ&nbsp;thể</em> bạn hôm&nbsp;nay</h1><p class="lead rv d2">Có ngày cần sức bền, có ngày chỉ cần kéo giãn. Lọc theo loại máy và cấp độ để tìm lớp hợp với bạn, bấm vào từng lớp để xem kỹ.</p></div>
+<div class="arch rv d2"><img src="https://images.unsplash.com/photo-1717500252297-b09508db7ceb?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Khu tập có máy tower và reformer bằng gỗ cạnh chậu cây" width="800" height="960" fetchpriority="high" style="object-position:40% 50%"></div>
+</div>
+</section>
+
+<section class="sec-sm" style="padding-top:0">
+<div class="wrap">
+<div class="types rv" id="types">
+<button class="ty" type="button" data-t="reformer"><span class="k">01</span><b>Reformer</b><span>Khung trượt và lò xo. Nền tảng của studio, 5 lớp từ nhẹ đến khó.</span><em>8 máy mỗi lớp</em></button>
+<button class="ty" type="button" data-t="mat"><span class="k">02</span><b>Mat</b><span>Tập trên thảm với sức nặng cơ thể và dụng cụ nhỏ. Dễ tự tập lại ở nhà.</span><em>12 thảm mỗi lớp</em></button>
+<button class="ty" type="button" data-t="tower"><span class="k">03</span><b>Tower</b><span>Khung đứng với lò xo treo, thanh đẩy. Rất hợp cho bài cột sống.</span><em>4 máy mỗi lớp</em></button>
+<button class="ty" type="button" data-t="private"><span class="k">04</span><b>1&nbsp;kèm&nbsp;1</b><span>Một giáo viên, một học viên. Bài dựng riêng theo tình trạng của bạn.</span><em>Đặt giờ linh hoạt</em></button>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:clamp(32px,4vw,56px)" id="loc">
+<div class="wrap">
+<div class="fbar">
+<div class="fgrp"><span id="ft1">Loại hình</span><div class="chips" role="group" aria-labelledby="ft1" id="fType">
+<button class="chip" type="button" data-v="all" aria-pressed="true">Tất cả</button><button class="chip" type="button" data-v="reformer" aria-pressed="false">Reformer</button><button class="chip" type="button" data-v="mat" aria-pressed="false">Mat</button><button class="chip" type="button" data-v="tower" aria-pressed="false">Tower</button><button class="chip" type="button" data-v="private" aria-pressed="false">1&nbsp;kèm&nbsp;1</button></div></div>
+<div class="fgrp"><span id="ft2">Cấp độ</span><div class="chips" role="group" aria-labelledby="ft2" id="fLv">
+<button class="chip" type="button" data-v="all" aria-pressed="true">Mọi cấp</button><button class="chip" type="button" data-v="1" aria-pressed="false">Nền tảng</button><button class="chip" type="button" data-v="2" aria-pressed="false">Trung cấp</button><button class="chip" type="button" data-v="3" aria-pressed="false">Nâng cao</button></div></div>
+<p class="count" aria-live="polite"><b id="cnt">10</b> lớp phù hợp</p>
+</div>
+<div class="cls" id="cls">
+<article class="cl" data-t="reformer" data-l="1" id="ref-nen">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1747240549807-fc3962949818?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Reformer Nền tảng tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Reformer</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Nền tảng</span><span class="num">50&nbsp;phút</span><span>tối đa 8 người</span></div>
+<h3>Reformer Nền tảng</h3><p>Làm quen máy, học thở ngực sườn và giữ cột sống trung tính.</p>
+<button class="link" type="button" data-open="ref-nen" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Lớp nhịp chậm, mỗi bài lặp ít lần để bạn hiểu cảm giác đúng. Giáo viên giới thiệu từng bộ phận máy, cách lên xuống an toàn và cách đổi lò xo.</p><dl><dt>Hợp với</dt><dd>Người mới, người quay lại sau thời gian nghỉ dài</dd><dt>Thời lượng</dt><dd>50&nbsp;phút, tối đa 8 người</dd><dt>Cấp độ</dt><dd>Nền tảng</dd></dl></template>
+</div></article>
+<article class="cl" data-t="reformer" data-l="1" id="ref-vp">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1717500251741-cdbc93342d5a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Reformer Văn phòng tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Reformer</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Nền tảng</span><span class="num">50&nbsp;phút</span><span>tối đa 8 người</span></div>
+<h3>Reformer Văn phòng</h3><p>Mở ngực, thả vai, kéo giãn hông sau một ngày dài ngồi.</p>
+<button class="link" type="button" data-open="ref-vp" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Tập trung vào cổ vai gáy, lưng trên và cơ gập hông. Có phần bài thở và kéo giãn dài hơn lớp thường. Giờ trưa và tối sau giờ làm.</p><dl><dt>Hợp với</dt><dd>Người ngồi nhiều, hay mỏi cổ vai gáy</dd><dt>Thời lượng</dt><dd>50&nbsp;phút, tối đa 8 người</dd><dt>Cấp độ</dt><dd>Nền tảng</dd></dl></template>
+</div></article>
+<article class="cl" data-t="reformer" data-l="2" id="ref-flow">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1747239202356-764770773c9a?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Reformer Flow tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Reformer</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><span>Trung cấp</span><span class="num">50&nbsp;phút</span><span>tối đa 8 người</span></div>
+<h3>Reformer Flow</h3><p>Các bài nối nhau liền mạch, nhịp vừa, nhiều bài xoay thân.</p>
+<button class="link" type="button" data-open="ref-flow" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Khi đã quen máy, bạn học nối bài không nghỉ lâu giữa chừng. Lớp kết hợp sức bền và độ linh hoạt, có bài quỳ và đứng trên khung trượt.</p><dl><dt>Hợp với</dt><dd>Đã tập từ 8 buổi reformer trở lên</dd><dt>Thời lượng</dt><dd>50&nbsp;phút, tối đa 8 người</dd><dt>Cấp độ</dt><dd>Trung cấp</dd></dl></template>
+</div></article>
+<article class="cl" data-t="reformer" data-l="1" id="ref-ph">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1717500251833-d807c5753ded?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Reformer Kéo giãn tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Reformer</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Nền tảng</span><span class="num">50&nbsp;phút</span><span>tối đa 8 người</span></div>
+<h3>Reformer Kéo giãn</h3><p>Lò xo nhẹ, chuyển động rộng, kéo giãn có kiểm soát.</p>
+<button class="link" type="button" data-open="ref-ph" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Lớp phục hồi cuối tuần: nhiều bài nằm, ngồi, nhịp thở dài. Hợp xen kẽ với các ngày chạy bộ, đạp xe hoặc tập tạ.</p><dl><dt>Hợp với</dt><dd>Mọi cấp độ, người tập môn khác cần thả lỏng</dd><dt>Thời lượng</dt><dd>50&nbsp;phút, tối đa 8 người</dd><dt>Cấp độ</dt><dd>Nền tảng</dd></dl></template>
+</div></article>
+<article class="cl" data-t="reformer" data-l="3" id="ref-sb">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1747239685045-fcbcf98985db?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Reformer Sức bền tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Reformer</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Nâng cao</span><span class="num">50&nbsp;phút</span><span>tối đa 8 người</span></div>
+<h3>Reformer Sức bền</h3><p>Lò xo nặng hơn, nhiều bài chống tay và đứng trên máy.</p>
+<button class="link" type="button" data-open="ref-sb" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Lớp cho người đã vững nền: bài plank trên khung trượt, bài một chân, bài đứng cần thăng bằng. Giáo viên vẫn chỉnh từng người.</p><dl><dt>Hợp với</dt><dd>Đã tập Flow đều đặn, không có chấn thương đang điều trị</dd><dt>Thời lượng</dt><dd>50&nbsp;phút, tối đa 8 người</dd><dt>Cấp độ</dt><dd>Nâng cao</dd></dl></template>
+</div></article>
+<article class="cl" data-t="mat" data-l="1" id="mat-nen">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Mat Nền tảng tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Mat</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i></i><i></i></span><span>Nền tảng</span><span class="num">55&nbsp;phút</span><span>tối đa 12 người</span></div>
+<h3>Mat Nền tảng</h3><p>Chuỗi bài cổ điển trên thảm, không cần máy.</p>
+<button class="link" type="button" data-open="mat-nen" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Học các bài kinh điển như hundred, roll up, single leg stretch theo phiên bản nhẹ. Lớp giúp bạn tự tập được ở nhà.</p><dl><dt>Hợp với</dt><dd>Người mới, người muốn tập thêm ở nhà</dd><dt>Thời lượng</dt><dd>55&nbsp;phút, tối đa 12 người</dd><dt>Cấp độ</dt><dd>Nền tảng</dd></dl></template>
+</div></article>
+<article class="cl" data-t="mat" data-l="2" id="mat-dc">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1715780463401-b9ef0567943e?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Mat Dụng cụ tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Mat</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><span>Trung cấp</span><span class="num">55&nbsp;phút</span><span>tối đa 12 người</span></div>
+<h3>Mat Dụng cụ</h3><p>Thảm kết hợp vòng pilates, bóng nhỏ, dây kháng lực.</p>
+<button class="link" type="button" data-open="mat-dc" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Dụng cụ nhỏ giúp bạn cảm nhận rõ nhóm cơ đang làm việc. Mỗi tuần đổi một dụng cụ chính để bài không lặp.</p><dl><dt>Hợp với</dt><dd>Đã quen bài thảm cơ bản</dd><dt>Thời lượng</dt><dd>55&nbsp;phút, tối đa 12 người</dd><dt>Cấp độ</dt><dd>Trung cấp</dd></dl></template>
+</div></article>
+<article class="cl" data-t="tower" data-l="2" id="tow-cs">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1717500252642-ab69af027833?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Tower Cột sống tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Tower</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><span>Trung cấp</span><span class="num">50&nbsp;phút</span><span>tối đa 4 người</span></div>
+<h3>Tower Cột sống</h3><p>Máy tower với thanh đẩy và lò xo treo, nhóm 4 người.</p>
+<button class="link" type="button" data-open="tow-cs" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Lớp nhỏ tập trung vào chuyển động từng đốt sống: cuộn lưng, duỗi lưng, xoay. Giáo viên đứng sát để hỗ trợ bằng tay.</p><dl><dt>Hợp với</dt><dd>Người hay cứng lưng, đã có vài buổi reformer</dd><dt>Thời lượng</dt><dd>50&nbsp;phút, tối đa 4 người</dd><dt>Cấp độ</dt><dd>Trung cấp</dd></dl></template>
+</div></article>
+<article class="cl" data-t="tower" data-l="3" id="tow-cs3">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1717500252179-2811af29e4f7?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp Tower Chuyên sâu tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag ">Tower</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Nâng cao</span><span class="num">50&nbsp;phút</span><span>tối đa 4 người</span></div>
+<h3>Tower Chuyên sâu</h3><p>Bài treo người, kéo dây ở tư thế khó hơn.</p>
+<button class="link" type="button" data-open="tow-cs3" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Kết hợp lò xo treo và thanh đẩy cho các bài cần sức mạnh và kiểm soát cao. Chỉ mở cho học viên giáo viên đã đánh giá.</p><dl><dt>Hợp với</dt><dd>Học viên nâng cao, cần giáo viên duyệt trước</dd><dt>Thời lượng</dt><dd>50&nbsp;phút, tối đa 4 người</dd><dt>Cấp độ</dt><dd>Nâng cao</dd></dl></template>
+</div></article>
+<article class="cl" data-t="private" data-l="0" id="pri">
+<div class="cl-ph"><img src="https://images.unsplash.com/photo-1770012905139-713758ded6ec?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Lớp 1 kèm 1 Riêng tại studio" width="700" height="520" loading="lazy" decoding="async"><span class="tag clay">1 kèm 1</span></div>
+<div class="cl-tx"><div class="cl-meta"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><span>Mọi cấp độ</span><span class="num">55&nbsp;phút</span><span>1 học viên</span></div>
+<h3>1 kèm 1 Riêng</h3><p>Buổi riêng với một giáo viên, dùng cả reformer và tower.</p>
+<button class="link" type="button" data-open="pri" aria-haspopup="dialog">Xem chi tiết lớp <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<template><p class="lead">Bài tập dựng riêng theo mục tiêu và tình trạng cơ thể bạn. Hợp cho buổi đầu, người có lưu ý sức khoẻ hoặc muốn tiến nhanh hơn ở một kỹ thuật.</p><dl><dt>Hợp với</dt><dd>Mọi cấp độ, người cần chú ý riêng</dd><dt>Thời lượng</dt><dd>55&nbsp;phút, 1 học viên</dd><dt>Cấp độ</dt><dd>Mọi cấp độ</dd></dl></template>
+</div></article>
+</div>
+<div class="empty" id="empty"><p>Chưa có lớp nhóm ở cấp độ này cho loại hình bạn chọn. Buổi 1&nbsp;kèm&nbsp;1 luôn mở cho mọi cấp độ.</p><button class="btn btn-ghost" type="button" id="reset">Xem tất cả lớp</button></div>
+</div>
+</section>
+
+<dialog class="dlg" id="dlg" aria-labelledby="dlgT">
+<button class="dlg-x" type="button" id="dlgX" aria-label="Đóng"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+<div class="dlg-ph" id="dlgPh"></div>
+<div class="dlg-b"><div class="cl-meta" id="dlgM"></div><h2 id="dlgT" style="font-size:var(--h3)">Tên lớp</h2><div id="dlgB"></div>
+<div class="dlg-acts"><a class="btn btn-pri" href="../lich-lop/" id="dlgCal">Xem giờ lớp này <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="../dat-lop/">Đặt buổi đầu</a></div></div>
+</dialog>
+
+<section class="sec bg-sand">
+<div class="wrap">
+<div class="sec-head rv"><p class="eyebrow">Cấp độ ở Lụa</p><h2>Lên lớp khi cơ thể sẵn sàng, không theo&nbsp;lịch</h2><p class="lead">Giáo viên ghi chú sau mỗi buổi. Khi đủ các dấu hiệu dưới đây, bạn sẽ được gợi ý thử lớp cao hơn.</p></div>
+<div class="lvls">
+<div class="lvl rv"><span class="lv" aria-hidden="true"><i class="on"></i><i></i><i></i></span><h3>Nền tảng</h3><p>Hiểu máy, hiểu hơi thở. Không cần kinh nghiệm.</p><ul><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Biết đổi lò xo, chỉnh thanh đạp</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Giữ được cột sống trung tính khi nằm</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Thở ngực sườn trong lúc chuyển động</li></ul></div>
+<div class="lvl rv d1"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><h3>Trung cấp</h3><p>Nối bài liền mạch, bắt đầu có bài quỳ và xoay.</p><ul><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Đã tập khoảng 8–12 buổi</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Giữ vai ổn định khi chống tay</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tự nhận ra khi mình lệch tư thế</li></ul></div>
+<div class="lvl rv d2"><span class="lv" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><h3>Nâng cao</h3><p>Lò xo nặng, bài một chân, bài đứng trên máy.</p><ul><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tập Flow đều đặn vài tháng</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Không có chấn thương đang điều trị</li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Được giáo viên duyệt trước</li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head split rv"><div><p class="eyebrow">Trước giờ lớp</p><h2 style="margin-top:16px">Mang gì, tới lúc&nbsp;nào</h2></div><p class="lead">Tới trước 10 phút để thay đồ và để giáo viên hỏi nhanh tình trạng hôm nay.</p></div>
+<div class="bring">
+<div class="rv"><svg class="ico" aria-hidden="true"><use href="#i-sock"/></svg><b>Tất chống trượt</b><p>Bắt buộc khi lên máy. Studio có bán nếu bạn quên.</p></div>
+<div class="rv d1"><svg class="ico" aria-hidden="true"><use href="#i-user"/></svg><b>Đồ tập ôm vừa</b><p>Áo không quá rộng để giáo viên nhìn rõ vai và lưng.</p></div>
+<div class="rv d2"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg><b>Không cần mang nước</b><p>Có nước ấm, nước lọc và khăn sạch mỗi buổi.</p></div>
+<div class="rv d3"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><b>Báo nếu mệt, đau</b><p>Nói với giáo viên trước giờ học. Có bệnh lý, hỏi bác sĩ trước khi tập.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec-sm" style="padding-top:0">
+<div class="wrap"><div class="cta-band rv">
+<div><h2>Chưa biết chọn lớp nào? <em>Bắt đầu bằng 1&nbsp;kèm&nbsp;1</em></h2><p>Buổi làm quen riêng giúp giáo viên hiểu cơ thể bạn, rồi gợi ý lớp nhóm phù hợp.</p></div>
+<div class="acts"><a class="btn btn-light" href="../dat-lop/">Đặt buổi đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+</div></div>
+</section>
+
+</main>
+<footer class="ft">
+<div class="wrap">
+<div class="ft-top">
+<div class="brand">
+<a class="logo" href="../" aria-label="Lụa Pilates Atelier, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 34V20a11 11 0 0 1 22 0v14" fill="none" stroke="#9A5440" stroke-width="2.2" stroke-linecap="round"/><path d="M14 34V21a6 6 0 0 1 12 0v13" fill="none" stroke="#A3B09A" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="27" r="2.4" fill="#9A5440"/></svg><span><b>Lụa</b><small>Pilates Atelier</small></span></a>
+<p>Studio pilates reformer lớp nhỏ, tối đa 8&nbsp;máy mỗi buổi. Tập chậm, thở đúng, có người chỉnh từng tư thế.</p>
+<div class="soc"><a href="#" aria-label="Facebook (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a><a href="#" aria-label="Instagram (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a><a href="#" aria-label="TikTok (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-tt"/></svg></a><a href="#" aria-label="Zalo (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-zalo"/></svg></a></div>
+</div>
+<div><h3>Sơ đồ trang</h3><ul><li><a href="../">Trang chủ</a></li><li><a href="../cac-lop/">Các lớp</a></li><li><a href="../goi-buoi/">Gói buổi</a></li><li><a href="../lich-lop/">Lịch lớp</a></li><li><a href="../giao-vien/">Giáo viên</a></li><li><a href="../dat-lop/">Đặt buổi đầu</a></li></ul></div>
+<div><h3>Giờ mở cửa</h3><div class="hours"><div><span>Thứ 2 – Thứ 6</span><span>06:00–21:00</span></div><div><span>Thứ 7</span><span>07:00–19:00</span></div><div><span>Chủ nhật</span><span>07:00–12:00</span></div></div>
+<h3 style="margin-top:28px">Liên hệ</h3><ul><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:xinchao@luapilates.vn">xinchao@luapilates.vn</a></li></ul></div>
+<div><h3>Địa chỉ</h3><p style="font-size:14.5px">Tầng 2, số 00 đường Nguyễn Văn Hưởng, Phường An&nbsp;Khánh, TP.HCM (địa chỉ mẫu)</p><div class="ft-map"><svg viewBox="0 0 320 150" role="img" aria-label="Bản đồ minh hoạ vị trí studio gần bờ sông"><rect width="320" height="150" fill="#F3EBE1"/><path d="M0 118c40-12 70 8 110-2s70-30 110-18 70 10 100 2v50H0z" fill="#DCE3D5"/><path d="M0 40h320M0 86h320M70 0v150M170 0v150M250 0v150" stroke="#E2D4C4" stroke-width="7"/><path d="M0 40h320M70 0v150" stroke="#fff" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/><rect x="186" y="52" width="44" height="26" rx="5" fill="#EDE3D7"/><rect x="86" y="52" width="66" height="26" rx="5" fill="#EDE3D7"/><circle cx="208" cy="64" r="15" fill="#9A5440" opacity=".18"/><path d="M208 74s-9-7.5-9-13.5a9 9 0 0 1 18 0c0 6-9 13.5-9 13.5z" fill="#9A5440"/><circle cx="208" cy="60.5" r="3.2" fill="#FBF8F3"/><text x="18" y="134" font-family="Inter,sans-serif" font-size="10" fill="#4C5B48">Sông Sài Gòn (minh hoạ)</text></svg></div></div>
+</div>
+<div class="ft-bot">
+<p>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p>
+<p>© <span id="year">2026</span> Lụa Pilates Atelier · Mẫu website</p>
+</div>
+</div>
+</footer>
+<script src="../assets/site.js?v=1"></script>
+<script>
+
+(function(){
+var $=LUA.$,$$=LUA.$$,st={t:'all',l:'all'};
+var cards=$$('#cls .cl'),cnt=$('#cnt'),empty=$('#empty');
+function apply(anim){var n=0;cards.forEach(function(c){
+ var ok=(st.t==='all'||c.dataset.t===st.t)&&(st.l==='all'||c.dataset.l===st.l||c.dataset.l==='0');
+ var was=c.hidden;c.hidden=!ok;if(ok){n++;if(anim&&was){c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop')}}});
+ LUA.count(cnt,n);empty.classList.toggle('show',n===0);
+ $$('#types .ty').forEach(function(b){b.classList.toggle('on',b.dataset.t===st.t)});
+ try{history.replaceState(null,'',st.t==='all'&&st.l==='all'?location.pathname:location.pathname+'?loai='+st.t+'&cap='+st.l)}catch(e){}}
+function bind(id,key){$$('#'+id+' .chip').forEach(function(b){b.addEventListener('click',function(){
+ st[key]=b.dataset.v;sync();apply(true)})})}
+function sync(){$$('#fType .chip').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===st.t)});$$('#fLv .chip').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===st.l)})}
+bind('fType','t');bind('fLv','l');
+$$('#types .ty').forEach(function(b){b.addEventListener('click',function(){st.t=b.dataset.t;st.l='all';sync();apply(true);$('#loc').scrollIntoView({behavior:LUA.reduce?'auto':'smooth'})})});
+$('#reset').addEventListener('click',function(){st={t:'all',l:'all'};sync();apply(true)});
+var q=new URLSearchParams(location.search);if(q.get('loai'))st.t=q.get('loai');if(q.get('cap'))st.l=q.get('cap');sync();apply(false);
+/* chi tiết */
+var dlg=$('#dlg'),last=null;
+$$('[data-open]').forEach(function(b){b.addEventListener('click',function(){
+ var c=document.getElementById(b.dataset.open);last=b;
+ $('#dlgPh').innerHTML=$('.cl-ph img',c).outerHTML.replace('w=700','w=1200');
+ $('#dlgM').innerHTML=$('.cl-meta',c).innerHTML;$('#dlgT').textContent=$('h3',c).textContent;
+ $('#dlgB').innerHTML=$('template',c).innerHTML;
+ if(dlg.showModal){dlg.showModal();document.body.classList.add('lock')}else{dlg.setAttribute('open','')}})});
+function close(){if(dlg.open){dlg.close()}}
+$('#dlgX').addEventListener('click',close);
+dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+dlg.addEventListener('close',function(){document.body.classList.remove('lock');last&&last.focus()});
+})();
+
+</script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=2" data-mau="Lụa Pilates Atelier" data-gia="3000000" data-loai="multi"></script>
+</body>
+</html>
