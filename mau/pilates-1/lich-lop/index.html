@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lịch lớp pilates tuần này, giữ máy reformer | Lụa</title>
+<meta name="description" content="Lịch lớp pilates 7 ngày tới tại Lụa: xem giờ, giáo viên, cấp độ và số máy reformer còn trống. Chọn vị trí trên sơ đồ phòng để giữ máy trong 15 phút.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#F6F0E8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23F6F0E8'/%3E%3Cpath d='M10 33V20a10 10 0 0 1 20 0v13' fill='none' stroke='%239A5440' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='22' r='3.2' fill='%23A3B09A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&amp;family=Inter:wght@400;500;600&amp;display=swap&amp;subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+.phead .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.phead .stats div{padding:20px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+.phead .stats b{display:block;font:400 clamp(30px,3vw,42px)/1 var(--serif);font-variant-numeric:tabular-nums}
+.phead .stats span{display:block;margin-top:8px;font-size:13.5px;color:var(--muted)}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:32px;align-items:start}
+.app>*{min-width:0}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:20px}
+.day{min-height:72px;border-radius:16px;border:1px solid var(--line);background:var(--paper);cursor:pointer;display:grid;place-content:center;gap:4px;text-align:center;transition:background .25s,color .25s,border-color .25s}
+.day small{font:600 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.day b{font:400 24px/1 var(--serif);font-variant-numeric:tabular-nums}
+.day[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.day[aria-selected=true] small{color:var(--sage)}
+.day .dot{width:5px;height:5px;border-radius:50%;background:var(--clay);margin:2px auto 0;opacity:0}
+.day.has .dot{opacity:1}
+.ftype{margin-bottom:20px}
+.slots{display:grid;gap:12px}
+.slot{display:grid;grid-template-columns:96px 1fr auto;gap:20px;align-items:center;padding:20px 22px;border-radius:18px;background:var(--paper);border:1px solid var(--line);transition:border-color .25s,transform .3s var(--ease)}
+.slot.pop{animation:pop .4s var(--ease) both}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.slot.mine{border-color:var(--sage-d);box-shadow:inset 4px 0 0 var(--sage-d)}
+.slot .tm{font:400 26px/1 var(--serif);font-variant-numeric:tabular-nums}
+.slot .tm small{display:block;font:500 12.5px/1 var(--sans);color:var(--muted);margin-top:6px}
+.slot h3{font-size:19px}
+.slot .meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13.5px;color:var(--muted);margin-top:6px;align-items:center}
+.cap{display:flex;gap:3px;margin-top:10px}
+.cap i{width:14px;height:6px;border-radius:2px;background:var(--clay)}
+.cap i.f{background:var(--sage-l);outline:1px solid var(--sage)}
+.slot .btn{min-height:44px;padding:0 18px;font-size:14px}
+.slot .full{font-size:13.5px;color:var(--muted);font-weight:600}
+.panel{position:sticky;top:100px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;gap:16px}
+.panel h2{font-size:var(--h4)}
+.panel .hint{font-size:14px;color:var(--muted)}
+.floor{position:relative;border-radius:18px;background:var(--cream);border:1px solid var(--line);padding:42px 18px 18px}
+.floor::before{content:"Gương · khu giáo viên";position:absolute;left:18px;right:18px;top:12px;height:20px;border-bottom:3px double var(--sand-2);font:600 10.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center}
+.seats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.seat{position:relative;min-height:66px;border-radius:12px;border:1.5px solid var(--sand-2);background:#fff;cursor:pointer;display:grid;place-items:center;gap:2px;font:600 13px/1 var(--sans);color:var(--ink-2);transition:background .2s,border-color .2s,transform .2s var(--ease)}
+.seat svg{width:30px;height:18px}
+.seat:hover:not(:disabled){border-color:var(--clay);transform:translateY(-2px)}
+.seat:disabled{background:repeating-linear-gradient(45deg,var(--sand),var(--sand) 4px,var(--cream) 4px,var(--cream) 8px);color:#6A5C53;cursor:not-allowed;border-color:var(--sand)}
+.seat[aria-pressed=true]{background:var(--clay);border-color:var(--clay);color:#fff}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid var(--sand-2);background:#fff}
+.legend i.t{background:var(--sand)}
+.legend i.m{background:var(--clay);border-color:var(--clay)}
+.mine-l{display:grid;gap:10px}
+.hold{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--sage-l);font-size:14px}
+.hold b{color:var(--ink);font-weight:600}
+.hold span{color:var(--sage-d)}
+.hold .cd{font-variant-numeric:tabular-nums;font-weight:600}
+.hold button{grid-row:span 2;border:0;background:transparent;color:var(--clay-d);font-weight:600;cursor:pointer;min-height:44px;text-decoration:underline}
+.empty-p{padding:24px;text-align:center;border:1px dashed var(--sand-2);border-radius:16px;color:var(--muted);font-size:14.5px}
+.toast{position:fixed;left:50%;bottom:24px;z-index:95;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:14px 20px;border-radius:14px;font-size:14.5px;transition:opacity .3s,transform .3s var(--ease);max-width:calc(100vw - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how div{display:grid;gap:12px;align-content:start}
+.how .k{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--clay);font:400 italic 20px/1 var(--serif);color:var(--clay)}
+.how h3{font-size:var(--h4)}
+.how p{font-size:15px;color:var(--ink-2)}
+.wk{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wk div{padding:26px;border-radius:20px;background:var(--paper)}
+.wk h3{font-size:var(--h4);margin-bottom:14px}
+.wk ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:14.5px}
+.wk li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--sand-2);padding-bottom:10px}
+.wk li span:first-child{font-variant-numeric:tabular-nums;font-weight:600}
+.wk li span:last-child{color:var(--ink-2);text-align:right}
+@media (max-width:1100px){.app{grid-template-columns:minmax(0,1fr)}.panel{position:relative;top:0}}
+@media (max-width:1024px){.wk,.how{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .phead .stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .phead .stats div{padding:14px}
+  .phead .stats b{font-size:26px}
+  .phead .stats span{font-size:12px}
+  .days{grid-template-columns:repeat(7,minmax(54px,1fr));overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  .day{min-height:64px}
+  .day b{font-size:20px}
+  .slot{grid-template-columns:64px 1fr;gap:12px 14px;padding:18px}
+  .slot .tm{font-size:22px}
+  .slot .act{grid-column:1/-1}
+  .slot .btn{width:100%}
+  .seats{gap:8px}
+}
+</style>
+</head>
+<body data-page="lich-lop">
+<a class="skip" href="#main">Bỏ qua menu, tới nội dung</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c1.2-3.5 3.6-5.2 6.5-5.2s5.3 1.7 6.5 5.2"/><path d="M15.5 4.8a3.5 3.5 0 0 1 0 6.4M18 14.6c1.8.7 3 2.4 3.6 5.4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14z"/><path d="M5 19l8-8"/></symbol>
+<symbol id="i-breath" viewBox="0 0 24 24"><path d="M3 9h11a3 3 0 1 0-3-3M3 15h15a3 3 0 1 1-3 3M3 12h8"/></symbol>
+<symbol id="i-spine" viewBox="0 0 24 24"><path d="M12 2v20"/><rect x="8.5" y="4" width="7" height="3" rx="1.5"/><rect x="8" y="9" width="8" height="3" rx="1.5"/><rect x="8.5" y="14" width="7" height="3" rx="1.5"/><rect x="9.5" y="19" width="5" height="2.5" rx="1.25"/></symbol>
+<symbol id="i-sock" viewBox="0 0 24 24"><path d="M9 3h6v8l3.5 4.5a3 3 0 0 1-4.7 3.8L9 13.5z"/><path d="M9 6.5h6"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v7h4v-7h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+<symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 2.8 2.3 4.6 5 5"/></symbol>
+<symbol id="i-zalo" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v9a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 4v-4A2.5 2.5 0 0 1 4 14.5z"/><path d="M8.5 8h4l-4 5h4M15 8v5"/></symbol>
+</defs></svg>
+<header class="hd" id="hd">
+<div class="wrap hd-in">
+<a class="logo" href="../" aria-label="Lụa Pilates Atelier, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 34V20a11 11 0 0 1 22 0v14" fill="none" stroke="#9A5440" stroke-width="2.2" stroke-linecap="round"/><path d="M14 34V21a6 6 0 0 1 12 0v13" fill="none" stroke="#A3B09A" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="27" r="2.4" fill="#9A5440"/></svg><span><b>Lụa</b><small>Pilates Atelier</small></span></a>
+<nav class="nav" aria-label="Menu chính"><a href="../">Trang chủ</a><a href="../cac-lop/">Các lớp</a><a href="../goi-buoi/">Gói buổi</a><a href="../lich-lop/" aria-current="page">Lịch lớp</a><a href="../giao-vien/">Giáo viên</a></nav>
+<a class="btn btn-pri" href="../dat-lop/">Đặt&nbsp;buổi&nbsp;đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Mở menu"><span></span></button>
+</div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu điện thoại" aria-hidden="true" inert>
+<a href="../">Trang chủ<small>01</small></a><a href="../cac-lop/">Các lớp<small>02</small></a><a href="../goi-buoi/">Gói buổi<small>03</small></a><a href="../lich-lop/" aria-current="page">Lịch lớp<small>04</small></a><a href="../giao-vien/">Giáo viên<small>05</small></a>
+<a class="btn btn-pri" href="../dat-lop/">Đặt&nbsp;buổi&nbsp;đầu</a>
+<div class="mnav-foot">Phường An Khánh, TP.HCM · 0900&nbsp;000&nbsp;000<br>Mở cửa 06:00–21:00 mỗi ngày</div>
+</nav>
+<main id="main">
+
+<section class="phead">
+<div class="wrap phead-grid">
+<div><ol class="crumb"><li><a href="../">Trang chủ</a></li><li aria-current="page">Lịch lớp</li></ol><p class="eyebrow rv">Lịch tuần · cập nhật theo giờ thật</p><h1 class="rv d1" style="margin-top:18px">Chọn giờ, rồi chọn <em>đúng chiếc&nbsp;máy</em> bạn&nbsp;thích</h1><p class="lead rv d2">Mỗi lớp reformer có 8 máy, tower 4 máy, mat 12 thảm. Bấm “Giữ máy” để xem sơ đồ phòng và chọn vị trí còn trống.</p></div>
+<div class="stats rv d2"><div><b id="stC">0</b><span>lớp 7&nbsp;ngày tới</span></div><div><b id="stF">0</b><span>chỗ còn trống</span></div><div><b id="stM">0</b><span>máy đang giữ</span></div></div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:0">
+<div class="wrap app">
+<div>
+<div class="days" role="tablist" aria-label="Chọn ngày" id="days"></div>
+<div class="chips ftype" role="group" aria-label="Lọc loại lớp" id="ft">
+<button class="chip" type="button" data-v="all" aria-pressed="true">Tất cả</button><button class="chip" type="button" data-v="reformer" aria-pressed="false">Reformer</button><button class="chip" type="button" data-v="tower" aria-pressed="false">Tower</button><button class="chip" type="button" data-v="mat" aria-pressed="false">Mat</button></div>
+<div class="slots" id="slots" role="tabpanel" aria-live="polite"><p class="empty-p">Đang tải lịch…</p></div>
+</div>
+<aside class="panel" id="panel" aria-labelledby="pnT">
+<h2 id="pnT">Sơ đồ phòng</h2>
+<p class="hint" id="pnH">Chọn một lớp bên cạnh để xem máy còn trống.</p>
+<div class="floor" id="floor" hidden><div class="seats" id="seats"></div></div>
+<div class="legend"><span><i></i>Còn trống</span><span><i class="t"></i>Đã có người</span><span><i class="m"></i>Bạn chọn</span></div>
+<button class="btn btn-pri" type="button" id="hold" disabled>Giữ máy này <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<h2 style="margin-top:8px">Máy bạn đang giữ</h2>
+<div class="mine-l" id="mine"></div>
+<p class="hint">Chỗ giữ được lưu trên máy này 15 phút. Xác nhận với lễ tân qua Zalo để giữ chính thức (minh hoạ).</p>
+</aside>
+</div>
+</section>
+
+<section class="sec bg-sage">
+<div class="wrap">
+<div class="sec-head rv"><p class="eyebrow">Vì sao giữ theo máy</p><h2>Chỗ quen thuộc giúp bạn tập yên&nbsp;tâm hơn</h2></div>
+<div class="how">
+<div class="rv"><span class="k">1</span><h3>Gần gương hay&nbsp;gần cửa sổ</h3><p>Người mới thường thích hàng đầu để nhìn giáo viên. Người tập lâu hay chọn cạnh cửa sổ cho thoáng.</p></div>
+<div class="rv d1"><span class="k">2</span><h3>Máy đã chỉnh sẵn cho&nbsp;bạn</h3><p>Lễ tân ghi độ cao thanh đạp và bục vai của bạn, chỉnh trước khi bạn tới.</p></div>
+<div class="rv d2"><span class="k">3</span><h3>Huỷ là&nbsp;nhả chỗ ngay</h3><p>Huỷ trước 12 tiếng để người trong danh sách chờ được báo và nhận máy.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head split rv"><div><p class="eyebrow">Khung giờ cố định</p><h2 style="margin-top:16px">Lịch lặp lại mỗi tuần, dễ xếp vào&nbsp;lịch làm</h2></div><p class="lead">Lớp Reformer Văn phòng lúc 12:15 vừa giờ nghỉ trưa. Lịch có thể đổi dịp lễ, studio báo trước qua Zalo.</p></div>
+<div class="wk">
+<div class="rv"><h3>Thứ 2, 4, 6</h3><ul><li><span>06:30</span><span>Reformer Nền tảng</span></li><li><span>09:00</span><span>Mat Dụng cụ</span></li><li><span>12:15</span><span>Reformer Văn phòng</span></li><li><span>17:30</span><span>Tower Cột sống</span></li><li><span>18:30</span><span>Reformer Flow</span></li><li><span>19:45</span><span>Reformer Sức bền</span></li></ul></div>
+<div class="rv"><h3>Thứ 3, 5</h3><ul><li><span>06:30</span><span>Reformer Flow</span></li><li><span>09:00</span><span>Mat Nền tảng</span></li><li><span>12:15</span><span>Reformer Văn phòng</span></li><li><span>17:30</span><span>Tower Chuyên sâu</span></li><li><span>18:30</span><span>Reformer Nền tảng</span></li><li><span>19:45</span><span>Mat Dụng cụ</span></li></ul></div>
+<div class="rv"><h3>Thứ 7, Chủ nhật</h3><ul><li><span>07:30</span><span>Reformer Flow</span></li><li><span>09:00</span><span>Reformer Kéo giãn</span></li><li><span>10:15</span><span>Tower Cột sống</span></li><li><span>10:30</span><span>Mat Nền tảng</span></li><li><span>16:00</span><span>Reformer Nền tảng (Thứ 7)</span></li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="sec-sm" style="padding-top:0">
+<div class="wrap"><div class="cta-band rv">
+<div><h2>Lần đầu tới Lụa? <em>Giữ buổi làm quen</em> trước</h2><p>Học viên mới cần một buổi làm quen trước khi giữ máy ở lớp nhóm.</p></div>
+<div class="acts"><a class="btn btn-light" href="../dat-lop/">Đặt buổi đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" style="color:#FBF5EE;border-color:rgba(251,245,238,.4)" href="../cac-lop/">Xem các lớp</a></div>
+</div></div>
+</section>
+<div class="toast" id="toast" role="status"></div>
+
+</main>
+<footer class="ft">
+<div class="wrap">
+<div class="ft-top">
+<div class="brand">
+<a class="logo" href="../" aria-label="Lụa Pilates Atelier, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 34V20a11 11 0 0 1 22 0v14" fill="none" stroke="#9A5440" stroke-width="2.2" stroke-linecap="round"/><path d="M14 34V21a6 6 0 0 1 12 0v13" fill="none" stroke="#A3B09A" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="27" r="2.4" fill="#9A5440"/></svg><span><b>Lụa</b><small>Pilates Atelier</small></span></a>
+<p>Studio pilates reformer lớp nhỏ, tối đa 8&nbsp;máy mỗi buổi. Tập chậm, thở đúng, có người chỉnh từng tư thế.</p>
+<div class="soc"><a href="#" aria-label="Facebook (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a><a href="#" aria-label="Instagram (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a><a href="#" aria-label="TikTok (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-tt"/></svg></a><a href="#" aria-label="Zalo (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-zalo"/></svg></a></div>
+</div>
+<div><h3>Sơ đồ trang</h3><ul><li><a href="../">Trang chủ</a></li><li><a href="../cac-lop/">Các lớp</a></li><li><a href="../goi-buoi/">Gói buổi</a></li><li><a href="../lich-lop/">Lịch lớp</a></li><li><a href="../giao-vien/">Giáo viên</a></li><li><a href="../dat-lop/">Đặt buổi đầu</a></li></ul></div>
+<div><h3>Giờ mở cửa</h3><div class="hours"><div><span>Thứ 2 – Thứ 6</span><span>06:00–21:00</span></div><div><span>Thứ 7</span><span>07:00–19:00</span></div><div><span>Chủ nhật</span><span>07:00–12:00</span></div></div>
+<h3 style="margin-top:28px">Liên hệ</h3><ul><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:xinchao@luapilates.vn">xinchao@luapilates.vn</a></li></ul></div>
+<div><h3>Địa chỉ</h3><p style="font-size:14.5px">Tầng 2, số 00 đường Nguyễn Văn Hưởng, Phường An&nbsp;Khánh, TP.HCM (địa chỉ mẫu)</p><div class="ft-map"><svg viewBox="0 0 320 150" role="img" aria-label="Bản đồ minh hoạ vị trí studio gần bờ sông"><rect width="320" height="150" fill="#F3EBE1"/><path d="M0 118c40-12 70 8 110-2s70-30 110-18 70 10 100 2v50H0z" fill="#DCE3D5"/><path d="M0 40h320M0 86h320M70 0v150M170 0v150M250 0v150" stroke="#E2D4C4" stroke-width="7"/><path d="M0 40h320M70 0v150" stroke="#fff" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/><rect x="186" y="52" width="44" height="26" rx="5" fill="#EDE3D7"/><rect x="86" y="52" width="66" height="26" rx="5" fill="#EDE3D7"/><circle cx="208" cy="64" r="15" fill="#9A5440" opacity=".18"/><path d="M208 74s-9-7.5-9-13.5a9 9 0 0 1 18 0c0 6-9 13.5-9 13.5z" fill="#9A5440"/><circle cx="208" cy="60.5" r="3.2" fill="#FBF8F3"/><text x="18" y="134" font-family="Inter,sans-serif" font-size="10" fill="#4C5B48">Sông Sài Gòn (minh hoạ)</text></svg></div></div>
+</div>
+<div class="ft-bot">
+<p>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p>
+<p>© <span id="year">2026</span> Lụa Pilates Atelier · Mẫu website</p>
+</div>
+</div>
+</footer>
+<script src="../assets/site.js?v=1"></script>
+<script>
+
+(function(){
+var $=LUA.$,$$=LUA.$$;
+var A=[['06:30','Reformer Nền tảng','reformer',1,'Cô Thảo Vy'],['09:00','Mat Dụng cụ','mat',2,'Cô Diệp Anh'],['12:15','Reformer Văn phòng','reformer',1,'Cô Minh Châu'],['17:30','Tower Cột sống','tower',2,'Cô Diệp Anh'],['18:30','Reformer Flow','reformer',2,'Cô Ngọc Hân'],['19:45','Reformer Sức bền','reformer',3,'Cô Lan Phương']];
+var B=[['06:30','Reformer Flow','reformer',2,'Cô Ngọc Hân'],['09:00','Mat Nền tảng','mat',1,'Cô Minh Châu'],['12:15','Reformer Văn phòng','reformer',1,'Cô Thảo Vy'],['17:30','Tower Chuyên sâu','tower',3,'Cô Lan Phương'],['18:30','Reformer Nền tảng','reformer',1,'Cô Thảo Vy'],['19:45','Mat Dụng cụ','mat',2,'Cô Diệp Anh']];
+var C=[['07:30','Reformer Flow','reformer',2,'Cô Ngọc Hân'],['09:00','Reformer Kéo giãn','reformer',1,'Cô Minh Châu'],['10:15','Tower Cột sống','tower',2,'Cô Diệp Anh'],['10:30','Mat Nền tảng','mat',1,'Cô Thảo Vy']];
+var CAP={reformer:8,tower:4,mat:12},LVN=['','Nền tảng','Trung cấp','Nâng cao'],DN=['CN','T2','T3','T4','T5','T6','T7'];
+function plan(d){var w=d.getDay();var l=w===0||w===6?C.slice():(w%2===1?A:B);if(w===6)l=l.concat([['16:00','Reformer Nền tảng','reformer',1,'Cô Thảo Vy']]);return l}
+function rnd(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return function(){h^=h<<13;h^=h>>>17;h^=h<<5;return ((h>>>0)%1000)/1000}}
+function key(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function dd(d){return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)}
+var today=new Date();today.setHours(0,0,0,0);
+var days=[];for(var i=0;i<7;i++){var d=new Date(today);d.setDate(today.getDate()+i);days.push(d)}
+function taken(d,s){var cap=CAP[s[2]],r=rnd(key(d)+s[0]+s[1]),n=Math.floor(cap*(.35+r()*.6));if(r()>.86)n=cap;var t=[];while(t.length<n){var x=1+Math.floor(r()*cap);if(t.indexOf(x)<0)t.push(x)}return t}
+var holds=LUA.get('holds',[]).filter(function(h){return h.exp>Date.now()});
+var st={day:0,type:'all',sel:null,seat:null};
+function isPast(d,s){var p=s[0].split(':');var t=new Date(d);t.setHours(+p[0],+p[1]);return t<new Date()}
+function mineFor(id){for(var i=0;i<holds.length;i++)if(holds[i].id===id)return holds[i];return null}
+function slotId(d,s){return key(d)+'|'+s[0]+'|'+s[1]}
+/* tabs ngày */
+var dWrap=$('#days');
+dWrap.innerHTML=days.map(function(d,i){return '<button class="day" type="button" role="tab" id="d'+i+'" aria-selected="'+(i===0)+'" data-i="'+i+'" aria-label="'+(i===0?'Hôm nay':DN[d.getDay()])+' '+dd(d)+'"><small>'+(i===0?'Nay':DN[d.getDay()])+'</small><b>'+d.getDate()+'</b><span class="dot"></span></button>'}).join('');
+$$('.day',dWrap).forEach(function(b){b.addEventListener('click',function(){st.day=+b.dataset.i;st.sel=null;st.seat=null;renderDays();renderSlots();renderFloor()})});
+dWrap.addEventListener('keydown',function(e){if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;var n=(st.day+(e.key==='ArrowRight'?1:6))%7;$('#d'+n).click();$('#d'+n).focus()});
+function renderDays(){$$('.day',dWrap).forEach(function(b,i){b.setAttribute('aria-selected',i===st.day);b.tabIndex=i===st.day?0:-1;b.classList.toggle('has',holds.some(function(h){return h.id.indexOf(key(days[i])+'|')===0}))});$('#slots').setAttribute('aria-labelledby','d'+st.day)}
+$$('#ft .chip').forEach(function(b){b.addEventListener('click',function(){st.type=b.dataset.v;$$('#ft .chip').forEach(function(x){x.setAttribute('aria-pressed',x===b)});renderSlots()})});
+function renderSlots(){
+ var d=days[st.day],list=plan(d).filter(function(s){return st.type==='all'||s[2]===st.type}),h='';
+ list.forEach(function(s,i){var cap=CAP[s[2]],tk=taken(d,s),id=slotId(d,s),m=mineFor(id),free=cap-tk.length-(m?1:0),past=isPast(d,s);
+  var bars='';for(var j=0;j<cap;j++)bars+='<i'+(j<cap-free?'':' class="f"')+'></i>';
+  var act=past?'<span class="full">Đã diễn ra</span>':m?'<button class="btn btn-sage" type="button" data-pick="'+i+'">Máy số '+m.seat+' của bạn</button>':free<=0?'<span class="full">Đã kín · vào danh sách chờ</span>':'<button class="btn btn-pri" type="button" data-pick="'+i+'">Giữ máy</button>';
+  h+='<article class="slot pop'+(m?' mine':'')+'" style="animation-delay:'+(i*40)+'ms"><div class="tm">'+s[0]+'<small>'+(s[2]==='mat'?'55':'50')+' phút</small></div><div><h3>'+s[1]+'</h3><div class="meta"><span>'+s[4]+'</span><span>'+LVN[s[3]]+'</span><span>còn '+Math.max(0,free)+'/'+cap+(s[2]==='mat'?' thảm':' máy')+'</span></div><div class="cap" aria-hidden="true">'+bars+'</div></div><div class="act">'+act+'</div></article>'});
+ $('#slots').innerHTML=h||'<p class="empty-p">Ngày này không có lớp thuộc loại bạn chọn.</p>';
+ $$('[data-pick]').forEach(function(b){b.addEventListener('click',function(){st.sel=list[+b.dataset.pick];st.seat=null;renderFloor();if(innerWidth<1100)$('#panel').scrollIntoView({behavior:LUA.reduce?'auto':'smooth',block:'start'})})});
+ stats();}
+var ICON={reformer:'<svg viewBox="0 0 30 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="7" width="28" height="6" rx="2"/><rect x="11" y="4" width="10" height="4" rx="1.5"/><path d="M3 7V2"/></svg>',tower:'<svg viewBox="0 0 30 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="11" width="28" height="5" rx="2"/><path d="M4 11V1h22v10"/></svg>',mat:'<svg viewBox="0 0 30 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="24" height="10" rx="2"/><path d="M27 6v6"/></svg>'};
+function renderFloor(){
+ var fl=$('#floor'),s=st.sel,hb=$('#hold');
+ if(!s){fl.hidden=true;$('#pnH').textContent='Chọn một lớp bên cạnh để xem máy còn trống.';hb.disabled=true;$('#pnT').textContent='Sơ đồ phòng';return}
+ var d=days[st.day],cap=CAP[s[2]],tk=taken(d,s),m=mineFor(slotId(d,s));
+ $('#pnT').textContent=s[1]+' · '+s[0];
+ $('#pnH').textContent=(st.day===0?'Hôm nay':DN[d.getDay()])+' '+dd(d)+', '+s[4]+'. '+(m?'Bạn đang giữ máy số '+m.seat+'.':'Chọn một vị trí còn trống.');
+ var g=$('#seats');g.style.gridTemplateColumns='repeat('+(cap===12?4:cap===4?2:4)+',1fr)';
+ var h='';for(var i=1;i<=cap;i++){var t=tk.indexOf(i)>=0,mine=m&&m.seat===i;h+='<button class="seat" type="button" data-s="'+i+'" '+(t?'disabled ':'')+'aria-pressed="'+(mine||st.seat===i)+'" aria-label="'+(s[2]==='mat'?'Thảm':'Máy')+' số '+i+(t?', đã có người':'')+'">'+ICON[s[2]]+i+'</button>'}
+ g.innerHTML=h;fl.hidden=false;
+ $$('.seat',g).forEach(function(b){b.addEventListener('click',function(){st.seat=+b.dataset.s;$$('.seat',g).forEach(function(x){x.setAttribute('aria-pressed',x===b)});hb.disabled=false;hb.innerHTML='Giữ '+(s[2]==='mat'?'thảm':'máy')+' số '+st.seat+' <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>'})});
+ hb.disabled=!st.seat;if(!st.seat)hb.innerHTML='Giữ máy này <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>';}
+$('#hold').addEventListener('click',function(){var s=st.sel,d=days[st.day];if(!s||!st.seat)return;var id=slotId(d,s);
+ holds=holds.filter(function(h){return h.id!==id});holds.push({id:id,seat:st.seat,name:s[1],time:s[0],date:dd(d),exp:Date.now()+15*60000});LUA.set('holds',holds);
+ toast('Đã giữ '+(s[2]==='mat'?'thảm':'máy')+' số '+st.seat+' · '+s[1]+' '+s[0]+' ngày '+dd(d));st.seat=null;renderDays();renderSlots();renderFloor();renderMine()});
+function renderMine(){var el=$('#mine');holds=holds.filter(function(h){return h.exp>Date.now()});
+ el.innerHTML=holds.length?holds.map(function(h,i){return '<div class="hold"><b>'+h.name+' · '+h.time+'</b><button type="button" data-rm="'+i+'">Huỷ</button><span>Ngày '+h.date+' · số '+h.seat+' · còn <span class="cd" data-exp="'+h.exp+'">15:00</span></span></div>'}).join(''):'<p class="empty-p">Bạn chưa giữ máy nào.</p>';
+ $$('[data-rm]',el).forEach(function(b){b.addEventListener('click',function(){holds.splice(+b.dataset.rm,1);LUA.set('holds',holds);toast('Đã nhả chỗ.');renderDays();renderSlots();renderFloor();renderMine()})});tick();stats()}
+function tick(){var need=false;$$('.cd').forEach(function(c){var r=+c.dataset.exp-Date.now();if(r<=0){need=true;return}var m=Math.floor(r/60000),s=Math.floor(r%60000/1000);c.textContent=('0'+m).slice(-2)+':'+('0'+s).slice(-2)});if(need){renderMine();renderSlots()}}
+setInterval(tick,1000);
+function stats(){var c=0,f=0;days.forEach(function(d){plan(d).forEach(function(s){if(isPast(d,s))return;c++;f+=Math.max(0,CAP[s[2]]-taken(d,s).length-(mineFor(slotId(d,s))?1:0))})});LUA.count($('#stC'),c);LUA.count($('#stF'),f);LUA.count($('#stM'),holds.length)}
+var tt;function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show')},2800)}
+if(plan(days[0]).every(function(s){return isPast(days[0],s)}))st.day=1;
+renderDays();renderSlots();renderFloor();renderMine();
+})();
+
+</script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=2" data-mau="Lụa Pilates Atelier" data-gia="3000000" data-loai="multi"></script>
+</body>
+</html>

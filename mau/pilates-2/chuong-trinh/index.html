@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chương trình tập cho mẹ bầu, sau sinh, văn phòng | Gieo</title>
+<meta name="description" content="Lộ trình pilates và yoga theo tam cá nguyệt, 8 tuần phục hồi sau sinh và lớp cổ vai gáy cho dân văn phòng. Xem từng giai đoạn tập gì, tránh gì.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#FBF6EC">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='14' fill='%23FBF6EC'/%3E%3Cpath d='M20 33V19' stroke='%233B6447' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M20 21c-1-6-5-9-11-9 0 6 4 9 11 9z' fill='%23C3D9AE'/%3E%3Cpath d='M20 18c1-6 5-9 11-9 0 6-4 9-11 9z' fill='%23F5B793'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&amp;family=Nunito:wght@400;600;700&amp;display=swap&amp;subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+.phead-in{display:grid;grid-template-columns:1fr 1fr;gap:var(--s7);align-items:end}
+.ptabs{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4);margin-top:var(--s7)}
+.ptab{position:relative;display:grid;gap:10px;align-content:start;text-align:left;padding:var(--s5);border-radius:var(--r-l);border:1.5px solid var(--line);background:var(--paper);cursor:pointer;transition:border-color .3s,background .3s,transform .3s var(--ease)}
+.ptab:hover{border-color:var(--leaf-2);transform:translateY(-3px)}
+.ptab[aria-selected="true"]{background:var(--moss);border-color:var(--moss);color:#FFFDF7}
+.ptab .ic{width:48px;height:48px;border-radius:var(--blob);display:grid;place-items:center;background:var(--leaf);color:var(--moss-d)}
+.ptab[aria-selected="true"] .ic{background:var(--peach);color:var(--ink)}
+.ptab b{font:500 var(--h4)/1.25 var(--head);letter-spacing:-.01em}
+.ptab span{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.ptab[aria-selected="true"] span{color:#DCE6D3}
+.panel{padding-top:var(--s8)}
+.panel:focus{outline:none}
+.pintro{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s8);align-items:center}
+.pintro .bimg{aspect-ratio:5/4}
+.pintro h2{margin:16px 0}
+.pintro .note{margin-top:var(--s5)}
+/* tam cá nguyệt */
+.tri{margin-top:var(--s8);background:var(--paper);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s7)}
+.track{position:relative;display:grid;grid-template-columns:12fr 15fr 13fr;gap:6px;margin:var(--s5) 0 var(--s6)}
+.track button{position:relative;display:grid;gap:6px;text-align:left;padding:14px 16px 16px;border:0;border-radius:14px;background:var(--leaf-l);cursor:pointer;transition:background .3s;min-height:44px}
+.track button::before{content:"";height:8px;border-radius:99px;background:var(--leaf-2);margin-bottom:6px;transition:background .3s}
+.track button b{font:500 16px/1.2 var(--head)}
+.track button small{font-size:13.5px;color:var(--muted)}
+.track button[aria-selected="true"]{background:var(--peach-l)}
+.track button[aria-selected="true"]::before{background:var(--peach)}
+.tri-body{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5)}
+.tri-body>div{display:grid;gap:10px;align-content:start}
+.tri-body h4{display:flex;align-items:center;gap:8px;font-size:16px}
+.tri-body h4 .ico{color:var(--moss)}
+.tri-body .x h4 .ico{color:var(--peach-d)}
+.tri-body ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:15.5px;color:var(--ink-2)}
+.tri-body li{padding-left:16px;position:relative}
+.tri-body li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--leaf-2)}
+.tri-body .x li::before{background:var(--peach)}
+.fade{animation:up .5s var(--ease) both}
+/* 8 tuần */
+.road{margin-top:var(--s8);display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4);counter-reset:r}
+.rd{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:var(--s5);display:grid;gap:10px;align-content:start}
+.rd .wk{font:500 13px/1 var(--head);letter-spacing:.08em;text-transform:uppercase;color:var(--peach-d)}
+.rd p{font-size:15px;color:var(--ink-2)}
+.rd .bar{height:6px;border-radius:99px;background:var(--leaf-l);overflow:hidden}
+.rd .bar i{display:block;height:100%;background:var(--moss);border-radius:99px;transform-origin:left;transform:scaleX(0);transition:transform 1.1s var(--ease)}
+.rd.in .bar i{transform:scaleX(var(--w))}
+/* bản đồ cơ thể */
+.bmap{margin-top:var(--s8);display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--s7);align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s7)}
+.fig{position:relative;max-width:300px;width:100%;margin:0 auto;aspect-ratio:3/5}
+.fig svg{width:100%;height:100%}
+.hot{position:absolute;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;border:0;background:transparent;cursor:pointer;display:grid;place-items:center}
+.hot::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--peach);box-shadow:0 0 0 6px rgba(245,183,147,.35);transition:transform .3s var(--spring),background .3s}
+.hot:hover::before{transform:scale(1.2)}
+.hot[aria-pressed="true"]::before{background:var(--moss);box-shadow:0 0 0 7px rgba(59,100,71,.22);transform:scale(1.15)}
+.zones{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:var(--s5)}
+.zinfo h3{margin-bottom:8px}
+.zinfo ol{margin:var(--s4) 0 0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:z}
+.zinfo li{counter-increment:z;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;font-size:15.5px;color:var(--ink-2)}
+.zinfo li::before{content:counter(z);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--leaf);color:var(--moss-d);font:500 14px/1 var(--head)}
+.zinfo li b{color:var(--ink)}
+.zinfo .tag{margin-top:var(--s4)}
+/* buổi 60 phút */
+.sess{display:flex;border-radius:18px;overflow:hidden;margin-top:var(--s6);min-height:120px}
+.sess div{display:grid;align-content:space-between;gap:8px;padding:16px;min-width:0}
+.sess b{font:500 15px/1.25 var(--head)}
+.sess small{font:400 13.5px/1.3 var(--head);font-variant-numeric:tabular-nums}
+.sess div:nth-child(1){flex:10;background:var(--leaf)}
+.sess div:nth-child(2){flex:10;background:var(--leaf-2)}
+.sess div:nth-child(3){flex:25;background:var(--moss);color:#FFFDF7}
+.sess div:nth-child(3) small{color:#DCE6D3}
+.sess div:nth-child(4){flex:10;background:var(--peach)}
+.sess div:nth-child(5){flex:5;background:var(--peach-2)}
+.stop{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s4);margin-top:var(--s6)}
+.stop div{display:flex;gap:12px;align-items:flex-start;padding:18px;border-radius:var(--r);background:var(--peach-l);font-size:15.5px}
+.stop .ico{color:var(--peach-d);margin-top:2px}
+@media (max-width:1024px){
+  .phead-in,.pintro,.bmap{grid-template-columns:1fr}
+  .road{grid-template-columns:1fr 1fr}
+  .tri-body,.stop{grid-template-columns:1fr}
+  .sess{flex-direction:column}
+  .sess div{flex:none!important;display:flex;justify-content:space-between;align-items:center}
+}
+@media (max-width:760px){
+  .ptabs{grid-template-columns:1fr;gap:10px}
+  .ptab{grid-template-columns:48px 1fr;column-gap:14px;padding:16px}
+  .ptab .ic{grid-row:span 2}
+  .tri,.bmap{padding:var(--s5)}
+  .track{grid-template-columns:1fr}
+  .road{grid-template-columns:1fr}
+  .panel{padding-top:var(--s7)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua, tới nội dung</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></symbol>
+<symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 13C11 8 8 6 4 6c0 4 3 7 8 7z"/><path d="M12 11c1-4 4-6 8-6 0 4-3 6-8 6z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c2 .6 3.2 2.3 3.5 5.2"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.2v.3"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+<symbol id="i-bump" viewBox="0 0 24 24"><circle cx="10" cy="4.5" r="2"/><path d="M9 21v-6l-1.5-1.5L9 8.5h2c3.5 0 5.5 2.5 5.5 5S15 17 12 17v4"/></symbol>
+<symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 10.5v.3M15 10.5v.3M9.5 14.5c1.5 1.3 3.5 1.3 5 0"/><path d="M12 3.5c-1.5 1.5-1 3 .5 3"/></symbol>
+<symbol id="i-desk" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="11" rx="2"/><path d="M8 20h8M12 15v5"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 14h15a3 3 0 1 1-3 3"/><path d="M3 19h6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.5l2 5-2.5 1.5a11 11 0 0 0 6 6l1.5-2.5 5 2V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8.5 5.5v13M15.5 5.5v13"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4.5V11h-6.5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+<symbol id="i-steth" viewBox="0 0 24 24"><path d="M6 3.5v5a4.5 4.5 0 0 0 9 0v-5"/><path d="M10.5 13v2.5a4.5 4.5 0 0 0 9 0V13"/><circle cx="19.5" cy="11" r="2"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14.5 8.5H16V5.2h-2.2c-2.6 0-3.8 1.6-3.8 4v1.6H8v3.2h2V21h3.3v-7H16l.4-3.2h-3.1V9.6c0-.7.4-1.1 1.2-1.1z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7v.1"/></symbol>
+<symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z"/></symbol>
+</defs></svg>
+<header class="hd" id="hd">
+<div class="wrap hd-in">
+<a class="logo" href="../" aria-label="Gieo Pilates và Yoga, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DCE9CC"/><path d="M20 32V19" stroke="#3B6447" stroke-width="2.4" stroke-linecap="round"/><path d="M20 21c-1-6-4.6-8.6-10.4-8.6 0 5.8 3.8 8.6 10.4 8.6z" fill="#3B6447"/><path d="M20 18.4c1-5.6 4.6-8.4 10.4-8.4 0 5.8-3.8 8.4-10.4 8.4z" fill="#F5B793"/></svg><span><b>gieo</b><small>Pilates &amp; Yoga · mẹ và dân văn phòng</small></span></a>
+<nav class="nav" aria-label="Menu chính"><a href="../">Trang chủ</a><a href="../chuong-trinh/" aria-current="page">Chương trình</a><a href="../chon-lop/">Chọn lớp</a><a href="../lich-lop/">Lịch &amp; gói</a><a href="../giao-vien/">Giáo viên</a></nav>
+<a class="btn btn-pri btn-sm" href="../dang-ky/">Đăng&nbsp;ký buổi&nbsp;đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Mở menu"><span></span></button>
+</div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu điện thoại" aria-hidden="true" inert>
+<a href="../">Trang chủ<small>01</small></a><a href="../chuong-trinh/" aria-current="page">Chương trình<small>02</small></a><a href="../chon-lop/">Chọn lớp<small>03</small></a><a href="../lich-lop/">Lịch &amp; gói<small>04</small></a><a href="../giao-vien/">Giáo viên<small>05</small></a>
+<a class="btn btn-pri" href="../dang-ky/">Đăng&nbsp;ký buổi&nbsp;đầu</a>
+<div class="mnav-foot">Phường Xuân Hoà, TP.HCM · 0900&nbsp;000&nbsp;000<br>Thứ 2–Thứ 6 06:00–21:00 · Thứ 7, Chủ nhật 07:00–18:00</div>
+</nav>
+<main id="main">
+<section class="phead">
+<div class="phead-blob" style="width:520px;height:440px;right:-140px;top:-120px" aria-hidden="true"></div>
+<div class="wrap">
+<ol class="crumb"><li><a href="../">Trang chủ</a></li><li aria-current="page">Chương trình theo giai đoạn</li></ol>
+<div class="phead-in intro">
+<div><p class="eyebrow"><svg class="ico" aria-hidden="true"><use href="#i-sprout"/></svg> Ba lộ trình, một nguyên tắc</p><h1 style="margin-top:18px">Cơ thể đổi thì bài tập cũng&nbsp;đổi&nbsp;theo</h1></div>
+<p class="lead">Chọn giai đoạn của bạn để xem tập gì, tránh gì và nên vào lớp nào. Mọi lộ trình đều bắt đầu bằng hơi thở, đi chậm, và dừng lại khi cơ thể báo hiệu.</p>
+</div>
+<div class="ptabs" role="tablist" aria-label="Chọn giai đoạn" id="ptabs">
+<button class="ptab" role="tab" id="t-bau" aria-controls="bau" aria-selected="true" type="button"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-bump"/></svg></span><b>Mẹ bầu</b><span>Theo tam cá nguyệt, từ tuần 13 đến lúc sinh</span></button>
+<button class="ptab" role="tab" id="t-sau-sinh" aria-controls="sau-sinh" aria-selected="false" tabindex="-1" type="button"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-baby"/></svg></span><b>Sau sinh</b><span>Lộ trình 8 tuần sau khi bác sĩ cho phép</span></button>
+<button class="ptab" role="tab" id="t-van-phong" aria-controls="van-phong" aria-selected="false" tabindex="-1" type="button"><span class="ic"><svg class="ico" aria-hidden="true"><use href="#i-desk"/></svg></span><b>Dân văn phòng</b><span>Cổ vai gáy, lưng, hông của người ngồi nhiều</span></button>
+</div>
+</div>
+</section>
+
+<section class="sec-sm" style="padding-top:0">
+<div class="wrap">
+
+<div class="panel" role="tabpanel" id="bau" aria-labelledby="t-bau" tabindex="0">
+<div class="pintro">
+<div>
+<span class="tag p">Yoga bầu · Pilates bầu</span>
+<h2>Tập để thở sâu hơn, đứng vững&nbsp;hơn</h2>
+<p class="lead">Khi bụng lớn dần, trọng tâm thay đổi, lưng và hông làm việc nhiều hơn. Lớp bầu ở Gieo tập trung vào hơi thở, thăng bằng và những tư thế giúp bạn thấy dễ chịu trong sinh hoạt hằng ngày.</p>
+<p class="note"><svg class="ico" aria-hidden="true"><use href="#i-steth"/></svg> <span><b>Cần bác sĩ sản khoa đồng ý trước khi tập.</b> Nếu thai kỳ có nguy cơ (ra máu, nhau tiền đạo, doạ sinh non, tiền sản giật…), hãy hỏi bác sĩ trước và báo giáo viên khi đăng ký.</span></p>
+</div>
+<div class="bimg"><img src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Mẹ bầu đặt hai tay hình trái tim trên bụng" width="900" height="720" loading="lazy"></div>
+</div>
+<div class="tri">
+<h3>Chọn tam cá nguyệt</h3>
+<div class="track" role="tablist" aria-label="Tam cá nguyệt" id="track">
+<button role="tab" type="button" aria-selected="false" tabindex="-1" data-i="0"><b>Tam cá nguyệt 1</b><small>Tuần 1–12</small></button>
+<button role="tab" type="button" aria-selected="true" data-i="1"><b>Tam cá nguyệt 2</b><small>Tuần 13–27</small></button>
+<button role="tab" type="button" aria-selected="false" tabindex="-1" data-i="2"><b>Tam cá nguyệt 3</b><small>Tuần 28 đến lúc sinh</small></button>
+</div>
+<div class="tri-body" id="triBody" aria-live="polite"></div>
+</div>
+</div>
+
+<div class="panel" role="tabpanel" id="sau-sinh" aria-labelledby="t-sau-sinh" tabindex="0" hidden>
+<div class="pintro">
+<div>
+<span class="tag">Phục hồi sau sinh</span>
+<h2>Đi chậm từ hơi thở, rồi mới tới&nbsp;sức&nbsp;bền</h2>
+<p class="lead">Sau sinh, cơ bụng sâu và sàn chậu cần thời gian. Lộ trình 8 tuần đi từ thở, cảm nhận cơ thể đến những bài toàn thân nhẹ, kèm tư thế bế và cho con bú đỡ mỏi lưng.</p>
+<p class="note"><svg class="ico" aria-hidden="true"><use href="#i-steth"/></svg> <span><b>Chỉ tham gia khi bác sĩ đã cho phép vận động lại</b>, thường sau lần tái khám hậu sản. Sinh mổ, rạn cơ bụng hay són tiểu, hãy mang theo ghi chú của bác sĩ để giáo viên điều chỉnh bài.</span></p>
+</div>
+<div class="bimg b2"><img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Em bé ngủ say trên chăn trắng mềm" width="900" height="720" loading="lazy"></div>
+</div>
+<div class="road">
+<div class="rd rv" style="--w:.25"><span class="wk">Tuần 1–2</span><h4>Thở và kết nối</h4><div class="bar"><i></i></div><p>Thở sườn, cảm nhận cơ bụng sâu và sàn chậu. Tư thế ngồi cho con bú đỡ mỏi vai.</p></div>
+<div class="rd rv d1" style="--w:.5"><span class="wk">Tuần 3–4</span><h4>Đánh thức vùng giữa</h4><div class="bar"><i></i></div><p>Bài nằm nhẹ cho cơ bụng sâu, cầu hông, mở ngực. Chưa có động tác gập bụng.</p></div>
+<div class="rd rv d2" style="--w:.75"><span class="wk">Tuần 5–6</span><h4>Chân và lưng vững</h4><div class="bar"><i></i></div><p>Squat với ghế, tập lưng giữa để bế bé lâu không mỏi. Tăng dần theo cảm nhận.</p></div>
+<div class="rd rv d3" style="--w:1"><span class="wk">Tuần 7–8</span><h4>Toàn thân, nhẹ nhàng</h4><div class="bar"><i></i></div><p>Chuỗi pilates mat ngắn. Bạn nhận bài 15 phút để tự tập ở nhà khi bé ngủ.</p></div>
+</div>
+<p class="note g" style="margin-top:24px"><svg class="ico" aria-hidden="true"><use href="#i-baby"/></svg> <span>Lớp sau sinh buổi sáng có <b>góc trông bé 08:00–11:00</b> ngay trong phòng, mẹ vẫn nhìn thấy bé trong lúc tập.</span></p>
+</div>
+
+<div class="panel" role="tabpanel" id="van-phong" aria-labelledby="t-van-phong" tabindex="0" hidden>
+<div class="pintro">
+<div>
+<span class="tag w">Pilates · Yoga cho người ngồi nhiều</span>
+<h2>Gỡ dần những chỗ cứng sau 8&nbsp;tiếng&nbsp;ngồi</h2>
+<p class="lead">Lớp trưa 45 phút và lớp tối 60 phút: kéo giãn, mở ngực, tập cơ lưng và hông. Bấm vào từng vùng trên hình để xem vì sao hay mỏi và ba động tác bạn có thể làm ngay tại bàn.</p>
+<p class="note"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg> <span><b>Gieo không chữa đau.</b> Nếu đau kéo dài, tê lan xuống tay hoặc chân, chóng mặt khi xoay cổ, hãy đi khám trước khi tập.</span></p>
+</div>
+<div class="bimg"><img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Nhân viên văn phòng ngồi làm việc lâu trước máy tính" width="900" height="720" loading="lazy"></div>
+</div>
+<div class="bmap">
+<div class="fig">
+<svg viewBox="0 0 300 500" aria-hidden="true"><g fill="#DCE9CC" stroke="#3B6447" stroke-width="2" stroke-linejoin="round"><circle cx="150" cy="62" r="38"/><path d="M134 98h32v22h-32z"/><path d="M92 128c0-10 10-16 22-16h72c12 0 22 6 22 16l6 132c0 8-6 12-14 12h-100c-8 0-14-4-14-12z"/><path d="M92 132 60 236l18 6 28-86M208 132l32 104-18 6-28-86"/><path d="M104 272h92l-6 200h-30l-10-150-10 150h-30z"/></g><path d="M150 118v150" stroke="#3B6447" stroke-width="1.5" stroke-dasharray="4 6" fill="none"/></svg>
+<button class="hot" type="button" style="left:50%;top:22%" data-z="0" aria-pressed="true" aria-label="Vùng cổ"></button>
+<button class="hot" type="button" style="left:34%;top:28%" data-z="1" aria-pressed="false" aria-label="Vùng vai và lưng trên"></button>
+<button class="hot" type="button" style="left:50%;top:46%" data-z="2" aria-pressed="false" aria-label="Vùng lưng dưới"></button>
+<button class="hot" type="button" style="left:62%;top:56%" data-z="3" aria-pressed="false" aria-label="Vùng hông"></button>
+<button class="hot" type="button" style="left:23%;top:48%" data-z="4" aria-pressed="false" aria-label="Vùng cổ tay"></button>
+</div>
+<div>
+<div class="zones chips" role="group" aria-label="Chọn vùng cơ thể" id="zones">
+<button class="chip" type="button" data-z="0" aria-pressed="true">Cổ</button><button class="chip" type="button" data-z="1" aria-pressed="false">Vai, lưng trên</button><button class="chip" type="button" data-z="2" aria-pressed="false">Lưng dưới</button><button class="chip" type="button" data-z="3" aria-pressed="false">Hông</button><button class="chip" type="button" data-z="4" aria-pressed="false">Cổ tay</button>
+</div>
+<div class="zinfo" id="zinfo" aria-live="polite"></div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="sec alt">
+<div class="wrap">
+<div class="sec-head split"><div><p class="eyebrow rv"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> Một buổi ở Gieo</p><h2 class="rv d1" style="margin-top:16px">60 phút, chia thành năm&nbsp;nhịp</h2></div><p class="lead rv d2">Lớp nào cũng theo khung này. Phần chính thay đổi theo giai đoạn, phần thở và thư giãn thì luôn giữ.</p></div>
+<div class="sess rv" role="list">
+<div role="listitem"><b>Trò chuyện, hỏi thăm</b><small>10 phút</small></div>
+<div role="listitem"><b>Thở và khởi động</b><small>10 phút</small></div>
+<div role="listitem"><b>Phần chính theo giai đoạn</b><small>25 phút</small></div>
+<div role="listitem"><b>Kéo giãn</b><small>10 phút</small></div>
+<div role="listitem"><b>Nghỉ</b><small>5 phút</small></div>
+</div>
+<h3 class="rv" style="margin-top:64px">Dừng lại và báo giáo viên ngay khi</h3>
+<div class="stop">
+<div class="rv"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg> <span>Chóng mặt, khó thở, tim đập nhanh bất thường, đau ngực</span></div>
+<div class="rv d1"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg> <span>Ra máu, rỉ nước ối, co thắt bụng đều hoặc đau bụng (mẹ bầu)</span></div>
+<div class="rv d2"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg> <span>Đau nhói, tê lan xuống tay chân, đau tăng dần khi tập</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="cta-band rv">
+<div><h2>Không chắc mình hợp lớp&nbsp;nào?</h2><p>Năm câu hỏi ngắn để Gieo gợi ý lớp. Kết quả chỉ để tham khảo, không thay thế tư vấn bác sĩ.</p></div>
+<div class="acts"><a class="btn btn-peach" href="../chon-lop/">Làm quiz <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="../lich-lop/">Xem lịch lớp</a></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="ft">
+<div class="wrap">
+<div class="ft-top">
+<div>
+<a class="logo" href="../" aria-label="Gieo Pilates và Yoga, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DCE9CC"/><path d="M20 32V19" stroke="#3B6447" stroke-width="2.4" stroke-linecap="round"/><path d="M20 21c-1-6-4.6-8.6-10.4-8.6 0 5.8 3.8 8.6 10.4 8.6z" fill="#3B6447"/><path d="M20 18.4c1-5.6 4.6-8.4 10.4-8.4 0 5.8-3.8 8.4-10.4 8.4z" fill="#F5B793"/></svg><span><b>gieo</b><small>Pilates &amp; Yoga</small></span></a>
+<p style="margin-top:20px;max-width:34ch">Lớp nhỏ cho mẹ bầu, mẹ sau sinh và người ngồi nhiều. Tập chậm, thở đều, đi từng bước theo cơ thể của bạn.</p>
+<div class="soc"><a href="#" aria-label="Facebook (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a><a href="#" aria-label="Instagram (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a><a href="#" aria-label="YouTube (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-yt"/></svg></a></div>
+</div>
+<div><h3>Các trang</h3><ul><li><a href="../">Trang chủ</a></li><li><a href="../chuong-trinh/">Chương trình theo giai đoạn</a></li><li><a href="../chon-lop/">Chọn lớp phù hợp</a></li><li><a href="../lich-lop/">Lịch lớp và gói tập</a></li><li><a href="../giao-vien/">Giáo viên</a></li><li><a href="../dang-ky/">Đăng ký buổi đầu</a></li></ul></div>
+<div><h3>Giờ mở cửa</h3><ul><li>Thứ 2–Thứ 6: 06:00–21:00</li><li>Thứ 7, Chủ nhật: 07:00–18:00</li><li>Góc trông bé: 08:00–11:00</li></ul>
+<h3 style="margin-top:28px">Liên hệ</h3><ul><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:xinchao@gieo.example">xinchao@gieo.example</a></li></ul></div>
+<div><h3>Ghé studio</h3><p>Tầng 2, số 00 đường mẫu, Phường Xuân Hoà, TP.HCM. Có thang máy và chỗ để xe đẩy.</p>
+<div class="minimap" aria-label="Bản đồ minh hoạ vị trí studio" role="img"><svg viewBox="0 0 320 150" aria-hidden="true"><rect width="320" height="150" fill="#36573F"/><path d="M-10 108C60 96 110 120 170 98S280 60 330 70" stroke="#4E7559" stroke-width="16" fill="none"/><path d="M40 -10 70 160M210 -10 190 160M-10 40h340" stroke="#456A50" stroke-width="7"/><path d="M110 20h50v34h-50zM230 90h46v30h-46zM20 60h34v26H20z" fill="#3F6249"/><circle cx="196" cy="52" r="22" fill="#F5B793" opacity=".22"/><path d="M196 66s-11-9.4-11-17.3a11 11 0 0 1 22 0C207 56.6 196 66 196 66z" fill="#F5B793"/><circle cx="196" cy="48.5" r="4" fill="#2C4B35"/></svg></div></div>
+</div>
+<div class="ft-bot"><p>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p><p>Thông tin trên web chỉ để tham khảo, không thay thế tư vấn của bác sĩ. © <span id="year">2026</span> Gieo (mẫu)</p></div>
+</div>
+</footer>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){
+var G=window.GIEO,$=G.$,$$=G.$$;
+var sel=G.tabs($('#ptabs'),function(t){var id=t.getAttribute('aria-controls');try{history.replaceState(null,'','#'+id)}catch(e){}var p=document.getElementById(id);p.classList.remove('fade');void p.offsetWidth;p.classList.add('fade');$$('.rd',p).forEach(function(r){setTimeout(function(){r.classList.add('in')},120)})});
+function fromHash(){var h=location.hash.slice(1);var t=h&&document.getElementById('t-'+h);if(t){sel(t);var top=$('#ptabs').getBoundingClientRect().top+window.pageYOffset-100;window.scrollTo(0,top)}}
+fromHash();window.addEventListener('hashchange',fromHash);
+/* tam cá nguyệt */
+var TRI=[
+ {f:['Thở chậm, thư giãn, giãn nhẹ nếu bác sĩ cho phép','Làm quen tư thế ngồi, đứng đỡ mỏi lưng','Nghỉ nhiều khi mệt, ốm nghén'],x:['Tập cường độ cao, phòng nóng bí','Động tác dễ té ngã','Nhịn ăn trước khi tập'],c:['Buổi Thở và thư giãn (30 phút)','Chưa nhận vào lớp vận động nhóm']},
+ {f:['Thăng bằng và sức bền chân','Cơ lưng, mở ngực khi bụng bắt đầu lớn','Thở sườn, thả lỏng sàn chậu'],x:['Nằm sấp, xoắn bụng sâu','Nằm ngửa lâu: dùng gối kê, nằm nghiêng','Nhảy, chạy, động tác bật'],c:['Yoga bầu sáng thứ 3, 5, 7','Pilates bầu với bóng, tối thứ 2, 4']},
+ {f:['Tư thế ngồi bóng, ghế, đứng tựa tường','Mở hông nhẹ, thở chậm và dài','Tư thế nghỉ dễ chịu khi ngủ'],x:['Động tác mất thăng bằng, một chân','Nằm ngửa lâu','Giãn quá mức: khớp đang lỏng hơn bình thường'],c:['Yoga bầu nhẹ, thứ 3, 5','Buổi 1 kèm 1 tại studio']}
+];
+var tb=$('#triBody');
+function li(a){return a.map(function(s){return '<li>'+s+'</li>'}).join('')}
+function showTri(i){var d=TRI[i];tb.innerHTML='<div><h4><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Tập trung</h4><ul>'+li(d.f)+'</ul></div><div class="x"><h4><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg>Nên tránh</h4><ul>'+li(d.x)+'</ul></div><div><h4><svg class="ico" aria-hidden="true"><use href="#i-cal"/></svg>Lớp gợi ý</h4><ul>'+li(d.c)+'</ul></div>';tb.classList.remove('fade');void tb.offsetWidth;tb.classList.add('fade')}
+G.tabs($('#track'),function(t){showTri(+t.getAttribute('data-i'))});
+showTri(1);
+/* bản đồ cơ thể */
+var Z=[
+ {t:'Cổ',w:'Màn hình thấp, đầu đưa ra trước nhiều giờ làm cơ sau cổ luôn phải gồng.',m:['<b>Rụt cằm:</b> kéo cằm nhẹ về sau, giữ 5 nhịp thở, làm 5 lần.','<b>Nghiêng tai về vai:</b> mỗi bên 3 nhịp thở, không xoay mạnh.','<b>Chỉnh màn hình:</b> mép trên ngang tầm mắt.'],c:'Lớp gợi ý: Pilates văn phòng trưa 12:15'},
+ {t:'Vai, lưng trên',w:'Vai co lên khi gõ phím, ngực khép lại, lưng trên ít được duỗi.',m:['<b>Xoay vai ra sau:</b> 10 vòng chậm.','<b>Mở ngực ở khung cửa:</b> hai tay chống khung, bước nhẹ tới, giữ 4 nhịp thở.','<b>Ép bả vai:</b> kéo hai bả vai về sau và xuống, giữ 3 giây, 8 lần.'],c:'Lớp gợi ý: Yoga mở ngực tối thứ 3, 5'},
+ {t:'Lưng dưới',w:'Ngồi lâu một tư thế, hông gập liên tục, cơ bụng sâu ít làm việc.',m:['<b>Đứng dậy mỗi 45 phút:</b> đi lại 2 phút.','<b>Mèo bò trên ghế:</b> tay đặt gối, cong rồi duỗi lưng 8 lần.','<b>Thở bụng sườn:</b> 6 nhịp, cảm nhận bụng dưới ôm nhẹ vào.'],c:'Lớp gợi ý: Pilates mat nền tảng tối thứ 2, 4'},
+ {t:'Hông',w:'Cơ gập hông bị rút ngắn khi ngồi, mông ít hoạt động.',m:['<b>Giãn gập hông:</b> quỳ một gối (hoặc đứng tấn), đẩy hông tới, mỗi bên 4 nhịp thở.','<b>Ngồi số 4:</b> gác cổ chân lên gối bên kia, nghiêng người nhẹ tới.','<b>Siết mông khi đứng:</b> 10 lần.'],c:'Lớp gợi ý: Yoga phục hồi Chủ nhật'},
+ {t:'Cổ tay',w:'Chuột và bàn phím giữ cổ tay ở một góc suốt ngày.',m:['<b>Duỗi cổ tay:</b> tay thẳng, tay kia kéo nhẹ các ngón về sau, 3 nhịp thở.','<b>Nắm, mở bàn tay:</b> 10 lần.','<b>Kê cổ tay:</b> dùng đệm hoặc khăn gấp mỏng.'],c:'Lớp gợi ý: Pilates văn phòng trưa 12:15'}
+];
+var zi=$('#zinfo');
+function showZ(i){var d=Z[i];$$('[data-z]').forEach(function(b){b.setAttribute('aria-pressed',+b.getAttribute('data-z')===i)});zi.innerHTML='<h3>'+d.t+'</h3><p class="muted">'+d.w+'</p><ol>'+d.m.map(function(s){return '<li><span>'+s+'</span></li>'}).join('')+'</ol><span class="tag">'+d.c+'</span>';zi.classList.remove('fade');void zi.offsetWidth;zi.classList.add('fade')}
+$$('[data-z]').forEach(function(b){b.addEventListener('click',function(){showZ(+b.getAttribute('data-z'))})});
+showZ(0);
+})();
+</script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=2" data-mau="Gieo Pilates &amp; Yoga" data-gia="3000000" data-loai="multi"></script>
+</body>
+</html>

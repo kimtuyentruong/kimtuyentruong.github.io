@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Giáo viên yoga bầu, pilates sau sinh tại Gieo</title>
+<meta name="description" content="Gặp bốn giáo viên của Gieo: yoga bầu, pilates sau sinh, pilates văn phòng và yoga phục hồi. Xem chuyên môn, lớp đang dạy và cách cô làm việc cùng bác sĩ.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#FBF6EC">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='14' fill='%23FBF6EC'/%3E%3Cpath d='M20 33V19' stroke='%233B6447' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M20 21c-1-6-5-9-11-9 0 6 4 9 11 9z' fill='%23C3D9AE'/%3E%3Cpath d='M20 18c1-6 5-9 11-9 0 6-4 9-11 9z' fill='%23F5B793'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&amp;family=Nunito:wght@400;600;700&amp;display=swap&amp;subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=1">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+.gh{display:grid;grid-template-columns:1fr 1fr;gap:var(--s7);align-items:end}
+.gh .quote{font:300 clamp(20px,2vw,26px)/1.45 var(--head);color:var(--ink-2);letter-spacing:-.01em;border-left:3px solid var(--peach);padding-left:var(--s5)}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s5);margin-top:var(--s6)}
+.tc{display:grid;gap:14px;align-content:start;transition:opacity .35s,transform .35s var(--ease)}
+.tc.off{opacity:.25;transform:scale(.97)}
+.tc .ph{position:relative;aspect-ratio:4/5;border-radius:var(--blob);overflow:hidden;background:var(--leaf)}
+.tc:nth-child(even) .ph{border-radius:var(--blob-2)}
+.tc .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.tc:hover .ph img{transform:scale(1.04)}
+.tc h2{font-size:var(--h3)}
+.tc .role{font-size:15px;color:var(--ink-2)}
+.tc .tags{display:flex;flex-wrap:wrap;gap:6px}
+.tc .btn{justify-self:start}
+.drawer{position:fixed;inset:0;z-index:95;display:grid;grid-template-columns:1fr min(560px,100%);visibility:hidden;transition:visibility 0s .4s}
+.drawer.open{visibility:visible;transition:none}
+.drawer .sh{background:rgba(36,53,42,.45);opacity:0;transition:opacity .4s}
+.drawer.open .sh{opacity:1}
+.drawer .pn{background:var(--paper);overflow-y:auto;transform:translateX(100%);transition:transform .45s var(--ease);padding:var(--s6);display:grid;gap:var(--s4);align-content:start}
+.drawer.open .pn{transform:none}
+.pn .top{display:flex;justify-content:space-between;align-items:center}
+.pn .x{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);background:var(--ivory);display:grid;place-items:center;cursor:pointer}
+.pn .hero{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center}
+.pn .hero img{width:120px;height:120px;border-radius:var(--blob);object-fit:cover}
+.pn h3{font-size:clamp(24px,2.4vw,30px)}
+.pn h4{margin-top:8px;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.pn ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;color:var(--ink-2)}
+.pn li{display:flex;gap:10px}
+.pn li .ico{width:18px;height:18px;color:var(--moss);margin-top:3px}
+.pn blockquote{margin:0;padding:var(--s5);border-radius:var(--r);background:var(--leaf-l);font:400 17px/1.55 var(--head)}
+.pn .slots{display:flex;flex-wrap:wrap;gap:8px}
+.work{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s5);counter-reset:w}
+.work .card{counter-increment:w;display:grid;gap:12px;align-content:start}
+.work .card::before{content:"0" counter(w);font:300 40px/1 var(--head);color:var(--peach-d)}
+.space{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:240px 240px;gap:var(--s4)}
+.space figure{margin:0;position:relative;border-radius:var(--r-l);overflow:hidden;background:var(--leaf)}
+.space figure:first-child{grid-row:span 2}
+.space img{width:100%;height:100%;object-fit:cover}
+.space figcaption{position:absolute;left:14px;bottom:14px;padding:8px 14px;border-radius:99px;background:rgba(255,253,248,.95);font:500 13.5px/1.2 var(--head);color:var(--ink)}
+.std{display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;margin-top:var(--s5)}
+.std li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;color:var(--ink-2)}
+.std .ico{color:var(--moss);margin-top:3px;width:18px;height:18px}
+@media (max-width:1024px){.gh{grid-template-columns:1fr}.tgrid{grid-template-columns:1fr 1fr}.work{grid-template-columns:1fr}.space{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}.space figure:first-child{grid-column:span 2;grid-row:auto}}
+@media (max-width:760px){.tgrid{grid-template-columns:1fr 1fr;gap:var(--s4) 12px}.tc h2{font-size:18px}.tc .role{font-size:14px}.tc .tags{display:none}.drawer{grid-template-columns:0 1fr}.pn{padding:var(--s5)}.pn .hero{grid-template-columns:88px 1fr}.pn .hero img{width:88px;height:88px}.std{grid-template-columns:1fr}.space{grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:220px}.space figure:first-child{grid-column:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Bỏ qua, tới nội dung</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14z"/><path d="M5 19l7-7"/></symbol>
+<symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 13C11 8 8 6 4 6c0 4 3 7 8 7z"/><path d="M12 11c1-4 4-6 8-6 0 4-3 6-8 6z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c2 .6 3.2 2.3 3.5 5.2"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.2v.3"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></symbol>
+<symbol id="i-bump" viewBox="0 0 24 24"><circle cx="10" cy="4.5" r="2"/><path d="M9 21v-6l-1.5-1.5L9 8.5h2c3.5 0 5.5 2.5 5.5 5S15 17 12 17v4"/></symbol>
+<symbol id="i-baby" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9 10.5v.3M15 10.5v.3M9.5 14.5c1.5 1.3 3.5 1.3 5 0"/><path d="M12 3.5c-1.5 1.5-1 3 .5 3"/></symbol>
+<symbol id="i-desk" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="11" rx="2"/><path d="M8 20h8M12 15v5"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 9h11a3 3 0 1 0-3-3"/><path d="M3 14h15a3 3 0 1 1-3 3"/><path d="M3 19h6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.5l2 5-2.5 1.5a11 11 0 0 0 6 6l1.5-2.5 5 2V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8.5 5.5v13M15.5 5.5v13"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4.5V11h-6.5"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+<symbol id="i-steth" viewBox="0 0 24 24"><path d="M6 3.5v5a4.5 4.5 0 0 0 9 0v-5"/><path d="M10.5 13v2.5a4.5 4.5 0 0 0 9 0V13"/><circle cx="19.5" cy="11" r="2"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M14.5 8.5H16V5.2h-2.2c-2.6 0-3.8 1.6-3.8 4v1.6H8v3.2h2V21h3.3v-7H16l.4-3.2h-3.1V9.6c0-.7.4-1.1 1.2-1.1z"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.3 6.7v.1"/></symbol>
+<symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9 5 3-5 3z"/></symbol>
+</defs></svg>
+<header class="hd" id="hd">
+<div class="wrap hd-in">
+<a class="logo" href="../" aria-label="Gieo Pilates và Yoga, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DCE9CC"/><path d="M20 32V19" stroke="#3B6447" stroke-width="2.4" stroke-linecap="round"/><path d="M20 21c-1-6-4.6-8.6-10.4-8.6 0 5.8 3.8 8.6 10.4 8.6z" fill="#3B6447"/><path d="M20 18.4c1-5.6 4.6-8.4 10.4-8.4 0 5.8-3.8 8.4-10.4 8.4z" fill="#F5B793"/></svg><span><b>gieo</b><small>Pilates &amp; Yoga · mẹ và dân văn phòng</small></span></a>
+<nav class="nav" aria-label="Menu chính"><a href="../">Trang chủ</a><a href="../chuong-trinh/">Chương trình</a><a href="../chon-lop/">Chọn lớp</a><a href="../lich-lop/">Lịch &amp; gói</a><a href="../giao-vien/" aria-current="page">Giáo viên</a></nav>
+<a class="btn btn-pri btn-sm" href="../dang-ky/">Đăng&nbsp;ký buổi&nbsp;đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Mở menu"><span></span></button>
+</div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Menu điện thoại" aria-hidden="true" inert>
+<a href="../">Trang chủ<small>01</small></a><a href="../chuong-trinh/">Chương trình<small>02</small></a><a href="../chon-lop/">Chọn lớp<small>03</small></a><a href="../lich-lop/">Lịch &amp; gói<small>04</small></a><a href="../giao-vien/" aria-current="page">Giáo viên<small>05</small></a>
+<a class="btn btn-pri" href="../dang-ky/">Đăng&nbsp;ký buổi&nbsp;đầu</a>
+<div class="mnav-foot">Phường Xuân Hoà, TP.HCM · 0900&nbsp;000&nbsp;000<br>Thứ 2–Thứ 6 06:00–21:00 · Thứ 7, Chủ nhật 07:00–18:00</div>
+</nav>
+<main id="main">
+<section class="phead">
+<div class="phead-blob" style="width:460px;height:400px;right:-120px;top:-100px;background:var(--peach-2)" aria-hidden="true"></div>
+<div class="wrap">
+<ol class="crumb"><li><a href="../">Trang chủ</a></li><li aria-current="page">Giáo viên</li></ol>
+<div class="gh intro">
+<div><p class="eyebrow"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg> 4 giáo viên · lớp tối&nbsp;đa 8&nbsp;người</p><h1 style="margin-top:18px">Người dẫn bạn qua từng giai&nbsp;đoạn</h1></div>
+<p class="quote">“Ở lớp bầu, câu chúng mình nói nhiều nhất là: hôm nay mệt thì nghỉ, không sao cả.”<br><small style="font-size:14px;color:var(--muted)">Cô Ngọc Hân, lời mẫu</small></p>
+</div>
+<div class="chips" role="group" aria-label="Lọc theo chuyên môn" id="tf" style="margin-top:40px">
+<button class="chip" type="button" data-k="all" aria-pressed="true">Tất cả</button><button class="chip" type="button" data-k="bau" aria-pressed="false">Mẹ bầu</button><button class="chip" type="button" data-k="sau" aria-pressed="false">Sau sinh</button><button class="chip" type="button" data-k="vp" aria-pressed="false">Văn phòng</button><button class="chip" type="button" data-k="tho" aria-pressed="false">Thở, thư giãn</button>
+</div>
+<div class="tgrid" id="tgrid">
+<article class="tc" data-k="bau tho"><div class="ph"><img src="https://images.unsplash.com/photo-1614644147724-2d4785d69962?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Cô Ngọc Hân cười tươi, mặc áo hồng nhạt" width="700" height="875" fetchpriority="high"></div><h2>Cô Ngọc&nbsp;Hân</h2><p class="role">Yoga bầu, thở cho mẹ bầu</p><div class="tags"><span class="tag p">Mẹ bầu</span><span class="tag">Thở</span></div><button class="btn btn-ghost btn-sm" type="button" data-t="0">Xem hồ sơ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></article>
+<article class="tc" data-k="sau bau"><div class="ph"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Cô Thảo Vy tóc dài, mỉm cười ngoài trời" width="700" height="875"></div><h2>Cô Thảo&nbsp;Vy</h2><p class="role">Pilates sau sinh và pilates bầu</p><div class="tags"><span class="tag">Sau sinh</span><span class="tag p">Mẹ bầu</span></div><button class="btn btn-ghost btn-sm" type="button" data-t="1">Xem hồ sơ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></article>
+<article class="tc" data-k="vp"><div class="ph"><img src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Cô Mai Anh mặc áo kẻ sọc, đứng trước hàng cây xanh" width="700" height="875"></div><h2>Cô Mai&nbsp;Anh</h2><p class="role">Pilates văn phòng, nền tảng</p><div class="tags"><span class="tag w">Văn phòng</span></div><button class="btn btn-ghost btn-sm" type="button" data-t="2">Xem hồ sơ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></article>
+<article class="tc" data-k="vp tho"><div class="ph"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Cô Bảo Trân tóc búi, cười trên nền sáng" width="700" height="875"></div><h2>Cô Bảo&nbsp;Trân</h2><p class="role">Yoga phục hồi, mở ngực</p><div class="tags"><span class="tag w">Văn phòng</span><span class="tag">Thở</span></div><button class="btn btn-ghost btn-sm" type="button" data-t="3">Xem hồ sơ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></article>
+</div>
+<p class="muted" style="margin-top:24px;font-size:14.5px">Tên, ảnh, kinh nghiệm và chứng chỉ của giáo viên là nội dung mẫu.</p>
+</div>
+</section>
+
+<div class="drawer" id="drawer" aria-hidden="true"><div class="sh" data-close></div><div class="pn" role="dialog" aria-modal="true" aria-labelledby="pnT" id="pn" tabindex="-1"></div></div>
+
+<section class="sec alt">
+<div class="wrap">
+<div class="sec-head"><p class="eyebrow rv"><svg class="ico" aria-hidden="true"><use href="#i-steth"/></svg> Làm việc cùng bác sĩ của bạn</p><h2 class="rv d1" style="margin-top:16px">Giáo viên không thay bác sĩ, nhưng làm theo lời&nbsp;dặn</h2></div>
+<div class="work">
+<div class="card rv"><h3>Đọc lời dặn trước</h3><p class="muted">Bạn khai sức khoẻ khi đăng ký. Giáo viên đọc trước buổi đầu, hỏi thêm nếu chưa rõ điều bác sĩ dặn.</p></div>
+<div class="card rv d1"><h3>Chỉnh bài theo từng người</h3><p class="muted">Cùng một lớp, mỗi người có phương án riêng: ngồi ghế, kê gối, bỏ động tác. Không ai phải theo cho bằng được.</p></div>
+<div class="card rv d2"><h3>Dừng khi có dấu hiệu lạ</h3><p class="muted">Chóng mặt, đau bất thường, ra máu: giáo viên cho dừng ngay và khuyên bạn liên hệ bác sĩ.</p></div>
+</div>
+<h3 class="rv" style="margin-top:64px">Tiêu chuẩn giáo viên ở Gieo</h3>
+<ul class="std" style="list-style:none;padding:0">
+<li class="rv"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> Có chứng chỉ yoga hoặc pilates và khoá chuyên đề tiền sản, sau sinh (mẫu)</li>
+<li class="rv d1"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> Chứng nhận sơ cấp cứu, cập nhật mỗi năm</li>
+<li class="rv"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> Dự giờ ít nhất 20 buổi trước khi tự đứng lớp</li>
+<li class="rv d1"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> Họp chuyên môn hằng tháng, xem lại các ca cần lưu ý</li>
+</ul>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head split"><div><p class="eyebrow rv"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg> Không gian</p><h2 class="rv d1" style="margin-top:16px">Phòng sáng, sàn ấm, có chỗ cho&nbsp;bé</h2></div><p class="lead rv d2">Hai phòng tập, góc trông bé buổi sáng, phòng thay đồ có ghế ngồi cho mẹ bầu và nước ấm luôn sẵn.</p></div>
+<div class="space">
+<figure class="rv"><img src="https://images.unsplash.com/photo-1529693662653-9d480530a697?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Học viên ngồi thiền trên thảm trong lớp yoga" width="900" height="900" loading="lazy"><figcaption>Phòng Lá · 8 thảm</figcaption></figure>
+<figure class="rv d1"><img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Em bé chơi đồ chơi trên tấm thảm trắng" width="600" height="480" loading="lazy"><figcaption>Góc trông bé</figcaption></figure>
+<figure class="rv d2"><img src="https://images.unsplash.com/photo-1771270786606-f5a0e57db762?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Kệ gỗ treo vòng pilates, tạ nhỏ và dây kháng lực" width="600" height="480" loading="lazy"><figcaption>Dụng cụ</figcaption></figure>
+<figure class="rv d1"><img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Phòng chờ có sofa, cây xanh và tranh treo tường" width="600" height="480" loading="lazy"><figcaption>Phòng chờ</figcaption></figure>
+<figure class="rv d2"><img src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Người cầm chuông xoay trong buổi thư giãn" width="600" height="480" loading="lazy"><figcaption>Buổi thư giãn</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section class="sec" style="padding-top:0">
+<div class="wrap">
+<div class="cta-band rv">
+<div><h2>Muốn tập với cô nào? Ghi chú khi đăng&nbsp;ký</h2><p>Gieo cố gắng xếp bạn vào lớp của giáo viên bạn chọn ở buổi đầu.</p></div>
+<div class="acts"><a class="btn btn-peach" href="../dang-ky/">Đăng&nbsp;ký buổi&nbsp;đầu <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="../lich-lop/">Xem lịch dạy</a></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="ft">
+<div class="wrap">
+<div class="ft-top">
+<div>
+<a class="logo" href="../" aria-label="Gieo Pilates và Yoga, về trang chủ"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#DCE9CC"/><path d="M20 32V19" stroke="#3B6447" stroke-width="2.4" stroke-linecap="round"/><path d="M20 21c-1-6-4.6-8.6-10.4-8.6 0 5.8 3.8 8.6 10.4 8.6z" fill="#3B6447"/><path d="M20 18.4c1-5.6 4.6-8.4 10.4-8.4 0 5.8-3.8 8.4-10.4 8.4z" fill="#F5B793"/></svg><span><b>gieo</b><small>Pilates &amp; Yoga</small></span></a>
+<p style="margin-top:20px;max-width:34ch">Lớp nhỏ cho mẹ bầu, mẹ sau sinh và người ngồi nhiều. Tập chậm, thở đều, đi từng bước theo cơ thể của bạn.</p>
+<div class="soc"><a href="#" aria-label="Facebook (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a><a href="#" aria-label="Instagram (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a><a href="#" aria-label="YouTube (mẫu)"><svg class="ico" aria-hidden="true"><use href="#i-yt"/></svg></a></div>
+</div>
+<div><h3>Các trang</h3><ul><li><a href="../">Trang chủ</a></li><li><a href="../chuong-trinh/">Chương trình theo giai đoạn</a></li><li><a href="../chon-lop/">Chọn lớp phù hợp</a></li><li><a href="../lich-lop/">Lịch lớp và gói tập</a></li><li><a href="../giao-vien/">Giáo viên</a></li><li><a href="../dang-ky/">Đăng ký buổi đầu</a></li></ul></div>
+<div><h3>Giờ mở cửa</h3><ul><li>Thứ 2–Thứ 6: 06:00–21:00</li><li>Thứ 7, Chủ nhật: 07:00–18:00</li><li>Góc trông bé: 08:00–11:00</li></ul>
+<h3 style="margin-top:28px">Liên hệ</h3><ul><li><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li><a href="mailto:xinchao@gieo.example">xinchao@gieo.example</a></li></ul></div>
+<div><h3>Ghé studio</h3><p>Tầng 2, số 00 đường mẫu, Phường Xuân Hoà, TP.HCM. Có thang máy và chỗ để xe đẩy.</p>
+<div class="minimap" aria-label="Bản đồ minh hoạ vị trí studio" role="img"><svg viewBox="0 0 320 150" aria-hidden="true"><rect width="320" height="150" fill="#36573F"/><path d="M-10 108C60 96 110 120 170 98S280 60 330 70" stroke="#4E7559" stroke-width="16" fill="none"/><path d="M40 -10 70 160M210 -10 190 160M-10 40h340" stroke="#456A50" stroke-width="7"/><path d="M110 20h50v34h-50zM230 90h46v30h-46zM20 60h34v26H20z" fill="#3F6249"/><circle cx="196" cy="52" r="22" fill="#F5B793" opacity=".22"/><path d="M196 66s-11-9.4-11-17.3a11 11 0 0 1 22 0C207 56.6 196 66 196 66z" fill="#F5B793"/><circle cx="196" cy="48.5" r="4" fill="#2C4B35"/></svg></div></div>
+</div>
+<div class="ft-bot"><p>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p><p>Thông tin trên web chỉ để tham khảo, không thay thế tư vấn của bác sĩ. © <span id="year">2026</span> Gieo (mẫu)</p></div>
+</div>
+</footer>
+<script src="../assets/site.js?v=1"></script>
+<script>
+(function(){
+var G=window.GIEO,$=G.$,$$=G.$$;
+function I(n){return '<svg class="ico" aria-hidden="true"><use href="#i-'+n+'"/></svg>'}
+var T=[
+ {n:'Cô Ngọc Hân',r:'Yoga bầu, thở cho mẹ bầu',img:'1614644147724-2d4785d69962',y:'8 năm dạy yoga, 5 năm dạy lớp tiền sản',c:['Chứng chỉ giáo viên yoga 200 giờ (mẫu)','Khoá yoga tiền sản 85 giờ (mẫu)','Sơ cấp cứu, cập nhật 2026 (mẫu)'],l:['Yoga bầu · Thứ 3, 5, 7 · 09:30','Yoga bầu tối · Thứ 3, 5 · 18:30','Thở & thư giãn bầu · Thứ 7 · 08:00'],q:'Mẹ bầu đến lớp không cần dẻo. Chỉ cần thở được sâu hơn lúc đến một chút.'},
+ {n:'Cô Thảo Vy',r:'Pilates sau sinh và pilates bầu',img:'1544005313-94ddf0286df2',y:'6 năm dạy pilates, là mẹ của hai bé',c:['Chứng chỉ pilates mat và reformer (mẫu)','Khoá chuyên đề phục hồi sau sinh (mẫu)','Sơ cấp cứu, cập nhật 2026 (mẫu)'],l:['Pilates sau sinh · Thứ 2, 4, 6 · 09:00','Pilates sau sinh tối · Thứ 6 · 19:00','Pilates bầu với bóng · Thứ 2, 4 · 18:00'],q:'Sau sinh, việc đầu tiên là thở và cảm nhận lại cơ thể. Sức sẽ đến sau.'},
+ {n:'Cô Mai Anh',r:'Pilates văn phòng, pilates nền tảng',img:'1619895862022-09114b41f16f',y:'Từng làm văn phòng 6 năm trước khi dạy pilates',c:['Chứng chỉ pilates mat (mẫu)','Khoá tư thế và công thái học văn phòng (mẫu)','Sơ cấp cứu, cập nhật 2026 (mẫu)'],l:['Pilates văn phòng · Thứ 2–6 · 12:15','Pilates mat nền tảng · Thứ 2, 4 · 18:30','Pilates mat nền tảng · Thứ 7 · 10:00'],q:'Năm phút đứng dậy giữa giờ làm, đều đặn mỗi ngày, quan trọng hơn một buổi tập thật nặng.'},
+ {n:'Cô Bảo Trân',r:'Yoga phục hồi, yoga mở ngực',img:'1580489944761-15a19d654956',y:'7 năm dạy yoga, chuyên lớp chậm',c:['Chứng chỉ giáo viên yoga 300 giờ (mẫu)','Khoá yoga phục hồi và thiền thở (mẫu)','Sơ cấp cứu, cập nhật 2026 (mẫu)'],l:['Yoga mở ngực · Thứ 3, 5 · 18:30','Yoga phục hồi · Chủ nhật · 08:30'],q:'Lớp phục hồi không có gì phải đạt. Bạn chỉ nằm, kê gối, và để cơ thể nghỉ.'}
+];
+var dr=$('#drawer'),pn=$('#pn'),last=null;
+function open(i){var t=T[i];last=document.activeElement;
+ pn.innerHTML='<div class="top"><span class="tag p">Hồ sơ giáo viên (mẫu)</span><button class="x" type="button" data-close aria-label="Đóng hồ sơ">'+I('close')+'</button></div><div class="hero"><img src="https://images.unsplash.com/photo-'+t.img+'?auto=format&fit=crop&w=300&q=80" alt="'+t.n+'" width="120" height="120"><div><h3 id="pnT">'+t.n+'</h3><p class="muted">'+t.r+'</p></div></div><p>'+t.y+'.</p><blockquote>“'+t.q+'”</blockquote><h4>Chứng chỉ</h4><ul>'+t.c.map(function(s){return '<li>'+I('check')+'<span>'+s+'</span></li>'}).join('')+'</ul><h4>Lớp đang dạy</h4><div class="slots">'+t.l.map(function(s){return '<span class="tag w">'+s+'</span>'}).join('')+'</div><'+'a class="btn btn-pri" href="../dang-ky/?gv='+i+'" style="margin-top:12px">Đăng ký lớp của '+t.n.replace('Cô ','cô ')+' '+I('arrow')+'</a>';
+ dr.classList.add('open');dr.setAttribute('aria-hidden','false');document.body.classList.add('lock');setTimeout(function(){pn.focus()},50);}
+function close(){dr.classList.remove('open');dr.setAttribute('aria-hidden','true');document.body.classList.remove('lock');if(last)last.focus()}
+$$('[data-t]').forEach(function(b){b.addEventListener('click',function(){open(+b.getAttribute('data-t'))})});
+dr.addEventListener('click',function(e){if(e.target.closest('[data-close]'))close()});
+document.addEventListener('keydown',function(e){if(!dr.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='Tab'){var f=$$('button,a',pn);if(!f.length)return;var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}});
+$$('#tf .chip').forEach(function(c){c.addEventListener('click',function(){var k=c.getAttribute('data-k');$$('#tf .chip').forEach(function(x){x.setAttribute('aria-pressed',x===c)});$$('.tc').forEach(function(t){t.classList.toggle('off',k!=='all'&&t.getAttribute('data-k').split(' ').indexOf(k)<0)})})});
+})();
+</script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=2" data-mau="Gieo Pilates &amp; Yoga" data-gia="3000000" data-loai="multi"></script>
+</body>
+</html>
