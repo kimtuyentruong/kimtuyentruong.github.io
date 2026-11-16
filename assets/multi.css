@@ -506,3 +506,68 @@
 @media (prefers-reduced-motion:reduce){.sxcmp tbody tr,.sxcmp td.me .ck{opacity:1;transform:none;transition:none}}
 .sxcmp .sm{white-space:normal}
 @media (max-width:760px){.sxcmp thead th{padding-left:6px;padding-right:6px}}
+
+/* v20: SEO & AIO hero: layered Google result + Maps card + AI answer, radar glow and floating channel chips (Tuyền 16/11: hero "quá nhàm chán") */
+.svc-hd.seo .kt-hd h1 .gl{background:linear-gradient(100deg,#FFB070,#FF6A2B 55%,#E8441E);-webkit-background-clip:text;background-clip:text;color:transparent}
+.svc-trust{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px}
+.svc-trust li{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--muted)}
+.svc-trust li::before{content:"";width:8px;height:8px;border-radius:50%;background:#FF8A3D;box-shadow:0 0 0 4px rgba(255,138,61,.15)}
+.sxh{position:relative;width:100%;max-width:560px;margin-left:auto;aspect-ratio:1/1.02;min-height:420px}
+.sxh-radar{position:absolute;inset:8% 6% 6% 10%;pointer-events:none}
+.sxh-radar i{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(255,138,61,.28);opacity:0;animation:sxradar 6s ease-out infinite}
+.sxh-radar i:nth-child(2){animation-delay:2s}.sxh-radar i:nth-child(3){animation-delay:4s}
+.sxh::before{content:"";position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,rgba(255,106,43,.22),transparent 65%);filter:none;pointer-events:none}
+@keyframes sxradar{0%{transform:scale(.35);opacity:.9}100%{transform:scale(1.05);opacity:0}}
+.sxh-card{position:absolute;border-radius:18px;border:1px solid var(--line-2);background:rgba(22,17,14,.94);box-shadow:0 24px 50px -24px rgba(0,0,0,.9);opacity:0;transform:translateY(18px);animation:sxin .8s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes sxin{to{opacity:1;transform:none}}
+.sxh-g{left:0;top:4%;width:78%;padding:16px 16px 12px;animation-delay:.1s}
+.sxh-bar{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:var(--bg);border:1px solid var(--line-2);font-size:14px;color:var(--ink);margin-bottom:12px}
+.sxh-bar svg{fill:none;stroke:var(--muted);stroke-width:2.2;stroke-linecap:round;flex:none}
+.sxh-bar span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sxh-res{padding:9px 10px;border-radius:12px}
+.sxh-res b,.sxh-res s{display:block;text-decoration:none}
+.sxh-res.dim b{height:9px;width:62%;border-radius:5px;background:#3A2E29;margin-bottom:7px}
+.sxh-res.dim s{height:7px;width:86%;border-radius:4px;background:#2A211D}
+.sxh-res.me{background:rgba(255,138,61,.1);border:1px solid rgba(255,138,61,.45);margin:4px 0;animation:sxglow 3.2s ease-in-out 1.6s infinite}
+.sxh-res.me em{display:block;font-style:normal;font-size:12px;color:#7CCF96;margin-bottom:2px}
+.sxh-res.me b{font-size:14.5px;color:#FFB070;font-weight:700;line-height:1.35}
+.sxh-res.me s{height:7px;width:80%;border-radius:4px;background:#3A2E29;margin-top:7px}
+@keyframes sxglow{50%{box-shadow:0 0 0 6px rgba(255,138,61,.1)}}
+.sxh-map{right:0;top:36%;width:52%;display:flex;gap:12px;align-items:center;padding:14px 16px;animation-delay:.6s}
+.sxh-map .pin{flex:none;fill:#FF6A2B;stroke:none;animation:sxbob 2.4s ease-in-out 1.4s infinite}
+.sxh-map .pin circle{fill:#fff}
+.sxh-map b{display:block;font-size:15px;color:var(--ink)}
+.sxh-map span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+@keyframes sxbob{50%{transform:translateY(-4px)}}
+.sxh-ai{left:6%;bottom:0;width:84%;padding:16px;animation-delay:1.1s}
+.sxh-lab{display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:10px}
+.sxh-ai .q{margin-left:auto;width:fit-content;max-width:88%;padding:10px 14px;border-radius:14px 14px 4px 14px;background:var(--grad);color:#fff;font-size:14px;line-height:1.45;opacity:0;animation:sxin .5s 1.6s forwards}
+.sxh-ai .dots{display:flex;gap:5px;padding:12px 14px;width:fit-content;margin-top:10px;border-radius:14px;background:#22160F;opacity:0;animation:sxdots 1.6s 2.1s forwards}
+.sxh-ai .dots i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:sxdot 1s ease-in-out infinite}
+.sxh-ai .dots i:nth-child(2){animation-delay:.15s}.sxh-ai .dots i:nth-child(3){animation-delay:.3s}
+@keyframes sxdots{0%{opacity:0}10%,85%{opacity:1}100%{opacity:0;height:0;padding:0;margin:0}}
+@keyframes sxdot{50%{transform:translateY(-3px);opacity:.5}}
+.sxh-ai .a{margin-top:10px;padding:12px 14px;border-radius:14px 14px 14px 4px;background:#1C1410;border:1px solid var(--line);font-size:14px;line-height:1.55;color:var(--ink);opacity:0;animation:sxin .6s 3.6s forwards}
+.sxh-ai mark{background:rgba(255,138,61,.2);color:#FFB070;border-radius:4px;padding:0 4px}
+.sxh-chip{position:absolute;z-index:3;padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:700;color:#FFB070;background:rgba(30,20,14,.92);border:1px solid rgba(255,138,61,.4);animation:sxfloat 5s ease-in-out infinite}
+.sxh-chip.c1{right:16%;top:0}.sxh-chip.c2{right:-2%;top:27%;animation-delay:1.2s}.sxh-chip.c3{left:-4%;top:52%;animation-delay:2.4s}.sxh-chip.c4{right:4%;bottom:31%;animation-delay:.6s}
+@keyframes sxfloat{50%{transform:translateY(-8px)}}
+@media (max-width:900px){.sxh{margin-top:28px}}
+@media (max-width:480px){.sxh{min-height:470px;aspect-ratio:auto}.sxh-g{width:92%}.sxh-map{width:70%;top:38%}.sxh-ai{left:0;width:100%}.sxh-chip.c3{left:0}.sxh-chip.c2{right:0}}
+@media (prefers-reduced-motion:reduce){.sxh-card,.sxh-ai .q,.sxh-ai .a{animation:none;opacity:1;transform:none}.sxh-ai .dots{display:none}.sxh-radar i,.sxh-chip,.sxh-res.me,.sxh-map .pin{animation:none}}
+/* v20: Gym & Pilates industry colour (group 'fitness', 16/11/2026) */
+:root{--c-fitness:#7FE28A}
+.tcard[data-i="fitness"] .kind{color:var(--c-fitness)}
+.tile .k-fitness{background:rgba(12,40,16,.7);color:#7FE28A;border:1px solid #7FE28A73}
+.pf-ind button[data-i="fitness"]{--dot:#7FE28A}
+/* v20: SEO hero on phones: cards stack (slight overlap) instead of absolute collage; floating chips hidden so nothing covers text */
+@media (max-width:1199px){
+  .sxh{aspect-ratio:auto;min-height:0;max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:12px;padding:6px 0 0}
+  .sxh-card{position:relative;inset:auto;left:auto;right:auto;top:auto;bottom:auto;width:100%}
+  .sxh-g{width:100%}
+  .sxh-map{width:86%;align-self:flex-end;margin-top:-26px;z-index:2}
+  .sxh-map span{white-space:normal}
+  .sxh-ai{width:100%;left:auto;margin-top:-6px}
+  .sxh-chip{display:none}
+  .sxh-radar{inset:10% 0 30% 0}
+}
