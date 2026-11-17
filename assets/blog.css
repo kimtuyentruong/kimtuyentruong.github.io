@@ -593,3 +593,5 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 .lh-order .opt:has(input:checked){border-color:#FF8A3D;background:rgba(255,138,61,.12);box-shadow:0 8px 24px -12px rgba(255,90,36,.6)}
 .lh-order .opt:has(input:checked) em{background:linear-gradient(135deg,#FF8A3D,#E8441E);color:#fff}
 @media (max-width:600px){.lh-order .opt{grid-template-columns:auto minmax(0,1fr);gap:4px 12px;padding:12px 14px}.lh-order .opt .ic{display:none}.lh-order .opt input{grid-row:1 / span 2}.lh-order .opt em{grid-column:2;justify-self:start;font-size:13.5px;padding:4px 10px;margin-top:4px}}
+/* hidden fields in template order mode (label display:grid would override [hidden]) */
+.lh-form label[hidden]{display:none}
