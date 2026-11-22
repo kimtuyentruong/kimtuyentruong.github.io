@@ -94,7 +94,20 @@
 <section class="saban" id="saban" aria-labelledby="sb-h1">
   <div class="sb-stage" tabindex="0" aria-label="Sa bàn 3D: kéo để xoay, dùng phím mũi tên để xoay, phím cộng trừ để phóng to thu nhỏ, Esc để về toàn cảnh">
     <img class="sb-still" src="assets/saban-ngay.jpg" alt="Sa bàn dự án: ba toà tháp trên bán đảo, sông bao quanh ba mặt, cầu dây văng nối trung tâm (mô hình minh hoạ)" width="1600" height="1000" fetchpriority="high">
-    <div class="sb-cv"></div>
+    <div class="sb-cv">
+      <div class="sb-label" hidden aria-live="polite"></div>
+      <div class="sb-pins"></div>
+      <div class="sb-card" role="status" hidden></div>
+      <div class="sb-coach" aria-hidden="true">
+        <div class="sb-c-anim">
+          <svg class="sb-c-arc" viewBox="0 0 200 60"><path d="M14 40c40 22 132 22 172 0" /><path d="M24 30l-10 10 13 4M176 30l10 10-13 4"/></svg>
+          <span class="sb-hand"><svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10M12 10V4.5a1.5 1.5 0 0 1 3 0V10M15 10V6a1.5 1.5 0 0 1 3 0v7a7 7 0 0 1-7 7h-.5A6.5 6.5 0 0 1 5 15.5L4 13a1.5 1.5 0 0 1 2.6-1.4L9 14"/></svg></span>
+          <span class="sb-mouse"><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="17" rx="5"/><path class="sb-wheel" d="M12 7v3"/></svg></span>
+          <span class="sb-pinch"><i></i><i></i></span>
+        </div>
+        <p class="sb-c-t"><span class="sb-c-d">Kéo để xoay 360° · Cuộn để xem&nbsp;cận</span><span class="sb-c-m">Chạm để xoay 360° · Chụm để xem&nbsp;cận</span></p>
+      </div>
+    </div>
     <div class="sb-scrim" aria-hidden="true"></div>
     <div class="sb-frame" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="sb-coord sb-coord-a">10°47′N</span><span class="sb-coord sb-coord-b">106°43′E</span></div>
     <div class="sb-head">
@@ -108,16 +121,13 @@
       <button type="button" aria-pressed="false"><span class="num">T2</span><b>Tháp&nbsp;Hà</b><i class="num">40&nbsp;tầng</i></button>
       <button type="button" aria-pressed="false"><span class="num">T3</span><b>Tháp&nbsp;Lam</b><i class="num">32&nbsp;tầng</i></button>
     </div>
-    <div class="sb-label" hidden aria-live="polite"></div>
-    <div class="sb-pins"></div>
-    <div class="sb-card" role="status" hidden></div>
     <div class="sb-ctl" role="toolbar" aria-label="Điều khiển sa bàn">
+      <button class="sb-touch" type="button" aria-pressed="false"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 11V6a1.5 1.5 0 0 1 3 0v4M12 10V5a1.5 1.5 0 0 1 3 0v5M15 10V7a1.5 1.5 0 0 1 3 0v6a7 7 0 0 1-7 7h-.5A6.5 6.5 0 0 1 5 15.5L4 13a1.5 1.5 0 0 1 2.6-1.4L9 14"/></svg><span>Chạm để xoay</span></button>
       <button class="sb-b sb-dn" type="button" aria-pressed="false"><span class="sb-sw" aria-hidden="true"><i></i></span><span class="sb-b-l">Ngày</span><span class="sr"> hoặc đêm</span></button>
-      <button class="sb-b sb-tour" type="button" aria-pressed="false"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4"/></svg><span>Tham quan tự&nbsp;động</span></button>
-      <button class="sb-b sb-home" type="button"><svg class="ic" aria-hidden="true"><use href="#i-expand"/></svg><span>Toàn cảnh</span></button>
+      <button class="sb-b sb-tour" type="button" aria-pressed="false" aria-label="Tham quan tự động"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v4h-4"/></svg><span class="sb-t">Tham&nbsp;quan tự&nbsp;động</span></button>
+      <button class="sb-b sb-home" type="button" aria-label="Về toàn cảnh"><svg class="ic" aria-hidden="true"><use href="#i-expand"/></svg><span class="sb-t">Toàn cảnh</span></button>
       <span class="sb-zoom"><button class="sb-b sb-zin" type="button" aria-label="Phóng to"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></button><button class="sb-b sb-zout" type="button" aria-label="Thu nhỏ"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button></span>
     </div>
-    <button class="sb-touch" type="button" aria-pressed="false"><svg class="ic" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 11V6a1.5 1.5 0 0 1 3 0v4M12 10V5a1.5 1.5 0 0 1 3 0v5M15 10V7a1.5 1.5 0 0 1 3 0v6a7 7 0 0 1-7 7h-.5A6.5 6.5 0 0 1 5 15.5L4 13a1.5 1.5 0 0 1 2.6-1.4L9 14"/></svg><span>Chạm để xoay</span></button>
     <button class="sb-open" type="button">Mở sa bàn 3D</button>
     <div class="sb-meta" aria-hidden="true">
       <span class="sb-compass"><i><b>B</b></i></span>
@@ -132,13 +142,13 @@
 <section class="spec" aria-labelledby="spec-t">
   <div class="wrap">
     <div class="chap rv"><span class="chap-n num">02</span><span class="chap-l">Bản vẽ tổng thể</span><i class="chap-rule"></i><span class="chap-c num">Khu đất 2,1&nbsp;ha</span></div>
-    <h2 class="spec-t mask" id="spec-t">Một bán đảo nhỏ, <em>ba toà tháp</em>, và dòng sông ở ba&nbsp;phía.</h2>
+    <h2 class="spec-t mask" id="spec-t">Một bán&nbsp;đảo nhỏ, <em>ba toà&nbsp;tháp</em>, và dòng sông ở ba&nbsp;phía.</h2>
     <dl class="spec-g">
       <div class="rv"><dt>Khu đất</dt><dd class="num">2,1<small>ha</small></dd></div>
-      <div class="rv" data-d="1"><dt>Toà tháp</dt><dd class="num">03</dd></div>
+      <div class="rv" data-d="1"><dt>Toà&nbsp;tháp</dt><dd class="num">03</dd></div>
       <div class="rv" data-d="2"><dt>Cao nhất</dt><dd class="num">46<small>tầng</small></dd></div>
-      <div class="rv" data-d="3"><dt>Mật độ xây dựng</dt><dd class="num">28<small>%</small></dd></div>
-      <div class="rv" data-d="4"><dt>Tới trung tâm</dt><dd class="num">8<small>phút</small></dd></div>
+      <div class="rv" data-d="3"><dt>Mật độ xây&nbsp;dựng</dt><dd class="num">28<small>%</small></dd></div>
+      <div class="rv" data-d="4"><dt>Tới trung&nbsp;tâm</dt><dd class="num">8<small>phút</small></dd></div>
     </dl>
     <p class="note">Số liệu mẫu để minh hoạ giao diện.</p>
   </div>
@@ -159,7 +169,7 @@
         <img class="sc-img" src="https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" srcset="https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1509030450996-dd1a26dda07a?auto=format&amp;fit=crop&amp;w=1800&amp;q=75 1800w" sizes="100vw" alt="Toàn cảnh thành phố lúc hoàng hôn nhìn từ trên cao (ảnh minh hoạ)" loading="lazy" width="1800" height="1200">
         <div class="sc-cap">
           <span class="sc-n"><b class="num">01</b> Toàn cảnh</span>
-          <h2 class="sc-t">Nơi thành phố <em>chạm dòng&nbsp;sông</em></h2>
+          <h2 class="sc-t">Nơi thành&nbsp;phố <em>chạm dòng&nbsp;sông</em></h2>
           <div class="sc-stats"><span><b class="num">2,1</b> ha khu đất</span><span><b class="num">8</b> phút tới trung tâm</span></div>
         </div>
       </li>
@@ -183,7 +193,7 @@
         <img class="sc-img" src="https://images.unsplash.com/photo-1757924461488-ef9ad0670978?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" srcset="https://images.unsplash.com/photo-1757924461488-ef9ad0670978?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1757924461488-ef9ad0670978?auto=format&amp;fit=crop&amp;w=1800&amp;q=75 1800w" sizes="100vw" alt="Phòng khách căn hộ mẫu với cửa kính lớn, sofa kem và tường ốp gỗ" loading="lazy" width="1800" height="1200">
         <div class="sc-cap">
           <span class="sc-n"><b class="num">04</b> Căn hộ mẫu</span>
-          <h2 class="sc-t">Phòng khách <em>nhìn ra&nbsp;sông</em></h2>
+          <h2 class="sc-t">Phòng&nbsp;khách <em>nhìn ra&nbsp;sông</em></h2>
           <div class="sc-stats"><span><b class="num">86</b> m² căn 2PN</span><span><b class="num">3,2</b> m trần</span></div>
         </div>
       </li>
@@ -191,7 +201,7 @@
         <img class="sc-img" src="https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" srcset="https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=1800&amp;q=75 1800w" sizes="100vw" alt="Hồ bơi vô cực trên sân thượng nhìn ra thành phố lúc hoàng hôn" loading="lazy" width="1800" height="1200">
         <div class="sc-cap">
           <span class="sc-n"><b class="num">05</b> Tầng thượng</span>
-          <h2 class="sc-t">Hoàng hôn <em>ở tầng&nbsp;46</em></h2>
+          <h2 class="sc-t">Hoàng&nbsp;hôn <em>ở tầng&nbsp;46</em></h2>
           <div class="sc-stats"><span><b class="num">38</b> m hồ bơi vô cực</span><span><b class="num">1.200</b> m² vườn trên cao</span></div>
         </div>
       </li>
@@ -201,7 +211,7 @@
       <button class="dn" type="button" aria-pressed="false" aria-label="Chuyển ánh sáng ngày hoặc đêm"><span class="dn-t"><i></i></span><svg class="ic dn-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M5 19l1.4-1.4M17.6 6.4L19 5"/></svg><span class="dn-l">Ngày</span></button>
       <p class="fly-hint" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V6a1.5 1.5 0 0 1 3 0v4M12 10V5a1.5 1.5 0 0 1 3 0v5M15 10V7a1.5 1.5 0 0 1 3 0v6a7 7 0 0 1-7 7h-.5A6.5 6.5 0 0 1 5 15.5L4 13a1.5 1.5 0 0 1 2.6-1.4L9 14"/></svg><span>Cuộn hoặc kéo để bay&nbsp;vào</span></p>
       <nav class="fly-prog" aria-label="Chọn cảnh">
-        <button type="button" data-go="0"><i><b></b></i><span><em class="num">01</em> Toàn cảnh</span></button><button type="button" data-go="1"><i><b></b></i><span><em class="num">02</em> Toà tháp</span></button><button type="button" data-go="2"><i><b></b></i><span><em class="num">03</em> Sảnh đón</span></button><button type="button" data-go="3"><i><b></b></i><span><em class="num">04</em> Căn hộ mẫu</span></button><button type="button" data-go="4"><i><b></b></i><span><em class="num">05</em> Tầng thượng</span></button>
+        <button type="button" data-go="0"><i><b></b></i><span><em class="num">01</em> Toàn cảnh</span></button><button type="button" data-go="1"><i><b></b></i><span><em class="num">02</em> Toà&nbsp;tháp</span></button><button type="button" data-go="2"><i><b></b></i><span><em class="num">03</em> Sảnh đón</span></button><button type="button" data-go="3"><i><b></b></i><span><em class="num">04</em> Căn&nbsp;hộ mẫu</span></button><button type="button" data-go="4"><i><b></b></i><span><em class="num">05</em> Tầng&nbsp;thượng</span></button>
       </nav>
     </div>
   </div>
@@ -238,11 +248,11 @@
       </div>
       <div class="arc-info" id="arcInfo" aria-live="polite">
         <span class="tag tag-mau">Giá mẫu, tham khảo</span>
-        <h3 class="arc-name">2 phòng ngủ</h3>
+        <h3 class="arc-name">2 phòng&nbsp;ngủ</h3>
         <dl class="arc-dl">
           <div><dt>Diện tích</dt><dd class="num" data-f="area"></dd></div>
           <div><dt>Tầng</dt><dd data-f="fl"></dd></div>
-          <div><dt>Tầm nhìn</dt><dd data-f="view"></dd></div>
+          <div><dt>Tầm&nbsp;nhìn</dt><dd data-f="view"></dd></div>
           <div><dt>Giá</dt><dd class="num" data-f="price"></dd></div>
         </dl>
         <a class="link" href="can-ho/">Xem mặt bằng <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -293,7 +303,7 @@
         <a class="dp" href="tien-ich/"><span class="dp-t num">06:00</span><figure class="dp-img"><img src="https://images.unsplash.com/photo-1776363497229-616cc7a541fe?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Hồ bơi trên mái lúc chạng vạng" loading="lazy" width="1100" height="1300"></figure><span class="dp-k">Tầng 46</span><h3>Bơi sáng ở hồ vô&nbsp;cực</h3></a>
         <a class="dp" href="tien-ich/"><span class="dp-t num">07:30</span><figure class="dp-img"><img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Phòng tập có cửa kính nhìn ra thành phố" loading="lazy" width="1100" height="1300"></figure><span class="dp-k">Tầng 5</span><h3>Gym nhìn ra&nbsp;sông</h3></a>
         <a class="dp" href="can-ho/"><span class="dp-t num">12:00</span><figure class="dp-img"><img src="https://images.unsplash.com/photo-1765766601532-90e9b96320c8?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Bếp tối màu với mặt đá cẩm thạch" loading="lazy" width="1100" height="1300"></figure><span class="dp-k">Bàn giao</span><h3>Bếp nhập khẩu, đá tự&nbsp;nhiên</h3></a>
-        <a class="dp" href="tien-ich/"><span class="dp-t num">18:30</span><figure class="dp-img"><img src="https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Hồ bơi vô cực trên sân thượng nhìn ra thành phố lúc hoàng hôn" loading="lazy" width="1100" height="1300"></figure><span class="dp-k">Sky lounge</span><h3>Hoàng hôn trên&nbsp;mái</h3></a>
+        <a class="dp" href="tien-ich/"><span class="dp-t num">18:30</span><figure class="dp-img"><img src="https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Hồ bơi vô cực trên sân thượng nhìn ra thành phố lúc hoàng hôn" loading="lazy" width="1100" height="1300"></figure><span class="dp-k">Sky lounge</span><h3>Hoàng&nbsp;hôn trên&nbsp;mái</h3></a>
         <a class="dp" href="vi-tri/"><span class="dp-t num">21:00</span><figure class="dp-img"><img src="https://images.unsplash.com/photo-1758193783649-13371d7fb8dd?auto=format&amp;fit=crop&amp;w=1100&amp;q=75" alt="Sảnh đón cao hai tầng ốp đá cẩm thạch, đèn chùm" loading="lazy" width="1100" height="1300"></figure><span class="dp-k">Sảnh 9 m</span><h3>Về nhà qua sảnh&nbsp;đá</h3></a>
         <a class="dp dp-end" href="tien-ich/"><span class="dp-t num">32</span><span class="dp-k">Tiện ích riêng cho cư dân (mẫu)</span><span class="link">Xem tất cả tiện ích <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
       </div>
@@ -306,7 +316,7 @@
 <section class="sec quick" aria-labelledby="quick-t">
   <div class="wrap">
     <div class="chap rv"><span class="chap-n num">07</span><span class="chap-l">Vị trí · chính sách · tiến độ</span><i class="chap-rule"></i><span class="chap-c num">10°47′N · 106°43′E</span></div>
-    <h2 class="h2 quick-h" id="quick-t">Gần trung tâm, <em>rõ từng&nbsp;bước</em></h2>
+    <h2 class="h2 quick-h" id="quick-t">Gần trung&nbsp;tâm, <em>rõ từng&nbsp;bước</em></h2>
     <div class="quick-g">
       <a class="qk qk-map rv" href="vi-tri/" aria-label="Xem bản đồ vị trí và thời gian di chuyển">
         <svg viewBox="0 0 520 330" aria-hidden="true">
@@ -343,12 +353,12 @@
       <form data-quick novalidate>
         <div class="book-row">
           <div class="field"><label for="q-name">Họ tên</label><input class="inp" id="q-name" name="name" autocomplete="name" required placeholder="Nguyễn Văn A"><p class="ferr" aria-live="polite"></p></div>
-          <div class="field"><label for="q-phone">Số điện thoại</label><input class="inp" id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="0900 000 000"><p class="ferr" aria-live="polite"></p></div>
+          <div class="field"><label for="q-phone">Số điện&nbsp;thoại</label><input class="inp" id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="0900 000 000"><p class="ferr" aria-live="polite"></p></div>
         </div>
-        <div class="field"><label class="consent"><input type="checkbox" name="ok" required> <span>Tôi đồng ý để Vọng Hà dùng thông tin trên để liên hệ đặt lịch, theo quy định về bảo vệ dữ liệu cá nhân.</span></label><p class="ferr" aria-live="polite"></p></div>
+        <div class="field"><label class="consent"><input type="checkbox" name="ok" required> <span>Tôi đồng ý để Vọng Hà dùng thông&nbsp;tin trên để liên&nbsp;hệ đặt&nbsp;lịch, theo quy định về bảo vệ dữ liệu cá nhân.</span></label><p class="ferr" aria-live="polite"></p></div>
         <div class="book-acts"><button class="btn btn-gold" type="submit">Gửi yêu cầu <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button><a class="link" href="dat-lich/">Chọn ngày giờ cụ thể <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </form>
-      <div class="qdone" hidden tabindex="-1"><span class="qdone-ic"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>Đã nhận yêu cầu (minh hoạ)</h3><p>Đây là mẫu giao diện, thông tin không được gửi đi.</p></div>
+      <div class="qdone" hidden tabindex="-1"><span class="qdone-ic"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>Đã nhận yêu cầu (minh&nbsp;hoạ)</h3><p>Đây là mẫu giao diện, thông tin không được gửi đi.</p></div>
     </div>
   </div>
 </section>
@@ -371,7 +381,7 @@
         <ul><li><a href="./">Tổng quan</a></li><li><a href="can-ho/">Căn hộ</a></li><li><a href="tien-ich/">Tiện ích</a></li><li><a href="vi-tri/">Vị trí</a></li><li><a href="chinh-sach/">Chính sách</a></li><li><a href="dat-lich/">Đặt lịch</a></li></ul>
       </div>
       <div>
-        <h3>Nhà mẫu</h3>
+        <h3>Nhà&nbsp;mẫu</h3>
         <ul>
           <li><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg> 08:00–20:00, cả thứ Bảy và Chủ nhật</li>
           <li>Sàn tầng 2, Vọng Hà Gallery, Phường An&nbsp;Khánh, TP.HCM (địa chỉ mẫu)</li>
@@ -380,7 +390,7 @@
         </ul>
       </div>
       <div>
-        <h3>Đường tới nhà mẫu</h3>
+        <h3>Đường tới nhà&nbsp;mẫu</h3>
         <div class="ftr-map"><svg viewBox="0 0 280 150" role="img" aria-label="Bản đồ minh hoạ vị trí nhà mẫu cạnh sông">
           <rect width="280" height="150" fill="#0E0C0A"/>
           <path d="M-10 118C40 96 70 126 118 104s70-62 112-58 60 10 70 6" fill="none" stroke="#2A3B40" stroke-width="22" stroke-linecap="round"/>

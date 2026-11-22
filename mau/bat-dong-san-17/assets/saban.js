@@ -87,7 +87,7 @@ var renderer = new T.WebGLRenderer({ antialias: true, alpha: true, powerPreferen
 renderer.setPixelRatio(DPR);
 renderer.outputEncoding = T.sRGBEncoding;
 renderer.toneMapping = T.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.05;
+renderer.toneMappingExposure = 1.15;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = mobile ? T.PCFShadowMap : T.PCFSoftShadowMap;
 renderer.setClearColor(0x000000, 0);
@@ -95,7 +95,7 @@ var cv = renderer.domElement; cv.className = 'sb-canvas';
 host.appendChild(cv);
 
 var scene = new T.Scene();
-scene.fog = new T.Fog(0x0d0b09, 120, 230);
+scene.fog = new T.Fog(0x0d0b09, 300, 620);
 var cam = new T.PerspectiveCamera(30, 1, 1, 600);
 
 /* ---------- vật liệu ---------- */
@@ -454,8 +454,8 @@ world.add(bLamps);
 var bridgeRef = bridge.clone(true); reflect.add(bridgeRef);
 
 /* ---------- ánh sáng phòng trưng bày ---------- */
-var hemi = new T.HemisphereLight(0xfff1dc, 0x1b140e, .32); scene.add(hemi);
-var spot = new T.SpotLight(0xffe0b0, 3.2, 0, .44, .85, 1);
+var hemi = new T.HemisphereLight(0xfff1dc, 0x1b140e, .42); scene.add(hemi);
+var spot = new T.SpotLight(0xffe0b0, 3.2, 0, .52, .8, 1);
 spot.position.set(22, 80, 34); spot.target.position.set(0, 0, -1); scene.add(spot); scene.add(spot.target);
 spot.castShadow = true;
 spot.shadow.mapSize.set(mobile ? 1024 : 2048, mobile ? 1024 : 2048);
@@ -468,9 +468,37 @@ var moon = new T.DirectionalLight(0x6f86b8, 0); moon.position.set(-30, 50, 20); 
 var target = new T.Vector3(0, 2, 0), tgtGoal = target.clone();
 var R0 = 108, th = .62, ph = .98, rad = R0;  // góc phương vị, góc từ đỉnh, bán kính
 var goal = { th: th, ph: ph, rad: rad };
-var LIM = { phMin: .32, phMax: 1.28, rMin: 34, rMax: 135 };
+var LIM = { phMin: .32, phMax: 1.28, rMin: 34, rMax: 240 };
 var vel = { th: 0, ph: 0 };
-function fitR() { var a = cam.aspect; return a < 1 ? R0 * Math.min(1.7, .86 / a) : a < 1.35 ? R0 * 1.12 : R0; }
+var FIT = R0, V = new T.Vector3();
+function fitR() { return FIT; }
+/* căn khung: tính bán kính + dời tâm hình để cả bàn sa bàn nằm gọn trong vùng trống (không đè chữ, nút) */
+var STACK = window.matchMedia('(max-width: 1023px)');
+var FITPTS = [];
+[-1, 1].forEach(function (sx) { [-1, 1].forEach(function (sz) { FITPTS.push(new T.Vector3(sx * TW / 2, 0, sz * TD / 2), new T.Vector3(sx * TW / 2, -2.5, sz * TD / 2)); }); });
+TOWERS.forEach(function (t) { FITPTS.push(new T.Vector3(t.x, t.fl * FH + 2, t.z)); });
+function fitView() {
+  var w = W, h = H, x0, x1, y0, y1, hdr = 70;
+  if (STACK.matches) { x0 = w * .02; x1 = w * .98; y0 = h * .04; y1 = h * .98; }
+  else {
+    var hd = sec.querySelector('.sb-head').getBoundingClientRect(), st = stage.getBoundingClientRect();
+    var tw = sec.querySelector('.sb-tw').getBoundingClientRect();
+    x0 = Math.max(w * .3, hd.right - st.left + 12, tw.left - st.left < w / 2 ? tw.right - st.left + 12 : 0); x1 = w - 24; y0 = hdr + 12; y1 = h - 128;
+  }
+  var rw = x1 - x0, rh = y1 - y0;
+  cam.clearViewOffset(); cam.updateProjectionMatrix();
+  var r = R0, sp = Math.sin(.98), bx;
+  for (var it = 0; it < 5; it++) {
+    cam.position.set(r * sp * Math.sin(.62), 2 + r * Math.cos(.98), r * sp * Math.cos(.62)); cam.lookAt(0, 2, 0); cam.updateMatrixWorld();
+    bx = [1e9, -1e9, 1e9, -1e9];
+    FITPTS.forEach(function (p) { V.copy(p).project(cam); var px = (V.x * .5 + .5) * w, py = (-V.y * .5 + .5) * h; bx[0] = Math.min(bx[0], px); bx[1] = Math.max(bx[1], px); bx[2] = Math.min(bx[2], py); bx[3] = Math.max(bx[3], py); });
+    r *= Math.max((bx[1] - bx[0]) / rw, (bx[3] - bx[2]) / rh);
+  }
+  FIT = r;
+  var cx = (bx[0] + bx[1]) / 2, cy = (bx[2] + bx[3]) / 2;
+  cam.setViewOffset(w, h, cx - (x0 + x1) / 2, cy - (y0 + y1) / 2, w, h);
+  cam.updateProjectionMatrix();
+}
 function clampGoal() {
   goal.ph = Math.max(LIM.phMin, Math.min(LIM.phMax, goal.ph));
   goal.rad = Math.max(LIM.rMin, Math.min(LIM.rMax * (cam.aspect < 1 ? 1.6 : 1), goal.rad));
@@ -488,15 +516,9 @@ function size(force) {
   if (!force && w === W && Math.abs(h - H) < 120) return;   // iPhone: thanh địa chỉ co giãn khi cuộn → bỏ qua
   W = w; H = h;
   renderer.setSize(w, h, false); cv.style.width = w + 'px'; cv.style.height = h + 'px';
-  cam.aspect = w / h; cam.fov = cam.aspect < 1 ? 38 : 30;
-  // dời tâm hình sang phải/xuống dưới để chừa chỗ cho tiêu đề
-  if (cam.aspect >= 1.2) cam.setViewOffset(w, h, -w * .13, h * .03, w, h);
-  else cam.setViewOffset(w, h, 0, h * .02, w, h);
-  cam.updateProjectionMatrix();
-  OX = host.offsetLeft; OY = host.offsetTop;
-  if (touchBtn) touchBtn.style.top = (OY + h - 58) + 'px';
-  sec.style.setProperty('--sbc', (OY + 12) + 'px');
-  if (!focusT) { goal.rad = fitR(); clampGoal(); }
+  cam.aspect = w / h; cam.fov = cam.aspect < 1 ? 36 : 30;
+  fitView();
+  if (focusT == null) { goal.rad = fitR(); clampGoal(); }
   dirty();
 }
 var lw = window.innerWidth;
@@ -514,8 +536,9 @@ function loop(now) {
     var k = Math.min(1, (now - introCam.t0) / introCam.dur), e = 1 - Math.pow(1 - k, 3);
     th = introCam.a.th + (introCam.b.th - introCam.a.th) * e; ph = introCam.a.ph + (introCam.b.ph - introCam.a.ph) * e; rad = introCam.a.rad + (introCam.b.rad - introCam.a.rad) * e;
     goal.th = th; goal.ph = ph; goal.rad = rad;
-    if (k >= 1) introCam = null; moving = true;
+    if (k >= 1) { introCam = null; setTimeout(function () { startCoach(false); }, 300); } moving = true;
   } else {
+    if (coach) { coachStep(now); moving = true; }
     if (tour) {
       var tk = (now - tour.t0) / tour.dur;
       goal.th = tour.th0 + tk * Math.PI * 2; goal.ph = tour.ph + Math.sin(tk * Math.PI * 2) * .08;
@@ -543,6 +566,28 @@ function loop(now) {
   if (!firstFrame) { firstFrame = true; onFirstFrame(); }
 }
 var firstFrame = false;
+
+/* ---------- gợi ý thao tác: tay/chuột tự diễn, mô hình lắc theo; ẩn sau thao tác đầu tiên hoặc ~6 giây ---------- */
+var coachEl = sec.querySelector('.sb-coach'), coach = null, CK = 'bds17:sb-coach';
+function seen() { try { return localStorage.getItem(CK) === '1'; } catch (e) { return false; } }
+function startCoach(force) {
+  if (!coachEl || coach || (!force && (seen() || HEADLESS))) return;
+  coach = { t0: performance.now(), th0: goal.th, r0: goal.rad, keep: !!force && HEADLESS };
+  coachEl.classList.add('on'); dirty();
+}
+function endCoach() {
+  if (!coach) return;
+  coach = null; coachEl.classList.remove('on');
+  try { localStorage.setItem(CK, '1'); } catch (e) {}
+}
+function coachStep(now) {
+  var t = now - coach.t0, k = (t % 3000) / 3000, hx = 0, zf = 1;
+  // khớp với keyframe cHand / cMouse trong CSS
+  if (k < .15) hx = -62 * (k / .15); else if (k < .38) hx = -62 + 124 * ((k - .15) / .23); else if (k < .52) hx = 62 * (1 - (k - .38) / .14);
+  else if (k > .62 && k < .94) zf = 1 - .1 * Math.sin((k - .62) / .32 * Math.PI);
+  if (!RM) { goal.th = coach.th0 - hx / 62 * .32; goal.rad = coach.r0 * zf; }
+  if (t > 6000 && !coach.keep) endCoach();
+}
 function onFirstFrame() {
   sec.classList.add('sb-ready'); introPct(1); size(true);
   setTimeout(closeIntro, HEADLESS ? 0 : 450);
@@ -566,7 +611,7 @@ function tint(o) { o.fm.color.setScalar(1 - .72 * night).lerp(GOLD, o.hl * (.5 +
 function base(m, k) { if (m.userData.base) m.color.copy(m.userData.base).multiplyScalar(k); }
 function setNight(k) {
   spot.intensity = 1.9 - 1.25 * k; spot.color.setHex(0xffe0b0).lerp(C(0xd8c4a8), k);
-  hemi.intensity = .55 - .4 * k; rim.intensity = .45 - .2 * k; fill.intensity = .25 * (1 - k); moon.intensity = .35 * k;
+  hemi.intensity = .42 - .28 * k; rim.intensity = .45 - .2 * k; fill.intensity = .25 * (1 - k); moon.intensity = .35 * k;
   facades.forEach(function (m) { m.emissiveIntensity = 2.4 * k; });
   towerObjs.forEach(function (o) { o.crown.emissiveIntensity = .55 * k; tint(o); });
   podM.emissiveIntensity = .05 * k; if (M.shop) M.shop.emissiveIntensity = 1.1 * k;
@@ -575,7 +620,7 @@ function setNight(k) {
   tmpC.copy(lampDay).lerp(lampNight, k); M.lamp.color.copy(tmpC);
   M.cable.opacity = .55 + .35 * k;
   base(M.water, 1 - .5 * k); base(M.land, 1 - .55 * k); base(M.bank, 1 - .55 * k); base(M.roof, 1 - .72 * k); base(M.lawn, 1 - .5 * k); base(M.tree, 1 - .5 * k);
-  renderer.toneMappingExposure = 1.05 + .15 * k;
+  renderer.toneMappingExposure = 1.15 + .1 * k;
   need = true;
 }
 
@@ -591,7 +636,6 @@ var pinEls = PINS.map(function (p, i) {
   b.addEventListener('click', function (ev) { ev.stopPropagation(); openPin(i); });
   return b;
 });
-var V = new T.Vector3();
 function proj(x, y, z) { V.set(x, y, z).project(cam); return { x: OX + (V.x * .5 + .5) * W, y: OY + (-V.y * .5 + .5) * H, ok: V.z < 1 }; }
 function placeUI() {
   PINS.forEach(function (p, i) {
@@ -599,6 +643,7 @@ function placeUI() {
     el.style.transform = 'translate3d(' + s.x.toFixed(1) + 'px,' + s.y.toFixed(1) + 'px,0)';
     el.classList.toggle('off', !s.ok || s.x < OX + 8 || s.x > OX + W - 8 || s.y < OY + 30 || s.y > OY + H - 30);
   });
+  if (coach && coachEl) { var cs = proj(0, 3, 2); coachEl.style.left = cs.x.toFixed(1) + 'px'; coachEl.style.top = cs.y.toFixed(1) + 'px'; }
   var li = hover >= 0 ? hover : sel;
   if (li >= 0) {
     var o = towerObjs[li], t = o.data, s = proj(t.x, o.top + 2.4, t.z);
@@ -664,12 +709,12 @@ function pick(cx, cy) {
 }
 var drag = null, pts = {}, pinch = null, active = !COARSE; // điện thoại: chỉ xoay khi đã bấm "Chạm để xoay"
 function setActive(on) {
-  active = on; sec.classList.toggle('sb-on', on);
+  active = on; sec.classList.toggle('sb-on', on); sec.classList.add('sb-touched'); endCoach();
   if (touchBtn) { touchBtn.setAttribute('aria-pressed', on ? 'true' : 'false'); touchBtn.querySelector('span').textContent = on ? 'Xong, cuộn tiếp' : 'Chạm để xoay'; }
 }
 if (touchBtn) touchBtn.addEventListener('click', function () { setActive(!active); });
 cv.addEventListener('pointerdown', function (e) {
-  stopTour(); introCam = null;
+  if (!(e.pointerType !== 'mouse' && !active)) stopTour(); introCam = null;
   pts[e.pointerId] = { x: e.clientX, y: e.clientY };
   var ids = Object.keys(pts);
   if (e.pointerType !== 'mouse' && !active) { drag = { x: e.clientX, y: e.clientY, t: performance.now(), tap: true, passive: true }; return; }
@@ -719,6 +764,7 @@ var wheelArmed = false;
 cv.addEventListener('pointerdown', function (e) { if (e.pointerType === 'mouse') { wheelArmed = true; sec.classList.add('sb-armed'); } });
 stage.addEventListener('mouseleave', function () { wheelArmed = false; sec.classList.remove('sb-armed'); });
 cv.addEventListener('wheel', function (e) {
+  if (wheelArmed || e.ctrlKey) endCoach();
   if (!(wheelArmed || e.ctrlKey)) return;
   var nr = goal.rad * (1 + Math.max(-.3, Math.min(.3, e.deltaY * .0016)));
   var lo = LIM.rMin, hi = LIM.rMax;
@@ -745,6 +791,7 @@ if (dnBtn) dnBtn.addEventListener('click', function () {
   nightGoal = on ? 1 : 0; sec.classList.toggle('sb-night', on); dirty();
 });
 function stopTour() {
+  endCoach();
   if (!tour) return; tour = null;
   if (tourBtn) { tourBtn.setAttribute('aria-pressed', 'false'); }
 }
@@ -780,6 +827,7 @@ if (HEADLESS) {
   introCam = { t0: performance.now() + 250, dur: 2600, a: { th: th - .9, ph: .42, rad: rad * 1.3 }, b: { th: th, ph: ph, rad: rad } };
   th = introCam.a.th; ph = introCam.a.ph; rad = introCam.a.rad;
 }
+if (HEADLESS && /coach/.test(location.hash)) startCoach(true);
 window.VH_SABAN = { focus: focusTower, reset: resetView, pin: openPin, night: function (on) { if (!!on !== (nightGoal === 1)) dnBtn.click(); } };
 applyCam(); dirty();
 window.addEventListener('load', function () { size(true); });

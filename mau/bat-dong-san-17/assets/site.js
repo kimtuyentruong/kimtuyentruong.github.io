@@ -141,7 +141,7 @@ $$('form[data-quick]').forEach(function (fm) {
 /* ---------- con trỏ tuỳ biến (chỉ máy có chuột), nút từ tính, chuyển trang ---------- */
 var FINE = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches;
 if (FINE && !RM && !HEADLESS) {
-  var cur = d.createElement('div'); cur.className = 'cur'; cur.setAttribute('aria-hidden', 'true'); cur.innerHTML = '<i></i><span></span>';
+  var cur = d.createElement('div'); cur.className = 'cur'; cur.setAttribute('aria-hidden', 'true'); cur.innerHTML = '<i></i><b><svg viewBox="0 0 64 64"><path d="M14 24a20 20 0 0 1 34-6M50 40a20 20 0 0 1-34 6"/><path d="M48 8v10H38M16 56V46h10"/></svg></b><span></span>';
   body.appendChild(cur); root.classList.add('has-cur');
   var cx = -100, cy = -100, mxT = -100, myT = -100, cRaf = 0, lab = cur.querySelector('span'), mode = '';
   var cLoop = function () {
@@ -156,6 +156,7 @@ if (FINE && !RM && !HEADLESS) {
     var el = e.target.closest ? e.target : null;
     if (el && el.closest('.hs')) setMode('c-hs', 'Xem');
     else if (el && el.closest('a, button, input, select, textarea, label, summary, [data-lb]')) setMode('c-link');
+    else if (el && el.closest('.sb-canvas')) setMode('c-rot', 'Kéo');
     else if (el && el.closest('.fly-stage, .pano')) setMode('c-drag', 'Kéo');
     else setMode('');
     if (!cRaf) cRaf = requestAnimationFrame(cLoop);
