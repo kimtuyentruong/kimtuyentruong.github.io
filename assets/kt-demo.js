@@ -3,13 +3,14 @@
    data-mau, data-gia, data-loai (v2, 16/11/2026: badge used to say "từ 5.000.000đ" and carried no price). */
 (function () {
   var me = document.currentScript, name = me && me.getAttribute('data-mau'),
-      gia = me && me.getAttribute('data-gia'), loai = me && me.getAttribute('data-loai');
+      gia = me && me.getAttribute('data-gia'), loai = me && me.getAttribute('data-loai'),
+      nd = me && me.getAttribute('data-nd'), setup = me && me.getAttribute('data-setup');  /* v3: per-template fees (22/11/2026) */
   function vnd(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + 'đ'; }
   function run() {
     var b = document.querySelector('a.kt-badge, a.sales-badge') || document.querySelector('a[href="/lien-he/"]');
     if (!b || !name) return;
     var q = '/lien-he/?mau=' + encodeURIComponent(name);
-    if (gia) q += '&gia=' + gia + '&loai=' + (loai || 'one');
+    if (gia) q += '&gia=' + gia + '&loai=' + (loai || 'one') + (nd ? '&nd=' + nd : '') + (setup ? '&setup=' + setup : '');
     b.setAttribute('href', q);
     var el = b.querySelector('span') || b;
     el.innerHTML = gia ? 'Làm web giống mẫu này: <b>' + vnd(gia) + '</b> — <b>Chọn&nbsp;mẫu&nbsp;này</b>'
