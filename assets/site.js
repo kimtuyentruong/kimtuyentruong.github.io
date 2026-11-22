@@ -355,6 +355,10 @@
       /* template order (v39, Tuyền 16/11/2026): price + options (content entry, install on hosting) + delivery channel, live total */
       /* content entry by template size (Tuyền 16/11/2026): one-page 700.000đ, multi-page 1.500.000đ, 10+ pages 2.000.000đ */
       var ndp = loai === 'big' ? 2000000 : multi ? 1500000 : 700000, em = o.querySelector('.em');
+      /* per-template fee overrides from gia-mau-phi.json, carried as &nd= &setup= (v44, Tuyền 22/11/2026) */
+      var hostp = 300000, ndq = parseInt(q.get('nd'), 10), stq = parseInt(q.get('setup'), 10);
+      if (ndq > 0) ndp = ndq; if (stq > 0) hostp = stq;
+      var he = document.getElementById('oHost'); if (he) he.textContent = '+' + fmt(hostp);
       o.hidden = false; document.getElementById('oName').textContent = mau;
       /* template already chosen: industry, package and "what do you need" are not needed (v43, Tuyền 16/11/2026) */
       ['nganh', 'goi', 'nd'].forEach(function (k) { var el = f[k] && f[k].closest('label'); if (el) el.hidden = true; });
@@ -362,10 +366,10 @@
       setTimeout(function () { var y = f.getBoundingClientRect().top + window.pageYOffset - 84; window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' }); }, 250); document.getElementById('oBase').textContent = fmt(gia) + (loai === 'big' ? ' · mẫu từ 10 trang' : multi ? ' · mẫu nhiều trang' : ' · mẫu one-page');
       document.getElementById('oNd').textContent = '+' + fmt(ndp);
       var upd = function () {
-        var nd = f.opt_nd.checked ? ndp : 0, host = f.opt_host.checked ? 300000 : 0, via = (f.querySelector('input[name="via"]:checked') || {}).value || 'Zalo';
+        var nd = f.opt_nd.checked ? ndp : 0, host = f.opt_host.checked ? hostp : 0, via = (f.querySelector('input[name="via"]:checked') || {}).value || 'Zalo';
         em.hidden = via !== 'Email'; f.email.required = via === 'Email';
         document.getElementById('oTotal').textContent = fmt(gia + nd + host);
-        f.don.value = mau + ' (' + fmt(gia) + ')' + (nd ? ' + nhập nội dung ' + fmt(nd) : '') + (host ? ' + cài hosting, tên miền 300.000đ' : '') +
+        f.don.value = mau + ' (' + fmt(gia) + ')' + (nd ? ' + nhập nội dung ' + fmt(nd) : '') + (host ? ' + setup, cài hosting, tên miền ' + fmt(host) : '') +
           ' = ' + fmt(gia + nd + host) + '; nhận source code qua ' + via + (via === 'Email' && f.email.value ? ' (' + f.email.value.trim() + ')' : '');
       };
       o.addEventListener('change', upd); o.addEventListener('input', upd); upd();
