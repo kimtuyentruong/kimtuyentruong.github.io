@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Book a Free Trial Class: Gym, Combat, Yoga | IRONVERT</title>
+<meta name="description" content="Book your free trial at IRONVERT in 4 steps: choose a class and club, pick a day and time, add your details, review and get a confirmation code. Includes a 20-minute body scan.">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="free-trial">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Home</a> · <a href="../classes/">Classes</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../schedule/">Schedule</a> · <a href="../membership/">Membership</a> · <a href="../trainers/">Trainers</a> · <a href="../tools/">Tools</a> · <a href="../locations/">Locations</a> · <a href="../blog/">Blog</a> · <a href="../free-trial/">Free Trial</a></nav></noscript></div>
+<main id="main">
+<section class="phero" style="padding-bottom:clamp(32px,4vw,56px)">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">Day 01</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Free Trial</li></ol>
+  <div class="intro" style="max-width:880px">
+   <span class="eyebrow">Free trial class</span>
+   <h1>Four steps, then we’ll see you at the&nbsp;club</h1>
+   <p class="lead">Your free trial includes one group class or a coached hour on the floor, plus a 20-minute InBody scan. Just bring workout clothes and a water&nbsp;bottle.</p>
+  </div>
+ </div>
+</section>
+
+<section class="sec tight" aria-label="Free trial sign-up form">
+ <div class="wrap wiz">
+  <div>
+   <ol class="wsteps" id="wsteps"><li class="on"><b>1. Class</b><span>and club</span></li><li><b>2. Time</b><span>day and hour</span></li><li><b>3. Details</b><span>contact, health</span></li><li><b>4. Confirm</b><span>review, send</span></li></ol>
+   <form class="wpanel" id="wf" novalidate>
+    <div data-step="0">
+     <h2 tabindex="-1">Which class would you like to&nbsp;try?</h2>
+     <p class="muted" id="quizHint" style="margin:0"></p>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Choose a class</legend><div class="pick" id="pDisc"></div></fieldset>
+     <p class="err" id="eDisc"></p>
+     <h3 class="h-s" style="margin-top:24px">Club</h3>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Choose a club</legend><div class="pick" id="pLoc"></div></fieldset>
+     <p class="err" id="eLoc"></p>
+     <div class="field" style="margin-top:16px"><label for="coach">Preferred coach (optional)</label><select class="inp" id="coach"><option value="">Let the club assign one</option></select></div>
+    </div>
+    <div data-step="1" hidden>
+     <h2 tabindex="-1">Pick a day and&nbsp;time</h2>
+     <p class="muted" id="timeHint" style="margin:0"></p>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Choose a day</legend><div class="pick p7" id="pDay"></div></fieldset>
+     <p class="err" id="eDay"></p>
+     <fieldset style="border:0;padding:0;margin:0"><legend class="vh">Choose a time</legend><div class="pick p4" id="pTime"></div></fieldset>
+     <p class="err" id="eTime"></p>
+    </div>
+    <div data-step="2" hidden>
+     <h2 tabindex="-1">A few details so the front desk can greet&nbsp;you</h2>
+     <div class="f2" style="margin-top:16px">
+      <div class="field"><label for="name">Full name <span class="req">*</span></label><input class="inp" id="name" autocomplete="name" aria-describedby="eName"><p class="err" id="eName"></p></div>
+      <div class="field"><label for="phone">Phone number <span class="req">*</span></label><input class="inp" id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 010-0000" aria-describedby="ePhone"><p class="err" id="ePhone"></p></div>
+      <div class="field"><label for="email">Email (optional)</label><input class="inp" id="email" type="email" autocomplete="email" aria-describedby="eEmail"><p class="err" id="eEmail"></p></div>
+      <div class="field"><label for="goal">Main goal</label><select class="inp" id="goal"><option>Feel fitter, less tired</option><option>Lose fat</option><option>Build muscle</option><option>Relieve stress</option><option>Learn a martial art</option></select></div>
+     </div>
+     <div class="field"><label for="health">Health status <span class="req">*</span></label><select class="inp" id="health" aria-describedby="eHealth"><option value="">Choose one</option><option>No health concerns worth noting</option><option>A medical condition; I have checked or will check with my doctor</option><option>An old injury (details below)</option><option>Pregnant or postpartum</option></select><p class="err" id="eHealth"></p></div>
+     <div class="field"><label for="note">Note for your coach</label><textarea class="inp" id="note" placeholder="For example: my right knee gets sore when I run"></textarea></div>
+     <label class="check"><input type="checkbox" id="agree" aria-describedby="eAgree"><span>I agree that IRONVERT may use the details above to contact me about scheduling my free trial, in line with the privacy policy. <span class="req">*</span></span></label>
+     <p class="err" id="eAgree" style="margin-top:6px"></p>
+    </div>
+    <div data-step="3" hidden>
+     <h2 tabindex="-1">Review before you&nbsp;send</h2>
+     <p class="muted" style="margin:0 0 20px">Tap “Edit” to go back to that step.</p>
+     <dl class="recap" id="recap"></dl>
+    </div>
+    <div class="wnav" id="wnav"><button class="btn btn-ghost" type="button" id="back" hidden><svg class="ico" aria-hidden="true" style="transform:scaleX(-1)"><use href="#i-go"/></svg>Back</button><button class="btn btn-lime" type="submit" id="next" style="margin-left:auto">Continue <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
+   </form>
+   <div class="wpanel done-box" id="done" hidden tabindex="-1"></div>
+  </div>
+  <aside class="side-box" aria-labelledby="h-sum">
+   <h2 id="h-sum">Your&nbsp;session</h2>
+   <dl class="recap" id="live" style="font-size:.9rem"></dl>
+   <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:18px">
+    <b class="flabel" style="display:block;margin-bottom:10px">What to bring</b>
+    <ul class="pm-card" style="padding:0;border:0;background:none"><li style="display:flex;gap:8px"><svg class="ico s" aria-hidden="true" style="color:var(--lime);margin-top:4px"><use href="#i-check"/></svg>Workout clothes and shoes</li><li style="display:flex;gap:8px"><svg class="ico s" aria-hidden="true" style="color:var(--lime);margin-top:4px"><use href="#i-check"/></svg>Water bottle, small towel</li><li style="display:flex;gap:8px"><svg class="ico s" aria-hidden="true" style="color:var(--lime);margin-top:4px"><use href="#i-check"/></svg>Photo ID for your guest pass</li></ul>
+   </div>
+   <p class="note" style="margin:16px 0 0">Demo template: your details are not sent anywhere.</p>
+  </aside>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-next">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">After you sign up</span><h2 class="h-l" id="h-next">What happens&nbsp;next</h2></div></div>
+  <div class="steps-coach">
+   <div class="rv"><b>01</b><h3>Confirmation call</h3><p>The front desk calls within 2 business hours to confirm your time and ask a few health questions.</p></div>
+   <div class="rv d1"><b>02</b><h3>Arrive 15 minutes early</h3><p>Give your confirmation code at the desk, grab a locker, a towel, and gloves for combat classes.</p></div>
+   <div class="rv d2"><b>03</b><h3>Scan and&nbsp;train</h3><p>A 20-minute InBody scan with your coach, then into the class you picked.</p></div>
+   <div class="rv d3"><b>04</b><h3>No pressure</h3><p>After your session you’ll get a plan recommendation. Whether you join is entirely up to you.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-faq">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">FAQ</span><h2 class="h-l" id="h-faq">About your free&nbsp;trial</h2><div class="health" style="margin-top:24px"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><span>If you have a heart condition, high blood pressure, joint problems or are pregnant, check with your doctor before your session and let your coach know.</span></div></div>
+  <div class="faq">
+   <details><summary>Can I reschedule my trial?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Yes. Call us or reply to your confirmation text with your code to move it to another day.</div></details>
+   <details><summary>Can I bring a friend?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Absolutely. Each person books their own trial so the coach can prepare enough space and equipment.</div></details>
+   <details><summary>Do I need to know how to swim for a swim trial?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">No. The swim trial is designed for adults who can’t swim yet, in the shallow lane with a coach.</div></details>
+  </div>
+ </div>
+</section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Demo content: brand name, prices, staff, certifications, schedule, reviews and images are for illustration only.</p></noscript></div>
+<script src="../assets/site.js"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+var qs=new URLSearchParams(location.search),quiz=V.store.get('quiz',[]),plan=V.store.get('plan',null);
+var S={disc:'',loc:'',coach:'',day:null,time:'',sess:''},step=0;
+var lop=D.sess(qs.get('session')||'');
+if(lop){S.disc=lop.disc;S.loc=lop.loc;S.day=lop.day;S.time=lop.time;S.coach=lop.coach;S.sess=lop.id}
+if(qs.get('class')&&D.d(qs.get('class')))S.disc=qs.get('class');
+if(qs.get('location')&&D.loc(qs.get('location')))S.loc=qs.get('location');
+var hc=D.coach(qs.get('coach')||'');if(hc){S.coach=hc.id;S.loc=hc.loc;if(!S.disc)S.disc=hc.sp[0]}
+if(qs.get('plan')&&D.plans.some(function(p){return p.id===qs.get('plan')}))plan={plan:qs.get('plan')};
+if(!S.disc&&quiz.length)S.disc=quiz[0];
+$('#quizHint').textContent=quiz.length?'Suggested by your quiz: '+quiz.map(function(i){return D.d(i).n}).join(', ')+'.':'Not sure what to pick? Take the 5-question quiz on the Tools page.';
+var now=new Date();
+function dOf(off){var x=new Date(now);x.setDate(now.getDate()+off);return x}
+function fmtD(x){return ('0'+(x.getMonth()+1)).slice(-2)+'/'+('0'+x.getDate()).slice(-2)+'/'+x.getFullYear()}
+function wd(x){return (x.getDay()+6)%7}
+$('#pDisc').innerHTML=D.disc.map(function(d){var q=quiz.indexOf(d.id)>-1;return '<label><input type="radio" name="disc" value="'+d.id+'"><b>'+d.n+'</b><span>'+d.dur+(q?' · quiz&nbsp;pick':'')+'</span></label>'}).join('');
+function renderLoc(){var d=D.d(S.disc);$('#pLoc').innerHTML=D.locs.map(function(l){var ok=!d||d.locs.indexOf(l.id)>-1;return '<label'+(ok?'':' aria-disabled="true"')+'><input type="radio" name="loc" value="'+l.id+'"'+(ok?'':' disabled')+(S.loc===l.id&&ok?' checked':'')+'><b>'+l.s+'</b><span>'+(ok?l.addr:'Not offered here&nbsp;yet')+'</span></label>'}).join('');if(d&&S.loc&&d.locs.indexOf(S.loc)<0)S.loc=''}
+function renderCoach(){var r=D.coaches.filter(function(c){return (!S.disc||c.sp.indexOf(S.disc)>-1||S.disc==='pt')&&(!S.loc||c.loc===S.loc)});if(S.coach&&!r.some(function(c){return c.id===S.coach}))S.coach='';
+ $('#coach').innerHTML='<option value="">Let the club assign one</option>'+r.map(function(c){return '<option value="'+c.id+'"'+(c.id===S.coach?' selected':'')+'>'+c.n+' · '+c.role+'</option>'}).join('')}
+function slots(dayIdx){return D.sessions.filter(function(s){return s.disc===S.disc&&s.loc===S.loc&&s.day===dayIdx})}
+var FREE=['06:00','07:00','09:00','12:00','16:00','17:30','18:30','19:30'];
+function hasCls(){return D.sessions.some(function(s){return s.disc===S.disc&&s.loc===S.loc})}
+function renderDays(){var h='';for(var i=1;i<=7;i++){var x=dOf(i),w=wd(x),ok=!hasCls()||slots(w).length>0,v=fmtD(x);h+='<label'+(ok?'':' aria-disabled="true"')+'><input type="radio" name="day" value="'+v+'" data-w="'+w+'"'+(ok?'':' disabled')+(S.dayStr===v&&ok?' checked':'')+'><b>'+D.dshort[w]+'</b><span>'+v.slice(0,5)+'</span></label>'}
+ $('#pDay').innerHTML=h;$('#timeHint').textContent=hasCls()?'Dimmed days have no '+D.d(S.disc).n+' class at '+D.loc(S.loc).s+'.':'This class runs as open sessions; a coach will meet you at the time you choose.';renderTimes()}
+function renderTimes(){if(S.dayW==null){$('#pTime').innerHTML='<p class="muted" style="grid-column:1/-1;margin:0">Choose a day first to see times.</p>';return}
+ var ts=hasCls()?slots(S.dayW).map(function(s){return {t:s.time,id:s.id,left:s.cap-s.bk}}):FREE.map(function(t){return {t:t,id:'',left:5}});
+ $('#pTime').innerHTML=ts.map(function(t){return '<label'+(t.left?'':' aria-disabled="true"')+'><input type="radio" name="time" value="'+t.t+'" data-id="'+t.id+'"'+(t.left?'':' disabled')+(S.time===t.t?' checked':'')+'><b>'+V.tm(t.t)+'</b>'+(t.id?'<span>'+t.left+(t.left===1?' spot':' spots')+' left</span>':'')+'</label>'}).join('')}
+/* pre-select from a booked class */
+if(lop){for(var i=1;i<=7;i++){var x=dOf(i);if(wd(x)===lop.day){S.dayStr=fmtD(x);S.dayW=lop.day;break}}}
+function setRadio(name,v){var r=$('input[name="'+name+'"][value="'+v+'"]');if(r)r.checked=true}
+setRadio('disc',S.disc);renderLoc();renderCoach();
+function live(){var d=D.d(S.disc),l=D.loc(S.loc),c=D.coach(S.coach);
+ var rows=[['Class',d?d.n:'Not chosen'],['Club',l?l.s:'Not chosen'],['Coach',c?c.n:'Assigned by the club'],['Date',S.dayStr?D.days[S.dayW]+', '+S.dayStr:'Not chosen'],['Time',S.time?V.tm(S.time):'Not chosen']];
+ if(plan&&plan.plan)rows.push(['Plan of interest',plan.plan.charAt(0).toUpperCase()+plan.plan.slice(1)]);
+ $('#live').innerHTML=rows.map(function(r){return '<dt>'+r[0]+'</dt><dd>'+V.esc(r[1])+'</dd>'}).join('')}
+live();
+$('#pDisc').addEventListener('change',function(e){S.disc=e.target.value;S.dayStr=null;S.dayW=null;S.time='';S.sess='';renderLoc();renderCoach();err('eDisc','');live()});
+$('#pLoc').addEventListener('change',function(e){S.loc=e.target.value;S.dayStr=null;S.dayW=null;S.time='';S.sess='';renderCoach();err('eLoc','');live()});
+$('#coach').addEventListener('change',function(){S.coach=this.value;live()});
+$('#pDay').addEventListener('change',function(e){S.dayStr=e.target.value;S.dayW=+e.target.getAttribute('data-w');S.time='';S.sess='';renderTimes();err('eDay','');live()});
+$('#pTime').addEventListener('change',function(e){S.time=e.target.value;S.sess=e.target.getAttribute('data-id');err('eTime','');live()});
+function err(id,m,inp){$('#'+id).textContent=m;if(inp)inp.setAttribute('aria-invalid',m?'true':'false')}
+function validate(){var bad=null;
+ if(step===0){if(!S.disc){err('eDisc','Please choose a class.');bad=bad||$('#pDisc input')}if(!S.loc){err('eLoc','Please choose a club.');bad=bad||$('#pLoc input:not([disabled])')}}
+ if(step===1){if(!S.dayStr){err('eDay','Please choose a day for your trial.');bad=bad||$('#pDay input:not([disabled])')}else if(!S.time){err('eTime','Please choose a time.');bad=bad||$('#pTime input:not([disabled])')}}
+ if(step===2){var n=$('#name'),p=$('#phone'),em=$('#email'),hl=$('#health'),ag=$('#agree');
+  var nv=n.value.trim();err('eName',nv.split(/\s+/).length<2||nv.length<4?'Please enter your first and last name.':'',n);
+  var pv=p.value.replace(/\D/g,'');err('ePhone',/^1?\d{10}$/.test(pv)?'':'Please enter a 10-digit phone number, e.g. (555) 010-0000.',p);
+  var ev=em.value.trim();err('eEmail',ev&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ev)?'That email address doesn’t look right.':'',em);
+  err('eHealth',hl.value?'':'Please choose your health status so your coach can prepare.',hl);
+  err('eAgree',ag.checked?'':'Please agree so we can contact you to schedule.',ag);
+  bad=[n,p,em,hl,ag].filter(function(x){return x.getAttribute('aria-invalid')==='true'})[0]||null}
+ if(bad){bad.focus();return false}return true}
+['name','phone','email','health','agree'].forEach(function(id){$('#'+id).addEventListener('change',function(){if(step===2&&this.getAttribute('aria-invalid')==='true')validate()})});
+function go(n,init){step=n;$$('[data-step]').forEach(function(s){s.hidden=+s.getAttribute('data-step')!==n});
+ $$('#wsteps li').forEach(function(li,i){li.className=i<n?'done':(i===n?'on':'')});
+ $('#back').hidden=n===0;$('#next').innerHTML=n===3?'Send Request <svg class="ico go" aria-hidden="true"><use href="#i-check"/></svg>':'Continue <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg>';
+ if(n===1)renderDays();
+ if(n===3){var d=D.d(S.disc),l=D.loc(S.loc),c=D.coach(S.coach);
+  var R=[['Class',d.n,0],['Club',l.n+', '+l.addr,0],['Coach',c?c.n:'Assigned by the club',0],['When',D.days[S.dayW]+', '+S.dayStr+' at '+V.tm(S.time),1],['Name',$('#name').value.trim(),2],['Phone',$('#phone').value.trim(),2],['Email',$('#email').value.trim()||'None',2],['Goal',$('#goal').value,2],['Health',$('#health').value,2],['Note',$('#note').value.trim()||'None',2]];
+  $('#recap').innerHTML=R.map(function(r){return '<dt>'+r[0]+'</dt><dd style="display:flex;justify-content:space-between;gap:12px"><span>'+V.esc(r[1])+'</span><button type="button" class="lnk" data-go="'+r[2]+'" style="background:none;border:0;cursor:pointer;padding:0;min-height:0">Edit</button></dd>'}).join('')}
+ var h=$('[data-step="'+n+'"] h2');V.glue($('#wf'));if(init)return;h&&h.focus({preventScroll:true});
+ var top=$('#wsteps').getBoundingClientRect().top;if(top<70||top>innerHeight)window.scrollTo({top:pageYOffset+top-90})}
+$('#recap').addEventListener('click',function(e){var b=e.target.closest('[data-go]');if(b)go(+b.getAttribute('data-go'))});
+$('#back').addEventListener('click',function(){go(step-1)});
+$('#wf').addEventListener('submit',function(e){e.preventDefault();if(!validate())return;if(step<3){go(step+1);return}
+ var A='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',code='IV-';for(var i=0;i<6;i++){code+=A[Math.floor(Math.random()*A.length)];if(i===3)code+='-'}
+ var d=D.d(S.disc),l=D.loc(S.loc);V.store.set('trial',{code:code,disc:S.disc,loc:S.loc,day:S.dayStr,time:S.time});
+ if(S.sess){var h=V.holds();if(h.indexOf(S.sess)<0){h.push(S.sess);V.setHolds(h)}}
+ $('#wf').hidden=true;$$('#wsteps li').forEach(function(li){li.className='done'});
+ var dn=$('#done');dn.hidden=false;dn.innerHTML='<div class="check-anim"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></div><h2 class="h-m">Request received</h2><p class="muted" style="margin:10px 0 0">Your confirmation code (demo)</p><div class="codeb">'+code+'</div><p style="max-width:52ch;margin:0 auto 20px;color:var(--ink2)">'+V.esc(d.n)+' at '+V.esc(l.s)+', '+D.days[S.dayW]+' '+S.dayStr+' at '+V.tm(S.time)+'. The front desk will call '+V.esc($('#phone').value.trim())+' to confirm. This is a demo template; no details were sent.</p><div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center"><button class="btn btn-lime" type="button" id="cal">Add to Calendar</button><a class="btn btn-ghost" href="../schedule/#my-bookings">View My Bookings</a><a class="btn btn-ghost" href="../">Back to Home</a></div>';
+ V.glue(dn);dn.focus();window.scrollTo({top:pageYOffset+dn.getBoundingClientRect().top-100});
+ $('#cal').addEventListener('click',function(){V.toast('Demo template: the live version would download an .ics calendar file.')})});
+go(0,true);
+if(qs.get('session')||qs.get('coach')||qs.get('class')||qs.get('location'))V.toast('We’ve pre-filled your choices.');
+V.reveal();
+})();
+</script>
+</body>
+</html>

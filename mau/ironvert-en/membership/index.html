@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Membership Pricing: Gym, Group Classes, Pool | IRONVERT</title>
+<meta name="description" content="Compare the Base, Core and Elite memberships, calculate your price for 1, 3, 6 or 12 months with add-ons, and read our freeze, transfer and refund policies.">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="membership">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Home</a> · <a href="../classes/">Classes</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../schedule/">Schedule</a> · <a href="../membership/">Membership</a> · <a href="../trainers/">Trainers</a> · <a href="../tools/">Tools</a> · <a href="../locations/">Locations</a> · <a href="../blog/">Blog</a> · <a href="../free-trial/">Free Trial</a></nav></noscript></div>
+<main id="main">
+<section class="phero">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">Base Core Elite</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Membership</li></ol>
+  <div class="intro" style="max-width:860px">
+   <span class="eyebrow">Membership</span>
+   <h1>Pay for exactly what you’ll&nbsp;use</h1>
+   <p class="lead">Three plans with clear monthly pricing. Choose a term to see your discounted rate; add personal training or a private locker in the calculator below. All prices on this page are sample&nbsp;prices.</p>
+  </div>
+  <div class="terms" id="terms" role="group" aria-label="Choose a term" style="margin-top:32px;animation:up .7s .3s var(--ease) both"></div>
+ </div>
+</section>
+
+<section class="sec tight" aria-labelledby="h-plans">
+ <div class="wrap">
+  <h2 class="vh" id="h-plans">Membership plans</h2>
+  <div class="plans" id="plans"></div>
+  <p class="note" style="margin-top:16px">Sample prices in USD, before applicable sales tax. $0 enrollment fee in this demo. Term discounts apply to each plan’s monthly rate.</p>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-calc" id="calculator">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Price calculator</span><h2 class="h-l" id="h-calc">Build your own&nbsp;plan</h2></div><p>Your choices are saved in this browser for your free trial sign-up. Nothing is sent anywhere.</p></div>
+  <div class="calc rv">
+   <div class="calc-l">
+    <div class="field"><label for="cPlan">Plan</label><select class="inp" id="cPlan"></select></div>
+    <div class="field"><label for="cTerm">Term</label><select class="inp" id="cTerm"></select></div>
+    <div class="field" style="margin-bottom:8px"><span class="flabel">Add-ons</span></div>
+    <div id="cAdd"></div>
+    <div class="field" style="margin-top:16px"><label for="cPeople">Joining together</label><select class="inp" id="cPeople"><option value="1">Just me</option><option value="2">2 people (extra 5% off each)</option><option value="3">3 or more people (extra 8% off each)</option></select></div>
+   </div>
+   <div class="calc-r" aria-live="polite">
+    <span class="eyebrow" style="margin:0">Estimate</span>
+    <div id="sumLines"></div>
+    <div class="sum-total"><span>Total due</span><b id="sumTotal">$0</b></div>
+    <p class="muted small" id="sumMonth" style="margin:0"></p>
+    <span class="save" id="sumSave" hidden></span>
+    <a class="btn btn-lime" href="../free-trial/" id="cGo" style="margin-top:auto">Try a Class Before You Buy <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a>
+    <p class="note" style="margin:0">Amounts illustrate how pricing is calculated. Actual prices are set by the club at the time of sign-up.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-cmp">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Compare</span><h2 class="h-l" id="h-cmp">Every benefit, side by&nbsp;side</h2></div></div>
+  <div class="tbl-wrap rv"><table class="tbl cmp"><thead><tr><th scope="col">Benefit</th><th scope="col" style="text-align:center">Base</th><th scope="col" style="text-align:center">Core</th><th scope="col" style="text-align:center">Elite</th></tr></thead><tbody id="cmp"></tbody></table></div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-pol" id="policies">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Membership policies</span><h2 class="h-l" id="h-pol">Clear up front, no surprises&nbsp;later</h2></div><p>Sample policies to show the layout. A real club should have them reviewed by its own legal counsel.</p></div>
+  <div class="policy">
+   <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-shield"/></svg><h3>Membership freeze</h3><p>Memberships of 6 months or longer can be frozen for up to 60 days a year for illness, travel or pregnancy, with supporting documents. Give at least 1 day’s notice.</p></div>
+   <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-users"/></svg><h3>Transfers</h3><p>You can transfer your membership to someone else once, for a $25 fee (sample). The new member completes an orientation before training.</p></div>
+   <div class="rv d2"><svg class="ico l" aria-hidden="true"><use href="#i-card"/></svg><h3>Refunds</h3><p>Cancel within the first 7 days having used no more than 2 visits: full refund minus visits used at the drop-in rate. After 7 days, a freeze or transfer applies.</p></div>
+   <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-clock"/></svg><h3>Access hours</h3><p>Every membership works during all opening hours. There are no off-peak-only plans in this demo.</p></div>
+   <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-heart"/></svg><h3>Health</h3><p>Members complete a health questionnaire at sign-up. Anyone with a medical condition should get their doctor’s approval before high-intensity training.</p></div>
+   <div class="rv d2"><svg class="ico l" aria-hidden="true"><use href="#i-lock"/></svg><h3>Your data</h3><p>Sign-up details are used only to manage your membership and contact you about bookings. You can ask to view, correct or delete them at any time.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-faq">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">FAQ</span><h2 class="h-l" id="h-faq">Membership&nbsp;questions</h2><p class="lead" style="margin-top:20px">Not sure which plan fits? Try a class first and your coach will suggest one based on your schedule and goals.</p></div>
+  <div class="faq">
+   <details><summary>Can I pay monthly?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Yes. Every plan can be billed monthly by card with no long-term contract. Choosing a 3-, 6- or 12-month term paid up front unlocks the term discount (sample policy).</div></details>
+   <details><summary>How do I upgrade from Base to Core mid-term?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">You pay the prorated difference for the days left on your membership. No need to buy a new one.</div></details>
+   <details><summary>Can Elite members bring a guest?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Yes, one guest visit per month, registered in advance at the front desk. Guests complete the same health questionnaire as members.</div></details>
+   <details><summary>Do Elite PT sessions roll over?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">PT sessions are used within the month and don’t roll over. You can swap them for 2 small-group Reformer classes instead.</div></details>
+   <details><summary>Do you offer student discounts?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">In this demo, students with a valid ID get 10% off Base and Core. It can’t be combined with the group sign-up discount.</div></details>
+  </div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-rel">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Keep exploring</span><h2 class="h-m" id="h-rel">Related</h2></div></div>
+  <div class="rel">
+   <a class="hov" href="../locations/"><div class="ph"><img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&amp;w=2400&amp;q=85" alt="Multi-lane indoor pool" loading="lazy"></div><div class="tx"><b>Clubs &amp; Amenities</b><span>Pool, sauna and lockers at each club.</span></div></a>
+   <a class="hov" href="../trainers/"><div class="ph"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&amp;w=2400&amp;q=85" alt="Coach training a member one-on-one" loading="lazy"></div><div class="tx"><b>Choose a Trainer</b><span>Profiles and weekly schedules for 10 coaches.</span></div></a>
+   <a class="hov" href="../tools/"><div class="ph"><img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&amp;w=2400&amp;q=85" alt="Member lifting a barbell" loading="lazy"></div><div class="tx"><b>Tools</b><span>BMI, daily calories and a class-finder quiz.</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Try first, then&nbsp;choose</h2><p>One group class and a 20-minute body scan. No membership required.</p></div><div class="btns"><a class="btn" href="../free-trial/">Book a Free Trial <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a></div></div></section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Demo content: brand name, prices, staff, certifications, schedule, reviews and images are for illustration only.</p></noscript></div>
+<script src="../assets/site.js"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+var sv=V.store.get('plan',{})||{};
+var st={plan:sv.plan||'core',term:sv.term!=null?sv.term:1,add:sv.add||[],people:sv.people||1};
+$('#terms').innerHTML=D.terms.map(function(t,i){return '<button type="button" data-i="'+i+'" aria-pressed="'+(i===st.term)+'">'+t.l+(t.off?'<small>−'+Math.round(t.off*100)+'%</small>':'')+'</button>'}).join('');
+$('#cPlan').innerHTML=D.plans.map(function(p){return '<option value="'+p.id+'">'+p.n+' · '+V.money(p.m)+'/month</option>'}).join('');
+$('#cTerm').innerHTML=D.terms.map(function(t,i){return '<option value="'+i+'">'+t.l+(t.off?' ('+Math.round(t.off*100)+'% off)':'')+'</option>'}).join('');
+$('#cAdd').innerHTML=D.addons.map(function(a){return '<label class="addon check"><input type="checkbox" value="'+a.id+'"><span><b>'+a.n+'</b><span>'+a.d+'</span></span><span class="p">'+V.money(a.p)+(a.once?'':'/mo')+'</span></label>'}).join('');
+var allF=['Weights, machines and cardio','Clubs included','Group classes (combat, yoga, cycling, HIIT…)','Small-group Reformer Pilates','Pool, sauna and cold plunge','1:1 PT sessions per month','Class booking window','InBody scans','Private locker and towels','Guest passes'];
+var M=[['y','y','y'],['1','3','3'],['n','y','y'],['Add-on','Add-on','4 per month'],['n','n','y'],['n','n','4 sessions'],['At the desk','7 days','14 days'],['1 time','2 per quarter','Monthly'],['n','n','y'],['n','n','1 per month']];
+function cell(v){return v==='y'?'<svg class="ico" role="img" aria-label="Included"><use href="#i-check"/></svg>':(v==='n'?'<span class="no" aria-label="Not included">–</span>':v)}
+$('#cmp').innerHTML=allF.map(function(f,i){return '<tr><th scope="row">'+f+'</th>'+M[i].map(function(v){return '<td>'+cell(v)+'</td>'}).join('')+'</tr>'}).join('')+'<tr><th scope="row"><b style="color:var(--ink)">Monthly price (sample)</b></th>'+D.plans.map(function(p){return '<td class="num" style="color:var(--lime);font-weight:600">'+V.money(p.m)+'</td>'}).join('')+'</tr>';
+function anim(el,to){var from=+(el.getAttribute('data-v')||0);el.setAttribute('data-v',to);if(matchMedia('(prefers-reduced-motion:reduce)').matches||from===to){el.textContent=V.money(to);return}var t0=null;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/600),e=1-Math.pow(1-p,3);el.textContent=V.money(from+(to-from)*e);if(p<1)requestAnimationFrame(f);else el.textContent=V.money(to)}requestAnimationFrame(f)}
+function renderPlans(){var t=D.terms[st.term];
+ $('#plans').innerHTML=D.plans.map(function(p){var mm=Math.round(p.m*(1-t.off)),tot=mm*t.m;
+  return '<article class="plan'+(p.hot?' hot':'')+(p.id===st.plan?' sel':'')+'" id="plan-'+p.id+'"><h3>'+p.n+'</h3><p class="for">'+p.for+'</p><div class="pr"><b data-v="'+mm+'">'+V.money(mm)+'</b><span>/month</span></div><p class="was">'+(t.off?'<s>'+V.money(p.m)+'</s> · '+V.money(tot)+' paid up front for '+t.l:'Billed monthly, no contract')+'</p><ul>'+p.f.map(function(f){return '<li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>'+V.esc(f)+'</li>'}).join('')+p.x.map(function(f){return '<li class="x"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>'+V.esc(f)+'</li>'}).join('')+'</ul><button type="button" class="btn '+(p.id===st.plan?'btn-lime':'btn-ghost')+'" data-p="'+p.id+'" aria-pressed="'+(p.id===st.plan)+'">'+(p.id===st.plan?p.n+' Selected':'Choose '+p.n)+'</button></article>'}).join('');V.glue($('#plans'))}
+function calc(){var p=D.plans.filter(function(x){return x.id===st.plan})[0],t=D.terms[st.term];
+ var base=p.m*t.m,offT=Math.round(p.m*t.off)*t.m,ppl=st.people,offP=ppl===2?.05:(ppl>=3?.08:0);
+ var one=base-offT,grp=Math.round(one*offP);var lines=[[p.n+' plan × '+t.l,V.money(base)]];
+ if(offT)lines.push(['Term discount −'+Math.round(t.off*100)+'%','−'+V.money(offT)]);
+ if(grp)lines.push(['Group discount −'+Math.round(offP*100)+'%','−'+V.money(grp)]);
+ var add=0;st.add.forEach(function(id){var a=D.addons.filter(function(x){return x.id===id})[0];if(!a)return;var v=a.once?a.p:a.p*t.m;add+=v;lines.push([a.n+(a.once?'':' × '+t.l),V.money(v)])});
+ var per=one-grp+add,total=per*ppl;
+ if(ppl>1)lines.push(['Memberships','× '+ppl]);
+ $('#sumLines').innerHTML=lines.map(function(l){return '<div class="sum-line"><span>'+l[0]+'</span><b>'+l[1]+'</b></div>'}).join('');
+ anim($('#sumTotal'),total);
+ $('#sumMonth').textContent='That’s about '+V.money(per/t.m)+' per person per month.';
+ var save=(offT+grp)*ppl;$('#sumSave').hidden=!save;$('#sumSave').textContent='You save '+V.money(save)+' vs. paying monthly';
+ $('#cGo').href='../free-trial/?plan='+p.id;
+ V.store.set('plan',{plan:st.plan,term:st.term,add:st.add,people:st.people})}
+function sync(){$('#cPlan').value=st.plan;$('#cTerm').value=st.term;$$('#cAdd input').forEach(function(i){i.checked=st.add.indexOf(i.value)>-1});$('#cPeople').value=String(Math.min(3,st.people));$$('#terms button').forEach(function(b){b.setAttribute('aria-pressed',+b.getAttribute('data-i')===st.term)});renderPlans();calc()}
+$('#terms').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;st.term=+b.getAttribute('data-i');sync()});
+$('#plans').addEventListener('click',function(e){var b=e.target.closest('button[data-p]');if(!b)return;st.plan=b.getAttribute('data-p');sync();V.toast(st.plan.charAt(0).toUpperCase()+st.plan.slice(1)+' selected. See the calculator below.')});
+$('#cPlan').addEventListener('change',function(){st.plan=this.value;sync()});
+$('#cTerm').addEventListener('change',function(){st.term=+this.value;sync()});
+$('#cPeople').addEventListener('change',function(){st.people=+this.value;calc()});
+$('#cAdd').addEventListener('change',function(){st.add=$$('#cAdd input').filter(function(i){return i.checked}).map(function(i){return i.value});calc()});
+sync();
+if(location.hash.indexOf('#plan-')===0){var t=document.getElementById(location.hash.slice(1));if(t){st.plan=location.hash.slice(6);sync();setTimeout(function(){document.getElementById(location.hash.slice(1)).scrollIntoView({block:'center'})},250)}}
+V.reveal();
+})();
+</script>
+</body>
+</html>

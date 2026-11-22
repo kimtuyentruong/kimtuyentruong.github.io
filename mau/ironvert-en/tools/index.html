@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BMI Calculator, Daily Calories &amp; Class Quiz | IRONVERT</title>
+<meta name="description" content="Free reference tools: calculate your BMI, estimate how many calories you need each day, and take a 5-question quiz to find the classes that fit your goals and schedule.">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="tools">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Home</a> · <a href="../classes/">Classes</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../schedule/">Schedule</a> · <a href="../membership/">Membership</a> · <a href="../trainers/">Trainers</a> · <a href="../tools/">Tools</a> · <a href="../locations/">Locations</a> · <a href="../blog/">Blog</a> · <a href="../free-trial/">Free Trial</a></nav></noscript></div>
+<main id="main">
+<section class="phero">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">BMI · TDEE</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Tools</li></ol>
+  <div class="phero-row">
+   <div class="intro">
+    <span class="eyebrow">Reference tools</span>
+    <h1>Know where you stand, then pick your&nbsp;workout</h1>
+    <p class="lead">Two quick tools: a BMI calculator with your daily calorie needs, and a 5-question quiz that suggests classes for you. Results are for reference only and don’t replace advice from a doctor or registered&nbsp;dietitian.</p>
+   </div>
+   <div class="tool-tabs intro"><a class="btn btn-lime" href="#bmi"><svg class="ico" aria-hidden="true"><use href="#i-calc"/></svg>BMI &amp; Calories</a><a class="btn btn-ghost" href="#quiz"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg>Class Quiz</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="bmi" aria-labelledby="h-bmi">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Tool 1</span><h2 class="h-l" id="h-bmi">BMI and daily&nbsp;calories</h2></div><p>BMI ranges follow the World Health Organization adult categories. Calorie needs use the Mifflin–St Jeor equation.</p></div>
+  <div class="tool rv">
+   <form class="tool-in" id="fBmi" onsubmit="return false">
+    <div class="field"><span class="flabel" id="lsex">Sex</span><div class="seg" role="group" aria-labelledby="lsex"><button type="button" data-sex="m" aria-pressed="true">Male</button><button type="button" data-sex="f" aria-pressed="false">Female</button></div></div>
+    <div class="field"><label for="age">Age</label><div class="rg-row"><input class="range" type="range" id="ageR" min="16" max="75" value="30" aria-label="Age slider"><input class="inp" id="age" type="number" inputmode="numeric" min="16" max="75" value="30"></div></div>
+    <div class="field"><label for="h">Height (cm)</label><div class="rg-row"><input class="range" type="range" id="hR" min="140" max="210" value="170" aria-label="Height slider"><input class="inp" id="h" type="number" inputmode="numeric" min="140" max="210" value="170"></div></div>
+    <div class="field"><label for="w">Weight (kg)</label><div class="rg-row"><input class="range" type="range" id="wR" min="35" max="160" value="70" aria-label="Weight slider"><input class="inp" id="w" type="number" inputmode="decimal" min="35" max="160" value="70"></div></div>
+    <p class="note" id="conv" style="margin:-6px 0 18px" aria-live="polite"></p>
+    <div class="field"><label for="act">Current activity level</label><select class="inp" id="act"><option value="1.2">Mostly sitting, desk job</option><option value="1.375" selected>Light exercise 1–3 days a week</option><option value="1.55">Moderate exercise 3–5 days a week</option><option value="1.725">Hard exercise 6–7 days a week</option></select></div>
+    <div class="field" style="margin:0"><label for="goal">Goal</label><select class="inp" id="goal"><option value="-400">Lose fat gradually</option><option value="0" selected>Maintain weight, get fitter</option><option value="300">Build muscle</option></select></div>
+   </form>
+   <div class="tool-out" aria-live="polite">
+    <span class="eyebrow" style="margin-bottom:8px">Your BMI</span>
+    <div style="display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap"><span class="big-num" id="bmiV">24.2</span><span class="tag lime" id="bmiT" style="margin-bottom:12px">Healthy weight</span></div>
+    <div class="gauge" aria-hidden="true"><i id="bmiP" style="left:37%"></i></div>
+    <div class="gauge-l" aria-hidden="true"><span style="left:0">15</span><span style="left:14%">18.5</span><span style="left:40%">25</span><span style="left:60%">30</span><span style="left:100%">40</span></div>
+    <p id="bmiN" style="margin:16px 0 0;color:var(--ink2)"></p>
+    <div class="kc"><div><b id="bmr">0</b><span>Calories at rest (BMR)</span></div><div><b id="tdee">0</b><span>Calories for your activity level</span></div><div><b id="tgt" style="color:var(--lime)">0</b><span>Suggested Calories for your goal</span></div></div>
+    <p class="note" style="margin:16px 0 0">BMI can’t tell muscle from fat: people who lift a lot can have a high BMI and still be healthy. The InBody scan at your free trial gives a more accurate picture.</p>
+   </div>
+  </div>
+  <div class="health" style="margin-top:20px"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><span>Results are for reference only. If you have a medical condition (diabetes, heart or kidney disease…), are pregnant or breastfeeding, talk to your doctor before changing your diet or exercise routine.</span></div>
+ </div>
+</section>
+
+<section class="sec alt line" id="quiz" aria-labelledby="h-quiz">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Tool 2</span><h2 class="h-l" id="h-quiz">Five questions, three classes that fit&nbsp;you</h2></div><p>Your result is saved to pre-fill the free trial form. Retake it as many times as you like.</p></div>
+  <div class="quiz rv" id="qz"></div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-ref">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Quick reference</span><h2 class="h-l" id="h-ref">How many sessions a week is&nbsp;right?</h2></div><p>General guidance for healthy adults. Your coach will tailor it to you.</p></div>
+  <div class="tbl-wrap rv"><table class="tbl"><thead><tr><th scope="col">Goal</th><th scope="col">Sessions/week</th><th scope="col">Suggested mix</th><th scope="col">Keep in mind</th></tr></thead><tbody>
+   <tr><th scope="row">Feel fitter, less tired</th><td>2–3</td><td>Functional + Yoga</td><td>Consistency beats intensity</td></tr>
+   <tr><th scope="row">Lose fat</th><td>3–4</td><td>Gym + Cycling or HIIT</td><td>Pair with good food and sleep</td></tr>
+   <tr><th scope="row">Build muscle</th><td>3–5</td><td>Programmed gym + Pilates</td><td>Add weight gradually, take rest days</td></tr>
+   <tr><th scope="row">Relieve stress</th><td>2–3</td><td>Kickboxing + Yin Yoga</td><td>Pick evening classes after work</td></tr>
+   <tr><th scope="row">Recovery, posture</th><td>2–3</td><td>Pilates + Swim</td><td>Old injury? Check with your doctor first</td></tr>
+  </tbody></table></div>
+ </div>
+</section>
+
+<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Want more accurate&nbsp;numbers?</h2><p>Your free trial includes a 20-minute InBody scan and a mobility check with a coach.</p></div><div class="btns"><a class="btn" href="../free-trial/">Book a Free Trial <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a></div></div></section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Demo content: brand name, prices, staff, certifications, schedule, reviews and images are for illustration only.</p></noscript></div>
+<script src="../assets/site.js"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+/* BMI */
+var sex='m';
+function pair(r,n){var R=$(r),N=$(n);R.addEventListener('input',function(){N.value=R.value;calc()});N.addEventListener('input',function(){if(N.value!=='')R.value=N.value;calc()})}
+pair('#ageR','#age');pair('#hR','#h');pair('#wR','#w');
+$$('.seg button').forEach(function(b){b.addEventListener('click',function(){sex=b.getAttribute('data-sex');$$('.seg button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});calc()})});
+$('#act').addEventListener('change',calc);$('#goal').addEventListener('change',calc);
+function fmt(n){return Math.round(n).toLocaleString('en-US')}
+function calc(){var a=+$('#age').value,h=+$('#h').value,w=+$('#w').value;if(!a||!h||!w||h<100||w<25){$('#bmiN').textContent='Enter a valid age, height and weight to see your result.';$('#conv').textContent='';return}
+ var inch=Math.round(h/2.54);$('#conv').textContent='≈ '+Math.floor(inch/12)+' ft '+(inch%12)+' in · '+Math.round(w*2.2046)+' lb';
+ var b=w/Math.pow(h/100,2),t,c,n;
+ if(b<18.5){t='Underweight';c='#5BA4E6';n='Focus on building strength and eating enough. Programmed gym sessions and Pilates are gentle ways to start.'}
+ else if(b<25){t='Healthy weight';c='var(--green2)';n='You’re in the healthy range. Keep up 3 sessions a week, mixing one strength class with one mobility class.'}
+ else if(b<30){t='Overweight';c='var(--warn)';n='A little above the healthy range. Cycling, swimming and Functional are low-impact on the joints and a great place to start.'}
+ else{t='Obesity';c='var(--err)';n='Get a general health check before high-intensity training. Start with swimming, easy cycling and 1:1 personal training.'}
+ $('#bmiV').textContent=b.toFixed(1);$('#bmiT').textContent=t;$('#bmiT').style.color=c;$('#bmiT').style.borderColor=c;
+ $('#bmiP').style.left=Math.max(1,Math.min(99,(b-15)/25*100))+'%';$('#bmiN').textContent=n;
+ var bmr=10*w+6.25*h-5*a+(sex==='m'?5:-161),td=bmr*+$('#act').value,g=+$('#goal').value,tg=td+g;
+ if(sex==='f'&&tg<1200)tg=1200;if(sex==='m'&&tg<1500)tg=1500;
+ $('#bmr').textContent=fmt(bmr);$('#tdee').textContent=fmt(td);$('#tgt').textContent=fmt(tg)}
+calc();
+/* Quiz */
+var Q=[
+ {q:'What’s your main goal right now?',o:[['Feel fitter, less tired',{functional:2,yoga:1,swim:1}],['Lose fat, tone up',{hiit:2,cycling:2,kickboxing:1}],['Build muscle and strength',{gym:3,functional:1,pt:1}],['Blow off steam after work',{kickboxing:2,boxing:2,yoga:1}]]},
+ {q:'Have you trained regularly before?',o:[['No, this is my first time',{yoga:1,pilates:1,pt:2,gym:1}],['Yes, but it’s been a while',{functional:1,cycling:1,pilates:1}],['I train 1–2 times a week',{kickboxing:1,hiit:1,gym:1}],['I train often and want a challenge',{'muay-thai':3,hiit:2,boxing:1}]]},
+ {q:'What kind of class atmosphere do you enjoy?',o:[['Calm, focused on breathing',{yoga:3,pilates:2}],['High energy, loud music',{cycling:3,hiit:2}],['Something to hit',{kickboxing:2,boxing:2,'muay-thai':2}],['Training at my own pace',{gym:2,swim:2}]]},
+ {q:'Anything bothering your body?',o:[['Tight back, neck or shoulders',{pilates:3,yoga:2,functional:1}],['Sore knees or ankles',{swim:3,cycling:1,pilates:1}],['Nothing worth mentioning',{kickboxing:1,gym:1,hiit:1}],['An old injury',{pt:3,pilates:1,swim:1}]]},
+ {q:'When are you usually free?',o:[['Early morning before work',{yoga:1,cycling:1,swim:1}],['Lunchtime',{pilates:1,yoga:1}],['Evenings after work',{kickboxing:1,boxing:1,hiit:1}],['It changes all the time',{gym:2,pt:1}]]}];
+var step=0,score={};
+function show(){var qz=$('#qz');
+ if(step<Q.length){var q=Q[step];qz.innerHTML='<div class="qprog" aria-hidden="true"><i style="width:'+(step/Q.length*100)+'%"></i></div><span class="eyebrow">Question '+(step+1)+' of '+Q.length+'</span><h3 class="h-m" tabindex="-1" id="qH">'+q.q+'</h3><div class="qopts">'+q.o.map(function(o,i){return '<button type="button" data-i="'+i+'"><span class="k">'+'ABCD'[i]+'</span>'+o[0]+'</button>'}).join('')+'</div>'+(step?'<button type="button" class="lnk" id="qBack" style="background:none;border:0;cursor:pointer;margin-top:16px">Previous question</button>':'');V.glue(qz);return}
+ var arr=Object.keys(score).map(function(k){return [k,score[k]]}).sort(function(a,b){return b[1]-a[1]}).slice(0,3),max=arr[0][1];
+ V.store.set('quiz',arr.map(function(a){return a[0]}));
+ qz.innerHTML='<div class="qprog" aria-hidden="true"><i style="width:100%"></i></div><span class="eyebrow">Your result</span><h3 class="h-m" tabindex="-1" id="qH">Three classes picked for&nbsp;you</h3><p class="muted" style="margin:10px 0 0">Saved to your free trial form. Suggestions are based on your answers and are for reference only.</p><div class="qres">'+arr.map(function(a,i){var d=D.d(a[0]);return '<'+'a href="'+(d.id==='kickboxing'?'../kickboxing/':'../classes/#'+d.id)+'"><div class="ph"><img src="'+V.img(d.ph)+'" alt="'+V.esc(d.n)+'" loading="lazy" style="object-position:'+d.pos+'"></div><div class="tx"><span class="m">'+(i===0?'Top pick · ':'')+Math.round(a[1]/max*100)+'% match</span><b>'+V.esc(d.n)+'</b><span class="muted small">'+V.esc(d.d)+'</span></div></a>'}).join('')+'</div><div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px"><a class="btn btn-lime" href="../free-trial/?class='+arr[0][0]+'">Try '+V.esc(D.d(arr[0][0]).n)+' <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a><button class="btn btn-ghost" type="button" id="qAgain">Retake Quiz</button></div>';
+ V.glue(qz);V.toast('Quiz result saved.')}
+var hist=[];
+$('#qz').addEventListener('click',function(e){var b=e.target.closest('.qopts button');
+ if(b){var o=Q[step].o[+b.getAttribute('data-i')][1];hist.push(o);Object.keys(o).forEach(function(k){score[k]=(score[k]||0)+o[k]});step++;show();var h=$('#qH');h&&h.focus({preventScroll:true});return}
+ if(e.target.closest('#qBack')){var l=hist.pop();Object.keys(l).forEach(function(k){score[k]-=l[k]});step--;show();return}
+ if(e.target.closest('#qAgain')){step=0;score={};hist=[];show();$('#qH').focus({preventScroll:true})}});
+show();
+V.reveal();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,follow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Classes: Gym, Kickboxing, Muay Thai, Yoga, Pilates | IRONVERT</title>
+<meta name="description" content="11 disciplines in 6 groups: strength, combat sports, yoga and Pilates, cardio and HIIT, swim and recovery, 1:1 training. Filter by intensity and club.">
+<meta name="theme-color" content="#070907">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='6' fill='%23B8F23A'/%3E%3Cpath d='M9 29 17 11h5l-8 18zM19 29l8-18h5l-8 18z' fill='%230A0D06'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-root="../" data-page="classes">
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"><noscript><nav style="padding:16px"><a href="../">Home</a> · <a href="../classes/">Classes</a> · <a href="../kickboxing/">Kickboxing</a> · <a href="../schedule/">Schedule</a> · <a href="../membership/">Membership</a> · <a href="../trainers/">Trainers</a> · <a href="../tools/">Tools</a> · <a href="../locations/">Locations</a> · <a href="../blog/">Blog</a> · <a href="../free-trial/">Free Trial</a></nav></noscript></div>
+<main id="main">
+<section class="phero">
+ <div class="grid-bg" aria-hidden="true"></div>
+ <div class="ghost" aria-hidden="true">11 classes</div>
+ <div class="wrap">
+  <ol class="crumbs"><li><a href="../">Home</a></li><li aria-current="page">Classes</li></ol>
+  <div class="phero-row">
+   <div class="intro">
+    <span class="eyebrow">Classes</span>
+    <h1>From the weight floor to the ring, find your&nbsp;rhythm</h1>
+    <p class="lead">Eleven disciplines in six groups. Every one has beginner-friendly classes, with intensity and duration listed so you always know what you’re walking&nbsp;into.</p>
+   </div>
+   <div class="statrow intro">
+    <div><b data-count="11">11</b><span>disciplines</span></div>
+    <div><b data-count="6">6</b><span>training groups</span></div>
+    <div><b id="nSess">80</b><span>classes per week</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="sec tight" aria-labelledby="h-loc">
+ <div class="wrap">
+  <h2 class="vh" id="h-loc">Filter classes</h2>
+  <div class="fbar" role="search">
+   <div class="fg"><span class="lbl" id="lg">Group</span><div class="chips" id="fGroup" role="group" aria-labelledby="lg"></div></div>
+   <div class="fg"><span class="lbl" id="li">Intensity</span><div class="chips" id="fInt" role="group" aria-labelledby="li"><button class="chip" type="button" data-v="" aria-pressed="true">All</button><button class="chip" type="button" data-v="low" aria-pressed="false">Low</button><button class="chip" type="button" data-v="mid" aria-pressed="false">Moderate</button><button class="chip" type="button" data-v="high" aria-pressed="false">High</button></div></div>
+   <div class="fg" style="min-width:200px"><label class="lbl" for="fLoc">Club</label><select class="inp" id="fLoc"><option value="">All 3 clubs</option></select></div>
+   <div class="fg" style="flex:1;min-width:200px"><label class="lbl" for="fQ">Search classes</label><input class="inp" id="fQ" type="search" placeholder="e.g. martial arts, stretch, swim"></div>
+  </div>
+  <p class="count" aria-live="polite" style="margin:0 0 20px"><b id="nRes">11</b> <span id="nWord">matching classes</span> <button type="button" class="lnk" id="reset" style="background:none;border:0;cursor:pointer;margin-left:12px">Clear filters</button></p>
+  <div class="disc-grid" id="grid"></div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-mx">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Quick lookup</span><h2 class="h-l" id="h-mx">Which class runs at which&nbsp;club</h2></div><p>Northgate doesn’t have a pool yet. Muay Thai runs only at Downtown and Northgate, where we have a ring and larger fight&nbsp;rooms.</p></div>
+  <div class="tbl-wrap rv"><table class="tbl matrix"><thead><tr><th scope="col">Class</th><th scope="col" style="text-align:center">Downtown</th><th scope="col" style="text-align:center">Riverside</th><th scope="col" style="text-align:center">Northgate</th><th scope="col" style="text-align:center">Per week</th></tr></thead><tbody id="mx"></tbody></table></div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-path">
+ <div class="wrap split">
+  <div class="ph rv" style="aspect-ratio:4/3;border-radius:var(--r2)"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&amp;w=2400&amp;q=85" alt="Coach correcting a member’s push-up form" loading="lazy" width="1200" height="900"></div>
+  <div class="rv d1">
+   <span class="eyebrow">For beginners</span>
+   <h2 class="h-l" id="h-path">What to train in your first four&nbsp;weeks</h2>
+   <ol class="pain-list" style="margin-top:16px">
+    <li><div><h3>Weeks 1–2: the&nbsp;foundation</h3><p>Two beginner-program gym sessions, plus one Yoga or Pilates class to stretch it out.</p></div></li>
+    <li><div><h3>Weeks 3–4: add a group&nbsp;class</h3><p>Pick Kickboxing Level 1, Cycling or Functional. Keep it to 3–4 sessions a week in total.</p></div></li>
+   </ol>
+   <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px"><a class="btn btn-lime" href="../tools/#quiz">Take the Class Quiz <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a><a class="btn btn-ghost" href="../trainers/">Ask a Coach</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="sec alt line" aria-labelledby="h-faq">
+ <div class="wrap split" style="align-items:start">
+  <div><span class="eyebrow">FAQ</span><h2 class="h-l" id="h-faq">Choosing the right&nbsp;class</h2><div class="health" style="margin-top:24px"><svg class="ico" aria-hidden="true"><use href="#i-alert"/></svg><span>Intensity ratings are a general guide. If you have a medical condition or an old injury, check with your doctor before choosing a high-intensity&nbsp;class.</span></div></div>
+  <div class="faq">
+   <details><summary>How many disciplines should I train each week?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Beginners do best with two in the first month: one strength or combat class and one mobility class like Yoga or Pilates. Add more as you get stronger.</div></details>
+   <details><summary>What does “High” intensity mean?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Your heart rate stays up for most of the class, with short rests between rounds. Coaches still offer an easier option for every move.</div></details>
+   <details><summary>Do Reformer classes cost extra?<span class="pm"><svg class="ico s" aria-hidden="true"><use href="#i-plus"/></svg></span></summary><div class="ans">Mat Pilates is included in Core. Small-group Reformer uses a separate class pack; Elite already includes 4 per month (sample prices on the Membership page).</div></details>
+  </div>
+ </div>
+</section>
+
+<section class="sec" aria-labelledby="h-rel">
+ <div class="wrap">
+  <div class="sh"><div><span class="eyebrow">Keep exploring</span><h2 class="h-m" id="h-rel">Related</h2></div></div>
+  <div class="rel">
+   <a class="hov" href="../kickboxing/"><div class="ph"><img src="https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&amp;w=2400&amp;q=85" alt="Kickboxing class training with pads" loading="lazy"></div><div class="tx"><b>Kickboxing</b><span>The 3-level path and what a 60-minute class looks like.</span></div></a>
+   <a class="hov" href="../schedule/"><div class="ph"><img src="https://images.unsplash.com/photo-1520877880798-5ee004e3f11e?auto=format&amp;w=2400&amp;q=85" alt="Indoor cycling studio" loading="lazy"></div><div class="tx"><b>Weekly Schedule</b><span>Filter by class, club and time of day, and book.</span></div></a>
+   <a class="hov" href="../trainers/"><div class="ph"><img src="https://images.unsplash.com/photo-1571388208497-71bedc66e932?auto=format&amp;w=2400&amp;q=85" alt="Coach resting in the equipment area" loading="lazy"></div><div class="tx"><b>Trainers</b><span>Who teaches what, and where.</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Try something new this&nbsp;week</h2><p>Your free trial includes one group class of your choice and a 20-minute body scan.</p></div><div class="btns"><a class="btn" href="../free-trial/">Book a Free Trial <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a></div></div></section>
+</main>
+<div id="site-footer"><noscript><p style="padding:16px">Demo content: brand name, prices, staff, certifications, schedule, reviews and images are for illustration only.</p></noscript></div>
+<script src="../assets/site.js"></script>
+<script>
+(function(){var V=window.IV,D=V.D,$=V.$,$$=V.$$;
+var st={g:'',i:'',l:'',q:''};
+var ig={low:[1,2],mid:[3],high:[4,5]};
+$('#fGroup').innerHTML='<button class="chip" type="button" data-v="" aria-pressed="true">All</button>'+Object.keys(D.groups).map(function(k){return '<button class="chip" type="button" data-v="'+k+'" aria-pressed="false">'+D.groups[k]+'</button>'}).join('');
+$('#fLoc').innerHTML+=D.locs.map(function(l){return '<option value="'+l.id+'">'+l.s+'</option>'}).join('');
+$('#nSess').textContent=D.sessions.length;
+function cnt(id){return D.sessions.filter(function(s){return s.disc===id}).length}
+function intBar(n){var h='<span class="int" aria-label="Intensity '+n+' out of 5">';for(var i=1;i<=5;i++)h+='<i'+(i<=n?' class="on"':'')+'></i>';return h+'</span>'}
+function card(d,big){var href=d.id==='kickboxing'?'../kickboxing/':'../schedule/?class='+d.id;
+ return '<article class="dcard hov'+(big?' big':'')+'" id="'+d.id+'"><div class="ph"><img src="'+V.img(d.ph)+'" alt="'+V.esc(d.n)+' at IRONVERT" loading="lazy" style="object-position:'+d.pos+'"><span class="tag solid g">'+D.groups[d.g]+'</span></div><div class="tx"><h3>'+V.esc(d.n)+'</h3><p>'+V.esc(d.d)+'</p>'+
+ '<div class="meta"><span>'+intBar(d.int)+'</span><span><svg class="ico s" aria-hidden="true"><use href="#i-clock"/></svg>'+d.dur+'</span><span><svg class="ico s" aria-hidden="true"><use href="#i-pin"/></svg>'+d.locs.length+(d.locs.length===1?' club':' clubs')+'</span>'+(cnt(d.id)?'<span><svg class="ico s" aria-hidden="true"><use href="#i-cal"/></svg>'+cnt(d.id)+' per week</span>':'')+'</div>'+
+ '<div style="display:flex;flex-wrap:wrap;gap:8px"><'+'a class="btn btn-s '+(d.id==='kickboxing'?'btn-lime':'btn-ghost')+'" href="'+href+'">'+(d.id==='kickboxing'?'View Class Details':(cnt(d.id)?'See '+V.esc(d.n)+' Times':'Book with a Coach'))+'</a></div></div></article>'}
+function render(){var q=V.fold(st.q.trim());
+ var r=D.disc.filter(function(d){return (!st.g||d.g===st.g)&&(!st.i||ig[st.i].indexOf(d.int)>-1)&&(!st.l||d.locs.indexOf(st.l)>-1)&&(!q||V.fold(d.n+' '+d.d+' '+d.k).indexOf(q)>-1)});
+ var none=!st.g&&!st.i&&!st.l&&!q;
+ $('#nRes').textContent=r.length;$('#nWord').textContent=r.length===1?'matching class':'matching classes';
+ $('#grid').innerHTML=r.length?r.map(function(d,i){return card(d,none&&i===1)}).join(''):'<div class="empty" style="grid-column:1/-1">No classes match your filters. <button class="lnk" type="button" onclick="document.getElementById(\'reset\').click()" style="background:none;border:0;cursor:pointer">Clear filters</button></div>';
+ V.glue($('#grid'))}
+function bindChips(box,key){box.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;st[key]=b.getAttribute('data-v');$$('.chip',box).forEach(function(x){x.setAttribute('aria-pressed',x===b)});render()})}
+bindChips($('#fGroup'),'g');bindChips($('#fInt'),'i');
+$('#fLoc').addEventListener('change',function(){st.l=this.value;render()});
+$('#fQ').addEventListener('input',function(){st.q=this.value;render()});
+$('#reset').addEventListener('click',function(){st={g:'',i:'',l:'',q:''};$('#fLoc').value='';$('#fQ').value='';$$('.chips').forEach(function(c){$$('.chip',c).forEach(function(x,i){x.setAttribute('aria-pressed',i===0)})});render()});
+render();
+$('#mx').innerHTML=D.disc.map(function(d){return '<tr><th scope="row"><a href="#'+d.id+'" style="color:var(--ink);text-decoration:none">'+V.esc(d.n)+'</a></th>'+D.locs.map(function(l){return '<td>'+(d.locs.indexOf(l.id)>-1?'<span class="dot" role="img" aria-label="Available"></span>':'<span class="no" aria-label="Not available">–</span>')+'</td>'}).join('')+'<td class="num">'+(cnt(d.id)||'By appt.')+'</td></tr>'}).join('');
+if(location.hash){var t=document.getElementById(location.hash.slice(1));if(t){setTimeout(function(){t.scrollIntoView({block:'center'});t.style.borderColor='#B8F23A'},250)}}
+V.reveal();
+})();
+</script>
+</body>
+</html>
