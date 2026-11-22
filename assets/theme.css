@@ -632,3 +632,11 @@ svg.zl{stroke:none !important;fill:none}
 .mnav li.s a span{display:flex;flex-direction:column;gap:2px;min-width:0}
 .mnav li.s a small{display:block;font:500 14.5px/1.35 var(--body);color:#DCCFC8;letter-spacing:0}
 .mnav li.s a{min-height:56px;padding-top:8px;padding-bottom:8px}
+/* v32 (22/11/2026): 2 dịch vụ chính nổi bật hơn "Mẫu website theo ngành"; chữ phụ cam (#FFB070 trên nền tối, tương phản > 8:1) */
+.nav nav .ddm a.svc.main{border-color:rgba(255,138,61,.45);background:linear-gradient(120deg,rgba(255,138,61,.14),rgba(255,255,255,.02) 70%)}
+.nav nav .ddm a.svc.main i{background:var(--grad);color:#fff}
+.nav nav .ddm a.svc.main small{color:#FFB070}
+.nav nav .ddm a.svc.mw small{color:#D6CAC3}
+.nav nav .ddm a.svc.main:hover,.nav nav .ddm a.svc.main[aria-current="page"]{border-color:var(--flame);background:linear-gradient(120deg,rgba(255,138,61,.22),rgba(255,74,28,.08) 70%)}
+.mnav li.s.main a small{color:#FFB070}
+.mnav li.s.mw a small{color:#CFC3BC}
