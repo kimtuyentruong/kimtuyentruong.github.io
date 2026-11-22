@@ -1076,3 +1076,15 @@
 .cb-tbl .cb-c small{font-size:11.5px;color:var(--muted);white-space:nowrap}
 @media (max-width:600px){.cb-tbl .cb-c{align-items:flex-start}}
 .cb-next span,.cb-save span{white-space:nowrap}
+/* tools marquee (22/11/2026): wordmarks, each item animated on its own (Web Animations), static row without JS / reduced motion */
+.tools-n{margin:8px 0 0;font-size:12.5px;color:var(--faint)}
+.mq{position:relative;overflow:hidden;padding:6px 0}
+.mq::before,.mq::after{content:"";position:absolute;top:0;bottom:0;width:48px;z-index:1;pointer-events:none}
+.mq::before{left:0;background:linear-gradient(90deg,var(--surface),rgba(20,16,16,0))}
+.mq::after{right:0;background:linear-gradient(270deg,var(--surface),rgba(20,16,16,0))}
+.mq-l{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 44px;align-items:center}
+.mq-l li{font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.01em;color:#CFC3BC;white-space:nowrap;transition:color .25s}
+.mq-l li:hover{color:var(--c)}
+.mq-l.mq-on{display:block;position:relative;height:34px}
+.mq-l.mq-on li{position:absolute;left:0;top:4px}
+@media (max-width:760px){.mq-l li{font-size:16px}.mq-l{gap:10px 28px}}
