@@ -23,7 +23,7 @@
 <meta name="twitter:image" content="https://kimtuyentruong.github.io/assets/img/kien-thuc/dich-vu.jpg">
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png?v=2"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
-<link rel="stylesheet" href="/assets/multi.css?v=45">
+<link rel="stylesheet" href="/assets/multi.css?v=46">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=12">
 <link rel="stylesheet" href="/assets/theme.css?v=33">
@@ -77,7 +77,7 @@ function tpick(i){tk=i;[].forEach.call(dts,function(g,j){g.classList.toggle('act
 seen(tc,function(v){tvis=v},0);setInterval(function(){if(tvis&&!tman&&!RM&&!document.hidden)tpick((tk+1)%TD.length)},2800)}
 var rw=document.querySelector('h1 .rotw');if(rw&&!RM&&!rw._r){rw._r=1;var rs=rw.querySelector('.rs'),W=rw.getAttribute('data-w').split('|'),rv=false;
 W.slice(1).forEach(function(w){var e=document.createElement('span');e.className='ri';e.setAttribute('aria-hidden','true');e.textContent=w.replace(/ /g,' ');rs.appendChild(e)});
-setInterval(function(){if(!rv||document.hidden)return;var a=rs.querySelector('.ri.on')||rs.firstElementChild,b=a.nextElementSibling||rs.firstElementChild;[].forEach.call(rs.children,function(x){if(x!==a&&x!==b)x.classList.remove('on','off')});a.classList.remove('on');a.classList.add('off');b.classList.remove('off');b.classList.add('on');setTimeout(function(){a.classList.remove('off')},1100)},3500);seen(rw,function(v){rv=v},0)}
+setInterval(function(){if(!rv||document.hidden)return;var a=rs.querySelector('.ri.on')||rs.firstElementChild,b=a.nextElementSibling||rs.firstElementChild;[].forEach.call(rs.children,function(x){if(x!==a&&x!==b)x.classList.remove('on','off')});a.classList.remove('on');a.classList.add('off');b.classList.remove('off');b.classList.add('on');setTimeout(function(){a.classList.remove('off')},600)},1800);seen(rw,function(v){rv=v},0)}
 [].forEach.call(document.querySelectorAll('[data-anim]'),function(s){seen(s,function(v){s.classList.toggle('play',v)},0)});
 [].forEach.call(document.querySelectorAll('.stg'),function(g){[].forEach.call(g.children,function(c,i){c.style.setProperty('--i',i)})});
 var fmt=function(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};

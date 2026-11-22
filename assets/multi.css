@@ -1317,3 +1317,7 @@
 .svc-hd h1 .rs .ri.on{opacity:1;transform:none;visibility:visible;transition:opacity .7s ease .35s,transform .85s cubic-bezier(.22,.61,.36,1) .35s,visibility 0s}
 .svc-hd h1 .rs .ri.off{opacity:0;transform:translateY(-.32em);visibility:visible;transition:opacity .5s ease,transform .7s cubic-bezier(.4,0,.6,1),visibility 0s}
 @media (prefers-reduced-motion:reduce){.svc-hd h1 .rs .ri{transition:none}}
+/* 23/11/2026 (Tuyền: "mượt chứ không phải chậm"): đổi mỗi 1,8 giây, chuyển 0,45 giây */
+.svc-hd h1 .rs .ri{transition:opacity .35s ease,transform .45s cubic-bezier(.22,.61,.36,1),visibility 0s linear .45s}
+.svc-hd h1 .rs .ri.on{transition:opacity .4s ease .12s,transform .45s cubic-bezier(.22,.61,.36,1) .12s,visibility 0s}
+.svc-hd h1 .rs .ri.off{transition:opacity .3s ease,transform .4s cubic-bezier(.4,0,.6,1),visibility 0s}
