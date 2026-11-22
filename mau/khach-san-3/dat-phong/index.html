@@ -92,7 +92,7 @@
 </div>
 <div class="srch" id="srch" role="dialog" aria-modal="true" aria-label="Tìm trong website">
  <div class="srch-box">
-  <div class="srch-in"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><label class="sr" for="srchQ">Từ khoá</label><input id="srchQ" type="search" placeholder="Tìm phòng, nhà hàng, spa, ưu đãi…" autocomplete="off"><button class="ic-btn" type="button" id="srchClose" aria-label="Đóng tìm kiếm"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+  <div class="srch-in"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><label class="sr" for="srchQ">Từ&nbsp;khoá</label><input id="srchQ" type="search" placeholder="Tìm phòng, nhà hàng, spa, ưu đãi…" autocomplete="off"><button class="ic-btn" type="button" id="srchClose" aria-label="Đóng tìm kiếm"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
   <div class="srch-res" id="srchRes" aria-live="polite"></div>
  </div>
 </div>
@@ -101,20 +101,20 @@
 <section class="ph" style="padding-bottom:clamp(20px,3vw,32px)">
  <div class="wrap">
   <nav aria-label="Đường dẫn"><ol class="crumb"><li><a href="../">Trang chủ</a></li><li><span aria-current="page" data-crumb-cur>Đặt phòng</span></li></ol></nav>
-  <div class="ph-grid"><div><p class="kicker">Đặt trực tiếp</p><h1 class="h-1">Đặt phòng trong <em>5&nbsp;bước</em></h1></div><p class="lead">Chọn ngày, hạng phòng, thêm dịch vụ và để lại thông tin. Tiền được tính theo từng đêm, theo mùa; tổng cộng đã gồm thuế và phí. Đây là luồng minh hoạ, không trừ tiền.</p></div>
+  <div class="ph-grid"><div><p class="kicker">Đặt trực tiếp</p><h1 class="h-1">Đặt&nbsp;phòng trong <em>5&nbsp;bước</em></h1></div><p class="lead">Chọn ngày, hạng phòng, thêm dịch vụ và để lại thông tin. Tiền được tính theo từng đêm, theo mùa; tổng cộng đã gồm thuế và phí. Đây là luồng minh hoạ, không trừ tiền.</p></div>
  </div>
 </section>
 <div class="wrap">
  <ol class="steps">
   <li><button type="button" aria-current="step">Ngày &amp;&nbsp;khách</button></li>
   <li><button type="button" disabled>Hạng phòng</button></li>
-  <li><button type="button" disabled>Dịch vụ thêm</button></li>
-  <li><button type="button" disabled>Thông tin</button></li>
+  <li><button type="button" disabled>Dịch&nbsp;vụ thêm</button></li>
+  <li><button type="button" disabled>Thông&nbsp;tin</button></li>
   <li><button type="button" disabled>Xác nhận</button></li>
  </ol>
  <div class="done" id="wzDone" hidden style="margin:clamp(28px,4vw,56px) 0 clamp(64px,8vw,112px)">
   <span class="done-ic"><svg class="ic ic-l" aria-hidden="true"><use href="#i-check"/></svg></span>
-  <h2 class="h-2">Đã nhận yêu cầu đặt phòng</h2>
+  <h2 class="h-2">Đã nhận yêu cầu đặt&nbsp;phòng</h2>
   <p>Mã đặt phòng của bạn (minh hoạ):</p><span class="code" id="wzDoneCode">VL-000000</span>
   <ul id="wzDoneList"></ul>
   <p class="small">Đây là mẫu giao diện: không có yêu cầu nào được gửi đi. Ở website thật, lễ tân gọi xác nhận trong 30 phút (07:00–22:00) và gửi email kèm hướng dẫn thanh toán.</p>
@@ -134,20 +134,20 @@
     <p class="small" style="margin-top:-12px">Giá đã tính theo từng đêm trong kỳ ở của bạn. Hạng mờ là chưa đủ chỗ hoặc đã hết phòng.</p>
     <div style="display:grid;gap:12px" id="wzRooms" role="radiogroup" aria-label="Hạng phòng"></div>
     <p class="wz-msg" id="m2" role="alert"></p>
-    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Quay lại</button><button class="btn" type="button" data-next>Dịch vụ thêm<svg class="ic ic-go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
+    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Quay lại</button><button class="btn" type="button" data-next>Dịch&nbsp;vụ thêm<svg class="ic ic-go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
    </section>
    <section class="wz-pane" data-step="3" aria-labelledby="s3" hidden>
-    <h2 id="s3">Thêm vài điều cho chuyến đi</h2>
+    <h2 id="s3">Thêm vài điều cho&nbsp;chuyến đi</h2>
     <div id="wzEx" style="border-top:1px solid var(--line)"></div>
-    <div class="fld"><label for="wzCode">Mã ưu đãi (nếu có)</label><div class="promo"><input id="wzCode" class="inp" type="text" autocomplete="off" placeholder="Ví dụ DATSOM15" style="text-transform:uppercase"><button class="btn btn-o" type="button" id="wzApply">Áp dụng</button></div><p class="promo-msg" id="promoMsg" aria-live="polite"></p><p class="small">Mã minh hoạ: DATSOM15, O4TRA3, GIADINH10, TRANGMAT12. <a href="../uu-dai/">Điều kiện từng mã</a></p></div>
-    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Quay lại</button><button class="btn" type="button" data-next>Thông tin khách<svg class="ic ic-go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
+    <div class="fld"><label for="wzCode">Mã ưu&nbsp;đãi (nếu có)</label><div class="promo"><input id="wzCode" class="inp" type="text" autocomplete="off" placeholder="Ví dụ DATSOM15" style="text-transform:uppercase"><button class="btn btn-o" type="button" id="wzApply">Áp dụng</button></div><p class="promo-msg" id="promoMsg" aria-live="polite"></p><p class="small">Mã minh hoạ: DATSOM15, O4TRA3, GIADINH10, TRANGMAT12. <a href="../uu-dai/">Điều kiện từng mã</a></p></div>
+    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Quay lại</button><button class="btn" type="button" data-next>Thông&nbsp;tin khách<svg class="ic ic-go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
    </section>
    <section class="wz-pane" data-step="4" aria-labelledby="s4" hidden>
-    <h2 id="s4">Thông tin người đặt</h2>
+    <h2 id="s4">Thông&nbsp;tin người đặt</h2>
     <form id="wzForm" novalidate>
      <div class="fgrid">
-      <div class="fld full"><label for="f-ten">Họ và tên *</label><input id="f-ten" name="ten" type="text" autocomplete="name" required data-v="name" data-lbl="họ và tên"></div>
-      <div class="fld"><label for="f-dt">Số điện thoại *</label><input id="f-dt" name="dt" type="tel" inputmode="tel" autocomplete="tel" required data-v="phone" data-lbl="số điện thoại" placeholder="0900 000 000"></div>
+      <div class="fld full"><label for="f-ten">Họ và&nbsp;tên *</label><input id="f-ten" name="ten" type="text" autocomplete="name" required data-v="name" data-lbl="họ và tên"></div>
+      <div class="fld"><label for="f-dt">Số điện&nbsp;thoại *</label><input id="f-dt" name="dt" type="tel" inputmode="tel" autocomplete="tel" required data-v="phone" data-lbl="số điện thoại" placeholder="0900 000 000"></div>
       <div class="fld"><label for="f-em">Email *</label><input id="f-em" name="em" type="email" autocomplete="email" required data-v="email" data-lbl="email"></div>
       <div class="fld"><label for="f-gio">Giờ đến dự kiến</label><select id="f-gio" name="gio"><option>14:00–16:00</option><option>16:00–18:00</option><option>18:00–20:00</option><option>Sau 20:00</option><option>Chưa rõ</option></select></div>
       <div class="fld"><label for="f-dip">Dịp đặc biệt</label><select id="f-dip" name="dip"><option>Không</option><option>Trăng mật</option><option>Sinh nhật</option><option>Kỷ niệm ngày cưới</option><option>Công tác</option></select></div>
@@ -155,25 +155,25 @@
      </div>
      <button type="submit" hidden>Tiếp</button>
     </form>
-    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Quay lại</button><button class="btn" type="button" data-next>Xem lại và xác nhận<svg class="ic ic-go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
+    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Quay lại</button><button class="btn" type="button" data-next>Xem lại và&nbsp;xác nhận<svg class="ic ic-go" aria-hidden="true"><use href="#i-go"/></svg></button></div>
    </section>
    <section class="wz-pane" data-step="5" aria-labelledby="s5" hidden>
-    <h2 id="s5">Xem lại trước khi gửi</h2>
+    <h2 id="s5">Xem lại trước khi&nbsp;gửi</h2>
     <div class="recap" id="wzRecap"></div>
-    <label class="consent"><input type="checkbox" id="wzAgree" required><span>Tôi đồng ý để Vịnh Lam xử lý dữ liệu cá nhân (họ tên, số điện thoại, email) nhằm xác nhận đặt phòng, theo <a href="../lien-he/#chinh-sach">chính sách bảo vệ dữ liệu</a>.</span></label>
-    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Sửa thông tin</button><button class="btn btn-p" type="button" id="wzSend">Gửi yêu cầu đặt&nbsp;phòng</button></div>
+    <label class="consent"><input type="checkbox" id="wzAgree" required><span>Tôi đồng ý để&nbsp;Vịnh Lam xử lý dữ liệu cá nhân (họ tên, số điện&nbsp;thoại, email) nhằm xác nhận đặt&nbsp;phòng, theo <a href="../lien-he/#chinh-sach">chính sách bảo vệ dữ liệu</a>.</span></label>
+    <div class="wz-nav"><button class="btn btn-o" type="button" data-prev><svg class="ic" aria-hidden="true"><use href="#i-back"/></svg>Sửa thông&nbsp;tin</button><button class="btn btn-p" type="button" id="wzSend">Gửi yêu cầu đặt&nbsp;phòng</button></div>
    </section>
   </div>
-  <aside class="card wz-sum" id="wzSide" aria-live="polite" aria-label="Tóm tắt đặt phòng"><h2>Tóm tắt đặt phòng</h2></aside>
+  <aside class="card wz-sum" id="wzSide" aria-live="polite" aria-label="Tóm tắt đặt phòng"><h2>Tóm tắt đặt&nbsp;phòng</h2></aside>
  </div>
 </div>
 <section class="sec-s bg-shell" aria-labelledby="h-why">
  <div class="wrap">
-  <div class="sec-head"><p class="kicker">Vì sao đặt trực tiếp</p><h2 class="h-2" id="h-why">Đặt ở đây, có thêm vài điều&nbsp;nhỏ</h2></div>
+  <div class="sec-head"><p class="kicker">Vì sao đặt trực tiếp</p><h2 class="h-2" id="h-why">Đặt ở&nbsp;đây, có&nbsp;thêm vài điều&nbsp;nhỏ</h2></div>
   <div class="pol">
-   <article><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><h3>Đổi ngày miễn phí</h3><p>Đổi ngày trước 7 ngày không mất phí, một lần cho mỗi đặt phòng.</p></article>
+   <article><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><h3>Đổi ngày miễn&nbsp;phí</h3><p>Đổi ngày trước 7 ngày không mất phí, một lần cho mỗi đặt phòng.</p></article>
    <article><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg><h3>Ưu tiên nâng hạng</h3><p>Khi còn phòng trống hạng cao hơn vào ngày nhận phòng, khách đặt trực tiếp được xếp trước.</p></article>
-   <article><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><h3>Một đầu số cho mọi việc</h3><p>Gọi <a href="tel:0900000000">0900 000 000</a> từ lúc đặt đến lúc trả phòng: đổi giờ xe, đặt bàn, đặt spa.</p></article>
+   <article><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><h3>Một đầu số cho&nbsp;mọi việc</h3><p>Gọi <a href="tel:0900000000">0900 000 000</a> từ lúc đặt đến lúc trả phòng: đổi giờ xe, đặt bàn, đặt spa.</p></article>
   </div>
  </div>
 </section>
@@ -197,7 +197,7 @@
     </ul>
    </div>
    <div>
-    <h2>Liên hệ</h2>
+    <h2>Liên&nbsp;hệ</h2>
     <ul class="ft-contact">
      <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Khu vực ven biển phía nam Quy Nhơn, tỉnh Gia Lai</span></li>
      <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:0900000000">0900 000 000</a></li>

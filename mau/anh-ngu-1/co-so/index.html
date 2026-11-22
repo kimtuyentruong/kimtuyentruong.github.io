@@ -23,14 +23,14 @@
  <div class="wrap">
   <ol class="crumbs"><li><a href="../">Trang chủ</a></li><li aria-current="page">Cơ sở</li></ol>
   <div class="sec-head" style="margin-bottom:0">
-   <div class="intro"><span class="eyebrow">3 cơ sở TP.HCM · 3 cơ sở Hà Nội</span><h1>Học gần nhà, học bù ở bất kỳ cơ&nbsp;sở&nbsp;nào</h1></div>
+   <div class="intro"><span class="eyebrow">3 cơ sở TP.HCM · 3 cơ sở Hà Nội</span><h1>Học gần nhà, học bù ở&nbsp;bất kỳ cơ&nbsp;sở&nbsp;nào</h1></div>
    <p class="lead intro" style="margin:0">Cùng giáo trình, cùng chuẩn phòng học. Chọn thành phố rồi bấm vào điểm trên bản đồ để xem giờ mở cửa, chỗ gửi xe và lớp sắp khai giảng.</p>
   </div>
  </div>
 </section>
 
 <section class="wrap" style="padding-bottom:clamp(56px,7vw,96px)">
- <div class="cmap-tabs" role="tablist" aria-label="Chọn thành phố"><button type="button" role="tab" aria-selected="true" data-city="hcm">TP.HCM</button><button type="button" role="tab" aria-selected="false" data-city="hn">Hà Nội</button></div>
+ <div class="cmap-tabs" role="tablist" aria-label="Chọn thành phố"><button type="button" role="tab" aria-selected="true" data-city="hcm">TP.HCM</button><button type="button" role="tab" aria-selected="false" data-city="hn">Hà&nbsp;Nội</button></div>
  <div class="cmap">
   <div class="mapbox rv" id="mapbox"></div>
   <article class="cinfo" id="cinfo" aria-live="polite"></article>
@@ -47,7 +47,7 @@
 
 <section class="sec">
  <div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">Ở mỗi cơ sở</span><h2 class="rv">Phụ huynh chờ con thoải mái, con học trong không gian&nbsp;sáng</h2></div><p class="rv d1">Tiện ích dưới đây có ở cả 6 cơ sở; diện tích từng phòng khác nhau theo toà nhà.</p></div>
+  <div class="sec-head"><div><span class="eyebrow">Ở mỗi cơ sở</span><h2 class="rv">Phụ&nbsp;huynh chờ con thoải mái, con học trong không&nbsp;gian&nbsp;sáng</h2></div><p class="rv d1">Tiện ích dưới đây có ở cả 6 cơ sở; diện tích từng phòng khác nhau theo toà nhà.</p></div>
   <div class="fac">
    <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-sun"/></svg><b>Phòng học nhiều ánh sáng</b><p>Bàn ghế đổi theo lứa tuổi, màn hình tương tác, cách âm giữa các phòng.</p></div>
    <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-book"/></svg><b>Góc đọc sách</b><p>Truyện tranh, sách phân cấp độ; học viên mượn về nhà theo tuần.</p></div>
@@ -61,7 +61,7 @@
  <div class="wrap">
   <div class="feat-post rv" style="grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)">
    <div class="ph"><img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&fit=crop&w=900&h=700&q=80" alt="Học viên đeo tai nghe học trực tuyến trên máy tính" loading="lazy" width="900" height="700"></div>
-   <div class="bd"><span class="eyebrow" style="color:var(--sun)">Cơ sở thứ bảy</span><h2>Học trực tuyến khi nhà&nbsp;xa, lịch&nbsp;bận</h2><p>Cùng giáo trình, cùng báo cáo tiến độ, lớp nhỏ hơn và có trợ giảng theo dõi. Học viên lớp trực tuyến vẫn được đến cơ sở thi thử và dự sự kiện.</p><a class="link" href="../lich-khai-giang/?coso=online">Xem lớp trực tuyến sắp mở <svg class="ico s" aria-hidden="true"><use href="#i-ar"/></svg></a></div>
+   <div class="bd"><span class="eyebrow" style="color:var(--sun)">Cơ sở thứ bảy</span><h2>Học trực tuyến khi&nbsp;nhà&nbsp;xa, lịch&nbsp;bận</h2><p>Cùng giáo trình, cùng báo cáo tiến độ, lớp nhỏ hơn và có trợ giảng theo dõi. Học viên lớp trực tuyến vẫn được đến cơ sở thi thử và dự sự kiện.</p><a class="link" href="../lich-khai-giang/?coso=online">Xem lớp trực tuyến sắp mở <svg class="ico s" aria-hidden="true"><use href="#i-ar"/></svg></a></div>
   </div>
  </div>
 </section>
@@ -105,7 +105,7 @@ $('#mapbox').addEventListener('keydown',function(e){var p=e.target.closest('.pin
 $$('.cmap-tabs button').forEach(function(b){b.addEventListener('click',function(){city=b.getAttribute('data-city');sel=D.campus.filter(function(c){return c.city===city})[0].id;draw();info()})});
 var h=location.hash.slice(1);if(h&&S.campus(h))sel=h;if(sel==='online')sel='ben-thanh';city=S.campus(sel).city;draw();info();
 var st=status();
-$('#all').innerHTML=D.campus.filter(function(c){return c.city!=='online'}).map(function(c){return '<article class="card hov" id="'+c.id+'-card"><span class="tag">'+(c.city==='hcm'?'TP.HCM':'Hà Nội')+'</span><h3>'+c.n+'</h3><p>'+c.ward+'</p><span class="open-now'+(st.open?'':' off')+'">'+(st.open?'Đang mở cửa':'Đang đóng cửa')+'</span><p>'+c.rooms+' phòng học · '+c.park+'</p><button class="link" type="button" data-go="'+c.id+'" style="border:0;background:none;padding:0;min-height:44px;justify-self:start">Xem trên bản đồ '+S.ic('ar','s')+'</button></article>'}).join('');
+$('#all').innerHTML=D.campus.filter(function(c){return c.city!=='online'}).map(function(c){return '<article class="card hov" id="'+c.id+'-card"><span class="tag">'+(c.city==='hcm'?'TP.HCM':'Hà Nội')+'</span><h3>'+c.n+'</h3><p>'+c.ward+'</p><span class="open-now'+(st.open?'':' off')+'">'+(st.open?'Đang mở cửa':'Đang đóng cửa')+'</span><p>'+c.rooms+' phòng học · '+c.park+'</p><button class="link" type="button" data-go="'+c.id+'" style="border:0;background:none;padding:0;min-height:44px;justify-self:start">Xem trên&nbsp;bản đồ '+S.ic('ar','s')+'</button></article>'}).join('');
 $('#all').addEventListener('click',function(e){var b=e.target.closest('[data-go]');if(!b)return;sel=b.getAttribute('data-go');city=S.campus(sel).city;draw();info();$('#mapbox').scrollIntoView({behavior:'smooth',block:'center'})});
 })();
 </script>

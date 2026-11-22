@@ -39,7 +39,7 @@
    <div class="qz-nav" id="qzNav" hidden><button class="btn btn-o btn-s" type="button" id="prev"><svg class="ico s" aria-hidden="true"><use href="#i-al"/></svg> Câu trước</button><button class="btn btn-p btn-s" type="button" id="next" disabled>Câu tiếp <svg class="ico s" aria-hidden="true"><use href="#i-ar"/></svg></button></div>
   </div>
   <aside class="qz-side">
-   <div class="box"><h3>Bảng câu hỏi</h3><div class="dots" id="dots"></div><p class="muted" style="font-size:.84rem;margin:14px 0 0">Bấm số câu để quay lại sửa. Phần nghe phát tối đa 2 lần mỗi câu.</p></div>
+   <div class="box"><h3>Bảng câu&nbsp;hỏi</h3><div class="dots" id="dots"></div><p class="muted" style="font-size:.84rem;margin:14px 0 0">Bấm số câu để quay lại sửa. Phần nghe phát tối đa 2 lần mỗi câu.</p></div>
    <div class="box" style="background:var(--sun-50);border-color:#F4DFAE"><h3>Mẹo làm bài</h3><ul class="ticks"><li><svg class="ico s" aria-hidden="true"><use href="#i-head"/></svg><span>Đeo tai nghe hoặc bật loa vừa đủ nghe.</span></li><li><svg class="ico s" aria-hidden="true"><use href="#i-clock"/></svg><span>Không cần vội; bài không tính giờ.</span></li><li><svg class="ico s" aria-hidden="true"><use href="#i-user"/></svg><span>Bé dưới 8 tuổi: phụ huynh đọc câu hỏi giúp con.</span></li></ul></div>
   </aside>
  </div>
@@ -64,7 +64,7 @@
 
 <section class="sec">
  <div class="wrap pain-grid">
-  <div><span class="eyebrow">Sau bài online</span><h2 class="rv">Ba bước để xếp lớp chính&nbsp;thức</h2><p class="lead rv d1" style="margin-top:18px">Bài online đo nghe, đọc, ngữ pháp. Kỹ năng nói được đánh giá trực tiếp khi bạn đến học thử.</p></div>
+  <div><span class="eyebrow">Sau bài online</span><h2 class="rv">Ba bước để&nbsp;xếp lớp chính&nbsp;thức</h2><p class="lead rv d1" style="margin-top:18px">Bài online đo nghe, đọc, ngữ pháp. Kỹ năng nói được đánh giá trực tiếp khi bạn đến học thử.</p></div>
   <ol class="pain-list" style="list-style:none">
    <li class="rv"><span class="q" style="background:var(--teal-50);color:var(--teal)">1</span><div><b>Lưu kết quả và chọn lịch học thử</b><span>Kết quả được điền sẵn vào form đăng ký.</span></div></li>
    <li class="rv d1"><span class="q" style="background:var(--teal-50);color:var(--teal)">2</span><div><b>Nói chuyện 5 phút với giáo viên</b><span>Tại cơ sở hoặc qua Zoom, nhẹ nhàng như trò chuyện.</span></div></li>
@@ -98,13 +98,13 @@ dots.innerHTML=Q.map(function(q,i){return '<button type="button" data-i="'+i+'" 
 function prog(){var n=ans.filter(function(a){return a>-1}).length;$('#qzBar i').style.width=(n/12*100)+'%';$('#qzBar').setAttribute('aria-valuenow',n);$('#qzCount').textContent=n+'/12';
  $$('#dots button').forEach(function(b,i){b.classList.toggle('done',ans[i]>-1);b.classList.toggle('cur',i===cur);b.disabled=cur<0})}
 function intro(){cur=-1;nav.hidden=true;$('#qzStage').textContent='Bắt đầu';var prev=S.store.get('test');
- body.innerHTML=(prev?'<div class="qz-pass" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between"><span>Kết quả lần trước ('+prev.date+'): <b>'+prev.lv+'</b>, '+prev.score+'/12 câu.</span><button class="btn btn-o btn-s" type="button" id="seePrev">Xem lại kết quả</button></div>':'')+
- '<h2 class="qz-q" style="font-size:clamp(1.35rem,1.1rem + .8vw,1.8rem)">Hai câu hỏi nhỏ trước khi bắt&nbsp;đầu</h2>'+
+ body.innerHTML=(prev?'<div class="qz-pass" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between"><span>Kết quả lần trước ('+prev.date+'): <b>'+prev.lv+'</b>, '+prev.score+'/12 câu.</span><button class="btn btn-o btn-s" type="button" id="seePrev">Xem lại kết&nbsp;quả</button></div>':'')+
+ '<h2 class="qz-q" style="font-size:clamp(1.35rem,1.1rem + .8vw,1.8rem)">Hai câu&nbsp;hỏi nhỏ trước khi&nbsp;bắt&nbsp;đầu</h2>'+
  '<p class="lbl">Ai đang làm bài?</p><div class="ogrid" style="margin:10px 0 22px" id="who">'+
  [['kid','Bé dưới 11 tuổi','Phụ huynh làm cùng con'],['teen','Học sinh 11–17 tuổi','Cấp hai, cấp ba'],['adult','Từ 18 tuổi','Sinh viên, người đi làm']].map(function(o){return '<label class="opt"><input type="radio" name="who" value="'+o[0]+'"><span class="dot"></span><span><b>'+o[1]+'</b><small>'+o[2]+'</small></span></label>'}).join('')+'</div>'+
  '<p class="lbl">Mục tiêu chính?</p><div class="ogrid" style="margin:10px 0 26px" id="goal">'+
  [['giao-tiep','Giao tiếp tự tin','Nói, nghe trong đời sống'],['ielts','Thi IELTS hoặc học thuật','Du học, xét tuyển, công việc']].map(function(o){return '<label class="opt"><input type="radio" name="goal" value="'+o[0]+'"><span class="dot"></span><span><b>'+o[1]+'</b><small>'+o[2]+'</small></span></label>'}).join('')+'</div>'+
- '<button class="btn btn-p" type="button" id="start" disabled>Bắt đầu làm bài '+S.ic('ar','s')+'</button>';
+ '<button class="btn btn-p" type="button" id="start" disabled>Bắt&nbsp;đầu làm bài '+S.ic('ar','s')+'</button>';
  function chk(){who=(($('input[name=who]:checked')||{}).value)||'';goal=(($('input[name=goal]:checked')||{}).value)||'';$('#start').disabled=!(who&&goal)}
  body.addEventListener('change',chk);$('#start').addEventListener('click',function(){go(0)});
  if(prev)$('#seePrev').addEventListener('click',function(){result(prev)});prog()}
@@ -144,7 +144,7 @@ function result(r){cur=-1;nav.hidden=true;$('#qzStage').textContent='Kết quả
  '<div class="cefr">'+LV.map(function(l,i){return '<div class="'+(i===r.lvI?'on':'')+'">'+l[0]+'<small>'+l[1]+'</small></div>'}).join('')+'</div></div></div>'+
  '<div class="age-res" style="margin-top:28px;min-height:0"><div class="ph"><img src="'+S.img(c.ph,300,380)+'" alt="" width="300" height="380"></div><div><span class="tag sun">Gợi ý cho bạn</span><h3>'+c.n+' · '+c.sub+'</h3><p>'+c.d+'</p><div class="hero-acts"><a class="btn btn-p btn-s" href="../dang-ky-hoc-thu/?khoa='+c.id+'">Học thử với kết quả này</a>'+(c.detail?'<a class="btn btn-o btn-s" href="../chuong-trinh-ielts/">Xem lộ trình</a>':'<a class="btn btn-o btn-s" href="../lich-khai-giang/?khoa='+c.id+'">Xem lịch lớp</a>')+'</div></div></div>'+
  '<details class="acc" style="margin-top:22px"><summary>Xem đáp án từng câu<span class="pm" aria-hidden="true"></span></summary><div class="a"><ol style="padding-left:1.2em;margin:0">'+Q.map(function(q,i){var a=(r.ans||[])[i],ok=a===q.k;return '<li style="margin-bottom:6px"><span lang="en">'+esc(q.q)+'</span> <b style="color:'+(ok?'#0B6B3A':'var(--coral-700)')+'">'+(ok?'Đúng':'Chưa đúng')+'</b> · đáp án: <span lang="en">'+esc(q.o[q.k])+'</span></li>'}).join('')+'</ol></div></details>'+
- '<p style="margin-top:22px"><button class="link" type="button" id="again" style="border:0;background:none;padding:0;min-height:44px">Làm lại bài kiểm tra</button></p>';
+ '<p style="margin-top:22px"><button class="link" type="button" id="again" style="border:0;background:none;padding:0;min-height:44px">Làm lại bài kiểm&nbsp;tra</button></p>';
  requestAnimationFrame(function(){setTimeout(function(){$('#garc').style.strokeDashoffset=C*(1-(r.score/12||.03));$$('.skillbars i',body).forEach(function(i){i.style.width=i.getAttribute('data-w')+'%'})},60)});
  $('#again').addEventListener('click',function(){ans=new Array(12).fill(-1);plays={};intro()});
  $('#qzBar i').style.width='100%';$('#qzCount').textContent='Xong';$$('#dots button').forEach(function(b){b.disabled=true});

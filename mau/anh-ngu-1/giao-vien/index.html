@@ -25,7 +25,7 @@
   <div class="dhero-grid" style="align-items:center">
    <div class="intro">
     <span class="eyebrow">12 hồ sơ mẫu · 6 chuyên môn</span>
-    <h1>Người đứng lớp quyết định con có thích tiếng&nbsp;Anh hay&nbsp;không</h1>
+    <h1>Người đứng lớp quyết định con có&nbsp;thích tiếng&nbsp;Anh hay&nbsp;không</h1>
     <p class="lead">Vì vậy mỗi giáo viên Sunward đều dạy thử trước hội đồng, được dự giờ hằng tháng và chỉ nhận lớp đúng chuyên môn: Kids, Teens, IELTS hoặc giao tiếp.</p>
    </div>
    <div class="rv" style="position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end">
@@ -53,7 +53,7 @@
 
 <section class="sec paper">
  <div class="wrap">
-  <div class="sec-head"><div><span class="eyebrow">Tuyển chọn và đào tạo</span><h2 class="rv">Bốn vòng trước khi nhận lớp đầu&nbsp;tiên</h2></div><p class="rv d1">Quy trình áp dụng cho cả giáo viên Việt Nam và nước ngoài, bất kể bằng cấp.</p></div>
+  <div class="sec-head"><div><span class="eyebrow">Tuyển chọn và đào tạo</span><h2 class="rv">Bốn vòng trước khi&nbsp;nhận lớp đầu&nbsp;tiên</h2></div><p class="rv d1">Quy trình áp dụng cho cả giáo viên Việt Nam và nước ngoài, bất kể bằng cấp.</p></div>
   <div class="fac">
    <div class="rv"><svg class="ico l" aria-hidden="true"><use href="#i-chat"/></svg><b>Phỏng vấn chuyên môn</b><p>Kiểm tra phát âm, ngữ pháp và hiểu biết về phương pháp dạy theo lứa tuổi.</p></div>
    <div class="rv d1"><svg class="ico l" aria-hidden="true"><use href="#i-users"/></svg><b>Dạy thử 30 phút</b><p>Dạy một nhóm học viên thật trước hội đồng chuyên môn.</p></div>
@@ -66,14 +66,14 @@
 <section class="sec">
  <div class="wrap pain-grid">
   <div class="ph rv" style="border-radius:var(--r-xl);aspect-ratio:4/3.3"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&h=740&q=80" alt="Giáo viên đứng lớp, các em nhỏ giơ tay phát biểu" loading="lazy" width="900" height="740"></div>
-  <div><span class="eyebrow">Mô hình đồng giảng dạy</span><h2 class="rv">Giáo viên nước ngoài dạy nói, giáo viên Việt Nam theo sát&nbsp;từng&nbsp;em</h2>
+  <div><span class="eyebrow">Mô hình đồng giảng dạy</span><h2 class="rv">Giáo viên nước ngoài dạy nói, giáo viên Việt&nbsp;Nam theo sát&nbsp;từng&nbsp;em</h2>
    <p class="lead rv d1" style="margin-top:18px">Ở lớp Kids và Teens, mỗi lớp có hai giáo viên phụ trách. Một người dẫn hoạt động nói và nghe, một người giải thích ngữ pháp, chấm bài và liên lạc với phụ huynh.</p>
    <ul class="ticks rv d2" style="margin-top:18px"><li><svg class="ico s" aria-hidden="true"><use href="#i-check"/></svg><span>Phụ huynh luôn có giáo viên nói tiếng Việt để trao đổi về con.</span></li><li><svg class="ico s" aria-hidden="true"><use href="#i-check"/></svg><span>Học viên được nghe nhiều giọng tiếng Anh khác nhau.</span></li><li><svg class="ico s" aria-hidden="true"><use href="#i-check"/></svg><span>Nhận xét sau mỗi buổi được gửi qua ứng dụng.</span></li></ul>
   </div>
  </div>
 </section>
 
-<section class="sec-s"><div class="wrap"><div class="cta-band rv"><span class="sunarc" aria-hidden="true"></span><div><h2>Muốn học cùng một giáo viên cụ&nbsp;thể?</h2><p>Ghi tên giáo viên trong form học thử, tư vấn viên sẽ xếp lịch trùng với lớp của thầy cô.</p></div><div class="acts"><a class="btn btn-sun" href="../dang-ky-hoc-thu/">Đăng ký học&nbsp;thử</a><a class="btn btn-o" href="../lich-khai-giang/">Xem lịch lớp</a></div></div></div></section>
+<section class="sec-s"><div class="wrap"><div class="cta-band rv"><span class="sunarc" aria-hidden="true"></span><div><h2>Muốn học cùng một&nbsp;giáo viên cụ&nbsp;thể?</h2><p>Ghi tên giáo viên trong form học thử, tư vấn viên sẽ xếp lịch trùng với lớp của thầy cô.</p></div><div class="acts"><a class="btn btn-sun" href="../dang-ky-hoc-thu/">Đăng ký học&nbsp;thử</a><a class="btn btn-o" href="../lich-khai-giang/">Xem lịch lớp</a></div></div></div></section>
 </main>
 
 <div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dT"><div class="dlg-box" id="dBox"></div></div>
@@ -89,12 +89,12 @@ function ini(n){var p=n.replace(/^(Ms\.|Mr\.)\s*/,'').split(' ');return (p[0][0]
 function photo(t,w,h){return t.ph?'<img src="'+S.img(t.ph,w,h)+'" alt="Ảnh minh hoạ giáo viên '+esc(t.n)+'" loading="lazy" width="'+w+'" height="'+h+'">':'<span class="ini" aria-hidden="true">'+ini(t.n)+'</span>'}
 function render(){var r=D.teachers.filter(function(t){return (!tC.value||t.c===tC.value)&&(!sp||t.sp.indexOf(sp)>-1)});
  $$('#tS .chip').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-v')===sp)});$('#tN').textContent=r.length;
- $('#tg').innerHTML=r.length?r.map(function(t){return '<button class="tcard rv in" type="button" data-t="'+t.id+'" id="'+t.id+'" aria-label="Xem hồ sơ '+esc(t.n)+'"><div class="ph">'+photo(t,480,576)+'<span class="mau">Hồ sơ mẫu</span><span class="more" aria-hidden="true">'+S.ic('ar','s')+'</span></div><span><b>'+esc(t.n)+'</b><small>'+S.campus(t.c).n+' · '+t.y+' năm kinh nghiệm</small></span><span class="tags">'+t.sp.map(function(s){return '<span class="tag">'+s+'</span>'}).join('')+'</span></button>'}).join(''):'<div class="nores">Chưa có giáo viên khớp bộ lọc ở cơ sở này. <a href="../giao-vien/">Xem tất cả</a></div>'}
+ $('#tg').innerHTML=r.length?r.map(function(t){return '<button class="tcard rv in" type="button" data-t="'+t.id+'" id="'+t.id+'" aria-label="Xem hồ sơ '+esc(t.n)+'"><div class="ph">'+photo(t,480,576)+'<span class="mau">Hồ&nbsp;sơ mẫu</span><span class="more" aria-hidden="true">'+S.ic('ar','s')+'</span></div><span><b>'+esc(t.n)+'</b><small>'+S.campus(t.c).n+' · '+t.y+' năm kinh&nbsp;nghiệm</small></span><span class="tags">'+t.sp.map(function(s){return '<span class="tag">'+s+'</span>'}).join('')+'</span></button>'}).join(''):'<div class="nores">Chưa có giáo viên khớp bộ lọc ở cơ sở này. <a href="../giao-vien/">Xem tất cả</a></div>'}
 tC.addEventListener('change',render);$('#tS').addEventListener('click',function(e){var b=e.target.closest('.chip');if(b){sp=b.getAttribute('data-v');render()}});
 function openT(id){var t=D.teachers.filter(function(x){return x.id===id})[0];if(!t)return;last=document.activeElement;var cs=D.classes.filter(function(c){return c.c===t.c}).slice(0,2);
  $('#dBox').innerHTML='<button class="icon-btn x" type="button" id="dX" aria-label="Đóng hồ sơ">'+S.ic('x')+'</button><div class="ph">'+photo(t,600,800)+'</div><div class="bd"><span class="mau">Hồ sơ mẫu</span><h3 id="dT">'+esc(t.n)+'</h3><div class="tags" style="display:flex;gap:6px;flex-wrap:wrap">'+t.sp.map(function(s){return '<span class="tag">'+s+'</span>'}).join('')+'</div>'+
  '<blockquote style="margin:20px 0 0;padding:0 0 0 16px;border-left:3px solid var(--sun);color:var(--ink-2);font-style:italic">'+esc(t.q)+'</blockquote>'+
- '<dl><dt>Cơ sở</dt><dd>'+S.campus(t.c).n+'</dd><dt>Bằng cấp</dt><dd>'+esc(t.cert)+' (mẫu)</dd><dt>Kinh nghiệm</dt><dd>'+t.y+' năm giảng dạy</dd><dt>Lớp sắp mở</dt><dd>'+(cs.length?cs.map(function(c){return S.course(c.co).n+' · '+c.date}).join('<br>'):'Liên hệ để biết lịch')+'</dd></dl>'+
+ '<dl><dt>Cơ sở</dt><dd>'+S.campus(t.c).n+'</dd><dt>Bằng cấp</dt><dd>'+esc(t.cert)+' (mẫu)</dd><dt>Kinh&nbsp;nghiệm</dt><dd>'+t.y+' năm giảng dạy</dd><dt>Lớp sắp mở</dt><dd>'+(cs.length?cs.map(function(c){return S.course(c.co).n+' · '+c.date}).join('<br>'):'Liên hệ để biết lịch')+'</dd></dl>'+
  '<div class="hero-acts"><a class="btn btn-p btn-s" href="../dang-ky-hoc-thu/?gv='+t.id+'">Học thử với giáo viên này</a><a class="btn btn-o btn-s" href="../co-so/#'+t.c+'">Xem cơ sở</a></div></div>';
  dlg.classList.add('open');document.body.classList.add('lock');$('#dX').focus();$('#dX').addEventListener('click',closeT);history.replaceState(null,'','#'+id)}
 function closeT(){dlg.classList.remove('open');document.body.classList.remove('lock');history.replaceState(null,'',location.pathname+location.search);if(last)last.focus()}

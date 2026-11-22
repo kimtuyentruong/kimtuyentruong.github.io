@@ -27,7 +27,7 @@
   <div class="phero-row">
    <div class="intro">
     <span class="eyebrow">Huấn luyện viên</span>
-    <h1>Người kèm bạn quan trọng hơn chiếc máy&nbsp;tập</h1>
+    <h1>Người kèm bạn&nbsp;quan&nbsp;trọng hơn chiếc máy&nbsp;tập</h1>
     <p class="lead">Mười huấn luyện viên ở ba cơ sở, mỗi người phụ trách hai đến bốn bộ môn. Xem hồ sơ, lịch dạy trong tuần và chọn người đi cùng buổi tập thử của&nbsp;bạn.</p>
    </div>
    <div class="statrow intro">
@@ -41,7 +41,7 @@
 
 <section class="sec tight">
  <div class="wrap">
-  <h2 class="vh">Danh sách huấn luyện viên</h2>
+  <h2 class="vh">Danh sách huấn&nbsp;luyện viên</h2>
   <div class="fbar">
    <div class="fg" style="flex:1 1 420px"><span class="lbl" id="ld">Bộ môn</span><div class="chips" id="fDisc" role="group" aria-labelledby="ld"></div></div>
    <div class="fg"><span class="lbl" id="ll">Cơ sở</span><div class="chips" id="fLoc" role="group" aria-labelledby="ll"></div></div>
@@ -55,11 +55,11 @@
 
 <section class="sec alt line" aria-labelledby="h-how">
  <div class="wrap">
-  <div class="sh"><div><span class="eyebrow">PT 1 kèm 1</span><h2 class="h-l" id="h-how">Bốn tuần đầu với huấn luyện viên&nbsp;riêng</h2></div><p>Gói 10 buổi PT 4.500.000đ, dùng trong 3 tháng (giá mẫu). Gói Elite đã gồm 4 buổi mỗi tháng.</p></div>
+  <div class="sh"><div><span class="eyebrow">PT 1 kèm 1</span><h2 class="h-l" id="h-how">Bốn tuần đầu với&nbsp;huấn&nbsp;luyện viên&nbsp;riêng</h2></div><p>Gói 10 buổi PT 4.500.000đ, dùng trong 3 tháng (giá mẫu). Gói Elite đã gồm 4 buổi mỗi tháng.</p></div>
   <div class="steps-coach">
-   <div class="rv"><b>01</b><h3>Hỏi và đo</h3><p>Hỏi tiền sử chấn thương, lịch làm việc, mục tiêu. Đo InBody, kiểm tra tầm vận động khớp.</p></div>
+   <div class="rv"><b>01</b><h3>Hỏi và&nbsp;đo</h3><p>Hỏi tiền sử chấn thương, lịch làm việc, mục tiêu. Đo InBody, kiểm tra tầm vận động khớp.</p></div>
    <div class="rv d1"><b>02</b><h3>Lên giáo án</h3><p>Giáo án 4 tuần, mỗi buổi 60 phút. Bài tập ngoài giờ PT gửi qua ứng dụng (mẫu).</p></div>
-   <div class="rv d2"><b>03</b><h3>Tập và sửa</h3><p>Huấn luyện viên đứng cạnh từng hiệp, ghi lại mức tạ, số lần, cảm nhận của bạn.</p></div>
+   <div class="rv d2"><b>03</b><h3>Tập và&nbsp;sửa</h3><p>Huấn luyện viên đứng cạnh từng hiệp, ghi lại mức tạ, số lần, cảm nhận của bạn.</p></div>
    <div class="rv d3"><b>04</b><h3>Đo lại, chỉnh</h3><p>Cuối tuần thứ tư đo lại, xem điều gì hiệu quả và điều chỉnh giáo án tháng sau.</p></div>
   </div>
  </div>
@@ -67,7 +67,7 @@
 
 <section class="sec" aria-labelledby="h-rev">
  <div class="wrap">
-  <div class="sh"><div><span class="eyebrow">Hội viên kể</span><h2 class="h-l" id="h-rev">Tập với PT ra&nbsp;sao</h2></div></div>
+  <div class="sh"><div><span class="eyebrow">Hội viên kể</span><h2 class="h-l" id="h-rev">Tập với&nbsp;PT ra&nbsp;sao</h2></div></div>
   <div class="revs">
    <figure class="card rev rv" style="margin:0"><span class="sample">Đánh giá mẫu</span><q>Mình từng đau lưng khi deadlift. Tháng đầu anh Đức Anh chỉ cho tập hip hinge với gậy và kettlebell nhẹ, giờ đã kéo được tạ mà không đau.</q><figcaption class="who"><span><b>Anh Hoàng Nam</b>PT · Bến Thành</span></figcaption></figure>
    <figure class="card rev rv d1" style="margin:0"><span class="sample">Đánh giá mẫu</span><q>Chị Lan Chi nhớ cả chuyện mình hay khựng vai trái khi đấm. Buổi nào cũng có một điểm nhỏ để sửa.</q><figcaption class="who"><span><b>Chị Bảo Ngọc</b>Boxing · An Khánh</span></figcaption></figure>
@@ -92,7 +92,7 @@ $('#fLoc').innerHTML='<button class="chip" type="button" data-v="" aria-pressed=
 function render(){$('#nFav').textContent=favs.length;
  var r=D.coaches.filter(function(c){return (!st.disc||c.sp.indexOf(st.disc)>-1)&&(!st.loc||c.loc===st.loc)&&(!st.fav||favs.indexOf(c.id)>-1)});
  $('#nRes').textContent=r.length;
- $('#grid').innerHTML=r.length?r.map(function(c){var f=favs.indexOf(c.id)>-1;return '<article class="cc hov" id="'+c.id+'"><button class="fav" type="button" data-fav="'+c.id+'" aria-pressed="'+f+'" aria-label="'+(f?'Bỏ lưu ':'Lưu ')+V.esc(c.n)+'"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></button><div class="ph"><img src="'+V.img(c.ph,700,875)+'" alt="Chân dung huấn luyện viên '+V.esc(c.n)+'" loading="lazy" style="object-position:'+c.pos+'"></div><div class="tx"><h3>'+V.esc(c.n)+'</h3><p class="role">'+V.esc(c.role)+'</p><div class="tags">'+c.sp.slice(0,3).map(function(s){return '<span class="tag">'+D.d(s).n+'</span>'}).join('')+'</div><p class="muted small" style="margin:0"><svg class="ico s" aria-hidden="true"><use href="#i-pin"/></svg> '+D.loc(c.loc).s+' · '+c.yrs+' năm kinh nghiệm</p><div class="act"><button class="btn btn-s btn-ghost" type="button" data-open="'+c.id+'">Xem hồ sơ</button></div></div></article>'}).join(''):'<div class="empty" style="grid-column:1/-1">Chưa có huấn luyện viên khớp bộ lọc'+(st.fav&&!favs.length?'. Bạn chưa lưu ai: bấm ngôi sao trên ảnh để lưu.':'.')+'</div>';
+ $('#grid').innerHTML=r.length?r.map(function(c){var f=favs.indexOf(c.id)>-1;return '<article class="cc hov" id="'+c.id+'"><button class="fav" type="button" data-fav="'+c.id+'" aria-pressed="'+f+'" aria-label="'+(f?'Bỏ lưu ':'Lưu ')+V.esc(c.n)+'"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></button><div class="ph"><img src="'+V.img(c.ph,700,875)+'" alt="Chân dung huấn luyện viên '+V.esc(c.n)+'" loading="lazy" style="object-position:'+c.pos+'"></div><div class="tx"><h3>'+V.esc(c.n)+'</h3><p class="role">'+V.esc(c.role)+'</p><div class="tags">'+c.sp.slice(0,3).map(function(s){return '<span class="tag">'+D.d(s).n+'</span>'}).join('')+'</div><p class="muted small" style="margin:0"><svg class="ico s" aria-hidden="true"><use href="#i-pin"/></svg> '+D.loc(c.loc).s+' · '+c.yrs+' năm kinh nghiệm</p><div class="act"><button class="btn btn-s btn-ghost" type="button" data-open="'+c.id+'">Xem hồ&nbsp;sơ</button></div></div></article>'}).join(''):'<div class="empty" style="grid-column:1/-1">Chưa có huấn luyện viên khớp bộ lọc'+(st.fav&&!favs.length?'. Bạn chưa lưu ai: bấm ngôi sao trên ảnh để lưu.':'.')+'</div>';
  V.glue($('#grid'))}
 function chips(box,key){box.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;st[key]=b.getAttribute('data-v');$$('.chip',box).forEach(function(x){x.setAttribute('aria-pressed',x===b)});render()})}
 chips($('#fDisc'),'disc');chips($('#fLoc'),'loc');
@@ -101,7 +101,7 @@ function toggleFav(id){var i=favs.indexOf(id);if(i>-1)favs.splice(i,1);else favs
 var dlg=$('#dlg'),lastBtn;
 function openP(id){var c=D.coach(id);if(!c)return;var ss=D.sessions.filter(function(s){return s.coach===id});
  $('#dlgBody').innerHTML='<div class="prof"><div class="ph"><img src="'+V.img(c.ph,800,1000)+'" alt="Chân dung huấn luyện viên '+V.esc(c.n)+'" style="object-position:'+c.pos+'"></div><div class="tx"><span class="eyebrow" style="margin:0">'+V.esc(c.role)+'</span><h2 id="pName">'+V.esc(c.n)+'</h2><p class="lead" style="font-style:italic;margin:0">“'+V.esc(c.q)+'”</p><p style="margin:0;color:var(--ink2)">'+V.esc(c.bio)+'</p>'+
- '<dl><dt>Cơ sở</dt><dd>'+D.loc(c.loc).n+'</dd><dt>Kinh nghiệm</dt><dd>'+c.yrs+' năm (mẫu)</dd><dt>Bộ môn</dt><dd>'+c.sp.map(function(s){return D.d(s).n}).join(', ')+'</dd></dl>'+
+ '<dl><dt>Cơ sở</dt><dd>'+D.loc(c.loc).n+'</dd><dt>Kinh&nbsp;nghiệm</dt><dd>'+c.yrs+' năm (mẫu)</dd><dt>Bộ môn</dt><dd>'+c.sp.map(function(s){return D.d(s).n}).join(', ')+'</dd></dl>'+
  '<div><b class="flabel">Chứng chỉ</b><ul>'+c.cert.map(function(x){return '<li>'+V.esc(x)+'</li>'}).join('')+'</ul></div>'+
  '<div><b class="flabel">Lịch dạy trong tuần</b><ul>'+(ss.length?ss.map(function(s){return '<li>'+D.days[s.day]+' '+s.time+' · '+D.d(s.disc).n+'</li>'}).join(''):'<li>Chỉ dạy PT theo hẹn</li>')+'</ul></div>'+
  '<div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn btn-lime btn-s" href="../tap-thu/?hlv='+c.id+'">Tập thử với HLV này</a><a class="btn btn-ghost btn-s" href="../lich-lop/">Xem lịch lớp</a></div></div></div>';
