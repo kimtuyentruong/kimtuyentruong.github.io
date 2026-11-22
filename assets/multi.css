@@ -1062,3 +1062,17 @@
 .plan.sp .sp-gift svg{flex:none;color:#FFB070}
 .plan.sp .sp-gift b{color:#FFD2A8}
 .plan.sp .sp-gift small{color:var(--muted);font-size:12.5px;white-space:nowrap}
+/* combo result card: per-month framing (22/11/2026) */
+.cb-price .cb-k{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:100%}
+.cb-brk{margin:8px 0 0;font-size:14.5px;line-height:1.5;color:var(--muted)}
+.cb-brk b{color:var(--ink);white-space:nowrap}.cb-brk s{color:var(--faint);white-space:nowrap}
+.cb-next{margin:10px 0 0;padding-top:10px;border-top:1px solid rgba(255,255,255,.08);font-size:15px;color:var(--ink)}
+.cb-next b{color:#FFB070;white-space:nowrap}.cb-next span{color:var(--muted);font-size:13.5px}
+.cb-save{display:block;margin:14px 0 16px;padding:12px 14px;border-radius:14px;background:rgba(255,138,61,.14);border:1px solid rgba(255,138,61,.35);font-size:14px;color:#FFD2A8}
+.cb-save p{margin:0;line-height:1.55}.cb-save b{color:#fff;white-space:nowrap}.cb-save span{color:#FFB070}
+.cb-save .cb-allp{margin-top:6px;padding-top:6px;border-top:1px dashed rgba(255,176,112,.4);font-weight:700}
+.cb-save .cb-allp b{font-family:var(--display);font-size:17px}
+.cb-tbl .cb-c{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.cb-tbl .cb-c small{font-size:11.5px;color:var(--muted);white-space:nowrap}
+@media (max-width:600px){.cb-tbl .cb-c{align-items:flex-start}}
+.cb-next span,.cb-save span{white-space:nowrap}
