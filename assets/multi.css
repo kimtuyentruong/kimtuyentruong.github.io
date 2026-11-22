@@ -1057,3 +1057,8 @@
 @keyframes pillsh{0%{transform:translateX(-120%)}55%,100%{transform:translateX(330%)}}
 .c2-r .c2-n{background:linear-gradient(180deg,rgba(255,138,61,.1),rgba(255,138,61,.05))}
 @media (prefers-reduced-motion:reduce){.c2-pill::after{animation:none !important}}
+/* gift on every SEO & AIO card (22/11/2026) */
+.plan.sp .sp-gift{display:flex;align-items:center;gap:10px;margin:0;padding:9px 14px;border-radius:12px;border:1px dashed rgba(255,176,112,.7);background:rgba(255,176,112,.08);font-size:14px;line-height:1.35;color:var(--ink)}
+.plan.sp .sp-gift svg{flex:none;color:#FFB070}
+.plan.sp .sp-gift b{color:#FFD2A8}
+.plan.sp .sp-gift small{color:var(--muted);font-size:12.5px;white-space:nowrap}
