@@ -1040,3 +1040,11 @@
 .prom-row li{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:16px;border:1px solid rgba(255,138,61,.25);background:rgba(255,138,61,.06);font-family:var(--display);font-weight:700;font-size:15px;line-height:1.3;color:var(--ink)}
 .prom-row li i{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;color:#FFB070;background:rgba(255,138,61,.14)}
 @media (max-width:760px){.prom-row{grid-template-columns:minmax(0,1fr);gap:8px}}
+/* premium tools strip (22/11/2026) */
+.tools{margin-top:12px;padding:16px 18px;border-radius:18px;border:1px solid var(--line);background:var(--surface)}
+.tools-h{margin:0 0 12px;font-family:var(--display);font-weight:700;font-size:16px;line-height:1.4;color:var(--ink)}
+.tools-g{display:grid;grid-template-columns:210px minmax(0,1fr);gap:8px 14px;align-items:start;padding:8px 0;border-top:1px solid var(--line)}
+.tools-lab{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#FFB070;padding-top:8px}
+.tools-l{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tools-l li{padding:6px 12px;border-radius:999px;border:1px solid var(--line-2);background:rgba(255,255,255,.03);font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap}
+@media (max-width:760px){.tools{padding:14px}.tools-g{grid-template-columns:minmax(0,1fr)}.tools-lab{padding-top:2px}.tools-l li{font-size:12.5px;padding:5px 10px;white-space:normal}}
