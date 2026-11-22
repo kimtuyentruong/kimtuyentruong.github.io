@@ -13,9 +13,18 @@
     if (gia) q += '&gia=' + gia + '&loai=' + (loai || 'one') + (nd ? '&nd=' + nd : '') + (setup ? '&setup=' + setup : '');
     b.setAttribute('href', q);
     var el = b.querySelector('span') || b;
-    el.innerHTML = gia ? 'Làm web giống mẫu này: <b>' + vnd(gia) + '</b> — <b>Chọn&nbsp;mẫu&nbsp;này</b>'
-                       : 'Làm web giống mẫu này — <b>Nhận&nbsp;báo&nbsp;giá</b>';
-    b.setAttribute('title', gia ? 'Giá mẫu ' + vnd(gia) + ': nhận source code và hướng dẫn cài' : 'Nhận báo giá');
+    /* v4 (Tuyền 22/11/2026): "Mua ngay mẫu <Tên> (full source code) – <giá>"; under 600px the name is dropped
+       ("Mua mẫu này …") so long names never wrap badly on phones */
+    var esc = function (t) { var d = document.createElement('i'); d.textContent = t; return d.innerHTML.replace(/ /g, '&nbsp;'); };
+    var paint = function () {
+      var narrow = window.matchMedia && matchMedia('(max-width: 600px)').matches;
+      el.innerHTML = gia
+        ? (narrow ? 'Mua&nbsp;mẫu&nbsp;này' : 'Mua ngay mẫu <b>' + esc(name) + '</b>') + ' (full&nbsp;source&nbsp;code) –&nbsp;<b>' + vnd(gia) + '</b>'
+        : 'Mua ngay mẫu ' + (narrow ? 'này' : '<b>' + esc(name) + '</b>') + ' –&nbsp;<b>Nhận&nbsp;báo&nbsp;giá</b>';
+    };
+    paint();
+    if (window.matchMedia) { var mq = matchMedia('(max-width: 600px)'); (mq.addEventListener ? mq.addEventListener('change', paint) : mq.addListener(paint)); }
+    b.setAttribute('title', gia ? 'Mua ngay mẫu ' + name + ' (full source code) – ' + vnd(gia) : 'Nhận báo giá');
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
 })();
