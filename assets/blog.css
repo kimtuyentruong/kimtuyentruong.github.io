@@ -573,3 +573,25 @@ html[lang="vi"] .hm-hero h1{line-height:1.12}
 .tt-pay .lh-paybox{border-top:0;padding-top:0}
 /* "Nhận source code qua" was too faint (Tuyền 16/11/2026): same weight/colour as the other form labels */
 .lh-order .via>span{color:var(--ink);font-weight:600;font-size:15px}
+
+/* v31: option cards in the template order box: bright, tappable, clearly selectable (Tuyền 16/11/2026: faint text got skipped) */
+.lh-order .opt-h{margin:6px 0 10px;font-size:15px;font-weight:700;color:var(--ink)}
+.lh-order .opt-h span{font-weight:500;font-size:13.5px;color:#FFB98A}
+.lh-order .opt{position:relative;display:grid;grid-template-columns:auto auto minmax(0,1fr) auto;align-items:center;gap:12px;margin:0 0 10px;padding:14px 14px 14px 12px;border:1.5px solid rgba(255,138,61,.35);border-radius:16px;background:rgba(255,255,255,.03);cursor:pointer;transition:border-color .2s,background .2s,transform .15s}
+.lh-order .opt:hover{border-color:rgba(255,138,61,.75);background:rgba(255,138,61,.06)}
+.lh-order .opt:active{transform:scale(.99)}
+.lh-order .opt input{appearance:none;-webkit-appearance:none;margin:0;width:26px;height:26px;border-radius:8px;border:2px solid #FF8A3D;background:transparent;display:grid;place-items:center;cursor:pointer;flex:none}
+.lh-order .opt input::after{content:"";width:12px;height:7px;border:solid #fff;border-width:0 0 3px 3px;transform:rotate(-45deg) translate(1px,-1px);opacity:0}
+.lh-order .opt input:checked{background:linear-gradient(135deg,#FF8A3D,#E8441E);border-color:transparent}
+.lh-order .opt input:checked::after{opacity:1}
+.lh-order .opt input:focus-visible{outline:2px solid #FFB070;outline-offset:2px}
+.lh-order .opt .ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(255,138,61,.14);color:#FFB070}
+.lh-order .opt .tx{display:flex;flex-direction:column;gap:3px;min-width:0}
+.lh-order .opt .tx b{font-size:16px;font-weight:700;color:var(--ink);line-height:1.3}
+.lh-order .opt .tx small{font-size:13.5px;line-height:1.45;color:#D9CBC2}
+.lh-order .opt em{font-style:normal;font-weight:800;font-size:14.5px;color:#FFB070;background:rgba(255,138,61,.15);border-radius:999px;padding:6px 11px;white-space:nowrap}
+.lh-order .opt:has(input:checked){border-color:#FF8A3D;background:rgba(255,138,61,.12);box-shadow:0 8px 24px -12px rgba(255,90,36,.6)}
+.lh-order .opt:has(input:checked) em{background:linear-gradient(135deg,#FF8A3D,#E8441E);color:#fff}
+@media (max-width:600px){.lh-order .opt{grid-template-columns:auto minmax(0,1fr);gap:4px 12px;padding:12px 14px}.lh-order .opt .ic{display:none}.lh-order .opt input{grid-row:1 / span 2}.lh-order .opt em{grid-column:2;justify-self:start;font-size:13.5px;padding:4px 10px;margin-top:4px}}
+/* hidden fields in template order mode (label display:grid would override [hidden]) */
+.lh-form label[hidden]{display:none}
