@@ -1308,3 +1308,12 @@
 .svc-hd.seo .kt-hd h1 .rotw .gl{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#FF7A35;-webkit-text-fill-color:#FF7A35}
 .svc-hd h1 .ri{visibility:hidden;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.8,.2,1),visibility 0s linear .6s}
 .svc-hd h1 .ri.on,.svc-hd h1 .ri.off{visibility:visible;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.8,.2,1),visibility 0s}
+/* 23/11/2026 (Tuyền: "của bạn phải đứng yên, chỉ đổi phần trước; chuyển chậm, mượt"): "tên <chữ đổi>" một dòng, "của bạn" dòng riêng đứng yên; chữ cũ ra trước, chữ mới vào trễ một nhịp */
+.svc-hd h1 .rotw{display:block;white-space:normal}
+.svc-hd h1 .rl{display:block;white-space:nowrap}
+.svc-hd h1 .rs{display:inline-grid;vertical-align:bottom}
+.svc-hd h1 .rb{display:block}
+.svc-hd h1 .rs .ri{grid-area:1/1;justify-self:start;will-change:opacity,transform;opacity:0;transform:translateY(.32em);visibility:hidden;transition:opacity .6s ease,transform .75s cubic-bezier(.22,.61,.36,1),visibility 0s linear .8s}
+.svc-hd h1 .rs .ri.on{opacity:1;transform:none;visibility:visible;transition:opacity .7s ease .35s,transform .85s cubic-bezier(.22,.61,.36,1) .35s,visibility 0s}
+.svc-hd h1 .rs .ri.off{opacity:0;transform:translateY(-.32em);visibility:visible;transition:opacity .5s ease,transform .7s cubic-bezier(.4,0,.6,1),visibility 0s}
+@media (prefers-reduced-motion:reduce){.svc-hd h1 .rs .ri{transition:none}}
