@@ -137,5 +137,55 @@ $$('form[data-quick]').forEach(function (fm) {
   });
 });
 
+
+/* ---------- con trỏ tuỳ biến (chỉ máy có chuột), nút từ tính, chuyển trang ---------- */
+var FINE = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches;
+if (FINE && !RM && !HEADLESS) {
+  var cur = d.createElement('div'); cur.className = 'cur'; cur.setAttribute('aria-hidden', 'true'); cur.innerHTML = '<i></i><span></span>';
+  body.appendChild(cur); root.classList.add('has-cur');
+  var cx = -100, cy = -100, mxT = -100, myT = -100, cRaf = 0, lab = cur.querySelector('span'), mode = '';
+  var cLoop = function () {
+    cRaf = 0; cx += (mxT - cx) * .22; cy += (myT - cy) * .22;
+    cur.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0)';
+    if (Math.abs(mxT - cx) > .3 || Math.abs(myT - cy) > .3) cRaf = requestAnimationFrame(cLoop);
+  };
+  var setMode = function (m, t) { if (m === mode) return; mode = m; cur.className = 'cur' + (m ? ' ' + m : '') + ' vis'; lab.textContent = t || ''; };
+  d.addEventListener('pointermove', function (e) {
+    if (e.pointerType !== 'mouse') return;
+    mxT = e.clientX; myT = e.clientY; cur.classList.add('vis');
+    var el = e.target.closest ? e.target : null;
+    if (el && el.closest('.hs')) setMode('c-hs', 'Xem');
+    else if (el && el.closest('a, button, input, select, textarea, label, summary, [data-lb]')) setMode('c-link');
+    else if (el && el.closest('.fly-stage, .pano')) setMode('c-drag', 'Kéo');
+    else setMode('');
+    if (!cRaf) cRaf = requestAnimationFrame(cLoop);
+  }, { passive: true });
+  d.addEventListener('pointerleave', function () { cur.classList.remove('vis'); });
+  d.addEventListener('pointerdown', function () { cur.classList.add('down'); });
+  d.addEventListener('pointerup', function () { cur.classList.remove('down'); });
+  // nút từ tính: dịch nhẹ theo con trỏ
+  $$('.btn-gold, .arc-btn, .lb-btn, .totop').forEach(function (b) {
+    b.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      var r = b.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+      b.style.transform = 'translate3d(' + (dx * .18).toFixed(1) + 'px,' + (dy * .28).toFixed(1) + 'px,0)';
+    });
+    b.addEventListener('pointerleave', function () { b.style.transform = ''; });
+  });
+}
+/* chuyển trang: trình duyệt có view-transition giữa trang thì dùng CSS; nếu không, che màn đen ngả màu rồi mới chuyển */
+if (!RM && !('onpagereveal' in window)) {
+  var pt = d.createElement('div'); pt.className = 'pt'; pt.setAttribute('aria-hidden', 'true'); body.appendChild(pt);
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target || a.hasAttribute('download')) return;
+    var u = new URL(a.href, location.href);
+    if (u.origin !== location.origin || (u.pathname === location.pathname && u.hash) || !/\/mau\/bat-dong-san-17\//.test(u.pathname)) return;
+    e.preventDefault(); pt.classList.add('on');
+    setTimeout(function () { location.href = u.href; }, 320);
+  });
+  window.addEventListener('pageshow', function (e) { if (e.persisted) pt.classList.remove('on'); });
+}
+
 window.VH = { $: $, $$: $$, RM: RM, HEADLESS: HEADLESS, store: store, vnd: vnd, ty: ty, esc: esc, ic: ic, lock: lock, LB: LB, vPhone: vPhone, fieldErr: fieldErr, NF: NF };
 })();

@@ -231,4 +231,26 @@ body.lock .totop{opacity:0;pointer-events:none}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .rv{opacity:1;transform:none}
 }
+
+/* ---------- con trỏ tuỳ biến (máy có chuột) ---------- */
+.cur{position:fixed;left:0;top:0;z-index:300;width:0;height:0;pointer-events:none;opacity:0;transition:opacity .3s}
+.cur.vis{opacity:1}
+.cur i{position:absolute;left:-18px;top:-18px;width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(212,178,122,.85);transition:transform .35s var(--ease),background .3s,border-color .3s}
+.cur span{position:absolute;left:0;top:0;transform:translate(-50%,-50%);font:600 10px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#17120B;opacity:0;transition:opacity .25s;white-space:nowrap}
+.cur.c-link i{transform:scale(1.5);background:rgba(212,178,122,.14)}
+.cur.c-drag i{transform:scale(1.9);background:rgba(10,9,8,.55);border-color:rgba(242,236,227,.6)}
+.cur.c-drag span{opacity:1;color:var(--tx)}
+.cur.c-hs i{transform:scale(2.1);background:var(--gold);border-color:var(--gold)}
+.cur.c-hs span{opacity:1}
+.cur.down i{transform:scale(.8)}
+.has-cur .fly-stage{cursor:none}
+/* ---------- chuyển trang ---------- */
+::view-transition-old(root){animation:vtOut .38s cubic-bezier(.65,0,.35,1) both}
+::view-transition-new(root){animation:vtIn .6s cubic-bezier(.22,.8,.2,1) both}
+@keyframes vtOut{to{opacity:0;transform:scale(.985)}}
+@keyframes vtIn{from{opacity:0;transform:scale(1.015)}}
+.pt{position:fixed;inset:0;z-index:250;background:#0D0B0A;opacity:0;pointer-events:none;transition:opacity .3s}
+.pt.on{opacity:1;pointer-events:auto}
+@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
+
 @media print{.hdr,.ftr,.kt-badge,.totop,.mnav,.lb{display:none!important}}

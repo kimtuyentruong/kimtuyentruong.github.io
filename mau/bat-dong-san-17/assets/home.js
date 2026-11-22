@@ -89,6 +89,47 @@ if (hdr && pinEl) {
   window.addEventListener('scroll', function () { if (!hq) hq = requestAnimationFrame(hs); }, { passive: true }); hs();
 }
 
+
+/* ---------- chọn tầng + view từ tầng X (dữ liệu mẫu) ---------- */
+var fpR = $('#fpR'), fpSvg = $('#fpSvg');
+if (fpR && fpSvg) {
+  var rects = $$('rect', fpSvg), fImg = $('#fpImg'), fBlock = $('.fp-block'), fHaze = $('.fp-haze');
+  var hashF = function (f) { var x = Math.sin(f * 127.1) * 43758.5; return x - Math.floor(x); };
+  var finfo = function (f) {
+    var k = 1 + (f - 8) * 0.006, o = {};
+    if (f <= 40) { o.type = '1PN+, 2PN'; o.free = (1 + Math.floor(hashF(f) * 5)) + '/6 căn'; o.price = VH.ty(Math.round(56 * 128e6 * k / 1e8) * 1e8); }
+    else if (f <= 44) { o.type = 'Duplex'; o.free = (hashF(f) > .5 ? 1 : 2) + '/2 căn'; o.price = VH.ty(Math.round(168 * 142e6 * k / 1e8) * 1e8); }
+    else { o.type = 'Penthouse'; o.free = '1/2 căn'; o.price = 'Liên hệ'; }
+    o.alt = '~' + Math.round(6 + f * 3.6) + ' m'; o.loai = f <= 40 ? '' : f <= 44 ? 'duplex' : 'ph';
+    return o;
+  };
+  var setF = function (f, fromRange) {
+    f = Math.max(8, Math.min(45, f));
+    if (!fromRange) fpR.value = f;
+    var o = finfo(f), p = (f - 8) / 37;
+    $('#fpN').textContent = f; $('#fpN2').textContent = f;
+    $('#fpType').textContent = o.type; $('#fpFree').textContent = o.free; $('#fpPrice').textContent = o.price; $('#fpAlt').textContent = o.alt;
+    $('#fpLink').setAttribute('href', 'can-ho/' + (o.loai ? '?loai=' + o.loai : ''));
+    rects.forEach(function (r) { var rf = +r.getAttribute('data-f'); r.classList.toggle('on', rf === f); r.classList.toggle('below', rf < f && rf >= 8); });
+    fpR.setAttribute('aria-valuetext', 'Tầng ' + f + ', ' + o.type + ', còn ' + o.free + ', giá từ ' + o.price);
+    // view: tầng thấp bị toà bên cạnh che và mờ hơn; tầng cao thấy xa, sáng hơn
+    if (fImg) fImg.style.transform = 'scale(' + (1.42 - p * 0.36).toFixed(3) + ') translate3d(0,' + (6 - p * 10).toFixed(2) + '%,0)';
+    if (fBlock) fBlock.style.transform = 'translate3d(0,' + (p * 100).toFixed(1) + '%,0)';
+    if (fHaze) fHaze.style.opacity = (0.55 - p * 0.55).toFixed(3);
+  };
+  fpR.addEventListener('input', function () { setF(+fpR.value, true); });
+  var fromY = function (e) {
+    var r = fpSvg.getBoundingClientRect(), y = (e.clientY - r.top) / r.height * 580;
+    return Math.round((566 - y) / 12 + 0.4);
+  };
+  var down = false;
+  fpSvg.addEventListener('pointerdown', function (e) { down = true; try { fpSvg.setPointerCapture(e.pointerId); } catch (x) {} setF(fromY(e)); });
+  fpSvg.addEventListener('pointermove', function (e) { if (down || e.pointerType === 'mouse') setF(fromY(e)); });
+  fpSvg.addEventListener('pointerup', function () { down = false; });
+  fpSvg.addEventListener('pointercancel', function () { down = false; });
+  setF(27);
+}
+
 /* ---------- vòng tiến độ: chạy số khi thấy ---------- */
 var ringV = $('.ring-v');
 if (ringV && 'IntersectionObserver' in window && !VH.RM && !VH.HEADLESS) {

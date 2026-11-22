@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap&amp;subset=vietnamese">
-<link rel="stylesheet" href="../assets/site.css?v=2">
-<link rel="stylesheet" href="../assets/sub.css?v=2">
+<link rel="stylesheet" href="../assets/site.css?v=3">
+<link rel="stylesheet" href="../assets/sub.css?v=3">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -157,7 +157,11 @@
 <div class="dlg" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t" aria-hidden="true">
   <div class="dlg-box">
     <button class="dlg-x" type="button" aria-label="Đóng"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
-    <div class="dlg-plan" id="dlg-plan"></div>
+    <div class="dlg-left">
+      <div class="dlg-tabs" role="tablist" aria-label="Cách xem căn"><button type="button" role="tab" data-t="plan" aria-selected="true">Mặt bằng</button><button type="button" role="tab" data-t="pano" aria-selected="false" tabindex="-1">Xem 360°</button></div>
+      <div class="dlg-plan" id="dlg-plan" role="tabpanel" aria-label="Mặt bằng"></div>
+      <div class="pano" role="tabpanel" aria-label="Xem 360° giả lập, kéo ngang hoặc dùng phím mũi tên" tabindex="0" hidden><div class="pano-track"></div><span class="pano-tag">Giả lập 360° từ ảnh minh hoạ · kéo ngang</span></div>
+    </div>
     <div class="dlg-info">
       <span class="tag tag-mau">Giá mẫu · tham khảo</span>
       <h2 id="dlg-t">VH-12.01</h2>
@@ -212,7 +216,7 @@
   </div>
 </footer>
 <a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
-<script src="../assets/site.js?v=2"></script>
-<script src="../assets/units.js?v=1"></script>
+<script src="../assets/site.js?v=3"></script>
+<script src="../assets/units.js?v=3"></script>
 </body>
 </html>

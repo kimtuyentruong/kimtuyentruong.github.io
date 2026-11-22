@@ -13,14 +13,27 @@ var qs = new URLSearchParams(location.search);
 if (qs.get('loai') && LOAI[qs.get('loai')]) { var r = F.querySelector('input[name=loai][value="' + qs.get('loai') + '"]'); if (r) r.checked = true; }
 if (qs.get('can')) $('#b-can').value = qs.get('can').slice(0, 12);
 
-/* ngày: 14 ngày tới */
+/* ngày: lịch tháng, chọn trong 45 ngày tới */
 var days = $('#days'), today = new Date(); today.setHours(0, 0, 0, 0);
 var DL = [];
-for (var i = 1; i <= 14; i++) { var x = new Date(today); x.setDate(x.getDate() + i); DL.push(x); }
+for (var i = 1; i <= 45; i++) { var x = new Date(today); x.setDate(x.getDate() + i); DL.push(x); }
 function dd(x) { return ('0' + x.getDate()).slice(-2) + '/' + ('0' + (x.getMonth() + 1)).slice(-2) + '/' + x.getFullYear(); }
-days.innerHTML = DL.map(function (x, i) {
-  return '<button type="button" data-i="' + i + '" aria-pressed="false" aria-label="' + DOW[x.getDay()] + ' ' + dd(x) + '"><small>' + DOW[x.getDay()] + '</small><b class="num">' + x.getDate() + '</b>' + ('0' + (x.getMonth() + 1)).slice(-2) + '</button>';
-}).join('');
+var calY = DL[0].getFullYear(), calMo = DL[0].getMonth(), lastD = DL[DL.length - 1];
+function idxOf(dt) { var n = Math.round((dt - today) / 864e5) - 1; return n >= 0 && n < DL.length ? n : -1; }
+function renderCal() {
+  $('#calM').textContent = 'Tháng ' + (calMo + 1) + '/' + calY;
+  var first = new Date(calY, calMo, 1), lead = (first.getDay() + 6) % 7, nd = new Date(calY, calMo + 1, 0).getDate(), h = '';
+  for (var k = 0; k < lead; k++) h += '<span></span>';
+  for (var dn = 1; dn <= nd; dn++) {
+    var dt = new Date(calY, calMo, dn), ix = idxOf(dt), cls = (dt.getDay() === 0 ? 'sun' : '') + (+dt === +today ? ' today' : '');
+    h += '<button type="button" class="' + cls + '"' + (ix < 0 ? ' disabled' : ' data-i="' + ix + '"') + ' aria-pressed="' + (ix >= 0 && ix === S.day ? 'true' : 'false') + '" aria-label="' + DOW[dt.getDay()] + ' ' + dd(dt) + (ix < 0 ? ', không nhận lịch' : '') + '">' + dn + '</button>';
+  }
+  days.innerHTML = h;
+  $('#calPrev').disabled = calY === DL[0].getFullYear() && calMo === DL[0].getMonth();
+  $('#calNext').disabled = calY === lastD.getFullYear() && calMo === lastD.getMonth();
+}
+$('#calPrev').addEventListener('click', function () { calMo--; if (calMo < 0) { calMo = 11; calY--; } renderCal(); });
+$('#calNext').addEventListener('click', function () { calMo++; if (calMo > 11) { calMo = 0; calY++; } renderCal(); });
 function full(di, si) { var v = (di * 7 + si * 13) % 11; return v === 3 || v === 7; }
 function slots() {
   $('#slots').innerHTML = SLOTS.map(function (s, si) {
@@ -29,11 +42,13 @@ function slots() {
   }).join('');
 }
 days.addEventListener('click', function (e) {
-  var b = e.target.closest('button'); if (!b) return;
+  var b = e.target.closest('button'); if (!b || b.disabled) return;
   S.day = +b.getAttribute('data-i'); S.slot = null;
   $$('button', days).forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+  $('#calSel').innerHTML = 'Đã chọn <b>' + DOW[DL[S.day].getDay()] + ', ' + dd(DL[S.day]) + '</b>. Chọn giờ bên dưới.';
   slots(); serr.textContent = '';
 });
+renderCal();
 $('#slots').addEventListener('click', function (e) {
   var b = e.target.closest('button'); if (!b || b.disabled) return;
   S.slot = b.getAttribute('data-s');
@@ -92,7 +107,7 @@ $('#copy').addEventListener('click', function () {
   if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, ok); else ok();
 });
 $('#again').addEventListener('click', function () {
-  F.reset(); S = { day: null, slot: null }; $$('button', days).forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); slots();
+  F.reset(); S = { day: null, slot: null }; renderCal(); $('#calSel').textContent = 'Chọn một ngày trong 45 ngày tới.'; slots();
   $('#conf').hidden = true; F.hidden = false; $('.steps').hidden = false; go(0);
 });
 })();

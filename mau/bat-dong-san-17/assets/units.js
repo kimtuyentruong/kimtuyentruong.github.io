@@ -81,11 +81,49 @@ syncChips(); rngTxt(); render();
 
 /* ---------- hộp chi tiết ---------- */
 var dlg = $('#dlg'), last = null;
+
+/* ---------- xem 360° giả lập: kéo ngang ảnh toàn cảnh (ảnh + ảnh lật gương nối vòng, không lộ mối nối) ---------- */
+var PANO = { '1pn': '1618221195710-dd6b41faaea6', '2pn': '1757924461488-ef9ad0670978', 'duplex': '1643376452350-97eadd2c417f', 'ph': '1776363497229-616cc7a541fe' };
+var pano = $('.pano', dlg), track = $('.pano-track', pano), tabs = $$('.dlg-tabs [role=tab]', dlg), pv = { x: 0, w: 0, raf: 0, drag: null, idle: 0, on: false };
+function panoSet(type) {
+  var src = 'https://images.unsplash.com/photo-' + PANO[type] + '?auto=format&fit=crop&q=72&w=' + (window.innerWidth < 768 ? 1200 : 2000);
+  track.innerHTML = '';
+  for (var k = 0; k < 4; k++) { var im = d.createElement('img'); im.src = src; im.alt = k ? '' : 'Ảnh minh hoạ nội thất căn ' + TYPES[type].lab + ' (giả lập 360°)'; im.draggable = false; if (k % 2) im.className = 'flip'; track.appendChild(im); }
+  var first = track.firstChild;
+  first.onload = function () { pv.w = first.getBoundingClientRect().width; pv.x = -pv.w * .5; panoDraw(); };
+}
+function panoDraw() {
+  if (!pv.w) return;
+  var L = pv.w * 2; pv.x = ((pv.x % L) - L) % L;
+  track.style.transform = 'translate3d(' + pv.x.toFixed(1) + 'px,0,0)';
+}
+function panoLoop(now) {
+  pv.raf = 0; if (!pv.on) return;
+  if (!pv.drag && now - pv.idle > 1500 && !VH.RM) { pv.x -= 0.35; panoDraw(); }
+  pv.raf = requestAnimationFrame(panoLoop);
+}
+pano.addEventListener('pointerdown', function (e) { pv.drag = { x: e.clientX, ox: pv.x }; try { pano.setPointerCapture(e.pointerId); } catch (x) {} });
+pano.addEventListener('pointermove', function (e) { if (!pv.drag) return; pv.x = pv.drag.ox + (e.clientX - pv.drag.x); pv.idle = performance.now(); panoDraw(); });
+function panoUp() { pv.drag = null; pv.idle = performance.now(); }
+pano.addEventListener('pointerup', panoUp); pano.addEventListener('pointercancel', panoUp);
+pano.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); pv.x += e.key === 'ArrowLeft' ? 80 : -80; pv.idle = performance.now(); panoDraw(); } });
+function showTab(t) {
+  tabs.forEach(function (b) { var on = b.getAttribute('data-t') === t; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
+  $('#dlg-plan').hidden = t !== 'plan'; pano.hidden = t !== 'pano';
+  pv.on = t === 'pano' && dlg.classList.contains('open');
+  if (pv.on) { if (!pv.w) { var f = track.firstChild; if (f && f.complete) { pv.w = f.getBoundingClientRect().width; pv.x = -pv.w * .5; panoDraw(); } } pv.idle = performance.now(); if (!pv.raf) pv.raf = requestAnimationFrame(panoLoop); }
+}
+tabs.forEach(function (b) {
+  b.addEventListener('click', function () { showTab(b.getAttribute('data-t')); });
+  b.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { var o = tabs[(tabs.indexOf(b) + 1) % tabs.length]; o.focus(); showTab(o.getAttribute('data-t')); } });
+});
+
 function openU(code) {
   var u = UNITS.filter(function (x) { return x.code === code; })[0]; if (!u) return;
   var T = TYPES[u.type];
   $('#dlg-t').textContent = u.code + ' · ' + T.lab;
   $('#dlg-plan').innerHTML = plan(u.type, true);
+  pv.w = 0; panoSet(u.type);
   $('#dlg-d').textContent = T.name + ', tầng ' + u.fl + ', hướng ban công ' + u.dir + '. Mặt bằng minh hoạ, không theo tỉ lệ.';
   var rows = [['Thông thuỷ', u.area + ' m²'], ['Phòng ngủ / WC', T.bed + ' / ' + T.wc], ['Tầm nhìn', u.view], ['Hướng ban công', u.dir],
               ['Tình trạng', u.hold ? 'Đang giữ chỗ' : 'Còn trống'], ['Giá mẫu', priceTxt(u)]];
@@ -93,8 +131,9 @@ function openU(code) {
   $('#dlg-book').setAttribute('href', '../dat-lich/?can=' + encodeURIComponent(u.code) + '&loai=' + u.type);
   last = d.activeElement; dlg.classList.add('open'); dlg.setAttribute('aria-hidden', 'false'); VH.lock(true);
   $('.dlg-x', dlg).focus();
+  showTab('plan');
 }
-function closeU() { dlg.classList.remove('open'); dlg.setAttribute('aria-hidden', 'true'); VH.lock(false); last && last.focus({ preventScroll: true }); }
+function closeU() { pv.on = false; dlg.classList.remove('open'); dlg.setAttribute('aria-hidden', 'true'); VH.lock(false); last && last.focus({ preventScroll: true }); }
 grid.addEventListener('click', function (e) { var b = e.target.closest('[data-code]'); if (b) openU(b.getAttribute('data-code')); });
 $('.dlg-x', dlg).addEventListener('click', closeU);
 dlg.addEventListener('click', function (e) { if (e.target === dlg) closeU(); });
