@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap&subset=vietnamese">
-<link rel="stylesheet" href="../assets/site.css?v=1">
+<link rel="stylesheet" href="../assets/site.css?v=2">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body data-root="../" data-page="cong-cu">
@@ -27,7 +27,7 @@
   <div class="phero-row">
    <div class="intro">
     <span class="eyebrow">Công cụ tham khảo</span>
-    <h1>Biết mình đang ở đâu, rồi hãy chọn&nbsp;bài</h1>
+    <h1>Biết mình&nbsp;đang ở&nbsp;đâu, rồi hãy chọn&nbsp;bài</h1>
     <p class="lead">Hai công cụ nhỏ: tính chỉ số BMI kèm năng lượng cần mỗi ngày, và quiz 5 câu gợi ý bộ môn. Kết quả để tham khảo, không thay cho tư vấn của bác sĩ hay chuyên gia dinh&nbsp;dưỡng.</p>
    </div>
    <div class="tool-tabs intro"><a class="btn btn-lime" href="#bmi"><svg class="ico" aria-hidden="true"><use href="#i-calc"/></svg>BMI &amp; năng lượng</a><a class="btn btn-ghost" href="#quiz"><svg class="ico" aria-hidden="true"><use href="#i-help"/></svg>Quiz chọn môn</a></div>
@@ -37,7 +37,7 @@
 
 <section class="sec" id="bmi" aria-labelledby="h-bmi">
  <div class="wrap">
-  <div class="sh"><div><span class="eyebrow">Công cụ 1</span><h2 class="h-l" id="h-bmi">BMI và năng lượng mỗi&nbsp;ngày</h2></div><p>Ngưỡng BMI theo khuyến nghị cho người châu Á – Thái Bình Dương. Năng lượng tính theo công thức Mifflin–St Jeor.</p></div>
+  <div class="sh"><div><span class="eyebrow">Công cụ 1</span><h2 class="h-l" id="h-bmi">BMI và&nbsp;năng lượng mỗi&nbsp;ngày</h2></div><p>Ngưỡng BMI theo khuyến nghị cho người châu Á – Thái Bình Dương. Năng lượng tính theo công thức Mifflin–St Jeor.</p></div>
   <div class="tool rv">
    <form class="tool-in" id="fBmi" onsubmit="return false">
     <div class="field"><span class="flabel" id="lsex">Giới tính sinh học</span><div class="seg" role="group" aria-labelledby="lsex"><button type="button" data-sex="m" aria-pressed="true">Nam</button><button type="button" data-sex="f" aria-pressed="false">Nữ</button></div></div>
@@ -45,7 +45,7 @@
     <div class="field"><label for="h">Chiều cao (cm)</label><div class="rg-row"><input class="range" type="range" id="hR" min="140" max="200" value="165" aria-label="Chiều cao, thanh kéo"><input class="inp" id="h" type="number" inputmode="numeric" min="140" max="200" value="165"></div></div>
     <div class="field"><label for="w">Cân nặng (kg)</label><div class="rg-row"><input class="range" type="range" id="wR" min="35" max="140" value="62" aria-label="Cân nặng, thanh kéo"><input class="inp" id="w" type="number" inputmode="decimal" min="35" max="140" value="62"></div></div>
     <div class="field"><label for="act">Mức vận động hiện tại</label><select class="inp" id="act"><option value="1.2">Ít vận động, ngồi văn phòng</option><option value="1.375" selected>Tập nhẹ 1–3 buổi mỗi tuần</option><option value="1.55">Tập vừa 3–5 buổi mỗi tuần</option><option value="1.725">Tập nhiều 6–7 buổi mỗi tuần</option></select></div>
-    <div class="field" style="margin:0"><label for="goal">Mục tiêu</label><select class="inp" id="goal"><option value="-400">Giảm mỡ từ từ</option><option value="0" selected>Giữ cân, khoẻ hơn</option><option value="300">Tăng cơ</option></select></div>
+    <div class="field" style="margin:0"><label for="goal">Mục&nbsp;tiêu</label><select class="inp" id="goal"><option value="-400">Giảm mỡ từ từ</option><option value="0" selected>Giữ cân, khoẻ hơn</option><option value="300">Tăng cơ</option></select></div>
    </form>
    <div class="tool-out" aria-live="polite">
     <span class="eyebrow" style="margin-bottom:8px">Chỉ số BMI</span>
@@ -63,15 +63,15 @@
 
 <section class="sec alt line" id="quiz" aria-labelledby="h-quiz">
  <div class="wrap">
-  <div class="sh"><div><span class="eyebrow">Công cụ 2</span><h2 class="h-l" id="h-quiz">Năm câu hỏi, ba bộ môn hợp với&nbsp;bạn</h2></div><p>Kết quả được lưu để điền sẵn vào phiếu đăng ký tập thử. Làm lại bao nhiêu lần cũng được.</p></div>
+  <div class="sh"><div><span class="eyebrow">Công cụ 2</span><h2 class="h-l" id="h-quiz">Năm câu&nbsp;hỏi, ba bộ môn hợp với&nbsp;bạn</h2></div><p>Kết quả được lưu để điền sẵn vào phiếu đăng ký tập thử. Làm lại bao nhiêu lần cũng được.</p></div>
   <div class="quiz rv" id="qz"></div>
  </div>
 </section>
 
 <section class="sec" aria-labelledby="h-ref">
  <div class="wrap">
-  <div class="sh"><div><span class="eyebrow">Bảng tham khảo</span><h2 class="h-l" id="h-ref">Bao nhiêu buổi mỗi tuần là&nbsp;vừa</h2></div><p>Gợi ý chung cho người trưởng thành khoẻ mạnh. Huấn luyện viên sẽ chỉnh theo thể trạng của bạn.</p></div>
-  <div class="tbl-wrap rv"><table class="tbl"><thead><tr><th scope="col">Mục tiêu</th><th scope="col">Buổi/tuần</th><th scope="col">Gợi ý kết hợp</th><th scope="col">Lưu ý</th></tr></thead><tbody>
+  <div class="sh"><div><span class="eyebrow">Bảng tham khảo</span><h2 class="h-l" id="h-ref">Bao&nbsp;nhiêu buổi mỗi tuần là&nbsp;vừa</h2></div><p>Gợi ý chung cho người trưởng thành khoẻ mạnh. Huấn luyện viên sẽ chỉnh theo thể trạng của bạn.</p></div>
+  <div class="tbl-wrap rv"><table class="tbl"><thead><tr><th scope="col">Mục&nbsp;tiêu</th><th scope="col">Buổi/tuần</th><th scope="col">Gợi ý kết hợp</th><th scope="col">Lưu ý</th></tr></thead><tbody>
    <tr><th scope="row">Khoẻ hơn, bớt mệt</th><td>2–3</td><td>Functional + Yoga</td><td>Ưu tiên đều đặn hơn cường độ</td></tr>
    <tr><th scope="row">Giảm mỡ</th><td>3–4</td><td>Gym + Cycling hoặc HIIT</td><td>Kết hợp chế độ ăn, ngủ đủ</td></tr>
    <tr><th scope="row">Tăng cơ</th><td>3–5</td><td>Gym theo giáo án + Pilates</td><td>Tăng tạ từ từ, có ngày nghỉ</td></tr>
@@ -81,7 +81,7 @@
  </div>
 </section>
 
-<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Muốn số liệu sát&nbsp;hơn?</h2><p>Buổi tập thử có 20 phút đo InBody và kiểm tra tầm vận động cùng huấn luyện viên.</p></div><div class="btns"><a class="btn" href="../tap-thu/">Đăng ký tập thử <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a></div></div></section>
+<section class="cta-band" aria-labelledby="h-cta"><div class="stripes" aria-hidden="true"></div><div class="wrap"><div><h2 id="h-cta">Muốn số&nbsp;liệu sát&nbsp;hơn?</h2><p>Buổi tập thử có 20 phút đo InBody và kiểm tra tầm vận động cùng huấn luyện viên.</p></div><div class="btns"><a class="btn" href="../tap-thu/">Đăng ký tập thử <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a></div></div></section>
 </main>
 <div id="site-footer"><noscript><p style="padding:16px">Nội dung mẫu: tên thương hiệu, giá, nhân sự, chứng chỉ, lịch lớp, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p></noscript></div>
 <a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
@@ -119,7 +119,7 @@ function show(){var qz=$('#qz');
  if(step<Q.length){var q=Q[step];qz.innerHTML='<div class="qprog" aria-hidden="true"><i style="width:'+(step/Q.length*100)+'%"></i></div><span class="eyebrow">Câu '+(step+1)+'/'+Q.length+'</span><h3 class="h-m" tabindex="-1" id="qH">'+q.q+'</h3><div class="qopts">'+q.o.map(function(o,i){return '<button type="button" data-i="'+i+'"><span class="k">'+'ABCD'[i]+'</span>'+o[0]+'</button>'}).join('')+'</div>'+(step?'<button type="button" class="lnk" id="qBack" style="background:none;border:0;cursor:pointer;margin-top:16px">Quay lại câu trước</button>':'');V.glue(qz);return}
  var arr=Object.keys(score).map(function(k){return [k,score[k]]}).sort(function(a,b){return b[1]-a[1]}).slice(0,3),max=arr[0][1];
  V.store.set('quiz',arr.map(function(a){return a[0]}));
- qz.innerHTML='<div class="qprog" aria-hidden="true"><i style="width:100%"></i></div><span class="eyebrow">Kết quả</span><h3 class="h-m" tabindex="-1" id="qH">Ba bộ môn gợi ý cho bạn</h3><p class="muted" style="margin:10px 0 0">Đã lưu vào phiếu đăng ký tập thử. Gợi ý dựa trên câu trả lời, mang tính tham khảo.</p><div class="qres">'+arr.map(function(a,i){var d=D.d(a[0]);return '<'+'a href="'+(d.id==='kickboxing'?'../kickboxing/':'../bo-mon/#'+d.id)+'"><div class="ph"><img src="'+V.img(d.ph,700,440)+'" alt="'+V.esc(d.n)+'" loading="lazy" style="object-position:'+d.pos+'"></div><div class="tx"><span class="m">'+(i===0?'Gợi ý đầu tiên · ':'')+Math.round(a[1]/max*100)+'% phù hợp</span><b>'+V.esc(d.n)+'</b><span class="muted small">'+V.esc(d.d)+'</span></div></a>'}).join('')+'</div><div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px"><a class="btn btn-lime" href="../tap-thu/?mon='+arr[0][0]+'">Tập thử '+V.esc(D.d(arr[0][0]).n)+' <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a><button class="btn btn-ghost" type="button" id="qAgain">Làm lại quiz</button></div>';
+ qz.innerHTML='<div class="qprog" aria-hidden="true"><i style="width:100%"></i></div><span class="eyebrow">Kết quả</span><h3 class="h-m" tabindex="-1" id="qH">Ba bộ môn gợi ý cho&nbsp;bạn</h3><p class="muted" style="margin:10px 0 0">Đã lưu vào phiếu đăng ký tập thử. Gợi ý dựa trên câu trả lời, mang tính tham khảo.</p><div class="qres">'+arr.map(function(a,i){var d=D.d(a[0]);return '<'+'a href="'+(d.id==='kickboxing'?'../kickboxing/':'../bo-mon/#'+d.id)+'"><div class="ph"><img src="'+V.img(d.ph,700,440)+'" alt="'+V.esc(d.n)+'" loading="lazy" style="object-position:'+d.pos+'"></div><div class="tx"><span class="m">'+(i===0?'Gợi ý đầu tiên · ':'')+Math.round(a[1]/max*100)+'% phù hợp</span><b>'+V.esc(d.n)+'</b><span class="muted small">'+V.esc(d.d)+'</span></div></a>'}).join('')+'</div><div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px"><a class="btn btn-lime" href="../tap-thu/?mon='+arr[0][0]+'">Tập thử '+V.esc(D.d(arr[0][0]).n)+' <svg class="ico go" aria-hidden="true"><use href="#i-go"/></svg></a><button class="btn btn-ghost" type="button" id="qAgain">Làm lại quiz</button></div>';
  V.glue(qz);V.toast('Đã lưu kết quả quiz.')}
 var hist=[];
 $('#qz').addEventListener('click',function(e){var b=e.target.closest('.qopts button');

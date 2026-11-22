@@ -81,48 +81,48 @@
 <section class="sec" aria-labelledby="h-form">
  <div class="wrap book">
   <form class="form rv" id="bookForm" novalidate>
-   <h2 class="vh" id="h-form">Form đặt buổi thử</h2>
+   <h2 class="vh" id="h-form" style="line-height:1.2">Form đặt buổi thử</h2>
    <ol class="prog" id="prog"><li>Bạn muốn thử</li><li>Thời gian</li><li>Thông tin</li><li>Xem lại</li></ol>
 
    <div class="step">
     <h2>Bạn muốn thử gì?</h2><p>Chưa chắc thì chọn PT 1 kèm 1, HLV sẽ cho thử cả đấm lẫn tạ.</p>
     <div class="med" id="fromPick" hidden style="margin-top:18px"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Đã nhận lựa chọn từ công cụ chọn gói: <b id="fromPickTxt"></b></span></div>
     <div class="opts" role="radiogroup" aria-label="Hình thức muốn thử">
-     <label class="opt"><input type="radio" name="type" value="pt"><b>PT 1 kèm 1</b><span>Tập riêng với HLV, thử cả sức mạnh và boxing.</span></label>
-     <label class="opt"><input type="radio" name="type" value="boxing"><b>Boxing 1 kèm 1</b><span>Học thế đứng, jab, cross với đích HLV cầm.</span></label>
-     <label class="opt"><input type="radio" name="type" value="nhom"><b>Nhóm nhỏ</b><span>Vào một lớp 3–6 người theo lịch cố định.</span></label>
+     <label class="opt"><input type="radio" name="type" value="pt"><b>PT 1 kèm 1</b><span>Tập riêng với&nbsp;HLV, thử cả sức mạnh và&nbsp;boxing.</span></label>
+     <label class="opt"><input type="radio" name="type" value="boxing"><b>Boxing 1 kèm 1</b><span>Học thế đứng, jab, cross với&nbsp;đích HLV cầm.</span></label>
+     <label class="opt"><input type="radio" name="type" value="nhom"><b>Nhóm nhỏ</b><span>Vào một&nbsp;lớp 3–6 người theo lịch cố định.</span></label>
     </div>
     <p class="note" id="typeErr" style="color:#FF9C7E;margin-top:10px" aria-live="polite"></p>
-    <div class="fgrid"><div class="fld full"><label for="fGoal">Mục tiêu chính</label><select id="fGoal" name="goal"><option value="">Chọn mục tiêu</option><option value="suc-khoe">Khoẻ lại, bớt mỏi lưng, vai</option><option value="suc-manh">Tăng sức mạnh</option><option value="san-chac">Săn chắc hơn</option><option value="boxing">Học boxing nền tảng</option><option value="thi-dau">Chuẩn bị đấu giao hữu</option></select><span class="err" aria-live="polite"></span></div></div>
+    <div class="fgrid"><div class="fld full"><label for="fGoal">Mục&nbsp;tiêu chính</label><select id="fGoal" name="goal"><option value="">Chọn mục tiêu</option><option value="suc-khoe">Khoẻ lại, bớt mỏi lưng, vai</option><option value="suc-manh">Tăng sức mạnh</option><option value="san-chac">Săn chắc hơn</option><option value="boxing">Học boxing nền tảng</option><option value="thi-dau">Chuẩn bị đấu giao hữu</option></select><span class="err" aria-live="polite"></span></div></div>
     <div class="nav-btns"><span></span><button type="button" class="btn" data-next>Tiếp&nbsp;theo<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
    </div>
 
    <div class="step" hidden>
-    <h2>Khi nào bạn đến được?</h2><p>Chọn ngày và giờ gần đúng, studio sẽ gọi xác nhận lại.</p>
+    <h2>Khi nào bạn&nbsp;đến được?</h2><p>Chọn ngày và giờ gần đúng, studio sẽ gọi xác nhận lại.</p>
     <div class="med" id="fromLich" hidden style="margin-top:18px"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Đã điền sẵn giờ bạn chọn ở trang lịch: <b id="fromLichTxt"></b></span></div>
     <div class="fgrid">
      <div class="fld"><label for="fDate">Ngày</label><select id="fDate" name="date"><option value="">Chọn ngày</option></select><span class="err" aria-live="polite"></span></div>
      <div class="fld"><label for="fTime">Giờ</label><select id="fTime" name="time"><option value="">Chọn giờ</option></select><span class="err" aria-live="polite"></span></div>
-     <div class="fld full"><label for="fCoach">Huấn luyện viên (không bắt buộc)</label><select id="fCoach" name="coach"><option value="">Để studio xếp HLV phù hợp</option></select></div>
+     <div class="fld full"><label for="fCoach">Huấn&nbsp;luyện viên (không bắt buộc)</label><select id="fCoach" name="coach"><option value="">Để studio xếp HLV phù hợp</option></select></div>
     </div>
     <p class="note" style="margin-top:14px">Muốn xem giờ trống thật của từng HLV? <a href="../lich/">Mở lịch tuần</a>.</p>
     <div class="nav-btns"><button type="button" class="btn btn-g" data-prev><svg class="ico" aria-hidden="true"><use href="#i-back"/></svg>Quay&nbsp;lại</button><button type="button" class="btn" data-next>Tiếp&nbsp;theo<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
    </div>
 
    <div class="step" hidden>
-    <h2>Studio gọi bạn bằng tên gì?</h2><p>Chỉ dùng để xác nhận buổi thử. Không gửi quảng cáo.</p>
+    <h2>Studio gọi bạn&nbsp;bằng tên gì?</h2><p>Chỉ dùng để xác nhận buổi thử. Không gửi quảng cáo.</p>
     <div class="fgrid">
-     <div class="fld"><label for="fName">Họ và tên</label><input id="fName" name="fullname" autocomplete="name" placeholder="Nguyễn Văn A"><span class="err" aria-live="polite"></span></div>
-     <div class="fld"><label for="fPhone">Số điện thoại (Zalo)</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"><span class="err" aria-live="polite"></span></div>
-     <div class="fld full"><label for="fNote">Sức khoẻ cần HLV biết (không bắt buộc)</label><textarea id="fNote" name="note" placeholder="Ví dụ: từng đau gối trái, huyết áp hơi cao, mới quay lại tập sau 2 năm"></textarea></div>
+     <div class="fld"><label for="fName">Họ và&nbsp;tên</label><input id="fName" name="fullname" autocomplete="name" placeholder="Nguyễn Văn A"><span class="err" aria-live="polite"></span></div>
+     <div class="fld"><label for="fPhone">Số điện&nbsp;thoại (Zalo)</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"><span class="err" aria-live="polite"></span></div>
+     <div class="fld full"><label for="fNote">Sức&nbsp;khoẻ cần HLV biết (không bắt buộc)</label><textarea id="fNote" name="note" placeholder="Ví dụ: từng đau gối trái, huyết áp hơi cao, mới quay lại tập sau 2 năm"></textarea></div>
     </div>
-    <label class="consent"><input type="checkbox" name="consent"><span>Đồng ý để Than Đỏ lưu và dùng họ tên, số điện thoại, thông tin sức khoẻ ở trên để liên hệ xác nhận buổi thử, theo quy định bảo vệ dữ liệu cá nhân.</span></label>
+    <label class="consent"><input type="checkbox" name="consent"><span>Đồng ý để&nbsp;Than Đỏ lưu và&nbsp;dùng họ tên, số điện&nbsp;thoại, thông&nbsp;tin sức&nbsp;khoẻ ở&nbsp;trên&nbsp;để&nbsp;liên&nbsp;hệ xác nhận buổi thử, theo quy định bảo vệ dữ liệu cá nhân.</span></label>
     <p class="note" id="consentErr" style="color:#FF9C7E;margin-top:8px" aria-live="polite"></p>
     <div class="nav-btns"><button type="button" class="btn btn-g" data-prev><svg class="ico" aria-hidden="true"><use href="#i-back"/></svg>Quay&nbsp;lại</button><button type="button" class="btn" data-next>Xem&nbsp;lại<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
    </div>
 
    <div class="step" hidden>
-    <h2>Kiểm tra lại trước khi gửi</h2><p>Bấm “Sửa” ở dòng nào cần đổi.</p>
+    <h2>Kiểm&nbsp;tra lại trước khi&nbsp;gửi</h2><p>Bấm “Sửa” ở dòng nào cần đổi.</p>
     <dl class="review" id="review"></dl>
     <div class="nav-btns"><button type="button" class="btn btn-g" data-prev><svg class="ico" aria-hidden="true"><use href="#i-back"/></svg>Quay&nbsp;lại</button><button type="submit" class="btn">Gửi&nbsp;đặt&nbsp;buổi<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
    </div>
@@ -138,7 +138,7 @@
   </form>
 
   <aside class="side-info">
-   <div class="card rv d1"><h3>Liên hệ trực tiếp</h3><ul>
+   <div class="card rv d1"><h3>Liên&nbsp;hệ trực tiếp</h3><ul>
     <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Hotline (mẫu): <a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></span></li>
     <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><span>Zalo cùng số, trả lời trong giờ mở cửa</span></li>
     <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Đường ven sông, Phường Khánh Hội, TP.HCM (minh hoạ)</span></li>
@@ -165,7 +165,7 @@
    <div class="card rv"><svg class="ico big" aria-hidden="true"><use href="#i-shoe"/></svg><h3>Giày đế bằng</h3><p>Giày chạy đế dày dễ lật cổ chân khi di chuyển. Đi chân trần cũng được.</p></div>
    <div class="card rv d1"><svg class="ico big" aria-hidden="true"><use href="#i-towel"/></svg><h3>Đồ thoải mái</h3><p>Áo thun, quần co giãn. Không cần đồ chuyên dụng.</p></div>
    <div class="card rv d2"><svg class="ico big" aria-hidden="true"><use href="#i-bottle"/></svg><h3>Bình nước</h3><p>Studio có nước lọc miễn phí, mang bình riêng cho tiện.</p></div>
-   <div class="card rv d3"><svg class="ico big" aria-hidden="true"><use href="#i-note"/></svg><h3>Thông tin sức khoẻ</h3><p>Thuốc đang dùng, chấn thương cũ. Kể với HLV ở phút đầu.</p></div>
+   <div class="card rv d3"><svg class="ico big" aria-hidden="true"><use href="#i-note"/></svg><h3>Thông&nbsp;tin sức&nbsp;khoẻ</h3><p>Thuốc đang dùng, chấn thương cũ. Kể với HLV ở phút đầu.</p></div>
   </div>
   <div class="med rv" style="margin-top:28px"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span>Nếu bạn có bệnh lý tim mạch, huyết áp, xương khớp hoặc đang mang thai, hãy hỏi ý kiến bác sĩ trước buổi thử và báo cho HLV.</span></div>
  </div>
@@ -194,7 +194,7 @@
    <div><h4>Sơ đồ trang</h4><ul><li><a href="../">Trang chủ</a></li><li><a href="../huan-luyen/">Huấn luyện</a></li><li><a href="../boxing/">Boxing</a></li><li><a href="../huan-luyen-vien/">Huấn luyện viên</a></li><li><a href="../lich/">Lịch tập</a></li><li><a href="../dat-buoi/">Đặt buổi thử</a></li></ul></div>
    <div><h4>Giờ mở cửa</h4><ul class="ft-hours"><li>Thứ hai – Thứ sáu<b>06:00–21:30</b></li><li>Thứ bảy<b>07:00–19:00</b></li><li>Chủ nhật<b>08:00–12:00</b></li></ul>
     <p style="margin-top:16px">Hotline (mẫu): <a href="tel:0900000000">0900&nbsp;000&nbsp;000</a><br>Zalo cùng số. Email: <a href="mailto:hello@example.com">hello@example.com</a></p></div>
-   <div><h4>Địa chỉ</h4><p>Đường ven sông, Phường Khánh Hội, TP.HCM (địa chỉ minh hoạ). Giữ xe máy miễn phí trong xưởng.</p><div class="ft-map"><svg viewBox="0 0 320 150" role="img" aria-label="Bản đồ minh hoạ vị trí studio gần bờ sông, Phường Khánh Hội">
+   <div><h4>Địa&nbsp;chỉ</h4><p>Đường ven sông, Phường Khánh Hội, TP.HCM (địa chỉ minh hoạ). Giữ xe máy miễn phí trong xưởng.</p><div class="ft-map"><svg viewBox="0 0 320 150" role="img" aria-label="Bản đồ minh hoạ vị trí studio gần bờ sông, Phường Khánh Hội">
 <rect width="320" height="150" fill="#17120F"/>
 <path d="M-5 30 C60 40 90 10 150 22 S250 60 330 40 L330 0 L-5 0Z" fill="#2A211D"/>
 <path d="M-5 30 C60 40 90 10 150 22 S250 60 330 40" fill="none" stroke="#4A3A30" stroke-width="2"/>

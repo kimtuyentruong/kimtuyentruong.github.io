@@ -92,7 +92,7 @@
 </div>
 <div class="srch" id="srch" role="dialog" aria-modal="true" aria-label="Tìm trong website">
  <div class="srch-box">
-  <div class="srch-in"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><label class="sr" for="srchQ">Từ khoá</label><input id="srchQ" type="search" placeholder="Tìm phòng, nhà hàng, spa, ưu đãi…" autocomplete="off"><button class="ic-btn" type="button" id="srchClose" aria-label="Đóng tìm kiếm"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+  <div class="srch-in"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><label class="sr" for="srchQ">Từ&nbsp;khoá</label><input id="srchQ" type="search" placeholder="Tìm phòng, nhà hàng, spa, ưu đãi…" autocomplete="off"><button class="ic-btn" type="button" id="srchClose" aria-label="Đóng tìm kiếm"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
   <div class="srch-res" id="srchRes" aria-live="polite"></div>
  </div>
 </div>
@@ -120,30 +120,30 @@
    <form class="card ct-form" id="ctForm" data-form="LH" data-done="ctDone" novalidate>
     <h2 class="h-3">Để lại lời nhắn</h2>
     <div class="fgrid">
-     <div class="fld"><label for="c-ten">Họ và tên *</label><input id="c-ten" name="ten" autocomplete="name" required data-v="name" data-lbl="họ và tên" data-sum="Họ tên"></div>
-     <div class="fld"><label for="c-dt">Số điện thoại *</label><input id="c-dt" name="dt" type="tel" inputmode="tel" autocomplete="tel" required data-v="phone" data-lbl="số điện thoại" placeholder="0900 000 000" data-sum="Điện thoại"></div>
+     <div class="fld"><label for="c-ten">Họ và&nbsp;tên *</label><input id="c-ten" name="ten" autocomplete="name" required data-v="name" data-lbl="họ và tên" data-sum="Họ tên"></div>
+     <div class="fld"><label for="c-dt">Số điện&nbsp;thoại *</label><input id="c-dt" name="dt" type="tel" inputmode="tel" autocomplete="tel" required data-v="phone" data-lbl="số điện thoại" placeholder="0900 000 000" data-sum="Điện thoại"></div>
      <div class="fld"><label for="c-em">Email</label><input id="c-em" name="em" type="email" autocomplete="email" data-v="email" data-sum="Email"></div>
      <div class="fld"><label for="c-cd">Chủ đề *</label><select id="c-cd" name="cd" required data-lbl="chủ đề" data-sum="Chủ đề"><option value="">Chọn chủ đề</option><option value="dp">Đặt phòng</option><option value="goi">Gói ưu đãi</option><option value="tiec">Tiệc cưới, sự kiện</option><option value="spa">Spa và trải nghiệm</option><option value="khac">Khác</option></select></div>
-     <div class="fld full"><label for="c-nd">Nội dung *</label><textarea id="c-nd" name="nd" required data-lbl="nội dung" data-sum="Nội dung"></textarea></div>
+     <div class="fld full"><label for="c-nd">Nội&nbsp;dung *</label><textarea id="c-nd" name="nd" required data-lbl="nội dung" data-sum="Nội dung"></textarea></div>
     </div>
-    <label class="consent"><input type="checkbox" name="ok" required><span>Tôi đồng ý để Vịnh Lam xử lý họ tên, số điện thoại, email để trả lời yêu cầu này, theo <a href="#chinh-sach">chính sách dữ liệu</a>.</span></label>
+    <label class="consent"><input type="checkbox" name="ok" required><span>Tôi đồng ý để&nbsp;Vịnh Lam xử lý họ tên, số điện&nbsp;thoại, email để&nbsp;trả&nbsp;lời yêu cầu này, theo <a href="#chinh-sach">chính sách dữ liệu</a>.</span></label>
     <button class="btn btn-bl" type="submit">Gửi lời&nbsp;nhắn</button>
    </form>
-   <div class="done" id="ctDone" hidden><span class="done-ic"><svg class="ic ic-l" aria-hidden="true"><use href="#i-check"/></svg></span><h3 class="h-3">Đã nhận lời nhắn (minh hoạ)</h3><span class="code" data-code></span><ul data-sumlist></ul><p class="small">Mẫu giao diện: không có yêu cầu nào được gửi đi.</p><button class="btn btn-o" type="button" data-again>Gửi lời nhắn khác</button></div>
+   <div class="done" id="ctDone" hidden><span class="done-ic"><svg class="ic ic-l" aria-hidden="true"><use href="#i-check"/></svg></span><h3 class="h-3">Đã nhận lời nhắn (minh&nbsp;hoạ)</h3><span class="code" data-code></span><ul data-sumlist></ul><p class="small">Mẫu giao diện: không có yêu cầu nào được gửi đi.</p><button class="btn btn-o" type="button" data-again>Gửi lời nhắn khác</button></div>
   </div>
  </div>
 </section>
 <section class="sec bg-shell" id="hoi-dap" aria-labelledby="h-faq">
  <div class="wrap faq">
-  <div class="faq-side"><p class="kicker">Hỏi đáp</p><h2 class="h-2" id="h-faq">Câu hỏi khách hay&nbsp;gửi</h2><div class="fld"><label for="faqQ">Tìm trong hỏi đáp</label><input id="faqQ" class="inp" type="search" placeholder="Ví dụ: trẻ em, sân bay"></div><div class="faq-cats" role="group" aria-label="Lọc theo chủ đề"><button class="chip" type="button" data-fc="all" aria-pressed="true">Tất cả</button><button class="chip" type="button" data-fc="dp" aria-pressed="false">Đặt phòng</button><button class="chip" type="button" data-fc="te" aria-pressed="false">Trẻ em</button><button class="chip" type="button" data-fc="dd" aria-pressed="false">Đi lại</button><button class="chip" type="button" data-fc="dv" aria-pressed="false">Dịch vụ</button></div><p class="small" id="faqN" aria-live="polite">12 câu hỏi</p></div>
+  <div class="faq-side"><p class="kicker">Hỏi đáp</p><h2 class="h-2" id="h-faq">Câu&nbsp;hỏi khách hay&nbsp;gửi</h2><div class="fld"><label for="faqQ">Tìm trong hỏi đáp</label><input id="faqQ" class="inp" type="search" placeholder="Ví dụ: trẻ em, sân bay"></div><div class="faq-cats" role="group" aria-label="Lọc theo chủ đề"><button class="chip" type="button" data-fc="all" aria-pressed="true">Tất cả</button><button class="chip" type="button" data-fc="dp" aria-pressed="false">Đặt&nbsp;phòng</button><button class="chip" type="button" data-fc="te" aria-pressed="false">Trẻ em</button><button class="chip" type="button" data-fc="dd" aria-pressed="false">Đi lại</button><button class="chip" type="button" data-fc="dv" aria-pressed="false">Dịch&nbsp;vụ</button></div><p class="small" id="faqN" aria-live="polite">12 câu hỏi</p></div>
   <div><div class="acc"><details data-c="dp"><summary>Giờ nhận phòng và trả phòng là mấy giờ?</summary><div class="ans"><p>Nhận phòng từ 14:00, trả phòng trước 12:00. Nhận sớm từ 10:00 hoặc trả muộn đến 15:00 tuỳ tình trạng phòng; đặt trước ở bước “Dịch vụ thêm” để được giữ chỗ.</p></div></details><details data-c="dp"><summary>Giá phòng đã gồm những gì?</summary><div class="ans"><p>Giá trên website đã gồm phí phục vụ 5%, VAT 8% và bữa sáng cho số khách tiêu chuẩn của hạng phòng. Tối thứ sáu, thứ bảy cộng 10% so với ngày thường.</p></div></details><details data-c="dp"><summary>Chính sách huỷ và đổi ngày thế nào?</summary><div class="ans"><p>Đổi ngày miễn phí một lần nếu báo trước 7 ngày. Huỷ trước 14 ngày được hoàn toàn bộ tiền cọc; huỷ trong vòng 14 ngày giữ lại tiền đêm đầu (chính sách minh hoạ).</p></div></details><details data-c="dp"><summary>Tôi có cần thanh toán ngay khi đặt?</summary><div class="ans"><p>Không. Lễ tân gọi xác nhận và gửi hướng dẫn đặt cọc 30% qua chuyển khoản. Phần còn lại thanh toán khi trả phòng.</p></div></details><details data-c="te"><summary>Trẻ em được ở miễn phí đến mấy tuổi?</summary><div class="ans"><p>Trẻ dưới 6 tuổi ngủ chung giường với bố mẹ được miễn phí phòng và bữa sáng. Từ 6 đến dưới 12 tuổi phụ thu bữa sáng; từ 12 tuổi tính như người lớn.</p></div></details><details data-c="te"><summary>Câu lạc bộ trẻ em nhận bé mấy tuổi?</summary><div class="ans"><p>Bé từ 4 đến 12 tuổi, mở 08:30–17:30, miễn phí cho khách lưu trú. Bé dưới 4 tuổi cần bố mẹ hoặc người trông riêng đi cùng.</p></div></details><details data-c="te"><summary>Resort có hồ bơi cho trẻ em không?</summary><div class="ans"><p>Có hồ bơi nông sâu 0,5 m cạnh hồ bơi chính, có nhân viên cứu hộ từ 07:00 đến 19:00.</p></div></details><details data-c="dd"><summary>Resort có đón tiễn sân bay không?</summary><div class="ans"><p>Có, xe 7 chỗ đón tại sân bay Phù Cát, khoảng 55 phút. Phí minh hoạ 1.200.000đ/xe hai chiều. Báo số hiệu chuyến bay trước 24 giờ.</p></div></details><details data-c="dd"><summary>Từ resort vào trung tâm Quy Nhơn mất bao lâu?</summary><div class="ans"><p>Khoảng 15 phút đi ô tô. Resort có xe đưa đón theo giờ cố định 10:00, 15:00 và 19:00 (minh hoạ).</p></div></details><details data-c="dv"><summary>Có phục vụ đồ uống có cồn cho người dưới 18 tuổi?</summary><div class="ans"><p>Không. Đồ uống có cồn chỉ phục vụ khách từ 18 tuổi trở lên; nhân viên có thể đề nghị xem giấy tờ tuỳ thân.</p></div></details><details data-c="dv"><summary>Tôi có mang thú cưng theo được không?</summary><div class="ans"><p>Hiện resort chưa nhận thú cưng, trừ chó dẫn đường có giấy tờ. Lễ tân có thể gợi ý dịch vụ trông giữ thú cưng ở Quy Nhơn.</p></div></details><details data-c="dv"><summary>Resort có phòng cho người khuyết tật không?</summary><div class="ans"><p>Có 4 phòng Deluxe được thiết kế lối đi xe lăn, tay vịn và vòi sen ngang. Xe điện nội khu có ván dốc.</p></div></details></div><p class="faq-none" id="faqNone" hidden>Chưa có câu trả lời phù hợp. Gọi <a href="tel:0900000000">0900 000 000</a> hoặc để lại lời nhắn ở trên.</p></div>
  </div>
 </section>
 <section class="sec" id="chinh-sach" aria-labelledby="h-pol">
- <div class="wrap"><div class="sec-head"><p class="kicker">Chính sách</p><h2 class="h-1" id="h-pol">Rõ ràng trước khi&nbsp;đặt</h2><p class="lead">Nội dung chính sách minh hoạ; website thật cần chủ khách sạn duyệt lại.</p></div>
+ <div class="wrap"><div class="sec-head"><p class="kicker">Chính sách</p><h2 class="h-1" id="h-pol">Rõ&nbsp;ràng trước khi&nbsp;đặt</h2><p class="lead">Nội dung chính sách minh hoạ; website thật cần chủ khách sạn duyệt lại.</p></div>
  <div class="pol">
-  <article><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><h3>Nhận và trả phòng</h3><ul><li>Nhận phòng từ 14:00, trả trước 12:00.</li><li>Xuất trình CCCD hoặc hộ chiếu khi nhận phòng.</li><li>Khách dưới 18 tuổi đi cùng người giám hộ.</li></ul></article>
-  <article><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><h3>Huỷ và đổi ngày</h3><ul><li>Đổi ngày miễn phí trước 7 ngày.</li><li>Huỷ trước 14 ngày: hoàn toàn bộ tiền cọc.</li><li>Huỷ trong 14 ngày: giữ tiền đêm đầu.</li></ul></article>
+  <article><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><h3>Nhận và&nbsp;trả phòng</h3><ul><li>Nhận phòng từ 14:00, trả trước 12:00.</li><li>Xuất trình CCCD hoặc hộ chiếu khi nhận phòng.</li><li>Khách dưới 18 tuổi đi cùng người giám hộ.</li></ul></article>
+  <article><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg><h3>Huỷ và&nbsp;đổi ngày</h3><ul><li>Đổi ngày miễn phí trước 7 ngày.</li><li>Huỷ trước 14 ngày: hoàn toàn bộ tiền cọc.</li><li>Huỷ trong 14 ngày: giữ tiền đêm đầu.</li></ul></article>
   <article><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><h3>Bảo vệ dữ liệu cá nhân</h3><ul><li>Chỉ dùng thông tin để xác nhận và chăm sóc đặt phòng.</li><li>Không chia sẻ cho bên thứ ba vì mục đích quảng cáo.</li><li>Bạn có thể yêu cầu xem, sửa hoặc xoá dữ liệu qua email.</li></ul></article>
  </div></div>
 </section>
@@ -167,7 +167,7 @@
     </ul>
    </div>
    <div>
-    <h2>Liên hệ</h2>
+    <h2>Liên&nbsp;hệ</h2>
     <ul class="ft-contact">
      <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>Khu vực ven biển phía nam Quy Nhơn, tỉnh Gia Lai</span></li>
      <li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:0900000000">0900 000 000</a></li>

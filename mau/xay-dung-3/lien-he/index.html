@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@500;600;700;800&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css?v=1">
+<link rel="stylesheet" href="../assets/site.css?v=2">
 <script>(function(d){var c=d.className+' js';if(/HeadlessChrome/.test(navigator.userAgent))c+=' static';d.className=c})(document.documentElement)</script>
 </head>
 <body data-page="lien-he" data-root="../">
@@ -48,31 +48,31 @@
         <div class="note" id="estNote" hidden style="margin-bottom:18px"><svg class="ic" aria-hidden="true"><use href="#i-calc"/></svg><p>Đã gắn dự toán bạn làm: <span id="estNoteT"></span>. Kỹ sư sẽ mang theo khi khảo sát.</p></div>
         <div class="note" id="savedNote" hidden style="margin-bottom:18px"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg><p>Dự án bạn đã lưu: <span id="savedNoteT"></span>.</p></div>
         <fieldset class="field"><legend>Dịch vụ</legend><div class="chips big">
-          <label class="chip"><input type="radio" name="svc" value="thiet-ke"><span><svg class="ic" aria-hidden="true"><use href="#i-ruler"/></svg>Thiết kế</span></label>
+          <label class="chip"><input type="radio" name="svc" value="thiet-ke"><span><svg class="ic" aria-hidden="true"><use href="#i-ruler"/></svg>Thiết&nbsp;kế</span></label>
           <label class="chip"><input type="radio" name="svc" value="xay-tho"><span><svg class="ic" aria-hidden="true"><use href="#i-brick"/></svg>Xây thô</span></label>
-          <label class="chip"><input type="radio" name="svc" value="tron-goi"><span><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg>Trọn gói</span></label>
+          <label class="chip"><input type="radio" name="svc" value="tron-goi"><span><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg>Trọn&nbsp;gói</span></label>
           <label class="chip"><input type="radio" name="svc" value="cai-tao"><span><svg class="ic" aria-hidden="true"><use href="#i-hammer"/></svg>Cải tạo</span></label>
         </div><span class="err-msg" role="alert"></span></fieldset>
         <fieldset class="field"><legend>Loại công trình</legend><div class="chips">
           <label class="chip"><input type="radio" name="house" value="nha-pho"><span>Nhà phố</span></label>
-          <label class="chip"><input type="radio" name="house" value="biet-thu"><span>Biệt thự</span></label>
+          <label class="chip"><input type="radio" name="house" value="biet-thu"><span>Biệt&nbsp;thự</span></label>
           <label class="chip"><input type="radio" name="house" value="nha-1-tang"><span>Nhà 1 tầng</span></label>
           <label class="chip"><input type="radio" name="house" value="khac"><span>Khác</span></label>
         </div><span class="err-msg" role="alert"></span></fieldset>
       </div>
 
       <div class="fs" hidden>
-        <h3>Khu đất ở đâu, rộng bao nhiêu?</h3>
+        <h3>Khu đất ở&nbsp;đâu, rộng bao&nbsp;nhiêu?</h3>
         <p class="sub">Thông tin gần đúng là đủ, kỹ sư sẽ đo lại khi khảo sát.</p>
         <div class="row2">
-          <div class="field"><label for="fReg">Khu vực</label><select class="inp" id="fReg" required><option value="">Chọn khu vực</option><option value="hcm">TP.HCM (nội thành cũ)</option><option value="thu-duc">Khu Thủ Đức cũ</option><option value="binh-duong">Khu vực Bình Dương cũ</option><option value="khac">Nơi khác (báo giá riêng)</option></select><span class="err-msg" role="alert"></span></div>
+          <div class="field"><label for="fReg">Khu&nbsp;vực</label><select class="inp" id="fReg" required><option value="">Chọn khu vực</option><option value="hcm">TP.HCM (nội thành cũ)</option><option value="thu-duc">Khu Thủ Đức cũ</option><option value="binh-duong">Khu vực Bình Dương cũ</option><option value="khac">Nơi khác (báo giá riêng)</option></select><span class="err-msg" role="alert"></span></div>
           <div class="field"><label for="fWard">Phường, xã</label><input class="inp" id="fWard" type="text" placeholder="Ví dụ: Phường Gò Vấp" autocomplete="address-level3"><span class="err-msg" role="alert"></span></div>
         </div>
         <div class="row2">
           <div class="field"><label for="fArea">Diện tích đất</label><div class="unit"><input class="inp num" id="fArea" type="number" min="15" max="2000" inputmode="decimal" placeholder="90"><span>m²</span></div><span class="err-msg" role="alert"></span></div>
           <div class="field"><label for="fFl">Số tầng dự kiến <span class="opt">(không bắt buộc)</span></label><select class="inp" id="fFl"><option value="">Chưa rõ</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option></select></div>
         </div>
-        <div class="field"><label for="fBud">Ngân sách dự kiến</label><select class="inp" id="fBud"><option value="chua-ro">Chưa xác định</option><option value="lt2">Dưới 2 tỷ</option><option value="2-5">Từ 2 đến 5 tỷ</option><option value="gt5">Trên 5 tỷ</option></select></div>
+        <div class="field"><label for="fBud">Ngân&nbsp;sách dự kiến</label><select class="inp" id="fBud"><option value="chua-ro">Chưa xác định</option><option value="lt2">Dưới 2 tỷ</option><option value="2-5">Từ 2 đến 5 tỷ</option><option value="gt5">Trên 5 tỷ</option></select></div>
       </div>
 
       <div class="fs" hidden>
@@ -82,22 +82,22 @@
           <div class="field"><label for="fDate">Ngày khảo sát</label><input class="inp" id="fDate" type="date"><span class="err-msg" role="alert"></span></div>
           <fieldset class="field"><legend>Buổi</legend><div class="chips"><label class="chip"><input type="radio" name="slot" value="sang"><span>Sáng 08:00–11:30</span></label><label class="chip"><input type="radio" name="slot" value="chieu"><span>Chiều 13:30–17:00</span></label></div><span class="err-msg" role="alert"></span></fieldset>
         </div>
-        <div class="field"><label for="fNote">Ghi chú cho kỹ sư <span class="opt">(không bắt buộc)</span></label><textarea class="inp" id="fNote" placeholder="Ví dụ: hẻm 3 m, nhà bên cạnh đang xây, muốn có thang máy…"></textarea></div>
+        <div class="field"><label for="fNote">Ghi chú cho&nbsp;kỹ sư <span class="opt">(không bắt buộc)</span></label><textarea class="inp" id="fNote" placeholder="Ví dụ: hẻm 3 m, nhà bên cạnh đang xây, muốn có thang máy…"></textarea></div>
       </div>
 
       <div class="fs" hidden>
-        <h3>Kỹ sư liên hệ với ai?</h3>
+        <h3>Kỹ sư liên&nbsp;hệ với&nbsp;ai?</h3>
         <p class="sub">Chỉ dùng để gọi xác nhận lịch khảo sát.</p>
-        <div class="field"><label for="fName">Họ và tên</label><input class="inp" id="fName" type="text" autocomplete="name"><span class="err-msg" role="alert"></span></div>
+        <div class="field"><label for="fName">Họ và&nbsp;tên</label><input class="inp" id="fName" type="text" autocomplete="name"><span class="err-msg" role="alert"></span></div>
         <div class="row2">
-          <div class="field"><label for="fPhone">Số điện thoại</label><input class="inp num" id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"><span class="err-msg" role="alert"></span></div>
+          <div class="field"><label for="fPhone">Số điện&nbsp;thoại</label><input class="inp num" id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"><span class="err-msg" role="alert"></span></div>
           <div class="field"><label for="fEmail">Email <span class="opt">(không bắt buộc)</span></label><input class="inp" id="fEmail" type="email" autocomplete="email"><span class="err-msg" role="alert"></span></div>
         </div>
-        <div class="field"><label class="check"><input type="checkbox" id="fConsent"><span>Tôi đồng ý để Khải Nguyên xử lý thông tin cá nhân trên nhằm liên hệ và sắp xếp lịch khảo sát.</span></label><span class="err-msg" role="alert"></span></div>
+        <div class="field"><label class="check"><input type="checkbox" id="fConsent"><span>Tôi đồng ý để&nbsp;Khải Nguyên xử lý thông&nbsp;tin cá nhân trên&nbsp;nhằm liên&nbsp;hệ và&nbsp;sắp xếp lịch khảo sát.</span></label><span class="err-msg" role="alert"></span></div>
       </div>
 
       <div class="fs" hidden>
-        <h3>Kiểm tra lại trước khi gửi</h3>
+        <h3>Kiểm&nbsp;tra lại trước khi&nbsp;gửi</h3>
         <p class="sub">Bấm “Sửa” ở dòng nào cần thay đổi.</p>
         <dl class="sum" id="sumList"></dl>
       </div>
@@ -125,8 +125,8 @@
 <section class="sec-sm stone">
   <div class="wrap g3">
     <a class="pcard-s" href="../bang-gia/"><span class="meta"><b>Chưa có con số?</b></span><h3>Làm dự toán trước, form sẽ tự điền thông&nbsp;tin</h3></a>
-    <a class="pcard-s" href="../du-an/"><span class="meta"><b>Tham khảo</b></span><h3>Lưu dự án ưng ý để kỹ sư mang hồ sơ tương&nbsp;tự</h3></a>
-    <a class="pcard-s" href="../bao-hanh/#hoi-dap"><span class="meta"><b>Hỏi đáp</b></span><h3>Khảo sát có mất phí không, cần chuẩn bị&nbsp;gì?</h3></a>
+    <a class="pcard-s" href="../du-an/"><span class="meta"><b>Tham khảo</b></span><h3>Lưu dự&nbsp;án ưng ý để&nbsp;kỹ sư mang hồ&nbsp;sơ tương&nbsp;tự</h3></a>
+    <a class="pcard-s" href="../bao-hanh/#hoi-dap"><span class="meta"><b>Hỏi đáp</b></span><h3>Khảo sát có&nbsp;mất phí không, cần chuẩn bị&nbsp;gì?</h3></a>
   </div>
 </section>
 

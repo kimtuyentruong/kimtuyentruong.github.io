@@ -32,26 +32,26 @@
 <main id="main">
 <section class="co" aria-labelledby="h1"><div class="wrap">
 <nav class="crumb" aria-label="Đường dẫn"><a href="../../">Trang chủ</a><span class="sep" aria-hidden="true"></span><a href="../">Cửa hàng</a><span class="sep" aria-hidden="true"></span><span aria-current="page">Thanh toán</span></nav>
-<div class="co-head"><h1 id="h1">Thanh toán</h1><p class="co-warn"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Trang minh hoạ: không thu tiền thật, không lưu thông tin thẻ.</p></div>
+<div class="co-head"><h1 id="h1">Thanh&nbsp;toán</h1><p class="co-warn"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg>Trang minh hoạ: không thu tiền thật, không lưu thông tin thẻ.</p></div>
 <div class="co-grid">
 <form class="co-form" id="coForm" novalidate>
 <ol class="steps" id="coSteps"><li class="cur">Giỏ hàng</li><li>Nhận hàng</li><li>Thanh toán</li><li>Xác nhận</li></ol>
-<div class="pane on" data-s="0"><h2 class="co-h">Giỏ hàng của bạn</h2><div id="coLines"></div><p class="ferr" data-err="0">Giỏ đang trống. Thêm ít nhất 1 sản phẩm.</p>
+<div class="pane on" data-s="0"><h2 class="co-h">Giỏ&nbsp;hàng của&nbsp;bạn</h2><div id="coLines"></div><p class="ferr" data-err="0">Giỏ đang trống. Thêm ít nhất 1 sản phẩm.</p>
 <div class="co-up" id="coUp"></div></div>
-<div class="pane" data-s="1"><h2 class="co-h">Bạn muốn nhận hàng thế nào?</h2>
-<fieldset class="bare"><legend class="sr">Cách nhận hàng</legend><div class="opt-grid"><label class="opt"><input type="radio" name="ship" value="pickup" checked><span class="box"><b>Lấy tại chi nhánh</b><small>Miễn phí · sẵn hàng sau 2 giờ</small></span></label><label class="opt"><input type="radio" name="ship" value="ship"><span class="box"><b>Giao tận nơi</b><small>Nội thành TP.HCM · 30.000đ</small></span></label></div></fieldset>
+<div class="pane" data-s="1"><h2 class="co-h">Bạn muốn nhận hàng thế&nbsp;nào?</h2>
+<fieldset class="bare"><legend class="sr">Cách nhận hàng</legend><div class="opt-grid"><label class="opt"><input type="radio" name="ship" value="pickup" checked><span class="box"><b>Lấy tại&nbsp;chi nhánh</b><small>Miễn&nbsp;phí · sẵn hàng sau 2 giờ</small></span></label><label class="opt"><input type="radio" name="ship" value="ship"><span class="box"><b>Giao tận nơi</b><small>Nội thành TP.HCM · 30.000đ</small></span></label></div></fieldset>
 <div id="coPick" class="co-sub"><label class="flabel" for="coBr">Chi nhánh</label><select class="inp" id="coBr" name="br"><option value="bt">Bến Thành</option><option value="pn">Phú Nhuận</option><option value="ak">An Khánh</option></select></div>
-<div id="coShip" class="co-sub" hidden><div class="field"><label for="coAddr">Địa chỉ giao hàng</label><input class="inp" id="coAddr" name="addr" autocomplete="street-address" placeholder="Số nhà, đường, phường"><span class="ferr">Nhập địa chỉ giao hàng.</span></div></div>
-<div class="grid" style="gap:16px;margin-top:16px"><div class="frow"><div class="field"><label for="coName">Họ và tên</label><input class="inp" id="coName" name="name" autocomplete="name" data-req="name"><span class="ferr">Nhập họ tên.</span></div>
-<div class="field"><label for="coPhone">Số điện thoại</label><input class="inp" id="coPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000" data-req="phone"><span class="ferr">Số điện thoại gồm 10 số, bắt đầu bằng 0.</span></div></div></div></div>
-<div class="pane" data-s="2"><h2 class="co-h">Chọn cách thanh toán</h2>
+<div id="coShip" class="co-sub" hidden><div class="field"><label for="coAddr">Địa&nbsp;chỉ giao hàng</label><input class="inp" id="coAddr" name="addr" autocomplete="street-address" placeholder="Số nhà, đường, phường"><span class="ferr">Nhập địa chỉ giao hàng.</span></div></div>
+<div class="grid" style="gap:16px;margin-top:16px"><div class="frow"><div class="field"><label for="coName">Họ và&nbsp;tên</label><input class="inp" id="coName" name="name" autocomplete="name" data-req="name"><span class="ferr">Nhập họ tên.</span></div>
+<div class="field"><label for="coPhone">Số điện&nbsp;thoại</label><input class="inp" id="coPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000" data-req="phone"><span class="ferr">Số điện thoại gồm 10 số, bắt đầu bằng 0.</span></div></div></div></div>
+<div class="pane" data-s="2"><h2 class="co-h">Chọn cách thanh&nbsp;toán</h2>
 <fieldset class="bare"><legend class="sr">Cách thanh toán</legend><div class="grid" style="gap:10px">
-<label class="opt"><input type="radio" name="pay" value="Tiền mặt khi nhận"><span class="box"><b>Tiền mặt khi nhận hàng</b><small>Trả cho shipper hoặc tại quầy</small></span></label>
-<label class="opt"><input type="radio" name="pay" value="Chuyển khoản (minh hoạ)"><span class="box"><b>Chuyển khoản</b><small>Hiện mã QR minh hoạ sau khi đặt, không kết nối ngân hàng thật</small></span></label>
-<label class="opt"><input type="radio" name="pay" value="Ví điện tử (minh hoạ)"><span class="box"><b>Ví điện tử</b><small>Minh hoạ giao diện, không chuyển sang ứng dụng ví</small></span></label>
+<label class="opt"><input type="radio" name="pay" value="Tiền mặt khi nhận"><span class="box"><b>Tiền mặt khi&nbsp;nhận hàng</b><small>Trả cho&nbsp;shipper hoặc&nbsp;tại&nbsp;quầy</small></span></label>
+<label class="opt"><input type="radio" name="pay" value="Chuyển khoản (minh hoạ)"><span class="box"><b>Chuyển khoản</b><small>Hiện mã QR minh&nbsp;hoạ sau khi&nbsp;đặt, không kết nối ngân hàng thật</small></span></label>
+<label class="opt"><input type="radio" name="pay" value="Ví điện tử (minh hoạ)"><span class="box"><b>Ví điện tử</b><small>Minh&nbsp;hoạ giao&nbsp;diện, không chuyển sang ứng dụng ví</small></span></label>
 </div></fieldset><p class="ferr" data-err="2">Chọn một cách thanh toán.</p></div>
-<div class="pane" data-s="3"><h2 class="co-h">Kiểm tra đơn hàng</h2><dl class="summary" id="coSum"></dl>
-<label class="consent" style="margin-top:18px"><input type="checkbox" id="coOk" data-req="1"><span>Tôi đồng ý để Đồng Kéo dùng họ tên, số điện thoại và địa chỉ để xử lý đơn hàng, theo quy định bảo vệ dữ liệu cá nhân. (Mẫu: không gửi đi đâu.)</span></label></div>
+<div class="pane" data-s="3"><h2 class="co-h">Kiểm&nbsp;tra đơn&nbsp;hàng</h2><dl class="summary" id="coSum"></dl>
+<label class="consent" style="margin-top:18px"><input type="checkbox" id="coOk" data-req="1"><span>Tôi đồng ý để&nbsp;Đồng Kéo dùng họ tên, số điện&nbsp;thoại và&nbsp;địa&nbsp;chỉ để&nbsp;xử lý đơn&nbsp;hàng, theo quy định bảo vệ dữ liệu cá nhân. (Mẫu: không gửi đi đâu.)</span></label></div>
 <div class="wnav"><button class="btn btn-ghost" type="button" id="coBack"><svg class="ic" aria-hidden="true"><use href="#i-chev-l"/></svg>Quay lại</button><button class="btn" type="button" id="coNext">Tiếp tục <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
 </form>
 <aside class="co-side" aria-live="polite"><p class="idx">Tóm tắt đơn</p><div id="coMini"></div>

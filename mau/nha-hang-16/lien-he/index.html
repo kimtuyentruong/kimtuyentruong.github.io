@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/site.css?v=3">
+<link rel="stylesheet" href="../assets/site.css?v=4">
 <script>document.documentElement.className='js'+(/HeadlessChrome/.test(navigator.userAgent)?' static':'')</script>
 </head>
 <body data-page="contact">
@@ -89,10 +89,10 @@
     <div>
       <p class="kick" id="depLb">Bạn cần liên hệ về</p>
       <div class="deps" role="group" aria-labelledby="depLb" id="deps">
-        <button class="dep" type="button" data-dep="ban" aria-pressed="true"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></span><span><b>Đặt bàn, đổi giờ</b><small>Trả lời trong 15 phút, 08:00–22:00</small></span></button>
-        <button class="dep" type="button" data-dep="tiec" aria-pressed="false"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><span><b>Tiệc &amp; sự kiện</b><small>Báo giá trong ngày làm việc</small></span></button>
-        <button class="dep" type="button" data-dep="qua" aria-pressed="false"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-gift"/></svg></span><span><b>Quà tặng doanh nghiệp</b><small>Mẫu thử và bảng giá theo số lượng</small></span></button>
-        <button class="dep" type="button" data-dep="khac" aria-pressed="false"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span><span><b>Góp ý, báo chí, việc khác</b><small>Chuyển tới quản lý chi nhánh</small></span></button>
+        <button class="dep" type="button" data-dep="ban" aria-pressed="true"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg></span><span><b>Đặt&nbsp;bàn, đổi giờ</b><small>Trả&nbsp;lời trong 15 phút, 08:00–22:00</small></span></button>
+        <button class="dep" type="button" data-dep="tiec" aria-pressed="false"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><span><b>Tiệc &amp; sự&nbsp;kiện</b><small>Báo&nbsp;giá trong ngày làm&nbsp;việc</small></span></button>
+        <button class="dep" type="button" data-dep="qua" aria-pressed="false"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-gift"/></svg></span><span><b>Quà tặng doanh&nbsp;nghiệp</b><small>Mẫu thử và&nbsp;bảng&nbsp;giá theo số lượng</small></span></button>
+        <button class="dep" type="button" data-dep="khac" aria-pressed="false"><span class="icw"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></span><span><b>Góp ý, báo chí, việc khác</b><small>Chuyển tới quản&nbsp;lý chi nhánh</small></span></button>
       </div>
       <div class="ct-info" id="depInfo" aria-live="polite"><b>Bộ phận đặt bàn</b>Nhanh hơn cả là đặt trực tuyến; cần đổi giờ hoặc huỷ, bạn gọi thẳng chi nhánh.<ul><li><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:0900000000">0900&nbsp;000&nbsp;000</a></li><li><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:datban@langhe.example">datban@langhe.example</a></li></ul></div>
     </div>
@@ -101,14 +101,14 @@
       <p class="txt" id="ctSub">Về việc: đặt bàn, đổi giờ.</p>
       <form id="ctForm" novalidate>
         <div class="fg">
-          <div class="f"><label for="ctName">Họ và tên <i>*</i></label><input id="ctName" required minlength="2" autocomplete="name"></div>
-          <div class="f"><label for="ctTel">Số điện thoại <i>*</i></label><input id="ctTel" type="tel" required inputmode="tel" autocomplete="tel" placeholder="0900 000 000"></div>
+          <div class="f"><label for="ctName">Họ và&nbsp;tên <i>*</i></label><input id="ctName" required minlength="2" autocomplete="name"></div>
+          <div class="f"><label for="ctTel">Số điện&nbsp;thoại <i>*</i></label><input id="ctTel" type="tel" required inputmode="tel" autocomplete="tel" placeholder="0900 000 000"></div>
           <div class="f"><label for="ctMail">Email</label><input id="ctMail" type="email" autocomplete="email" placeholder="ten@vidu.com"></div>
           <div class="f"><label for="ctBranch">Chi nhánh liên quan</label><select id="ctBranch"><option value="">Chưa rõ hoặc tất cả</option><option value="ben-thanh">Lá Nghệ Bến Thành</option><option value="tan-dinh">Lá Nghệ Tân Định</option><option value="hoan-kiem">Lá Nghệ Hoàn Kiếm</option><option value="tay-ho">Lá Nghệ Tây Hồ</option></select></div>
-          <div class="f" data-for="tiec qua" hidden><label for="ctQty">Số khách hoặc số hộp dự kiến</label><input id="ctQty" type="number" min="1" inputmode="numeric" placeholder="Ví dụ 40"></div>
-          <div class="f" data-for="tiec qua" hidden><label for="ctCo">Tên công ty</label><input id="ctCo" autocomplete="organization"></div>
-          <div class="f full"><label for="ctMsg">Nội dung <i>*</i></label><textarea id="ctMsg" required minlength="10" data-req="Viết vài dòng để chúng tôi biết bạn cần gì."></textarea></div>
-          <label class="consent full"><input type="checkbox"><span>Tôi đồng ý để Lá Nghệ xử lý thông tin trên nhằm phản hồi lời nhắn này, theo <a href="#chinh-sach">chính sách bảo vệ dữ liệu cá nhân</a>.</span></label>
+          <div class="f" data-for="tiec qua" hidden><label for="ctQty">Số khách hoặc&nbsp;số hộp dự kiến</label><input id="ctQty" type="number" min="1" inputmode="numeric" placeholder="Ví dụ 40"></div>
+          <div class="f" data-for="tiec qua" hidden><label for="ctCo">Tên công&nbsp;ty</label><input id="ctCo" autocomplete="organization"></div>
+          <div class="f full"><label for="ctMsg">Nội&nbsp;dung <i>*</i></label><textarea id="ctMsg" required minlength="10" data-req="Viết vài dòng để chúng tôi biết bạn cần gì."></textarea></div>
+          <label class="consent full"><input type="checkbox"><span>Tôi đồng ý để&nbsp;Lá Nghệ xử lý thông&nbsp;tin trên&nbsp;nhằm phản hồi lời nhắn này, theo <a href="#chinh-sach">chính sách bảo vệ dữ liệu cá nhân</a>.</span></label>
         </div>
         <button class="btn btn-p" type="submit">Gửi lời nhắn<svg class="ic mv" aria-hidden="true"><use href="#i-arrow"/></svg></button>
       </form>
@@ -120,23 +120,23 @@
   <div class="wrap">
     <div class="sec-head"><div><p class="eyebrow rv">Tuyển dụng</p><h2 class="h2 rv" style="--d:1">Về làm cùng <em>gian bếp&nbsp;này</em></h2></div><p class="txt rv" style="--d:2">Tám vị trí đang mở ở hai thành phố. Lọc theo nơi làm việc và bộ phận, mở từng dòng để xem mô tả rồi ứng tuyển ngay bên&nbsp;dưới.</p></div>
     <div class="jobs-bar rv" id="jobsBar">
-      <button class="chip" type="button" data-jc="" aria-pressed="true">Mọi thành phố</button><button class="chip" type="button" data-jc="TP.HCM" aria-pressed="false">TP.HCM</button><button class="chip" type="button" data-jc="Hà Nội" aria-pressed="false">Hà Nội</button>
+      <button class="chip" type="button" data-jc="" aria-pressed="true">Mọi thành&nbsp;phố</button><button class="chip" type="button" data-jc="TP.HCM" aria-pressed="false">TP.HCM</button><button class="chip" type="button" data-jc="Hà Nội" aria-pressed="false">Hà&nbsp;Nội</button>
       <span class="sep"></span>
-      <button class="chip" type="button" data-jd="" aria-pressed="true">Mọi bộ phận</button><button class="chip" type="button" data-jd="Bếp" aria-pressed="false">Bếp</button><button class="chip" type="button" data-jd="Phục vụ" aria-pressed="false">Phục vụ</button><button class="chip" type="button" data-jd="Văn phòng" aria-pressed="false">Văn phòng</button>
+      <button class="chip" type="button" data-jd="" aria-pressed="true">Mọi bộ phận</button><button class="chip" type="button" data-jd="Bếp" aria-pressed="false">Bếp</button><button class="chip" type="button" data-jd="Phục vụ" aria-pressed="false">Phục vụ</button><button class="chip" type="button" data-jd="Văn phòng" aria-pressed="false">Văn&nbsp;phòng</button>
       <span class="mcount" id="jobsN" role="status" aria-live="polite">8 vị trí</span>
     </div>
     <div id="jobs" class="rv"></div>
     <div class="empty" id="jobsEmpty" hidden><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><b>Chưa có vị trí khớp bộ lọc</b><p>Bạn vẫn có thể gửi thông tin, chúng tôi liên hệ khi có vị trí phù&nbsp;hợp.</p></div>
     <div class="apply" id="ung-tuyen">
-      <div><p class="eyebrow">Ứng tuyển</p><h3 class="h2" style="font-size:clamp(26px,2.8vw,38px);margin:14px 0 12px">Gửi thông tin trong <em>một&nbsp;phút</em></h3><p class="txt">Chưa cần CV. Quản lý chi nhánh gọi lại trong 3 ngày làm việc để hẹn buổi thử việc có&nbsp;lương.</p></div>
+      <div><p class="eyebrow">Ứng tuyển</p><h3 class="h2" style="font-size:clamp(26px,2.8vw,38px);margin:14px 0 12px">Gửi thông&nbsp;tin trong <em>một&nbsp;phút</em></h3><p class="txt">Chưa cần CV. Quản lý chi nhánh gọi lại trong 3 ngày làm việc để hẹn buổi thử việc có&nbsp;lương.</p></div>
       <div>
         <form id="jbForm" novalidate>
           <div class="fg">
-            <div class="f"><label for="jbName">Họ và tên <i>*</i></label><input id="jbName" required minlength="2" autocomplete="name"></div>
-            <div class="f"><label for="jbTel">Số điện thoại <i>*</i></label><input id="jbTel" type="tel" required inputmode="tel" autocomplete="tel" placeholder="0900 000 000"></div>
-            <div class="f full"><label for="jbPos">Vị trí ứng tuyển <i>*</i></label><select id="jbPos" required data-req="Chọn vị trí bạn muốn ứng tuyển."><option value="">Chọn vị trí</option></select></div>
-            <div class="f full"><label for="jbExp">Kinh nghiệm (không bắt buộc)</label><textarea id="jbExp" placeholder="Ví dụ: 2 năm phụ bếp nóng, có thể làm ca tối."></textarea></div>
-            <label class="consent full"><input type="checkbox"><span>Tôi đồng ý để Lá Nghệ lưu và xử lý thông tin ứng tuyển của tôi trong 6 tháng cho mục đích tuyển&nbsp;dụng.</span></label>
+            <div class="f"><label for="jbName">Họ và&nbsp;tên <i>*</i></label><input id="jbName" required minlength="2" autocomplete="name"></div>
+            <div class="f"><label for="jbTel">Số điện&nbsp;thoại <i>*</i></label><input id="jbTel" type="tel" required inputmode="tel" autocomplete="tel" placeholder="0900 000 000"></div>
+            <div class="f full"><label for="jbPos">Vị&nbsp;trí ứng tuyển <i>*</i></label><select id="jbPos" required data-req="Chọn vị trí bạn muốn ứng tuyển."><option value="">Chọn vị trí</option></select></div>
+            <div class="f full"><label for="jbExp">Kinh&nbsp;nghiệm (không bắt buộc)</label><textarea id="jbExp" placeholder="Ví dụ: 2 năm phụ bếp nóng, có thể làm ca tối."></textarea></div>
+            <label class="consent full"><input type="checkbox"><span>Tôi đồng ý để&nbsp;Lá Nghệ lưu và&nbsp;xử lý thông&nbsp;tin ứng tuyển của&nbsp;tôi trong 6 tháng cho&nbsp;mục đích tuyển&nbsp;dụng.</span></label>
           </div>
           <button class="btn btn-p" type="submit" style="margin-top:18px">Gửi ứng tuyển<svg class="ic mv" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </form>
@@ -178,7 +178,7 @@
         <div class="soc"><a href="#" aria-label="Facebook của Lá Nghệ (liên kết mẫu)"><svg class="ic" aria-hidden="true"><use href="#i-fb"/></svg></a><a href="#" aria-label="Instagram của Lá Nghệ (liên kết mẫu)"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg></a><a href="#" aria-label="TikTok của Lá Nghệ (liên kết mẫu)"><svg class="ic" aria-hidden="true"><use href="#i-tt"/></svg></a><a href="#" aria-label="Zalo của Lá Nghệ (liên kết mẫu)"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg></a></div>
       </div>
       <nav aria-label="Sơ đồ trang: khám phá"><h4>Khám phá</h4><ul><li><a href="../">Trang chủ</a></li><li><a href="../thuc-don/">Thực đơn</a></li><li><a href="../thuc-don/tom-su-ap-chao-nghe-tuoi/">Món đặc trưng</a></li><li><a href="../dat-ban/">Đặt bàn</a></li><li><a href="../chi-nhanh/">Chi nhánh</a></li><li><a href="../giao-mon/">Giao món</a></li></ul></nav>
-      <nav aria-label="Sơ đồ trang: dịch vụ"><h4>Dịch vụ &amp;&nbsp;tin</h4><ul><li><a href="../tiec-su-kien/">Tiệc &amp; sự kiện</a></li><li><a href="../cau-chuyen/">Câu chuyện &amp; bếp trưởng</a></li><li><a href="../tin-tuc/">Tin tức &amp; ưu đãi</a></li><li><a href="../tin-tuc/thuc-don-mua-thu/">Bài: thực đơn mùa thu</a></li><li><a href="../lien-he/" aria-current="page">Liên hệ &amp; tuyển dụng</a></li><li><a href="../lien-he/#tuyen-dung">Tuyển dụng</a></li></ul></nav>
+      <nav aria-label="Sơ đồ trang: dịch vụ"><h4>Dịch&nbsp;vụ &amp;&nbsp;tin</h4><ul><li><a href="../tiec-su-kien/">Tiệc &amp; sự kiện</a></li><li><a href="../cau-chuyen/">Câu chuyện &amp; bếp trưởng</a></li><li><a href="../tin-tuc/">Tin tức &amp; ưu đãi</a></li><li><a href="../tin-tuc/thuc-don-mua-thu/">Bài: thực đơn mùa thu</a></li><li><a href="../lien-he/" aria-current="page">Liên hệ &amp; tuyển dụng</a></li><li><a href="../lien-he/#tuyen-dung">Tuyển dụng</a></li></ul></nav>
       <div><h4>Bốn chi nhánh</h4><div class="foot-br"><div><b>Bến Thành</b><span>Phường Bến Thành, TP.HCM</span><span class="num">10:30–22:00 · <a href="tel:0900000001">0900&nbsp;000&nbsp;001</a></span></div><div><b>Tân Định</b><span>Phường Tân Định, TP.HCM</span><span class="num">10:30–22:00 · <a href="tel:0900000002">0900&nbsp;000&nbsp;002</a></span></div><div><b>Hoàn Kiếm</b><span>Phường Hoàn Kiếm, Hà Nội</span><span class="num">10:00–22:00 · <a href="tel:0900000003">0900&nbsp;000&nbsp;003</a></span></div><div><b>Tây Hồ</b><span>Phường Tây Hồ, Hà Nội</span><span class="num">10:00–22:00 · <a href="tel:0900000004">0900&nbsp;000&nbsp;004</a></span></div></div></div>
     </div>
     <div class="foot-mid">
