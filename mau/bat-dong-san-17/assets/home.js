@@ -40,7 +40,7 @@ if (ring && info) {
     cards.forEach(function (c, k) { c.setAttribute('aria-pressed', k === cur ? 'true' : 'false'); });
     var u = U[cur]; if (!u) return;
     $('.arc-name', info).textContent = u.name;
-    $('.arc-d', info).textContent = u.d;
+    var ad = $('.arc-d', info); if (ad) ad.textContent = u.d;
     $('[data-f=area]', info).textContent = u.area + ' m²';
     $('[data-f=fl]', info).textContent = u.fl;
     $('[data-f=view]', info).textContent = u.view;
@@ -79,6 +79,14 @@ if (ring && info) {
   var lw = window.innerWidth;
   window.addEventListener('resize', function () { if (window.innerWidth !== lw) { lw = window.innerWidth; place(); } });
   show(1, true);
+}
+
+/* ---------- header: trong suốt khi đang bay, đặc khi ra khỏi đoạn bay ---------- */
+var hdr = $('#hdr'), pinEl = $('.fly-pin');
+if (hdr && pinEl) {
+  var hq = 0;
+  var hs = function () { hq = 0; hdr.classList.toggle('solid', pinEl.getBoundingClientRect().bottom < 64); };
+  window.addEventListener('scroll', function () { if (!hq) hq = requestAnimationFrame(hs); }, { passive: true }); hs();
 }
 
 /* ---------- vòng tiến độ: chạy số khi thấy ---------- */
