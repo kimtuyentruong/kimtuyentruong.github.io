@@ -579,7 +579,7 @@ body.lock .kt-badge{opacity:0;pointer-events:none}
 .pf select.inp{min-height:44px;width:auto;min-width:200px;font-size:14.5px}
 .pf-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px dashed var(--line-2);padding-top:14px;font-size:14.5px}
 .pf-foot b{font-variant-numeric:tabular-nums}
-.btn-txt{background:none;border:0;color:var(--brick-t);font:600 14px var(--head);cursor:pointer;min-height:44px;padding:0 4px;text-decoration:underline;text-underline-offset:3px}
+.btn-txt{background:none;border:0;color:var(--brick-t);font:600 14px var(--head);cursor:pointer;min-height:44px;padding:0 4px;text-decoration:none}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
 .pcard{position:relative}
 .pc-link{display:block;text-decoration:none;color:var(--ink)}

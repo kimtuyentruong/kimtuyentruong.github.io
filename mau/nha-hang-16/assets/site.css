@@ -412,7 +412,7 @@ body.lock .kt-badge{opacity:0;pointer-events:none}
 .bc>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s var(--ease)}
 .bc:hover>img{transform:scale(1.05)}
 .bc.ph::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,42,32,.05) 20%,rgba(10,42,32,.86) 100%)}
-.bc.ph{color:#E6EEE6;border:0}
+.bc.ph{color:#E6EEE6;border:0;background:var(--green)}
 .bc .kick{margin-bottom:auto}
 .bc.ph .kick{color:var(--gold2)}
 .bc h3{font:500 clamp(23px,2vw,29px)/1.2 var(--serif);color:var(--green);margin:14px 0 8px}
