@@ -11,9 +11,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap&amp;subset=vietnamese">
-<link rel="stylesheet" href="../assets/site.css?v=3">
-<link rel="stylesheet" href="../assets/sub.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap&amp;subset=vietnamese">
+<link rel="stylesheet" href="../assets/site.css?v=4">
+<link rel="stylesheet" href="../assets/sub.css?v=4">
+<link rel="stylesheet" href="../assets/atelier.css?v=4">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -76,7 +77,7 @@
   <p class="mnav-foot">Nhà mẫu mở cửa 08:00–20:00 mỗi ngày · Hotline 0900&nbsp;000&nbsp;000 (số mẫu)</p>
 </nav>
 <main id="main">
-<section class="phero" style="--op:50% 55%">
+<section class="phero" data-sheet="03 · Tiện ích" style="--op:50% 55%">
   <div class="phero-img"><img src="https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=1800&amp;q=75" srcset="https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1776361964513-86fba5039617?auto=format&amp;fit=crop&amp;w=1800&amp;q=75 1800w" sizes="100vw" alt="Hồ bơi vô cực trên sân thượng lúc hoàng hôn" width="1800" height="1200" fetchpriority="high"></div>
   <div class="wrap">
     <nav class="crumb" aria-label="Đường dẫn"><a href="../">Tổng quan</a><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg><span aria-current="page">Tiện ích</span></nav>
@@ -159,7 +160,7 @@
     <div class="ftr-top">
       <div>
         <a class="logo" href="../" aria-label="Vọng Hà Residences"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#D4B27A" stroke-width="1" opacity=".55"/><path d="M11 12l9 17 9-17" fill="none" stroke="#D4B27A" stroke-width="1.6"/><path d="M9 31c3.6-1.6 7.2-1.6 11 0s7.4 1.6 11 0" fill="none" stroke="#E6CC9E" stroke-width="1.2"/></svg><span><b>Vọng&nbsp;Hà</b><small>Residences</small></span></a>
-        <p>Toà tháp căn hộ 46 tầng bên sông. Chủ đầu tư: Công ty CP Phát triển Hằng Sa (tên mẫu).</p>
+        <p>Ba toà tháp căn hộ trên bán đảo ven sông, cao nhất 46 tầng. Chủ đầu tư: Công ty CP Phát triển Hằng Sa (tên mẫu).</p>
         <div class="soc">
           <a href="#" aria-label="Facebook (liên kết mẫu)"><svg class="ic" aria-hidden="true"><use href="#i-fb"/></svg></a>
           <a href="#" aria-label="YouTube (liên kết mẫu)"><svg class="ic" aria-hidden="true"><use href="#i-yt"/></svg></a>
@@ -199,7 +200,7 @@
   </div>
 </footer>
 <a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
-<script src="../assets/site.js?v=3"></script>
+<script src="../assets/site.js?v=4"></script>
 <script>
 (function(){var VH=window.VH,hg=document.getElementById('hg'),pin=hg.querySelector('.hg-pin'),st=hg.querySelector('.hg-stage'),tr=document.getElementById('hgT'),P=document.getElementById('hgP'),Nn=document.getElementById('hgN'),cards=tr.children,mq=matchMedia('(min-width: 768px)'),raf=0,lw=0,max=0;
 function setup(){lw=innerWidth;if(VH.RM||!mq.matches){hg.classList.add('flat');pin.style.height='';tr.style.transform='';return}hg.classList.remove('flat');max=Math.max(0,tr.scrollWidth-innerWidth);pin.style.height=(max+innerHeight)+'px';upd()}
@@ -212,5 +213,6 @@ function on(i){L.forEach(function(x,k){x.classList.toggle('on',k===i)});B.forEac
 L.forEach(function(li,i){var b=li.querySelector('button');b.addEventListener('click',function(){on(i)});b.addEventListener('mouseenter',function(){on(i)});b.addEventListener('focus',function(){on(i)})});
 B.forEach(function(b,i){b.style.cursor='pointer';b.addEventListener('click',function(){on(i);L[i].querySelector('button').focus()})});on(0)})();
 </script>
+<script src="/assets/kt-demo.js?v=3" data-mau="Vọng Hà Residences" data-gia="12500000" data-loai="multi" data-nd="2500000" data-setup="1500000"></script>
 </body>
 </html>

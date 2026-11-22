@@ -81,14 +81,65 @@ if (ring && info) {
   show(1, true);
 }
 
-/* ---------- header: trong suốt khi đang bay, đặc khi ra khỏi đoạn bay ---------- */
-var hdr = $('#hdr'), pinEl = $('.fly-pin');
-if (hdr && pinEl) {
+/* ---------- header: trong suốt khi đang ở sa bàn hoặc đoạn bay ---------- */
+var hdr = $('#hdr'), pinEl = $('.fly-pin'), sbEl = $('#saban');
+if (hdr) {
   var hq = 0;
-  var hs = function () { hq = 0; hdr.classList.toggle('solid', pinEl.getBoundingClientRect().bottom < 64); };
+  var hs = function () {
+    hq = 0;
+    var over = false;
+    if (sbEl) { var r = sbEl.getBoundingClientRect(); if (r.bottom > 64) over = true; }
+    if (pinEl) { var p = pinEl.getBoundingClientRect(); if (p.top < 64 && p.bottom > 64) over = true; }
+    hdr.classList.toggle('over', over);
+  };
   window.addEventListener('scroll', function () { if (!hq) hq = requestAnimationFrame(hs); }, { passive: true }); hs();
 }
 
+/* ---------- tiêu đề che mặt nạ: từng chữ trồi lên khi thấy ---------- */
+$$('.mask').forEach(function (el) {
+  (function walk(node) {
+    Array.prototype.slice.call(node.childNodes).forEach(function (c) {
+      if (c.nodeType === 3) {
+        var f = d.createDocumentFragment();
+        c.textContent.split(/( +)/).forEach(function (w) {
+          if (!w) return;
+          if (/^ +$/.test(w)) { f.appendChild(d.createTextNode(' ')); return; }
+          var o = d.createElement('span'); o.className = 'mw'; var i = d.createElement('span'); i.textContent = w; o.appendChild(i); f.appendChild(o);
+        });
+        c.parentNode.replaceChild(f, c);
+      } else if (c.nodeType === 1) walk(c);
+    });
+  })(el);
+  $$('.mw > span', el).forEach(function (s, i) { s.style.transitionDelay = (i * 0.045).toFixed(3) + 's'; });
+  if (VH.HEADLESS || VH.RM || !('IntersectionObserver' in window)) { el.classList.add('in'); return; }
+  var mio = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { el.classList.add('in'); mio.disconnect(); } }, { threshold: .3 });
+  mio.observe(el);
+});
+
+/* ---------- một ngày: cuộn dọc → trượt ngang (máy tính); điện thoại: vuốt ngang tự nhiên ---------- */
+var day = $('#mot-ngay');
+if (day) {
+  var dpin = $('.day-pin', day), track = $('.day-track', day), bar = $('.day-bar i', day);
+  var dmq = window.matchMedia('(min-width: 900px)'), span = 0, dq = 0;
+  var dupd = function () {
+    dq = 0; if (!day.classList.contains('h')) return;
+    var r = dpin.getBoundingClientRect(), k = Math.min(1, Math.max(0, -r.top / (span || 1)));
+    if (r.bottom < 0 || r.top > window.innerHeight) return;
+    track.style.transform = 'translate3d(' + (-k * span).toFixed(1) + 'px,0,0)';
+    if (bar) bar.style.transform = 'scaleX(' + k.toFixed(3) + ')';
+  };
+  var dsize = function () {
+    if (!dmq.matches || VH.RM) { day.classList.toggle('h', false); dpin.style.height = ''; track.style.transform = ''; return; }
+    day.classList.toggle('h', true);
+    span = Math.max(0, track.scrollWidth - window.innerWidth + 80);
+    dpin.style.height = (window.innerHeight + span) + 'px';
+    dupd();
+  };
+  window.addEventListener('scroll', function () { if (!dq) dq = requestAnimationFrame(dupd); }, { passive: true });
+  var dlw = window.innerWidth;
+  window.addEventListener('resize', function () { if (window.innerWidth !== dlw) { dlw = window.innerWidth; dsize(); } });
+  window.addEventListener('load', dsize); dsize();
+}
 
 /* ---------- chọn tầng + view từ tầng X (dữ liệu mẫu) ---------- */
 var fpR = $('#fpR'), fpSvg = $('#fpSvg');
@@ -113,7 +164,7 @@ if (fpR && fpSvg) {
     rects.forEach(function (r) { var rf = +r.getAttribute('data-f'); r.classList.toggle('on', rf === f); r.classList.toggle('below', rf < f && rf >= 8); });
     fpR.setAttribute('aria-valuetext', 'Tầng ' + f + ', ' + o.type + ', còn ' + o.free + ', giá từ ' + o.price);
     // view: tầng thấp bị toà bên cạnh che và mờ hơn; tầng cao thấy xa, sáng hơn
-    if (fImg) fImg.style.transform = 'scale(' + (1.42 - p * 0.36).toFixed(3) + ') translate3d(0,' + (6 - p * 10).toFixed(2) + '%,0)';
+    if (fImg) fImg.parentNode.style.transform = window.innerWidth < 1200 ? 'none' : 'scale(' + (1.42 - p * 0.36).toFixed(3) + ') translate3d(0,' + (6 - p * 10).toFixed(2) + '%,0)';
     if (fBlock) fBlock.style.transform = 'translate3d(0,' + (p * 100).toFixed(1) + '%,0)';
     if (fHaze) fHaze.style.opacity = (0.55 - p * 0.55).toFixed(3);
   };

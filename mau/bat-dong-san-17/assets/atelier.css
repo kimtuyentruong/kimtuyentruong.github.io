@@ -1,0 +1,115 @@
+/* Vọng Hà Residences — hệ thiết kế "Phòng trưng bày đêm × bản vẽ kiến trúc" (bản 4).
+   Ý tưởng: mọi trang là một tờ bản vẽ trong phòng trưng bày tối: lưới kỹ thuật mảnh, số chương, toạ độ,
+   đường kích thước; góc vuông như mô hình kiến trúc; một màu nhấn đồng. Áp cho cả 6 trang. */
+:root{
+  --bg:#0E0C0A;--bg2:#12100D;--card:#17140F;--card2:#1D1914;--card3:#25201A;
+  --tx:#EFE8DC;--tx2:#BDB2A3;--tx3:#968B7D;
+  --gold:#D2AC6C;--gold-l:#E8CC9A;--gold-d:#9A7843;--gold-a:rgba(210,172,108,.13);
+  --line:rgba(239,232,220,.11);--line2:rgba(239,232,220,.2);
+  --paper:#ECE5D8;--ink:#1A1612;--ink2:#5B5248;
+  --cond:'Barlow Condensed','Inter',system-ui,sans-serif;
+  --r:3px;--rp:2px;
+  --grid:linear-gradient(rgba(239,232,220,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(239,232,220,.045) 1px,transparent 1px);
+  --fs-h2:clamp(2.1rem,4.4vw,3.9rem)
+}
+body{background:var(--bg)}
+.kt-badge{border-radius:999px}
+.totop{border-radius:50%}
+.ic{stroke-width:1.35}
+
+/* chữ: serif lớn, nhịp rộng; số kỹ thuật dùng Barlow Condensed */
+h1,h2,h3{letter-spacing:-.02em}
+.h2{line-height:1.02}
+.h2 em,.h1 em{font-style:italic;font-weight:300;color:var(--gold-l)}
+.eyebrow{font:500 13px/1.2 var(--cond);letter-spacing:.3em;color:var(--gold)}
+.eyebrow::before{width:40px}
+.num{font-feature-settings:"tnum","lnum"}
+
+/* chương: số + tên + đường kẻ + toạ độ (kiểu khung tên bản vẽ) */
+.chap{display:flex;align-items:center;gap:14px;font:500 13px/1 var(--cond);letter-spacing:.26em;text-transform:uppercase;color:var(--tx2);margin-bottom:clamp(20px,3vw,36px);min-width:0}
+.chap-n{color:var(--gold);font-size:15px;letter-spacing:.1em;padding:6px 8px;border:1px solid rgba(210,172,108,.5)}
+.chap-l{white-space:nowrap}
+.chap-rule{flex:1;height:1px;min-width:24px;background:linear-gradient(90deg,var(--line2),transparent);position:relative}
+.chap-rule::before,.chap-rule::after{content:"";position:absolute;top:-4px;width:1px;height:9px;background:var(--line2)}
+.chap-rule::before{left:0}.chap-rule::after{right:0}
+.chap-c{color:var(--tx3);white-space:nowrap;letter-spacing:.18em}
+@media (max-width:600px){.chap-c{display:none}.chap{gap:10px;font-size:12px}}
+
+/* nút: góc vuông, viền đồng, chữ đậm vừa */
+.btn{border-radius:var(--rp);letter-spacing:.04em;font-weight:600}
+.btn-gold{background:var(--gold);color:#140F08}
+.btn-gold:hover{background:var(--gold-l)}
+.btn-line{border-color:rgba(239,232,220,.34)}
+.link{border-bottom-color:rgba(210,172,108,.4)}
+
+/* header: chữ kỹ thuật, CTA viền mảnh */
+.hdr.scrolled{background:rgba(14,12,10,.97)}
+.nav a{font:500 15px/1 var(--cond);letter-spacing:.16em;text-transform:uppercase}
+.nav a[aria-current=page]::after{bottom:0}
+.hdr-cta,.hdr-cta-m{background:transparent;color:var(--gold-l);border:1px solid rgba(210,172,108,.6)}
+.hdr-cta:hover,.hdr-cta-m:hover{background:var(--gold);color:#140F08}
+.logo b{letter-spacing:.04em}
+
+/* khung ảnh: dấu góc kiểu bản in */
+.crop{position:relative}
+.crop::before,.crop::after{content:"";position:absolute;width:18px;height:18px;border:1px solid var(--gold);pointer-events:none;z-index:3;opacity:.75}
+.crop::before{left:-8px;top:-8px;border-right:0;border-bottom:0}
+.crop::after{right:-8px;bottom:-8px;border-left:0;border-top:0}
+
+/* khối thẻ chung: nền phẳng, viền mảnh, không bo tròn nhiều */
+.card,.panel,.filters,.ucard,.tbl-wrap,.empty,.cal,.hg-card,.review,.map-box,.dlg-box{border-radius:var(--r)}
+
+/* trang con: đầu trang dạng tờ bản vẽ, chữ bên trái, ảnh trong khung bên phải */
+.phero{min-height:min(86vh,820px);align-items:stretch;background:var(--bg);background-image:var(--grid);background-size:64px 64px}
+.phero::before{background:linear-gradient(90deg,var(--bg) 0%,rgba(14,12,10,.92) 40%,rgba(14,12,10,.15) 60%,rgba(14,12,10,0) 100%);z-index:-1}
+.phero-img{inset:calc(var(--hdr) + 28px) var(--gut) 56px 50%;overflow:hidden;clip-path:inset(0 0 0 0);animation:plate 1.4s cubic-bezier(.76,0,.24,1) both}
+.phero-img::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(239,232,220,.14)}
+.phero-img img{height:112%;animation:kbt 16s var(--ease) both}
+@keyframes kbt{from{transform:translate3d(0,-8%,0)}to{transform:translate3d(0,-2%,0)}}
+@keyframes plate{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.phero .wrap{display:flex;flex-direction:column;justify-content:flex-end;max-width:1400px;padding-top:calc(var(--hdr) + 48px);padding-bottom:64px}
+.phero .wrap>*{max-width:min(46%,620px)}
+.phero .h1{font-size:clamp(2.5rem,4.6vw,4.6rem);font-weight:400;line-height:1.02;max-width:min(46%,620px)}
+.phero .lead{color:var(--tx2)}
+.phero-meta{border-top:0;position:relative;padding-top:28px;gap:0}
+.phero-meta::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--line2)}
+.phero-meta div{padding:0 28px 0 0;margin-right:28px;border-right:1px solid var(--line)}
+.phero-meta div:last-child{border-right:0}
+.phero-meta b{font:500 42px/1 var(--cond);letter-spacing:.01em;color:var(--gold-l)}
+.phero-meta span{font:500 12px/1.4 var(--cond);letter-spacing:.2em;text-transform:uppercase;color:var(--tx3)}
+.phero[data-sheet]::after{content:"Bản vẽ " attr(data-sheet);position:absolute;right:calc(var(--gut) + 18px);bottom:72px;z-index:2;padding:8px 12px;background:var(--bg);border:1px solid rgba(210,172,108,.45);font:500 12px/1 var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-l)}
+.crumb{font:500 13px/1 var(--cond);letter-spacing:.2em;text-transform:uppercase}
+@media (prefers-reduced-motion:reduce){.phero-img{animation:none}}
+@media (max-width:899px){
+  .phero{display:block;min-height:0}
+  .phero::before{display:none}
+  .phero-img{position:relative;inset:auto;margin:calc(var(--hdr) + 12px) var(--gut) 0;height:46vh;min-height:260px}
+  .phero .wrap{padding-top:28px;padding-bottom:48px}
+  .phero .wrap>*,.phero .h1{max-width:none}
+  .phero[data-sheet]::after{top:calc(var(--hdr) + 26px);bottom:auto;right:calc(var(--gut) + 12px);font-size:11px}
+  .phero-meta div{padding-right:18px;margin-right:18px}
+  .phero-meta b{font-size:34px}
+}
+
+/* tiêu đề mục ở trang con: eyebrow thành dòng chương có thước kẻ */
+.sec-head{border-top:1px solid var(--line);padding-top:28px;position:relative}
+.sec-head::before{content:"";position:absolute;left:0;top:-4px;width:1px;height:9px;background:var(--gold)}
+.sec.bg2,.bg2{background-color:var(--bg2);background-image:var(--grid);background-size:64px 64px}
+.ftr{background:#0B0A08;background-image:var(--grid);background-size:64px 64px;border-top:1px solid var(--line)}
+.ftr h3{font:500 13px/1.2 var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+
+/* bảng, chip, ô nhập: thẳng góc, chữ kỹ thuật */
+.chip{border-radius:var(--rp);font-family:var(--cond);font-size:15px;letter-spacing:.08em}
+.inp{border-radius:var(--rp)}
+.tbl th{font:500 13px/1.2 var(--cond);letter-spacing:.18em;text-transform:uppercase}
+.tag{border-radius:var(--rp);font-family:var(--cond);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+
+/* hiện dần: ảnh mở bằng clip-path */
+.rv-clip{clip-path:inset(0 0 100% 0);transition:clip-path 1.2s cubic-bezier(.76,0,.24,1)}
+.rv-clip.in{clip-path:inset(0 0 0 0)}
+.headless .rv-clip,.rm .rv-clip{clip-path:none}
+.mnav .btn-gold[aria-current]{color:#140F08}
+.gal a:hover img,.hg-card:hover img,.dp:hover .dp-img img{transform:none}
+@media (max-width:899px){.phero .h1{font-size:clamp(2.1rem,9vw,2.6rem)}}
+.tbl td:nth-child(5){min-width:250px}
+.tbl-wrap>.tbl{width:max(100%,860px)}
