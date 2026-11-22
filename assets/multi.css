@@ -1233,3 +1233,29 @@
 /* 23/11/2026 (Tuyền): chữ sau "tên" trong tiêu đề SEO & AIO tự đổi (cửa hàng, nhà hàng, tiệm nail…); chỉ đổi độ mờ, không transform */
 .svc-hd h1 .rot{transition:opacity .26s ease}
 .svc-hd h1 .rot.out{opacity:0}
+/* 23/11/2026 (Tuyền: "nhiều chữ quá, thêm hình vẽ dẫn dắt có hiệu ứng"): điện thoại có biểu đồ tăng trưởng tự vẽ cho lộ trình, hình nhỏ cho từng kết quả; nút gạt chữ ngắn */
+.tg-sw .sm,.tl-chart,.seox-res .rm{display:none}
+.tl-chart .gr{fill:none;stroke:rgba(255,255,255,.07);stroke-width:1}
+.tl-chart .ar{fill:url(#tlg);opacity:0;transition:opacity 1s ease 1.2s}
+.tl-chart .ln{fill:none;stroke:#FF8A3D;stroke-width:3.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.4,.1,.2,1) .2s}
+.tl-chart .dt circle{fill:#1A0F0B;stroke:#FFB070;stroke-width:3;transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .4s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(.3s + var(--i)*.28s)}
+.tl-chart .dt text{fill:#A99C94;font:700 10.5px var(--body);text-anchor:middle}
+.tl-chart .fl{opacity:0;transition:opacity .5s ease 2.1s}.tl-chart .fl rect{fill:#FF6A2B}.tl-chart .fl text{fill:#fff;font:800 10.5px var(--body);text-anchor:middle}
+.seox-tl.in .tl-chart .ln{stroke-dashoffset:0}.seox-tl.in .tl-chart .ar,.seox-tl.in .tl-chart .fl{opacity:1}.seox-tl.in .tl-chart .dt circle{transform:scale(1)}
+.seox-res .rm .b1,.seox-res .rm .b2{fill:#5C4F49;transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);transition:transform .8s cubic-bezier(.3,1.3,.4,1) .3s}
+.seox-res .rm .b2{fill:#FF6A2B;transition-delay:.7s}
+.seox-res .rm .u{fill:none;stroke:#FF8A3D;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s ease .3s}
+.seox-res .rm .h{fill:none;stroke:#FF8A3D;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .3s ease 1.4s}
+.seox-res .rm .sa{fill:rgba(255,106,43,.22);opacity:0;transition:opacity .8s ease 1s}
+.seox-res.go .rm .b1,.seox-res.go .rm .b2{transform:scaleY(1)}.seox-res.go .rm .u{stroke-dashoffset:0}.seox-res.go .rm .h,.seox-res.go .rm .sa{opacity:1}
+@media (max-width:600px){
+  .tg-sw .lg{display:none}.tg-sw .sm{display:inline}
+  .tl-chart{display:block;width:100%;height:auto;margin:14px 0 4px}
+  .tline{gap:10px 12px;margin-top:10px}
+  .tline li > span{display:none}
+  .tline em{font-size:11px}.tline b{font-size:14.5px}
+  .seox-res a{display:grid;grid-template-columns:58px minmax(0,1fr);column-gap:12px;align-items:center}
+  .seox-res .rm{display:block;grid-row:1/3;width:58px;height:44px}
+  .seox-res b{font-size:22px}
+}
+@media (prefers-reduced-motion:reduce){.tl-chart *,.seox-res .rm *{transition:none!important;stroke-dashoffset:0!important;opacity:1!important;transform:none!important}}
