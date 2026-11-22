@@ -1151,3 +1151,14 @@
 .tools-band .mq-l.mq-on{height:72px}
 .tools-band .mq-l.mq-on li{top:4px}
 @media (max-width:760px){.tools-band .mq-l li{width:54px;height:54px;border-radius:15px}.tools-band .mq-l li svg{width:30px;height:30px}.tools-band .mq-l.mq-on{height:62px}}
+/* v37 (23/11/2026, Tuyền: dải công cụ không quan trọng đến mức chiếm nhiều chỗ, làm gọn): dải mỏng, không nền riêng, logo nhỏ */
+.tools-band{margin-top:36px;padding:14px 0 16px;background:none;border:0}
+.tools-band .tb-h{margin:0 0 10px;font-family:var(--body);font-weight:600;font-size:13.5px;letter-spacing:.02em;color:var(--muted)}
+.tools-band .mq::before{background:linear-gradient(90deg,var(--bg),rgba(10,7,6,0))}
+.tools-band .mq::after{background:linear-gradient(270deg,var(--bg),rgba(10,7,6,0))}
+.tools-band .mq-l{gap:10px 18px}
+.tools-band .mq-l li{width:40px;height:40px;border-radius:11px;box-shadow:none;opacity:.92}
+.tools-band .mq-l li svg{width:22px;height:22px}
+.tools-band .mq-l.mq-on{height:46px}
+.tools-band .mq-l.mq-on li{top:3px}
+@media (max-width:760px){.tools-band{margin-top:28px}.tools-band .mq-l li{width:36px;height:36px;border-radius:10px}.tools-band .mq-l li svg{width:20px;height:20px}.tools-band .mq-l.mq-on{height:42px}}
