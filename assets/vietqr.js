@@ -59,7 +59,7 @@
     });
     lib(function (err) {
       var q = box.querySelector('.kp-qr');
-      if (err || !window.qrcode) { q.innerHTML = '<span class="kp-wait">Chưa tải được mã QR. Bạn chuyển khoản theo thông tin bên dưới giúp mình nhé.</span>'; return; }
+      if (err || !window.qrcode) { q.innerHTML = '<span class="kp-wait">Chưa tải được mã QR. Anh/chị chuyển khoản theo thông tin bên dưới giúp tôi.</span>'; return; }
       var qr = window.qrcode(0, 'M'); qr.addData(payload(amount, memo)); qr.make();
       q.innerHTML = qr.createSvgTag({ cellSize: 6, margin: 3, scalable: true }) +
         '<span class="kp-logo">VietQR · quét bằng app ngân hàng bất kỳ</span>';

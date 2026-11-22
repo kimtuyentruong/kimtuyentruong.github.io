@@ -283,7 +283,7 @@
     steps.forEach(function (f, i) { f.classList.toggle('on', i === view); f.classList.toggle('done', !!ans[i] && i !== view); });
     [].forEach.call(prog, function (li, i) { li.classList.toggle('on', i === view); li.classList.toggle('done', !!ans[i] && i !== view); });
     sum.classList.toggle('on', view === 3);
-    if (view === 3) sum.innerHTML = '<b>Câu trả lời của bạn</b><ol>' + steps.map(function (f, i) {
+    if (view === 3) sum.innerHTML = '<b>Câu trả lời của anh/chị</b><ol>' + steps.map(function (f, i) {
       var c = f.querySelector('input:checked'), l = f.querySelector('h3');
       return '<li><span>' + esc(l.textContent.trim()) + '</span><em>' + esc(c ? c.parentNode.textContent.trim() : '') + '</em><button type="button" data-go="' + i + '">Đổi</button></li>';
     }).join('') + '</ol>';
@@ -301,7 +301,7 @@
       else if (ans[2] === 'mid' && (k === 'lp' || k === 'mau')) k = 'cb';
       main = D[k];
     }
-    var html = '<div class="rec"><small>Gói hợp với bạn</small><h3>' + esc(main.n) + '</h3><p class="for">' + esc(main.f) + '</p><b class="inc-h">Gói này gồm</b>' + list(main);
+    var html = '<div class="rec"><small>Gói phù hợp</small><h3>' + esc(main.n) + '</h3><p class="for">' + esc(main.f) + '</p><b class="inc-h">Gói này gồm</b>' + list(main);
     if (add) html += '<div class="addon"><b>Nên làm kèm: ' + esc(add.n) + '</b><p>' + esc(add.f) + '</p><a href="' + add.u + '">Xem giá gói SEO &amp; AIO&nbsp;&#x2192;&#xFE0E;</a></div>';
     html += '<p class="cta"><a class="btn" href="' + main.u + '">Xem giá gói này</a><a class="btn ghost" href="/lien-he/?goi=' + encodeURIComponent(main.n) + '">Nhận tư vấn</a></p>' +
       '<button type="button" class="again">Chọn lại từ đầu</button></div>';
@@ -344,7 +344,7 @@
   if (ng && f.nganh) f.nganh.value = ng;
   if (goi && f.goi) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf(goi) === 0) f.goi.value = o.value || o.text; });
   if (dv && f.goi && /SEO|Google|AIO|ChatGPT/.test(dv)) [].forEach.call(f.goi.options, function (o) { if (o.text.indexOf('SEO & AIO Khởi Đầu') === 0) f.goi.value = o.value || o.text; });
-  var msg = mau ? 'Mình thích mẫu "' + mau + '", muốn làm website theo mẫu này.' : dv ? 'Mình quan tâm dịch vụ ' + dv + '.' : '';
+  var msg = mau ? 'Tôi thích mẫu "' + mau + '", muốn làm website theo mẫu này.' : dv ? 'Tôi quan tâm dịch vụ ' + dv + '.' : '';
   if (msg && f.nd && !f.nd.value) f.nd.value = msg;
   if (mau || ng || goi || dv) { var h = f.querySelector('h2'); if (h) h.textContent = mau ? 'Nhận báo giá theo mẫu ' + mau : 'Gửi yêu cầu báo giá'; }
   if (mau) {
@@ -375,10 +375,10 @@
       o.addEventListener('change', upd); o.addEventListener('input', upd); upd();
       f.addEventListener('submit', function (e) { if (f.email.required && !f.email.value.trim()) { e.preventDefault(); e.stopImmediatePropagation(); f.email.focus(); } }, true);
       var h0 = f.querySelector('h2'); if (h0) h0.textContent = 'Chọn mẫu ' + mau;
-      if (f.nd && f.nd.value.indexOf('Mình thích mẫu') === 0) f.nd.value = '';
+      if (f.nd && (f.nd.value.indexOf('Tôi thích mẫu') === 0 || f.nd.value.indexOf('Mình thích mẫu') === 0)) f.nd.value = '';
     } else {
       var box = document.createElement('div'); box.className = 'lh-pick';
-      var b = document.createElement('b'); b.textContent = 'Mẫu bạn chọn: ' + mau; box.appendChild(b);
+      var b = document.createElement('b'); b.textContent = 'Mẫu anh/chị chọn: ' + mau; box.appendChild(b);
       box.insertAdjacentHTML('beforeend', '<span>Website Theo Mẫu <strong>chỉ từ 2.000.000đ</strong>: nhận source code và hướng dẫn cài, có thể thêm nhập nội dung hoặc cài lên hosting.</span>' +
         '<span class="lk"><a href="/mau-website/">Xem mẫu khác</a><a href="/dich-vu/thiet-ke-website/#bang-gia">So sánh các gói</a></span>');
       var h2 = f.querySelector('h2'); if (h2) h2.insertAdjacentElement('afterend', box);
