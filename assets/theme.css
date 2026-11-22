@@ -618,3 +618,17 @@ svg.zl{stroke:none !important;fill:none}
 .mnav li.s a[aria-current="page"],.mnav li.s a[aria-current="page"] b{color:var(--flame)}
 .mnav li.s-last{margin-bottom:14px;padding-bottom:0}
 .mnav li.s-last + li{border-top:1px solid var(--line)}
+
+/* v31 (22/11/2026, Tuyền: chữ phụ trong menu Dịch vụ nhỏ, mờ): 3 mục cùng kiểu, icon, chữ phụ 15px sáng; menu điện thoại hiện chữ phụ gọn */
+.nav .ddm{min-width:340px;width:max-content;gap:6px;padding:10px}
+.nav nav .ddm a.svc{display:grid;grid-template-columns:38px auto;align-items:center;column-gap:12px;padding:12px 14px}
+.nav nav .ddm a.svc i{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:rgba(255,138,61,.14);color:#FFB070;transition:background .2s,color .2s}
+.nav nav .ddm a.svc span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.nav nav .ddm a.svc b{font:700 16px/1.25 var(--body);color:#fff;white-space:nowrap}
+.nav nav .ddm a.svc small{font-size:15px;line-height:1.4;color:#E6DAD3;white-space:nowrap}
+.nav nav .ddm a.svc:hover i,.nav nav .ddm a.svc:focus-visible i,.nav nav .ddm a.svc[aria-current="page"] i{background:var(--grad);color:#fff}
+.nav nav .ddm a.svc:focus-visible{outline:2px solid var(--flame);outline-offset:2px}
+.mnav li.s a i{display:none}
+.mnav li.s a span{display:flex;flex-direction:column;gap:2px;min-width:0}
+.mnav li.s a small{display:block;font:500 14.5px/1.35 var(--body);color:#DCCFC8;letter-spacing:0}
+.mnav li.s a{min-height:56px;padding-top:8px;padding-bottom:8px}
