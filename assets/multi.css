@@ -1139,3 +1139,15 @@
 }
 @media (prefers-reduced-motion:reduce){.w5-list i{animation:none !important}}
 .tools-band,.band-warm{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+/* v36 (23/11/2026, Tuyền trên iPhone: nền kem lệch tông tối; chỉ logo, đúng màu thương hiệu, không chữ) */
+.tools-band{background:radial-gradient(60% 140% at 50% 0%,rgba(255,106,43,.16),rgba(255,106,43,0) 70%),linear-gradient(180deg,#1A0F0B,#0F0907);border-top:1px solid rgba(255,138,61,.2);border-bottom:1px solid rgba(255,138,61,.2);color:var(--ink)}
+.tb-h{color:var(--ink)}
+.tools-band .mq::before{background:linear-gradient(90deg,#150c09,rgba(21,12,9,0))}
+.tools-band .mq::after{background:linear-gradient(270deg,#150c09,rgba(21,12,9,0))}
+.tools-band .mq-l{gap:16px 28px}
+.tools-band .mq-l li{display:grid;place-items:center;width:64px;height:64px;border-radius:18px;background:#FFF8F2;box-shadow:0 10px 24px -14px rgba(0,0,0,.7);transition:transform .25s}
+.tools-band .mq-l li svg{width:34px;height:34px}
+.tools-band .mq-l li:hover{transform:translateY(-3px)}
+.tools-band .mq-l.mq-on{height:72px}
+.tools-band .mq-l.mq-on li{top:4px}
+@media (max-width:760px){.tools-band .mq-l li{width:54px;height:54px;border-radius:15px}.tools-band .mq-l li svg{width:30px;height:30px}.tools-band .mq-l.mq-on{height:62px}}
