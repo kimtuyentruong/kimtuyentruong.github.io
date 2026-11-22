@@ -9,12 +9,13 @@
 
 ## Pricing (Vietnam, VND)
 - Landing Page: 3.500.000đ, 7–10 days
-- Website Theo Mẫu (ready-made template, rebranded): 5.000.000đ, delivered in 2–3 days once all content is received
+- Website Theo Mẫu (ready-made template, rebranded): from 2.000.000đ (each template has its own price), delivered in 2–3 days once all content is received
 - Website Cơ Bản (business website, up to 7 pages): 9.500.000đ, 1–2 weeks
 - Website Doanh Nghiệp (full-featured, up to 20 pages, 5 SEO/AIO blog posts included; recommended): 18.500.000đ, 2–4 weeks
 - Website Bán Hàng (online store with cart, checkout, order management): 22.500.000đ, 2–4 weeks
 - Custom/large projects: quote on request
 - SEO & AIO monthly service (minimum 3 months): Khởi Đầu 10.500.000đ/month, Tăng Trưởng 25.000.000đ/month, Doanh Nghiệp Lớn 45.000.000đ/month — https://kimtuyentruong.github.io/dich-vu/seo-aio/
+- Combo SEO & AIO + new website: sign any SEO & AIO package together with a new website and the website design fee is 20% off (Landing Page 2.800.000đ, Website Cơ Bản 7.600.000đ, Website Doanh Nghiệp 14.800.000đ, Website Bán Hàng 18.000.000đ); the monthly SEO & AIO fee stays the same. Not for Website Theo Mẫu or custom projects — https://kimtuyentruong.github.io/dich-vu/seo-aio/#combo-seo-web
 - Price list: https://kimtuyentruong.github.io/dich-vu/thiet-ke-website/#bang-gia
 - All packages include first-year hosting and domain, SSL, copywriting, SEO, AIO, Google tools setup, 1-year technical warranty (then 1.500.000đ/year) and 3 social banners.
 - Payment in 3 installments: 50% before work starts, 30% when the site is finished, 20% at final handover.
@@ -50,7 +51,7 @@
 - [Thiết kế website công ty luật](https://kimtuyentruong.github.io/mau-website/luat/): Lĩnh vực hành nghề, hồ sơ luật sư, bài viết pháp lý và đặt lịch tư vấn, trình bày chỉn chu, đúng quy định về quảng cáo dịch vụ pháp lý. Mẫu có sẵn chỉ từ 2.000.000đ, thiết kế riêng từ 9.500.000đ.
 - [Thiết kế website dịch vụ](https://kimtuyentruong.github.io/mau-website/dich-vu/): Bảng giá theo hạng mục, khu vực phục vụ và đặt lịch gọi thợ, tư vấn nhanh qua Zalo. Mẫu có sẵn chỉ từ 2.000.000đ, thiết kế riêng từ 9.500.000đ.
 - [Thiết kế website giáo dục & cộng đồng](https://kimtuyentruong.github.io/mau-website/giao-duc/): Khoá học, lịch khai giảng, giảng viên và đăng ký học thử, cho trung tâm, khoá học online và tổ chức cộng đồng. Mẫu có sẵn chỉ từ 2.000.000đ, thiết kế riêng từ 9.500.000đ.
-- [SEO & AIO hằng tháng](https://kimtuyentruong.github.io/dich-vu/seo-aio/): 3 gói 10.500.000đ, 25.000.000đ, 45.000.000đ mỗi tháng, tối thiểu 3 tháng
+- [SEO & AIO hằng tháng](https://kimtuyentruong.github.io/dich-vu/seo-aio/): 3 gói 10.500.000đ, 25.000.000đ, 45.000.000đ mỗi tháng, tối thiểu 3 tháng; combo kèm website mới giảm 20% phí làm web (Landing Page 2.800.000đ, Cơ Bản 7.600.000đ, Doanh Nghiệp 14.800.000đ, Bán Hàng 18.000.000đ)
 - [Bảng giá](https://kimtuyentruong.github.io/dich-vu/thiet-ke-website/#bang-gia): 6 gói (Landing Page 3.500.000đ, Theo Mẫu từ 2.000.000đ, Cơ Bản 9.500.000đ, Doanh Nghiệp 18.500.000đ, Bán Hàng 22.500.000đ, đặc thù liên hệ), thanh toán 50% – 30% – 20%, quy trình 8 bước
 - [Kinh nghiệm](https://kimtuyentruong.github.io/kinh-nghiem/): hành trình từ 2019, chứng chỉ
 - [Kiến thức thiết kế website, SEO & AIO](https://kimtuyentruong.github.io/kien-thuc/): bài viết về thiết kế website theo ngành, SEO theo khu vực, AIO và chi phí
