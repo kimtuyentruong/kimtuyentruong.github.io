@@ -497,3 +497,48 @@
   document.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && d.open) { d.open = false; d.querySelector('summary').focus(); } });
 })();
+/* Glossary tooltip (22/11/2026, Tuyền: giải thích từ kỹ thuật ngay tại chỗ). Reusable on any page:
+   <span class="tip" data-tip="Giải thích một dòng">SEO</span>  (build.py: tip(term, text))
+   Adds a small "?" button (SVG) after the term. Hover (mouse) or keyboard focus shows the popover; tap/click on "?" pins it;
+   Esc, tap outside or blur closes. One popover per term, appended to <body> (no layout shift), clamped inside the viewport. */
+(function () {
+  var tips = document.querySelectorAll('.tip[data-tip]'); if (!tips.length) return;
+  var Q = '<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="7.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6.1 6.2a2 2 0 1 1 2.6 1.9c-.5.2-.7.5-.7 1v.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="11.6" r=".95" fill="currentColor"/></svg>';
+  var hover = matchMedia('(hover: hover) and (pointer: fine)').matches, open = null;
+  function place(t) {
+    var p = t._pop, r = t.getBoundingClientRect(), vw = document.documentElement.clientWidth, w = Math.min(280, vw - 24);
+    p.style.width = w + 'px'; p.style.left = '0px'; p.style.top = '0px';
+    var h = p.offsetHeight, cx = r.left + r.width / 2, left = Math.max(12, Math.min(cx - w / 2, vw - w - 12));
+    var above = r.top - h - 12 > 8, top = above ? r.top - h - 10 : r.bottom + 10;
+    p.classList.toggle('below', !above);
+    p.style.left = (left + scrollX) + 'px'; p.style.top = (top + scrollY) + 'px';
+    p.style.setProperty('--ax', Math.max(14, Math.min(w - 14, cx - left)) + 'px');
+  }
+  function show(t, pin) {
+    if (open && open !== t) hide(open, true);
+    open = t; t._pin = t._pin || !!pin; t._pop.hidden = false; place(t);
+    requestAnimationFrame(function () { t._pop.classList.add('on'); });
+    t._btn.setAttribute('aria-expanded', 'true');
+  }
+  function hide(t, force) {
+    if (!t || (t._pin && !force)) return;
+    t._pin = false; t._pop.classList.remove('on'); t._pop.hidden = true; t._btn.setAttribute('aria-expanded', 'false');
+    if (open === t) open = null;
+  }
+  [].forEach.call(tips, function (t, i) {
+    var id = 'tip-' + i, p = document.createElement('span'), b = document.createElement('button');
+    p.className = 'tip-pop'; p.id = id; p.setAttribute('role', 'tooltip'); p.hidden = true; p.textContent = t.getAttribute('data-tip');
+    document.body.appendChild(p);
+    b.type = 'button'; b.className = 'tip-q'; b.innerHTML = Q; b.setAttribute('aria-label', 'Giải thích: ' + t.textContent.trim());
+    b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-describedby', id);
+    t.appendChild(b); t.setAttribute('aria-describedby', id); t._pop = p; t._btn = b;
+    b.addEventListener('click', function (e) { e.stopPropagation(); if (open === t && t._pin) hide(t, true); else show(t, true); });
+    b.addEventListener('focus', function () { show(t); });
+    b.addEventListener('blur', function () { hide(t); });
+    if (hover) { t.addEventListener('mouseenter', function () { show(t); }); t.addEventListener('mouseleave', function () { hide(t); }); }
+  });
+  document.addEventListener('click', function (e) { if (open && !open.contains(e.target) && !open._pop.contains(e.target)) hide(open, true); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && open) { var t = open; hide(t, true); t._btn.focus(); } });
+  addEventListener('scroll', function () { if (open) place(open); }, { passive: true });
+  addEventListener('resize', function () { if (open) hide(open, true); });
+})();
