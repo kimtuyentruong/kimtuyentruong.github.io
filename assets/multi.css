@@ -1162,3 +1162,87 @@
 .tools-band .mq-l.mq-on{height:46px}
 .tools-band .mq-l.mq-on li{top:3px}
 @media (max-width:760px){.tools-band{margin-top:28px}.tools-band .mq-l li{width:36px;height:36px;border-radius:10px}.tools-band .mq-l li svg{width:20px;height:20px}.tools-band .mq-l.mq-on{height:42px}}
+/* 23/11/2026: bảng so sánh 12 dòng nằm trong ô bấm mở dưới mục "Bấm thử" (Tuyền: hai mục là một) */
+.seox-cmp2.tg-more{margin-top:18px}
+.tg-more > summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-radius:16px;border:1px solid rgba(255,138,61,.45);background:rgba(255,138,61,.07);color:var(--ink);font:700 16px var(--body);cursor:pointer}
+.tg-more > summary::-webkit-details-marker{display:none}
+.tg-more > summary .pm{position:relative;flex:none;width:26px;height:26px;border-radius:50%;background:var(--grad)}
+.tg-more > summary .pm::before,.tg-more > summary .pm::after{content:"";position:absolute;left:7px;right:7px;top:12px;height:2px;border-radius:1px;background:#fff;transition:transform .25s}
+.tg-more > summary .pm::after{transform:rotate(90deg)}
+.tg-more[open] > summary .pm::after{transform:rotate(0)}
+.tg-more > .lead{margin:16px 0 0;font-size:14.5px;color:var(--muted)}
+.tg-more .cmp2{margin-top:12px}
+/* 23/11/2026: điện thoại gọn hơn (Tuyền: "scroll rất nhiều, có mục phải scroll ngang"): ít khoảng trống, không cuộn ngang, chi tiết gói trong "Xem đủ hạng mục" */
+@media (max-width:600px){
+  .seox-story,.seox-tg,.seox-tl,.seox-cta,.seox-why5,.post-faq.seox-faq{margin-top:40px}
+  .band-warm{margin-top:40px;padding:34px 0 36px}
+  .sx-hd h2{font-size:23px;line-height:1.2;margin:6px 0 6px}
+  .sx-hd .lead{font-size:15px;line-height:1.5}
+  .svc-hd .kt-hd h1{font-size:28px;line-height:1.18}
+  .svc-hd .kt-hd > p:not(.cta){font-size:15.5px;line-height:1.55}
+  .svc-trust{margin-top:14px;gap:6px 14px}.svc-trust li{font-size:13px}
+  .sxd-phone{height:400px;width:270px;padding:14px 12px;border-radius:32px}
+  /* story: 3 hàng dọc, ảnh nhỏ bên trái */
+  .strip{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible;margin:18px 0 0;padding:0;gap:10px}
+  .strip li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:12px;align-items:center}
+  .strip .pic{padding:4px;border-radius:12px}
+  .strip p{margin:0;font-size:14.5px;line-height:1.45}
+  .punch{margin-top:16px;font-size:17px}
+  /* toggle */
+  .tg-sw{margin:16px 0 12px}
+  .tg-grid{gap:8px}.tw{padding:11px;border-radius:14px}.tw .cap{margin-bottom:8px}
+  .gauge{max-width:120px}.tw > b{margin-top:6px;font-size:13px}
+  .w-g ol,.w-ai ul{gap:5px}
+  .tg-more > summary{padding:12px 14px;font-size:15px}
+  /* lộ trình: lưới 2 cột, không cuộn ngang */
+  .tline{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:visible;margin:18px 0 0;padding:0;gap:14px 12px}
+  .tline li{padding:0 0 0 12px;border-left:3px solid rgba(255,138,61,.55)}
+  .tline li::before,.tline li:not(:last-child)::after{display:none}
+  .tline em{font-size:11.5px;margin-bottom:2px}.tline b{font-size:15.5px;margin-bottom:2px}.tline li > span{font-size:13px;line-height:1.4}
+  .res-h{margin:24px 0 8px}
+  .seox-res{grid-template-columns:minmax(0,1fr);gap:12px}
+  .seox-res a{padding:0;border-left:0}
+  .seox-res b{font-size:24px;margin-bottom:2px}.seox-res span{font-size:13px;line-height:1.4}
+  /* bảng giá: gọn, các nhóm Website/Google/AI/Báo cáo hiện khi mở "Xem đủ hạng mục" */
+  .sec-h{margin-bottom:18px}.sec-h h2{font-size:23px;line-height:1.2}
+  .plans.sps{gap:14px}
+  .plan.sp{padding:20px 18px;gap:10px;border-radius:18px}
+  .plan.sp h3{font-size:22px}
+  .plan.sp .for{font-size:13.5px}
+  .plan.sp .sp-key{padding:9px 12px;font-size:14px}.plan.sp .sp-key b{font-size:18px}
+  .plan.sp ul.sg{display:none;order:1}
+  .plan.sp:has(.sp-more[open]) ul.sg{display:flex;flex-direction:column}
+  .plan.sp .sp-deal,.plan.sp .sp-fit{order:2}.plan.sp > .cta{order:3}
+  .plan.sp .sp-fit{margin:0;font-size:13.5px}
+  /* combo */
+  .combo{padding:20px 14px;gap:16px;margin-top:24px}
+  .cb-txt > p:not(.cb-step){display:none}
+  .cb-txt h3{font-size:20px;line-height:1.25}
+  .cb-out{padding:16px}
+  .cb-note{font-size:12.5px;line-height:1.45}
+  /* vì sao chọn tôi */
+  .w5{gap:18px}
+  .w5-me{display:grid;grid-template-columns:76px minmax(0,1fr);column-gap:14px;text-align:left;justify-items:start;align-items:center}
+  .w5-me::before{display:none}
+  .w5-ph{grid-row:1/4;width:76px;height:76px;padding:3px}
+  .w5-me b{margin-top:0;font-size:19px}.w5-me span,.w5-me a{font-size:13.5px}.w5-me a{margin-top:0}
+  .w5-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 12px}
+  .w5-list li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .w5-list i{width:34px;height:34px}
+  .w5-list b{font-size:15px;margin:0 0 2px}.w5-list span:not(.tip){font-size:13px;line-height:1.4}
+  .w5-stats{margin-top:24px;row-gap:16px}
+  .w5-stats b{font-size:26px}.w5-stats span{font-size:13px;margin-top:2px}
+  .w5-prom{margin-top:18px;gap:8px;font-size:14.5px}
+  /* web + FAQ + cuối trang */
+  .seox-web{margin-top:36px;padding:18px 14px;gap:16px}
+  .seox-web h2{font-size:22px;line-height:1.22}
+  .seox-faq h2{font-size:22px}
+  .seox-faq .qa summary{padding-top:12px;padding-bottom:12px}
+  .svc-read,.svc-more{margin-top:36px}
+}
+/* 23/11/2026 (Tuyền): logo gốc không nền vuông, sát nhau hơn, hai bên mờ dần */
+.tools-band .mq-l li,.tools-band .mq-l li:hover{width:30px;height:30px;border-radius:0;background:none;box-shadow:none;opacity:1}
+.tools-band .mq-l li svg{width:28px;height:28px}
+.tools-band .mq-l.mq-on{height:36px}
+.tools-band .mq::before,.tools-band .mq::after{width:18%;z-index:2;pointer-events:none}
+@media (max-width:760px){.tools-band .mq-l li,.tools-band .mq-l li:hover{width:26px;height:26px}.tools-band .mq-l li svg{width:24px;height:24px}.tools-band .mq-l.mq-on{height:32px}.tools-band .mq::before,.tools-band .mq::after{width:22%}}
