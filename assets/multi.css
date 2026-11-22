@@ -1304,3 +1304,7 @@
 }
 @keyframes stbar{to{transform:scaleX(1)}}
 @media (prefers-reduced-motion:reduce){.st-bar i.cur::after{animation:none;transform:scaleX(1)}}
+/* 23/11/2026 fix iPhone: Safari không ẩn chữ gradient (background-clip:text) khi mờ dần → chữ chồng nhau. Chữ đổi dùng màu cam đặc + ẩn hẳn (visibility) chữ không hiện */
+.svc-hd.seo .kt-hd h1 .rotw .gl{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#FF7A35;-webkit-text-fill-color:#FF7A35}
+.svc-hd h1 .ri{visibility:hidden;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.8,.2,1),visibility 0s linear .6s}
+.svc-hd h1 .ri.on,.svc-hd h1 .ri.off{visibility:visible;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.8,.2,1),visibility 0s}

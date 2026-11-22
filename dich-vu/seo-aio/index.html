@@ -23,7 +23,7 @@
 <meta name="twitter:image" content="https://kimtuyentruong.github.io/assets/img/kien-thuc/dich-vu.jpg">
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png?v=2"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=2">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
-<link rel="stylesheet" href="/assets/multi.css?v=43">
+<link rel="stylesheet" href="/assets/multi.css?v=44">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css?v=12">
 <link rel="stylesheet" href="/assets/theme.css?v=33">
@@ -75,9 +75,9 @@ var tc=document.querySelector('.tl-chart'),tcap=document.querySelector('.tl-cap'
 function tpick(i){tk=i;[].forEach.call(dts,function(g,j){g.classList.toggle('act',j===i)});tcap.classList.remove('sw');void tcap.offsetWidth;tcap.classList.add('sw');tcap.innerHTML='<em>'+TD[i][0]+'</em><b>'+TD[i][1]+'</b><span>'+TD[i][2]+'</span>'}
 [].forEach.call(dts,function(g,j){g.addEventListener('click',function(){tman=true;tpick(j)})});tpick(0);
 seen(tc,function(v){tvis=v},0);setInterval(function(){if(tvis&&!tman&&!RM&&!document.hidden)tpick((tk+1)%TD.length)},2800)}
-var rw=document.querySelector('h1 .rotw');if(rw&&!RM){var W=rw.getAttribute('data-w').split('|'),it=[rw.firstElementChild],wi=0,rv=false;
-W.slice(1).forEach(function(w){var e=document.createElement('span');e.className='ri';e.setAttribute('aria-hidden','true');e.innerHTML='<span class="gl">tên '+w.replace(/ /g,'&nbsp;')+'</span> của&nbsp;bạn';rw.appendChild(e);it.push(e)});
-setInterval(function(){if(!rv||document.hidden)return;var a=it[wi];wi=(wi+1)%it.length;var b=it[wi];a.classList.remove('on');a.classList.add('off');b.classList.remove('off');b.classList.add('on');setTimeout(function(){a.classList.remove('off')},700)},2600);seen(rw,function(v){rv=v},0)}
+var rw=document.querySelector('h1 .rotw');if(rw&&!RM&&!rw._r){rw._r=1;var W=rw.getAttribute('data-w').split('|'),rv=false;
+W.slice(1).forEach(function(w){var e=document.createElement('span');e.className='ri';e.setAttribute('aria-hidden','true');e.innerHTML='<span class="gl">tên '+w.replace(/ /g,'&nbsp;')+'</span> của&nbsp;bạn';rw.appendChild(e)});
+setInterval(function(){if(!rv||document.hidden)return;var a=rw.querySelector('.ri.on')||rw.firstElementChild,b=a.nextElementSibling||rw.firstElementChild;[].forEach.call(rw.children,function(x){if(x!==a&&x!==b)x.classList.remove('on','off')});a.classList.remove('on');a.classList.add('off');b.classList.remove('off');b.classList.add('on');setTimeout(function(){a.classList.remove('off')},700)},2600);seen(rw,function(v){rv=v},0)}
 [].forEach.call(document.querySelectorAll('[data-anim]'),function(s){seen(s,function(v){s.classList.toggle('play',v)},0)});
 [].forEach.call(document.querySelectorAll('.stg'),function(g){[].forEach.call(g.children,function(c,i){c.style.setProperty('--i',i)})});
 var fmt=function(n){return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};
