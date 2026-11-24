@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nhiếp ảnh đường phố &amp; ảnh du lịch Việt Nam | Lâm Khuê</title>
+<meta name="description" content="Sổ ảnh đen trắng của Lâm Khuê: phố cổ Hà Nội, Hội An, chợ nổi miền Tây, Hà Giang. Nhận chụp ảnh dạo phố và ảnh du lịch, có gói từ 1.800.000đ.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#17140f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317140f'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23efe8db' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23e07a4f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="modulepreload" href="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.module.min.js" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&amp;family=Inter:wght@400;500;600&amp;display=swap&amp;subset=vietnamese">
+<link rel="stylesheet" href="assets/khue.css?v=1">
+<script>
+/* chọn chế độ trước khi vẽ: 3D (WebGL, không giảm chuyển động) hoặc bản tĩnh */
+(function(){var d=document.documentElement;try{var t=localStorage.getItem('lk-theme');if(t==='light'||t==='dark')d.setAttribute('data-theme',t)}catch(e){}
+var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,gl=false;
+try{var c=document.createElement('canvas'),x=c.getContext('webgl2')||c.getContext('webgl');gl=!!x;var l=x&&x.getExtension('WEBGL_lose_context');if(l)l.loseContext()}catch(e){}
+if(gl&&!rm)d.classList.add('gl');d.classList.add(window.matchMedia&&matchMedia('(pointer: fine)').matches?'fine':'coarse')})();
+</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></symbol>
+<symbol id="i-chk" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-cam" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+</defs></svg>
+<a class="skip" href="#main">Bỏ qua tới nội dung</a>
+<header class="top">
+  <a class="brand" href="./" aria-label="Lâm Khuê, về đầu trang"><b>Lâm <em>Khuê</em></b><small>Nhiếp ảnh đường&nbsp;phố</small></a>
+  <nav class="nav" aria-label="Menu chính">
+    <button type="button" class="pill nav-d" data-open="about">Giới&nbsp;thiệu</button>
+    <button type="button" class="pill acc nav-d" data-open="book">Đặt lịch&nbsp;chụp</button>
+    <button type="button" class="pill" id="contactBtn" aria-expanded="false" aria-controls="contact">Liên&nbsp;hệ</button>
+    <button type="button" class="pill ico theme" id="themeBtn" aria-label="Đổi giao diện sáng hoặc tối"><svg class="i moon"><use href="#i-moon"/></svg><svg class="i sun"><use href="#i-sun"/></svg></button>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <div class="lede">
+      <h1 id="h1">Phố, bến&nbsp;nước <em>và&nbsp;những người</em> tôi&nbsp;gặp</h1>
+      <p>Sổ ảnh đen trắng của Lâm&nbsp;Khuê. Tôi nhận chụp ảnh dạo phố và ảnh du lịch, tự nhiên như lúc bạn đang&nbsp;đi&nbsp;chơi.</p>
+      <div class="hint" aria-hidden="true"><i></i><span class="d">Kéo để xoay · Cuộn để đi&nbsp;dọc</span><span class="m">Vuốt để xoay · Chạm để&nbsp;xem</span></div>
+      <div class="cta fbx"><button type="button" class="pill acc" data-open="book">Đặt lịch&nbsp;chụp</button><button type="button" class="pill" data-open="about">Giới&nbsp;thiệu</button><a class="pill" href="#so-anh">Xem sổ&nbsp;ảnh</a></div>
+    </div>
+    <div class="poster fbx" aria-hidden="true"><div class="helix" id="helix"></div></div>
+  </section>
+
+  <section class="gridsec" id="so-anh" aria-labelledby="so-anh-h">
+    <div class="hd"><h2 id="so-anh-h">Sổ ảnh 2023–2025</h2><p>30 khung hình ở Hà Nội, Hội An, Sài Gòn, miền Tây và Hà Giang. Bấm vào ảnh để xem câu chuyện phía&nbsp;sau.</p></div>
+    <ul class="grid" id="grid">
+<li data-id="1764937942330-80fda88ac55f" data-o="p" data-t="Giờ tàu qua" data-p="Phố đường tàu, Hà Nội" data-d="14/10/2024" data-c="Leica M6 · Kodak Tri-X 400" data-l="35mm f/2"><button type="button" aria-label="Xem ảnh 01: Giờ tàu qua"><img src="https://images.unsplash.com/photo-1764937942330-80fda88ac55f?auto=format&fit=crop&w=600&h=750&q=80" alt="Người đi bộ giữa hai hàng quán cà phê sát đường ray xe lửa" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>01 · Giờ tàu qua</b><span>Hà Nội</span></span></button><p class="dsc">Mười phút trước giờ tàu, các quán cà phê kéo ghế sát vào mép nhà. Người ở đây đo khoảng cách bằng thói quen, không cần thước.</p></li>
+<li data-id="1532904852347-f4e5e1d80751" data-o="p" data-t="Chiều bên sông Hoài" data-p="Hội An" data-d="03/02/2025" data-c="Fujifilm X100V" data-l="23mm f/2 (gắn liền)"><button type="button" aria-label="Xem ảnh 02: Chiều bên sông Hoài"><img src="https://images.unsplash.com/photo-1532904852347-f4e5e1d80751?auto=format&fit=crop&w=600&h=750&q=80" alt="Người phụ nữ đội nón lá đứng nhìn ra bờ sông" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>02 · Chiều bên sông Hoài</b><span>Hội An</span></span></button><p class="dsc">Chị đứng đợi khách đi đò khá lâu, chiếc nón che gần hết nắng cuối ngày. Tôi chỉ bấm một kiểu rồi đi tiếp.</p></li>
+<li data-id="1667276298936-bc078b0cad94" data-o="l" data-t="Con đèo uốn lưng" data-p="Mã Pì Lèng, Hà Giang" data-d="21/11/2023" data-c="Sony A7C" data-l="35mm f/1,8"><button type="button" aria-label="Xem ảnh 03: Con đèo uốn lưng"><img src="https://images.unsplash.com/photo-1667276298936-bc078b0cad94?auto=format&fit=crop&w=600&h=400&q=80" alt="Con đường đèo uốn lượn dưới thung lũng giữa núi cao" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>03 · Con đèo uốn lưng</b><span>Hà Giang</span></span></button><p class="dsc">Đường đèo như sợi chỉ thả xuống thung lũng. Đứng ở khúc cua này mười phút mới có một chiếc xe máy chạy qua.</p></li>
+<li data-id="1677837616189-499d9da0f522" data-o="p" data-t="Gánh trái cây" data-p="Phố cổ Hà Nội" data-d="08/06/2024" data-c="Ricoh GR III" data-l="18,3mm f/2,8 (gắn liền)"><button type="button" aria-label="Xem ảnh 04: Gánh trái cây"><img src="https://images.unsplash.com/photo-1677837616189-499d9da0f522?auto=format&fit=crop&w=600&h=750&q=80" alt="Người bán hàng rong đội nón lá gánh hai thúng trái cây trên vỉa hè" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>04 · Gánh trái cây</b><span>Phố cổ Hà Nội</span></span></button><p class="dsc">Đôi quang gánh nhún theo từng bước chân. Ở góc phố này, tôi đợi đúng lúc hai chiếc thúng cân nhau.</p></li>
+<li data-id="1712876068133-b89af9248726" data-o="p" data-t="Hẻm chưa ngủ" data-p="Hà Nội" data-d="19/12/2024" data-c="Leica M6 · Ilford HP5 Plus" data-l="35mm f/2"><button type="button" aria-label="Xem ảnh 05: Hẻm chưa ngủ"><img src="https://images.unsplash.com/photo-1712876068133-b89af9248726?auto=format&fit=crop&w=600&h=750&q=80" alt="Con hẻm về đêm với biển hiệu sáng đèn và vài bàn quán nhỏ" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>05 · Hẻm chưa ngủ</b><span>Hà Nội</span></span></button><p class="dsc">Mười một giờ đêm, con hẻm vẫn còn mấy bàn trà đá. Ánh đèn biển hiệu đủ sáng để chụp tay, không cần chân máy.</p></li>
+<li data-id="1689760661307-ea43aa8114e5" data-o="p" data-t="Ghe dưa hấu" data-p="Chợ nổi Cái Răng, Cần Thơ" data-d="05/01/2025" data-c="Fujifilm X100V" data-l="23mm f/2 (gắn liền)"><button type="button" aria-label="Xem ảnh 06: Ghe dưa hấu"><img src="https://images.unsplash.com/photo-1689760661307-ea43aa8114e5?auto=format&fit=crop&w=600&h=750&q=80" alt="Người phụ nữ đứng chèo chiếc ghe chở đầy dưa hấu trên sông" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>06 · Ghe dưa hấu</b><span>Cần Thơ</span></span></button><p class="dsc">Năm giờ sáng chợ nổi đã đông. Chị chèo ghe len giữa những chiếc lớn, tay vẫn kịp chào mối quen.</p></li>
+<li data-id="1746292871368-5fd96590a7b6" data-o="l" data-t="Mái ngói phố Hội" data-p="Hội An" data-d="02/02/2025" data-c="Sony A7C" data-l="35mm f/1,8"><button type="button" aria-label="Xem ảnh 07: Mái ngói phố Hội"><img src="https://images.unsplash.com/photo-1746292871368-5fd96590a7b6?auto=format&fit=crop&w=600&h=400&q=80" alt="Phố cổ Hội An nhìn từ trên cao với mái ngói và dòng người" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>07 · Mái ngói phố Hội</b><span>Hội An</span></span></button><p class="dsc">Nhìn từ gác một quán cà phê: mái ngói âm dương, dây đèn lồng và dòng người chậm rãi bên dưới.</p></li>
+<li data-id="1736944288413-4855f241f304" data-o="p" data-t="Chợ sáng" data-p="Hà Nội" data-d="22/03/2024" data-c="Ricoh GR III" data-l="18,3mm f/2,8 (gắn liền)"><button type="button" aria-label="Xem ảnh 08: Chợ sáng"><img src="https://images.unsplash.com/photo-1736944288413-4855f241f304?auto=format&fit=crop&w=600&h=750&q=80" alt="Những người bán hàng đội nón lá giữa dòng xe máy ở chợ sáng" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>08 · Chợ sáng</b><span>Hà Nội</span></span></button><p class="dsc">Chợ họp ngay trên lòng đường, người mua không cần xuống xe. Tôi đứng sát lề, giữ khoảng cách vừa đủ để không ai phải né.</p></li>
+<li data-id="1771992550491-653cd4205571" data-o="l" data-t="Nhà sàn dưới núi" data-p="Hà Giang" data-d="23/11/2023" data-c="Sony A7C" data-l="35mm f/1,8"><button type="button" aria-label="Xem ảnh 09: Nhà sàn dưới núi"><img src="https://images.unsplash.com/photo-1771992550491-653cd4205571?auto=format&fit=crop&w=600&h=400&q=80" alt="Ngôi nhà sàn nhỏ dưới chân dãy núi đá phủ mây" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>09 · Nhà sàn dưới núi</b><span>Hà Giang</span></span></button><p class="dsc">Mây xuống thấp sau cơn mưa. Khói bếp lẫn vào mây nên không còn rõ đâu là sương.</p></li>
+<li data-id="1758104372690-0e14bc4dec5c" data-o="p" data-t="Xích lô góc phố" data-p="Hoàn Kiếm, Hà Nội" data-d="09/06/2024" data-c="Leica M6 · Kodak Tri-X 400" data-l="35mm f/2"><button type="button" aria-label="Xem ảnh 10: Xích lô góc phố"><img src="https://images.unsplash.com/photo-1758104372690-0e14bc4dec5c?auto=format&fit=crop&w=600&h=750&q=80" alt="Người đạp xích lô chờ khách ở một góc phố cũ" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>10 · Xích lô góc phố</b><span>Hà Nội</span></span></button><p class="dsc">Bác xích lô đợi khách trước một hiệu kem cũ. Chiếc xe và người đều đã quen với ống kính của khách du lịch.</p></li>
+<li data-id="1529271230144-e8c648ef570d" data-o="p" data-t="Mái chèo" data-p="Làng chài, Quảng Ninh" data-d="17/08/2024" data-c="Nikon FM2 · Ilford HP5 Plus" data-l="50mm f/1,4"><button type="button" aria-label="Xem ảnh 11: Mái chèo"><img src="https://images.unsplash.com/photo-1529271230144-e8c648ef570d?auto=format&fit=crop&w=600&h=750&q=80" alt="Người phụ nữ đội nón lá ngồi chèo thuyền nan" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>11 · Mái chèo</b><span>Quảng Ninh</span></span></button><p class="dsc">Chị chèo đò đưa khách vào làng chài. Nước lặng tới mức nghe rõ tiếng mái chèo chạm mạn thuyền.</p></li>
+<li data-id="1701681673549-22ac5dc076c9" data-o="p" data-t="Hẻm nhà ống" data-p="Sài Gòn" data-d="11/04/2024" data-c="Ricoh GR III" data-l="18,3mm f/2,8 (gắn liền)"><button type="button" aria-label="Xem ảnh 12: Hẻm nhà ống"><img src="https://images.unsplash.com/photo-1701681673549-22ac5dc076c9?auto=format&fit=crop&w=600&h=750&q=80" alt="Con hẻm nhỏ với dãy nhà ống, xe máy và chậu cây trước cửa" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>12 · Hẻm nhà ống</b><span>Sài Gòn</span></span></button><p class="dsc">Buổi trưa, xe máy nằm im trước cửa, cây kiểng phơi nắng. Hẻm Sài Gòn yên nhất vào giờ này.</p></li>
+<li data-id="1609412058473-c199497c3c5d" data-o="l" data-t="Mùa lúa chín" data-p="Mù Cang Chải" data-d="28/09/2023" data-c="Sony A7C" data-l="35mm f/1,8"><button type="button" aria-label="Xem ảnh 13: Mùa lúa chín"><img src="https://images.unsplash.com/photo-1609412058473-c199497c3c5d?auto=format&fit=crop&w=600&h=400&q=80" alt="Ruộng bậc thang uốn quanh sườn đồi trong sương sớm" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>13 · Mùa lúa chín</b><span>Mù Cang Chải</span></span></button><p class="dsc">Sáu giờ sáng, sương còn bám trên ruộng bậc thang. Đồi lúa xếp tầng như những đường đồng mức.</p></li>
+<li data-id="1506800075271-265b16abe1e7" data-o="p" data-t="Phố ăn đêm" data-p="Hà Nội" data-d="20/12/2024" data-c="Fujifilm X100V" data-l="23mm f/2 (gắn liền)"><button type="button" aria-label="Xem ảnh 14: Phố ăn đêm"><img src="https://images.unsplash.com/photo-1506800075271-265b16abe1e7?auto=format&fit=crop&w=600&h=750&q=80" alt="Người phụ nữ bưng mâm đi giữa phố ăn đêm đông người" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>14 · Phố ăn đêm</b><span>Hà Nội</span></span></button><p class="dsc">Chị bưng mâm len giữa những chiếc ghế nhựa. Tôi chụp ở tốc độ chậm để giữ lại chút chuyển động.</p></li>
+<li data-id="1441839438427-ad31d742a202" data-o="l" data-t="Giữa vịnh" data-p="Vịnh Hạ Long" data-d="18/08/2024" data-c="Nikon FM2 · Ilford HP5 Plus" data-l="50mm f/1,4"><button type="button" aria-label="Xem ảnh 15: Giữa vịnh"><img src="https://images.unsplash.com/photo-1441839438427-ad31d742a202?auto=format&fit=crop&w=600&h=400&q=80" alt="Chiếc đò nhỏ trên mặt vịnh trước những vách núi đá vôi" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>15 · Giữa vịnh</b><span>Vịnh Hạ Long</span></span></button><p class="dsc">Chiếc đò nhỏ trước vách đá vôi. Trời đục nên ảnh đen trắng giữ được nhiều lớp xám hơn.</p></li>
+<li data-id="1717131259954-ba492b3d8da4" data-o="p" data-t="Ngã tư buổi sáng" data-p="Sài Gòn" data-d="12/04/2024" data-c="Ricoh GR III" data-l="18,3mm f/2,8 (gắn liền)"><button type="button" aria-label="Xem ảnh 16: Ngã tư buổi sáng"><img src="https://images.unsplash.com/photo-1717131259954-ba492b3d8da4?auto=format&fit=crop&w=600&h=750&q=80" alt="Một người đạp xe qua ngã tư vắng dưới hàng cây" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>16 · Ngã tư buổi sáng</b><span>Sài Gòn</span></span></button><p class="dsc">Một người đạp xe qua ngã tư vắng. Thành phố hiếm khi trống như vậy, chỉ chừng vài phút trước bảy giờ.</p></li>
+<li data-id="1652731011413-93d4c5aa5c7c" data-o="p" data-t="Đèn lồng lên" data-p="Phố cổ Hội An" data-d="01/02/2025" data-c="Fujifilm X100V" data-l="23mm f/2 (gắn liền)"><button type="button" aria-label="Xem ảnh 17: Đèn lồng lên"><img src="https://images.unsplash.com/photo-1652731011413-93d4c5aa5c7c?auto=format&fit=crop&w=600&h=750&q=80" alt="Dãy nhà cổ treo đèn lồng sáng lúc chạng vạng" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>17 · Đèn lồng lên</b><span>Phố cổ Hội An</span></span></button><p class="dsc">Sau sáu giờ tối, phố cổ đổi sang ánh đèn lồng. Tôi đứng ở đầu hẻm, đợi người đạp xe đi vào khung.</p></li>
+<li data-id="1488743196279-d2b91fd9e633" data-o="p" data-t="Thúng hành tím" data-p="Chợ Đồng Xuân, Hà Nội" data-d="23/03/2024" data-c="Leica M6 · Kodak Tri-X 400" data-l="35mm f/2"><button type="button" aria-label="Xem ảnh 18: Thúng hành tím"><img src="https://images.unsplash.com/photo-1488743196279-d2b91fd9e633?auto=format&fit=crop&w=600&h=750&q=80" alt="Người phụ nữ mặc áo kẻ sọc cầm thúng hành tím ở chợ" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>18 · Thúng hành tím</b><span>Hà Nội</span></span></button><p class="dsc">Bàn tay, chiếc thúng và nếp áo kẻ sọc kể chuyện nhiều hơn khuôn mặt.</p></li>
+<li data-id="1750900142301-f45daa9c3cbc" data-o="p" data-t="Tàu vào phố" data-p="Hà Nội" data-d="15/10/2024" data-c="Sony A7C" data-l="35mm f/1,8"><button type="button" aria-label="Xem ảnh 19: Tàu vào phố"><img src="https://images.unsplash.com/photo-1750900142301-f45daa9c3cbc?auto=format&fit=crop&w=600&h=750&q=80" alt="Đầu tàu hoả chạy giữa hai hàng cây trong khu phố" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>19 · Tàu vào phố</b><span>Hà Nội</span></span></button><p class="dsc">Đầu tàu trồi ra giữa hàng cây. Ở khoảng cách này, tiếng còi đến trước cả hình.</p></li>
+<li data-id="1689760661601-1ffe6f1b863c" data-o="l" data-t="Người chèo đò" data-p="Cần Thơ" data-d="06/01/2025" data-c="Fujifilm X100V" data-l="23mm f/2 (gắn liền)"><button type="button" aria-label="Xem ảnh 20: Người chèo đò"><img src="https://images.unsplash.com/photo-1689760661601-1ffe6f1b863c?auto=format&fit=crop&w=600&h=400&q=80" alt="Người đàn ông đứng chèo chiếc đò nhỏ trên sông, phía sau là nhà ven sông" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>20 · Người chèo đò</b><span>Cần Thơ</span></span></button><p class="dsc">Anh lái đò đứng chèo, nhịp đều như máy. Phía sau là dãy nhà sàn nhìn ra sông.</p></li>
+<li data-id="1671385033850-a072847d16d4" data-o="p" data-t="Xe đồ nhựa" data-p="Hà Nội" data-d="10/06/2024" data-c="Ricoh GR III" data-l="18,3mm f/2,8 (gắn liền)"><button type="button" aria-label="Xem ảnh 21: Xe đồ nhựa"><img src="https://images.unsplash.com/photo-1671385033850-a072847d16d4?auto=format&fit=crop&w=600&h=750&q=80" alt="Người bán hàng dắt chiếc xe đạp chất đầy rổ, chậu, xô nhựa" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>21 · Xe đồ nhựa</b><span>Hà Nội</span></span></button><p class="dsc">Chiếc xe đạp chở cả một gian hàng: rổ, chậu, xô. Chị dắt xe qua phố như dắt một ngọn núi nhỏ.</p></li>
+<li data-id="1526139334526-f591a54b477c" data-o="l" data-t="Chợ đêm" data-p="Hội An" data-d="02/02/2025" data-c="Sony A7C" data-l="35mm f/1,8"><button type="button" aria-label="Xem ảnh 22: Chợ đêm"><img src="https://images.unsplash.com/photo-1526139334526-f591a54b477c?auto=format&fit=crop&w=600&h=400&q=80" alt="Dòng người đi dưới những dây đèn lồng ở chợ đêm" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>22 · Chợ đêm</b><span>Hội An</span></span></button><p class="dsc">Lồng đèn treo kín trên đầu, dòng người đi chậm vì không ai muốn về sớm.</p></li>
+<li data-id="1717131322511-28c184eb361d" data-o="p" data-t="Vệt nắng trưa" data-p="TP.HCM" data-d="13/04/2024" data-c="Leica M6 · Ilford HP5 Plus" data-l="35mm f/2"><button type="button" aria-label="Xem ảnh 23: Vệt nắng trưa"><img src="https://images.unsplash.com/photo-1717131322511-28c184eb361d?auto=format&fit=crop&w=600&h=750&q=80" alt="Vệt nắng hẹp rọi xuống khoảng sân giữa hai bóng tối, xa xa là nhà cao tầng" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>23 · Vệt nắng trưa</b><span>TP.HCM</span></span></button><p class="dsc">Một vệt nắng hẹp rơi giữa hai khoảng tối. Khung hình này tôi đợi gần nửa tiếng.</p></li>
+<li data-id="1709105187895-bd6f23b57cf9" data-o="p" data-t="Nón trên đồng" data-p="Ninh Bình" data-d="30/05/2024" data-c="Nikon FM2 · Ilford HP5 Plus" data-l="50mm f/1,4"><button type="button" aria-label="Xem ảnh 24: Nón trên đồng"><img src="https://images.unsplash.com/photo-1709105187895-bd6f23b57cf9?auto=format&fit=crop&w=600&h=750&q=80" alt="Người nông dân đội nón lá giữa ruộng lúa, phía sau là núi" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>24 · Nón trên đồng</b><span>Ninh Bình</span></span></button><p class="dsc">Người đi qua bờ ruộng, chỉ còn chiếc nón nhô trên ngọn lúa. Núi phía sau mờ trong hơi nước.</p></li>
+<li data-id="1743485754066-f45e26489e9a" data-o="p" data-t="Phố treo cờ" data-p="Hà Nội" data-d="01/09/2024" data-c="Fujifilm X100V" data-l="23mm f/2 (gắn liền)"><button type="button" aria-label="Xem ảnh 25: Phố treo cờ"><img src="https://images.unsplash.com/photo-1743485754066-f45e26489e9a?auto=format&fit=crop&w=600&h=750&q=80" alt="Dòng xe máy trên phố treo cờ đỏ dịp lễ" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>25 · Phố treo cờ</b><span>Hà Nội</span></span></button><p class="dsc">Cờ giăng kín phố dịp lễ. Trong ảnh đen trắng, những dải cờ thành nhịp sáng tối trên đầu dòng xe.</p></li>
+<li data-id="1726346215358-d8e2f5898848" data-o="p" data-t="Đứng chèo" data-p="Hồ Ba Bể" data-d="26/07/2024" data-c="Nikon FM2 · Ilford HP5 Plus" data-l="50mm f/1,4"><button type="button" aria-label="Xem ảnh 26: Đứng chèo"><img src="https://images.unsplash.com/photo-1726346215358-d8e2f5898848?auto=format&fit=crop&w=600&h=750&q=80" alt="Người đàn ông đội nón đứng chèo chiếc thuyền dài trên hồ" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>26 · Đứng chèo</b><span>Hồ Ba Bể</span></span></button><p class="dsc">Người chèo đứng thẳng lưng ở đuôi thuyền, mái chèo dài gần bằng thân thuyền.</p></li>
+<li data-id="1495118616717-6816692b9430" data-o="p" data-t="Sạp rau đầu ngõ" data-p="Hà Nội" data-d="24/03/2024" data-c="Ricoh GR III" data-l="18,3mm f/2,8 (gắn liền)"><button type="button" aria-label="Xem ảnh 27: Sạp rau đầu ngõ"><img src="https://images.unsplash.com/photo-1495118616717-6816692b9430?auto=format&fit=crop&w=600&h=750&q=80" alt="Người bán rau bên chiếc xe đạp chở đầy rau củ ở đầu ngõ" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>27 · Sạp rau đầu ngõ</b><span>Hà Nội</span></span></button><p class="dsc">Chiếc xe đạp thành sạp rau di động. Chị vừa nhặt rau vừa nói chuyện với người hàng xóm bên kia ngõ.</p></li>
+<li data-id="1671965844038-9355e1218ba3" data-o="p" data-t="Lối ra" data-p="Hà Nội" data-d="07/01/2024" data-c="Leica M6 · Kodak Tri-X 400" data-l="35mm f/2"><button type="button" aria-label="Xem ảnh 28: Lối ra"><img src="https://images.unsplash.com/photo-1671965844038-9355e1218ba3?auto=format&fit=crop&w=600&h=750&q=80" alt="Một người ngồi nghỉ dưới vòm cổng cũ, cạnh tấm biển chỉ lối ra" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>28 · Lối ra</b><span>Hà Nội</span></span></button><p class="dsc">Một người ngồi nghỉ dưới vòm cổng cũ, tấm biển chỉ lối ra nằm ngay cạnh. Tôi để khung tối bao quanh.</p></li>
+<li data-id="1689760661317-a839f59b1c32" data-o="l" data-t="Ghe hàng" data-p="Chợ nổi Cái Răng, Cần Thơ" data-d="05/01/2025" data-c="Fujifilm X100V" data-l="23mm f/2 (gắn liền)"><button type="button" aria-label="Xem ảnh 29: Ghe hàng"><img src="https://images.unsplash.com/photo-1689760661317-a839f59b1c32?auto=format&fit=crop&w=600&h=400&q=80" alt="Những chiếc ghe lớn chở hàng neo sát nhau ở chợ nổi" width="600" height="400" loading="lazy" decoding="async"><span class="cap"><b>29 · Ghe hàng</b><span>Cần Thơ</span></span></button><p class="dsc">Ghe lớn neo sát nhau, hàng chất cao. Mũi ghe vẽ đôi mắt, người miền Tây nói để ghe “nhìn” đường đi.</p></li>
+<li data-id="1599558436829-507df9ceba91" data-o="p" data-t="Xe hoa" data-p="Phan Đình Phùng, Hà Nội" data-d="25/10/2024" data-c="Sony A7C" data-l="35mm f/1,8"><button type="button" aria-label="Xem ảnh 30: Xe hoa"><img src="https://images.unsplash.com/photo-1599558436829-507df9ceba91?auto=format&fit=crop&w=600&h=750&q=80" alt="Chiếc xe đạp chở giỏ hoa đi dưới hàng cây cổ thụ" width="600" height="750" loading="lazy" decoding="async"><span class="cap"><b>30 · Xe hoa</b><span>Hà Nội</span></span></button><p class="dsc">Mùa thu, những chiếc xe đạp chở hoa đi dọc hàng cây. Tôi chỉ có hai giây trước khi chị rẽ.</p></li>
+    </ul>
+  </section>
+  <footer class="fbfoot"><span>© Lâm Khuê · Nhận chụp ở Hà Nội, Hội An, TP.HCM và theo chuyến đi</span><span>Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</span></footer>
+</main>
+
+<div id="stage" tabindex="0" role="region" aria-roledescription="vòng xoắn ảnh" aria-label="Vòng xoắn 30 ảnh. Phím mũi tên để đi dọc, Enter để xem ảnh đang ở giữa."></div>
+<div class="load" aria-hidden="true"><span>Đang tráng ảnh</span></div>
+
+<aside class="meta" id="meta" aria-hidden="true">
+  <div class="sw"><div class="n" id="mN">01<small>/30</small></div><h2 id="mT">&nbsp;</h2></div>
+  <dl class="sw"><div><dt>Nơi chụp</dt><dd id="mP">&nbsp;</dd></div><div><dt>Ngày</dt><dd id="mD">&nbsp;</dd></div><div><dt>Máy</dt><dd id="mC">&nbsp;</dd></div><div><dt>Ống kính</dt><dd id="mL">&nbsp;</dd></div></dl>
+</aside>
+
+<div class="dock">
+  <p class="mcap" id="mcap" aria-hidden="true"></p>
+  <div class="prog" aria-hidden="true"><b id="pN">01</b><span class="bar"><i id="pBar"></i></span><span>30</span></div>
+  <span class="note">Nội dung mẫu · Ảnh&nbsp;Unsplash</span>
+  <div class="nav-m"><button type="button" class="pill" data-open="about">Giới&nbsp;thiệu</button><button type="button" class="pill acc" data-open="book">Đặt&nbsp;lịch</button></div>
+</div>
+
+<div class="cur" aria-hidden="true"><span class="r"></span><span class="t">Xem<small id="curN">01</small></span></div>
+<div class="sweepw" aria-hidden="true"><div class="sweep"></div></div>
+
+<div class="view" id="view" role="dialog" aria-modal="true" aria-labelledby="vT" aria-hidden="true">
+  <button type="button" class="v-hit" aria-label="Đóng ảnh" tabindex="-1"></button>
+  <figure class="v-fig"><img id="vImg" alt="" width="1024" height="1280"></figure>
+  <div class="v-txt" id="vTxt"><p class="k" id="vK">&nbsp;</p><h2 id="vT">&nbsp;</h2><p class="ex" id="vE">&nbsp;</p><p class="d" id="vD">&nbsp;</p></div>
+  <div class="v-ctl"><span class="c" id="vC">01 / 30</span><button type="button" class="pill ico" id="vPrev" aria-label="Ảnh trước"><svg class="i"><use href="#i-l"/></svg></button><button type="button" class="pill ico" id="vNext" aria-label="Ảnh sau"><svg class="i"><use href="#i-r"/></svg></button></div>
+  <button type="button" class="pill ico v-x" id="vClose" aria-label="Đóng ảnh (Esc)"><svg class="i"><use href="#i-x"/></svg></button>
+</div>
+
+<div class="card" id="contact" role="dialog" aria-label="Liên hệ Lâm Khuê">
+  <p class="k">Thư cho tôi</p>
+  <a class="mail" id="mail" href="mailto:khue@vidu.vn">khue@vidu.vn</a>
+  <div class="row"><button type="button" class="pill acc" id="copyBtn"><svg class="i"><use href="#i-copy"/></svg>Chép&nbsp;email</button><button type="button" class="pill" data-open="book">Đặt&nbsp;lịch</button></div>
+  <ul><li><span>Zalo</span>0900&nbsp;000&nbsp;000</li><li><span>Instagram</span>@lamkhue.anh</li><li><span>Trả lời</span>trong ngày, 08:00–21:00</li></ul>
+</div>
+
+<div class="sheet" id="about" role="dialog" aria-modal="true" aria-labelledby="ab-h" aria-hidden="true">
+  <button type="button" class="sc" data-close tabindex="-1" aria-label="Đóng"></button>
+  <div class="panel">
+    <button type="button" class="pill ico x" data-close aria-label="Đóng (Esc)"><svg class="i"><use href="#i-x"/></svg></button>
+    <p class="k">Giới thiệu</p>
+    <h2 id="ab-h">Tôi chụp lúc bạn <em>quên&nbsp;mất</em> máy&nbsp;ảnh</h2>
+    <p class="lead">Tôi là Khuê, cầm máy đi phố từ năm 2016. Phần lớn ảnh trong sổ này chụp bằng ống kính góc rộng, đứng gần, không dàn dựng.</p>
+    <p class="mute">Nhiều người ngại chụp vì sợ đứng trước ống kính trông gượng. Nên tôi không bắt tạo dáng: mình đi dạo, ăn quà vặt, nói chuyện, tôi đi cạnh và chụp những lúc bạn đang là chính&nbsp;mình.</p>
+    <div class="ab-ph"><img data-src="https://images.unsplash.com/photo-1532904852347-f4e5e1d80751?auto=format&fit=crop&w=600&h=750&q=80" alt="Người phụ nữ đội nón lá bên sông Hoài, Hội An" width="600" height="750" loading="lazy"><img data-src="https://images.unsplash.com/photo-1652731011413-93d4c5aa5c7c?auto=format&fit=crop&w=600&h=750&q=80" alt="Phố cổ Hội An lên đèn lồng lúc chạng vạng" width="600" height="750" loading="lazy"></div>
+    <hr>
+    <h3>Một buổi chụp diễn ra thế&nbsp;nào</h3>
+    <ol class="steps">
+      <li><b>Nhắn trước vài dòng</b><span>Bạn kể về chuyến đi, người đi cùng và kiểu ảnh muốn giữ lại.</span></li>
+      <li><b>Chọn giờ có ánh sáng đẹp</b><span>Tôi gợi ý lộ trình và khung giờ: sáng sớm phố vắng, chiều muộn nắng xiên.</span></li>
+      <li><b>Đi chơi, tôi chụp</b><span>Không cần trang phục cầu kỳ. Tôi nhắc nhẹ khi cần, còn lại để mọi thứ tự nhiên.</span></li>
+      <li><b>Nhận ảnh trong 5–7 ngày</b><span>Ảnh chỉnh màu và đen trắng, gửi bằng đường dẫn tải, kèm bản cỡ nhỏ để đăng mạng xã hội.</span></li>
+    </ol>
+    <hr>
+    <h3>Người đã chụp cùng&nbsp;tôi</h3>
+    <div class="quotes">
+      <figure><blockquote>“Hai vợ chồng tôi vốn ngại máy ảnh. Đi dạo phố cổ ba tiếng, về xem ảnh mới thấy mình cười nhiều vậy.”</blockquote><figcaption><span>Chị Thảo, chụp ở Hội An</span><span class="tag">Đánh giá mẫu</span></figcaption></figure>
+      <figure><blockquote>“Khuê dẫn đi mấy con hẻm tôi sống ở Hà Nội mười năm chưa từng vào. Ảnh đen trắng in ra treo phòng khách rất hợp.”</blockquote><figcaption><span>Anh Minh, chụp ở Hà Nội</span><span class="tag">Đánh giá mẫu</span></figcaption></figure>
+    </div>
+    <hr>
+    <h3>Câu hỏi thường&nbsp;gặp</h3>
+    <div class="faq">
+      <details><summary>Tôi không biết tạo dáng thì sao?<svg class="i"><use href="#i-plus"/></svg></summary><p>Không sao cả. Phần lớn ảnh tôi chụp lúc bạn đang đi, đang nói chuyện. Khi cần, tôi chỉ nhắc một hai động tác đơn giản.</p></details>
+      <details><summary>Có nhận ảnh màu không, hay chỉ đen trắng?<svg class="i"><use href="#i-plus"/></svg></summary><p>Có. Mỗi ảnh đều có bản màu và bản đen trắng, bạn dùng bản nào cũng được.</p></details>
+      <details><summary>Trời mưa thì sao?<svg class="i"><use href="#i-plus"/></svg></summary><p>Mưa nhẹ vẫn chụp được và thường rất đẹp. Mưa to thì mình dời lịch, không mất phí.</p></details>
+      <details><summary>Đặt cọc thế nào?<svg class="i"><use href="#i-plus"/></svg></summary><p>Đặt cọc 30% để giữ lịch, phần còn lại thanh toán sau buổi chụp.</p></details>
+    </div>
+    <p style="margin-top:28px"><button type="button" class="pill acc" data-open="book">Đặt lịch&nbsp;chụp</button></p>
+    <p class="foot">Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash. Thông số máy, địa điểm và ngày chụp là mẫu.</p>
+  </div>
+</div>
+
+<div class="sheet" id="book" role="dialog" aria-modal="true" aria-labelledby="bk-h" aria-hidden="true">
+  <button type="button" class="sc" data-close tabindex="-1" aria-label="Đóng"></button>
+  <div class="panel">
+    <button type="button" class="pill ico x" data-close aria-label="Đóng (Esc)"><svg class="i"><use href="#i-x"/></svg></button>
+    <p class="k">Đặt lịch chụp</p>
+    <h2 id="bk-h">Chọn một gói, <em>tôi&nbsp;lo</em> phần&nbsp;còn&nbsp;lại</h2>
+    <p class="mute">Giá đã gồm chỉnh ảnh. Chụp ngoài Hà Nội, Hội An và TP.HCM thì cộng chi phí đi lại theo thực tế.</p>
+    <div class="plans"><article class="plan" data-plan="dao-pho"><h3>Dạo&nbsp;Phố</h3><p class="price" style="margin:0">1.800.000đ<small>1,5 giờ chụp</small></p><ul><li><svg class="i"><use href="#i-chk"/></svg><span>Một khu phố hoặc một khu chợ bạn chọn</span></li><li><svg class="i"><use href="#i-chk"/></svg><span>40 ảnh chỉnh hoàn chỉnh, bản màu và đen trắng</span></li><li><svg class="i"><use href="#i-chk"/></svg><span>Gửi ảnh qua đường dẫn tải trong 5 ngày</span></li></ul><button type="button" class="pill pick" data-pick="dao-pho" aria-label="Chọn gói Dạo Phố">Chọn&nbsp;gói này</button></article><article class="plan" data-plan="nua-ngay"><span class="badge-hot">Nhiều người chọn</span><h3>Nửa&nbsp;Ngày Phố&nbsp;Cổ</h3><p class="price" style="margin:0">3.500.000đ<small>4 giờ chụp</small></p><ul><li><svg class="i"><use href="#i-chk"/></svg><span>Hai điểm chụp, đi bộ hoặc xích lô giữa hai điểm</span></li><li><svg class="i"><use href="#i-chk"/></svg><span>100 ảnh chỉnh hoàn chỉnh</span></li><li><svg class="i"><use href="#i-chk"/></svg><span>Tặng 1 ảnh in fine-art khổ 30x40&nbsp;cm</span></li></ul><button type="button" class="pill pick" data-pick="nua-ngay" aria-label="Chọn gói Nửa Ngày Phố Cổ">Chọn&nbsp;gói này</button></article><article class="plan" data-plan="chuyen-di"><h3>Theo&nbsp;Chuyến&nbsp;Đi</h3><p class="price" style="margin:0">từ&nbsp;6.500.000đ<small>mỗi ngày, chưa gồm đi lại</small></p><ul><li><svg class="i"><use href="#i-chk"/></svg><span>Đi cùng bạn 1–3 ngày: Hà Giang, Hội An, miền Tây…</span></li><li><svg class="i"><use href="#i-chk"/></svg><span>Khoảng 120 ảnh mỗi ngày, chọn lọc và chỉnh</span></li><li><svg class="i"><use href="#i-chk"/></svg><span>Lên lịch trình theo ánh sáng sáng sớm và chiều muộn</span></li></ul><button type="button" class="pill pick" data-pick="chuyen-di" aria-label="Chọn gói Theo Chuyến Đi">Chọn&nbsp;gói này</button></article></div>
+    <form class="form" id="bookForm" novalidate>
+      <label>Họ và tên<input name="ten" required autocomplete="name" placeholder="Nguyễn Văn A"></label>
+      <label>Số điện thoại / Zalo<input name="sdt" required type="tel" inputmode="tel" autocomplete="tel" placeholder="0900 000 000"></label>
+      <label>Gói chụp<select name="goi" id="goi"><option value="dao-pho">Dạo Phố · 1.800.000đ</option><option value="nua-ngay" selected>Nửa Ngày Phố Cổ · 3.500.000đ</option><option value="chuyen-di">Theo Chuyến Đi · từ 6.500.000đ/ngày</option></select></label>
+      <label>Ngày dự kiến<input name="ngay" placeholder="dd/mm/yyyy" inputmode="numeric" pattern="\d{1,2}/\d{1,2}/\d{4}"></label>
+      <label class="full">Nơi chụp<select name="noi"><option>Hà Nội</option><option>Hội An</option><option>TP.HCM</option><option>Theo chuyến đi (ghi rõ bên dưới)</option></select></label>
+      <label class="full">Vài dòng về buổi chụp<textarea name="ghichu" placeholder="Ví dụ: hai vợ chồng, muốn chụp phố cổ buổi sáng, thích ảnh đen trắng"></textarea></label>
+      <label class="ok full"><input type="checkbox" name="dongy" id="dongy"><span>Tôi đồng ý để Lâm Khuê lưu và dùng họ tên, số điện thoại ở trên chỉ để liên hệ xác nhận lịch chụp.</span></label>
+      <p class="err full" id="formErr" role="alert">Vui lòng tick ô đồng ý xử lý dữ liệu cá nhân để gửi yêu cầu.</p>
+      <button type="submit" class="pill acc btn full">Gửi yêu cầu đặt&nbsp;lịch</button>
+    </form>
+    <div class="done" id="done" role="status"><h3><svg class="i"><use href="#i-chk"/></svg>Đã nhận yêu cầu của <span id="doneName">bạn</span></h3><p class="mute" id="doneMsg">Đây là thông báo minh hoạ, form mẫu không gửi dữ liệu đi đâu.</p></div>
+    <p class="foot">Nội dung mẫu: tên thương hiệu, giá, nhân sự, đánh giá và hình ảnh chỉ để minh hoạ giao diện. Ảnh: Unsplash.</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/khue.js?v=1"></script>
+<a class="kt-badge" id="ktBadge" href="/lien-he/"><i></i><span>Mẫu&nbsp;giao&nbsp;diện · Kim&nbsp;Tuyen&nbsp;Truong — <b>Nhận&nbsp;báo&nbsp;giá</b></span></a>
+<script src="/assets/kt-demo.js?v=5" data-mau="Lâm Khuê" data-gia="5500000" data-loai="one" data-nganh="dich-vu"></script>
+</body>
+</html>
