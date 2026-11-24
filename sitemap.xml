@@ -3,7 +3,7 @@
   <url><loc>https://kimtuyentruong.github.io/</loc><lastmod>2026-11-23</lastmod><priority>1.0</priority><xhtml:link rel="alternate" hreflang="vi" href="https://kimtuyentruong.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://kimtuyentruong.github.io/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://kimtuyentruong.github.io/"/></url>
   <url><loc>https://kimtuyentruong.github.io/en/</loc><lastmod>2026-11-23</lastmod><priority>0.8</priority><xhtml:link rel="alternate" hreflang="vi" href="https://kimtuyentruong.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://kimtuyentruong.github.io/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://kimtuyentruong.github.io/"/></url>
   <url><loc>https://kimtuyentruong.github.io/kinh-nghiem/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kimtuyentruong.github.io/kien-thuc/</loc><lastmod>2026-11-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kimtuyentruong.github.io/kien-thuc/</loc><lastmod>2026-11-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://kimtuyentruong.github.io/lien-he/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/en/contact/</loc><lastmod>2026-11-23</lastmod><priority>0.6</priority></url>
   <url><loc>https://kimtuyentruong.github.io/mau-website/</loc><lastmod>2026-11-23</lastmod><priority>0.8</priority></url>
@@ -35,9 +35,9 @@
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-bat-dong-san/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-xay-dung/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-noi-that/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-nha-khoa/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-phong-kham/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-trung-tam-tieng-anh/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-nha-khoa/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-phong-kham/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-trung-tam-tieng-anh/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-khoa-hoc-online/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-trang-suc/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-thoi-trang/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
@@ -79,4 +79,6 @@
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/chay-quang-cao-khong-ra-khach/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/website-khong-len-google/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-thuy-san/</loc><lastmod>2026-11-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-hoc-tieng-anh-online/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kimtuyentruong.github.io/kien-thuc/thiet-ke-website-giao-vien-tieng-anh/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 </urlset>
