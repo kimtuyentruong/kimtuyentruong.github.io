@@ -1321,3 +1321,13 @@
 .svc-hd h1 .rs .ri{transition:opacity .35s ease,transform .45s cubic-bezier(.22,.61,.36,1),visibility 0s linear .45s}
 .svc-hd h1 .rs .ri.on{transition:opacity .4s ease .12s,transform .45s cubic-bezier(.22,.61,.36,1) .12s,visibility 0s}
 .svc-hd h1 .rs .ri.off{transition:opacity .3s ease,transform .4s cubic-bezier(.4,0,.6,1),visibility 0s}
+/* 24/11/2026: ô tìm mẫu theo tên cạnh "Chọn ngành" */
+.tname{position:relative;display:flex;align-items:center;flex:1 1 280px;max-width:420px;min-height:48px;border-radius:14px;border:1px solid var(--line-2);background:var(--surface);color:var(--muted)}
+.tname:focus-within{border-color:var(--flame)}
+.tname svg{position:absolute;left:14px;pointer-events:none}
+.tname input{width:100%;min-height:46px;padding:8px 14px 8px 42px;border:0;border-radius:14px;background:transparent;color:var(--ink);font:inherit;font-size:15px;outline:none;-webkit-appearance:none;appearance:none}
+.tname input::placeholder{color:var(--muted)}
+.tnone{flex-basis:100%;margin:0;color:var(--muted)}
+.tnone a{color:var(--flame)}
+@media (max-width:600px){.tname{max-width:none;flex:none;width:100%}}
+.tgrid .tcard[hidden]{display:none}
